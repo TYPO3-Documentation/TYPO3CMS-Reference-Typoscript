@@ -1,0 +1,4 @@
+TCEFORM.pages.title {
+  # The title field of the pages table is not editable
+  disabled = 1
+}

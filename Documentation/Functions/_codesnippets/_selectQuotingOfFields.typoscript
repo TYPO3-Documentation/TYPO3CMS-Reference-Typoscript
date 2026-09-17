@@ -1,0 +1,20 @@
+10 = CONTENT
+10 {
+  table =
+  select {
+    uidInList =
+    pidInList =
+    recursive =
+    orderBy =
+    groupBy =
+    max =
+    begin =
+    where =
+    languageField =
+    includeRecordsWithoutDefaultTranslation =
+    selectFields =
+    join =
+    leftjoin =
+    rightjoin =
+  }
+}

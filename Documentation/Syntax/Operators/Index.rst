@@ -242,16 +242,8 @@ parenthesis. These predefined functions are available:
     Add values to the end of a list of existing values. There is no check for
     duplicate values, and the list is not sorted in any way.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_modification2.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        foo = 123,456
-        foo := addToList(789)
-        # foo is "123,456,789"
-
-        foo =
-        foo := addToList(123)
-        # foo is "123" (no leading comma added on empty existing value)
 
 `removeFromList()`
     Remove a comma-separated list of values from an existing comma-separated
@@ -296,20 +288,8 @@ parenthesis. These predefined functions are available:
     numeric
         Apply numeric sorting: Numbers from small to big, letters sorted after "0".
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_modification.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        foo = 10,100,0,20,abc
-        foo := sortList()
-        # foo is "0,10,20,100,abc"
-
-        foo = 10,0,100,-20
-        foo := sortList(numeric)
-        # foo is "-20,0,10,100"
-
-        foo = 10,100,0,20,-20
-        foo := sortList(numeric,descending)
-        # foo is "100,20,10,0,-20"
 
 `getEnv()`
     Access a $_ENV value. Resolves to empty value if not set.
@@ -355,12 +335,6 @@ The null coalescing operator cannot be used in conditions. Use
 `or <https://docs.typo3.org/permalink/t3tsref:typoscript-syntax-end-condition-or>`_
 instead:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_coalescing.typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
-
-    # Wrong
-    # [{$config.oldThing ?? $myext.thing} == 5]
-
-    # Right
-    [{$config.oldThing}  == 5 or {$myext.thing} == 5]
 

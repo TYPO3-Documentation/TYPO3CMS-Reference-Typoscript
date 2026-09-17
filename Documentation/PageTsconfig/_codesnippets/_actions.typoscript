@@ -1,0 +1,4 @@
+TCEMAIN.permissions {
+  # User can do anything, this is identical to the default value
+  user = 31
+}

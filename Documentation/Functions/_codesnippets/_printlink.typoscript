@@ -1,0 +1,16 @@
+5 = IMAGE
+5 {
+  file = fileadmin/images/printlink.png
+  imageLinkWrap = 1
+  imageLinkWrap {
+    enable = 1
+    typolink {
+      target = _blank
+      parameter.data = page:alias // page:uid
+      additionalParams = &type=98
+    }
+  }
+  altText = print version
+  titleText = Open print version of this page in a new window
+  params = class="printlink"
+}

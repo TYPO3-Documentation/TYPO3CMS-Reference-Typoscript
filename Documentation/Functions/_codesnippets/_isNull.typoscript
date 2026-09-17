@@ -1,0 +1,6 @@
+page.10 = COA_INT
+page.10.10 = TEXT
+page.10.10 {
+  stdWrap.if.isNull.field = description
+  value = No description available.
+}

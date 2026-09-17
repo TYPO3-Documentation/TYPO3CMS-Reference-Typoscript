@@ -1,0 +1,19 @@
+# True, if the day of the current month is 7
+[date("j") == 7]
+# ...
+[END]
+
+# True, if the day of the current week is 7
+[date("w") == 7]
+# ...
+[END]
+
+# True, if the day of the current year is 7
+[date("z") == 7]
+# ...
+[END]
+
+# True, if the current hour is 7
+[date("G") == 7]
+# ...
+[END]

@@ -1,0 +1,17 @@
+lib.example = IMAGE
+lib.example {
+  file = GIFBUILDER
+  file {
+    XY = [10.w]+20, [10.h]+20
+    backColor = #ff8700
+    format = png
+
+    10 = TEXT
+    10 {
+      text = TYPO3 GIFBUILDER Example
+      fontSize = 20
+      fontColor = #ffffff
+      offset = 10,25
+    }
+  }
+}

@@ -1,0 +1,7 @@
+lib.my_formatted_date = TEXT
+lib.my_formatted_date {
+  value = 2023-03-17 3:00:00
+  formattedDate = FULL
+  # Optional, if a different locale is wanted other than the site language's locale
+  formattedDate.locale = de-DE
+}

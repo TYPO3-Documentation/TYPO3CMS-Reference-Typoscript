@@ -1,0 +1,4 @@
+my.constant = my global value
+[traverse(site('configuration'), 'settings/some/setting') == 'someValue']
+my.constant = another value, if condition matches
+[global]

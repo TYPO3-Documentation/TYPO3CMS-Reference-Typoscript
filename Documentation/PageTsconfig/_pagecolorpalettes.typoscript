@@ -1,0 +1,7 @@
+colorPalettes {
+  palettes {
+    main = typo3
+    key_colors = typo3, blue, darkgrey
+    messages = valid, error
+  }
+}

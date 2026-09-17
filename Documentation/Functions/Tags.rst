@@ -62,15 +62,8 @@ Properties
 
     ..  rubric:: Examples
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _array.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        tags.bold = TEXT
-        tags.bold {
-            stdWrap.current = 1
-            stdWrap.wrap = <p style="font-weight: bold;"> | </p>
-        }
-        tags.bold.stdWrap.stripNL = 1
 
     This example would e.g. transform :html:`<BOLD>Important!</BOLD>`
     to :html:`<p style="font-weight: bold;">Important!</p>`.
@@ -94,36 +87,5 @@ the content of the tag.
 :html:`<PIC>` lets us place an image in the text. The content of the tag
 should be the image-reference in :file:`fileadmin/images/`.
 
-..  code-block:: typoscript
+..  literalinclude:: _tags.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    tags {
-        link = TEXT
-        link {
-            stdWrap.current = 1
-            stdWrap.typolink.extTarget = _blank
-            stdWrap.typolink.target = {$cLinkTagTarget}
-            stdWrap.typolink.wrap = <p style="color: red;">|</p>
-            stdWrap.typolink.parameter.data = parameters : allParams
-        }
-
-        typolist < tt_content.bullets.default.20
-        typolist.trim = 1
-        typolist.field >
-        typolist.current = 1
-
-        grafix = IMAGE
-        grafix {
-            file = GIFBUILDER
-            file {
-                XY = 90,10
-                100 = TEXT
-                100.text.current = 1
-                100.offset = 5,10
-            }
-        }
-        # Transforms <pic>file.png</pic> to <img src="fileadmin/images/file.png" >
-        pic = IMAGE
-        pic.file.import = fileadmin/images/
-        pic.file.import.current = 1
-    }

@@ -165,13 +165,8 @@ field of that specific user.
 Let's say the user is a member of a *usergroup* with this
 configuration:
 
-..  code-block:: typoscript
+..  literalinclude:: _values.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCAdefaults.tt_content {
-        hidden = 1
-        header = Hello!
-    }
 
 Then we set the following values in the TSconfig field of the specific *user*.
 
@@ -213,14 +208,8 @@ If we activate the following configuration in the user TSconfig of a certain bac
 user group, new and copied pages will be hidden for that group. The user TSconfig to
 be used is the same, but prefixed with :tsconfig:`page.`
 
-..  code-block:: typoscript
+..  literalinclude:: _pageoverridingpagetsconfigwithusertsconfig.typoscript
     :caption: EXT:site_package/Configuration/TSconfig/editors.tsconfig
-
-    // Override the settings from the page TSconfig for the editors usergroup
-    page {
-        TCAdefaults.pages.hidden = 1
-        TCEMAIN.table.pages.disableHideAtCopy = 0
-    }
 
 ..  attention::
 

@@ -1,0 +1,5 @@
+TCEFORM.pages.title {
+  label = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:table.column
+  label.default = New Label
+  label.de = Neuer Feldname
+}

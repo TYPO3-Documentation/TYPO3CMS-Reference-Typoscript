@@ -1,0 +1,9 @@
+page.5 = COA_INT
+page.5 {
+  10 = TEXT
+  10 {
+    stdWrap.field = subtitle
+    stdWrap.listNum = rand
+    stdWrap.listNum.splitChar = |
+  }
+}

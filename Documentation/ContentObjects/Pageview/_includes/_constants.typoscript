@@ -1,7 +1,7 @@
 page {
-    uids {
-        dataPrivacy = 42
-        contact = 85
-        imprint = 86
-    }
+  uids {
+    dataPrivacy = 42
+    contact = 85
+    imprint = 86
+  }
 }

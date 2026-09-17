@@ -1,0 +1,4 @@
+10 = TEXT
+10.value.field = bodytext
+10.stdWrap.parseFunc < lib.parseFunc_RTE
+10.stdWrap.dataWrap = <div>|</div>

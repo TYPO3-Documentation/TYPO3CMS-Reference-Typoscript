@@ -1,0 +1,5 @@
+10 = TEXT
+10 {
+  value = <div><img src="invalid.file" onerror="alert(1)"></div>
+  htmlSanitize = 1
+}

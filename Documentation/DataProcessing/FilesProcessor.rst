@@ -241,16 +241,8 @@ Example 2: use stdWrap property on references
 The following example implements a slide functionality on root line
 for file resources:
 
-..  code-block:: typoscript
+..  literalinclude:: _references.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page.10.dataProcessing {
-        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-        10 {
-            references.data = levelmedia: -1, slide
-            as = myfiles
-        }
-    }
 
 The :php-short:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor` can slide up
 the root line to collect images for Fluid templates. One usual feature is to

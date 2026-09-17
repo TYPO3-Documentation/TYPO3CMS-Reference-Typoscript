@@ -1,0 +1,5 @@
+tt_content.image.20.1.file {
+  import = uploads/pics/
+  import.field = image
+  import.listNum = 0
+}

@@ -1,0 +1,4 @@
+tt_content.text.20.parseFunc {
+  allowTags = b,i,a,img
+  denyTags = *
+}

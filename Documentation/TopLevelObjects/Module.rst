@@ -47,14 +47,8 @@ In simple backend modules extension authors can decide how to use this
 namespace. By convention settings should go in the subsection
 :typoscript:`settings`.
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_options.typoscript
     :caption: EXT:my_extension/ext_typoscript_setup.typoscript
-
-    module.tx_myextension_somemodule {
-        settings {
-            enablesomething = 1
-        }
-    }
 
 ..  _tlo-module-options-extbase:
 
@@ -94,16 +88,8 @@ view.templateRootPaths
 Example: Set the template root paths
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_templaterootpaths.typoscript
     :caption: EXT:my_extension/ext_typoscript_setup.typoscript
-
-    module.tx_somebackend_module {
-        view {
-            templateRootPaths {
-                100 = EXT:my_extension/Resources/Private/Templates/Backend
-            }
-        }
-    }
 
 ..  index:: module; view.partialRootPaths
 ..  _tlo-module-properties-partialRootPaths:
@@ -130,16 +116,8 @@ view.partialRootPaths
 Example: Set the partial root paths
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_partialRootPaths.typoscript
     :caption: EXT:my_extension/ext_typoscript_setup.typoscript
-
-    module.tx_somebackend_module {
-        view {
-            partialRootPaths {
-                100 = EXT:my_extension/Resources/Private/Partials/Backend
-            }
-        }
-    }
 
 
 ..  index:: module; settings
@@ -173,14 +151,5 @@ Example: Register YAML file
 
 Register your :doc:`typo3/cms-form:Index` configuration for the backend via TypoScript.
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_settings.typoscript
     :caption: EXT:my_extension/ext_typoscript_setup.typoscript
-
-    module.tx_form {
-        settings {
-            yamlConfigurations {
-                # Use the current timestamp as key to avoid accidental overwriting
-                1712163960 = EXT:my_extension/Configuration/Form/CustomFormSetup.yaml
-            }
-        }
-    }

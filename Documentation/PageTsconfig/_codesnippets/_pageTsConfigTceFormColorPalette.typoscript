@@ -1,0 +1,8 @@
+# Assign a palette to a specific field
+TCEFORM.tx_myextension_table.myfield.colorPalette = messages
+
+# Assign a palette to all color pickers used in a table
+TCEFORM.tx_myextension_table.colorPalette = key_colors
+
+# Assign global palette
+TCEFORM.colorPalette = main

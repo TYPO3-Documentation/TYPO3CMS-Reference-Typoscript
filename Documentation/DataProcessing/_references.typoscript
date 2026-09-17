@@ -1,0 +1,7 @@
+page.10.dataProcessing {
+  10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+  10 {
+    references.data = levelmedia: -1, slide
+    as = myfiles
+  }
+}

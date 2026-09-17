@@ -1,0 +1,11 @@
+20 = TEXT
+20.stdWrap {
+  field = bodytext
+  split {
+    token.char = 10
+    cObjNum = 1
+    1.current = 1
+    1.wrap = <tr><td><img src="dot.gif"></td><td> | </td></tr>
+  }
+  stdWrap.wrap = <table style="width: 368px;"> | </table><br>
+}

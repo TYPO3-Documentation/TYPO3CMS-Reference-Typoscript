@@ -1,0 +1,4 @@
+mod.web_view {
+  # Frontend link will be something like index.php?id=123&type=42
+  type = 42
+}

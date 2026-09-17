@@ -1,0 +1,4 @@
+tt_content.image.20.1.file {
+  crop.data = file:current:crop
+  cropVariant = desktop
+}

@@ -297,13 +297,8 @@ newRecord.pages
 Example: Hide the "Page (inside)" link in the "New Record" dialog
 -----------------------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _pages.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    mod.wizards.newRecord.pages.show {
-        # Hide the "Page (inside)" link.
-        pageInside = 0
-    }
 
 ..  figure:: /Images/ManualScreenshots/List/PageTsModWizardsNewRecordHideInside.png
     :alt: The modified New record screen without Page (inside)

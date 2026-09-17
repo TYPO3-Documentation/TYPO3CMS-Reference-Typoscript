@@ -1,0 +1,13 @@
+os_1 = a
+os_2 = a || b || c
+os_3 = |*|  |*| a || b
+os_4 = a |*| b || c |*|
+os_5 = a || b |*|  |*| d || e
+os_6 = a || b |*| c |*| d || e
+
+os1 = a
+os2 = a||b||c
+os3 = |*||*|a||b
+os4 = a|*|b||c|*|
+os5 = a||b|*||*|d||e
+os6 = a||b|*|c|*|d||e

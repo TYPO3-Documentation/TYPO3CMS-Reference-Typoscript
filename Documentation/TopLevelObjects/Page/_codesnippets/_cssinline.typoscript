@@ -1,0 +1,10 @@
+page = PAGE
+# [...]
+
+page.cssInline {
+  10 = TEXT
+  10.value = h1 {margin:15px;}
+
+  20 = TEXT
+  20.value = h1 span {color: blue;}
+}

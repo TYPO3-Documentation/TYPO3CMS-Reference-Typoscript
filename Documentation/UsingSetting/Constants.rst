@@ -56,18 +56,9 @@ Here :typoscript:`bgCol` is set to "red", :typoscript:`file.toplogo` is set to
 :file:`fileadmin/logo2.gif`, assuming these files are indeed available at the
 expected location.
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_definition.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/constants.typoscript
     :emphasize-lines: 2,7
-
-    bgCol = red
-    file {
-      toplogo = fileadmin/logo.gif
-    }
-    topimg {
-      width = 200
-      file.pic2 = fileadmin/logo2.gif
-    }
 
 The objects in the highlighted lines contain the reserved word "file" and the
 properties are always of data type ":ref:`data-type-resource`".
@@ -84,13 +75,8 @@ one would perform any ordinary string replacement. Constants are used in the
 "Setup" field by placing them inside curly braces and prepending them with a
 :typoscript:`$` sign:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_typoscriptSyntaxUsingConstants2.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    {$bgCol}
-    {$topimg.width}
-    {$topimg.file.pic2}
-    {$file.toplogo}
 
 Only constants, which are actually defined in the :guilabel:`Constants` field
 or an included :file:`constants.typoscript` file, are
@@ -108,27 +94,14 @@ path segment. This makes reading and finding of constants easier.
 Example
 -------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_example2.typoscript
     :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    page {
-      typeNum = 0
-      bodyTag = <body class="{$tx_my_sitepackage.bgCol}">
-      10 = IMAGE
-      10.file = {$tx_my_sitepackage.file.toplogo}
-    }
 
 For the above example to work, the constants from the last example have to be
 defined in the constants field or a file called :file:`constants.typoscript`:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_typoscriptSyntaxUsingConstants.typoscript
     :caption: EXT:my_sitepackage/Configuration/TypoScript/constants.typoscript
-
-    tx_my_sitepackage {
-      bgCol = bg-primary
-      file.toplogo = EXT:my_sitepackage/Resources/Public/Images/Logo.png
-    }
 
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantAndSetupRecord.png
     :alt: Screenshot of the TypoScript record editor showing the Constants and Setup fields

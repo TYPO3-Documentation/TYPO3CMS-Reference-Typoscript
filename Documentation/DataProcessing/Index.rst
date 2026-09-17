@@ -60,15 +60,8 @@ the system extension :doc:`fluid_styled_content <typo3/cms-fluid-styled-content:
 
 In this system extension it is defined as follows:
 
-..  code-block:: typoscript
+..  literalinclude:: _about.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    lib.contentElement >
-    lib.contentElement = FLUIDTEMPLATE
-    lib.contentElement {
-       templateName = Default
-       // ...
-    }
 
 The extension `examples` also sets the paths to the additional templates:
 

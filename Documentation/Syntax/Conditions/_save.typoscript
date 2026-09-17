@@ -1,0 +1,5 @@
+# Previously
+# [getTSFE() && getTSFE().id == 123]
+
+# Now
+[getTSFE()?.id == 123]

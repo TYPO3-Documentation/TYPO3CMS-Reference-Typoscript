@@ -90,38 +90,8 @@ page
 Example: Condition applies only on certain pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_page.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Check single page uid
-    [traverse(page, "uid") == 2]
-        // Your settings go here
-    [END]
-    # Check list of page uids
-    [traverse(page, "uid") in [17,24]]
-        // Your settings go here
-    [END]
-    # Check list of page uids NOT in
-    [traverse(page, "uid") not in [17,24]]
-        // Your settings go here
-    [END]
-    # Check range of pages (example: page uid from 10 to 20)
-    [traverse(page, "uid") in 10..20]
-        // Your settings go here
-    [END]
-
-    # Check the page backend layout
-    [traverse(page, "backend_layout") == 5]
-        // Your settings go here
-    [END]
-    [traverse(page, "backend_layout") == "example_layout"]
-        // Your settings go here
-    [END]
-
-    # Check the page title
-    [traverse(page, "title") == "foo"]
-        // Your settings go here
-    [END]
 
 
 ..  index:: Conditions; tree
@@ -158,13 +128,8 @@ tree.level
 Example: Condition applies on a page on root level
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_level.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Check if page is on level 1 (root):
-    [tree.level == 1]
-        // Your settings go here
-    [END]
 
 ..  hint::
 
@@ -197,18 +162,8 @@ tree.pagelayout
 Example: Condition applies on pages with a certain backend layout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_pagelayout.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Use backend_layout records uids
-    [tree.pagelayout == 2]
-        // Your settings go here
-    [END]
-
-    # Use TSconfig provider of backend layouts
-    [tree.pagelayout == "pagets__Home"]
-        // Your settings go here
-    [END]
 
 
 ..  index::
@@ -258,13 +213,8 @@ tree.rootLineIds
 Example: Condition applies if a page is in the root line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_rootLineIds.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Check if page with uid 2 is inside the root line
-    [2 in tree.rootLineIds]
-        // Your settings go here
-    [END]
 
 
 ..  index::
@@ -287,13 +237,8 @@ tree.rootLineParentIds
 Example: Condition applies if a page's parent is in the root line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_rootLineParentIds.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Check if page with uid 2 is the parent of a page inside the root line
-    [2 in tree.rootLineParentIds]
-        // Your settings go here
-    [END]
 
 
 ..  index:: Conditions; backend
@@ -340,13 +285,8 @@ backend.user.isAdmin
 Example: Condition applies if the current backend user is an admin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_isAdmin.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Evaluates to true if current backend user is administrator
-    [backend.user.isAdmin]
-        // Your settings go here
-    [END]
 
 
 ..  index:: Conditions; backend.user.isLoggedIn
@@ -393,13 +333,8 @@ backend.user.userId
 Example: Condition applies if a certain backend user is logged in
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_userId.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Evaluates to true if user uid of current logged in backend user is equal to 5
-    [backend.user.userId == 5]
-        // Your settings go here
-    [END]
 
 
 ..  index:: Conditions; backend.user.userGroupIds
@@ -655,28 +590,8 @@ date()
 Example: Condition applies at certain dates or times
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_date.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # True if day of current month is 7
-    [date("j") == 7]
-        // Your settings go here
-    [END]
-
-    # True if day of current week is 7
-    [date("w") == 7]
-        // Your settings go here
-    [END]
-
-    # True if day of current year is 7
-    [date("z") == 7]
-        // Your settings go here
-    [END]
-
-    # True if current hour is 7
-    [date("G") == 7]
-        // Your settings go here
-    [END]
 
 
 ..  index:: Conditions; like
@@ -698,23 +613,8 @@ like()
 Example: Use the "like()" function in conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_like.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Search a string with * within another string
-    [like("fooBarBaz", "*Bar*")]
-        // Your settings go here
-    [END]
-
-    # Search string with single characters in between, using ?
-    [like("fooBarBaz", "f?oBa?Baz")]
-        // Your settings go here
-    [END]
-
-    # Search string using regular expression
-    [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
-        // Your settings go here
-    [END]
 
 
 ..  index:: Conditions; traverse
@@ -741,13 +641,8 @@ Example: Condition applies if request parameter matches a certain value
 
 ..  todo: This example does not really make sense in the backend context?
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_traverse.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Traverse query parameters of current request along tx_news_pi1[news]
-    [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
-        // Your settings go here
-    [END]
 
 
 ..  index:: Conditions; compatVersion
@@ -768,19 +663,8 @@ compatVersion()
 Example: Condition applies if the current TYPO3 version matches a pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_compatVersion.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # True if current version is 13.4.x
-    [compatVersion("13.4")]
-        // Your settings go here
-    [END]
-    [compatVersion("13.4.0")]
-        // Your settings go here
-    [END]
-    [compatVersion("13.4.1")]
-        // Your settings go here
-    [END]
 
 ..  _tsconfig-condition-function-getenv:
 
@@ -826,13 +710,8 @@ Example: condition applies if a feature toggle is enabled
 
 ..  todo: Add another feature as TypoScript.strictSyntax is not available anymore in current versions.
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_feature.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # True if feature toggle for strict TypoScript syntax is enabled:
-    [feature("TypoScript.strictSyntax") === false]
-        // Your settings go here
-    [END]
 
 ..  _tsconfig-condition-function-site:
 
@@ -877,30 +756,5 @@ site()
 Example: Condition applies if a certain value is set in the site configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_site.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Site identifier
-    [site("identifier") == "my_website"]
-        // Your settings go here
-    [END]
-
-    # Match site base host
-    [site("base").getHost() == "www.example.org"]
-        // Your settings go here
-    [END]
-
-    # Match base path
-    [site("base").getPath() == "/"]
-        // Your settings go here
-    [END]
-
-    # Match root page uid
-    [site("rootPageId") == 1]
-        // Your settings go here
-    [END]
-
-    # Match a configuration property
-    [traverse(site("configuration"), "myCustomProperty") == true]
-        // Your settings go here
-    [END]

@@ -55,15 +55,8 @@ uidInList
 
     ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_uidInList.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        select {
-           uidInList = 1,2,3
-           pidInList = 0
-        }
-
-        select.uidInList = this
 
 ..  _select_pidInList:
 
@@ -115,23 +108,8 @@ pidInList
 
     Fetch related `sys_category` records stored in the MM intermediate table:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_pidInList.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        10 = CONTENT
-        10 {
-           table = sys_category
-           select {
-              pidInList = root,-1
-              selectFields = sys_category.*
-              join = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
-              where.data = field:_ORIG_uid // field:uid
-              where.intval = 1
-              where.wrap = sys_category_record_mm.uid_foreign=|
-              orderBy = sys_category_record_mm.sorting_foreign
-              languageField = 0 # disable translation handling of sys_category
-           }
-        }
 
 
 ..  _select-recursive:
@@ -310,19 +288,8 @@ join, leftjoin, rightjoin
 
     Fetch related `sys_category` records stored in the MM intermediate table:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_join.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        10 = CONTENT
-        10 {
-           table = sys_category
-           select {
-              pidInList = root,-1
-              selectFields = sys_category.*
-              join = sys_category_record_mm mm ON mm.uid_local = sys_category.uid
-              # ....
-            }
-        }
 
     See :ref:`select_pidInList` for more examples.
 
@@ -362,40 +329,15 @@ markers
 
     ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_markers2.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        page.60 = CONTENT
-        page.60 {
-            table = tt_content
-            select {
-                pidInList = 73
-                where = header != ###whatever###
-                markers {
-                    whatever.data = GP:first
-                }
-            }
-        }
 
     This example selects all records from table tt_content, which are on page 73 and
     which don't have the header set to the value provided by the Get/Post variable
     "first".
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_markers.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        page.60 = CONTENT
-        page.60 {
-            table = tt_content
-            select {
-                pidInList = 73
-                where = header != ###whatever###
-                markers {
-                    whatever.value = some
-                    whatever.wrap = |thing
-                }
-            }
-        }
 
 
     This examples selects all records from the table tt_content which are on page 73
@@ -438,29 +380,8 @@ See PHP source code for
 
 Condensed form:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_selectQuotingOfFields.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    10 = CONTENT
-    10 {
-       table =
-       select {
-          uidInList =
-          pidInList =
-          recursive =
-          orderBy =
-          groupBy =
-          max =
-          begin =
-          where =
-          languageField =
-          includeRecordsWithoutDefaultTranslation =
-          selectFields =
-          join =
-          leftjoin =
-          rightjoin =
-       }
-    }
 
 See also:
 

@@ -1,0 +1,26 @@
+page = PAGE
+# [...]
+
+page.includeJS {
+  helloworld = EXT:site_package/Resources/Public/JavaScript/helloworld.js
+  helloworld.type = application/x-javascript
+
+  # Include the file only if myConstant is set in the TS constants field.
+  conditional = EXT:site_package/Resources/Public/JavaScript/conditional.js
+  conditional.if.isTrue = {$myConstant}
+
+  # Include another file for consent management
+  # A data attribute enriches the tag with additional information
+  # which can be used in the according JavaScript.
+  # This results in "<script data-consent-type="essential" ...></script>"
+  consent = EXT:site_package/Resources/Public/JavaScript/consent.js
+  consent.data.data-consent-type = essential
+
+  # Another attribute can also be defined also with the "data" key.
+  # This results in "<script other-attribute="value" ...></script>"
+  consent.data.other-attribute = value
+
+  jquery = https://code.jquery.com/jquery-3.4.1.min.js
+  jquery.external = 1
+  jquery.integrity = sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh
+}

@@ -1,0 +1,27 @@
+tt_content.text.default {
+  20 = TEXT
+  20.stdWrap.field = bodytext
+  20.stdWrap.wrap = | <br>
+  20.stdWrap.brTag = <br>
+  20.stdWrap.parseFunc {
+    makelinks = 1
+    makelinks.http.keep = path
+    makelinks.http.extTarget = _blank
+    makelinks.mailto.keep = path
+    tags {
+      link = TEXT
+      link {
+        stdWrap.current = 1
+        stdWrap.typolink.extTarget = _blank
+        stdWrap.typolink.target = {$cLinkTagTarget}
+        stdWrap.typolink.wrap = <p style="color: red; font-weight: bold;">|</p>
+        stdWrap.typolink.parameter.data = parameters : allParams
+      }
+
+      typolist < tt_content.bullets.default.20
+      typolist.trim = 1
+      typolist.field >
+      typolist.current = 1
+    }
+  }
+}

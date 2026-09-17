@@ -1,0 +1,12 @@
+myAjax = PAGE
+myAjax {
+  typeNum = 1617455214
+  config {
+    disableAllHeaderCode = 1
+    admPanel = 0
+    debug = 0
+  }
+  # Prevent caching if necessary
+  10 = COA_INT
+  10 < plugin.tx_myextension_myajaxplugin
+}

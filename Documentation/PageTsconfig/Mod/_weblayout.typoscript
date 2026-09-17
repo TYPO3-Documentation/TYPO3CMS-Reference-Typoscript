@@ -1,0 +1,4 @@
+# Disables "Languages" from function menu
+mod.web_layout.menu.functions {
+  2 = 0
+}

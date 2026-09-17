@@ -200,16 +200,5 @@ The following Fluid template can be used to style the menu:
 Example: Find related pages of the current page
 -----------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _keywordsValue.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    lib.relatedPagesMenu = HMENU
-    lib.relatedPagesMenu {
-        special = keywords
-        special {
-            value.data = page:uid
-            entryLevel = 1
-            mode = manual
-        }
-        // render the menu
-    }

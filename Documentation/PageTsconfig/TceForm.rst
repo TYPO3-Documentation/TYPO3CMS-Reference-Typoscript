@@ -119,19 +119,10 @@ addItems
 Example: Add header layout option
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_addItems.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
-    TCEFORM.tt_content.header_layout {
-        # Add another header_layout option:
-        addItems.1525215969 = Another header layout
-        # Add another one with localized label, icon and group
-        addItems.1525216023 = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:header_layout
-        addItems.1525216023.icon = EXT:my_ext/icon.png
-        addItems.1525216023.group = special
-    }
-
-    Instead of adding files by path, icon identifiers should be used.
+Instead of adding files by path, icon identifiers should be used.
 
 ..  index::
     Records; labels changed
@@ -169,16 +160,8 @@ altLabels
 Example: Override labels for document types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_altLabels.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.pages.doktype {
-        # Set a different item label
-        altLabels.1 = STANDARD Page Type
-        altLabels.254 = Folder (for various elements)
-        # Sets the default label for Recycler via "locallang":
-        altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
-    }
 
 ..  figure:: /Images/ManualScreenshots/List/PagesDoktypeDifferentLabels.png
     :alt: The Page types with modified labels
@@ -339,17 +322,8 @@ colorPalette
 Example: Assign a palette to a field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_pageTsConfigTceFormColorPalette.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
-
-    # Assign a palette to a specific field
-    TCEFORM.tx_myextension_table.myfield.colorPalette = messages
-
-    # Assign a palette to all color pickers used in a table
-    TCEFORM.tx_myextension_table.colorPalette = key_colors
-
-    # Assign global palette
-    TCEFORM.colorPalette = main
 
 
 ..  index::
@@ -446,13 +420,8 @@ config.treeConfig
     :ref:`treeConfig <t3tca:columns-select-properties-treeconfig>` properties can be overriden on page TSconfig level, see their detailed description
     in the :ref:`TCA reference <t3tca:columns-select-properties-treeconfig>`:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_pageTsConfigTceFormConfigTreeConfig.typoscript
         :caption: EXT:site_package/Configuration/page.tsconfig
-
-        config.treeConfig.startingPoints = 1,42
-        config.treeConfig.appearance.expandAll = 1
-        config.treeConfig.appearance.maxLevels = 2
-        config.treeConfig.appearance.nonSelectableLevels = 1
 
     This property is available for various levels:
 
@@ -566,13 +535,8 @@ disabled
 Example: Disable editing of the page title
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_disabled.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.pages.title {
-        # The title field of the pages table is not editable
-        disabled = 1
-    }
 
 ..  index::
     Records; select items  disable "INVALID VALUE"
@@ -615,13 +579,8 @@ disableNoMatchingValueElement
 Example: Disable "INVALID VALUE ..." label
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_pageFormEngineDisableNoMatchingElement.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.pages.doktype {
-        # "INVALID VALUE ..." label will never show up
-        disableNoMatchingValueElement = 1
-    }
 
 Now the selector box will default to the first element in the selector box:
 
@@ -655,14 +614,8 @@ fileFolderConfig
     The same sub properties as in the `fileFolderConfig` TCA configuration are
     available:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_fileFolderConfig.typoscript
         :caption: EXT:site_package/Configuration/page.tsconfig
-
-        fileFolderConfig {
-            folder = 'EXT:styleguide/Resources/Public/Icons'
-            allowedExtensions = 'svg'
-            depth = 1
-        }
 
     This property is available for various levels:
 
@@ -740,13 +693,8 @@ keepItems
 Example: Show only standard and spacer pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_keepItems.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.pages.doktype {
-        # Show only standard and "Spacer" page types
-        keepItems = 1, 199
-    }
 
 ..  index::
     Records; Field label
@@ -785,14 +733,8 @@ label
 Example: Override the label of a field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_tceformLabel.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.pages.title {
-        label = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:table.column
-        label.default = New Label
-        label.de = Neuer Feldname
-    }
 
 
 ..  index::
@@ -831,13 +773,8 @@ noMatchingValue_label
 Example: Replace "INVALID VALUE ..." label with another string
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_noMatchingValueLabel.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.pages.doktype {
-        # Different "INVALID VALUE ..." label:
-        noMatchingValue_label = VALUE "%s" was not available!
-    }
 
 ..  figure:: /Images/ManualScreenshots/List/SelectInvalidValueDifferentLabel.png
     :alt:  An invalid selector box value is indicated by a warning message
@@ -878,13 +815,8 @@ removeItems
 Example: Remove "Recycler" and "Spacer" page types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_removeItems.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.pages.doktype {
-        # Remove "Recycler" and "Spacer" page types
-        removeItems = 199, 255
-    }
 
 ..  index::
     FlexForm; Sheet description
@@ -949,13 +881,8 @@ sheetTitle
 Example: Rename the first tab of the FlexForm plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_sheetTitle.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF {
-        # Rename the first tab of the FlexForm plug-in configuration
-        sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.myext_pi1.sDEF
-    }
 
 ..  index::
     Records; Suggest wizard
@@ -1056,14 +983,8 @@ suggest.cssClass
 
     Add a CSS class to every list item of the result list.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_cssClass.typoscript
         :caption: EXT:site_package/Configuration/page.tsconfig
-
-        TCEFORM.suggest.pages {
-            # Configure all suggest wizards which list records from table "pages"
-            # to add the CSS class "pages" to every list item of the result list.
-            cssClass = pages
-        }
 
 
 ..  index::
@@ -1162,13 +1083,8 @@ suggest.pidDepth
 Example: Set search depth for suggest field
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_pidDepth.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.suggest.default {
-        pidList = 6,7
-        pidDepth = 4
-    }
 
 ..  index::
     Suggest wizard; pid list
@@ -1189,13 +1105,8 @@ suggest.pidList
 Example: Limit suggest search to records on certain pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_pidList.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.suggest.default {
-        # sets the pidList for a suggest fields in all tables
-        pidList = 1,2,3,45
-    }
 
 
 ..  index::
@@ -1244,14 +1155,8 @@ suggest.searchCondition
 Example: Only search on pages with doktype=1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_searchCondition.typoscript
         :caption: EXT:site_package/Configuration/page.tsconfig
-
-        TCEFORM.pages.storage_pid.suggest.default {
-            # Configure the suggest wizard for the field "storage_pid" in table "pages"
-            # to search only for pages with doktype=1
-            searchCondition = doktype=1
-        }
 
 ..  index::
     Suggest wizard; Search whole phrase
@@ -1273,10 +1178,5 @@ suggest.searchWholePhrase
 Example: Search only for whole phrases
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_searchWholePhrase.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEFORM.pages.storage_pid.suggest.default {
-        # Configure the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
-        searchWholePhrase = 1
-    }

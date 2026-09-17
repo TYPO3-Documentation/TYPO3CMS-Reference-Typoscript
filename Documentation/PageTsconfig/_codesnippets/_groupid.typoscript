@@ -1,0 +1,4 @@
+TCEMAIN {
+  # Owner be_groups UID for new pages
+  permissions.groupid = 3
+}

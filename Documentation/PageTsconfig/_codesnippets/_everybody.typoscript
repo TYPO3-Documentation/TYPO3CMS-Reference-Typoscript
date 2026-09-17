@@ -1,0 +1,4 @@
+TCEMAIN.permissions {
+  # Everybody can at least see the page, normally everybody can do nothing
+  everybody = show
+}

@@ -35,15 +35,8 @@ Properties
     This will generate a menu with the two pages (uid=35 and uid=56)
     listed:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _listValue.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        lib.listOfSelectedPages = HMENU
-        lib.listOfSelectedPages {
-            special = list
-            special.value = 35, 56
-            // render the menu
-        }
 
     If :typoscript:`special.value` is not set, the default uid is 0, so
     that only your homepage will be listed.

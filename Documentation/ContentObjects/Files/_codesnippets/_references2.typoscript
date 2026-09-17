@@ -1,0 +1,5 @@
+references {
+  table = tt_content
+  uid = 256
+  fieldName = image
+}

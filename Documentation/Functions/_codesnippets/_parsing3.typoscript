@@ -1,0 +1,8 @@
+page = PAGE
+page.10 = TEXT
+page.10 {
+  value = 1000
+  bytes = 1
+  bytes.labels = " byte (B)| kilobyte (kB)| megabyte (MB)| gigabyte (GB)| terabyte (TB)| petabyte (PB)| exabyte (EB)| zettabyte (ZB)| yottabyte YB"
+  bytes.base = 1000
+}

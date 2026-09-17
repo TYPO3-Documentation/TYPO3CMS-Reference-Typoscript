@@ -1,0 +1,8 @@
+TCEFORM.tt_content.header_layout {
+  # Add another header_layout option:
+  addItems.1525215969 = Another header layout
+  # Add another one with localized label, icon and group
+  addItems.1525216023 = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:header_layout
+  addItems.1525216023.icon = EXT:my_ext/icon.png
+  addItems.1525216023.group = special
+}

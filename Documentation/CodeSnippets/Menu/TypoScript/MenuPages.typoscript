@@ -5,18 +5,18 @@
 
 tt_content.menu_pages =< lib.contentElement
 tt_content.menu_pages {
-    templateName = MenuPages
-    dataProcessing {
-        10 = menu
+  templateName = MenuPages
+  dataProcessing {
+    10 = menu
+    10 {
+      special = list
+      special.value.field = pages
+      dataProcessing {
+        10 = files
         10 {
-            special = list
-            special.value.field = pages
-            dataProcessing {
-                10 = files
-                10 {
-                    references.fieldName = media
-                }
-            }
+          references.fieldName = media
         }
+      }
     }
+  }
 }

@@ -116,17 +116,8 @@ In both the "Constants" and "Setup" fields, the
 :ref:`@import <typoscript-syntax-includes>` syntax can be
 used to include TypoScript contained inside files:
 
-..  code-block:: typoscript
+..  literalinclude:: _includes.typoscript
     :caption: EXT:my_site_package/Configuration/TypoScript/setup.typoscript
-
-    # Import a single file
-    @import 'EXT:my_site_package/Configuration/TypoScript/randomfile.typoscript'
-
-    # Import multiple files of a single directory in file name order
-    @import 'EXT:my_site_package/Configuration/TypoScript/*.typoscript'
-
-    # The filename extension can be omitted and defaults to .typoscript
-    @import 'EXT:my_site_package/Configuration/TypoScript/'
 
 ..  index:: TypoScript; Include from extensions
 ..  _static-includes:

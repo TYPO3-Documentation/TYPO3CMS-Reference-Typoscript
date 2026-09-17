@@ -30,11 +30,6 @@ feature.
 Example
 =======
 
-..  code-block:: typoscript
+..  literalinclude:: _getEnv.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    # Define default value
-    myConstant = defaultValue
-    # Enable overriding by environment variable
-    myConstant := getEnv(TS_MYCONSTANT)
 
