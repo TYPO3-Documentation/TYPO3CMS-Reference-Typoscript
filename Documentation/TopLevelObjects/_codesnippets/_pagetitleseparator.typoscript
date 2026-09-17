@@ -1,0 +1,7 @@
+config.pageTitleSeparator = *
+config.pageTitle.stdWrap {
+  split {
+    token = *
+    returnKey = 1
+  }
+}

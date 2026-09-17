@@ -1,0 +1,12 @@
+5 = TEXT
+5 {
+  stdWrap {
+    cache {
+      key = mycurrenttimestamp
+      tags = tag_a,tag_b,tag_c
+      lifetime = 3600
+    }
+    data = date : U
+    strftime = %H:%M:%S
+  }
+}

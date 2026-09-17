@@ -1,0 +1,19 @@
+sourceCollection {
+  small {
+    width = 200
+
+    srcsetCandidate = 600w
+    mediaQuery = (max-device-width: 600px)
+    dataKey = small
+  }
+  smallRetina {
+    if.directReturn = 1
+
+    width = 200
+    pixelDensity = 2
+
+    srcsetCandidate = 600w 2x
+    mediaQuery = (max-device-width: 600px) AND (min-resolution: 192dpi)
+    dataKey = smallRetina
+  }
+}

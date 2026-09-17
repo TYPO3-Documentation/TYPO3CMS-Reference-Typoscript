@@ -1,0 +1,6 @@
+tags.bold = TEXT
+tags.bold {
+  stdWrap.current = 1
+  stdWrap.wrap = <p style="font-weight: bold;"> | </p>
+}
+tags.bold.stdWrap.stripNL = 1

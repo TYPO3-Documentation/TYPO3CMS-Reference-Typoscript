@@ -1,0 +1,6 @@
+20 = RECORDS
+20 {
+  source = 10,12
+  dontCheckPid = 1
+  tables = tt_content
+}

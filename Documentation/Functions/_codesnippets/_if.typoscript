@@ -1,0 +1,8 @@
+30 = TEXT
+30.text = NEW!
+30.offset = 10,10
+30.if {
+  value.data = date: U
+  isLessThan.field = newUntil
+  negate = 1
+}

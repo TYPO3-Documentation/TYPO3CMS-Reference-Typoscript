@@ -1,0 +1,284 @@
+temp.marray = HMENU
+temp.marray {
+  special = directory
+  # enter a page with at least 9 visible subpages!
+  special.value = 123
+  maxItems = 5
+
+  1 = TMENU
+  1 {
+    NO {
+      // the underscore is used to represent each item and avoid a collapsing of whitespace in html
+      before = _
+      doNotShowLink = 1
+    }
+  }
+}
+
+temp.mrow = COA
+temp.mrow {
+  1 = LOAD_REGISTER
+  1.os = {$os4}
+
+  5 = TEXT
+  5.data = register:os
+  5.wrap = <th>|</th>
+
+  10 < temp.marray
+  10.maxItems = 1
+  10.wrap = <td>[|]</td>
+
+  20 < .10
+  20.maxItems = 2
+
+  30 < .10
+  30.maxItems = 3
+
+  40 < .10
+  40.maxItems = 4
+
+  50 < .10
+  50.maxItems = 5
+
+  60 < .10
+  60.maxItems = 6
+
+  70 < .10
+  70.maxItems = 7
+
+  80 < .10
+  80.maxItems = 8
+
+  90 < .10
+  90.maxItems = 9
+
+  100 = RESTORE_REGISTER
+
+  wrap = <tr>|</tr>
+}
+
+# Default PAGE object:
+page = PAGE
+
+page.10 = COA
+page.10 {
+  wrap = <pre>|</pre>
+  10 = COA
+  10 {
+    wrap (
+    <table>
+      <tr>
+        <th>optionsplit</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+      </tr>
+      |
+    </table>
+    )
+
+    10 < temp.mrow
+    10 {
+      1.os = {$os1}
+      10.1.NO.before.wrap = {$os1}
+      20.1.NO.before.wrap = {$os1}
+      30.1.NO.before.wrap = {$os1}
+      40.1.NO.before.wrap = {$os1}
+      50.1.NO.before.wrap = {$os1}
+      60.1.NO.before.wrap = {$os1}
+      70.1.NO.before.wrap = {$os1}
+      80.1.NO.before.wrap = {$os1}
+      90.1.NO.before.wrap = {$os1}
+    }
+
+    20 < .10
+    20 {
+      1.os = {$os2}
+      10.1.NO.before.wrap = {$os2}
+      20.1.NO.before.wrap = {$os2}
+      30.1.NO.before.wrap = {$os2}
+      40.1.NO.before.wrap = {$os2}
+      50.1.NO.before.wrap = {$os2}
+      60.1.NO.before.wrap = {$os2}
+      70.1.NO.before.wrap = {$os2}
+      80.1.NO.before.wrap = {$os2}
+      90.1.NO.before.wrap = {$os2}
+    }
+
+    30 < .10
+    30 {
+      1.os = {$os3}
+      10.1.NO.before.wrap = {$os3}
+      20.1.NO.before.wrap = {$os3}
+      30.1.NO.before.wrap = {$os3}
+      40.1.NO.before.wrap = {$os3}
+      50.1.NO.before.wrap = {$os3}
+      60.1.NO.before.wrap = {$os3}
+      70.1.NO.before.wrap = {$os3}
+      80.1.NO.before.wrap = {$os3}
+      90.1.NO.before.wrap = {$os3}
+    }
+
+
+    40 < .10
+    40 {
+      1.os = {$os4}
+      10.1.NO.before.wrap = {$os4}
+      20.1.NO.before.wrap = {$os4}
+      30.1.NO.before.wrap = {$os4}
+      40.1.NO.before.wrap = {$os4}
+      50.1.NO.before.wrap = {$os4}
+      60.1.NO.before.wrap = {$os4}
+      70.1.NO.before.wrap = {$os4}
+      80.1.NO.before.wrap = {$os4}
+      90.1.NO.before.wrap = {$os4}
+    }
+
+
+    50 < .10
+    50 {
+      1.os = {$os5}
+      10.1.NO.before.wrap = {$os5}
+      20.1.NO.before.wrap = {$os5}
+      30.1.NO.before.wrap = {$os5}
+      40.1.NO.before.wrap = {$os5}
+      50.1.NO.before.wrap = {$os5}
+      60.1.NO.before.wrap = {$os5}
+      70.1.NO.before.wrap = {$os5}
+      80.1.NO.before.wrap = {$os5}
+      90.1.NO.before.wrap = {$os5}
+    }
+
+
+    60 < .10
+    60 {
+      1.os = {$os6}
+      10.1.NO.before.wrap = {$os6}
+      20.1.NO.before.wrap = {$os6}
+      30.1.NO.before.wrap = {$os6}
+      40.1.NO.before.wrap = {$os6}
+      50.1.NO.before.wrap = {$os6}
+      60.1.NO.before.wrap = {$os6}
+      70.1.NO.before.wrap = {$os6}
+      80.1.NO.before.wrap = {$os6}
+      90.1.NO.before.wrap = {$os6}
+    }
+  }
+
+  20 = TEXT
+  20.value = <hr />
+
+  30 = COA
+  30 {
+    wrap (
+    <table>
+      <tr>
+        <th>optionsplit</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+      </tr>
+      |
+    </table>
+    )
+
+    10 < temp.mrow
+    10 {
+      1.os = {$os_1}
+      10.1.NO.before.wrap = {$os_1}
+      20.1.NO.before.wrap = {$os_1}
+      30.1.NO.before.wrap = {$os_1}
+      40.1.NO.before.wrap = {$os_1}
+      50.1.NO.before.wrap = {$os_1}
+      60.1.NO.before.wrap = {$os_1}
+      70.1.NO.before.wrap = {$os_1}
+      80.1.NO.before.wrap = {$os_1}
+      90.1.NO.before.wrap = {$os_1}
+    }
+
+    20 < .10
+    20 {
+      1.os = {$os_2}
+      10.1.NO.before.wrap = {$os_2}
+      20.1.NO.before.wrap = {$os_2}
+      30.1.NO.before.wrap = {$os_2}
+      40.1.NO.before.wrap = {$os_2}
+      50.1.NO.before.wrap = {$os_2}
+      60.1.NO.before.wrap = {$os_2}
+      70.1.NO.before.wrap = {$os_2}
+      80.1.NO.before.wrap = {$os_2}
+      90.1.NO.before.wrap = {$os_2}
+    }
+
+    30 < .10
+    30 {
+      1.os = {$os_3}
+      10.1.NO.before.wrap = {$os_3}
+      20.1.NO.before.wrap = {$os_3}
+      30.1.NO.before.wrap = {$os_3}
+      40.1.NO.before.wrap = {$os_3}
+      50.1.NO.before.wrap = {$os_3}
+      60.1.NO.before.wrap = {$os_3}
+      70.1.NO.before.wrap = {$os_3}
+      80.1.NO.before.wrap = {$os_3}
+      90.1.NO.before.wrap = {$os_3}
+    }
+
+
+    40 < .10
+    40 {
+      1.os = {$os_4}
+      10.1.NO.before.wrap = {$os_4}
+      20.1.NO.before.wrap = {$os_4}
+      30.1.NO.before.wrap = {$os_4}
+      40.1.NO.before.wrap = {$os_4}
+      50.1.NO.before.wrap = {$os_4}
+      60.1.NO.before.wrap = {$os_4}
+      70.1.NO.before.wrap = {$os_4}
+      80.1.NO.before.wrap = {$os_4}
+      90.1.NO.before.wrap = {$os_4}
+    }
+
+
+    50 < .10
+    50 {
+      1.os = {$os_5}
+      10.1.NO.before.wrap = {$os_5}
+      20.1.NO.before.wrap = {$os_5}
+      30.1.NO.before.wrap = {$os_5}
+      40.1.NO.before.wrap = {$os_5}
+      50.1.NO.before.wrap = {$os_5}
+      60.1.NO.before.wrap = {$os_5}
+      70.1.NO.before.wrap = {$os_5}
+      80.1.NO.before.wrap = {$os_5}
+      90.1.NO.before.wrap = {$os_5}
+    }
+
+
+    60 < .10
+    60 {
+      1.os = {$os_6}
+      10.1.NO.before.wrap = {$os_6}
+      20.1.NO.before.wrap = {$os_6}
+      30.1.NO.before.wrap = {$os_6}
+      40.1.NO.before.wrap = {$os_6}
+      50.1.NO.before.wrap = {$os_6}
+      60.1.NO.before.wrap = {$os_6}
+      70.1.NO.before.wrap = {$os_6}
+      80.1.NO.before.wrap = {$os_6}
+      90.1.NO.before.wrap = {$os_6}
+    }
+  }
+}

@@ -39,15 +39,8 @@ Properties
 
     This will generate a menu of all pages with pid = 35 and pid = 56.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _directoryValue.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        lib.metaMenu = HMENU
-        lib.metaMenu {
-            special = directory
-            special.value = 35, 56
-            // render the menu
-        }
 
 
 ..  _hmenu-special-directory-example:

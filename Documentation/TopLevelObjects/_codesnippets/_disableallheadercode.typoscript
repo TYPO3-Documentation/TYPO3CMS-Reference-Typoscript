@@ -1,0 +1,9 @@
+json = PAGE
+json {
+  typeNum = 1617455215
+  10 =< tt_content.list.20.tx_myextension_myjsonplugin
+  config {
+    disableAllHeaderCode = 1
+    additionalHeaders.10.header = Content-type:application/json
+  }
+}

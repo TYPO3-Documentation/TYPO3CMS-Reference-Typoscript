@@ -1,0 +1,4 @@
+file = fileadmin/test.jpg
+file.width = 240m
+file.height = 240m
+file.noScale = 1

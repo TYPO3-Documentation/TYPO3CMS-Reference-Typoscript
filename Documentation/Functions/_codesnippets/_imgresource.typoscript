@@ -1,0 +1,5 @@
+10 = IMAGE
+10.file = GIFBUILDER
+10.file {
+  # GIFBUILDER properties here...
+}

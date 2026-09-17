@@ -75,13 +75,8 @@ Example: Evaluate the current application context
 
 Evaluate if the current application context is "Production":
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_applicationcontext.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    if {
-        value.data = applicationcontext
-        equals = Production
-    }
 
 ..  _data-type-gettext-asset:
 
@@ -105,13 +100,8 @@ asset
 Example: Display extension icon with cache buster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_extension.typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
-
-    page.20 = TEXT
-    page.20 {
-        value.stdWrap.data = asset: EXT:core/Resources/Public/Icons/Extension.svg
-    }
 
 ..  _data-type-gettext-cobj:
 ..  _data-type-gettext-cobj-example:
@@ -498,14 +488,8 @@ getIndpEnv
 Example: Get the remote address
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_getindpenv.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # get and output the client IP
-    page = PAGE
-    page.10 = TEXT
-    page.10.stdWrap.data = getIndpEnv : REMOTE_ADDR
-    page.10.stdWrap.htmlSpecialChars = 1
 
 ..  _data-type-gettext-global:
 
@@ -774,15 +758,9 @@ path
     Path to a file, for example, that is in an extension. Returns an empty value if the file
     does not exist.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_dataTypeGettextPath2.typoscript
         :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
         :emphasize-lines: 3
-
-        page.20 = TEXT
-        page.20 {
-            data = path : EXT:core/Resources/Public/Icons/Extension.svg
-        }
-        # Returns /typo3/sysext/core/Resources/Public/Icons/Extension.svg
 
 
 ..  _data-type-gettext-path-example:
@@ -800,14 +778,8 @@ Get path to file `rsaauth.js` (inside extension rsaauth) relative to siteroot:
 It can also be helpful in combination with the stdWrap function
 :ref:`stdwrap-insertData`:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_dataTypeGettextPath.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page.headerData.10 = TEXT
-    page.headerData.10 {
-        data = path : EXT:site/Resources/Public/Images/logo.png
-        wrap = <a href="|">
-    }
 
 ..  _data-type-gettext-register:
 
@@ -865,14 +837,8 @@ Example: Get the page type
 Example: Get a query argument
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_queryArguments.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # Retrieve the value of the query parameter ?myParam=<value>
-    lib.foo.data = request : routing | queryArguments | myParam
-
-    # Retrieve the value of the query parameter ?tx_myext[key]=<value>
-    lib.foo.data = request : routing | queryArguments | tx_myext | key
 
 ..  _data-type-gettext-request-example-nonce:
 
@@ -1042,20 +1008,8 @@ siteLanguage
 Example: Get values from the current site language
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_siteLanguage.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page.10 = TEXT
-    page.10.data = siteLanguage:navigationTitle
-    page.10.wrap = This is the title of the current site language: |
-
-    page.20 = TEXT
-    page.20.dataWrap = The current site language's locale is {siteLanguage:locale}
-
-    # Website title for the current language with fallback
-    # to the website title of the site configuration.
-    page.30 = TEXT
-    page.30.data = siteLanguage:websiteTitle // site:websiteTitle
 
 ..  _data-type-siteSettings:
 

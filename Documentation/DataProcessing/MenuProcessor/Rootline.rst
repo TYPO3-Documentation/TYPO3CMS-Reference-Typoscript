@@ -136,14 +136,5 @@ Here the links to pages on level 3 will have :html:`target="page"`, while
 all other levels will have :html:`target="_top"` as defined for the
 :ref:`TMENU <tmenu>` property :confval:`menu-common-properties-target`.
 
-..  code-block:: typoscript
+..  literalinclude:: _targets.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page.2 = HMENU
-    page.2.special = rootline
-    page.2.special.range = 1|-2
-    page.2.special.targets.3 = page
-    page.2.1 = TMENU
-    page.2.1.target = _top
-    page.2.1.wrap = <ol> | <ol>
-    page.2.1.NO.linkWrap = <li> | </li>

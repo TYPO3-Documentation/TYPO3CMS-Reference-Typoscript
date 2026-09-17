@@ -1,0 +1,4 @@
+TCEFORM.pages.doktype {
+  # "INVALID VALUE ..." label will never show up
+  disableNoMatchingValueElement = 1
+}

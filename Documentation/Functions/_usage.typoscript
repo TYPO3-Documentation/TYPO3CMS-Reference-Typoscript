@@ -1,0 +1,9 @@
+20 = HMENU
+20.special = updated
+20.special.value = 35, 56
+20.special {
+  mode = tstamp
+  depth = 2
+  maxAge = 3600*24*3
+  limit = 8
+}

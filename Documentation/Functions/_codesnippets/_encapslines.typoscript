@@ -1,0 +1,14 @@
+page.20 = TEXT
+page.20 {
+  value (
+        First line of text
+        Some <div>text</div>
+        <p>Some text</p>
+        <div>Some text</div>
+        <B>Some text</B>
+    )
+  stdWrap.encapsLines {
+    encapsTagList = div, p
+    remapTag.P=DIV
+  }
+}

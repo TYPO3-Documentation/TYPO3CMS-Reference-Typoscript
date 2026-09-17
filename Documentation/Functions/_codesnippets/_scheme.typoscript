@@ -1,0 +1,5 @@
+typolink {
+  parameter = 13
+  forceAbsoluteUrl = 1
+  forceAbsoluteUrl.scheme = https
+}

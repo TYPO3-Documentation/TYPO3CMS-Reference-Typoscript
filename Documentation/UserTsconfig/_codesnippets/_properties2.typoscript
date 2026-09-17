@@ -1,0 +1,8 @@
+# Hide only module groups "file" and "help"
+options.hideModules = file, help
+
+# Hide additional modules "info" and "ts" from the "web" group
+options.hideModules := addToList(web_info, web_ts)
+
+# Hide only module BeLogLog from "system" group
+options.hideModules = system_BelogLog

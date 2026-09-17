@@ -1,0 +1,17 @@
+stuff = CASE
+stuff.if.isTrue.field = header
+# This value determines, which of the following cObjects will be rendered.
+stuff.key.field = layout
+
+# cObject for the case that field layout is "1".
+stuff.1 = TEXT
+stuff.1 {
+  # ....
+}
+# cObject for all other cases.
+stuff.default = TEXT
+stuff.default {
+  # ....
+}
+
+stuff.stdWrap.wrap = |<br>

@@ -1,0 +1,8 @@
+page = PAGE
+page.10 = TEXT
+page.10 {
+  value = 1000
+  bytes = 1
+  bytes.labels = si
+  noTrimWrap = ||b|
+}

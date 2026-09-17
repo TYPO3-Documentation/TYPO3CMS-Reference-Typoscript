@@ -237,20 +237,8 @@ and makes it available in a Fluid template. This is useful for
 **non-Extbase plugins** or logic that should not be registered as
 a traditional Extbase plugin.
 
-..  code-block:: typoscript
+..  literalinclude:: _plugin.typoscript
     :caption: Including a custom extension via TypoScript
-
-    lib.myExtensionPlugin = USER
-    lib.myExtensionPlugin {
-      userFunc = MyVendor\MyExtension\MyClassPath\MyClass->run
-      vendorName = MyVendor
-      extensionName = MyExtension
-      pluginName = MyPlugin
-      view =< plugin.tx_myextension.view
-      view.partialRootPaths.10 = fileadmin/Resources/Private/Partials/
-      view.templateRootPaths.10 = fileadmin/Resources/Private/Templates/
-      settings =< plugin.tx_myextension.settings
-    }
 
 This creates the TypoScript object :typoscript:`lib.myExtensionPlugin`.
 Render it in Fluid with:

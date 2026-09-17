@@ -84,15 +84,8 @@ Properties
 
         Example:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_properties5.typoscript
             :caption: EXT:site_package/Configuration/user.tsconfig
-
-            bookmarkGroups {
-              1 = 1
-              2 = My Group
-              3 = 0
-              4 =
-            }
 
         Bookmark group 1 is loaded with the default label (Pages), group 2 is
         loaded and labeled as "My Group" and groups 3 and 4 are disabled.
@@ -230,17 +223,8 @@ Properties
 
         Example:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_properties4.typoscript
             :caption: EXT:site_package/Configuration/user.tsconfig
-
-            # Remove "New" and "Create New wizard" for pages context menu (Content Records module)
-            options.contextMenu.table.pages.disableItems = new,newWizard
-
-            # Remove "New" and "Create New wizard" in page tree context menu
-            options.contextMenu.table.pages.tree.disableItems = new,newWizard
-
-            # Remove the "More options" item in the page tree context menu and all its subelements
-            options.contextMenu.table.pages.tree.disableItems = newWizard, pagesSort, pagesNewMultiple, openListModule, mountAsTreeRoot, exportT3d, importT3d, hideInMenus, showInMenus, permissions
 
     ..  _useroptions-dashboard:
 
@@ -496,13 +480,8 @@ Properties
 
             Example:
 
-            ..  code-block:: tsconfig
+            ..  literalinclude:: _codesnippets/_properties3.tsconfig
                 :caption: EXT:site_package/Configuration/user.tsconfig
-
-                # This will add "copy", "cut" and "replace" buttons in addition to the three default
-                # buttons. "translations" can be omitted, as it will be added by default,
-                # if a TYPO3 site is set up multilingual.
-                options.file_list.primaryActions = view,metadata,delete,copy,cut,replace
 
             ..  figure:: /Images/ManualScreenshots/List/FileListPrimaryActions.png
                 :alt: Show primary action with additional copy, cut and replace buttons
@@ -637,17 +616,8 @@ Properties
 
         Example:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_properties2.typoscript
             :caption: EXT:site_package/Configuration/user.tsconfig
-
-            # Hide only module groups "file" and "help"
-            options.hideModules = file, help
-
-            # Hide additional modules "info" and "ts" from the "web" group
-            options.hideModules := addToList(web_info, web_ts)
-
-            # Hide only module BeLogLog from "system" group
-            options.hideModules = system_BelogLog
 
     ..  _useroptions-hideRecords:
 
@@ -923,13 +893,8 @@ Properties
 
             Example:
 
-            ..  code-block:: typoscript
+            ..  literalinclude:: _codesnippets/_properties.typoscript
                 :caption: EXT:my_extension/Configuration/user.tsconfig
-
-                options.pageTree.label.296 {
-                  label = Campaign A
-                  color = #ff8700
-                }
 
             Display:
 

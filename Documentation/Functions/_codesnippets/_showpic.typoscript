@@ -1,0 +1,13 @@
+10 = IMAGE
+10 {
+  # point to the image
+  file = fileadmin/demo/lorem_ipsum/images/a4.jpg
+  # make it rather small
+  file.width = 80
+  # add a link to tx_cms_showpic.php that shows the original image
+  imageLinkWrap = 1
+  imageLinkWrap {
+    enable = 1
+    # JSwindow = 1
+  }
+}

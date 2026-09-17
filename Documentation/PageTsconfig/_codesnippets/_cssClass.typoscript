@@ -1,0 +1,5 @@
+TCEFORM.suggest.pages {
+  # Configure all suggest wizards which list records from table "pages"
+  # to add the CSS class "pages" to every list item of the result list.
+  cssClass = pages
+}

@@ -1,0 +1,7 @@
+[siteLanguage("fallbackType") == "strict"]
+page.10.value = This site has a strict language fallback
+[END]
+
+[siteLanguage("title") == "Italy"]
+page.10.value = This site has the title "Italy"
+[END]

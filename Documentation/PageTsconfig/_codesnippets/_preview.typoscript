@@ -1,0 +1,13 @@
+TCEMAIN.preview {
+  disableButtonForDokType = 199, 254
+  <table name> {
+    previewPageId = 123
+    fieldToParameterMap {
+      uid = tx_myextension_pi1[showUid]
+    }
+    additionalGetParameters {
+      tx_myextension_pi1.controller = MyController # results in tx_myextension_pi1[controller]
+      tx_myextension_pi1.action = show # results in tx_myextension_pi1[action]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+10 = FLUIDTEMPLATE
+10 {
+  templateRootPaths {
+    // ...
+  }
+  variables {
+    // ...
+  }
+  stdWrap.parseFunc {
+    // replace --- with soft-hyphen
+    short.--- = &shy;
+    // sanitization of ALL MARKUP is NOT DESIRED here
+    htmlSanitize = 0
+  }
+}

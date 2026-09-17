@@ -1,0 +1,4 @@
+lib.image {
+  width = 100c+30
+  height = 100c-25
+}

@@ -1,0 +1,7 @@
+# (1) to produce:  <a target="preview" ... >
+imageLinkWrap.target = preview
+
+# (2) to use a new window for each image
+# let there be:  <a target="<hash-code>" ... >
+imageLinkWrap.JSwindow = 1
+imageLinkWrap.JSwindow.newWindow = 1

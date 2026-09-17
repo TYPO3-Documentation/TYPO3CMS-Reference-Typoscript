@@ -81,10 +81,5 @@ defaultUploadFolder
 Example: Set default upload
 ---------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _default.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Set default upload folder to "fileadmin/page_upload" on PID 1
-    [traverse(page, "uid") == 1]
-        options.defaultUploadFolder = 1:/page_upload/
-    [END]

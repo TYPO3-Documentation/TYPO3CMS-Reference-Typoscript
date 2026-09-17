@@ -1,0 +1,8 @@
+bgCol = red
+file {
+  toplogo = fileadmin/logo.gif
+}
+topimg {
+  width = 200
+  file.pic2 = fileadmin/logo2.gif
+}

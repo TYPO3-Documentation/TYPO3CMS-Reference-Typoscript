@@ -1,0 +1,5 @@
+page.10.renderObj = TEXT
+page.10.renderObj {
+  stdWrap.data = file:current:size
+  stdWrap.wrap = <p>File size:<strong>|</strong></p>
+}

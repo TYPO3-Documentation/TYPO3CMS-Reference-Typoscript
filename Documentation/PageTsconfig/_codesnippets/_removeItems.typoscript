@@ -1,0 +1,4 @@
+TCEFORM.pages.doktype {
+  # Remove "Recycler" and "Spacer" page types
+  removeItems = 199, 255
+}

@@ -1,0 +1,7 @@
+[request && request.getHeaders()['Accept'] == 'json']
+page.10.value = Accepts json
+[END]
+
+[request && request.getHeaders()['host'][0] == 'www.example.org']
+page.20.value = The host is www.example.org
+[END]

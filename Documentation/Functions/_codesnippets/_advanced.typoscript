@@ -1,0 +1,21 @@
+# Make sure nonTypoTagStdWrap operates
+# on content outside <typolist> and <typohead> only:
+tt_content.text.20.parseFunc.tags.typolist.breakoutTypoTagContent = 1
+tt_content.text.20.parseFunc.tags.typohead.breakoutTypoTagContent = 1
+# ... and no <br> before typohead.
+tt_content.text.20.parseFunc.tags.typohead.stdWrap.wrap >
+# Setting up nonTypoTagStdWrap to wrap the text with p tags
+tt_content.text.20.parseFunc.nonTypoTagStdWrap >
+tt_content.text.20.parseFunc.nonTypoTagStdWrap.encapsLines {
+  encapsTagList = div,p
+  remapTag.DIV = P
+  wrapNonWrappedLines = <p style="margin: 0 0 0;">|</p>
+
+  # Forcing these attributes onto the encapsulation tags if any
+  addAttributes.P {
+    style=margin: 0 0 0;
+  }
+  innerStdWrap_all.ifEmpty = &nbsp;
+}
+# Finally removing the <br> tag after the content...
+tt_content.text.20.wrap >

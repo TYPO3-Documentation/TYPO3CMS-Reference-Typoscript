@@ -1,0 +1,5 @@
+mod.web_list {
+  # Only pages and sys_category table elements will be linked to in the new record wizard
+  allowedNewTables := addToList(sys_category)
+  allowedNewTables := addToList(pages)
+}

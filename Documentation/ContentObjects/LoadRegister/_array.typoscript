@@ -1,0 +1,9 @@
+page.27 = LOAD_REGISTER
+page.27 {
+  contentWidth = 500
+
+  label.field = header
+
+  head = some text
+  head.wrap = <b> | </b>
+}

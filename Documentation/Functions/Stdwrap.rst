@@ -41,13 +41,8 @@ In the example below, the line :typoscript:`10.value = some text` is discarded
 because the value is imported from the header field in
 :php:`$cObj->data-array`.
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_supply.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    10 = TEXT
-    10.value = some text
-    10.stdWrap.case = upper
-    10.stdWrap.field = header
 
 ..  _stdwrap-properties:
 
@@ -281,17 +276,8 @@ Properties for overriding and conditions
         Sets the content if the content is null (:php:`NULL` type in PHP).
 
         ..  rubric:: Examples
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_conditions2.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page.10 = COA_INT
-            page.10 {
-               10 = TEXT
-               10 {
-                  stdWrap.field = description
-                  stdWrap.ifNull = No description defined.
-               }
-            }
 
         This example displays the content of the description field or, if that
         value is :php:`NULL`, the text "No description defined.".
@@ -382,18 +368,8 @@ Properties for overriding and conditions
             Splits the content of the `subtitle` field by the pipe character and returns
             a random element
 
-            ..  code-block:: typoscript
+            ..  literalinclude:: _codesnippets/_conditions.typoscript
                 :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-                page.5 = COA_INT
-                page.5 {
-                   10 = TEXT
-                   10 {
-                      stdWrap.field = subtitle
-                      stdWrap.listNum = rand
-                      stdWrap.listNum.splitChar = |
-                   }
-                }
 
     ..  _stdwrap-trim:
 
@@ -501,14 +477,8 @@ Properties for parsing data
 
         ..  rubric:: Examples
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing20.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page.10 {
-                parseFunc = < lib.parseFunc_RTE
-                parseFunc.tags.myTag = TEXT
-                parseFunc.tags.myTag.value = This will be inserted when &lt;myTag&gt; is found!
-            }
 
     ..  _stdwrap-parseFunc-sanitization:
 
@@ -520,43 +490,15 @@ Properties for parsing data
     The following example shows how to disable the sanitization behavior (enabled
     by default). This is not recommended.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_parsing19.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        // either disable globally
-        lib.parseFunc.htmlSanitize = 0
-        lib.parseFunc_RTE.htmlSanitize = 0
-
-        // or disable individually per use case
-        10 = TEXT
-        10 {
-            value = <div><img src="invalid.file" onerror="alert(1)"></div>
-            parseFunc =< lib.parseFunc_RTE
-            parseFunc.htmlSanitize = 0
-        }
 
     Since an invocation of :typoscript:`stdWrap.parseFunc` triggers HTML
     sanitization, the following example causes a lot of generated markup to be
     sanitized and can be solved by explicitly disabling it with :typoscript:`htmlSanitize = 0`.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_parsing18.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        10 = FLUIDTEMPLATE
-        10 {
-            templateRootPaths {
-                // ...
-            }
-            variables {
-                // ...
-            }
-            stdWrap.parseFunc {
-                // replace --- with soft-hyphen
-                short.--- = &shy;
-                // sanitization of ALL MARKUP is NOT DESIRED here
-                htmlSanitize = 0
-            }
-        }
 
     ..  _stdwrap-htmlparser:
 
@@ -674,15 +616,8 @@ Properties for parsing data
         algorithms see https://www.php.net/manual/en/function.hash-algos.php.
 
         ..  rubric:: Examples
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing17.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page.10 = TEXT
-            page.10 {
-               value = test@example.org
-               stdWrap.hash = md5
-               stdWrap.wrap = <img src="https://www.gravatar.com/avatar/|" />
-            }
 
     ..  _stdwrap-round:
 
@@ -732,15 +667,8 @@ Properties for parsing data
 
         Render in human readable form:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing16.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page.10 = TEXT
-            page.10.value {
-               # format like 2017-05-31 09:08
-               field = tstamp
-               date = Y-m-d H:i
-            }
 
         ..  note::
             You should consider using the more flexible function
@@ -761,24 +689,11 @@ Properties for parsing data
 
         ..  rubric:: Examples
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing15.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-            lib.date_as_timestamp = TEXT
-            lib.date_as_timestamp {
-               value = 2015-04-15
-               strtotime = 1
-            }
-
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing14.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            lib.next_weekday = TEXT
-            lib.next_weekday {
-               data = GP:selected_date
-               strtotime = + 2 weekdays
-               strftime = %Y-%m-%d
-            }
 
     ..  _data-type-strftime-conf:
     ..  _stdwrap-strftime:
@@ -858,43 +773,22 @@ Properties for parsing data
 
         ..  rubric:: Example: Full German output from a date/time value
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing13.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            lib.my_formatted_date = TEXT
-            lib.my_formatted_date {
-                value = 2023-03-17 3:00:00
-                formattedDate = FULL
-                # Optional, if a different locale is wanted other than the site language's locale
-                formattedDate.locale = de-DE
-            }
 
         will result in "Freitag, 17. März 2023 um 03:00:00 Nordamerikanische Westküsten-Sommerzeit".
 
         ..  rubric:: Example: Full French output from a relative date value
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing12.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            lib.my_formatted_date = TEXT
-            lib.my_formatted_date {
-                value = -5 days
-                formattedDate = FULL
-                formattedDate.locale = fr-FR
-            }
 
         will result in "dimanche 12 mars 2023 à 11:16:44 heure d’été du Pacifique".
 
         ..  rubric:: Example: Custom format from a timestamp
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing11.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            lib.my_formatted_date = TEXT
-            lib.my_formatted_date {
-                value = 1679022000
-                formattedDate = Y-MM-dd'T'HH:mm:ssZ
-            }
 
         will return the date in the ISO 8601 format: "2023-03-17T03:00:00+00:00"
 
@@ -1038,127 +932,57 @@ Properties for parsing data
             warning which can interrupt execution depending on you error
             handling settings. Example:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing10.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-            page.10 {
-               value = abc
-               bytes = 1
-            }
-
-            will show `0` but may raise a warning or an exception.
+        will show `0` but may raise a warning or an exception.
 
         ..  rubric:: Examples
 
         Output value 1000 without special formatting. Shows `1000`:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing9.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page = PAGE
-            page.10 = TEXT
-            page.10 {
-               value = 1000
-            }
 
         Format value 1000 in IEC style with base=1024. Shows `0.98 Ki`:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing8.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page = PAGE
-            page.10 = TEXT
-            page.10 {
-               value = 1000
-               bytes = 1
-            }
 
         Format value 1000 in IEC style with base=1024 and 'B' supplied by us.
         Shows `0.98 KiB`:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing7.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page = PAGE
-            page.10 = TEXT
-            page.10 {
-               value = 1000
-               bytes = 1
-               noTrimWrap = ||B|
-            }
 
         Format value 1000 in SI style with base=1000. Shows `1.00 k`:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing6.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page = PAGE
-            page.10 = TEXT
-            page.10 {
-               value = 1000
-               bytes = 1
-               bytes.labels = si
-            }
 
         Format value 1000 in SI style with base=1000 and 'b' supplied by us.
         Shows `1.00 kb`:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing5.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page = PAGE
-            page.10 = TEXT
-            page.10 {
-               value = 1000
-               bytes = 1
-               bytes.labels = si
-               noTrimWrap = ||b|
-            }
 
         Format value 1000 with custom label and base=1000. Shows
         `1.00 x 1000 Bytes`:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing4.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page = PAGE
-            page.10 = TEXT
-            page.10 {
-               value = 1000
-               bytes = 1
-               bytes.labels = " x 1 Byte| x 1000 Bytes"
-               bytes.base = 1000
-            }
 
         Format value 1000 with custom label and base=1000. Shows
         `1.00 kilobyte (kB)`:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing3.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page = PAGE
-            page.10 = TEXT
-            page.10 {
-               value = 1000
-               bytes = 1
-               bytes.labels = " byte (B)| kilobyte (kB)| megabyte (MB)| gigabyte (GB)| terabyte (TB)| petabyte (PB)| exabyte (EB)| zettabyte (ZB)| yottabyte YB"
-               bytes.base = 1000
-            }
 
         Format value 1000 with custom label and base=1024. Shows
         `0.98 kibibyte (KiB)`:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing2.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page = PAGE
-            page.10 = TEXT
-            page.10 {
-               value = 1000
-               bytes = 1
-               bytes.labels = " byte (B)| kibibyte (KiB)| mebibyte (MiB)| gibibyte (GiB)| tebibyte (TiB)| pepibyte (PiB)| exbibyte (EiB)| zebibyte (ZiB)| yobibyte YiB"
-               bytes.base = 1024
-            }
 
     ..  _stdwrap-substring:
 
@@ -1285,15 +1109,8 @@ Properties for parsing data
 
         ..  rubric:: Examples
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_parsing.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            10 = TEXT
-            10.stdWrap {
-                  data = GP:sWord
-                  encodeForJavaScriptValue = 1
-                  wrap = setSearchWord(|);
-            }
 
     ..  _stdwrap-doubleBrTag:
 
@@ -1467,13 +1284,8 @@ Properties for wrapping data
         whitespace.
 
         ..  rubric:: Examples
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_wrap3.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            page.10 {
-               noTrimWrap = ^ val1 ^ val2 ^ || ^ val3 ^ val4 ^
-               noTrimWrap.splitChar = ^
-            }
 
         :ref:`optionsplit` will use the "\|\|" to determine two subparts. In
         each subpart :typoscript:`noTrimWrap` will then use the "^" as
@@ -1556,20 +1368,8 @@ Properties for wrapping data
 
         ..  rubric:: Examples
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_wrap2.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            10 = TEXT
-            10.value = a
-            10.stdWrap.orderedStdWrap {
-               30.wrap = |.
-
-               10.wrap = is | working
-               10.innerWrap = &nbsp;|&nbsp;
-
-               20.wrap = This|solution
-               20.stdWrap.wrap = &nbsp;|&nbsp;
-            }
 
         In this example orderedStdWrap is executed on the value "a".
         :typoscript:`10.innerWrap` is executed first, followed by :typoscript:`10.wrap`.
@@ -1602,17 +1402,8 @@ Properties for wrapping data
 
         Displays the page title:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_wrap.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            10 = TEXT
-            10.value = This is the page title: {page:title}
-            10.stdWrap.insertData = 1
-
-            # TEXT is already stdWrapable, so we can also use insertData right away
-            20 = TEXT
-            20.value = <link rel="preload" href="{path : EXT:site/Resources/Public/Fonts/Roboto.woff2}" as="font" type="font/woff2" crossorigin="anonymous">
-            20.insertData = 1
 
     ..  warning::
         Never use this on content that can be edited in the backend. This would
@@ -1763,14 +1554,8 @@ Properties for sanitizing and caching data
 
         ..  rubric:: Examples
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_cache2.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            10 = TEXT
-            10 {
-                value = <div><img src="invalid.file" onerror="alert(1)"></div>
-                htmlSanitize = 1
-            }
 
         will result in the following output:
 
@@ -1780,18 +1565,8 @@ Properties for sanitizing and caching data
 
         The following code is equivalent to the above, but specifies a builder:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_propertiesCache.typoscript
             :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-            10 = TEXT
-            10 {
-                value = <div><img src="invalid.file" onerror="alert(1)"></div>
-                htmlSanitize = 1
-                // Use either "default" for the default builder
-                htmlSanitize.build = default
-                // or use the full class name of the default builder
-                // htmlSanitize.build = TYPO3\CMS\Core\Html\DefaultSanitizerBuilder
-            }
 
     ..  _stdwrap-cache:
 

@@ -1,0 +1,9 @@
+# Use backend_layout records uids
+[tree.pagelayout == 2]
+// Your settings go here
+[END]
+
+# Use TSconfig provider of backend layouts
+[tree.pagelayout == "pagets__Home"]
+// Your settings go here
+[END]

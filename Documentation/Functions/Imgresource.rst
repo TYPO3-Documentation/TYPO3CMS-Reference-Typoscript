@@ -24,25 +24,13 @@ An imgResource one of the following:
 
 Here "file" is an imgResource:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_imgresource2.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    10 = IMAGE
-    10 {
-        file = fileadmin/toplogo.gif
-        file.width = 200
-    }
 
 GIFBUILDER:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_imgresource.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    10 = IMAGE
-    10.file = GIFBUILDER
-    10.file {
-        # GIFBUILDER properties here...
-    }
 
 
 ..  contents::
@@ -107,35 +95,20 @@ width
 
     This crops 120x80px from the center of the scaled image:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_width3.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        lib.image {
-            width = 120c
-            height = 80c
-        }
 
     This crops 100x100px; from landscape-images at the left and portrait-
     images centered:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_width2.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        lib.image {
-            width = 100c-100
-            height = 100c
-        }
 
     This crops 100x100px; from landscape-images a bit right of the center
     and portrait-images a bit higher than centered:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_width.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        lib.image {
-            width = 100c+30
-            height = 100c-25
-        }
 
 ..  _imgresource-height:
 
@@ -197,13 +170,8 @@ noScale
 
     Here :file:`test.jpg` could have 1600 x 1200 pixels for example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_noScale.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        file = fileadmin/test.jpg
-        file.width = 240m
-        file.height = 240m
-        file.noScale = 1
 
     This example results in an image tag like the following. Note that
     `src="fileadmin/test.jpg"` is the *original* file:
@@ -276,13 +244,8 @@ cropVariant
 
     Use 'desktop' crop variant:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_cropVariant.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        tt_content.image.20.1.file {
-            crop.data = file:current:crop
-            cropVariant = desktop
-        }
 
 
 ..  _imgresource-frame:
@@ -317,14 +280,8 @@ import
     This returns the first image in the field "image" from the
     data-array:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_import.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        tt_content.image.20.1.file {
-            import = uploads/pics/
-            import.field = image
-            import.listNum = 0
-        }
 
 
 ..  _imgresource-treatIdAsReference:

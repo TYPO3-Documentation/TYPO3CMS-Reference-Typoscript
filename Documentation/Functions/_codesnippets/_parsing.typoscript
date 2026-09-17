@@ -1,0 +1,6 @@
+10 = TEXT
+10.stdWrap {
+  data = GP:sWord
+  encodeForJavaScriptValue = 1
+  wrap = setSearchWord(|);
+}

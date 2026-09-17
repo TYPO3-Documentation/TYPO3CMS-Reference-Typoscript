@@ -1,0 +1,4 @@
+page.headerData {
+  50 = TEXT
+  50.value = <!-- This is only displayed in the header of site example.org -->
+}

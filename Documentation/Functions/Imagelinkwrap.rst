@@ -93,18 +93,8 @@ effects
 Example for effects
 ~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_effects.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    imageLinkWrap {
-        effects = gamma=1.3 | sharpen=80 | solarize=70
-           # effects only works when directImageLink is FALSE
-        directImageLink = 0
-           # at most 800 pixels wide. Keep proportions.
-        width = 800m
-           # at most 600 pixels wide. Keep proportions.
-        height = 600m
-    }
 
 
 ..  _imagelinkwrap-sample:
@@ -156,15 +146,8 @@ bodyTag
 Example setting a bodytag for the preview window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_bodytag.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # "onBlur" closes the window automatically if it looses focus
-    imageLinkWrap.JSwindow = 1
-    imageLinkWrap.bodyTag (
-        <body class="jsWindow someOtherClass"
-              onBlur="self.close()">
-    )
 
 
 ..  _imagelinkwrap-wrap:
@@ -199,16 +182,8 @@ target
 Example: Use an alternative target for the JavaScript Window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_target.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # (1) to produce:  <a target="preview" ... >
-    imageLinkWrap.target = preview
-
-    # (2) to use a new window for each image
-    # let there be:  <a target="<hash-code>" ... >
-    imageLinkWrap.JSwindow = 1
-    imageLinkWrap.JSwindow.newWindow = 1
 
 
 ..  _imagelinkwrap-JSwindow:
@@ -347,15 +322,8 @@ This way it is possible to use a lightbox and to display
 resized images in the frontend. A more complete example is
 :ref:`imageLinkWrap-example-fancybox`.
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_imageLinkWrap.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    JSwindow = 0
-    directImageLink = 1
-    linkParams.ATagParams.dataWrap (
-      class="{$styles.content.imgtext.linkWrap.lightboxCssClass}"
-      rel="{$styles.content.imgtext.linkWrap.lightboxRelAttribute}"
-    )
 
 
 ..  _imagelinkwrap-stdWrap:
@@ -417,43 +385,16 @@ Examples for imageLinkWrap
 Basic example: Create a link to the showpic script
 --------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_showpic.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    10 = IMAGE
-    10 {
-       # point to the image
-       file = fileadmin/demo/lorem_ipsum/images/a4.jpg
-       # make it rather small
-       file.width = 80
-       # add a link to tx_cms_showpic.php that shows the original image
-       imageLinkWrap = 1
-       imageLinkWrap {
-          enable = 1
-          # JSwindow = 1
-       }
-    }
 
 ..  _imageLinkWrap-basic-example-directImageLink:
 
 Basic example: Link directly to the original image
 --------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_directImageLink.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    10 = IMAGE
-    10 {
-       file = fileadmin/demo/lorem_ipsum/images/a4.jpg
-       file.width = 80
-       imageLinkWrap = 1
-       imageLinkWrap {
-          enable = 1
-          # link directly to the image
-          directImageLink = 1
-          # JSwindow = 1
-       }
-    }
 
 
 ..  _imageLinkWrap-example-popup-window:
@@ -461,39 +402,8 @@ Basic example: Link directly to the original image
 Example: Larger display in a popup window
 -----------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_window.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page = PAGE
-    page.10 = IMAGE
-    page.10 {
-       # the relative path to the image
-       # find the images in the 'lorem_ipsum' extension an copy them here
-       file = fileadmin/demo/lorem_ipsum/images/b1.jpg
-       # let's make the normal image small
-       file.width = 80
-       # yes, we want to have a preview link on the image
-       imageLinkWrap = 1
-       imageLinkWrap {
-          # must be TRUE for anything to happen
-          enable = 1
-          # "m" = at most 400px wide - keep proportions
-          width = 400m
-          # "m" = at most 300px high - keep proportions
-          height = 300
-          # let's use fancy Javascript features
-          JSwindow = 1
-          # black background
-          bodyTag = <body style="background-color:black; margin:0; padding:0;">
-          # place a Javascript "close window" link onto the image
-          wrap = <a href="javascript:close();"> | </a>
-          # let there be a new and unique window for each image
-          JSwindow.newWindow = 1
-          # make the preview window 30px wider and 20px higher
-          # than what the image requires
-          JSwindow.expand = 30,20
-       }
-    }
 
 
 ..  _imageLinkWrap-example-printlink:
@@ -501,25 +411,8 @@ Example: Larger display in a popup window
 Example: Printlink
 ------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_printlink.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    5 = IMAGE
-    5 {
-       file = fileadmin/images/printlink.png
-       imageLinkWrap = 1
-       imageLinkWrap {
-          enable = 1
-          typolink {
-             target = _blank
-             parameter.data = page:alias // page:uid
-             additionalParams = &type=98
-          }
-       }
-       altText = print version
-       titleText = Open print version of this page in a new window
-       params = class="printlink"
-    }
 
 
 
@@ -531,24 +424,5 @@ Example: Images in lightbox "fancybox"
 Let's follow this `lightbox.ts example <https://github.com/georgringer/modernpackage/blob/master/Resources/Private/TypoScript/content/lightbox.ts>`__
 and use `fancybox <http://fancybox.net>`_:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_fancybox.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # Add the CSS and JS files
-    page {
-       includeCSS {
-          file99 = fileadmin/your-fancybox.css
-       }
-       includeJSFooter {
-          fancybox = fileadmin/your-fancybox.js
-       }
-    }
-
-    # Change the default rendering of images to match lightbox requirements
-    tt_content.image.20.1.imageLinkWrap {
-       JSwindow = 0
-       directImageLink = 1
-       linkParams.ATagParams {
-          dataWrap = class= "lightbox" data-fancybox-group="lightbox{field:uid}"
-       }
-    }

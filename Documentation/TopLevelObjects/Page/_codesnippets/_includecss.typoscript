@@ -1,0 +1,18 @@
+page = PAGE
+# [...]
+
+page.includeCSS {
+  styles = EXT:site_package/Resources/Public/Css/styles.css
+
+  print = EXT:site_package/Resources/Public/Css/print.css
+  print.title = High contrast
+  print.media = print
+
+  additional = EXT:site_package/Resources/Public/Css/additional_styles.css
+  additional.data-foo = bar
+
+  ie6 = EXT:site_package/Resources/Public/Css/ie6.css
+  ie6.allWrap = <!--[if lte IE 7]>|<![endif]-->
+
+  example = https://example.org/some_external_styles.css
+}

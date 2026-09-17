@@ -79,26 +79,14 @@ references
     This will get the items from the database table
     sys_file_reference with the UIDs 27 and 28.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_references2.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        references {
-          table = tt_content
-          uid = 256
-          fieldName = image
-        }
 
     This will fetch all relations to the image field of the
     tt_content record "256".
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_filesReferences.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        references {
-          table = pages
-          uid.data = page:uid
-          fieldName = media
-        }
 
     This will fetch all items related to the page.media field.
 
@@ -146,19 +134,8 @@ folders
 
     Example for option :typoscript:`recursive`:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_folders.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        filecollection = FILES
-        filecollection {
-           folders = 1:images/
-           folders.recursive = 1
-
-           renderObj = IMAGE
-           renderObj {
-              file.import.data = file:current:uid
-           }
-        }
 
 ..  _cobj-files-sorting:
 
@@ -228,14 +205,8 @@ renderObj
 
     **Example:**
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_renderObj.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        page.10.renderObj = TEXT
-        page.10.renderObj {
-          stdWrap.data = file:current:size
-          stdWrap.wrap = <p>File size:<strong>|</strong></p>
-        }
 
     This returns the size of the current file.
 
@@ -300,20 +271,8 @@ explained above (using sys_file UIDs, collection UIDs, and folders).
 Then we use the :ref:`TEXT <cobj-text>` cObject as :ref:`cobj-files-renderObj`
 to output the file size of all files that were found:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_files.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page.10 = FILES
-
-    page.10.files = 12,15,16
-    page.10.collections = 2,9
-    page.10.folders = 1:mypics/
-
-    page.10.renderObj = TEXT
-    page.10.renderObj {
-        stdWrap.data = file:current:size
-        stdWrap.wrap = <p>File size: <strong>|</strong></p>
-    }
 
 
 ..  _cobj-files-examples-references:
@@ -327,28 +286,8 @@ first image and return up to five images. Each image is then rendered
 as an :ref:`IMAGE <cobj-image>` cObject with some meta data coming from
 the file itself or from the reference to it (title):
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_examplesReferences.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page.20 = FILES
-    page.20 {
-        references {
-            table = pages
-            uid.data = page:uid
-            fieldName = media
-        }
-
-        begin = 0
-        maxItems = 5
-
-        renderObj = IMAGE
-        renderObj {
-            file.import.dataWrap = {file:current:storage}:{file:current:identifier}
-            altText.data = file:current:title
-            wrap = <div class="slide">|</div>
-        }
-        stdWrap.wrap = <div class="carousel">|</div>
-    }
 
 
 ..  _cobj-files-examples-sliding:
@@ -359,19 +298,5 @@ Usage with sliding
 One usual feature is to use images attached to pages and use
 them up and down the page tree, a process called "sliding".
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_sliding.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    lib.banner = FILES
-    lib.banner {
-        references {
-            data = levelmedia: -1, slide
-        }
-
-        renderObj = IMAGE
-        renderObj {
-            file.import.dataWrap = {file:current:storage}:{file:current:identifier}
-            altText.data = file:current:title
-            wrap = <div class="banner">|</div>
-        }
-    }

@@ -1,0 +1,8 @@
+# Remove "New" and "Create New wizard" for pages context menu (Content Records module)
+options.contextMenu.table.pages.disableItems = new,newWizard
+
+# Remove "New" and "Create New wizard" in page tree context menu
+options.contextMenu.table.pages.tree.disableItems = new,newWizard
+
+# Remove the "More options" item in the page tree context menu and all its subelements
+options.contextMenu.table.pages.tree.disableItems = newWizard, pagesSort, pagesNewMultiple, openListModule, mountAsTreeRoot, exportT3d, importT3d, hideInMenus, showInMenus, permissions

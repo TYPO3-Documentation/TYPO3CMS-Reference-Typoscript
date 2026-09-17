@@ -72,16 +72,7 @@ type
 Examples
 ========
 
-..  code-block:: typoscript
+..  literalinclude:: _strpad.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    10 = TEXT
-    # The input value is 34 signs long.
-    10.value = TYPO3 - inspiring people to share.
-    10.value.strPad {
-         length = 37
-         padWith = =
-         type = both
-    }
 
 This results in "=TYPO3 - inspiring people to share.==".

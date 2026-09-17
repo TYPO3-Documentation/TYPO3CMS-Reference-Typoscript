@@ -1,0 +1,5 @@
+references {
+  table = pages
+  uid.data = page:uid
+  fieldName = media
+}

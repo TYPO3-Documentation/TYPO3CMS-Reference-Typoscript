@@ -157,26 +157,8 @@ resource
 
     Reference to a file in the file system:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _resource.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # PKG should be preferred to EXT
-        page.10.settings.someFile = PKG:my-vendor/package-name:Resources/Public/Icons/MyIcon.svg
-
-        # EXT still works
-        page.10.settings.someFile = EXT:ext_name/Resources/Public/Icons/MyIcon.svg
-
-        # App resources (files in the webroot) can be accessed with PKG:typo3/app:
-        page.10.settings.someFile = PKG:typo3/app:public/typo3temp/assets/style.css
-
-        # A FAL resource
-        page.10.settings.someFile = FAL:1:/identifier/of/file.svg
-
-        # External URL
-        page.10.settings.someFile = https://www.example.com/my/image.svg
-
-        # URIs relative to the current host can be prefixed with URI:
-        page.10.settings.someFile = URI:/path/to/my/image.svg
 
 ..  index:: Simple data types; string
 ..  _data-type-string:
