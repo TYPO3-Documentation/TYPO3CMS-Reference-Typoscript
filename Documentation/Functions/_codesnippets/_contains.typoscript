@@ -1,0 +1,14 @@
+# Add a span tag before the page title if the page title
+# contains the string "media"
+page.10 = TEXT
+page.10 {
+  data = page:title
+  htmlSpecialChars = 1
+  prepend = TEXT
+  prepend {
+    value = <span class="icon-video"></span>
+    if.value.data = page:title
+    if.contains = Media
+  }
+  outerWrap = <h1>|</h1>
+}

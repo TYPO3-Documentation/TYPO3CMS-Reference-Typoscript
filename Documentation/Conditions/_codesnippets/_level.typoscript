@@ -1,0 +1,4 @@
+# Check, if the page is on level 0:
+[tree.level == 0]
+# ...
+[END]

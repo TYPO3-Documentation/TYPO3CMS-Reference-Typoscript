@@ -783,21 +783,8 @@ Properties of 'config'
         :name: config-recordLinks
         :type: array of link configurations
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_properties.typoscript
             :caption: Frontend TypoScript definition for identifier `my_content`
-
-            config.recordLinks.my_content {
-                // If the record is hidden do not force link generation
-                forceLink = 0
-
-                typolink {
-                    // pages.uid to be used to render result (basically it contains the rendering plugin)
-                    parameter = 234
-                    // field values of tx_myextension_content record with uid 123
-                    additionalParams.data = field:uid
-                    additionalParams.wrap = &tx_myextension[uid]= | &tx_myextension[action]=show
-                }
-            }
 
     ..  rubric:: removeDefaultCss
 
@@ -1089,31 +1076,8 @@ contentObjectExceptionHandler example
 Demonstrates:
     *   :confval:`config.contentObjectExceptionHandler <config-contentObjectExceptionHandler>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_contentObjectExceptionHandler.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # Use 1 for the default exception handler (enabled by default in production context)
-    config.contentObjectExceptionHandler = 1
-
-    # Use a class name for individual exception handlers
-    config.contentObjectExceptionHandler = TYPO3\CMS\Frontend\ContentObject\Exception\ProductionExceptionHandler
-
-    # Customize the error message. A randomly generated code is replaced within the message if needed.
-    config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
-
-    # Configure exception codes which will not be handled, but bubble up again (useful for temporary fatal errors)
-    tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
-
-    # Disable the exception handling for an individual plugin/ content object
-    tt_content.login.20.exceptionHandler = 0
-
-    # ignoreCodes and errorMessage can be both configured globally …
-    config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
-    config.contentObjectExceptionHandler.ignoreCodes.10 = 1414512813
-
-    # … or locally for individual content objects
-    tt_content.login.20.exceptionHandler.errorMessage = Oops an error occurred. Code: %s
-    tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
 
 ..  _setup-config-disableallheadercode:
 
@@ -1123,18 +1087,8 @@ Provide JSON and disable HTML headers
 
 A page type providing JSON:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_disableallheadercode.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    json = PAGE
-    json {
-        typeNum = 1617455215
-        10 =< tt_content.list.20.tx_myextension_myjsonplugin
-        config {
-            disableAllHeaderCode = 1
-            additionalHeaders.10.header = Content-type:application/json
-        }
-    }
 
 ..  _setup-config-htmltag-attributes:
 
@@ -1275,11 +1229,11 @@ Demonstrates:
 
 This configuration will result in an :html:`<html>` tag like:
 
-..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+..  code-block:: html
+    :caption: Example output
 
     <html xmlns:dc="http://purl.org/dc/elements/1.1/"
-       xmlns:foaf="http://xmlns.com/foaf/0.1/">
+        xmlns:foaf="http://xmlns.com/foaf/0.1/">
 
 ..  _setup-config-pagerenderertemplatefile:
 
@@ -1305,18 +1259,8 @@ Demonstrates:
 
 By default, TYPO3 ships with two providers:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_pagetitleproviders.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    config.pageTitleProviders {
-        record {
-            provider = TYPO3\CMS\Core\PageTitle\RecordPageTitleProvider
-        }
-        seo {
-            provider = TYPO3\CMS\Seo\PageTitle\SeoTitlePageTitleProvider
-            before = record
-        }
-    }
 
 The order of providers is based on the :typoscript:`before` and
 :typoscript:`after` parameters. If you want a provider
@@ -1365,16 +1309,8 @@ This produces a title tag with the format "website*page title":
 If you want to remove the web page title from the title, choose a separator that is not included in the web page title.
 Then split the title from that character and return the second part only:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_pagetitleseparator.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    config.pageTitleSeparator = *
-    config.pageTitle.stdWrap {
-        split {
-            token = *
-            returnKey = 1
-        }
-    }
 
 ..  _setup-config-removedefaultjs:
 
@@ -1385,13 +1321,8 @@ Demonstrates:
     *   :confval:`config.removeDefaultJS <config-removeDefaultJS>`
     *   :confval:`config.removeDefaultCss <config-removeDefaultCss>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_removedefaultjs.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    config  {
-        removeDefaultJS = external
-        removeDefaultCss = 1
-    }
 
 
 ..  _setup-config-spamprotectemailaddresses-lastdotsubst:
@@ -1404,14 +1335,8 @@ Demonstrates:
     *   :confval:`config.spamProtectEmailAddresses_atSubst <config-spamProtectEmailAddresses_atSubst>`
     *   :confval:`config.spamProtectEmailAddresses_lastDotSubst <config-spamProtectEmailAddresses_lastDotSubst>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_lastdotsubst.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    config {
-        spamProtectEmailAddresses = -2
-        spamProtectEmailAddresses_atSubst = (at)
-        spamProtectEmailAddresses_lastDotSubst = (dot)
-    }
 
 ..  _setup-config-tx-extension-key-with-no-underscores:
 
@@ -1438,14 +1363,8 @@ Demonstrates:
     *   :confval:`config.typolinkLinkAccessRestrictedPages.ATagParams <config-typolinkLinkAccessRestrictedPages-ATagParams>`
     *   :confval:`config.typolinkLinkAccessRestrictedPages_addParams <config-typolinkLinkAccessRestrictedPages_addParams>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_typolinklinkaccessrestrictedpages.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    config {
-        typolinkLinkAccessRestrictedPages = 29
-        typolinkLinkAccessRestrictedPages.ATagParams = class="restricted"
-        typolinkLinkAccessRestrictedPages_addParams = &return_url=###RETURN_URL###&pageId=###PAGE_ID###
-    }
 
 Will create a link to the page with id 29 and add GET parameters with
 the return URL and original page id. Additionally, CSS

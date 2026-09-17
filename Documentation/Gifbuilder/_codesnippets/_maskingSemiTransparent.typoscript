@@ -1,0 +1,17 @@
+lib.test = IMAGE
+lib.test {
+  file = GIFBUILDER
+  file {
+    XY = 1024,768
+    format = jpg
+    quality = 88
+
+    10 = IMAGE
+    10.file = fileadmin/backimage.jpg
+
+    15 = IMAGE
+    15.offset = 420,18
+    15.file = fileadmin/overlay.png
+    15.mask = fileadmin/mask.png
+  }
+}

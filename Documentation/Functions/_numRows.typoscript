@@ -1,0 +1,10 @@
+10 = FLUIDTEMPLATE
+10 {
+  variables {
+    numberOfContentElementsInColPosOne = TEXT
+    numberOfContentElementsInColPosOne.numRows {
+      table = tt_content
+      select.where = {#colPos}=1
+    }
+  }
+}

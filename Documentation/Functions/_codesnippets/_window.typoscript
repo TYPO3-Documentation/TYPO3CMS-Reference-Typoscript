@@ -1,0 +1,30 @@
+page = PAGE
+page.10 = IMAGE
+page.10 {
+  # the relative path to the image
+  # find the images in the 'lorem_ipsum' extension an copy them here
+  file = fileadmin/demo/lorem_ipsum/images/b1.jpg
+  # let's make the normal image small
+  file.width = 80
+  # yes, we want to have a preview link on the image
+  imageLinkWrap = 1
+  imageLinkWrap {
+    # must be TRUE for anything to happen
+    enable = 1
+    # "m" = at most 400px wide - keep proportions
+    width = 400m
+    # "m" = at most 300px high - keep proportions
+    height = 300
+    # let's use fancy Javascript features
+    JSwindow = 1
+    # black background
+    bodyTag = <body style="background-color:black; margin:0; padding:0;">
+    # place a Javascript "close window" link onto the image
+    wrap = <a href="javascript:close();"> | </a>
+    # let there be a new and unique window for each image
+    JSwindow.newWindow = 1
+    # make the preview window 30px wider and 20px higher
+    # than what the image requires
+    JSwindow.expand = 30,20
+  }
+}

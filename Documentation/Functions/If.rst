@@ -49,20 +49,8 @@ bitAnd
 
     TYPO3 uses bits to store radio and checkboxes via TCA, `bitAnd` can be used to test against these fields.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_bitAnd.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        lib.hideDefaultLanguageOfPage = TEXT
-        lib.hideDefaultLanguageOfPage {
-            value = 0
-            value {
-                override = 1
-                override.if {
-                    bitAnd.field = l18n_cfg
-                    value = 1
-                }
-            }
-        }
 
 
 ..  _if-contains:
@@ -78,24 +66,9 @@ contains
 
     ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_contains.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
         :emphasize-lines: 11
-
-        # Add a span tag before the page title if the page title
-        # contains the string "media"
-        page.10 = TEXT
-        page.10 {
-            data = page:title
-            htmlSpecialChars = 1
-            prepend = TEXT
-            prepend {
-                value = <span class="icon-video"></span>
-                if.value.data = page:title
-                if.contains = Media
-            }
-            outerWrap = <h1>|</h1>
-        }
 
 
 ..  _if-directReturn:
@@ -125,19 +98,9 @@ endsWith
 
     ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_endsWith.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
         :emphasize-lines: 7
-
-        # Add a footer note, if the page author ends with "Kott"
-        page.100 = TEXT
-        page.100 {
-            value = This is an article from Benji
-            htmlSpecialChars = 1
-            if.value.data = page:author
-            if.endsWith = Kott
-            wrap = <footer>|</footer>
-        }
 
 ..  _if-equals:
 
@@ -236,15 +199,8 @@ isNull
 
     ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_isNull.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        page.10 = COA_INT
-        page.10.10 = TEXT
-        page.10.10 {
-              stdWrap.if.isNull.field = description
-              value = No description available.
-        }
 
     This example returns "No description available.", if the content of
     the field "description" is :php:`NULL`.
@@ -306,17 +262,9 @@ startsWith
 
     ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_startsWith.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
         :emphasize-lines: 6
-
-        page.10 = TEXT
-        page.10 {
-            value = Your editor added the magic word in the header field
-            htmlSpecialChars = 1
-            if.value.data = DB:tt_content:1234:header
-            if.startsWith = Bazinga
-        }
 
 
 ..  _if-value:
@@ -364,15 +312,8 @@ greater than 10, which is the base-value.
 
 More complex is this:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_explanation.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page.10.if {
-      value = 10
-      isGreaterThan = 11
-      isTrue.field = header
-      negate = 1
-    }
 
 There are two conditions - :typoscript:`isGreaterThan` and :typoscript:`isTrue`.
 If they are both true, the total is true (both are connected with an AND).
@@ -387,14 +328,5 @@ Examples
 This is a GIFBUILDER object that will write "NEW" on a menu-item if
 the field "newUntil" has a date less than the current date!
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_if.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    30 = TEXT
-    30.text = NEW!
-    30.offset = 10,10
-    30.if {
-      value.data = date: U
-      isLessThan.field = newUntil
-      negate = 1
-    }

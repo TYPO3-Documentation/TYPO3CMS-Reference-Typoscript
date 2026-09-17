@@ -1,0 +1,6 @@
+page = PAGE
+# [...]
+
+page.meta {
+  keywords.data = levelfield:-1, keywords, slide
+}

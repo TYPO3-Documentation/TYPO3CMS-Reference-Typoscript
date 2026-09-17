@@ -1,0 +1,4 @@
+# Evaluates to true, if a backend user is logged in
+[backend.user.isLoggedIn]
+# ...
+[END]

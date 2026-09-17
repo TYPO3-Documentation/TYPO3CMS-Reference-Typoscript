@@ -1,0 +1,5 @@
+TCEFORM.pages.title {
+  label = LLL:my_extension.messages:table.column
+  label.default = New Label
+  label.de = Neuer Feldname
+}

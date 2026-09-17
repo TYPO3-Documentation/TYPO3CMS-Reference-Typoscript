@@ -1,0 +1,7 @@
+module.tx_somebackend_module {
+  view {
+    templateRootPaths {
+      100 = EXT:my_extension/Resources/Private/Templates/Backend
+    }
+  }
+}

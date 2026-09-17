@@ -100,21 +100,8 @@ tags
 Examples
 ========
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_cacheExamples2.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    5 = TEXT
-    5 {
-        stdWrap {
-            cache {
-                key = mycurrenttimestamp
-                tags = tag_a,tag_b,tag_c
-                lifetime = 3600
-            }
-            data = date : U
-            strftime = %H:%M:%S
-        }
-    }
 
 In the above example the current time will be cached with the key
 "mycurrenttimestamp". This key is fixed and does not take the current
@@ -122,16 +109,8 @@ page id into account. So if you add this to your TypoScript, the
 cObject will be cached and reused on all pages (showing you the same
 timestamp). :
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_cache.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    5 = TEXT
-    5 {
-        stdWrap.cache {
-            key = mycurrenttimestamp_{page:uid}_{siteLanguage:languageId}
-            key.insertData = 1
-        }
-    }
 
 Here a dynamic key is used. It takes the page id and the language uid
 into account making the object page and language specific.
@@ -147,31 +126,8 @@ content objects. This skips the rendering even for content objects that evaluate
 
 Usage:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_class.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page = PAGE
-    page.10 = COA
-    page.10 {
-        cache.key = coaout
-        cache.lifetime = 60
-        #stdWrap.cache.key = coastdWrap
-        #stdWrap.cache.lifetime = 60
-        10 = TEXT
-        10 {
-            cache.key = mycurrenttimestamp
-            cache.lifetime = 60
-            data = date : U
-            strftime = %H:%M:%S
-            noTrimWrap = |10: | |
-        }
-        20 = TEXT
-        20 {
-            data = date : U
-            strftime = %H:%M:%S
-            noTrimWrap = |20: | |
-        }
-    }
 
 The commented part is :typoscript:`stdWrap.cache.` property available since 4.7,
 that does not stop the rendering of :typoscript:`COA` including all sub-cObjects.

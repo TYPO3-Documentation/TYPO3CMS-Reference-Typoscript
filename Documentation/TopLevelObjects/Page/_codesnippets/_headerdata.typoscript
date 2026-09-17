@@ -1,0 +1,10 @@
+page = PAGE
+# [...]
+
+page.headerData {
+  3 = TEXT
+  3.value = <script src="...."></script>
+
+  50 = TEXT
+  50.value = <!-- Hello from the comment! -->
+}

@@ -1,0 +1,7 @@
+foo = 123,456
+foo := addToList(789)
+# foo is "123,456,789"
+
+foo =
+foo := addToList(123)
+# foo is "123" (no leading comma added on empty existing value)

@@ -1,35 +1,35 @@
 mod.web_layout.BackendLayouts {
-    exampleKey {
-        title = Example
-        icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
-        config {
-            backend_layout {
-                colCount = 1
-                rowCount = 2
-                rows {
-                    1 {
-                        columns {
-                            1 {
-                                name = frontend.ttc:colPos.I.3
-                                colPos = 3
-                                colspan = 1
-                                allowedContentTypes = header, tx_myextension_stage
-                            }
-                        }
-                    }
-                    2 {
-                        columns {
-                            1 {
-                                name = Main
-                                colPos = 0
-                                colspan = 1
-                                identifier = main
-                                disallowedContentTypes  = tx_myextension_stage, textmedia
-                            }
-                        }
-                    }
-                }
+  exampleKey {
+    title = Example
+    icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
+    config {
+      backend_layout {
+        colCount = 1
+        rowCount = 2
+        rows {
+          1 {
+            columns {
+              1 {
+                name = frontend.ttc:colPos.I.3
+                colPos = 3
+                colspan = 1
+                allowedContentTypes = header, tx_myextension_stage
+              }
             }
+          }
+          2 {
+            columns {
+              1 {
+                name = Main
+                colPos = 0
+                colspan = 1
+                identifier = main
+                disallowedContentTypes  = tx_myextension_stage, textmedia
+              }
+            }
+          }
         }
+      }
     }
+  }
 }

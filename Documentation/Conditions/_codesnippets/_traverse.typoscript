@@ -1,0 +1,5 @@
+# Traverse query parameters of current request along tx_news_pi1[news]
+[request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
+
+# Traverse page properties for current page
+[traverse(page ?? [], "pid") == 65]

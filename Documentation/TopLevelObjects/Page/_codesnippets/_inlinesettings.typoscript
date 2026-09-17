@@ -1,0 +1,7 @@
+page = PAGE
+# [...]
+
+page.inlineSettings {
+  setting1 = Hello
+  setting2 = GoOnTop
+}

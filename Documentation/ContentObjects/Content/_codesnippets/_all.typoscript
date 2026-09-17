@@ -1,0 +1,7 @@
+1 = CONTENT
+1.table = tt_content
+1.select {
+  pidInList = this
+  orderBy = sorting
+  where = {#colPos}=0
+}

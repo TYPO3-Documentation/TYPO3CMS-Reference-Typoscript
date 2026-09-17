@@ -28,22 +28,8 @@ lib
     objects in it can therefore be referenced and copied by using the
     :ref:`reference operator <typoscript-syntax-syntax-object-referencing>` :typoscript:`=<`.
 
-..  code-block:: typoscript
+..  literalinclude:: _lib.typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
-
-    lib.some_content = TEXT
-    lib.some_content.value = Hello World!
-
-    // Output
-    // <p>Hello World!</p><p>Hello World!</p>
-    page = PAGE
-    page {
-        10 =< lib.some_content
-        10.wrap = <h1>|</h1>
-
-        20 =< lib.some_content
-        20.wrap = <p>|</p>
-    }
 
 ..  index:: Top-level objects; styles
 

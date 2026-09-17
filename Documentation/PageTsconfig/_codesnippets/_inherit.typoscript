@@ -1,0 +1,5 @@
+TCEMAIN.permissions {
+  groupid = copyFromParent
+  group = 31
+  everybody = 0
+}

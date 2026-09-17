@@ -1,0 +1,6 @@
+select {
+  uidInList = 1,2,3
+  pidInList = 0
+}
+
+select.uidInList = this

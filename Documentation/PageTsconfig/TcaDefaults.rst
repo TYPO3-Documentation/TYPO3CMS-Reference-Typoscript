@@ -55,21 +55,5 @@ Example: Do not hide newly created pages by default
 Example: Set type specific default values
 =========================================
 
-..  code-block:: typoscript
+..  literalinclude:: _type.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCAdefaults.tt_content {
-        header_layout = 1
-        header_layout.types {
-            textmedia = 3
-            image = 2
-        }
-
-        frame_class = default
-        frame_class.types {
-            textmedia = ruler-before
-            image = none
-        }
-
-        space_before_class = none
-    }

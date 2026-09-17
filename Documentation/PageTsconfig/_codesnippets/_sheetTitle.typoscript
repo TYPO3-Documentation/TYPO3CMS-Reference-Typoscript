@@ -1,0 +1,4 @@
+TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF {
+  # Rename the first tab of the FlexForm plug-in configuration
+  sheetTitle = LLL:my_extension.messages:tt_content.pi_flexform.myext_pi1.sDEF
+}

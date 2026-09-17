@@ -1,0 +1,4 @@
+TCEMAIN.permissions {
+  # Group can do anything, normally "delete" is disabled
+  group = 31
+}

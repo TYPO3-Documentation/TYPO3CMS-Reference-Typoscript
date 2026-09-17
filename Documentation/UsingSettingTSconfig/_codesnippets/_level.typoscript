@@ -1,0 +1,4 @@
+# Check if page is on level 1 (root):
+[tree.level == 1]
+// Your settings go here
+[END]

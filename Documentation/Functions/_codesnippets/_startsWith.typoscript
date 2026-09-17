@@ -1,0 +1,7 @@
+page.10 = TEXT
+page.10 {
+  value = Your editor added the magic word in the header field
+  htmlSpecialChars = 1
+  if.value.data = DB:tt_content:1234:header
+  if.startsWith = Bazinga
+}

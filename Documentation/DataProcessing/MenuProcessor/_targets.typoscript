@@ -1,0 +1,8 @@
+page.2 = HMENU
+page.2.special = rootline
+page.2.special.range = 1|-2
+page.2.special.targets.3 = page
+page.2.1 = TMENU
+page.2.1.target = _top
+page.2.1.wrap = <ol> | <ol>
+page.2.1.NO.linkWrap = <li> | </li>

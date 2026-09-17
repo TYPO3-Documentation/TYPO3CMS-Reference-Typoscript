@@ -1,0 +1,5 @@
+// Override the settings from the page TSconfig for the editors usergroup
+page {
+  TCAdefaults.pages.hidden = 1
+  TCEMAIN.table.pages.disableHideAtCopy = 0
+}

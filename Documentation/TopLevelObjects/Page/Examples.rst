@@ -15,13 +15,8 @@ A simple "Hello World" Example
 Demonstrates:
     *   :confval:`page.10 <page-array>`
 
-..  code-block:: typoscript
-     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # Default PAGE object:
-    page = PAGE
-    page.10 = TEXT
-    page.10.value = HELLO WORLD!
+..  literalinclude:: _codesnippets/_world.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _page_examples_fluid:
@@ -32,27 +27,8 @@ A page using a Fluid template
 Demonstrates:
     *   :confval:`page.10 <page-array>`
 
-..  code-block:: typoscript
-     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page = PAGE
-    page.10 = FLUIDTEMPLATE
-    page.10 {
-       templateName = Default
-       layoutRootPaths {
-          10 = EXT:sitepackage/Resources/Private/Layouts
-       }
-       partialRootPaths {
-          10 = EXT:sitepackage/Resources/Private/Partials
-       }
-       templateRootPaths {
-          10 = EXT:sitepackage/Resources/Private/Templates
-       }
-       variables {
-          foo = TEXT
-          foo.value = bar
-       }
-    }
+..  literalinclude:: _codesnippets/_fluid.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _page_examples_ajax:
@@ -70,21 +46,8 @@ where it absolutely needs to be disabled, leaving all other caches untouched.
 This can be achieved for example by using a non-cacheable array, the
 :ref:`COA_INT <cobj-coa-int>`.
 
-..  code-block:: typoscript
-     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    myAjax = PAGE
-    myAjax {
-       typeNum = 1617455214
-       config {
-          disableAllHeaderCode = 1
-          admPanel = 0
-          debug = 0
-       }
-       # Prevent caching if necessary
-       10 = COA_INT
-       10 < plugin.tx_myextension_myajaxplugin
-    }
+..  literalinclude:: _codesnippets/_ajax.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _page_examples_json:
@@ -98,19 +61,8 @@ A page type used for JSON data
 To create a page type in the format json an additional
 header with `Content-type:application/json` has to be set:
 
-..  code-block:: typoscript
-     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    json = PAGE
-    json {
-       typeNum = 1617455215
-       10 =< tt_content.list.20.tx_myextension_myjsonplugin
-       config {
-          disableAllHeaderCode = 1
-          additionalHeaders.10.header = Content-type:application/json
-          admPanel = 0
-       }
-    }
+..  literalinclude:: _codesnippets/_json.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 The built-in :php-short:`\TYPO3\CMS\Extbase\Mvc\View\JsonView` can be used to
 create the content via Extbase.

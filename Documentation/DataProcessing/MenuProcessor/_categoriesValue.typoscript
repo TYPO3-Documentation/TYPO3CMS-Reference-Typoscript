@@ -1,0 +1,9 @@
+20 = HMENU
+20 {
+  special = categories
+  special.value = 1,2
+  1 = TMENU
+  1.NO {
+    // ...
+  }
+}

@@ -1,0 +1,24 @@
+// STEP 2: define parameters
+
+1.table = tt_content           # default='' #stdWrap
+
+1.select {
+  pidInList = this
+  where = colPos = 1
+  orderBy = sorting
+}
+
+# renderObj = <TABLEVALUE      # default!
+1.renderObj =
+
+# slide = 0                    # default! #stdWrap
+1.slide = -1
+
+# slideCollect = 0             # default! #stdWrap
+1.slide.collect =
+
+# slideCollectReverse = false  # default! #stdWrap
+1.slide.collectReverse =
+
+# slideCollectFuzzy = false    # default! #stdWrap
+1.slide.collectFuzzy =

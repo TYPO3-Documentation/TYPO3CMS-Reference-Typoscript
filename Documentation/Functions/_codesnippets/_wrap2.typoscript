@@ -1,0 +1,11 @@
+10 = TEXT
+10.value = a
+10.stdWrap.orderedStdWrap {
+  30.wrap = |.
+
+  10.wrap = is | working
+  10.innerWrap = &nbsp;|&nbsp;
+
+  20.wrap = This|solution
+  20.stdWrap.wrap = &nbsp;|&nbsp;
+}

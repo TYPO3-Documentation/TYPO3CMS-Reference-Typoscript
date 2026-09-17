@@ -1,0 +1,4 @@
+config  {
+  removeDefaultJS = external
+  removeDefaultCss = 1
+}

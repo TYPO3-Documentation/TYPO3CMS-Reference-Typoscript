@@ -1,0 +1,4 @@
+# Check, if the page with UID 2 is the parent of a page inside the root line
+[2 in tree.rootLineParentIds]
+# ...
+[END]

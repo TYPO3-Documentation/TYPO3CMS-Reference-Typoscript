@@ -1,0 +1,19 @@
+page.20 = FILES
+page.20 {
+  references {
+    table = pages
+    uid.data = page:uid
+    fieldName = media
+  }
+
+  begin = 0
+  maxItems = 5
+
+  renderObj = IMAGE
+  renderObj {
+    file.import.dataWrap = {file:current:storage}:{file:current:identifier}
+    altText.data = file:current:title
+    wrap = <div class="slide">|</div>
+  }
+  stdWrap.wrap = <div class="carousel">|</div>
+}

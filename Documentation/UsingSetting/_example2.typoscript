@@ -1,0 +1,45 @@
+10 = COA
+10 {
+  ### left menu table column
+  10 = LOAD_REGISTER
+  10 {
+    ulClass = col-left
+  }
+
+  ### right menu table column
+  20 = LOAD_REGISTER
+  20 {
+    ulClass = col-right
+  }
+
+  30 = HMENU
+  30 {
+    special = list
+    special.value = 1
+    1 = TMENU
+    # ...
+    3 = TMENU
+    3 {
+      stdWrap {
+        preCObject = COA
+        preCObject {
+          10 = RESTORE_REGISTER
+        }
+        dataWrap = <ul class="{register:ulClass}">|</ul>
+      }
+      wrap =
+      SPC = 1
+      SPC {
+        allStdWrap {
+          replacement {
+            10 {
+              search = ---
+              replace =
+            }
+          }
+          dataWrap = </ul>|<ul class="{register:ulClass}">
+        }
+      }
+    }
+  }
+}

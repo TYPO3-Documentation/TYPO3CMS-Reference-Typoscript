@@ -1,0 +1,29 @@
+# Check single page uid
+[traverse(page, "uid") == 2]
+// Your settings go here
+[END]
+# Check list of page uids
+[traverse(page, "uid") in [17,24]]
+// Your settings go here
+[END]
+# Check list of page uids NOT in
+[traverse(page, "uid") not in [17,24]]
+// Your settings go here
+[END]
+# Check range of pages (example: page uid from 10 to 20)
+[traverse(page, "uid") in 10..20]
+// Your settings go here
+[END]
+
+# Check the page backend layout
+[traverse(page, "backend_layout") == 5]
+// Your settings go here
+[END]
+[traverse(page, "backend_layout") == "example_layout"]
+// Your settings go here
+[END]
+
+# Check the page title
+[traverse(page, "title") == "foo"]
+// Your settings go here
+[END]

@@ -1,14 +1,14 @@
 mod.web_list.downloadPresets {
-    pages {
-        minimum {
-            label = Quick overview
-            columns = uid, title, crdate, slug
-        }
-
-        fullExport {
-            identifier = uid-title
-            label = LLL:my_extension.messages:preset2.label
-            columns = uid, title
-        }
+  pages {
+    minimum {
+      label = Quick overview
+      columns = uid, title, crdate, slug
     }
+
+    fullExport {
+      identifier = uid-title
+      label = LLL:my_extension.messages:preset2.label
+      columns = uid, title
+    }
+  }
 }

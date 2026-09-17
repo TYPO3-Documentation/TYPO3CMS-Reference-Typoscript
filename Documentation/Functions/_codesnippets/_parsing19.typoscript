@@ -1,0 +1,11 @@
+// either disable globally
+lib.parseFunc.htmlSanitize = 0
+lib.parseFunc_RTE.htmlSanitize = 0
+
+// or disable individually per use case
+10 = TEXT
+10 {
+  value = <div><img src="invalid.file" onerror="alert(1)"></div>
+  parseFunc =< lib.parseFunc_RTE
+  parseFunc.htmlSanitize = 0
+}

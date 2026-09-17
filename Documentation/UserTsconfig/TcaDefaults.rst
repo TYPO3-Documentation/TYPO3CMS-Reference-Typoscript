@@ -80,17 +80,8 @@ of an extension:
 Example: Set type specific default values in user TSconfig
 ==========================================================
 
-..  code-block:: typoscript
+..  literalinclude:: _types.typoscript
     :caption: EXT:site_package/Configuration/user.tsconfig
-
-    TCAdefaults.tt_content {
-        header_layout = 1
-        # Use specific default values for certain types
-        header_layout.types {
-            textmedia = 3
-            image = 2
-        }
-    }
 
 In this example: if a user with no write access to the field `tt_content.header_layout`
 creates a new content element of type `textmedia` the header layout will be set
