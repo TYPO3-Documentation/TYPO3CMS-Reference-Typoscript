@@ -1,0 +1,19 @@
+colorPalettes {
+  colors {
+    typo3 {
+      value = #ff8700
+    }
+    blue {
+      value = #0080c9
+    }
+    darkgrey {
+      value = #515151
+    }
+    valid {
+      value = #5abc55
+    }
+    error {
+      value = #dd123d
+    }
+  }
+}

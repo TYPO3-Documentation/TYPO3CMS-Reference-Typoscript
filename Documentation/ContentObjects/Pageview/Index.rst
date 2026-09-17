@@ -343,18 +343,8 @@ Example: Define fallbacks for a template paths
 You can use the directories defined in :confval:`pageview-paths` to
 define fallback directories for the templates:
 
-..  code-block:: typoscript
+..  literalinclude:: _extended.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page = PAGE
-    page {
-        10 = PAGEVIEW
-        10.paths {
-            100 = EXT:my_basic_sitepackage/Resources/Private/PageView/
-            200 = EXT:my_general_sitepackage/Resources/Private/PageView/
-            300 = EXT:my_special_sitepackage/Resources/Private/PageView/
-        }
-    }
 
 The template for a page with a certain backend layout is first searched in
 :path:`EXT:my_special_sitepackage/Resources/Private/PageView/Pages/` then in

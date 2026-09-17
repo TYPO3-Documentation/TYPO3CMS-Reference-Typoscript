@@ -1,0 +1,7 @@
+page.10 = IMAGE
+# toplogo.png has the dimensions 300 x 150 pixels.
+page.10 {
+  file = fileadmin/toplogo.png
+  params = style="margin: 0px 20px;"
+  wrap = |<br>
+}

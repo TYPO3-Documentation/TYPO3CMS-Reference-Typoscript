@@ -200,13 +200,8 @@ layout.layoutKey
 
     **Example:**
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_layoutkey.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        picture {
-          element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
-          source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
-        }
 
 layout.layoutKey.element
 ------------------------
@@ -308,28 +303,8 @@ sourceCollection
     different :ref:`dataKey <cobj-image-datakey>` properties which you can
     define to suit your needs.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_sourcecollection.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        sourceCollection {
-          small {
-            width = 200
-
-            srcsetCandidate = 600w
-            mediaQuery = (max-device-width: 600px)
-            dataKey = small
-          }
-          smallRetina {
-            if.directReturn = 1
-
-            width = 200
-            pixelDensity = 2
-
-            srcsetCandidate = 600w 2x
-            mediaQuery = (max-device-width: 600px) AND (min-resolution: 192dpi)
-            dataKey = smallRetina
-          }
-        }
 
 sourceCollection.dataKey
 ------------------------
@@ -563,16 +538,8 @@ Examples
 Standard rendering
 ------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_standard.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    page.10 = IMAGE
-    # toplogo.png has the dimensions 300 x 150 pixels.
-    page.10 {
-      file = fileadmin/toplogo.png
-      params = style="margin: 0px 20px;"
-      wrap = |<br>
-    }
 
 This returns:
 
@@ -592,64 +559,8 @@ This returns:
 Responsive/adaptive rendering
 -----------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_responsive.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    30 = IMAGE
-    30 {
-      file = fileadmin/imagefilenamename.jpg
-      file.width = 100
-
-      layoutKey = default
-      layout {
-
-        default {
-          element = <img src="###SRC###" width="###WIDTH###" height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
-          source =
-        }
-
-        srcset {
-          element = <img src="###SRC###" srcset="###SOURCECOLLECTION###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
-          source = |*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###
-        }
-
-        picture {
-          element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
-          source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
-        }
-
-        data {
-          element = <img src="###SRC###" ###SOURCECOLLECTION### ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
-          source.noTrimWrap = | data-###DATAKEY###="###SRC###"|
-        }
-      }
-
-      sourceCollection {
-        small {
-          width = 200
-
-          srcsetCandidate = 800w
-          mediaQuery = (min-device-width: 800px)
-          dataKey = small
-        }
-        smallHires {
-          if.directReturn = 1
-          width = 300
-          pixelDensity = 2
-
-          srcsetCandidate = 800w 2x
-          mediaQuery = (min-device-width: 800px) AND (foobar)
-          dataKey = smallHires
-          pictureFoo = bar
-        }
-      }
-    }
-    40 < 30
-    40.layoutKey = data
-    50 < 30
-    50.layoutKey = picture
-    60 < 30
-    60.layoutKey = srcset
 
 
 This returns as an example all per default possible HTML output:

@@ -13,23 +13,8 @@ Prints a filled box.
 Example
 =======
 
-..  code-block:: typoscript
+..  literalinclude:: _box.typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
-
-    lib.example = IMAGE
-    lib.example {
-      file = GIFBUILDER
-      file {
-        # Rectangle with 100 pixel width and 50 pixel height
-        # in orange with opacity 50%
-        10 = BOX
-        10 {
-          dimensions = 0, 0, 100, 50
-          color = #ff8700
-          opacity = 50
-        }
-      }
-    }
 
 ..  _gifbuilder-box-properties:
 

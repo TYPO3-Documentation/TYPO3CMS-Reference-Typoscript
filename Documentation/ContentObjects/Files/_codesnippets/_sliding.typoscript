@@ -1,0 +1,13 @@
+lib.banner = FILES
+lib.banner {
+  references {
+    data = levelmedia: -1, slide
+  }
+
+  renderObj = IMAGE
+  renderObj {
+    file.import.dataWrap = {file:current:storage}:{file:current:identifier}
+    altText.data = file:current:title
+    wrap = <div class="banner">|</div>
+  }
+}

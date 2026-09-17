@@ -1,17 +1,17 @@
 page = PAGE
 page {
-    10 = PAGEVIEW
-    10 {
-        paths {
-            100 = EXT:my_sitepackage/Resources/Private/PageView/
-        }
-        variables {
-            parentPageTitle = TEXT
-            parentPageTitle.data = levelfield:-1:title
-        }
-        dataProcessing {
-            10 = menu
-            10.as = mainMenu
-        }
+  10 = PAGEVIEW
+  10 {
+    paths {
+      100 = EXT:my_sitepackage/Resources/Private/PageView/
     }
+    variables {
+      parentPageTitle = TEXT
+      parentPageTitle.data = levelfield:-1:title
+    }
+    dataProcessing {
+      10 = menu
+      10.as = mainMenu
+    }
+  }
 }

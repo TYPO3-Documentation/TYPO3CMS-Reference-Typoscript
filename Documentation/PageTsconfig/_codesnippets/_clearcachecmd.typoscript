@@ -1,0 +1,10 @@
+TCEMAIN {
+  # Clear the cache for page uid 12 and 23 when saving a record in this page
+  clearCacheCmd = 12, 23
+  # Clear all frontent page caches of pages
+  clearCacheCmd = pages
+  # Clear ALL caches
+  clearCacheCmd = all
+  # Clear cache for all pages tagged with tag "pagetag1"
+  clearCacheCmd = cacheTag:pagetag1
+}

@@ -1,0 +1,8 @@
+TCEMAIN.linkHandler.my_content {
+  handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
+  label = LLL:my_extension.messages:link.customTab
+  configuration {
+    table = tx_myextension_content
+  }
+  scanBefore = page
+}

@@ -68,17 +68,8 @@ language
 
     ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_language.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        page.10 = TEXT
-        page.10.value = Link to the page with the ID 23 in the current language
-        page.10.typolink.parameter = 23
-
-        page.20 = TEXT
-        page.20.value = Link to the page with the ID 23 in the language 3
-        page.20.typolink.parameter = 23
-        page.20.typolink.language = 3
 
 
 ..  _typolink-target:
@@ -172,14 +163,8 @@ addQueryString
 
     ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_addQueryString.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Pass resolved query parameters to the link
-        typolink.addQueryString = 1
-
-        # Pass all query parameters to the link
-        typolink.addQueryString = untrusted
 
 
 ..  _typolink-addQueryString-exclude:
@@ -411,14 +396,8 @@ forceAbsoluteUrl.scheme
     Defines the URL scheme to be used (https or http). http is the
     default value. Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_scheme.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        typolink {
-           parameter = 13
-           forceAbsoluteUrl = 1
-           forceAbsoluteUrl.scheme = https
-        }
 
 
 ..  _typolink-title:

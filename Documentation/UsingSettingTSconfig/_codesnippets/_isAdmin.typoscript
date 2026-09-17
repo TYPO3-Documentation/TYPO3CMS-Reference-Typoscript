@@ -1,0 +1,4 @@
+# Evaluates to true if current backend user is administrator
+[backend.user.isAdmin]
+// Your settings go here
+[END]

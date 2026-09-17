@@ -1,0 +1,5 @@
+# Retrieve the value of the query parameter ?myParam=<value>
+lib.foo.data = request : routing | queryArguments | myParam
+
+# Retrieve the value of the query parameter ?tx_myext[key]=<value>
+lib.foo.data = request : routing | queryArguments | tx_myext | key

@@ -1,0 +1,7 @@
+page = PAGE
+page {
+  typeNum = 0
+  bodyTag = <body class="{$tx_my_sitepackage.bgCol}">
+  10 = IMAGE
+  10.file = {$tx_my_sitepackage.file.toplogo}
+}

@@ -1,0 +1,13 @@
+lib.some_content = TEXT
+lib.some_content.value = Hello World!
+
+// Output
+// <p>Hello World!</p><p>Hello World!</p>
+page = PAGE
+page {
+  10 =< lib.some_content
+  10.wrap = <h1>|</h1>
+
+  20 =< lib.some_content
+  20.wrap = <p>|</p>
+}

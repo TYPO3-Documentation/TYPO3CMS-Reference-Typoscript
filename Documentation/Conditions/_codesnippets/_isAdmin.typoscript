@@ -1,0 +1,4 @@
+# Evaluates to true, if the current backend user is administrator
+[backend.user.isAdmin]
+# ...
+[END]

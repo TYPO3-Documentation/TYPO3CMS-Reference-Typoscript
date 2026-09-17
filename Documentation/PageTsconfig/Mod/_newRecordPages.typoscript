@@ -1,0 +1,4 @@
+mod.wizards.newRecord.pages.show {
+  # Hide the "Page (inside)" link.
+  pageInside = 0
+}

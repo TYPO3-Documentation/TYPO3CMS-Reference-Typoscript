@@ -1,0 +1,9 @@
+# Add a footer note, if the page author ends with "Kott"
+page.100 = TEXT
+page.100 {
+  value = This is an article from Benji
+  htmlSpecialChars = 1
+  if.value.data = page:author
+  if.endsWith = Kott
+  wrap = <footer>|</footer>
+}

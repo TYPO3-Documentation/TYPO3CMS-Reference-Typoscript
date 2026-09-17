@@ -1,0 +1,11 @@
+foo = 10,100,0,20,abc
+foo := sortList()
+# foo is "0,10,20,100,abc"
+
+foo = 10,0,100,-20
+foo := sortList(numeric)
+# foo is "-20,0,10,100"
+
+foo = 10,100,0,20,-20
+foo := sortList(numeric,descending)
+# foo is "100,20,10,0,-20"

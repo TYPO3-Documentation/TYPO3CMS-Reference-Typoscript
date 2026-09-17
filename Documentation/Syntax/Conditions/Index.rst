@@ -127,16 +127,8 @@ Nesting conditions via TypoScript imports
 
 Conditions can *not* be nested within code blocks.
 
-..  code-block:: typoscript
+..  literalinclude:: _nesting.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # Invalid: Conditions must not be used within code blocks
-    # someIdentifier {
-    #    someProperty = foo
-    #    [frontend.user.isloggedIn]
-    #       someProperty = bar
-    #    [GLOBAL]
-    # }
 
 ..  versionchanged:: 12.0
 

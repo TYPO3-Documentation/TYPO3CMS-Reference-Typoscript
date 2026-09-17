@@ -1,0 +1,9 @@
+[locale().getName() == "en-US"]
+page.20.value = Language is American English.
+[END]
+[locale().getCountryCode() == "US"]
+page.30.value = Country code is "US".
+[END]
+[locale().isRightToLeftLanguageDirection()]
+page.40.value = This locale is written from right to left
+[END]

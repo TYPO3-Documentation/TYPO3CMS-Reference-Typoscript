@@ -1,0 +1,27 @@
+page = PAGE
+# [...]
+
+page.meta {
+  keywords = TYPO3
+  og:site_name = TYPO3
+  og:site_name.attribute = property
+  description = Inspiring people to share Normal
+  dc\.description = Inspiring people to share [DC tags]
+  og:description = Inspiring people to share [OpenGraph]
+  og:description.attribute = property
+  og:locale = en_GB
+  og:locale.attribute = property
+  og:locale:alternate {
+    attribute = property
+    value {
+      1 = fr_FR
+      2 = de_DE
+    }
+  }
+  article:modified_time {
+    attribute = property
+    if.isTrue.field = lastUpdated
+    field = lastUpdated
+    formattedDate = Y-MM-dd'T'HH:mm:ssZ
+  }
+}

@@ -1,0 +1,6 @@
+# "onBlur" closes the window automatically if it looses focus
+imageLinkWrap.JSwindow = 1
+imageLinkWrap.bodyTag (
+    <body class="jsWindow someOtherClass"
+          onBlur="self.close()">
+)

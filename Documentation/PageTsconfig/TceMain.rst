@@ -43,19 +43,8 @@ clearCacheCmd
 Example: Clear the cache for certain pages when a record is changed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_clearcachecmd.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEMAIN {
-        # Clear the cache for page uid 12 and 23 when saving a record in this page
-        clearCacheCmd = 12, 23
-        # Clear all frontent page caches of pages
-        clearCacheCmd = pages
-        # Clear ALL caches
-        clearCacheCmd = all
-        # Clear cache for all pages tagged with tag "pagetag1"
-        clearCacheCmd = cacheTag:pagetag1
-    }
 
 ..  note::
 
@@ -122,15 +111,8 @@ disableHideAtCopy
 Example: Do not hide pages when they are copy-pasted
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_disablehideatcopy.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEMAIN.table.pages {
-       # Pages will *not* have "(copy)" appended:
-       disablePrependAtCopy = 1
-       # Pages will *not* be hidden upon copy:
-       disableHideAtCopy = 1
-    }
 
 These settings adjust that a page which is copied will neither have "(copy X)" appended nor be hidden.
 
@@ -177,15 +159,8 @@ disablePrependAtCopy
 Example: Do not append the "(copy)" label to newly copied pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_disableprependatcopy.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEMAIN.table.pages {
-       # Pages will *not* have "(copy)" appended:
-       disablePrependAtCopy = 1
-       # Pages will *not* be hidden upon copy:
-       disableHideAtCopy = 1
-    }
 
 These settings adjust that a page which is copied will neither have "(copy X)" appended nor be hidden.
 
@@ -309,17 +284,8 @@ frontend you need to define the same key in the TypoScript setup
     For a complete example see also the :ref:`Record link tutorial
     in TYPO3 Explained <t3coreapi:TableRecordLinkBrowserTutorials>`.
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_linkhandler.typoscript
     :caption: Page TSconfig definition for identifier `my_content`
-
-    TCEMAIN.linkHandler.my_content {
-        handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
-        label = LLL:my_extension.messages:link.customTab
-        configuration {
-            table = tx_myextension_content
-        }
-        scanBefore = page
-    }
 
 ..  index:: Page permissions
 ..  _pagetcemain-permissions-user-group:
@@ -342,14 +308,8 @@ set, the page access permissions are copied from the parent page.
 Example: Inherit the group id of the parent page
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_inherit.typoscript
     :caption: EXT:my_extension/Configuration/page.tsconfig
-
-    TCEMAIN.permissions {
-        groupid = copyFromParent
-        group = 31
-        everybody = 0
-    }
 
 By default all new pages created by users will inherit the group of the parent
 page. Members of this group get all permissions. Users not in the group get no
@@ -391,13 +351,8 @@ everybody
 Example: Set permissions defaults so that everybody can see the page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_everybody.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEMAIN.permissions {
-      # Everybody can at least see the page, normally everybody can do nothing
-      everybody = show
-    }
 
 The page "Community" was created with the settings from the example
 above. Compared to the two other pages created with default
@@ -437,13 +392,8 @@ group
 Example: Set permission defaults so that the group can do anything with the new page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_group.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEMAIN.permissions {
-        # Group can do anything, normally "delete" is disabled
-        group = 31
-    }
 
 The page "Community" was created with the settings from the example
 above. Compared to the two other pages created with default
@@ -480,13 +430,8 @@ groupid
 Example: Set default user group for permissions on new pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_groupid.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEMAIN {
-        # Owner be_groups UID for new pages
-        permissions.groupid = 3
-    }
 
 In this instance, backend group with UID 3 is "test_group". With the configuration
 above a new page would be created with this group setting instead of the default,
@@ -524,13 +469,8 @@ user
 Example: Set permission defaults so that the pages owner can do anything
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_actions.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEMAIN.permissions {
-        # User can do anything, this is identical to the default value
-        user = 31
-    }
 
 ..  index:: Page permissions; User id
 ..  _pagetcemain-permissions-userid:
@@ -557,13 +497,8 @@ userid
 Example: Set default user for permissions on new pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_userid.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    TCEMAIN {
-        # Owner be_users UID for new pages
-        permissions.userid = 2
-    }
 
 In this instance, backend user with UID 2 is "test". With the configuration
 above a new page would be created with this owner setting instead of the default,
@@ -589,22 +524,8 @@ preview
     use case is to have previews for blog and news records, and this feature allows you to define a different
     preview page for content elements as well, which might be handy if they are stored in a folder.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_preview.typoscript
         :caption: EXT:site_package/Configuration/page.tsconfig
-
-        TCEMAIN.preview {
-            disableButtonForDokType = 199, 254
-            <table name> {
-                previewPageId = 123
-                fieldToParameterMap {
-                    uid = tx_myextension_pi1[showUid]
-                }
-                additionalGetParameters {
-                    tx_myextension_pi1.controller = MyController # results in tx_myextension_pi1[controller]
-                    tx_myextension_pi1.action = show # results in tx_myextension_pi1[action]
-                }
-            }
-        }
 
     The :typoscript:`previewPageId` is the uid of the page to use for preview. If this setting is omitted the
     current page will be used. If the current page is not a normal page, the root page will be chosen.

@@ -1,0 +1,12 @@
+10 = IMAGE
+10 {
+  file = fileadmin/demo/lorem_ipsum/images/a4.jpg
+  file.width = 80
+  imageLinkWrap = 1
+  imageLinkWrap {
+    enable = 1
+    # link directly to the image
+    directImageLink = 1
+    # JSwindow = 1
+  }
+}

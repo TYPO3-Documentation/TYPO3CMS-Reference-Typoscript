@@ -36,15 +36,5 @@ The :typoscript:`HMENU` :typoscript:`maxAge` property is of a type
 :typoscript:`integer +calc`, it's value in this example equals to 259200.
 
 
-..  code-block:: typoscript
+..  literalinclude:: _usage.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    20 = HMENU
-    20.special = updated
-    20.special.value = 35, 56
-    20.special {
-      mode = tstamp
-      depth = 2
-      maxAge = 3600*24*3
-      limit = 8
-    }

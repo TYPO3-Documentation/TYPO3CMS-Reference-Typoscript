@@ -1,0 +1,6 @@
+# Disable all RTEs
+RTE.default.disabled = 1
+# Enable RTE for the tt_content bodytext field only
+RTE.config.tt_content.bodytext.disabled = 0
+# But disable RTE for tt_content bodytext again if the record type is "text"
+RTE.config.tt_content.bodytext.types.text.disabled = 1

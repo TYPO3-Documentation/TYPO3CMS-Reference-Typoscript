@@ -1,0 +1,8 @@
+30 = TEXT
+30.value = There are a cat, a dog and a tiger in da hood! Yeah!
+30.stdWrap.replacement.10 {
+  search = #(a) (Cat|Dog|Tiger)#i
+  replace = ${1} tiny ${2} || ${1} midsized ${2} || ${1} big ${2}
+  useRegExp = 1
+  useOptionSplitReplace = 1
+}

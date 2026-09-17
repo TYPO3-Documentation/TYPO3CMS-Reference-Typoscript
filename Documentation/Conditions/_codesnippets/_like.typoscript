@@ -1,0 +1,14 @@
+# Search a string with * within another string
+[like("fooBarBaz", "*Bar*")]
+# ...
+[END]
+
+# Search string with single characters in between, using ?
+[like("fooBarBaz", "f?oBa?Baz")]
+# ...
+[END]
+
+# Search string using regular expression
+[like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
+# ...
+[END]

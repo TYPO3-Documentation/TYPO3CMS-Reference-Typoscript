@@ -1,0 +1,5 @@
+10 = flex-form
+10 {
+  fieldName = my_flexform_field
+  as = myOutputVariable
+}

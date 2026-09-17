@@ -1,0 +1,6 @@
+lib.next_weekday = TEXT
+lib.next_weekday {
+  data = GP:selected_date
+  strtotime = + 2 weekdays
+  strftime = %Y-%m-%d
+}

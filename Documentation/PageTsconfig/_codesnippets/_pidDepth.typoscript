@@ -1,0 +1,4 @@
+TCEFORM.suggest.default {
+  pidList = 6,7
+  pidDepth = 4
+}

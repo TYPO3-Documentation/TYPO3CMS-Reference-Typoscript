@@ -1,0 +1,8 @@
+TCAdefaults.tt_content {
+  header_layout = 1
+  # Use specific default values for certain types
+  header_layout.types {
+    textmedia = 3
+    image = 2
+  }
+}

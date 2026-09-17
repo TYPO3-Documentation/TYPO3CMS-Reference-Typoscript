@@ -104,12 +104,5 @@ Example
 
 Output the SVG with the defined dimensions:
 
-..  code-block:: typoscript
+..  literalinclude:: _svg.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    10 = SVG
-    10 {
-      width = 600
-      height = 600
-      src = EXT:my_ext/Resources/Public/Images/example.svg
-    }

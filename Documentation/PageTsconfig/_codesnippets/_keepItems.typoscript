@@ -1,0 +1,4 @@
+TCEFORM.pages.doktype {
+  # Show only standard and "Spacer" page types
+  keepItems = 1, 199
+}

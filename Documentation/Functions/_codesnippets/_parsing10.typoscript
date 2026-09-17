@@ -1,0 +1,4 @@
+page.10 {
+  value = abc
+  bytes = 1
+}

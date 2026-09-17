@@ -1,0 +1,4 @@
+TCAdefaults.tt_content {
+  hidden = 1
+  header = Hello!
+}

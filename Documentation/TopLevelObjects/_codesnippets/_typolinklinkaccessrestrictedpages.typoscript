@@ -1,0 +1,5 @@
+config {
+  typolinkLinkAccessRestrictedPages = 29
+  typolinkLinkAccessRestrictedPages.ATagParams = class="restricted"
+  typolinkLinkAccessRestrictedPages_addParams = &return_url=###RETURN_URL###&pageId=###PAGE_ID###
+}

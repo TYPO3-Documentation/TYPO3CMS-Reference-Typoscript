@@ -1,0 +1,8 @@
+mod.web_list.searchLevel.items {
+  -1 = LLL:core.core:labels.searchLevel.infinite
+  0 = LLL:core.core:labels.searchLevel.0
+  1 = LLL:core.core:labels.searchLevel.1
+  2 = LLL:core.core:labels.searchLevel.2
+  3 = LLL:core.core:labels.searchLevel.3
+  4 = LLL:core.core:labels.searchLevel.4
+}

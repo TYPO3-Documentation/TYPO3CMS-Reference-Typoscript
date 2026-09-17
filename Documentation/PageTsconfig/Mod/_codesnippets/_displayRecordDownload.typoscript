@@ -1,0 +1,11 @@
+# Page TSconfig
+mod.web_list {
+  # Disable "Export" button in Content Records module header
+  noExportRecordsLinks = 1
+
+  # Generally disable "Download" button
+  displayRecordDownload = 0
+
+  # Enable "Download" button for table "tt_content"
+  table.tt_content.displayRecordDownload = 1
+}

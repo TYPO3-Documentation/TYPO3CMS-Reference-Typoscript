@@ -78,15 +78,7 @@ round
 Examples
 ========
 
-..  code-block:: typoscript
+..  literalinclude:: _round.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    lib.number = TEXT
-    lib.number {
-        value = 3.14159
-        stdWrap.round = 1
-        stdWrap.round.roundType = round
-        stdWrap.round.decimals = 2
-    }
 
 This returns `3.14`.

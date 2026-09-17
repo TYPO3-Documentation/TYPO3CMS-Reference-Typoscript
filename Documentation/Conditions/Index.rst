@@ -53,18 +53,8 @@ applicationContext
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_applicationContext.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        [applicationContext == "Development"]
-            # ...
-        [END]
-
-        # Any context that is "Production" or starts with "Production"
-        # (for example, Production/Staging").
-        [applicationContext matches "/^Production/"]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; page
@@ -81,41 +71,8 @@ page
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_page.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Check single page UID
-        [traverse(page, "uid") == 2]
-            # ...
-        [END]
-
-        # Check list of page UIDs
-        [traverse(page, "uid") in [17,24]]
-            # ...
-        [END]
-
-        # Check list of page UIDs NOT in
-        [traverse(page, "uid") not in [17,24]]
-            # ...
-        [END]
-
-        # Check range of pages (example: page UID from 10 to 20)
-        [traverse(page, "uid") in 10..20]
-            # ...
-        [END]
-
-        # Check the page backend layout
-        [traverse(page, "backend_layout") == 5]
-            # ...
-        [END]
-        [traverse(page, "backend_layout") == "example_layout"]
-            # ...
-        [END]
-
-        # Check the page title
-        [traverse(page, "title") == "foo"]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; tree
@@ -149,13 +106,8 @@ tree.level
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_level.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Check, if the page is on level 0:
-        [tree.level == 0]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; tree.pagelayout
@@ -173,23 +125,8 @@ tree.pagelayout
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_pagelayout.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Using backend layout records
-        [tree.pagelayout === "2"]
-            # ...
-        [END]
-
-        # Using the TSconfig provider of backend layouts
-        [tree.pagelayout === "pagets__Home"]
-            # ...
-        [END]
-
-        # Using backend layout records multiple
-        [tree.pagelayout in ['2','3','4','5']]
-            # ...
-        [END]
 
     ..  attention::
         The value of `pagelayout` is a string, even when using BE layout records.
@@ -236,13 +173,8 @@ tree.rootLineIds
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_rootLineIds.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Check, if page with uid 2 is inside the root line
-        [2 in tree.rootLineIds]
-            # ...
-        [END]
 
 
 ..  index::
@@ -261,13 +193,8 @@ tree.rootLineParentIds
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_rootLineParentIds.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Check, if the page with UID 2 is the parent of a page inside the root line
-        [2 in tree.rootLineParentIds]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; backend
@@ -312,13 +239,8 @@ backend.user.isAdmin
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_isAdmin.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Evaluates to true, if the current backend user is administrator
-        [backend.user.isAdmin]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; backend.user.isLoggedIn
@@ -335,13 +257,8 @@ backend.user.isLoggedIn
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_isLoggedIn.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Evaluates to true, if a backend user is logged in
-        [backend.user.isLoggedIn]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; backend.user.userId
@@ -358,14 +275,8 @@ backend.user.userId
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_userId.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Evaluates to true, if the user UID of the current logged-in backend
-        # user is equal to 5
-        [backend.user.userId == 5]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; backend.user.userGroupIds
@@ -555,13 +466,8 @@ workspace.workspaceId
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_workspaceId.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Check, if in live workspace
-        [workspace.workspaceId == 0]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; workspace.isLive
@@ -706,28 +612,8 @@ date()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_date.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # True, if the day of the current month is 7
-        [date("j") == 7]
-            # ...
-        [END]
-
-        # True, if the day of the current week is 7
-        [date("w") == 7]
-            # ...
-        [END]
-
-        # True, if the day of the current year is 7
-        [date("z") == 7]
-            # ...
-        [END]
-
-        # True, if the current hour is 7
-        [date("G") == 7]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; like
@@ -747,23 +633,8 @@ like()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_like.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Search a string with * within another string
-        [like("fooBarBaz", "*Bar*")]
-            # ...
-        [END]
-
-        # Search string with single characters in between, using ?
-        [like("fooBarBaz", "f?oBa?Baz")]
-            # ...
-        [END]
-
-        # Search string using regular expression
-        [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; traverse
@@ -787,14 +658,8 @@ traverse()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_traverse.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Traverse query parameters of current request along tx_news_pi1[news]
-        [request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
-
-        # Traverse page properties for current page
-        [traverse(page ?? [], "pid") == 65]
 
     ..  tip::
         Checking for the :ref:`request object <t3coreapi:typo3-request>` to be
@@ -825,18 +690,8 @@ compatVersion()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_compatVersion.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # True, if the current TYPO3 version is 14.3.x
-        [compatVersion("14.3")]
-            # ...
-        [END]
-
-        # True, if the current TYPO3 version is 14.3.1
-        [compatVersion("14.3.1")]
-            # ...
-        [END]
 
 
 ..  _condition-function-getTSFE:
@@ -894,14 +749,8 @@ feature()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_feature.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # True, if the feature toggle for enforcing the Content Security Policy
-        # in the frontend is enabled
-        [feature("security.frontend.enforceContentSecurityPolicy") === true]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; ip
@@ -923,16 +772,8 @@ ip()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_ip.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        [ip("172.18.*")]
-            page.10.value = Your IP matches "172.18.*"
-        [END]
-
-        [ip("devIP")]
-            page.10.value = Your IP matches the configured devIp
-        [END]
 
 
 ..  index:: Conditions; request
@@ -987,15 +828,8 @@ request.getQueryParams()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_request4.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Safely check the query parameter array to avoid error logs in case key
-        # is not defined. This will check if the GET parameter
-        # tx_news_pi1[news] in the URL is greater than 0:
-        [request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; request.getParsedBody()
@@ -1035,16 +869,8 @@ request.getHeaders()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_request3.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        [request && request.getHeaders()['Accept'] == 'json']
-            page.10.value = Accepts json
-        [END]
-
-        [request && request.getHeaders()['host'][0] == 'www.example.org']
-            page.20.value = The host is www.example.org
-        [END]
 
 
 ..  index:: Conditions; request.getCookieParams()
@@ -1086,16 +912,8 @@ request.getNormalizedParams()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_request2.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        [request && request.getNormalizedParams().isHttps()]
-            page.10.value = HTTPS is being used
-        [END]
-
-        [request && request.getNormalizedParams().getHttpHost() == "example.org"]
-            page.10.value = The host is "example.org"
-        [END]
 
 
 
@@ -1114,17 +932,8 @@ request.getPageArguments()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_request.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        [request && request.getPageArguments().get('foo_id') > 0]
-            # ...
-        [END]
-
-        # True, if current page type is 98
-        [request && request.getPageArguments()?.getPageType() == 98]
-            # ...
-        [END]
 
 ..  index:: Conditions; session
 ..  _condition-functions-in-frontend-context-function-session:
@@ -1144,13 +953,8 @@ session()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_session.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Match, if the session has the value 1234567 in the structure :php:`$foo['bar']`:
-        [session("foo|bar") == 1234567]
-            # ...
-        [END]
 
 
 ..  index:: Conditions; site
@@ -1199,43 +1003,13 @@ site()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_site2.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        # Site identifier
-        [site("identifier") == "my_site"]
-            # ...
-        [END]
-
-        # Match site base host
-        [site("base").getHost() == "www.example.org"]
-            # ...
-        [END]
-
-        # Match base path
-        [site("base").getPath() == "/"]
-            # ...
-        [END]
-
-        # Match root page UID
-        [site("rootPageId") == 1]
-            # ...
-        [END]
-
-        # Match a configuration property
-        [traverse(site("configuration"), "myCustomProperty") == true]
-            # ...
-        [END]
 
     Site settings can also be used in the conditions in TypoScript constants:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_site.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/constants.typoscript
-
-        my.constant = my global value
-        [traverse(site('configuration'), 'settings/some/setting') == 'someValue']
-          my.constant = another value, if condition matches
-        [global]
 
 ..  index:: Conditions; siteLanguage
 ..  _condition-functions-in-frontend-context-function-siteLanguage:
@@ -1296,16 +1070,8 @@ siteLanguage()
 
     Example:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_siteLanguage.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        [siteLanguage("fallbackType") == "strict"]
-            page.10.value = This site has a strict language fallback
-        [END]
-
-        [siteLanguage("title") == "Italy"]
-            page.10.value = This site has the title "Italy"
-        [END]
 
 ..  _condition-functions-in-frontend-context-function-locale:
 
@@ -1327,18 +1093,8 @@ locale()
     ..  seealso::
         *   `TYPO3 explained: Locale API <https://docs.typo3.org/permalink/t3coreapi:locale-api>`_
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_locale.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        [locale().getName() == "en-US"]
-            page.20.value = Language is American English.
-        [END]
-        [locale().getCountryCode() == "US"]
-            page.30.value = Country code is "US".
-        [END]
-        [locale().isRightToLeftLanguageDirection()]
-            page.40.value = This locale is written from right to left
-        [END]
 
 ..  _condition-examples:
 
@@ -1353,14 +1109,8 @@ Check if a constant is set to a certain value
 TypoScript constants can be used in conditions with the
 :ref:`Syntax <typoscript-syntax-conditions-syntax>` for conditions:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_constant.typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
-
-    [{$tx_my_extension.settings.feature1Enabled} == 1]
-        page.10.value = The feature 1 of my_extension is enabled.
-    [ELSE]
-        page.10.value = The feature 1 of my_extension is not enabled.
-    [END]
 
 ..  note::
     TypoScript constants can be used in frontend TypoScript *setup* conditions,
@@ -1461,22 +1211,10 @@ processed by expression language. That allows experimental structures: If
 `{$foo}` is set to the reserved :ref:`page <t3tsref:condition-page>` array
 and page title is `Home` following condition is true:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_keywords2.typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
-
-    [traverse({$foo}, "title") == "Home"]
-        page.10.value (
-            Value will be shown if constant is "page" and page title is "Home"
-        )
-    [END]
 
 After the replacement of the constant the example will result into:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_keywords.typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
-
-    [traverse(page, "title") == "Home"]
-        page.10.value (
-            Value will be shown if constant is "page" and page title is "Home"
-        )
-    [END]

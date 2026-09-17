@@ -1,0 +1,5 @@
+10 {
+  search = #(a )CAT#i
+  replace = \1cat
+  useRegExp = 1
+}

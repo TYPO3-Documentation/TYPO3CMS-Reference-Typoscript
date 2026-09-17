@@ -1,0 +1,6 @@
+JSwindow = 0
+directImageLink = 1
+linkParams.ATagParams.dataWrap (
+  class="{$styles.content.imgtext.linkWrap.lightboxCssClass}"
+  rel="{$styles.content.imgtext.linkWrap.lightboxRelAttribute}"
+)

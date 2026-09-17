@@ -1,0 +1,11 @@
+page.10 = FILES
+
+page.10.files = 12,15,16
+page.10.collections = 2,9
+page.10.folders = 1:mypics/
+
+page.10.renderObj = TEXT
+page.10.renderObj {
+  stdWrap.data = file:current:size
+  stdWrap.wrap = <p>File size: <strong>|</strong></p>
+}

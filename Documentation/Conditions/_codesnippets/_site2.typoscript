@@ -1,0 +1,24 @@
+# Site identifier
+[site("identifier") == "my_site"]
+# ...
+[END]
+
+# Match site base host
+[site("base").getHost() == "www.example.org"]
+# ...
+[END]
+
+# Match base path
+[site("base").getPath() == "/"]
+# ...
+[END]
+
+# Match root page UID
+[site("rootPageId") == 1]
+# ...
+[END]
+
+# Match a configuration property
+[traverse(site("configuration"), "myCustomProperty") == true]
+# ...
+[END]

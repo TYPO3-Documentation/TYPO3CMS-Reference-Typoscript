@@ -1,0 +1,6 @@
+encapsLines {
+  encapsTagList = div,p
+  remapTag.DIV = P
+  wrapNonWrappedLines = <p>|</p>
+  innerStdWrap_all.ifEmpty = &nbsp;
+}

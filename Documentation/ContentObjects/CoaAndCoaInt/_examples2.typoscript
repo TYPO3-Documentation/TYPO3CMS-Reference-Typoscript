@@ -1,0 +1,15 @@
+lib.contentexample = COA
+lib.contentexample {
+  10 = TEXT
+  10.value = <h1>Header</h1>
+
+  20 = CONTENT
+  20 {
+    table = tt_content
+    select.orderBy = sorting
+    select.where = {#colPos}=0
+  }
+
+  30 = TEXT
+  30.value = <footer>Footer text</footer>
+}

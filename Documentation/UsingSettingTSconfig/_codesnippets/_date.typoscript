@@ -1,0 +1,19 @@
+# True if day of current month is 7
+[date("j") == 7]
+// Your settings go here
+[END]
+
+# True if day of current week is 7
+[date("w") == 7]
+// Your settings go here
+[END]
+
+# True if day of current year is 7
+[date("z") == 7]
+// Your settings go here
+[END]
+
+# True if current hour is 7
+[date("G") == 7]
+// Your settings go here
+[END]

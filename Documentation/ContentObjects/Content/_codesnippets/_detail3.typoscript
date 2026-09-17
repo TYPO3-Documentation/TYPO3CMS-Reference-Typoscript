@@ -1,0 +1,7 @@
+1 = CONTENT
+
+// STEP 1: do nothing if 'if' evaluates to false
+
+1.if {
+  # ifclause =
+}
