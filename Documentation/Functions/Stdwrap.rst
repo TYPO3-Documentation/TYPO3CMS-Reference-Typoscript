@@ -561,7 +561,7 @@ Properties for parsing data
         ..  rubric:: Examples
 
         ..  code-block:: none
-            :caption: Example Output for different calculations
+            :caption: Example output for different calculations
 
             100%7 = 2
             -5*-4 = 20
@@ -876,7 +876,7 @@ Properties for parsing data
         Result:
 
         ..  code-block:: text
-            :caption: Example Output
+            :caption: Example output
 
             HELLO WORLD!
 
