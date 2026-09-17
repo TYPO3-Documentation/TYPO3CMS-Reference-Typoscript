@@ -1,0 +1,6 @@
+processing:
+  allowTags:
+    # ...
+  HTMLparser_db:
+    # ...
+    htmlSanitize: false
