@@ -1,0 +1,13 @@
+{
+  "Exclude": [
+    "^\\.Build/",
+    "\\.rst$",
+    "\\.rst\\.txt$",
+    "\\.diff$",
+    "\\.plantuml$",
+    "CodeSnippets/TypoScriptSyntax/OperatorMultiLine\\.typoscript$"
+  ],
+  "Disable": {
+    "MaxLineLength": true
+  }
+}

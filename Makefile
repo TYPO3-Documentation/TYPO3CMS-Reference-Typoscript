@@ -43,7 +43,11 @@ test-json: ## Check the JSON snippet syntax
 	Build/Scripts/runTests.sh -s jsonLint
 
 .PHONY: test
-test: test-docs test-lint test-cgl test-yaml test-typoscript test-json## Test the documentation rendering
+test: test-docs test-lint test-cgl test-yaml test-typoscript test-json test-editorconfig ## Test the documentation rendering
+
+.PHONY: test-editorconfig
+test-editorconfig: ## Check indentation and whitespace per .editorconfig
+	Build/Scripts/runTests.sh -s editorconfigLint
 
 .PHONY: fix
 fix: ## Fix cgl
