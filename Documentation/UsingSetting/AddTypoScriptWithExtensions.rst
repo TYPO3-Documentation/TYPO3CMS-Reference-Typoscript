@@ -133,6 +133,13 @@ Supporting both site sets and TypoScript records
     :ref:`@import <t3tsref:typoscript-syntax-import>` syntax. All frontend
     TypoScript files **must** end on `.typoscript`.
 
+TYPO3 v12 does not know site sets. To offer the same TypoScript there,
+register the set folders as static files, behind a version check so that
+v13 does not list them a second time:
+
+..  literalinclude:: _Sets/_TcaOverridesSystemplateV12.php
+    :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php
+
 ..  _extension-configuration-typoscript-set-record-one:
 
 One TypoScript include set
