@@ -14,7 +14,7 @@ test-docs: ## Test the documentation rendering
 	docker run --user $(shell id -u):$(shell id -g) --rm --pull always -v "$(shell pwd)":/project -t ghcr.io/typo3-documentation/render-guides:latest --config=Documentation --no-progress --minimal-test
 
 .PHONY: test
-test: test-docs test-lint test-cgl test-yaml test-typoscript test-json ## Run all test suites
+test: test-docs test-lint test-cgl test-yaml test-typoscript test-json test-editorconfig ## Run all test suites
 
 .PHONY: test-lint
 test-lint: ## Lint the included PHP files
@@ -35,6 +35,10 @@ test-typoscript: ## Check the TypoScript snippet syntax
 .PHONY: test-json
 test-json: ## Check the JSON snippet syntax
 	Build/Scripts/runTests.sh -s jsonLint
+
+.PHONY: test-editorconfig
+test-editorconfig: ## Check indentation and whitespace per .editorconfig
+	Build/Scripts/runTests.sh -s editorconfigLint
 
 .PHONY: fix
 fix: fix-cgl ## Apply all automatic fixes
