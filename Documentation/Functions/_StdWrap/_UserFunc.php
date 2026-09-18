@@ -31,7 +31,7 @@ class TypoLinkUserFunc
       // and act on it
       if ($conf['eventUid.']['data'] ?? null) {
         $url = $content->getAttribute('href')
-               . '/event/' . (int)$conf['eventUid.']['data'];
+          . '/event/' . (int)$conf['eventUid.']['data'];
         // Here you could do database lookups for example
         // to add extbase routing URIs and retrieve
         // fields. This is just an example, proper link building
