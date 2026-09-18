@@ -1,0 +1,11 @@
+# Reads as: isLoggedIn or (languageId == 1 and not ip('127.0.0.1'))
+[frontend.user.isLoggedIn || siteLanguage("languageId") == 1 && !ip('127.0.0.1')]
+  page.40 = TEXT
+  page.40.value = Default grouping
+[GLOBAL]
+
+# Parentheses enforce a different grouping
+[(frontend.user.isLoggedIn || siteLanguage("languageId") == 1) && !ip('127.0.0.1')]
+  page.50 = TEXT
+  page.50.value = Grouping enforced by parentheses
+[GLOBAL]
