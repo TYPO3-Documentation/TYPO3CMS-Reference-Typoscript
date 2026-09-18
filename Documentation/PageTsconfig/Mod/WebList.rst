@@ -281,7 +281,7 @@ This can be manipulated with user TSconfig by adding the :typoscript:`page.`
 prefix. User TSconfig is loaded after page TSconfig, so you can overwrite
 the existing default settings using the same TypoScript path.
 
-..  literalinclude:: _WebList/_downloadPresets.tsconfig
+..  literalinclude:: _WebList/_downloadPresetsUser.tsconfig
     :caption: EXT:my_extension/Configuration/user.tsconfig
 
 ..  index::
