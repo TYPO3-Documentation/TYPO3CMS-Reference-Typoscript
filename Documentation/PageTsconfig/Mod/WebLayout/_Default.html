@@ -2,9 +2,9 @@
 <main>
   <f:for each="{myContent.left.records}" as="contentElement">
     <f:cObject
-        typoscriptObjectPath="{contentElement.mainType}"
-        data="{contentElement.rawRecord}"
-        table="{contentElement.mainType}"
+      typoscriptObjectPath="{contentElement.mainType}"
+      data="{contentElement.rawRecord}"
+      table="{contentElement.mainType}"
     />
   </f:for>
 </main>
