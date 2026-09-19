@@ -9,9 +9,9 @@
         <f:if condition="{column.media}">
           <div class="col-auto p-{gallery.border.padding}">
             <f:image image="{column.media}" width="{column.dimensions.width}"
-                class="{f:if(condition: '{gallery.border.enabled}',
-                  then:'border border-success rounded')}"
-                style="border-width: {gallery.border.width}px!important;"/>
+              class="{f:if(condition: '{gallery.border.enabled}',
+                then:'border border-success rounded')}"
+              style="border-width: {gallery.border.width}px!important;"/>
           </div>
         </f:if>
       </f:for>
