@@ -10,7 +10,7 @@
           <div class="dropdown-menu">
             <f:for each="{menuItem.children}" as="menuItemLevel2">
               <f:link.page pageUid="{menuItemLevel2.data.uid}"
-                  class="dropdown-item {f:if(condition: menuItemLevel2.active, then: 'active')}">
+                class="dropdown-item {f:if(condition: menuItemLevel2.active, then: 'active')}">
                 {menuItemLevel2.title}
               </f:link.page>
             </f:for>
