@@ -26,6 +26,18 @@ CONTRIBUTING.md                  # how to contribute
   the leading spaces end up in the value. Never reformat an example whose
   subject is its own formatting, and check what a file's whitespace actually
   does before touching it.
+- `make test-typoscript` — check the TypoScript snippets under
+  `Documentation/` for syntax errors. TypoScript silently ignores whatever it
+  cannot parse, so a broken example looks fine until somebody copies it: the
+  check round trips each snippet through the Core tokenizer, whose output has
+  to come back unchanged, and counts the opening against the closing block
+  lines, because an unbalanced curly brace round trips unchanged. Exempt a
+  snippet that demonstrates invalid syntax on purpose with a
+  `# typoscript-lint: ignore-file` comment in its first line. Only for a file
+  whose content reaches the reader verbatim, list its path in
+  `Build/typoscriptLint.ignore` instead: the renderer ignores the `:lines:`
+  option of `literalinclude`, so there the comment would be printed as part
+  of the example.
 - `make test` — full test suite (docs, lint, cgl, yaml, typoscript, json,
   editorconfig)
 
