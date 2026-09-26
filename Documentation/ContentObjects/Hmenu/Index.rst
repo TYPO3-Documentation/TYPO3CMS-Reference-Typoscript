@@ -66,7 +66,7 @@ Properties
 
     ..  confval:: cache_period
         :name: hmenu-cache-period
-        :type: :ref:`data-type-integer`
+        :type: :ref:`integer <data-type-integer>`
 
         The number of seconds a menu may remain in cache. If this value is not
         set, the first available value of the following will be used:
@@ -93,7 +93,7 @@ Properties
 
     ..  confval:: entryLevel
         :name: hmenu-entryLevel
-        :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :Default: 0
 
         Defines at which level in the rootLine the menu should start.
@@ -130,7 +130,7 @@ Properties
 
     ..  confval:: minItems
         :name: hmenu-minItems
-        :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
         The minimum number of items in the menu. If the number of pages does
         not reach this level, a dummy-page with the title "..." and
@@ -146,7 +146,7 @@ Properties
 
     ..  confval:: maxItems
         :name: hmenu-maxItems
-        :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
         The maximum number of items in the menu. Additional items will be
         ignored.
@@ -160,7 +160,7 @@ Properties
 
     ..  confval:: begin
         :name: hmenu-begin
-        :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
         The first item in the menu.
 
@@ -173,7 +173,7 @@ Properties
 
     ..  confval:: excludeUidList
         :name: hmenu-excludeUidList
-        :type: list of :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+        :type: list of :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
         See :confval:`MenuProcessor-excludeUidList`.
 
@@ -183,7 +183,7 @@ Properties
 
     ..  confval:: excludeDoktypes
         :name: hmenu-excludeDoktypes
-        :type: list of :ref:`data-type-integer`
+        :type: list of :ref:`integer <data-type-integer>`
         :Default: 6,254
 
         See :confval:`MenuProcessor-excludeDoktypes`.
@@ -194,7 +194,7 @@ Properties
 
     ..  confval:: includeNotInMenu
         :name: hmenu-includeNotInMenu
-        :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
 
         See :confval:`MenuProcessor-includeNotInMenu`
 
@@ -204,7 +204,7 @@ Properties
 
     ..  confval:: alwaysActivePIDlist
         :name: hmenu-alwaysActivePIDlist
-        :type: list of :ref:`data-type-integer` /:ref:`stdWrap <stdwrap>`
+        :type: list of :ref:`integer <data-type-integer>` /:ref:`stdWrap <stdwrap>`
 
         See :confval:`MenuProcessor-alwaysActivePIDlist`
 
@@ -214,7 +214,7 @@ Properties
 
     ..  confval:: protectLvar
         :name: hmenu-protectlvar
-        :type: :ref:`data-type-boolean` / keyword
+        :type: :ref:`boolean <data-type-boolean>` / keyword
 
         See :confval:`MenuProcessor-protectlvar`.
 

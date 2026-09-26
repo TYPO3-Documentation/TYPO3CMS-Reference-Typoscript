@@ -41,7 +41,7 @@ files
 
 ..  confval:: files
     :name: files-files
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Comma-separated list of sys_file UIDs, which are loaded
     into the FILES object.
@@ -60,7 +60,7 @@ references
 
 ..  confval:: references
     :name: files-references
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>` or array
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>` or array
 
     Provides a way to load files from a file field (of type
     IRRE with sys_file_reference as child table). You can either
@@ -97,7 +97,7 @@ collections
 
 ..  confval:: collections
     :name: files-collections
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Comma-separated list of `sys_file_collection` UIDs, which
     are loaded into the :typoscript:`FILES` object.
@@ -109,7 +109,7 @@ folders
 
 ..  confval:: folders
     :name: files-folders
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Comma-separated list of combined folder identifiers which
     are loaded into the FILES object.
@@ -144,7 +144,7 @@ sorting
 
 ..  confval:: sorting
     :name: files-sorting
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Name of the field, which should be used to sort the files.
 
@@ -155,7 +155,7 @@ sorting.direction
 
 ..  confval:: sorting.direction
     :name: files-sorting-direction
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
     :Default: asc
 
     The direction, in which the
@@ -169,7 +169,7 @@ begin
 
 ..  confval:: begin
     :name: files-begin
-    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
     The first item to return. If not set (default), items beginning
     with the first one are returned.
@@ -181,10 +181,10 @@ maxItems
 
 ..  confval:: maxItems
     :name: files-maxItems
-    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
     Maximum number of items to return. If not set (default), all items
-    are returned. If :ref:`cobj-files-begin` and :ref:`cobj-files-maxItems`
+    are returned. If :ref:`begin <cobj-files-begin>` and :ref:`maxItems <cobj-files-maxItems>`
     together exceed the number of available items, no items beyond the
     last available item will be returned.
 
@@ -200,7 +200,7 @@ renderObj
     The cObject used for rendering the files. It is executed
     once for every file. Note that during each execution you can
     find information about the current file using the getText
-    property "file" :ref:`data-type-gettext-file` with the "current" keyword.
+    property "file" :ref:`file <data-type-gettext-file>` with the "current" keyword.
     Look there to find out which properties of the file are available.
 
     **Example:**
@@ -230,7 +230,7 @@ Special key: "references"
 
 ..  confval:: references.table
     :name: files-references-table
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     The table name of the table having the file field.
 
@@ -241,7 +241,7 @@ references.uid
 
 ..  confval:: references.uid
     :name: files-references-uid
-    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
     The UID of the record from which to fetch the referenced files.
 
@@ -252,7 +252,7 @@ references.fieldName
 
 ..  confval:: references.fieldName
     :name: files-references-fieldName
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Field name of the file field in the table.
 
@@ -268,7 +268,7 @@ Usage with files
 
 In this example, we first load files using several of the methods
 explained above (using sys_file UIDs, collection UIDs, and folders).
-Then we use the :ref:`TEXT <cobj-text>` cObject as :ref:`cobj-files-renderObj`
+Then we use the :ref:`TEXT <cobj-text>` cObject as :ref:`renderObj <cobj-files-renderObj>`
 to output the file size of all files that were found:
 
 ..  literalinclude:: _codesnippets/_files.typoscript

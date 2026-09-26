@@ -95,8 +95,8 @@ cObject data type
     used for content elements.
 
 Top level objects
-    As described in :ref:`typoscript-syntax`
+    As described in :ref:`TypoScript syntax <typoscript-syntax>`
     TypoScript configuration is converted into a multidimensional PHP array.
-    You can view this in the :ref:`submodule-active-typoscript`. Top level
+    You can view this in the :ref:`Submodule "Active TypoScript" <submodule-active-typoscript>`. Top level
     objects are located on the top level. Top level objects are for
     example `config`, `page` and `plugin`.

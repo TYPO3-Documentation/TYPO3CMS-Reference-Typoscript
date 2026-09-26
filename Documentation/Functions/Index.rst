@@ -14,7 +14,7 @@ which is defined as having a simple data type "string" with the optional
 type modifier "stdWrap".
 
 The data type would then be written as
-":ref:`data-type-string` /:ref:`stdWrap <stdwrap>`".
+":ref:`string <data-type-string>` /:ref:`stdWrap <stdwrap>`".
 
 The following functions are defined in TypoScript:
 

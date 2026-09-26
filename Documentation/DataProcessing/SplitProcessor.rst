@@ -30,7 +30,7 @@ Options
     ..  confval:: if
         :name: splitProcessor-if
         :Required: false
-        :type: :ref:`if` condition
+        :type: :ref:`if <if>` condition
         :Default: ''
 
         Only if the condition is met the data processor is executed.
@@ -42,7 +42,7 @@ Options
     ..  confval:: fieldName
         :name: splitProcessor-fieldName
         :Required: true
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: ''
 
         Name of the field to be used.
@@ -54,7 +54,7 @@ Options
     ..  confval:: as
         :name: splitProcessor-as
         :Required: false
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: defaults to the fieldName
 
         The variable name to be used in the Fluid template.
@@ -66,7 +66,7 @@ Options
     ..  confval:: delimiter
         :name: splitProcessor-delimiter
         :Required: false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: Line Feed
         :Example: ","
 
@@ -79,7 +79,7 @@ Options
     ..  confval:: filterIntegers
         :name: splitProcessor-filterIntegers
         :Required: false
-        :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
         :Default: 0
         :Example: 1
 
@@ -92,7 +92,7 @@ Options
     ..  confval:: filterUnique
         :name: splitProcessor-filterUnique
         :Required: false
-        :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
         :Default: 0
         :Example: 1
 
@@ -105,7 +105,7 @@ Options
     ..  confval:: removeEmptyEntries
         :name: splitProcessor-removeEmptyEntries
         :Required: false
-        :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
         :Default: 0
         :Example: 1
 
@@ -116,7 +116,7 @@ Options
 Example: Splitting a URL
 ========================
 
-Please see also :ref:`dataProcessing-about-examples`.
+Please see also :ref:`About the examples <dataProcessing-about-examples>`.
 
 
 ..  rubric:: TypoScript

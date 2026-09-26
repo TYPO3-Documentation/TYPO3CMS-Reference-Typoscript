@@ -29,7 +29,7 @@ roundType
 
 ..  confval:: roundType
     :name: round-roundType
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
     :Default: round
 
     Round method which should be used.
@@ -53,7 +53,7 @@ decimals
 
 ..  confval:: decimals
     :name: round-decimals
-    :type: :ref:`data-type-integer` / :ref:`stdwrap`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     Number of decimals the rounded value will have. Only used with the
@@ -68,7 +68,7 @@ round
 
 ..  confval:: round
     :name: round-round
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
     :Default: 0
 
     Set round = 1 to enable rounding.

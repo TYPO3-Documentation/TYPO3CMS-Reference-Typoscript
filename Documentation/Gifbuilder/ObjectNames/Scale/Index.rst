@@ -9,7 +9,7 @@ SCALE
 This scales the GIFBUILDER object to the provided dimensions.
 
 ..  note::
-    This object resets :ref:`gifbuilder-properties-workArea` to the new dimensions
+    This object resets :ref:`workArea <gifbuilder-properties-workArea>` to the new dimensions
     of the image!
 
 ..  _gifbuilder-scale-properties:

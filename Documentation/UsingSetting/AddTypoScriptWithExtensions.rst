@@ -265,5 +265,5 @@ for the backend <typo3/cms-form:concepts-configuration-yamlregistration-backend>
 
 ..  rubric:: More information
 
-*   :ref:`t3sitepackage:typoscript-configuration` (in "Sitepackage Tutorial")`
-*   :ref:`t3sitepackage:extension-configuration` (in "Sitepackage Tutorial")`
+*   :ref:`the TypoScript configuration of a site package <t3sitepackage:typoscript-configuration>` (in "Sitepackage Tutorial")`
+*   :ref:`the extension configuration of a site package <t3sitepackage:extension-configuration>` (in "Sitepackage Tutorial")`

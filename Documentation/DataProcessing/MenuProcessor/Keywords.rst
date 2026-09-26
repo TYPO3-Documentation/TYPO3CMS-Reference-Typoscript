@@ -33,7 +33,7 @@ special.value
 ..  confval:: special.value
     :name: hmenu-keywords-special-value
     :type: integer /:ref:`stdWrap <stdwrap>`
-    :Example: :ref:`hmenu-special-keywords-value-example`
+    :Example: :ref:`Example: Find related pages of the current page <hmenu-special-keywords-value-example>`
 
     UID of the page for which related pages by keyword should be found.
 
