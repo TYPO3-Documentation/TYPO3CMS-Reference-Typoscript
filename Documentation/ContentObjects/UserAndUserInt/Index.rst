@@ -58,7 +58,7 @@ userFunc
 
 ..  confval:: userFunc
     :name: user-userFunc
-    :type: :ref:`data-type-function-name`
+    :type: :ref:`function name <data-type-function-name>`
 
     The name of the function, which should be called. If you specify the
     name with a '->' in it, then it is interpreted as a call to a method in
@@ -105,7 +105,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: user-stdWrap
-    :type: :ref:`stdWrap`.
+    :type: :ref:`stdWrap <stdWrap>`.
 
 ..  _cobj-user-cache:
 
@@ -202,7 +202,7 @@ Example 3
 ---------
 
 Another example can be found in the documentation of the stdWrap
-property :ref:`stdwrap-postUserFunc` There you can also see how to work with
+property :ref:`postUserFunc <stdwrap-postUserFunc>` There you can also see how to work with
 :php:`$cObj`, the reference to the parent (calling) cObject.
 
 ..  _cobj-user-examples-example-4:

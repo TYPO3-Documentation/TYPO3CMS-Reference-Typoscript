@@ -51,7 +51,7 @@ select
 
 ..  confval:: select
     :name: content-select
-    :type: :ref:`select`
+    :type: :ref:`select <select>`
 
     The SQL-statement, a :sql:`SELECT` query, is set here,
     including automatic visibility control.
@@ -63,7 +63,7 @@ table
 
 ..  confval:: table
     :name: content-table
-    :type:  *table name* / :ref:`stdwrap`
+    :type:  *table name* / :ref:`stdWrap <stdwrap>`
 
     The table, the content should come from. Any table can be used;
     a check for a table prefix is not done.
@@ -77,15 +77,15 @@ renderObj
 
 ..  confval:: renderObj
     :name: content-renderObj
-    :type: :ref:`data-type-cObject`
+    :type: :ref:`Content Objects (cObject) <data-type-cObject>`
     :Default: :typoscript:`< [table name]`
 
     The cObject used for rendering the records resulting from the query in
-    :ref:`cobj-content-select`.
+    :ref:`select <cobj-content-select>`.
 
     If :typoscript:`renderObj` is not set explicitly, then
     :typoscript:`< [table name]` is used. So
-    in this case the configuration of the according :ref:`cobj-content-table`
+    in this case the configuration of the according :ref:`table <cobj-content-table>`
     is being copied.
 
     See the notes on the example below.
@@ -97,7 +97,7 @@ slide
 
 ..  confval:: slide
     :name: content-slide
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
 
     If set and no content element is found by the select command, the
     rootLine will be traversed back until some content is found.
@@ -122,7 +122,7 @@ slide.collect
 
 ..  confval:: slide.collect
     :name: content-slide-collect
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
 
     If set, all content elements found on the current and parent pages will be
     collected. Otherwise, the sliding would stop after the first hit. Set this
@@ -136,7 +136,7 @@ slide.collectFuzzy
 
 ..  confval:: slide.collectFuzzy
     :name: content-slide-collectFuzzy
-    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
 
     Only useful with :ref:`slide.collect <cobj-content-slide-collect>`. If no content
     elements have been found for the specified depth in collect mode, traverse
@@ -149,7 +149,7 @@ slide.collectReverse
 
 ..  confval:: slide.collectReverse
     :name: content-slide-collectReverse
-    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
 
     Reverse order of elements in collect mode. If set, elements of the current
     page will be at the bottom.
@@ -161,7 +161,7 @@ wrap
 
 ..  confval:: wrap
     :name: content-wrap
-    :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
+    :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdWrap>`
 
     Wrap the whole content.
 
@@ -172,7 +172,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: content-stdWrap
-    :type: :ref:`stdWrap`
+    :type: :ref:`stdWrap <stdWrap>`
 
     Apply `stdWrap` functionality.
 
@@ -218,8 +218,8 @@ Expanded form:
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 
-See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`,
-:ref:`data-type-cobject`
+See also: :ref:`if <if>`, :ref:`select <select>`, :ref:`Wrap <data-type-wrap>`, :ref:`stdWrap <stdWrap>`,
+:ref:`Content Objects (cObject) <data-type-cobject>`
 
 
 ..  _cobj-content-example-display-all:

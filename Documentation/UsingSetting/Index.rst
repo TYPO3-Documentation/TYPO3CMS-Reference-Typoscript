@@ -7,7 +7,7 @@
 Using and setting TypoScript
 ============================
 
-See :ref:`introduction` for an introduction to TypoScript and Templating.
+See :ref:`Introduction into TypoScript <introduction>` for an introduction to TypoScript and Templating.
 
 TypoScript templates mainly consist of the :guilabel:`Constants` and the :guilabel:`Setup` field.
 Each template can include other (static) templates, which can again

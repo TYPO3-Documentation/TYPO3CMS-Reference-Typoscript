@@ -28,7 +28,7 @@ token
 
 ..  confval:: token
     :name: split-token
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     String or character (token) used to split the value.
 
@@ -40,7 +40,7 @@ max
 
 ..  confval:: max
     :name: split-max
-    :type: :ref:`data-type-integer` / :ref:`stdwrap`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
     Maximum number of splits.
 
@@ -52,7 +52,7 @@ min
 
 ..  confval:: min
     :name: split-min
-    :type: :ref:`data-type-integer` / :ref:`stdwrap`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
     Minimum number of splits.
 
@@ -64,7 +64,7 @@ returnKey
 
 ..  confval:: returnKey
     :name: split-returnKey
-    :type: :ref:`data-type-integer` / :ref:`stdwrap`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
     Instead of parsing the split result, return the element of the
     index with this number immediately and stop processing of the split
@@ -78,7 +78,7 @@ returnCount
 
 ..  confval:: returnCount
     :name: split-returnCount
-    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
 
     Counts all elements resulting from the split, returns their number
     and stops processing of the split function.
@@ -96,7 +96,7 @@ cObjNum
 
 ..  confval:: cObjNum
     :name: split-cObjNum
-    :type: *cObjNum* + :ref:`optionsplit` / :ref:`stdwrap`
+    :type: *cObjNum* + :ref:`optionSplit <optionsplit>` / :ref:`stdWrap <stdwrap>`
 
     This is a pointer the array of this object ("1,2,3,4"), that should
     treat the items, resulting from the split.
@@ -109,12 +109,12 @@ cObjNum
 
 ..  confval:: 1,2,3,4,...
     :name: split-cObject
-    :type: :ref:`cObject <data-type-cobject>` / :ref:`stdwrap`
+    :type: :ref:`cObject <data-type-cobject>` / :ref:`stdWrap <stdwrap>`
 
     The object that should treat the value.
 
     **Note:** The "current"-value is set to the value of current item,
-    when the objects are called. See :ref:`stdwrap` / current.
+    when the objects are called. See :ref:`stdWrap <stdwrap>` / current.
 
     ..  rubric:: Example for stdWrap
 
@@ -136,7 +136,7 @@ wrap
 
 ..  confval:: wrap
     :name: split-wrap
-    :type: wrap + :ref:`optionsplit` / :ref:`stdwrap`
+    :type: wrap + :ref:`optionSplit <optionsplit>` / :ref:`stdWrap <stdwrap>`
 
     Defines a wrap for each item.
 

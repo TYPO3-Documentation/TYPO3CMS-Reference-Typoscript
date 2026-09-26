@@ -8,14 +8,14 @@
 
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor`,
 alias `database-query`, fetches records from the database, using
-standard TypoScript :ref:`select` semantics. The result is then passed to the
-:ref:`cobj-fluidtemplate` as an array.
+standard TypoScript :ref:`select <select>` semantics. The result is then passed to the
+:ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` as an array.
 
-This way a :ref:`cobj-fluidtemplate` cObject can iterate over the
+This way a :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` cObject can iterate over the
 array of records.
 
 The :typoscript:`database-query` processor can be used in combination with the
-:ref:`RecordTransformationProcessor` to use additional computed information.
+:ref:`record-transformation data processor <RecordTransformationProcessor>` to use additional computed information.
 
 ..  contents:: Table of contents
 
@@ -36,7 +36,7 @@ Options:
     ..  confval:: if
         :name: DatabaseQueryProcessor-if
         :Required: false
-        :type: :ref:`if` condition
+        :type: :ref:`if <if>` condition
         :Default: ''
 
         Only if the condition is met the data processor is executed.
@@ -48,7 +48,7 @@ Options:
     ..  confval:: table
         :name: DatabaseQueryProcessor-table
         :Required: true
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: ''
 
         Name of the table from which the records should be fetched.
@@ -60,7 +60,7 @@ Options:
     ..  confval:: as
         :name: DatabaseQueryProcessor-as
         :Required: false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: 'records'
 
         The variable's name to be used in the Fluid template.
@@ -72,7 +72,7 @@ Options:
     ..  confval:: dataProcessing
         :name: DatabaseQueryProcessor-dataProcessing
         :Required: false
-        :type: array of :ref:`dataProcessing`
+        :type: array of :ref:`Data processors <dataProcessing>`
         :Default: []
 
         Array of data processors to be applied to all fetched records.
@@ -81,7 +81,7 @@ Options:
         All other options will be interpreted as in the TypoScript function
         :typoscript:`select`, including :typoscript:`pidInList`,
         :typoscript:`orderBy`, :typoscript:`where`, etc. See the reference of
-        :ref:`select`.
+        :ref:`select <select>`.
 
     ..  warning::
         When using the DatabaseQueryProcessor, you may encounter issues with
@@ -95,13 +95,13 @@ Example: Usage in combination with the RecordTransformationProcessor
 ====================================================================
 
 Example usage for the data processor in conjunction with the
-:ref:`RecordTransformationProcessor`.
+:ref:`record-transformation data processor <RecordTransformationProcessor>`.
 
 ..  literalinclude:: _RecordTransformationProcessor/_WithDatabaseQueryProcessor.typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 For usage of the variables within Fluid see
-:ref:`RecordTransformationProcessor-fluidtemplate-example`.
+:ref:`Example: Usage with FLUIDTEMPLATE <RecordTransformationProcessor-fluidtemplate-example>`.
 
 
 ..  _DatabaseQueryProcessor-examples:
@@ -109,7 +109,7 @@ For usage of the variables within Fluid see
 Example: Display haiku records
 ==============================
 
-Please see also :ref:`dataProcessing-about-examples`.
+Please see also :ref:`About the examples <dataProcessing-about-examples>`.
 
 ..  rubric:: TypoScript
 
@@ -123,7 +123,7 @@ We define the :typoscript:`dataProcessing` property to use the
 ..  rubric:: The Fluid template
 
 In the Fluid template then iterate over the records. As we used the recursive
-data processor :ref:`FilesProcessor` on the image records, we can also output
+data processor :ref:`files data processor <FilesProcessor>` on the image records, we can also output
 the images.
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcDb.fluid.html
@@ -145,7 +145,7 @@ and the data of the images in `files`.
 Example: Display sorted records from an MM table working with workspaces
 ========================================================================
 
-Please see also :ref:`dataProcessing-about-examples`.
+Please see also :ref:`About the examples <dataProcessing-about-examples>`.
 
 We define the :typoscript:`dataProcessing` property to use the
 :php-short:`\TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor`. To make

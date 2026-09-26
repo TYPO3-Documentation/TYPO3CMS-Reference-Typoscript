@@ -37,7 +37,7 @@ color
 
 ..  confval:: color
     :name: gifbuilder-shadow-color
-    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
 
     The color of the shadow.
 
@@ -80,7 +80,7 @@ opacity
     speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
     transparency.
 
-    Only active with a value for :ref:`gifbuilder-shadow-blur`.
+    Only active with a value for :ref:`blur <gifbuilder-shadow-blur>`.
 
 
 ..  _gifbuilder-shadow-textObjNum:

@@ -38,7 +38,7 @@ key
 
 ..  confval:: key
     :name: cache-key
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     The cache identifier that is used to store the rendered content into
     the cache and to read it from there.
@@ -57,7 +57,7 @@ lifetime
 
 ..  confval:: lifetime
     :name: cache-lifetime
-    :type: mixed / :ref:`stdwrap`
+    :type: mixed / :ref:`stdWrap <stdwrap>`
     :Default: default
 
     Lifetime of the content in cache.
@@ -88,7 +88,7 @@ tags
 
 ..  confval:: tags
     :name: cache-tags
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Can hold a comma-separated list of tags. These tags will be attached
     to the entry added to the `cache_hash` cache (and to
@@ -142,8 +142,8 @@ rename your property.
 :typoscript:`stdWrap.cache` continues to exists and can be used as before. However
 the top level :typoscript:`stdWrap` of certain cObjects (e.g. :typoscript:`TEXT` cObject)
 will not evaluate :typoscript:`cache.` as part of :typoscript:`stdWrap`, but before starting
-the rendering of the :ref:`data-type-cobject`.
-In conjunction the storing will happen after the :ref:`stdwrap`
+the rendering of the :ref:`Content Objects (cObject) <data-type-cobject>`.
+In conjunction the storing will happen after the :ref:`stdWrap <stdwrap>`
 processing right before the content is returned.
 
 Top level :typoscript:`cache.` will not evaluate the hook

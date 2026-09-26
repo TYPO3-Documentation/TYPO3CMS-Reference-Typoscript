@@ -28,7 +28,7 @@ Options
     ..  confval:: as
         :name: SiteLanguageProcessor-as
         :Required: false
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: "site"
 
         The variable name to be used in the Fluid template.
@@ -38,7 +38,7 @@ Options
 Example: Output some data from the site language configuration
 ==============================================================
 
-Please see also :ref:`dataProcessing-about-examples`.
+Please see also :ref:`About the examples <dataProcessing-about-examples>`.
 
 ..  rubric:: TypoScript
 

@@ -9,7 +9,7 @@
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor`,
 alias `gallery`, provides the logic for working with galleries and
 calculates the maximum asset size. It uses the files already present in
-the `processedData` array for its calculations. The :ref:`FilesProcessor` can
+the `processedData` array for its calculations. The :ref:`files data processor <FilesProcessor>` can
 be used to fetch the files.
 
 ..  contents:: Table of contents
@@ -31,7 +31,7 @@ Options:
     ..  confval:: if
         :name: GalleryProcessor-if
         :Required: false
-        :type: :ref:`if` condition
+        :type: :ref:`if <if>` condition
         :Default: ''
 
         Only if the condition is met the data processor is executed.
@@ -43,7 +43,7 @@ Options:
     ..  confval:: filesProcessedDataKey
         :name: GalleryProcessor-filesProcessedDataKey
         :Required: true
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: 'files'
         :Example: 'myImages'
 
@@ -57,7 +57,7 @@ Options:
     ..  confval:: numberOfColumns
         :name: GalleryProcessor-numberOfColumns
         :Required: false
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: field:imagecols
         :Example: 4
 
@@ -71,7 +71,7 @@ Options:
     ..  confval:: mediaOrientation
         :name: GalleryProcessor-mediaOrientation
         :Required: false
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: field:imageorient
         :Example: 2
 
@@ -94,7 +94,7 @@ Options:
     ..  confval:: maxGalleryWidth
         :name: GalleryProcessor-maxGalleryWidth
         :Required: false
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: 600
 
         Maximal gallery width in pixels.
@@ -106,7 +106,7 @@ Options:
     ..  confval:: maxGalleryWidthInText
         :name: GalleryProcessor-maxGalleryWidthInText
         :Required: false
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: 300
 
         Maximal gallery width in pixels if displayed in a text.
@@ -119,7 +119,7 @@ Options:
     ..  confval:: equalMediaHeight, equalMediaWidth
         :name: GalleryProcessor-equalMediaHeight
         :Required: false
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: field:imageheight, field:imagewidth
         :Example: 300
 
@@ -142,7 +142,7 @@ Options:
     ..  confval:: columnSpacing
         :name: GalleryProcessor-columnSpacing
         :Required: false
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: 0
         :Example: 4
 
@@ -155,7 +155,7 @@ Options:
     ..  confval:: borderEnabled
         :name: GalleryProcessor-borderEnabled
         :Required: false
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: field:imageborder
         :Example: 1
 
@@ -170,7 +170,7 @@ Options:
     ..  confval:: borderWidth
         :name: GalleryProcessor-borderWidth
         :Required: false
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: 0
         :Example: 2
 
@@ -183,7 +183,7 @@ Options:
     ..  confval:: borderPadding
         :name: GalleryProcessor-borderPadding
         :Required: false
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: 0
         :Example: 20
 
@@ -196,7 +196,7 @@ Options:
     ..  confval:: cropVariant
         :name: GalleryProcessor-cropVariant
         :Required: false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: "default"
         :Example: "mobile"
 
@@ -209,7 +209,7 @@ Options:
     ..  confval:: as
         :name: GalleryProcessor-as
         :Required: false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: "files"
 
         The variable name to be used in the Fluid template.
@@ -221,7 +221,7 @@ Options:
     ..  confval:: dataProcessing
         :name: GalleryProcessor-dataProcessing
         :Required: false
-        :type: array of :ref:`dataProcessing`
+        :type: array of :ref:`Data processors <dataProcessing>`
         :Default: []
 
         Array of data processors to be applied to all fetched records.
@@ -231,7 +231,7 @@ Options:
 Example: display images in rows and columns
 ===========================================
 
-Please see also :ref:`dataProcessing-about-examples`.
+Please see also :ref:`About the examples <dataProcessing-about-examples>`.
 
 ..  rubric:: TypoScript
 

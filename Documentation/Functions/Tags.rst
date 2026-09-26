@@ -7,7 +7,7 @@ tags
 ====
 
 Used to create custom tags and define how they should be parsed. This
-is used in conjunction with :ref:`parseFunc`.
+is used in conjunction with :ref:`parseFunc <parseFunc>`.
 
 The best known is the "link" tag, which is used to create links.
 
@@ -27,7 +27,7 @@ Properties
 
 ..  confval:: array of strings
     :name: tags-array
-    :type: :ref:`data-type-cobject`
+    :type: :ref:`Content Objects (cObject) <data-type-cobject>`
 
     Every entry in the array of strings corresponds to a tag, that will
     be parsed. The elements **must** be in lowercase.
@@ -53,11 +53,11 @@ Properties
 
     **Special properties for each content object:**
 
-    **[cObject].stripNL:** :ref:`data-type-boolean` option, which tells :typoscript:`parseFunc` that
+    **[cObject].stripNL:** :ref:`boolean <data-type-boolean>` option, which tells :typoscript:`parseFunc` that
     newlines before and after the content of the tag should be stripped.
 
-    **[cObject].breakoutTypoTagContent:** :ref:`data-type-boolean` option, which tells
-    :ref:`parseFunc` that this block of content is breaking up the nonTypoTag
+    **[cObject].breakoutTypoTagContent:** :ref:`boolean <data-type-boolean>` option, which tells
+    :ref:`parseFunc <parseFunc>` that this block of content is breaking up the nonTypoTag
     content and that the content after this must be re-wrapped.
 
     ..  rubric:: Examples
