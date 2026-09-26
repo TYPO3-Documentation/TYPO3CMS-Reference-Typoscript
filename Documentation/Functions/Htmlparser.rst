@@ -35,7 +35,7 @@ stripEmptyTags
 
 ..  confval:: stripEmptyTags
     :name: htmlparser-stripEmptyTags
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     Passes the content to PHPs :php:`strip_tags()`.
 
@@ -47,7 +47,7 @@ stripEmptyTags.keepTags
 
 ..  confval:: stripEmptyTags.keepTags
     :name: htmlparser-stripEmptyTags-keepTags
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     Comma separated list of tags to keep when applying :php:`strip_tags()`.
 
@@ -59,10 +59,10 @@ tags.[tagname]
 
 ..  confval:: tags
     :name: htmlparser-tags
-    :type: :ref:`data-type-boolean` / string of :ref:`htmlparser-tags`
+    :type: :ref:`boolean <data-type-boolean>` / string of :ref:`HTMLparser_tags <htmlparser-tags>`
 
     Either set this property to `0` or `1` to allow or deny the tag. If you
-    enter :ref:`htmlparser-tags` properties, those will automatically overrule
+    enter :ref:`HTMLparser_tags <htmlparser-tags>` properties, those will automatically overrule
     this option, thus it's not needed then.
 
     [tagname] in lowercase.
@@ -104,7 +104,7 @@ rmTagIfNoAttrib
     :type: (ibid)
 
     List of tags (among the already set tags), which will be forced to
-    have the :ref:`htmlparser-rmTagIfNoAttrib` set to true.
+    have the :ref:`rmTagIfNoAttrib <htmlparser-rmTagIfNoAttrib>` set to true.
 
 
 ..  _htmlparser-noAttrib:
@@ -146,7 +146,7 @@ keepNonMatchedTags
 
 ..  confval:: keepNonMatchedTags
     :name: htmlparser-keepNonMatchedTags
-    :type: :ref:`data-type-boolean` / "protect"
+    :type: :ref:`boolean <data-type-boolean>` / "protect"
 
     If set (:typoscript:`1`), then all tags are kept regardless of tags present as
     keys in :php:`$tags`-array.

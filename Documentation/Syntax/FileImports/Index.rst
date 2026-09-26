@@ -8,7 +8,8 @@ File imports
 
 ..  deprecated:: 13.4
     The old school :typoscript:`<INCLUDE_TYPOSCRIPT:` syntax has been deprecated
-    and will be removed with TYPO3 v14.0. See :ref:`t3tsref/13:typoscript-syntax-includes-migration`.
+    and will be removed with TYPO3 v14.0. See :ref:`migrating the TypoScript includes
+    <t3tsref/13:typoscript-syntax-includes-migration>`.
 
 To structure and reuse single TypoScript snippets and not stuffing everything
 into one file or record, the syntax allows loading TypoScript content from sub files.
@@ -118,7 +119,7 @@ Migration from `<INCLUDE_TYPOSCRIPT:` to `@import`
     :typoscript:`@import` does not support recursively including all `.typoscript`
     files from sub directories. You need to list each directory with its own
     :typoscript:`@import` statement.
-    See :ref:`typoscript-syntax-includes-migration-recursive`.
+    See :ref:`Migrating recursive TypoScript file inclusion <typoscript-syntax-includes-migration-recursive>`.
 
 ..  important::
     :typoscript:`@import` supports the file endings `.typoscript` and `.tsconfig`

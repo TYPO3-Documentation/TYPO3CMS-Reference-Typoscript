@@ -97,7 +97,7 @@ Additional variables can be defined with property
     ..  confval:: language
         :name: pageview-data-language
         :type: :php:`\TYPO3\CMS\Core\Site\Entity\SiteLanguage`
-        :Example: :ref:`cobj-pageview-data-language-example`
+        :Example: :ref:`Example: Display the site title in the current language <cobj-pageview-data-language-example>`
 
         The current :php-short:`\TYPO3\CMS\Core\Site\Entity\SiteLanguage`
         object, see also
@@ -108,7 +108,7 @@ Additional variables can be defined with property
     ..  confval:: page
         :name: pageview-data-page
         :type: :php:`TYPO3\CMS\Frontend\Page\PageInformation`
-        :Example: :ref:`cobj-pageview-data-page-example`
+        :Example: :ref:`Example: Display the title and abstract of the current page <cobj-pageview-data-page-example>`
 
         The current `PageInformation` as object. See also
         :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
@@ -118,7 +118,7 @@ Additional variables can be defined with property
     ..  confval:: settings
         :name: pageview-data-settings
         :type: array
-        :Example: :ref:`cobj-pageview-data-settings-example`
+        :Example: :ref:`Example: Use TypoScript constant in a Fluid template <cobj-pageview-data-settings-example>`
 
         The variable :fluid:`{settings}` contains all TypoScript
         :ref:`constants <typoscript-syntax-constants>` that are set on the current
@@ -130,7 +130,7 @@ Additional variables can be defined with property
     ..  confval:: site
         :name: pageview-data-site
         :type: :php:`\TYPO3\CMS\Core\Site\Entity\Site`
-        :Example: :ref:`cobj-pageview-data-site-example`
+        :Example: :ref:`Example: Link to the root page of the current site <cobj-pageview-data-site-example>`
 
         The current :php-short:`\TYPO3\CMS\Core\Site\Entity\Site` object. See
         also :ref:`the Site object <t3coreapi:sitehandling-site-object>`.
@@ -205,8 +205,8 @@ Properties
 
     ..  confval:: dataProcessing.[key]
         :name: pageview-dataProcessing
-        :type: :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
-        :Example: :ref:`cobj-pageview-dataProcessing-example`
+        :type: :ref:`path <data-type-path>` with :ref:`stdWrap <stdwrap>`
+        :Example: :ref:`Example: Display a main menu and a breadcrumb on the page <cobj-pageview-dataProcessing-example>`
 
         Add one or multiple :ref:`data processors <dataProcessing>`. The
         sub-property :typoscript:`options` can be used to pass parameters to the
@@ -220,9 +220,9 @@ Properties
 
     ..  confval:: paths.[priority]
         :name: pageview-paths
-        :type: :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
-        :Example: :ref:`cobj-pageview-paths-example`
-        :Example 2: :ref:`cobj-pageview-paths-example-extended`
+        :type: :ref:`path <data-type-path>` with :ref:`stdWrap <stdwrap>`
+        :Example: :ref:`Example: Define a path that contains all templates <cobj-pageview-paths-example>`
+        :Example 2: :ref:`Example: Define fallbacks for a template paths <cobj-pageview-paths-example-extended>`
 
         Sets an array of paths for the Fluid templates, usually
         :file:`EXT:my_extension/Resources/Private/PageView/` or a
@@ -243,7 +243,7 @@ Properties
     ..  confval:: variables.[variable_name]
         :name: pageview-variables
         :type: :ref:`Content Object <cobject>`
-        :Example: :ref:`cobj-pageview-variables-example`
+        :Example: :ref:`Example: Make additional variables available in the Fluid template <cobj-pageview-variables-example>`
 
         Sets variables that should be available in Fluid.
 

@@ -15,7 +15,7 @@ By default pages are unsorted.
 Each in the resulting array of pages gets an additional entry with key
 `_categories` containing the list of categories the page belongs to,
 as a comma-separated list of uid's. It can be accessed with
-:ref:`stdwrap-field` or :ref:`stdwrap-data`.
+:ref:`field <stdwrap-field>` or :ref:`data <stdwrap-data>`.
 like any other field.
 
 ..  contents::
@@ -39,7 +39,7 @@ special.value
 ..  confval:: special.value
     :name: hmenu-categories-special-value
     :type: list of categories / :ref:`stdWrap <stdwrap>`
-    :Example: :ref:`hmenu-special-categories-value-example`
+    :Example: :ref:`Example: List pages in categories with UID 1 and 2 <hmenu-special-categories-value-example>`
 
     Comma-separated list of categories UID's.
 
@@ -50,7 +50,7 @@ special.relation
 
 ..  confval:: special.relation
     :name: hmenu-categories-special-relation
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
     :Default: `categories`
 
     Name of the categories-relation field to use for
@@ -64,7 +64,7 @@ special.sorting
 
 ..  confval:: special.sorting
     :name: hmenu-categories-special-sorting
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Which field from the `pages` table should be used for sorting.
     Language overlays are taken into account, so alphabetical sorting

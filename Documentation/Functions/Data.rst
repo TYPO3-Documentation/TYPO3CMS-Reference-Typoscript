@@ -98,7 +98,7 @@ asset
     the cache buster is applied as a query string or embedded in the filename.
 
     The result is the same as using the argument :fluid:`useCacheBusting="true"`
-    in :ref:`t3viewhelper:typo3-fluid-uri-resource`.
+    in :ref:`Uri.resource ViewHelper <t3viewhelper:typo3-fluid-uri-resource>`.
 
 Example: Display extension icon with cache buster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,7 +114,7 @@ cObj
 ..  confval:: cObj
     :name: data-cObj
 
-    For :ref:`cobj-content` and :ref:`cobj-records` cObjects that are returned by
+    For :ref:`CONTENT <cobj-content>` and :ref:`RECORDS <cobj-records>` cObjects that are returned by
     a select query, this returns the row number (1,2,3,...) of the current
     cObject record.
 
@@ -190,7 +190,7 @@ date
     :name: data-date
     :Default: :typoscript:`d/m Y`
 
-    Can be used with a colon and :ref:`data-type-date-conf`.
+    Can be used with a colon and :ref:`date-conf <data-type-date-conf>`.
 
 ..  _data-type-gettext-date-example:
 
@@ -288,7 +288,7 @@ field
     -   In :ref:`TMENU <tmenu>` :php:`$cObj->data` is set to the page-record of
         each menu item in loop iterations during the rendering process.
 
-    -   In :ref:`cobj-content` / :ref:`cobj-records` :php:`$cObj->data` is set to
+    -   In :ref:`CONTENT <cobj-content>` / :ref:`RECORDS <cobj-records>` :php:`$cObj->data` is set to
         the current record
 
     -   In :ref:`GIFBUILDER <gifbuilder>` :php:`$cObj->data` is set to the data
@@ -326,7 +326,7 @@ file
     :Syntax: file : [uid] : [property]
 
     Retrieves a property from a file object (:ref:`FAL <t3coreapi:fal>`) by identifying it through its
-    `sys_file` UID. Note that during execution of the :ref:`cobj-files` cObject,
+    `sys_file` UID. Note that during execution of the :ref:`FILES <cobj-files>` cObject,
     it is possible to reference the current file using :confval:`data-current` as the UID,
     for example, :typoscript:`file : current : size`.
 
@@ -336,7 +336,7 @@ file
     Furthermore, when manipulating references (such as images in content elements
     and media on pages), these additional properties are available (not all are
     available all the time, it depends on the setup of *references* of the
-    :ref:`cobj-files` cObject): title, description, link and alternative.
+    :ref:`FILES <cobj-files>` cObject): title, description, link and alternative.
 
     Any data in the `sys_file_metadata` table can also be accessed.
 
@@ -398,15 +398,15 @@ it and so on. The numbers in square brackets indicate which page each value of
       |- Products [1]
         |- You are here! [2]
 
-A "slide" parameter can be added (like in :ref:`data-type-gettext-levelfield`
+A "slide" parameter can be added (like in :ref:`levelfield <data-type-gettext-levelfield>`
 property).
 
 ..  note::
-    In contrast to :ref:`data-type-gettext-levelfield`, a negative *pointer*
+    In contrast to :ref:`levelfield <data-type-gettext-levelfield>`, a negative *pointer*
     does not count levels up from the current page. It addresses pages above
     the root page of the site, and TYPO3 does not deliver content from outside
     the current site, so the result is empty. Use
-    :ref:`data-type-gettext-levelfield` to count levels up from the current
+    :ref:`levelfield <data-type-gettext-levelfield>` to count levels up from the current
     page.
 
 ..  _data-type-gettext-fullrootline-example:
@@ -515,8 +515,8 @@ global
     :name: data-global
     :Syntax: global : [variable]
 
-    Deprecated. Use :ref:`data-type-gettext-gp`, :ref:`data-type-gettext-tsfe` or
-    :ref:`data-type-gettext-getenv`.
+    Deprecated. Use :ref:`GP <data-type-gettext-gp>`, :ref:`TSFE <data-type-gettext-tsfe>` or
+    :ref:`getenv <data-type-gettext-getenv>`.
 
 ..  _data-type-gettext-gp:
 
@@ -578,7 +578,7 @@ levelfield
     :name: data-levelfield
     :Syntax: levelfield : [pointer, integer], [field name], ["slide"]
 
-    Like :ref:`data-type-gettext-leveltitle` but you can choose which field should
+    Like :ref:`leveltitle <data-type-gettext-leveltitle>` but you can choose which field should
     be fetched from the record.
 
 ..  _data-type-gettext-levelfield-example:
@@ -792,7 +792,7 @@ Get path to file `rsaauth.js` (inside extension rsaauth) relative to siteroot:
     lib.foo.data = path : EXT:rsaauth/resources/rsaauth.js
 
 It can also be helpful in combination with the stdWrap function
-:ref:`stdwrap-insertData`:
+:ref:`insertData <stdwrap-insertData>`:
 
 ..  literalinclude:: _codesnippets/_path.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript

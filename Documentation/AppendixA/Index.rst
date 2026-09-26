@@ -77,7 +77,7 @@ TypoScriptFrontendController->id
 ..  versionchanged:: 13.0
     The property has been marked as read-only. Use
     :php:`$request->getAttribute('frontend.page.information')->getId()`
-    instead. See :ref:`t3coreapi:typo3-request-attribute-frontend-page-information`.
+    instead. See :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
 
 ..  confval:: id
     :name: tsfe-id
@@ -116,7 +116,7 @@ TypoScriptFrontendController->page
 ..  versionchanged:: 13.0
     The property has been marked as read-only. Use
     :php:`$request->getAttribute('frontend.page.information')->getPageRecord()`
-    instead. See :ref:`t3coreapi:typo3-request-attribute-frontend-page-information`.
+    instead. See :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
 
 ..  confval:: page
     :name: tsfe-page
@@ -177,7 +177,7 @@ TypoScriptFrontendController->rootLine
 ..  versionchanged:: 13.0
     The property has been marked as read-only. Use
     :php:`$request->getAttribute('frontend.page.information')->getRootLine()`
-    instead. See :ref:`t3coreapi:typo3-request-attribute-frontend-page-information`.
+    instead. See :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
 
 ..  confval:: rootLine
     :name: tsfe-rootLine
@@ -187,7 +187,7 @@ TypoScriptFrontendController->rootLine
 
     The current site root line is available via
     :php:`$request->getAttribute('frontend.page.information')->getLocalRootLine()`.
-    See :ref:`t3coreapi:typo3-request-attribute-frontend-page-information`.
+    See :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
 
     In TYPO3 versions before v13 the current site root line was only available
     via :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->config['rootLine']`.

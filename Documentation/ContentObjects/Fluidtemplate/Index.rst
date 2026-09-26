@@ -23,7 +23,7 @@ or to generate content in the top-level page object
     :ref:`PAGEVIEW <cobj-pageview>` content object for templates on page-level.
     It reduces the amount of TypoScript needed to render a page in the TYPO3 frontend.
 
-    See section :ref:`cobj-fluidtemplate-migration`.
+    See section :ref:`Migration from FLUIDTEMPLATE to PAGEVIEW <cobj-fluidtemplate-migration>`.
 
 ..  contents:: Table of content
     :local:
@@ -36,8 +36,8 @@ Data available in Fluid templates
 
 ..  versionadded:: 13.2
     The FLUIDTEMPLATE can now be used in combination with the
-    :ref:`RecordTransformationProcessor` for additional computed information.
-    See also :ref:`RecordTransformationProcessor-fluidtemplate-example`
+    :ref:`record-transformation data processor <RecordTransformationProcessor>` for additional computed information.
+    See also :ref:`Example: Usage with FLUIDTEMPLATE <RecordTransformationProcessor-fluidtemplate-example>`
 
 The following data is available in the Fluid template:
 
@@ -45,11 +45,11 @@ The following data is available in the Fluid template:
 
     *   At page level it contains the current page record.
     *   If the :typoscript:`FLUIDTEMPLATE` is used in the
-        context of the Fluid ViewHelper :ref:`t3viewhelper:typo3-fluid-cobject`
+        context of the Fluid ViewHelper :ref:`CObject ViewHelper <t3viewhelper:typo3-fluid-cobject>`
         it contains data in the Fluid Property `data`.
     *   If called in the context of Extbase it contains the data assigned to the view
         in the :ref:`Controller <t3coreapi:extbase-action-controller>`.
-    *   Use the :ref:`RecordTransformationProcessor` to get additional computed
+    *   Use the :ref:`record-transformation data processor <RecordTransformationProcessor>` to get additional computed
         information from the `data` array.
 
 *   The `settings` array set by the parameter
@@ -103,7 +103,7 @@ dataProcessing
 
     ..  note::
 
-        This content was moved to the subpage :ref:`dataProcessing`.
+        This content was moved to the subpage :ref:`Data processors <dataProcessing>`.
 
 ..  _cobj-fluidtemplate-properties-extbase-controlleractionname:
 
@@ -112,7 +112,7 @@ extbase.controllerActionName
 
 ..  confval:: extbase.controllerActionName
     :name: fluidtemplate-extbase-controlleractionname
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Sets the name of the action.
 
@@ -123,7 +123,7 @@ extbase.controllerExtensionName
 
 ..  confval:: extbase.controllerExtensionName
     :name: fluidtemplate-extbase-controllerextensionname
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Sets the extension name of the controller.
 
@@ -134,7 +134,7 @@ extbase.controllerName
 
 ..  confval:: extbase.controllerName
     :name: fluidtemplate-extbase-controllername
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Sets the name of the controller.
 
@@ -145,7 +145,7 @@ extbase.pluginName
 
 ..  confval:: extbase.pluginName
     :name: fluidtemplate-extbase-pluginname
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Sets variables for initializing extbase.
 
@@ -156,7 +156,7 @@ file
 
 ..  confval:: file
     :name: fluidtemplate-file
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     The fluid template file. It is an alternative to ".template" and is used
     only if ".template" is not set.
@@ -186,7 +186,7 @@ layoutRootPath
 
 ..  confval:: layoutRootPath
     :name: fluidtemplate-layoutrootpath
-    :type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`path <data-type-path>` / :ref:`stdWrap <stdwrap>`
 
     Sets a specific layout path, usually
     :file:`EXT:my_extension/Resources/Private/Layouts/` or a folder below that
@@ -194,7 +194,7 @@ layoutRootPath
 
     ..  note::
         It is recommended to use
-        :ref:`cobj-fluidtemplate-properties-layoutrootpaths` (note the
+        :ref:`layoutRootPaths <cobj-fluidtemplate-properties-layoutrootpaths>` (note the
         plural "s") as it can easily be extended by custom templates in the
         sitepackage.
 
@@ -205,7 +205,7 @@ layoutRootPaths
 
 ..  confval:: layoutRootPaths
     :name: fluidtemplate-layoutrootpaths
-    :type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
+    :type: array of :ref:`path <data-type-path>` with :ref:`stdWrap <stdwrap>`
 
     ..  note:: Note the plural -s in "layoutRootPaths"!
 
@@ -235,7 +235,7 @@ partialRootPath
 
 ..  confval:: partialRootPath
     :name: fluidtemplate-partialrootpath
-    :type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`path <data-type-path>` / :ref:`stdWrap <stdwrap>`
 
     Sets a specific partial path, usually
     :file:`EXT:my_extension/Resources/Private/Partials/` or a folder below that
@@ -243,7 +243,7 @@ partialRootPath
 
     ..  note::
         It is recommended to use
-        :ref:`cobj-fluidtemplate-properties-partialrootpaths` (note the
+        :ref:`partialRootPaths <cobj-fluidtemplate-properties-partialrootpaths>` (note the
         plural "s") as it can be easily extended by custom templates provided
         by the sitepackage.
 
@@ -254,7 +254,7 @@ partialRootPaths
 
 ..  confval:: partialRootPaths
     :name: fluidtemplate-partialrootpaths
-    :type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
+    :type: array of :ref:`path <data-type-path>` with :ref:`stdWrap <stdwrap>`
 
     ..  note:: Note the plural -s in "partialRootPaths"!
 
@@ -326,7 +326,7 @@ templateName
 
 ..  confval:: templateName
     :name: fluidtemplate-templatename
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     This name is used together with the set format to find the template in the
     templateRootPaths. Use this property to define a content object to use
@@ -358,7 +358,7 @@ templateRootPath
 
     ..  note::
         It is recommended to use
-        :ref:`cobj-fluidtemplate-properties-templaterootpaths` (note the
+        :ref:`templateRootPaths <cobj-fluidtemplate-properties-templaterootpaths>` (note the
         plural "s") as it can be easily extended by custom templates provided
         by the sitepackage.
 
@@ -413,9 +413,9 @@ Example: Usage with RecordTransformationProcessor
 
 ..  versionadded:: 13.2
     The FLUIDTEMPLATE can now be used in combination with the
-    :ref:`RecordTransformationProcessor` for additional computed information.
+    :ref:`record-transformation data processor <RecordTransformationProcessor>` for additional computed information.
 
-The :ref:`RecordTransformationProcessor` transforms the current data array of
+The :ref:`record-transformation data processor <RecordTransformationProcessor>` transforms the current data array of
 the `FLUIDTEMPLATE` to a record object.
 
 This can be used for content elements of
@@ -427,7 +427,7 @@ element "Text" has its data transformed for easier and enhanced usage.
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 For usage of the variables within Fluid see
-:ref:`RecordTransformationProcessor-fluidtemplate-example`.
+:ref:`Example: Usage with FLUIDTEMPLATE <RecordTransformationProcessor-fluidtemplate-example>`.
 
 ..  _cobj-fluidtemplate-examples:
 
@@ -457,9 +457,9 @@ titles. The copyright year will be taken from the TypoScript constant
 
 ..  seealso::
 
-    *   :ref:`dataProcessing` examples
-    *   :ref:`t3coreapi:adding-your-own-content-elements`
-    *   :ref:`t3sitepackage:start`
+    *   :ref:`Data processors <dataProcessing>` examples
+    *   :ref:`Create a custom content element type <t3coreapi:adding-your-own-content-elements>`
+    *   :ref:`TYPO3 site package tutorial <t3sitepackage:start>`
 
 
 ..  _cobj-fluidtemplate-migration:

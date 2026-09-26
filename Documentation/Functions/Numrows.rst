@@ -39,7 +39,7 @@ select
 
 ..  confval:: select
     :name: numrows-select
-    :type: :ref:`select`
+    :type: :ref:`select <select>`
 
     Select query for the operation.
 

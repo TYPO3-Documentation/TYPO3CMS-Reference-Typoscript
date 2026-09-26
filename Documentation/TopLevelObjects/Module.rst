@@ -149,7 +149,8 @@ Show 25 news records in the backend module of the news extension:
 Example: Register YAML file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Register your :doc:`typo3/cms-form:Index` configuration for the backend via TypoScript.
+Register your :doc:`Form Framework <typo3/cms-form:Index>` configuration for
+the backend via TypoScript.
 
 ..  literalinclude:: _codesnippets/_settings.typoscript
     :caption: EXT:my_extension/ext_typoscript_setup.typoscript

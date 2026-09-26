@@ -11,6 +11,7 @@
         edit-on-github-branch="13.4"
         edit-on-github="TYPO3-Documentation/TYPO3CMS-Reference-Typoscript"
         typo3-core-preferred="13"
+        check-link-text="true"
         interlink-shortcode="t3tsref"
         confval-default="TypoScript"
     />

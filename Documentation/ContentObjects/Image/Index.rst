@@ -73,7 +73,7 @@ params
 
 ..  confval:: params
     :name: image-params
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     HTML <IMG> parameters
 
@@ -84,7 +84,7 @@ altText
 
 ..  confval:: altText
     :name: image-altText
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     If no alt text is specified, an empty alt text will be used.
 
@@ -95,7 +95,7 @@ titleText
 
 ..  confval:: titleText
     :name: image-titleText
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
 ..  _cobj-image-emptyTitleHandling:
 
@@ -104,7 +104,7 @@ emptyTitleHandling
 
 ..  confval:: emptyTitleHandling
     :name: image-emptyTitleHandling
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
     :Default: useAlt
 
     Value can be "keepEmpty" to preserve an empty title attribute, or
@@ -119,7 +119,7 @@ layoutKey
 
 ..  confval:: layoutKey
     :name: image-layoutKey
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
     :Default: default
 
     Defines the render layout for the IMAGE. The render layout is the HTML Code for the IMAGE itself.
@@ -179,7 +179,7 @@ layout
     :name: image-layout
     :type: array
 
-    HTML code definition for the different :ref:`cobj-image-layoutkey`.
+    HTML code definition for the different :ref:`layoutKey <cobj-image-layoutkey>`.
 
 
 ..  index:: IMAGE; layout.layoutKey
@@ -194,7 +194,7 @@ layout.layoutKey
     :type: array
 
     Definition for the HTML rendering for the named
-    :ref:`cobj-image-layoutkey`. Depending on your needs you can use the
+    :ref:`layoutKey <cobj-image-layoutkey>`. Depending on your needs you can use the
     existing pre-defined layoutKey or you can define your own element for
     your responsive layout.
 
@@ -212,7 +212,7 @@ layout.layoutKey.element
 
 ..  confval:: layout.layoutKey.element
     :name: image-layout-layoutkey-element
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     The outer element definition for the HTML rendering of the image.
     Possible markers are mainly all parameters which can be defined in the
@@ -253,7 +253,7 @@ layout.layoutKey.source
     :type: :ref:`stdWrap <stdWrap>`
 
     Defines the HTML code for the :html:`###SOURCECOLLECTION###`
-    of the :ref:`cobj-image-layout-layoutkey-element`.
+    of the :ref:`layout.layoutKey.element <cobj-image-layout-layoutkey-element>`.
     Possible markers in the out of the box configuration are:
 
     -   :html:`###SRC###` the file URL for the src attribute
@@ -346,7 +346,7 @@ sourceCollection.dataKey.pixelDensity
 
 ..  confval:: sourceCollection.dataKey.pixelDensity
     :name: image-pixeldensity
-    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
     :Default: 1
 
     Defines the density of the rendered Image, e.g. a retina display would
@@ -461,7 +461,7 @@ sourceCollection.dataKey.quality
 
 ..  confval:: sourceCollection.dataKey.quality
     :name: image-datakey-quality
-    :type: :ref:`data-type-integer`
+    :type: :ref:`integer <data-type-integer>`
 
     Defines the quality of the rendered images on a scale from 1-100.
 
@@ -475,7 +475,7 @@ sourceCollection.dataKey.*
 
 ..  confval:: sourceCollection.dataKey.*
     :name: image-datakey-others
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     You can define additional key value pairs which won't be used for
     setting the image size, but will be available as additional markers for
@@ -488,7 +488,7 @@ linkWrap
 
 ..  confval:: linkWrap
     :name: image-linkWrap
-    :type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
     (before ".wrap")
 
@@ -499,7 +499,7 @@ imageLinkWrap
 
 ..  confval:: imageLinkWrap
     :name: image-imageLinkWrap
-    :type: :ref:`data-type-boolean` / :ref:`->imageLinkWrap <imagelinkwrap>`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`->imageLinkWrap <imagelinkwrap>`
 
     **Note:** Only active if linkWrap is **not** set and file is
     **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original

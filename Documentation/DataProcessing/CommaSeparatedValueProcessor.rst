@@ -33,7 +33,7 @@ Options:
     ..  confval:: if
         :name: CommaSeparatedValueProcessor-if
         :Required: false
-        :type: :ref:`if` condition
+        :type: :ref:`if <if>` condition
         :Default: ''
 
         If the condition is met, the data processor is processed.
@@ -45,7 +45,7 @@ Options:
     ..  confval:: fieldName
         :name: CommaSeparatedValueProcessor-fieldName
         :Required: true
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: ''
 
         Name of the field in the processed ContentObjectRenderer.
@@ -57,7 +57,7 @@ Options:
     ..  confval:: as
         :name: CommaSeparatedValueProcessor-as
         :Required: false
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: defaults to the fieldName
 
         The variable's name to be used in the Fluid template.
@@ -69,7 +69,7 @@ Options:
     ..  confval:: maximumColumns
         :name: CommaSeparatedValueProcessor-maximumColumns
         :Required: false
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: :typoscript:`0`
 
         Maximal number of columns to be transformed. Surplus columns will be
@@ -83,7 +83,7 @@ Options:
     ..  confval:: fieldDelimiter
         :name: CommaSeparatedValueProcessor-fieldDelimiter
         :Required:  false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: :typoscript:`,`
 
         The field delimiter, a character separating the values.
@@ -95,7 +95,7 @@ Options:
     ..  confval:: fieldEnclosure
         :name: CommaSeparatedValueProcessor-fieldEnclosure
         :Required:  false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: :typoscript:`"`
 
         The field enclosure, a character surrounding the values.
@@ -105,7 +105,7 @@ Options:
 Example: Transforming comma separated content into a html table
 ===============================================================
 
-Please see also :ref:`dataProcessing-about-examples`.
+Please see also :ref:`About the examples <dataProcessing-about-examples>`.
 
 In this example, the `bodytext` field contains comma-separated
 values (CSV) data. To support different formats, the separator between

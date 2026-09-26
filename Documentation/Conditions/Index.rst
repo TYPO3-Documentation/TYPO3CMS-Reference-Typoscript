@@ -49,7 +49,7 @@ applicationContext
     :type: String
 
     The current application context as a string.
-    See :ref:`t3coreapi:bootstrapping-context`.
+    See :ref:`Application context <t3coreapi:bootstrapping-context>`.
 
     Example:
 
@@ -1002,17 +1002,17 @@ site()
     :typoscript:`site("languages")`
         Returns an array of the available languages for the current site.
         For deeper information, see
-        :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
 
     :typoscript:`site("allLanguages")`
         Returns an array of available and unavailable languages for the current
         site. For deeper information, see
-        :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
 
     :typoscript:`site("defaultLanguage")`
         Returns the default language for the current site.
         For deeper information, see
-        :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
 
     :typoscript:`site("configuration")`
         Returns an array with the available configuration for the current site.
@@ -1103,7 +1103,7 @@ loginUser()
 
 ..  versionchanged:: 13.0
     This function has been removed. Use the variables
-    :ref:`condition-frontend-user` and :ref:`condition-backend-user` instead.
+    :ref:`frontend.user <condition-frontend-user>` and :ref:`backend.user <condition-backend-user>` instead.
     For migration hints see the
     :ref:`changelog <ext_core:deprecation-100349-1680097287>`.
 
@@ -1116,7 +1116,7 @@ usergroup()
 
 ..  versionchanged:: 13.0
     This function has been removed. Use the variables
-    :ref:`condition-frontend-user` and :ref:`condition-backend-user` instead.
+    :ref:`frontend.user <condition-frontend-user>` and :ref:`backend.user <condition-backend-user>` instead.
     For migration hints see the
     :ref:`changelog <ext_core:deprecation-100349-1680097287>`.
 

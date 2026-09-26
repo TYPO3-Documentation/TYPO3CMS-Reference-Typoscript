@@ -277,5 +277,5 @@ for the backend <typo3/cms-form:concepts-configuration-yamlregistration-backend>
 More information
 ================
 
-*   :ref:`t3sitepackage:typoscript-configuration` (in "Sitepackage Tutorial")`
-*   :ref:`t3sitepackage:extension-configuration` (in "Sitepackage Tutorial")`
+*   :ref:`TypoScript imports <t3sitepackage:typoscript-configuration>` (in "Sitepackage Tutorial")`
+*   :ref:`Site settings: Further configuration options <t3sitepackage:extension-configuration>` (in "Sitepackage Tutorial")`

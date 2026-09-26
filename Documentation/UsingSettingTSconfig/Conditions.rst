@@ -44,7 +44,7 @@ applicationContext
     :name: tsconfig-condition-applicationContext
     :type: string
 
-    The current application context as a string. See :ref:`t3coreapi:bootstrapping-context`.
+    The current application context as a string. See :ref:`Application context <t3coreapi:bootstrapping-context>`.
 
 ..  _tsconfig-condition-applicationContext-example:
 
@@ -738,15 +738,15 @@ site()
 
     site("languages")
         Returns an array of available languages for current site.
-        For more information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        For more information, see :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
 
     site("allLanguages")
         Returns an array of available and unavailable languages for the current site.
-        For more information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        For more information, see :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
 
     site("defaultLanguage")
         Returns the default language for current site.
-        For more information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        For more information, see :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
 
     site("configuration")
         Returns an array with all available configuration for the current site.

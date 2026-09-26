@@ -62,7 +62,7 @@ http.wrap
 
 ..  confval:: http.wrap
     :name: makelinks-http-wrap
-    :type: :ref:`data-type-wrap` / :ref:`stdwrap`
+    :type: :ref:`Wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
     Wrap around the link.
 
@@ -73,7 +73,7 @@ http.ATagBeforeWrap
 
 ..  confval:: http.ATagBeforeWrap
     :name: makelinks-http-ATagBeforeWrap
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
     :Default: 0
 
     If set, the link is first wrapped with :typoscript:`http.wrap` and then the
@@ -106,7 +106,7 @@ http.ATagParams
 
 ..  confval:: http.ATagParams
     :name: makelinks-http-ATagParams
-    :type: string / :ref:`stdwrap`
+    :type: string / :ref:`stdWrap <stdwrap>`
 
     Additional parameters
 
@@ -137,7 +137,7 @@ mailto.wrap
 
 ..  confval:: mailto.wrap
     :name: makelinks-mailto.wrap
-    :type: :ref:`data-type-wrap` / :ref:`stdwrap`
+    :type: :ref:`Wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
     Wrap around the link.
 
@@ -148,7 +148,7 @@ mailto.ATagBeforeWrap
 
 ..  confval:: mailto.ATagBeforeWrap
     :name: makelinks-mailto.ATagBeforeWrap
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
     :Default: 0
 
     If set, the link is first wrapped with mailto :typoscript:`wrap` and then the
@@ -162,7 +162,7 @@ mailto.ATagParams
 
 ..  confval:: mailto.ATagParams
     :name: makelinks-mailto.ATagParams
-    :type: string / :ref:`stdwrap`
+    :type: string / :ref:`stdWrap <stdwrap>`
 
     Additional parameters
 
