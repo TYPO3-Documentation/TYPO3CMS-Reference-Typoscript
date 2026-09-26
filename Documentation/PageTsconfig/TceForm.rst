@@ -413,11 +413,12 @@ config.treeConfig
 
 ..  confval:: config.treeConfig
     :name: tceform-config-treeConfig
-    :type: int
+    :type: array
 
     The `treeConfig` sub properties of :ref:`TCEFORM.config <pageTsConfigTceFormConfig>` are dedicated to the TCA config type
-    `select` with :ref:`renderType=selectTree <t3tca:columns-select-rendertype-selectTree>`. A couple of
-    :ref:`treeConfig <t3tca:columns-select-properties-treeconfig>` properties can be overriden on page TSconfig level, see their detailed description
+    `select` with :ref:`renderType=selectTree <t3tca:columns-select-rendertype-selectTree>`
+    and to the TCA config type :ref:`category <t3tca:columns-category>`. A couple of
+    :ref:`treeConfig <t3tca:columns-select-properties-treeconfig>` properties can be overridden on page TSconfig level, see their detailed description
     in the :ref:`TCA reference <t3tca:columns-select-properties-treeconfig>`:
 
     ..  literalinclude:: _codesnippets/_pageTsConfigTceFormConfigTreeConfig.typoscript
