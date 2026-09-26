@@ -39,7 +39,7 @@ highColor
 
 ..  confval:: highColor
     :name: gifbuilder-emboss-highColor
-    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
 
     Upper border color.
 
@@ -64,7 +64,7 @@ lowColor
 
 ..  confval:: lowColor
     :name: gifbuilder-emboss-lowColor
-    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
 
     Lower border color.
 
@@ -82,7 +82,7 @@ opacity
     speaking: Opacity = Transparency^-1. For example, 100% opacity = 0%
     transparency.
 
-    Only active with a value for :ref:`gifbuilder-emboss-blur`.
+    Only active with a value for :ref:`blur <gifbuilder-emboss-blur>`.
 
 
 ..  _gifbuilder-emboss-offset:

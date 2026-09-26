@@ -9,7 +9,7 @@ User TSconfig reference
 
 The User TSconfig uses several *top level keys*. Their details are listed below.
 
-The most important section is the :ref:`useroptions` part.
+The most important section is the :ref:`options <useroptions>` part.
 
 ..  toctree::
     :maxdepth: 5

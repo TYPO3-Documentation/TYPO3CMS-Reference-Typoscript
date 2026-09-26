@@ -618,11 +618,11 @@ Properties
             ..  note::
                 Only one label per folder can be set through this method.
                 Use the PSR-14 event
-                :ref:`t3coreapi:AfterFileStorageTreeItemsPreparedEvent`
+                :ref:`AfterFileStorageTreeItemsPreparedEvent <t3coreapi:AfterFileStorageTreeItemsPreparedEvent>`
                 to assign multiple labels to a folder.
 
             ..  seealso::
-                :ref:`ext_core:feature-107683-1234567890`
+                :ref:`Feature: #107683 <ext_core:feature-107683-1234567890>`
 
         ..  _useroptions-folderTree-uploadFieldsInLinkBrowser:
 
@@ -949,7 +949,7 @@ Properties
 
             ..  note::
                 Only one label per page can be set through this method. Use the
-                PSR-14 event :ref:`t3coreapi:AfterPageTreeItemsPreparedEvent` to assign
+                PSR-14 event :ref:`AfterPageTreeItemsPreparedEvent <t3coreapi:AfterPageTreeItemsPreparedEvent>` to assign
                 multiple labels to a page.
 
         ..  todo:: does this still work with site configuration?

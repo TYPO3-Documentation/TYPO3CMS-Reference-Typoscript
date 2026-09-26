@@ -17,7 +17,7 @@ parseFunc
     See also: `Breaking: #107438 - Default parseFunc configuration for Fluid Styled Content <https://docs.typo3.org/permalink/changelog:breaking-107438-1736592000>`_
 
 This object is used to parse some content for stuff like special typo
-tags, the :ref:`makeLinks`-things and so on...
+tags, the :ref:`makelinks <makeLinks>`-things and so on...
 
 ..  contents::
     :local:
@@ -44,30 +44,30 @@ externalBlocks
 
     **.[tagname]** {
 
-    *   **callRecursive:** :ref:`data-type-boolean`. If set, the content of the block is
+    *   **callRecursive:** :ref:`boolean <data-type-boolean>`. If set, the content of the block is
         directed into parseFunc again. Otherwise the content is passed
-        through with no other processing than :ref:`stdwrap` (see below).
+        through with no other processing than :ref:`stdWrap <stdwrap>` (see below).
 
-    *   **callRecursive.dontWrapSelf:** :ref:`data-type-boolean`. If set, the tags of the
+    *   **callRecursive.dontWrapSelf:** :ref:`boolean <data-type-boolean>`. If set, the tags of the
         block is *not* wrapped around the content returned from parseFunc.
 
     *   **callRecursive.alternativeWrap:** Alternative wrapping instead of
         the original tags.
 
-    *   **callRecursive.tagStdWrap:** :ref:`stdwrap` processing of the block-tags.
+    *   **callRecursive.tagStdWrap:** :ref:`stdWrap <stdwrap>` processing of the block-tags.
 
-    *   **stdWrap:** :ref:`stdwrap` processing of the whole block (regardless of
+    *   **stdWrap:** :ref:`stdWrap <stdwrap>` processing of the whole block (regardless of
         whether callRecursive was set.)
 
-    *   **stripNLprev:** :ref:`data-type-boolean`. Strips off last line break of the previous
+    *   **stripNLprev:** :ref:`boolean <data-type-boolean>`. Strips off last line break of the previous
         outside block.
 
-    *   **stripNLnext:** :ref:`data-type-boolean`. Strips off first line break of the next
+    *   **stripNLnext:** :ref:`boolean <data-type-boolean>`. Strips off first line break of the next
         outside block.
 
-    *   **stripNL:** :ref:`data-type-boolean`. Does both of the above.
+    *   **stripNL:** :ref:`boolean <data-type-boolean>`. Does both of the above.
 
-    *   **HTMLtableCells:** :ref:`data-type-boolean`. If set, then the content is expected
+    *   **HTMLtableCells:** :ref:`boolean <data-type-boolean>`. If set, then the content is expected
         to be a table and every table-cell is traversed.
 
     Below, "default" means all cells and "1", "2", "3", ... overrides
@@ -75,15 +75,15 @@ externalBlocks
 
     *   **HTMLtableCells.[default/1/2/3/...]** {
 
-        *   **callRecursive:** :ref:`data-type-boolean`. The content is parsed through current
+        *   **callRecursive:** :ref:`boolean <data-type-boolean>`. The content is parsed through current
             parseFunc.
 
-        *   **stdWrap:** :ref:`stdwrap` processing of the content in the cell.
+        *   **stdWrap:** :ref:`stdWrap <stdwrap>` processing of the content in the cell.
 
-        *   **tagStdWrap:** -> The :html:`<TD>` tag is processed by :ref:`stdwrap`.
+        *   **tagStdWrap:** -> The :html:`<TD>` tag is processed by :ref:`stdWrap <stdwrap>`.
 
 
-    *   **HTMLtableCells.addChr10BetweenParagraphs:** :ref:`data-type-boolean`. If set, then
+    *   **HTMLtableCells.addChr10BetweenParagraphs:** :ref:`boolean <data-type-boolean>`. If set, then
         all appearances of :html:`</P><P>` will have a :php:`chr(10)` inserted between them.
 
     ..  rubric:: Example
@@ -129,9 +129,9 @@ plainTextStdWrap
 
 ..  confval:: plainTextStdWrap
     :name: parsefunc-plainTextStdWrap
-    :type: :ref:`stdwrap`
+    :type: :ref:`stdWrap <stdwrap>`
 
-    This is :ref:`stdwrap` properties for all non-tag content.
+    This is :ref:`stdWrap <stdwrap>` properties for all non-tag content.
 
 
 ..  _parsefunc-userFunc:
@@ -141,7 +141,7 @@ userFunc
 
 ..  confval:: userFunc
     :name: parsefunc-userFunc
-    :type: :ref:`data-type-function-name`
+    :type: :ref:`function name <data-type-function-name>`
 
     ..  important::
 
@@ -152,7 +152,7 @@ userFunc
             (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
 
     This passes the non-tag content to a function of your own choice.
-    Similar to, for example, :ref:`stdwrap-postUserFunc` in :ref:`stdWrap`,
+    Similar to, for example, :ref:`postUserFunc <stdwrap-postUserFunc>` in :ref:`stdWrap <stdWrap>`,
     or :ref:`typolink.userFunc <typolink-userFunc>`.
 
 ..  _parsefunc-nonTypoTagStdWrap:
@@ -162,12 +162,12 @@ nonTypoTagStdWrap
 
 ..  confval:: nonTypoTagStdWrap
     :name: parsefunc-nonTypoTagStdWrap
-    :type: :ref:`stdWrap`
+    :type: :ref:`stdWrap <stdWrap>`
 
-    Like :ref:`parsefunc-plainTextStdWrap`. Difference:
+    Like :ref:`plainTextStdWrap <parsefunc-plainTextStdWrap>`. Difference:
 
     :typoscript:`parsefunc-plainTextStdWrap` works on ALL non-tag pieces in the
-    text. :ref:`parsefunc-nonTypoTagStdWrap` is post processing of all text
+    text. :ref:`nonTypoTagStdWrap <parsefunc-nonTypoTagStdWrap>` is post processing of all text
     (including tags) between special TypoTags
     (unless :typoscript:`breakoutTypoTagContent` is not set for the TypoTag).
 
@@ -179,7 +179,7 @@ nonTypoTagUserFunc
 
 ..  confval:: nonTypoTagUserFunc
     :name: parsefunc-nonTypoTagUserFunc
-    :type: :ref:`data-type-function-name`
+    :type: :ref:`function name <data-type-function-name>`
 
     ..  important::
 
@@ -189,8 +189,8 @@ nonTypoTagUserFunc
             attribute :php:`#[AsAllowedCallable]`
             (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
 
-    Like :ref:`parsefunc-userFunc`.
-    Differences is (like :ref:`parsefunc-nonTypoTagStdWrap`)
+    Like :ref:`userFunc <parsefunc-userFunc>`.
+    Differences is (like :ref:`nonTypoTagStdWrap <parsefunc-nonTypoTagStdWrap>`)
     that this is post processing of all content pieces around TypoTags while
     :typoscript:`userFunc` processes all non-tag content.
     (Notice: :typoscript:`breakoutTypoTagContent` must be set for the TypoTag
@@ -204,12 +204,12 @@ makelinks
 
 ..  confval:: makelinks
     :name: parsefunc-makelinks
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     Convert web addresses prefixed with `http://` and mail addresses
     prefixed with `mailto:` to links.
 
-    See :ref:`makelinks` for additional properties.
+    See :ref:`makelinks <makelinks>` for additional properties.
 
 ..  _parsefunc-tags:
 
@@ -218,7 +218,7 @@ tags
 
 ..  confval:: tags
     :name: parsefunc-tags
-    :type: :ref:`tags`
+    :type: :ref:`tags <tags>`
 
     Here you can define **custom tags** that will parse the content to
     something.
@@ -251,7 +251,7 @@ allowTags
     unless :typoscript:`htmlSanitize` is disabled explicitly.
 
     If a tag is found in :typoscript:`allowTags`, the corresponding tag in
-    :ref:`parsefunc-denyTags` is ignored!
+    :ref:`denyTags <parsefunc-denyTags>` is ignored!
 
     ..  rubric:: Example
 
@@ -282,7 +282,7 @@ denyTags
 
     List of tags, which may **not** exist in code! (use :typoscript:`*` for all.)
 
-    Lowest priority: If a tag is **not** found in :ref:`parsefunc-allowTags`,
+    Lowest priority: If a tag is **not** found in :ref:`allowTags <parsefunc-allowTags>`,
     :typoscript:`denyTags` is checked.
     If denyTags is not :typoscript:`*` and the tag is not found in the list, the tag may exist!
 
@@ -301,7 +301,7 @@ if
 
 ..  confval:: if
     :name: parsefunc-if
-    :type: :ref:`if`
+    :type: :ref:`if <if>`
 
     if "if" returns false, the input value is not parsed, but returned
     directly.
@@ -312,7 +312,7 @@ Example
 =======
 
 This example takes the content of the field "bodytext" and parses it
-through the :ref:`parsefunc-makelinks`-functions and substitutes all
+through the :ref:`makelinks <parsefunc-makelinks>`-functions and substitutes all
 :html:`<LINK>` and :html:`<TYPOLIST>`-tags with something else.
 
 ..  literalinclude:: _codesnippets/_parsefunc.typoscript

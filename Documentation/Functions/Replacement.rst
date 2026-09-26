@@ -30,7 +30,7 @@ search
 
 ..  confval:: search
     :name: replacement-search
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Defines the string that shall be replaced.
 
@@ -42,7 +42,7 @@ replace
 
 ..  confval:: replace
     :name: replacement-replace
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Defines the string to be used for the replacement.
 
@@ -54,7 +54,7 @@ useRegExp
 
 ..  confval:: useRegExp
     :name: replacement-useRegExp
-    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     Defines that the search and replace strings are considered as PCRE
@@ -73,10 +73,10 @@ useOptionSplitReplace
 
 ..  confval:: useOptionSplitReplace
     :name: replacement-useOptionSplitReplace
-    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
-    This property allows to use :ref:`optionsplit` for the replace
+    This property allows to use :ref:`optionSplit <optionsplit>` for the replace
     property. That way the replace property can be different depending on the
     occurrence of the string (first/middle/last part, ...). This works for
     both normal and regular expression replacements. For examples see below.
@@ -92,7 +92,7 @@ Examples
 This returns: "There are an animal, an animal and an animal around the
 block! Yeah!".
 
-The following examples demonstrate the use of :ref:`optionsplit`:
+The following examples demonstrate the use of :ref:`optionSplit <optionsplit>`:
 
 ..  literalinclude:: _codesnippets/_replacementExamples2.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript

@@ -14,11 +14,11 @@ This function returns true, if **all** of the present conditions are met
 (they are connected with an "AND", a logical conjunction). If a
 single condition is false, the value returned is false.
 
-The returned value may still be negated by the :ref:`if-negate` property.
+The returned value may still be negated by the :ref:`negate <if-negate>` property.
 
 There is no else property available. The "else" branch of an "if" statement is a
 missing feature. You can implement a workaround by a logic based on the
-:ref:`stdwrap-override-conditions`.
+:ref:`Properties for overriding and conditions <stdwrap-override-conditions>`.
 
 Simple "if empty use different value" conditions for record data can be built
 with the :ref:`TypoScript // (double slash) <data-type-gettext-double-slash>`
@@ -41,7 +41,7 @@ bitAnd
 
 ..  confval:: bitAnd
     :name: if-bitAnd
-    :type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdWrap <stdwrap>`
 
     Returns true, if the value is part of the bit set.
 
@@ -60,7 +60,7 @@ contains
 
 ..  confval::  contains
     :name: if-contains
-    :type:  value / :ref:`stdwrap`
+    :type:  value / :ref:`stdWrap <stdwrap>`
 
     Returns true, if the content contains :typoscript:`value`.
 
@@ -78,7 +78,7 @@ directReturn
 
 ..  confval:: directReturn
     :name: if-directReturn
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     If this property exists, no other conditions will be checked. Instead
     the true/false of this value is returned. Can be used to set
@@ -92,7 +92,7 @@ endsWith
 
 ..  confval::  endsWith
     :name: if-endsWith
-    :type:  value / :ref:`stdwrap`
+    :type:  value / :ref:`stdWrap <stdwrap>`
 
     Returns true, if the content ends with :typoscript:`value`.
 
@@ -109,7 +109,7 @@ equals
 
 ..  confval:: equals
     :name: if-equals
-    :type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdWrap <stdwrap>`
 
     Returns true, if the content is equal to :typoscript:`value`.
 
@@ -129,7 +129,7 @@ isFalse
 
 ..  confval:: isFalse
     :name: if-isFalse
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     If the content is "false", which is empty or zero.
 
@@ -141,7 +141,7 @@ isGreaterThan
 
 ..  confval:: isGreaterThan
     :name: if-isGreaterThan
-    :type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdWrap <stdwrap>`
 
     Returns true, if the content is greater than :typoscript:`value`.
 
@@ -153,7 +153,7 @@ isInList
 
 ..  confval:: isInList
     :name: if-isInList
-    :type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdWrap <stdwrap>`
 
     Returns true, if the content is in the comma-separated list
     :typoscript:`.value`.
@@ -178,7 +178,7 @@ isLessThan
 
 ..  confval:: isLessThan
     :name: if-isLessThan
-    :type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdWrap <stdwrap>`
 
     Returns true, if the content is less than :typoscript:`value`.
 
@@ -190,7 +190,7 @@ isNull
 
 ..  confval:: isNull
     :name: if-isNull
-    :type: :ref:`stdWrap`
+    :type: :ref:`stdWrap <stdWrap>`
 
     If the resulting content of the :typoscript:`stdWrap` is null (:php:`NULL` type in PHP).
 
@@ -213,7 +213,7 @@ isPositive
 
 ..  confval:: isPositive
     :name: if-isPositive
-    :type: :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>` \+ :ref:`Calculating values (+calc) <objects-calc>`
 
     Returns true, if the content is positive.
 
@@ -225,7 +225,7 @@ isTrue
 
 ..  confval:: isTrue
     :name: if-isTrue
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     If the content is "true", which is not empty string and not zero.
 
@@ -237,7 +237,7 @@ negate
 
 ..  confval:: negate
     :name: if-negate
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
     :Default: 0
 
     This property is checked after all other properties. If set, it
@@ -256,7 +256,7 @@ startsWith
 
 ..  confval::  startsWith
     :name: if-startsWith
-    :type:  value / :ref:`stdwrap`
+    :type:  value / :ref:`stdWrap <stdwrap>`
 
     Returns true, if the content starts with :typoscript:`value`.
 
@@ -274,7 +274,7 @@ value
 
 ..  confval:: value
     :name: if-value
-    :type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdWrap <stdwrap>`
 
     The value to check. This is the comparison value mentioned above.
 
@@ -289,7 +289,7 @@ The "if"-function is a very odd way of returning true or false!
 Beware!
 
 "if" is normally used to decide whether to render an object or to return
-a value (see the :ref:`data-type-cobject` and :ref:`stdWrap`).
+a value (see the :ref:`Content Objects (cObject) <data-type-cobject>` and :ref:`stdWrap <stdWrap>`).
 
 Here is how it works:
 

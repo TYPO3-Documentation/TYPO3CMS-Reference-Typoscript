@@ -70,7 +70,7 @@ BackendLayouts
     Frontend rendering to select for example Fluid template files via TypoScript for a page,
     commonly used via :confval:`data:pagelayout <t3tsref:data-pagelayout>`.
 
-    See also the dedicated chapter :ref:`backend-layouts`.
+    See also the dedicated chapter :ref:`Backend layouts <backend-layouts>`.
 
 ..  _mod-web-layout-backendLayouts-example:
 

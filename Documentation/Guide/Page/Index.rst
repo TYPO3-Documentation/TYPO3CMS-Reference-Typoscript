@@ -39,7 +39,7 @@ Displaying the page body with TypoScript
 Numeral indexes on the `PAGE` object are used to output the actual content of
 the page. Many integrators like to use the index 10.
 
-As we already saw in section :ref:`guide-first-steps`, the following code outputs
+As we already saw in section :ref:`First steps <guide-first-steps>`, the following code outputs
 "Hello World!":
 
 ..  literalinclude:: _hello-world.typoscript

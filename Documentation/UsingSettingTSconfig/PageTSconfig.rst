@@ -54,7 +54,7 @@ installations that contain only one site and use only one sitepackage extension.
 Extensions supplying custom default page TSconfig that should always be included,
 can also set the page TSconfig globally.
 
-The PSR-14 event :ref:`t3coreapi:BeforeLoadedPageTsConfigEvent` is available to
+The PSR-14 event :ref:`BeforeLoadedPageTsConfigEvent <t3coreapi:BeforeLoadedPageTsConfigEvent>` is available to
 add global static page TSconfig before anything else is loaded.
 
 ..  _include-static-page-tsconfig-per-site:
@@ -64,7 +64,7 @@ Page TSconfig on site level
 
 Page TSconfig can be defined on a site level by placing a file called
 :file:`page.tsconfig` in the storage directory of the site
-(:ref:`config/sites/<identifier>/ <t3coreapi:site-storage>`).
+(:ref:`the site configuration folder <t3coreapi:site-storage>`).
 
 Extensions and site packages can provide page TSconfig in
 :ref:`site sets <t3coreapi:site-sets>` by placing a file called :file:`page.tsconfig`
@@ -151,7 +151,8 @@ These can be :ref:`selected in the page properties <include-static-page-tsconfig
     :language: php
     :caption: EXT:my_sitepackage/Configuration/TCA/Overrides/pages.php
 
-It is not possible to use label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
+It is not possible to use a
+`label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
 for the third parameter as the extension name will be automatically appended.
 
 If you need to localize these labels, modify the TCA directly instead of using
