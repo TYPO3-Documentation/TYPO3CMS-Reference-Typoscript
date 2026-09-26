@@ -32,7 +32,7 @@ Options
     ..  confval:: fieldName
         :name: FlexFormProcessor-fieldname
         :Required: false
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: 'pi_flexform'
 
         Field name of the column the FlexForm data is stored in.
@@ -54,7 +54,7 @@ Options
         This reference is used in the :ref:`FilesProcessor <FilesProcessor>` to
         resolve the correct :ref:`FAL <t3coreapi:fal>` resource.
 
-        See :ref:`FlexFormProcessor-resolving-fal`.
+        See :ref:`Example of resolving FAL references <FlexFormProcessor-resolving-fal>`.
 
     ..  _FlexFormProcessor-as:
 
@@ -63,7 +63,7 @@ Options
     ..  confval:: as
         :name: FlexFormProcessor-as
         :Required: false
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: 'flexFormData'
 
         Name for the variable in the Fluid template.

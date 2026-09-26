@@ -49,7 +49,7 @@ applicationContext
     :type: String
 
     The current application context as a string.
-    See :ref:`t3coreapi:bootstrapping-context`.
+    See :ref:`Application context <t3coreapi:bootstrapping-context>`.
 
     Example:
 
@@ -986,17 +986,17 @@ site()
     :typoscript:`site("languages")`
         Returns an array of the available languages for the current site.
         For deeper information, see
-        :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
 
     :typoscript:`site("allLanguages")`
         Returns an array of available and unavailable languages for the current
         site. For deeper information, see
-        :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
 
     :typoscript:`site("defaultLanguage")`
         Returns the default language for the current site.
         For deeper information, see
-        :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
 
     :typoscript:`site("configuration")`
         Returns an array with the available configuration for the current site.

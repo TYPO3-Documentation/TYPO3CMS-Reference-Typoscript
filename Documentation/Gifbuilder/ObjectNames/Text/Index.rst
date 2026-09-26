@@ -27,7 +27,7 @@ align
     :type: align / :ref:`stdWrap <stdwrap>`
     :Default: left
 
-    The alignment of the :ref:`gifbuilder-text-text`.
+    The alignment of the :ref:`text <gifbuilder-text-text>`.
 
     Possible values:
 
@@ -47,11 +47,11 @@ angle
     :Default: 0
     :Range: -90 to 90
 
-    The rotation degree of the :ref:`gifbuilder-text-text`.
+    The rotation degree of the :ref:`text <gifbuilder-text-text>`.
 
     ..  note::
-        The angle is not available, if :ref:`gifbuilder-text-spacing`
-        / :ref:`gifbuilder-text-wordSpacing` is set.
+        The angle is not available, if :ref:`spacing <gifbuilder-text-spacing>`
+        / :ref:`wordSpacing <gifbuilder-text-wordSpacing>` is set.
 
 
 ..  _gifbuilder-text-antiAlias:
@@ -68,10 +68,10 @@ antiAlias
 
     ..  note::
         This option is not available, if
-        :ref:`gifbuilder-text-niceText` is enabled.
+        :ref:`niceText <gifbuilder-text-niceText>` is enabled.
 
         Setting this option to :typoscript:`0` will not work, if
-        :ref:`gifbuilder-text-fontColor` is set to black (or #000000).
+        :ref:`fontColor <gifbuilder-text-fontColor>` is set to black (or #000000).
 
 
 ..  _gifbuilder-text-breakSpace:
@@ -111,7 +111,7 @@ doNotStripHTML
     :type: boolean
     :Default: 0 (false)
 
-    If set, HTML tags inserted in the :ref:`gifbuilder-text-text` are
+    If set, HTML tags inserted in the :ref:`text <gifbuilder-text-text>` are
     **not** removed. Any other HTML code will be removed by default!
 
 
@@ -132,7 +132,7 @@ fontColor
 
 ..  confval:: fontColor
     :name: gifbuilder-text-fontColor
-    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
     :Default: black
 
     The font color.
@@ -192,12 +192,12 @@ iterations
     :type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: 1
 
-    How many times the :ref:`gifbuilder-text-text` should be "printed"
+    How many times the :ref:`text <gifbuilder-text-text>` should be "printed"
     onto it self. This will add the effect of bold text.
 
     ..  note::
         This option is not available, if
-        :ref:`gifbuilder-text-niceText` is enabled.
+        :ref:`niceText <gifbuilder-text-niceText>` is enabled.
 
 
 ..  _gifbuilder-text-maxWidth:
@@ -209,12 +209,12 @@ maxWidth
     :name: gifbuilder-text-maxWidth
     :type: positive integer / :ref:`stdWrap <stdwrap>`
 
-    Sets the maximum width in pixels, the :ref:`gifbuilder-text-text`
-    must be. Reduces the :ref:`gifbuilder-text-fontSize`, if the
+    Sets the maximum width in pixels, the :ref:`text <gifbuilder-text-text>`
+    must be. Reduces the :ref:`fontSize <gifbuilder-text-fontSize>`, if the
     text does not fit within this width.
 
     Does not support setting alternative font sizes in
-    :ref:`gifbuilder-text-splitRendering` options.
+    :ref:`splitRendering <gifbuilder-text-splitRendering>` options.
 
 
 ..  _gifbuilder-text-niceText:
@@ -233,7 +233,7 @@ niceText
     The principle of this function is to create a black/white image file in
     twice or more times the size of the actual image file and then print the
     text onto this in a scaled dimension. Afterwards GraphicsMagick/ImageMagick
-    scales down the mask and masks the :ref:`gifbuilder-text-fontColor` down on
+    scales down the mask and masks the :ref:`fontColor <gifbuilder-text-fontColor>` down on
     the original image file through the temporary mask.
 
     The fact that the font is actually rendered in the double size and
@@ -299,7 +299,7 @@ offset
     :type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
     :Default: 0,0
 
-    The offset of the :ref:`gifbuilder-text-text`.
+    The offset of the :ref:`text <gifbuilder-text-text>`.
 
 
 ..  _gifbuilder-text-outline:
@@ -378,7 +378,7 @@ splitRendering
         *   **fontSize:** Alternative font size for this rendering.
 
         *   **color:** Alternative color for this rendering, works *only*
-            without :ref:`gifbuilder-text-niceText`.
+            without :ref:`niceText <gifbuilder-text-niceText>`.
 
         *   **xSpaceBefore:** x space before this part.
 
@@ -410,7 +410,7 @@ splitRendering
     **Limitations:**
 
     *   The pixel compensation values are not corrected for scale factor used
-        with :ref:`gifbuilder-text-niceText`. Basically this means
+        with :ref:`niceText <gifbuilder-text-niceText>`. Basically this means
         that when :typoscript:`niceText` is used, these values will have only
         the half effect.
 
@@ -475,7 +475,7 @@ textMaxLength
     :type: integer
     :Default: 100
 
-    The maximum length of the :ref:`gifbuilder-text-text`. This is just a
+    The maximum length of the :ref:`text <gifbuilder-text-text>`. This is just a
     natural break that prevents incidental rendering of very long texts!
 
 

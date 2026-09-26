@@ -48,7 +48,7 @@ special.range
     :name: hmenu-rootline-special-range
     :type: string /:ref:`stdWrap <stdwrap>`
     :Syntax: `[begin-level] | [end-level]`
-    :Example: :ref:`hmenu-special-rootline-range-example`
+    :Example: :ref:`Example: Skip the current page <hmenu-special-rootline-range-example>`
 
     `[begin-level] | [end-level]` are interpreted like the
     :ref:`.entryLevel <hmenu-entrylevel>` for an `HMENU`).
@@ -75,7 +75,7 @@ special.targets.[level number]
     :name: hmenu-rootline-special-targets
     :type: boolean
     :Default: `false`
-    :Example: :ref:`hmenu-special-rootline-targets-example`
+    :Example: :ref:`Example: Set targets for levels <hmenu-special-rootline-targets-example>`
 
     For framesets. You can set a default target and a target for each
     level by using the level number as sub-property.

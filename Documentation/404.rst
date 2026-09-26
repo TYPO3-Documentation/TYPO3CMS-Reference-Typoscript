@@ -93,7 +93,7 @@ Conditions loginUser(), usergroup() have been removed
 ..  versionchanged:: 13.0
     Deprecated with `Deprecation: #100349 - TypoScript loginUser() and usergroup() conditions <https://docs.typo3.org/permalink/changelog:deprecation-100349-1680097287>`_,
     removed with v13. Use the variables
-    :ref:`condition-frontend-user` and :ref:`condition-backend-user` instead.
+    :ref:`frontend.user <condition-frontend-user>` and :ref:`backend.user <condition-backend-user>` instead.
 
 
 ..  _gifbuilder-properties-reduceColors:

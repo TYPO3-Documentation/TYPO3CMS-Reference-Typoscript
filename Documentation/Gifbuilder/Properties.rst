@@ -31,7 +31,7 @@ backColor
 
 ..  confval:: backColor
     :name: gifbuilder-properties-backColor
-    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
     :Default: white
 
     Background color of the image.
@@ -64,10 +64,10 @@ charRangeMap
     **The key:**
 
     The value of the array key will be the key used when forcing the
-    configuration into :ref:`gifbuilder-text-splitRendering`
+    configuration into :ref:`splitRendering <gifbuilder-text-splitRendering>`
     configuration of the individual
     :ref:`GIFBUILDER objects <gifbuilder-object-names>`.
-    In the :ref:`gifbuilder-properties-charRangeMap-array`
+    In the :ref:`[array] <gifbuilder-properties-charRangeMap-array>`
     example below the key is :typoscript:`123`.
 
     ..  note::
@@ -100,8 +100,8 @@ charRangeMap
 
     If set, this will take the font size of the
     :ref:`GIFBUILDER TEXT object <gifbuilder-text>` and multiply with this
-    amount (xx.xx) and override the :ref:`gifbuilder-text-fontSize` property
-    inside :ref:`gifbuilder-properties-charRangeMap-charMapConfig`.
+    amount (xx.xx) and override the :ref:`fontSize <gifbuilder-text-fontSize>` property
+    inside :ref:`[array].charMapConfig <gifbuilder-properties-charRangeMap-charMapConfig>`.
 
 
 ..  _gifbuilder-properties-charRangeMap-pixelSpaceFontSizeRef:
@@ -152,7 +152,7 @@ format
     *   :ref:`$TYPO3_CONF_VARS['GFX']['webp_quality'] <t3coreapi:typo3ConfVars_gfx_webp_quality>` for a WebP image
     *   :ref:`$TYPO3_CONF_VARS['GFX']['avif_quality'] <t3coreapi:typo3ConfVars_gfx_webp_quality>` for a AVIF image
 
-    or via the :ref:`gifbuilder-properties-quality` property on a per-image basis.
+    or via the :ref:`quality <gifbuilder-properties-quality>` property on a per-image basis.
 
 ..  _gifbuilder-properties-maxHeight:
 
@@ -202,8 +202,8 @@ quality
 
     Sets the quality of the image:
 
-    *   JPG, if :ref:`gifbuilder-properties-format` = jpg/jpeg.
-    *   WebP, if :ref:`gifbuilder-properties-format` = webp. Setting the
+    *   JPG, if :ref:`format <gifbuilder-properties-format>` = jpg/jpeg.
+    *   WebP, if :ref:`format <gifbuilder-properties-format>` = webp. Setting the
         quality to "101" equivalents to `"lossless" compression`_.
 
     ..  _"lossless" compression: https://developers.google.com/speed/webp/docs/compression#lossless_webp
@@ -234,7 +234,7 @@ transparentBackground
     color found at position 0,0 of the image (upper left corner) transparent.
 
     If you render text, you should leave the
-    :ref:`gifbuilder-text-niceText` option **off** as the result will
+    :ref:`niceText <gifbuilder-text-niceText>` option **off** as the result will
     probably be more precise without the :typoscript:`niceText` antialiasing
     hack.
 
@@ -246,7 +246,7 @@ transparentColor
 
 ..  confval:: transparentColor
     :name: gifbuilder-properties-transparentColor
-    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
 
     Specify a color that should be transparent.
 
@@ -265,7 +265,7 @@ closest
 
     ..  note::
         You may experience that this does not work, if you render text with the
-        :ref:`gifbuilder-text-niceText` option.
+        :ref:`niceText <gifbuilder-text-niceText>` option.
 
 
 ..  _gifbuilder-properties-workArea:

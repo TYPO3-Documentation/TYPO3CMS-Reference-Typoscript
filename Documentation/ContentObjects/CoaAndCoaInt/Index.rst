@@ -80,7 +80,7 @@ stdWrap
     :name: coa-stdWrap
     :type: :ref:`->stdWrap <stdwrap>`
 
-    Executed on all rendered cObjects after property :ref:`cobj-coa-wrap`.
+    Executed on all rendered cObjects after property :ref:`wrap <cobj-coa-wrap>`.
 
 ..  _cobj-coa-wrap:
 
@@ -91,7 +91,7 @@ wrap
     :name: coa-wrap
     :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
-     Wraps all rendered cObjects. Executed before property :ref:`cobj-coa-stdWrap`.
+     Wraps all rendered cObjects. Executed before property :ref:`stdWrap <cobj-coa-stdWrap>`.
 
 
 ..  _cobj-cobj-array-examples:

@@ -14,7 +14,7 @@ collect options based on the page layouts content columns.
 
 An array of :ref:`Record objects <t3coreapi:record_objects>` will be passed to
 the Fluid template. You can use the
-:ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>` to
+:ref:`f:cObject ViewHelper <t3viewhelper:typo3-fluid-cobject>` to
 display the content elements.
 
 ..  contents:: Table of contents
@@ -34,7 +34,7 @@ Options
     ..  confval:: as
         :name: PageContentFetchingProcessor-as
         :Required: false
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: "content"
 
         Name for the variable in the Fluid template.
@@ -44,7 +44,7 @@ Options
     ..  confval:: if
         :name: PageContentFetchingProcessor-if
         :Required: false
-        :type: :ref:`if` condition
+        :type: :ref:`if <if>` condition
         :Default: ''
 
         Only if the condition is met the data processor is executed.
@@ -62,7 +62,7 @@ Use the identifiers of the columns in the Fluid template:
 ..  literalinclude:: _PageContentFetchingProcessor/_Default.fluid.html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.fluid.html
 
-You can use the :ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>`
+You can use the :ref:`f:cObject ViewHelper <t3viewhelper:typo3-fluid-cobject>`
 to render the content element using :composer:`typo3/cms-fluid-styled-content`
 or render it your self.
 
