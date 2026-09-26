@@ -199,8 +199,10 @@ PAGE_TSCONFIG_ID
 
 ..  note::
 
-    This value can be used for the TCA property :ref:`foreign_table_where <t3tca:columns-select-properties-foreign-table-where>`
-    and for the `addWhere` part of the :ref:`suggest wizard <pagetceformsuggest>`.
+    This value can be used for the TCA property :ref:`foreign_table_where <t3tca:columns-select-properties-foreign-table-where>`,
+    for the `addWhere` part of the :ref:`suggest wizard <pagetceformsuggest>`
+    and for the :ref:`startingPoints <tceform-tree-startingpoints-markers>`
+    of a tree.
 
 ..  _tceform-page_tsconfig_id-example:
 
@@ -411,6 +413,29 @@ config.treeConfig
 
     ..  literalinclude:: _codesnippets/_pageTsConfigTceFormConfigTreeConfig.typoscript
         :caption: EXT:site_package/Configuration/page.tsconfig
+
+    ..  _tceform-tree-startingpoints-markers:
+
+    ..  versionadded:: 15.0
+        :changelog: feature-75037-1758268800
+
+    `startingPoints` accepts the same markers as in TCA, see
+    :confval:`startingPoints <t3tca:select-treeconfig-startingpoints>`. They
+    are resolved after the override, so `###PAGE_TSCONFIG_ID###` and
+    `###PAGE_TSCONFIG_IDLIST###` take their values from
+    :confval:`PAGE_TSCONFIG_ID <tceform-PAGE_TSCONFIG_ID>` and
+    :confval:`PAGE_TSCONFIG_IDLIST <tceform-PAGE_TSCONFIG_IDLIST>` of the same
+    field. A marker that cannot be resolved is removed from the list.
+
+    This tree starts at the records with the uids 12 and 34:
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_extension/Configuration/page.tsconfig
+
+        TCEFORM.tx_myextension_table.categories {
+          PAGE_TSCONFIG_IDLIST = 12,34
+          config.treeConfig.startingPoints = ###PAGE_TSCONFIG_IDLIST###
+        }
 
     This property is available for various levels:
 
