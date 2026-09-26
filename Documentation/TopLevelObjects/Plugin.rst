@@ -15,7 +15,7 @@ plugin named "tx\_myext\_pi1" then you would find the TypoScript
 configuration at the position :typoscript:`plugin.tx_myextension_pi1` in the
 object tree!
 
-Most plugins are :ref:`cobj-user` objects
+Most plugins are :ref:`USER and USER_INT <cobj-user>` objects
 which means that they have at least 1 or 2 reserved properties.
 Furthermore this table outlines some other default properties.
 Generally system properties are prefixed with an underscore:
@@ -42,13 +42,13 @@ Properties for all frontend plugin types
         :name: plugin-userFunc
         :type: (array of keys)
 
-        Property setting up the :ref:`cobj-user` object of the plugin.
+        Property setting up the :ref:`USER and USER_INT <cobj-user>` object of the plugin.
 
     ..  rubric:: _CSS_DEFAULT_STYLE
 
     ..  confval:: _CSS_DEFAULT_STYLE
         :name: plugin-css-default-style
-        :type: :ref:`data-type-string` / :ref:`stdwrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
         Use this to have some default CSS styles inserted in the header
         section of the document. :typoscript:`_CSS_DEFAULT_STYLE` outputs a set of
@@ -106,7 +106,7 @@ plugins.
 
     ..  confval:: ignoreFlexFormSettingsIfEmpty
         :name: plugin-ignoreFlexFormSettingsIfEmpty
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Example: :ref:`Ignore certain FlexForm settings if empty <setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty-example>`
 
         Define :ref:`FlexForm <t3coreapi:flexforms>` settings that will be
@@ -131,18 +131,18 @@ plugins.
 
     ..  confval:: persistence.enableAutomaticCacheClearing
         :name: plugin-persistence-enableAutomaticCacheClearing
-        :type: :ref:`data-type-boolean`
+        :type: :ref:`boolean <data-type-boolean>`
         :Default: `true`
 
         **Only for Extbase plugins**.
         Enables the automatic cache clearing when changing data sets (see also
-        :ref:`t3coreapi:extbase_caching`).
+        :ref:`Caching in Extbase plugins <t3coreapi:extbase_caching>`).
 
     ..  rubric:: persistence.storagePid
 
     ..  confval:: persistence.storagePid
         :name: plugin-persistence-storagePid
-        :type: :ref:`data-type-string` (comma separated list of integers)
+        :type: :ref:`string <data-type-string>` (comma separated list of integers)
         :Example: :ref:`Set recursive storage PID for Extbase plugin <setup-plugin-persistence-storagePid-example>`
 
         **Only for Extbase plugins**. List of page IDs, from which all records
@@ -152,7 +152,7 @@ plugins.
 
     ..  confval:: persistence.classes.[classname].newRecordStoragePid
         :name: plugin-persistence-classes-classname-newRecordStoragePid
-        :type: :ref:`data-type-integer`
+        :type: :ref:`integer <data-type-integer>`
         :Example: :ref:`Set storage PID for new records of Extbase plugin <setup-plugin-persistence-classes-classname-newRecordStoragePid-example>`
 
         **Only for Extbase plugins**. Page ID, where new records for objects
@@ -162,7 +162,7 @@ plugins.
 
     ..  confval:: persistence.recursive
         :name: plugin-persistence-recursive
-        :type: :ref:`data-type-integer`
+        :type: :ref:`integer <data-type-integer>`
         :Example: :ref:`Set recursive storage PID for Extbase plugin <setup-plugin-persistence-storagePid-example>`
 
         **Only for Extbase plugins**. Number of sub-levels of the
@@ -187,7 +187,7 @@ plugins.
 
     ..  confval:: view.layoutRootPaths.[array]
         :name: plugin-view-layoutRootPaths
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Example: :ref:`Set template paths for Extbase plugin <setup-plugin-view-example>`
 
         **Only for Extbase plugins**. This can be used to specify the root paths
@@ -198,7 +198,7 @@ plugins.
 
     ..  confval:: view.partialRootPaths.[array]
         :name: plugin-view-partialRootPaths
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Example: :ref:`Set template paths for Extbase plugin <setup-plugin-view-example>`
 
         **Only for Extbase plugins**. This can be used to specify the root
@@ -209,7 +209,7 @@ plugins.
 
     ..  confval:: view.templateRootPaths.[array]
         :name: plugin-view-templateRootPaths
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Example: :ref:`Set template paths for Extbase plugin <setup-plugin-view-example>`
 
         **Only for Extbase plugins**. This can be used to specify the root
@@ -221,7 +221,7 @@ plugins.
 
     ..  confval:: view.pluginNamespace
         :name: plugin-view-pluginNamespace
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Example: :ref:`Set template paths for Extbase plugin <setup-plugin-view-example>`
 
         This can be used to specify an alternative namespace for the plugin.
@@ -240,7 +240,7 @@ plugins.
 
     ..  confval:: mvc.callDefaultActionIfActionCantBeResolved
         :name: plugin-mvc-callDefaultActionIfActionCantBeResolved
-        :type: :ref:`data-type-boolean`
+        :type: :ref:`boolean <data-type-boolean>`
         :Default: `false`
         :Example: :ref:`Call default action if action cannot be resolved <setup-plugin-mvc-callDefaultActionIfActionCantBeResolved-example>`
 
@@ -251,18 +251,18 @@ plugins.
 
     ..  confval:: mvc.throwPageNotFoundExceptionIfActionCantBeResolved
         :name: plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved
-        :type: :ref:`data-type-boolean`
+        :type: :ref:`boolean <data-type-boolean>`
         :Default: `false`
         :Example: :ref:`Show 404 (page not found) page if action cannot be resolved <setup-plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved-example>`
 
-        Same as :ref:`setup-plugin-mvc-callDefaultActionIfActionCantBeResolved`
+        Same as :ref:`Properties for all frontend plugins based on Extbase <setup-plugin-mvc-callDefaultActionIfActionCantBeResolved>`
         but this will raise a "page not found" error.
 
     ..  rubric:: mvc.showPageNotFoundIfTargetNotFoundException
 
     ..  confval:: mvc.showPageNotFoundIfTargetNotFoundException
         :name: plugin-mvc-showPageNotFoundIfTargetNotFoundException
-        :type: :ref:`data-type-boolean`
+        :type: :ref:`boolean <data-type-boolean>`
         :Default: `false`
 
         **Only for Extbase plugins**. By default, when calling an extbase
@@ -283,7 +283,7 @@ plugins.
 
     ..  confval:: mvc.showPageNotFoundIfRequiredArgumentIsMissingException
         :name: plugin-mvc-showPageNotFoundIfRequiredArgumentIsMissingException
-        :type: :ref:`data-type-boolean`
+        :type: :ref:`boolean <data-type-boolean>`
         :Default: `false`
 
         **Only for Extbase plugins**. By default, when calling an extbase
@@ -308,7 +308,7 @@ plugins.
 
     ..  confval:: format
         :name: plugin-format
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: `html`
         :Example: :ref:`Define alternative output formats for RSS feeds <extbase_format-example>`
 
@@ -323,7 +323,7 @@ plugins.
 
     ..  confval:: _LOCAL_LANG.[lang-key].[label-key]
         :name: plugin-local-lang
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Example: :ref:`Override a language key in an Extbase plugin <setup-plugin-local-lang-example>`
 
         Can be used to override the default language labels for Extbase plugins.

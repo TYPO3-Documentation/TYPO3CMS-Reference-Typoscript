@@ -8,7 +8,7 @@ Data processors
 ===============
 
 :ref:`dataProcessing <fluidtemplate-dataProcessing>` is a property of
-:ref:`cobj-fluidtemplate` and :ref:`cobj-pageview`.
+:ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` and :ref:`PAGEVIEW <cobj-pageview>`.
 
 The property adds one or multiple processors to manipulate the :php:`$data`
 variable of the currently rendered content object, like tt_content or page.
@@ -50,7 +50,7 @@ as content elements:
     :class: with-shadow
 
 All examples listing here depend on
-:ref:`t3coreapi:adding-your-own-content-elements`.  Data processors can
+:ref:`Create a custom content element type <t3coreapi:adding-your-own-content-elements>`.  Data processors can
 also be used in rendering page templates. In this case TypoScript context
 would be the page record and all fields of the :typoscript:`pages` table
 are available.

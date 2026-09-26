@@ -36,7 +36,7 @@ Options:
     ..  confval:: if
         :name: FilesProcessor-if
         :Required: false
-        :type: :ref:`if` condition
+        :type: :ref:`if <if>` condition
         :Default: ''
 
         Only, if the condition is met the data processor is executed.
@@ -48,7 +48,7 @@ Options:
     ..  confval:: references
         :name: FilesProcessor-references
         :Required: false
-        :type: :ref:`data-type-string` (comma-separated integers) / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
         :Default: ''
         :Example: '1,303,42'
 
@@ -57,8 +57,8 @@ Options:
 
         The corresponding file records are added to the output array.
 
-        :ref:`stdWrap` properties can also be used, see
-        :ref:`FilesProcessor-stdWrap-on-references`.
+        :ref:`stdWrap <stdWrap>` properties can also be used, see
+        :ref:`Example 2: use stdWrap property on references <FilesProcessor-stdWrap-on-references>`.
 
     ..  _FilesProcessor-references-fieldName:
 
@@ -67,7 +67,7 @@ Options:
     ..  confval:: references.fieldName
         :name: FilesProcessor-references-fieldName
         :Required: false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: ''
         :Example: 'media'
 
@@ -83,12 +83,12 @@ Options:
     ..  confval:: references.table
         :name: FilesProcessor-references.table
         :Required: false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: ''
         :Example: 'tt_content'
 
         If :typoscript:`references` should be interpreted as TypoScript
-        :ref:`select` function, :typoscript:`references.fieldName` must be set to
+        :ref:`select <select>` function, :typoscript:`references.fieldName` must be set to
         the desired field name of the table to be queried.
 
     ..  _FilesProcessor-files:
@@ -98,7 +98,7 @@ Options:
     ..  confval:: files
         :name: FilesProcessor-files
         :Required: false
-        :type: :ref:`data-type-string` (comma-separated integers) / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
         :Default: ''
         :Example: '1,303,42'
 
@@ -112,7 +112,7 @@ Options:
     ..  confval:: collections
         :name: FilesProcessor-collections
         :Required: false
-        :type: :ref:`data-type-string` (comma-separated integers) / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
         :Default: ''
         :Example: '1,303,42'
 
@@ -127,7 +127,7 @@ Options:
     ..  confval:: folders
         :name: FilesProcessor-folders
         :Required: false
-        :type: :ref:`data-type-string` (comma-separated folders), :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` (comma-separated folders), :ref:`stdWrap <stdWrap>`
         :Default: ""
         :Example: "23:/other/folder/"
 
@@ -151,7 +151,7 @@ Options:
     ..  confval:: folders.recursive
         :name: FilesProcessor-folders-recursive
         :Required: false
-        :type: bool  / :ref:`stdWrap`
+        :type: bool  / :ref:`stdWrap <stdWrap>`
         :Default: 0
         :Example: 1
 
@@ -165,7 +165,7 @@ Options:
     ..  confval:: sorting
         :name: FilesProcessor-sorting
         :Required: false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: ""
         :Example: "filesize"
 
@@ -179,7 +179,7 @@ Options:
     ..  confval:: sorting.direction
         :name: FilesProcessor-sorting-direction
         :Required: false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default:  "ascending"
         :Example: "descending"
 
@@ -192,7 +192,7 @@ Options:
     ..  confval:: as
         :name: FilesProcessor-as
         :Required: false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: "files"
 
         The variable name to be used in the Fluid template.
@@ -202,7 +202,7 @@ Options:
 Example 1: Render the images stored in field image
 ==================================================
 
-Please see also :ref:`dataProcessing-about-examples`.
+Please see also :ref:`About the examples <dataProcessing-about-examples>`.
 
 ..  rubric:: TypoScript
 
@@ -230,7 +230,7 @@ The array `images` contains the data of the files now:
 
 ..  note::
     For technical reasons file references do not show all available data on
-    using debug. See :ref:`t3coreapi:fal-using-fal-frontend`.
+    using debug. See :ref:`Using FAL in the frontend <t3coreapi:fal-using-fal-frontend>`.
 
 
 ..  _FilesProcessor-stdWrap-on-references:

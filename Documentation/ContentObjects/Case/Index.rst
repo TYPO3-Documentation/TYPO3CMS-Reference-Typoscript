@@ -45,7 +45,7 @@ array of cObjects
     :type: :ref:`cObject <data-type-cobject>`
 
     Array of cObjects. Use this to define cObjects for the different
-    values of :ref:`cobj-case-key`. If :ref:`cobj-case-key` has a certain value,
+    values of :ref:`key <cobj-case-key>`. If :ref:`key <cobj-case-key>` has a certain value,
     the according cObject will be rendered. The cObjects can have any name, but not
     the names of the other properties of the cObject CASE.
 
@@ -69,8 +69,8 @@ default
     :name: case-default
     :type: :ref:`cObject <data-type-cobject>`
 
-    Use this to define the rendering for *those* values of :ref:`cobj-case-key` that
-    do *not* match any of the values of the :ref:`cobj-case-array-of-cObjects`. If no
+    Use this to define the rendering for *those* values of :ref:`key <cobj-case-key>` that
+    do *not* match any of the values of the :ref:`array of cObjects <cobj-case-array-of-cObjects>`. If no
     default cObject is defined, an empty string will be returned for
     the default case.
 
@@ -92,18 +92,18 @@ key
 
 ..  confval:: key
     :name: case-key
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
     :Default: default
 
     The key, which determines, which cObject will be rendered. Its
     value is expected to match the name of one of the cObjects from
     the array of cObjects; this cObject is then rendered. If no name
-    of a cObject is matched, the cObject from the property :ref:`cobj-case-default`
+    of a cObject is matched, the cObject from the property :ref:`default <cobj-case-default>`
     is rendered.
 
     This property defines the source of the value that will be matched against
-    the values of the :ref:`cobj-case-array-of-cObjects`. It will generally not be a
-    simple string, but use its :ref:`stdWrap` properties to retrieve a
+    the values of the :ref:`array of cObjects <cobj-case-array-of-cObjects>`. It will generally not be a
+    simple string, but use its :ref:`stdWrap <stdWrap>` properties to retrieve a
     dynamic value from some specific source, typically a field of the
     current record. See the :ref:`example below <cobj-case-examples>`.
 
@@ -114,7 +114,7 @@ setCurrent
 
 ..  confval:: setCurrent
     :name: case-setCurrent
-    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Sets the "current" value.
 
@@ -127,8 +127,8 @@ stdWrap
     :name: case-stdWrap
     :type: :ref:`stdWrap <stdwrap>`
 
-    :ref:`stdWrap` around any object that was rendered no matter what the
-    :ref:`cobj-case-key` value is.
+    :ref:`stdWrap <stdWrap>` around any object that was rendered no matter what the
+    :ref:`key <cobj-case-key>` value is.
 
 
 ..  _cobj-case-examples:
@@ -138,8 +138,8 @@ Example:
 
 If in this example the field `header` turns out not to be set ("false"), an
 empty string is returned. Otherwise TYPO3 chooses between two different
-renderings of some content depending on whether the :ref:`cobj-case-key` field
-:typoscript:`layout` is "1" or not (:ref:`cobj-case-default`).
+renderings of some content depending on whether the :ref:`key <cobj-case-key>` field
+:typoscript:`layout` is "1" or not (:ref:`default <cobj-case-default>`).
 
 The result is in either case wrapped with :typoscript:`|<br>`.
 

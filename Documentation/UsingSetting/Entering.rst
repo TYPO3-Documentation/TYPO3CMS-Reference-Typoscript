@@ -20,7 +20,7 @@ is recommended as you can keep it under version control, deploy it etc.
 To store your TypoScript in a file, you can use your site set as
 :ref:`TypoScript provider <t3coreapi:site-sets-typoscript>` or store the
 TypoScript in a :ref:`custom site package <t3sitepackage:start>`. Use
-the :ref:`submodule-active-typoscript` to analyze how the TypoScript is
+the :ref:`Submodule "Active TypoScript" <submodule-active-typoscript>` to analyze how the TypoScript is
 interpreted after parsing and combining.
 
 When kept in the database, TypoScript is entered manually in both the
@@ -149,7 +149,7 @@ TypoScript record.
         :alt: "Include TypoScript sets" by choosing from the "Available items"
 
 ..  tip::
-    The section :ref:`extdev-add-typoscript` explains how extension
+    The section :ref:`Provide frontend TypoScript in a TYPO3 extension <extdev-add-typoscript>` explains how extension
     developers can make TypoScript available for inclusion in their
     extensions.
 
@@ -199,7 +199,7 @@ configuration array build after all TypoScript configurations are parsed and
 combined. TypoScript Constants and Setup are listed separately here and
 Constant usage is shown. However there is no information what location the
 setting came from. Use the
-:ref:`typoscript-syntax-typoscript-templates-structure-analyzer` to analyze where
+:ref:`Submodule "Included TypoScript" <typoscript-syntax-typoscript-templates-structure-analyzer>` to analyze where
 TypoScript was set and this module to look at the result.
 
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/ActiveTypoScript.png

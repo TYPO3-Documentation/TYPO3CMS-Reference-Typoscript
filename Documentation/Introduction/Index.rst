@@ -58,7 +58,7 @@ User TSconfig
 
 User TSconfig can be made available globally for certain user groups or certain
 users. It cannot be set for just one site or page. It can however override
-:ref:`about-page-tsconfig`.
+:ref:`Page TSconfig <about-page-tsconfig>`.
 
 For the possibilities see the
 `User TSconfig reference <https://docs.typo3.org/permalink/t3tsref:usertoplevelobjects>`_.

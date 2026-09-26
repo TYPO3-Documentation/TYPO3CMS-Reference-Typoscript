@@ -78,7 +78,7 @@ this file:
 
     @import 'EXT:my_sitepackage/Configuration/TsConfig/User/default.tsconfig'
 
-The PSR-14 event :ref:`t3coreapi:BeforeLoadedUserTsConfigEvent` is available to
+The PSR-14 event :ref:`BeforeLoadedUserTsConfigEvent <t3coreapi:BeforeLoadedUserTsConfigEvent>` is available to
 add global static user TSconfig before anything else is loaded.
 
 User TSconfig, compatible with TYPO3 v12 and v13

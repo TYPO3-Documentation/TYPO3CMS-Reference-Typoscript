@@ -163,7 +163,7 @@ string
 
     Any property in TypoScript is a string technically. String can be defined
     in a single line or with multiple lines, using the
-    :ref:`typoscript-syntax-syntax-multiline-values`.
+    :ref:`Multiline assignment with "(" and ")" <typoscript-syntax-syntax-multiline-values>`.
 
     ..  rubric:: Example
 

@@ -159,7 +159,7 @@ edit_docModuleUpload
         :type: language-key
 
         One of the language keys. For current options see
-        :ref:`t3coreapi:i18n_languages`, for example `dk`, `de`, `es` etc.
+        :ref:`Supported languages <t3coreapi:i18n_languages>`, for example `dk`, `de`, `es` etc.
 
     ..  _user-setup-neverHideAtCopy:
 

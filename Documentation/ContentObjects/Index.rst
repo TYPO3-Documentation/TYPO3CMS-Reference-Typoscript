@@ -14,7 +14,7 @@ Content Objects (cObject)
 are some object types that can be used, when the reference calls for a cObject
 data type.
 
-Please see :ref:`cobjects-general-information` for an introduction.
+Please see :ref:`Content objects (general information) <cobjects-general-information>` for an introduction.
 
 ..  toctree::
     :titlesonly:

@@ -35,7 +35,7 @@ extTarget
 
 ..  confval:: extTarget
     :name: typolink-extTarget
-    :type: string / :ref:`stdwrap`
+    :type: string / :ref:`stdWrap <stdwrap>`
     :Default: "" (no target set)
 
     Target used for external links
@@ -48,7 +48,7 @@ fileTarget
 
 ..  confval:: fileTarget
     :name: typolink-fileTarget
-    :type: string / :ref:`stdwrap`
+    :type: string / :ref:`stdWrap <stdwrap>`
 
     Target used for file links
 
@@ -60,7 +60,7 @@ language
 
 ..  confval:: language
     :name: typolink-language
-    :type: :ref:`data-type-integer`
+    :type: :ref:`integer <data-type-integer>`
 
     Language uid for link target
 
@@ -79,7 +79,7 @@ target
 
 ..  confval:: target
     :name: typolink-target
-    :type: string / :ref:`stdwrap`
+    :type: string / :ref:`stdWrap <stdwrap>`
 
     Target used for internal links
 
@@ -91,7 +91,7 @@ no\_cache
 
 ..  confval:: no_cache
     :name: typolink-no-cache
-    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
 
     Adds `&no_cache=1` to the link
 
@@ -103,7 +103,7 @@ additionalParams
 
 ..  confval:: additionalParams
     :name: _typolink-additionalParams
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     This is parameters that are added to the end of the URL. This must be
     code ready to insert after the last parameter.
@@ -137,7 +137,7 @@ addQueryString
 
 ..  confval:: addQueryString
     :name: typolink-addQueryString
-    :type: :ref:`data-type-boolean` / :ref:`data-type-string`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`string <data-type-string>`
 
     Add the current query string to the start of the link.
 
@@ -174,7 +174,7 @@ addQueryString.exclude
 
 ..  confval:: addQueryString.exclude
     :name: typolink-addQueryString-exclude
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     List of query arguments to exclude from the link. Typical examples are
     :typoscript:`L` or :typoscript:`cHash`.
@@ -201,7 +201,7 @@ wrap
 
 ..  confval:: wrap
     :name: typolink-wrap
-    :type: :ref:`data-type-wrap` / :ref:`stdwrap`
+    :type: :ref:`Wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
     Wraps the links.
 
@@ -213,7 +213,7 @@ ATagBeforeWrap
 
 ..  confval:: ATagBeforeWrap
     :name: typolink-ATagBeforeWrap
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
     :Default: 0
 
     If set, the link is first wrapped with :typoscript:`wrap` and then the
@@ -227,7 +227,7 @@ parameter
 
 ..  confval:: parameter
     :name: typolink-parameter
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     This is the main data that is used for creating the link. It can be
     the id of a page, the URL of some external page, an email address or
@@ -368,17 +368,17 @@ forceAbsoluteUrl
 
 ..  confval:: forceAbsoluteUrl
     :name: typolink-forceAbsoluteUrl
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
     :Default: :php:`false`
 
     Forces links to internal pages to be absolute, thus having a proper
     URL scheme and domain prepended.
 
-    Additional sub-property: :ref:`typolink-forceAbsoluteUrl-scheme`
+    Additional sub-property: :ref:`forceAbsoluteUrl.scheme <typolink-forceAbsoluteUrl-scheme>`
 
 ..  note::
     If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
-    is enabled, :ref:`typolink-forceAbsoluteUrl-scheme` is overridden.
+    is enabled, :ref:`forceAbsoluteUrl.scheme <typolink-forceAbsoluteUrl-scheme>` is overridden.
 
 
 ..  _typolink-forceAbsoluteUrl-scheme:
@@ -388,7 +388,7 @@ forceAbsoluteUrl.scheme
 
 ..  confval:: forceAbsoluteUrl.scheme
     :name: typolink-forceAbsoluteUrl-scheme
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     :Values: `http` / `https`
     :Default: `http`
@@ -407,7 +407,7 @@ title
 
 ..  confval:: title
     :name: typolink-title
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Sets the title parameter of the A-tag.
 
@@ -419,7 +419,7 @@ JSwindow\_params
 
 ..  confval:: JSwindow_params
     :name: typolink-JSwindow-params
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     Preset values for opening the window. This example lists almost all
     possible attributes:
@@ -437,7 +437,7 @@ returnLast
 
 ..  confval:: returnLast
     :name: typolink-returnLast
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     If set to "url", then it will return the URL of the link
     (:php:`$this->lastTypoLinkUrl`).
@@ -461,7 +461,7 @@ section
 
 ..  confval:: section
     :name: typolink-section
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     If this value is present, it's prepended with a "#" and placed after
     any internal URL to another page in TYPO3.
@@ -477,7 +477,7 @@ ATagParams
 
 ..  confval:: ATagParams
     :name: typolink-ATagParams
-    :type: <A>-params / :ref:`stdwrap`
+    :type: <A>-params / :ref:`stdWrap <stdwrap>`
 
     Additional parameters
 
@@ -496,7 +496,7 @@ linkAccessRestrictedPages
 
 ..  confval:: linkAccessRestrictedPages
     :name: typolink-linkAccessRestrictedPages
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     If set, typolinks pointing to access restricted pages will still link
     to the page even though the page cannot be accessed.
@@ -509,7 +509,7 @@ userFunc
 
 ..  confval:: userFunc
     :name: typolink-userFunc
-    :type: :ref:`data-type-function-name`
+    :type: :ref:`function name <data-type-function-name>`
 
     All of the :typoscript:`typolink` TypoScript configuration will be parsed
     and evaluated by the TYPO3 Core's :php:`LinkFactory->create()` method, and
@@ -568,7 +568,7 @@ userFunc
         (:php:`$cObj`) and other aspects, see
         :ref:`TYPO3 request object <t3coreapi:typo3-request>`.
 
-    See :ref:`typolink-userfunc-examples` for more details.
+    See :ref:`Examples for typolink.userFunc <typolink-userfunc-examples>` for more details.
 
 ..  index:: typolink; Resource references
 ..  _typolink-resource_references:
@@ -597,13 +597,13 @@ Resource handler key (`page`)
     The resource handler key is a list of available handlers that TYPO3 can work
     with. At the time of writing these handlers are:
 
-    -   :ref:`typolink-handler-page`
-    -   :ref:`typolink-handler-file`
-    -   :ref:`typolink-handler-folder`
-    -   :ref:`typolink-handler-url`
-    -   :ref:`typolink-handler-email`
-    -   :ref:`typolink-handler-record` (see :php:`\TYPO3\CMS\Core\LinkHandling\RecordLinkHandler`)
-    -   :ref:`typolink-handler-phone` (see :php:`\TYPO3\CMS\Core\LinkHandling\TelephoneLinkHandler`)
+    -   :ref:`page <typolink-handler-page>`
+    -   :ref:`file <typolink-handler-file>`
+    -   :ref:`folder <typolink-handler-folder>`
+    -   :ref:`url <typolink-handler-url>`
+    -   :ref:`email <typolink-handler-email>`
+    -   :ref:`record <typolink-handler-record>` (see :php:`\TYPO3\CMS\Core\LinkHandling\RecordLinkHandler`)
+    -   :ref:`phone <typolink-handler-phone>` (see :php:`\TYPO3\CMS\Core\LinkHandling\TelephoneLinkHandler`)
 
     More keys can be added via :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']` in
     an associative array where the key is the handler key and the value is a
@@ -645,7 +645,7 @@ page.uid
 
 ..  confval:: page.uid
     :name: typolink-handler-page-uid
-    :type: :ref:`data-type-integer` / :ref:`data-type-string`
+    :type: :ref:`integer <data-type-integer>` / :ref:`string <data-type-string>`
     :Example:  `t3://page?uid=13`
 
     The UID (field `uid`) of a page record, or "current" to reference
@@ -661,7 +661,7 @@ page.alias
 
 ..  confval:: page.alias
     :name: typolink-handler-page-alias
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
     :Example: `t3://page?alias=myfunkyalias`
 
     The alias (field `alias`) of a page record (as an alternative to
@@ -674,11 +674,11 @@ page.type
 
 ..  confval:: page.type
     :name: typolink-handler-page-type
-    :type: :ref:`data-type-integer`
+    :type: :ref:`integer <data-type-integer>`
     :Default: 0
     :Example: `t3://page?uid=13&type=3`
 
-    The type (:ref:`setup-page-typenum` property of the :ref:`page` top level
+    The type (:ref:`Properties <setup-page-typenum>` property of the :ref:`PAGE object type in TypoScript <page>` top level
     object). `t3://page?uid=13&type=3` will reference page 13 in type 3.
 
 ..  _typolink-handler-page-parameters:
@@ -700,7 +700,7 @@ page.fragment
 
 ..  confval:: page.fragment
     :name: typolink-handler-page-fragment
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
     :Example: `t3://page?uid=13&type=3#123`
 
     The anchor or section to jump to. Must be prefixed with `#`.
@@ -727,7 +727,7 @@ file.uid
 
 ..  confval:: file.uid
     :name: typolink-handler-file-uid
-    :type: :ref:`data-type-integer`
+    :type: :ref:`integer <data-type-integer>`
     :Example:  `t3://file?uid=13`
 
     The UID of a file within the file abstraction layer (FAL) database table
@@ -740,7 +740,7 @@ file.identifier
 
 ..  confval:: file.identifier
     :name: typolink-handler-file-identifier
-    :type: :ref:`data-type-integer`
+    :type: :ref:`integer <data-type-integer>`
     :Example: `t3://file?identifier=fileadmin/path/myfile.jpg`
 
     The identifier of a file using combined `<storage>:<path>` reference or a direct
@@ -778,7 +778,7 @@ folder.identifier
 
 ..  confval:: folder.identifier
     :name: typolink-handler-folder-identifier
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
     :Example:  `t3://folder?identifier=fileadmin`
 
     The identifier of a given folder.
@@ -790,7 +790,7 @@ folder.storage
 
 ..  confval:: folder.storage
     :name: typolink-handler-folder-storage
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
     :Example: `t3://folder?storage=1&identifier=myfolder`
     :Default: 0
 
@@ -862,12 +862,12 @@ record.identifier
 
 ..  confval:: record.identifier
     :name: typolink-handler-record-identifier
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     The (individual) identifier of the link building configuration to be used.
 
     The same identifier is used as key in the TypoScript configuration of
-    the frontend rendering: :ref:`setup-config-recordLinks` and the :ref:`TSconfig
+    the frontend rendering: :ref:`Properties of 'config' <setup-config-recordLinks>` and the :ref:`TSconfig
     backend link handler configuration <pagetcemaintables-linkhandler>`
 
 ..  _typolink-handler-record-uid:
@@ -877,7 +877,7 @@ record.uid
 
 ..  confval:: record.uid
     :name: typolink-handler-record-uid
-    :type: :ref:`data-type-integer`
+    :type: :ref:`integer <data-type-integer>`
 
     The UID of the referenced record to be linked.
 

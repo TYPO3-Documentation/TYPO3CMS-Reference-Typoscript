@@ -38,7 +38,7 @@ Options:
     ..  confval:: if
         :name: LanguageMenuProcessor-if
         :Required: false
-        :type: :ref:`if` condition
+        :type: :ref:`if <if>` condition
 
         Only if the condition is met the data processor is executed.
 
@@ -49,7 +49,7 @@ Options:
     ..  confval:: languages
         :name: LanguageMenuProcessor-languages
         :Required: true
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: "auto"
         :Example: "0,1,2"
 
@@ -64,7 +64,7 @@ Options:
     ..  confval:: addQueryString.exclude
         :name: LanguageMenuProcessor-addQueryString-exclude
         :Required: true
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: ""
         :Example: "gclid,contrast"
 
@@ -78,7 +78,7 @@ Options:
     ..  confval:: as
         :name: LanguageMenuProcessor-as
         :Required: false
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: defaults to the fieldName
 
         The variable name to be used in the Fluid template.
@@ -88,7 +88,7 @@ Options:
 Example: Menu of all language from site configuration
 =====================================================
 
-Please see also :ref:`dataProcessing-about-examples`.
+Please see also :ref:`About the examples <dataProcessing-about-examples>`.
 
 ..  rubric:: TypoScript
 

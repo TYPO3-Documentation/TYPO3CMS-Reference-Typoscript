@@ -153,7 +153,7 @@ dontCheckPid
 
 ..  confval:: dontCheckPid
     :name: records-dontCheckPid
-    :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     Normally a record cannot be selected, if its parent page (pid) is not
@@ -246,7 +246,7 @@ Contrary to the previous example, in this case the :typoscript:`conf` property
 is present and defines a very simple rendering of each content element
 (i.e. the header with a direct link to the content element).
 
-However, the same can be achieved with a :ref:`cobj-fluidtemplate` and
+However, the same can be achieved with a :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` and
 data processing. This way templating is much more flexible. See the following
 example from the system extension :file:`fluid_styled_content`:
 

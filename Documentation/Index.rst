@@ -28,7 +28,7 @@ This document is a complete reference of all object types and properties of
 TypoScript as used in frontend TypoScript and backend TypoScript, also called TSconfig.
 
 You can find a quick guide to TypoScript configuration at
-:ref:`guide` and
+:ref:`Getting started: A quick introduction into TypoScript <guide>` and
 explanations of TypoScript syntax in the ":ref:`TypoScript Syntax <typoscript-syntax>`"
 chapter.
 

@@ -18,7 +18,7 @@ An imgResource one of the following:
     :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.  Standard is
     gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp.
 
-#.  A GIFBUILDER object. See the object reference for :ref:`gifbuilder`.
+#.  A GIFBUILDER object. See the object reference for :ref:`GIFBUILDER <gifbuilder>`.
 
 ..  rubric:: Examples
 
@@ -50,7 +50,7 @@ ext
 
 ..  confval:: ext
     :name: imgresource-ext
-    :type: string / :ref:`stdwrap`
+    :type: string / :ref:`stdWrap <stdwrap>`
     :Default: web
 
     Target file extension for the processed image. The value :typoscript:`web` checks if
@@ -70,7 +70,7 @@ width
 
 ..  confval:: width
     :name: imgresource-width
-    :type: integer / :ref:`stdwrap`
+    :type: integer / :ref:`stdWrap <stdwrap>`
 
     If both the width and the height are set and one of the numbers is
     appended by an :typoscript:`m`, the proportions will be preserved and thus
@@ -117,9 +117,9 @@ height
 
 ..  confval:: height
     :name: imgresource-height
-    :type: integer / :ref:`stdwrap`
+    :type: integer / :ref:`stdWrap <stdwrap>`
 
-    See :ref:`imgresource-width`.
+    See :ref:`width <imgresource-width>`.
 
 
 ..  _imgresource-params:
@@ -129,7 +129,7 @@ params
 
 ..  confval:: params
     :name: imgresource-params
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     GraphicsMagick/ImageMagick command line:
 
@@ -143,7 +143,7 @@ sample
 
 ..  confval:: sample
     :name: imgresource-sample
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
     :Default: 0
 
     If set, `-sample` is used to scale images instead of `-geometry`. Sample
@@ -157,7 +157,7 @@ noScale
 
 ..  confval:: noScale
     :name: imgresource-noScale
-    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     If set, the image itself will never be scaled. Only width and height
@@ -188,7 +188,7 @@ crop
 
 ..  confval:: crop
     :name: imgresource-crop
-    :type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
     :Default: not-set (when file/image is a file_reference the crop value of
 
     ..  versionchanged:: 13.2
@@ -236,7 +236,7 @@ cropVariant
 
 ..  confval:: cropVariant
     :name: imgresource-cropVariant
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
     :Default: default
 
     Since it's possible to define certain :ref:`crop variants <t3coreapi:cropvariants>`
@@ -258,7 +258,7 @@ frame
 
 ..  confval:: frame
     :name: imgresource-frame
-    :type: :ref:`data-type-integer` / :ref:`stdwrap`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
     Chooses the frame in a PDF or GIF file.
 
@@ -272,11 +272,11 @@ import
 
 ..  confval:: import
     :name: imgresource-import
-    :type: :ref:`data-type-path` / :ref:`stdwrap`
+    :type: :ref:`path <data-type-path>` / :ref:`stdWrap <stdwrap>`
 
     *value* should be set to the path of the file
 
-    with :ref:`stdwrap` you get the filename from the data-array
+    with :ref:`stdWrap <stdwrap>` you get the filename from the data-array
 
     ..  rubric:: Examples
 
@@ -294,7 +294,7 @@ treatIdAsReference
 
 ..  confval:: treatIdAsReference
     :name: imgresource-treatIdAsReference
-    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     If set, given UIDs are interpreted as UIDs to sys_file_reference
@@ -309,7 +309,7 @@ maxW
 
 ..  confval:: maxW
     :name: imgresource-maxW
-    :type: integer / :ref:`stdwrap`
+    :type: integer / :ref:`stdWrap <stdwrap>`
 
     Maximum width
 
@@ -321,7 +321,7 @@ maxH
 
 ..  confval:: maxH
     :name: imgresource-maxH
-    :type: integer / :ref:`stdwrap`
+    :type: integer / :ref:`stdWrap <stdwrap>`
 
     Maximum height
 
@@ -333,7 +333,7 @@ minW
 
 ..  confval:: minW
     :name: imgresource-minW
-    :type: integer / :ref:`stdwrap`
+    :type: integer / :ref:`stdWrap <stdwrap>`
 
     Minimum width (overrules maxW/maxH)
 
@@ -345,7 +345,7 @@ minH
 
 ..  confval:: minH
     :name: imgresource-minH
-    :type: integer / :ref:`stdwrap`
+    :type: integer / :ref:`stdWrap <stdwrap>`
 
     Minimum height (overrules maxW/maxH)
 
@@ -357,7 +357,7 @@ stripProfile
 
 ..  confval:: stripProfile
     :name: imgresource-stripProfile
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
     :Default: 0
 
     If set, the GraphicsMagick/ImageMagick-command will use a
@@ -396,7 +396,7 @@ m.mask
 
 ..  confval:: m.mask
     :name: imgresource-masking-mask
-    :type: :ref:`data-type-imgResource`
+    :type: :ref:`imgResource <data-type-imgResource>`
 
     The mask with which the image is masked onto :typoscript:`m.bgImg`. Both :typoscript:`m.mask`
     and :typoscript:`m.bgImg` **is scaled to fit** the size of the imgResource image!
@@ -411,7 +411,7 @@ m.bgImg
 
 ..  confval:: m.bgImg
     :name: imgresource-masking-bgImg
-    :type: :ref:`data-type-imgResource`
+    :type: :ref:`imgResource <data-type-imgResource>`
 
     **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
@@ -423,7 +423,7 @@ m.bottomImg
 
 ..  confval:: m.bottomImg
     :name: imgresource-masking-bottomImg
-    :type: :ref:`data-type-imgResource`
+    :type: :ref:`imgResource <data-type-imgResource>`
 
     An image masked by :typoscript:`m.bottomImg_mask` onto :typoscript:`m.bgImg` before the
     imgResources is masked by :typoscript:`m.mask`.
@@ -444,7 +444,7 @@ m.bottomImg\_mask
 
 ..  confval:: m.bottomImg_mask
     :name: imgresource-masking-bottomImg-mask
-    :type: :ref:`data-type-imgResource`
+    :type: :ref:`imgResource <data-type-imgResource>`
 
     (optional)
 

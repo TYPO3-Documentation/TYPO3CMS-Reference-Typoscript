@@ -894,7 +894,8 @@ Properties
             :Path: options.pageTree.label.<page-id>
 
             ..  versionadded:: 13.1
-                This setting is the successor of :ref:`useroptions-pageTree-backgroundColor`.
+                This setting is the successor of
+                :ref:`pageTree.backgroundColor <useroptions-pageTree-backgroundColor>`.
 
             Labels offer customizable color markings for tree nodes and require an
             associated label for accessibility.
@@ -914,7 +915,7 @@ Properties
 
             ..  note::
                 Only one label per page can be set through this method. Use the
-                PSR-14 event :ref:`t3coreapi:AfterPageTreeItemsPreparedEvent` to assign
+                PSR-14 event :ref:`AfterPageTreeItemsPreparedEvent <t3coreapi:AfterPageTreeItemsPreparedEvent>` to assign
                 multiple labels to a page.
 
         ..  todo:: does this still work with site configuration?

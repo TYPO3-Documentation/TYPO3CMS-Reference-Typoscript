@@ -63,7 +63,7 @@ The following Item states are listed from the least to the highest priority:
 
     ..  confval:: NO
         :name: tmenu-common-property-no
-        :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
         :Default: 1 (true)
 
 
@@ -74,7 +74,7 @@ The following Item states are listed from the least to the highest priority:
 
     ..  confval:: IFSUB
         :name: tmenu-common-property-ifsub
-        :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
         :Default: 0
 
         Enable/Configuration for menu items which has subpages.
@@ -83,7 +83,7 @@ The following Item states are listed from the least to the highest priority:
 
     ..  confval:: ACT
         :name: tmenu-common-property-act
-        :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
         :Default: 0
 
         Enable/Configuration for menu items which are found in the rootLine.
@@ -92,7 +92,7 @@ The following Item states are listed from the least to the highest priority:
 
     ..  confval:: ACTIFSUB
         :name: tmenu-common-property-actifsub
-        :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
         :Default: 0
 
         Enable/Configuration for menu items which are found in the rootLine
@@ -102,7 +102,7 @@ The following Item states are listed from the least to the highest priority:
 
     ..  confval:: CUR
         :name: tmenu-common-property-cur
-        :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
         :Default: 0
 
         Enable/Configuration for a menu item if the item is the current page.
@@ -111,7 +111,7 @@ The following Item states are listed from the least to the highest priority:
 
     ..  confval:: CURIFSUB
         :name: tmenu-common-property-curifsub
-        :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
         :Default: 0
 
         Enable/Configuration for a menu item if the item is the current page
@@ -121,7 +121,7 @@ The following Item states are listed from the least to the highest priority:
 
     ..  confval:: USR
         :name: tmenu-common-property-usr
-        :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
         :Default: 0
 
         Enable/Configuration for menu items which are access restricted pages
@@ -131,7 +131,7 @@ The following Item states are listed from the least to the highest priority:
 
     ..  confval:: SPC
         :name: tmenu-common-property-spc
-        :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
         :Default: 0
 
         Enable/Configuration for 'Spacer' pages.
@@ -143,7 +143,7 @@ The following Item states are listed from the least to the highest priority:
 
     ..  confval:: USERDEF1
         :name: tmenu-common-property-userdef1
-        :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
 
         User-defined, see :confval:`menu-common-properties-itemArrayProcFunc` for details on how
         to use this.
@@ -156,7 +156,7 @@ The following Item states are listed from the least to the highest priority:
 
     ..  confval:: USERDEF2
         :name: tmenu-common-property-userdef2
-        :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
 
         Same like :confval:`USERDEF1 <tmenu-common-property-userdef1>` but has a higher
         priority.
@@ -179,7 +179,7 @@ Properties
 
     ..  confval:: expAll
         :name: menu-common-properties-expAll
-        :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
 
         If this is true, the menu will always show the menu on the level
         underneath the menu item. This corresponds to a situation where a user
@@ -190,7 +190,7 @@ Properties
 
     ..  confval:: sectionIndex
         :name: menu-common-properties-sectionIndex
-        :type: :ref:`data-type-boolean`
+        :type: :ref:`boolean <data-type-boolean>`
 
         If this property is set, then the
         menu will not consist of links to pages on the "next level" but rather
@@ -208,7 +208,7 @@ Properties
 
         ..  confval:: sectionIndex.type
             :name: menu-common-properties-sectionIndex-type
-            :type: :ref:`data-type-string` ("all" / "header")
+            :type: :ref:`string <data-type-string>` ("all" / "header")
 
             "all"
                 The "Index"-checkbox is not considered and all content elements - by
@@ -224,7 +224,7 @@ Properties
 
         ..  confval:: sectionIndex.includeHiddenHeaders
             :name: menu-common-properties-sectionIndex-includeHiddenHeaders
-            :type: :ref:`data-type-boolean`
+            :type: :ref:`boolean <data-type-boolean>`
 
              If you set this and sectionIndex.type is set to "header",
              also elements with a header layout set to "Hidden" will appear
@@ -234,7 +234,7 @@ Properties
 
         ..  confval:: sectionIndex.useColPos
             :name: menu-common-properties-sectionIndex-useColPos
-            :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+            :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
             :Default: 0
 
             This property allows you to set the colPos which should be used in the
@@ -262,7 +262,7 @@ Properties
 
     ..  confval:: forceTypeValue
         :name: menu-common-properties-forceTypeValue
-        :type: :ref:`data-type-integer`
+        :type: :ref:`integer <data-type-integer>`
 
         If set, the `&type` parameter of the link is forced to this value
         regardless of target.
@@ -299,7 +299,7 @@ Properties
 
     ..  confval:: alternativeSortingField
         :name: menu-common-properties-alternativeSortingField
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
 
         Normally the menu items are sorted by the fields "sorting" in the
         pages- and tt\_content-table. Here you can enter a list of fields that
@@ -315,29 +315,29 @@ Properties
 
     ..  confval:: minItems
         :name: menu-common-properties-minItems
-        :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
         The minimum items in the menu. If the number of pages does not reach
         this level, a dummy-page with the title "..." and
         uid=[currentpage\_id] is inserted.
 
-        Takes precedence over HMENU property :ref:`hmenu-minitems`.
+        Takes precedence over HMENU property :ref:`minItems <hmenu-minitems>`.
 
     ..  rubric:: maxItems
 
     ..  confval:: maxItems
         :name: menu-common-properties-maxItems
-        :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
         The maximum items in the menu. More items will be ignored.
 
-        Takes precedence over HMENU property :ref:`hmenu-maxitems`.
+        Takes precedence over HMENU property :ref:`maxItems <hmenu-maxitems>`.
 
     ..  rubric:: begin
 
     ..  confval:: begin
         :name: menu-common-properties-begin
-        :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
         The first item in the menu.
 
@@ -345,16 +345,16 @@ Properties
 
     ..  confval:: debugItemConf
         :name: menu-common-properties-debugItemConf
-        :type: :ref:`data-type-boolean`
+        :type: :ref:`boolean <data-type-boolean>`
 
         Outputs (by the :php:`debug()` function) the configuration arrays for each
-        menu item. Useful to debug :ref:`optionsplit` things and such...
+        menu item. Useful to debug :ref:`optionSplit <optionsplit>` things and such...
 
     ..  rubric:: overrideId
 
     ..  confval:: overrideId
         :name: menu-common-properties-overrideId
-        :type: :ref:`data-type-integer` (page id)
+        :type: :ref:`integer <data-type-integer>` (page id)
 
         If set, then all links in the menu will point to this pageid. Instead
         the real uid of the page is sent by the parameter "&real\_uid=[uid]".
@@ -367,7 +367,7 @@ Properties
 
     ..  confval:: addParams
         :name: menu-common-properties-addParams
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
 
         Additional parameter for the menu links.
 
@@ -377,7 +377,7 @@ Properties
 
     ..  confval:: showAccessRestrictedPages
         :name: menu-common-properties-showaccessrestrictedpages
-        :type: :ref:`data-type-integer` (page ID) / keyword "NONE"
+        :type: :ref:`integer <data-type-integer>` (page ID) / keyword "NONE"
 
         If set, pages in the menu will include pages with frontend user group
         access enabled. However the page is of course not accessible and
@@ -406,7 +406,7 @@ Properties
 
     ..  confval:: additionalWhere
         :name: menu-common-properties-additionalWhere
-        :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
         Adds an additional part to the WHERE clause for this menu.
         Make sure to start the part with "AND "!
@@ -439,6 +439,6 @@ Properties
 
     ..  confval:: submenuObjSuffixes
         :name: menu-common-properties-submenuObjSuffixes
-        :type: :ref:`data-type-string` / :ref:`optionsplit`
+        :type: :ref:`string <data-type-string>` / :ref:`optionSplit <optionsplit>`
 
         Defines a suffix for alternative sub-level menu objects.

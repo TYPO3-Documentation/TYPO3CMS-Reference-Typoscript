@@ -37,7 +37,7 @@ Example: Usage with the DatabaseQueryProcessor
 ==============================================
 
 Example usage for the Data Processor in conjunction with the
-:ref:`DatabaseQueryProcessor`.
+:ref:`database-query data processor <DatabaseQueryProcessor>`.
 
 ..  literalinclude:: _RecordTransformationProcessor/_WithDatabaseQueryProcessor.typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
@@ -94,7 +94,7 @@ Options of the `record-transformation` data processor
 
     ..  confval:: as
         :name: RecordTransformationProcessor-as
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: 'record' or 'records'
 
         The target variable containing the resolved record objects.
@@ -104,7 +104,7 @@ Options of the `record-transformation` data processor
 
     ..  confval:: if
         :name: RecordTransformationProcessor-if
-        :type: :ref:`if` condition
+        :type: :ref:`if <if>` condition
         :Default: ''
 
         Only if the condition is met the Data Processor is executed.
@@ -113,7 +113,7 @@ Options of the `record-transformation` data processor
 
     ..  confval:: table
         :name: RecordTransformationProcessor-table
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: auto-resolved
 
         The name of the database table of the records. Leave empty to auto-resolve
@@ -125,7 +125,7 @@ Options of the `record-transformation` data processor
 
     ..  confval:: variableName
         :name: RecordTransformationProcessor-variableName
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: 'data'
 
         The variable that contains the record(s) from a previous Data Processor,

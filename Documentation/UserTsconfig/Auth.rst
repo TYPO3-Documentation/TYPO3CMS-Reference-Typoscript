@@ -55,7 +55,7 @@ auth.mfa.disableProviders
 ..  confval:: auth.mfa.disableProviders
     :name: auth.mfa.disableProviders
     :type: string, comma separated list of strings
-    :Example: :ref:`user-auth-mfa-disableProviders-example`
+    :Example: :ref:`Example: Disable a multi-factor authentication provider <user-auth-mfa-disableProviders-example>`
 
     Disable multi-factor authentication providers for the current user or group.
     It overrules the configuration from the Backend usergroup "Access List". This
@@ -70,7 +70,7 @@ auth.mfa.recommendedProvider
 ..  confval:: auth.mfa.recommendedProvider
     :name: auth.mfa.recommendedProvider
     :type: string
-    :Example: :ref:`user-auth-mfa-recommendedProvider-example`
+    :Example: :ref:`Example: Set a recommended multi-factor authentication provider <user-auth-mfa-recommendedProvider-example>`
 
     Set a recommended multi-factor authentication provider on a per user or user group basis, which overrules
     the global configuration.

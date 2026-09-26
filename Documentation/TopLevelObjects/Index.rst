@@ -25,8 +25,8 @@ Top-level object                      Top-level object type
 ===================================== =========================
 page | ...                            :ref:`PAGE <page-datatype>`
 config                                :ref:`CONFIG <config-datatype>`
-:ref:`plugin`
-:ref:`tlo-module`
+:ref:`plugin <plugin>`
+:ref:`module <tlo-module>`
 :ref:`styles <tlo-styles>`
 :ref:`lib <tlo-lib>`
 :ref:`tt_* <tlo-tt>`

@@ -108,7 +108,7 @@ addItems
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.addItems`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
     ..  warning::
         Do not add page types this way (using `TCEFORM.pages.doktype.addItems`), instead the proper
@@ -153,7 +153,7 @@ altLabels
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.altLabels`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  _tceform-altLabels-example:
 
@@ -380,7 +380,7 @@ config
 
      Also, if for example the :typoscript:`max` definition of a field is made
      larger than the TCA definition of that field, you may need to to change
-     the file :file:`ext_tables.sql` (see :ref:`t3coreapi:ext_tables-sql`)
+     the file :file:`ext_tables.sql` (see :ref:`ext_tables.sql <t3coreapi:ext_tables-sql>`)
      to adjust column definitions, especially when using the
      :ref:`Auto-generated structure <t3coreapi:auto-generated-db-structure>`.
 
@@ -442,7 +442,7 @@ config.treeConfig
 
         Where `sDEF` is the sheet name and :typoscript:`myext_pi1` the name
         of the plugin. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 
 ..  index::
@@ -522,13 +522,13 @@ disabled
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.disabled`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.disabled`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  _tceform-disabled-example:
 
@@ -572,7 +572,7 @@ disableNoMatchingValueElement
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.disableNoMatchingValueElement`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  _pageFormEngineDisableNoMatchingElement-example:
 
@@ -629,7 +629,7 @@ fileFolderConfig
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.fileFolderConfig.folder`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  index::
     Records; select items user function
@@ -658,7 +658,7 @@ itemsProcFunc
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.itemsProcFunc`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  index::
     Records; select items remove
@@ -686,7 +686,7 @@ keepItems
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.keepItems`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  _tceform-keepItems-example:
 
@@ -726,7 +726,7 @@ label
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.label`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  _tceform_label-example:
 
@@ -766,7 +766,7 @@ noMatchingValue_label
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.noMatchingValue_label`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  _tceform-noMatchingValue_label-example:
 
@@ -808,7 +808,7 @@ removeItems
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.removeItems`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  _tceform-removeItems-example:
 
@@ -835,7 +835,7 @@ sheetDescription
     `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetDescription`.
 
     Where `sDEF` is the sheet name. For a description
-    see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+    see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 
 ..  index::
@@ -855,7 +855,7 @@ sheetShortDescr
     `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetShortDescription`.
 
     Where `sDEF` is the sheet name. For a description
-    see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+    see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  index::
     FlexForm; Sheet title
@@ -874,7 +874,7 @@ sheetTitle
     `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetTitle`.
 
     Where `sDEF` is the sheet name. For a description
-    see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
+    see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
 
 ..  _tceform-sheetTitle-example:
 

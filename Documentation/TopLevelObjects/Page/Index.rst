@@ -77,7 +77,7 @@ like the following:
     </html>
 
 This default behaviour can be changed by setting the property
-:ref:`setup-config-disableallheadercode`:
+:ref:`Provide JSON and disable HTML headers <setup-config-disableallheadercode>`:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -212,7 +212,7 @@ Properties
 
     ..  confval:: bodyTagAdd
         :name: page-bodyTagAdd
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Example: :ref:`Add a parameter to the body tag <setup-page-bodytagadd-example>`
 
         This content is added inside of the opening :html:`<body>` tag right
@@ -225,7 +225,7 @@ Properties
         :name: page-bodyTagCObject
         :type: cObject
 
-        This is the default body tag. It is overridden by :ref:`confval-page-bodytag`,
+        This is the default body tag. It is overridden by :ref:`bodyTag <confval-page-bodytag>`,
         if that is set.
 
         ..  note::  
@@ -245,7 +245,7 @@ Properties
                *   :ref:`A page type used for JSON data <page_examples_json>`
 
             Configuration for the page. Any entries made here override the same
-            entries in the top-level object :ref:`config`.
+            entries in the top-level object :ref:`config: TypoScript configuration <config>`.
 
     ..  rubric:: cssInline.[array]
 
@@ -265,7 +265,7 @@ Properties
         :type: :ref:`cObject <data-type-cobject>`
         :Example: :ref:`Add a script and a comment to the page footer <setup-page-footerdata-example>`
 
-        Same as :ref:`setup-page-headerData`,
+        Same as :ref:`Properties <setup-page-headerData>`,
         except that this block gets included at the bottom of the page
         (just before the closing :html:`</body>` tag).
 
@@ -297,7 +297,7 @@ Properties
 
     ..  confval:: headTag
         :name: page-headTag
-        :type: string / :ref:`stdwrap`
+        :type: string / :ref:`stdWrap <stdwrap>`
         :Default: `<head>`
 
         Head-tag if alternatives are wanted
@@ -306,14 +306,14 @@ Properties
 
     ..  confval:: includeCSS.[array]
         :name: page-includeCSS
-        :type: :ref:`data-type-resource`
+        :type: :ref:`resource <data-type-resource>`
         :Example: :ref:`Include additional css files <setup-page-includecss-example>`
 
         Inserts a stylesheet (just like the :typoscript:`stylesheet` property), but allows
         setting up more than a single stylesheet, because you can enter files
         in an array.
 
-        The file definition must be a valid :ref:`data-type-resource` data type,
+        The file definition must be a valid :ref:`resource <data-type-resource>` data type,
         otherwise nothing is inserted.
 
         Each file has *optional properties*:
@@ -358,12 +358,12 @@ Properties
 
     ..  confval:: includeCSSLibs.[array]
         :name: page-includeCSSLibs
-        :type: :ref:`data-type-resource`
+        :type: :ref:`resource <data-type-resource>`
         :Example: :ref:`Include CSS libraries <setup-page-includecsslibs-exqample>`
 
         Adds CSS library files to head of page.
 
-        The file definition must be a valid :ref:`data-type-resource` data type,
+        The file definition must be a valid :ref:`resource <data-type-resource>` data type,
         otherwise nothing is inserted. This means that remote files cannot be referenced
         (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
 
@@ -406,13 +406,13 @@ Properties
 
     ..  confval:: includeJS.[array]
         :name: page-includeJS
-        :type: :ref:`data-type-resource`
+        :type: :ref:`resource <data-type-resource>`
         :Example: :ref:`Include JavaScript in the header <setup-page-includejs-example>`
 
         Inserts one or more (Java)Scripts in :html:`<script>` tags.
-        With :ref:`setup-config-movejsfromheadertofooter` set to TRUE all files
+        With :ref:`Properties of 'config' <setup-config-movejsfromheadertofooter>` set to TRUE all files
         will be moved to the footer.
-        The file definition must be a valid :ref:`data-type-resource` data type,
+        The file definition must be a valid :ref:`resource <data-type-resource>` data type,
         otherwise nothing is inserted. This means that remote files cannot be referenced
         (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
 
@@ -478,7 +478,7 @@ Properties
 
     ..  confval:: includeJSFooter.[array]
         :name: page-includeJSFooter
-        :type: :ref:`data-type-resource`
+        :type: :ref:`resource <data-type-resource>`
 
         Add JavaScript files to footer (after files set in :confval:`includeJSFooterlibs <page-includeJSFooterlibs>`)
 
@@ -490,7 +490,7 @@ Properties
 
     ..  confval:: includeJSFooterlibs.[array]
         :name: page-includeJSFooterlibs
-        :type: :ref:`data-type-resource`
+        :type: :ref:`resource <data-type-resource>`
 
         Add JavaScript library files to footer.
 
@@ -511,7 +511,7 @@ Properties
 
     ..  confval:: includeJSLibs.[array]
         :name: page-includeJSLibs
-        :type: :ref:`data-type-resource`
+        :type: :ref:`resource <data-type-resource>`
 
         Adds JavaScript library files to head of page.
 
@@ -601,9 +601,9 @@ Properties
 
         :Examples:
             *   :ref:`Define meta tags for description and keywords <setup-page-meta-example>`
-            *   :ref:`setup-page-meta-example-keywords`
-            *   :ref:`setup-page-meta-example-refresh`
-            *   :ref:`setup-page-meta-example-og`
+            *   :ref:`Example: Fetch data for the keyword meta tag from the page record <setup-page-meta-example-keywords>`
+            *   :ref:`Example: Make a meta.refresh entry <setup-page-meta-example-refresh>`
+            *   :ref:`Example set Open graph meta tags <setup-page-meta-example-og>`
 
         Use the scheme :typoscript:`meta.key = value` to define any HTML meta tag.
 
@@ -634,7 +634,7 @@ Properties
 
     ..  confval:: shortcutIcon
         :name: page-shortcutIcon
-        :type: :ref:`data-type-resource`
+        :type: :ref:`resource <data-type-resource>`
         :Example: :ref:`Add a favicon to the page <setup-page-shortcuticon-example>`
 
         Favicon of the page. Create a reference to an icon here!
@@ -649,15 +649,15 @@ Properties
 
     ..  confval:: stdWrap
         :name: page-stdWrap
-        :type: :ref:`stdwrap`
+        :type: :ref:`stdWrap <stdwrap>`
 
-        Wraps the content of the cObject array with :ref:`stdwrap` options.
+        Wraps the content of the cObject array with :ref:`stdWrap <stdwrap>` options.
 
     ..  rubric:: typeNum
 
     ..  confval:: typeNum
         :name: page-typeNum
-        :type: :ref:`data-type-integer`
+        :type: :ref:`integer <data-type-integer>`
         :Default: 0
 
         :Examples:
@@ -673,7 +673,7 @@ Properties
 
     ..  confval:: wrap
         :name: page-wrap
-        :type: :ref:`data-type-wrap`
+        :type: :ref:`Wrap <data-type-wrap>`
 
         Wraps the content of the cObject array.
 
@@ -683,7 +683,7 @@ Page property examples
 ======================
 
 Also see the dedicated chapter of how to use the
-PAGE object: :ref:`page_examples`
+PAGE object: :ref:`PAGE Examples <page_examples>`
 
 ..  _setup-page-array-example:
 

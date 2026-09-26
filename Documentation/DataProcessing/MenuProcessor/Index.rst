@@ -42,7 +42,7 @@ Options
     ..  confval:: as
         :name: MenuProcessor-as
         :Required: false
-        :type: :ref:`data-type-string`
+        :type: :ref:`string <data-type-string>`
         :Default: "menu"
 
         Name for the variable in the Fluid template.
@@ -51,7 +51,7 @@ Options
 
     ..  confval:: alwaysActivePIDlist
         :name: MenuProcessor-alwaysActivePIDlist
-        :type: list of :ref:`data-type-integer` /:ref:`stdWrap <stdwrap>`
+        :type: list of :ref:`integer <data-type-integer>` /:ref:`stdWrap <stdwrap>`
 
         This is a list of page UID numbers that will always be regarded as
         active menu items and thereby automatically opened regardless of the
@@ -61,7 +61,7 @@ Options
 
     ..  confval:: entryLevel
         :name: MenuProcessor-entryLevel
-        :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :Default: 0
 
         Defines at which level in the rootLine the menu should start.
@@ -89,7 +89,7 @@ Options
 
     ..  confval:: excludeDoktypes
         :name: MenuProcessor-excludeDoktypes
-        :type: list of :ref:`data-type-integer`
+        :type: list of :ref:`integer <data-type-integer>`
         :Default: 6,254
 
         Enter the list of page document types (doktype) to exclude from menus.
@@ -100,7 +100,7 @@ Options
 
     ..  confval:: excludeUidList
         :name: MenuProcessor-excludeUidList
-        :type: list of :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+        :type: list of :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
         This is a list of page uids to exclude when the select statement is
         done. Comma-separated. You may add "current" to the list to exclude
@@ -123,7 +123,7 @@ Options
     ..  confval:: expandAll
         :name: MenuProcessor-expandAll
         :Required: true
-        :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
         :Default: 1
         :Example: 0
 
@@ -136,7 +136,7 @@ Options
     ..  confval:: levels
         :name: MenuProcessor-levels
         :Required: true
-        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :Default: 1
         :Example: 5
 
@@ -146,7 +146,7 @@ Options
 
     ..  confval:: includeNotInMenu
         :name: MenuProcessor-includeNotInMenu
-        :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
 
         If set, pages with the checkbox "Page enabled in menus" disabled will still be included
         in menus.
@@ -158,7 +158,7 @@ Options
     ..  confval:: includeSpacer
         :name: MenuProcessor-includeSpacer
         :Required: true
-        :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
         :Default: 0
         :Example: 1
 
@@ -168,7 +168,7 @@ Options
 
     ..  confval:: protectLvar
         :name: MenuProcessor-protectlvar
-        :type: :ref:`data-type-boolean` / keyword
+        :type: :ref:`boolean <data-type-boolean>` / keyword
 
         If set, then for each page in the menu it will be checked if an
         Alternative Page Language record for the language defined in
@@ -223,7 +223,7 @@ Options
     ..  confval:: titleField
         :name: MenuProcessor-titleField
         :Required: true
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :Default: "nav_title // title"
         :Example: "subtitle"
 
@@ -247,7 +247,7 @@ The following special menu types are available:
 Example: Two level menu of the web page
 =======================================
 
-Please see also :ref:`dataProcessing-about-examples`.
+Please see also :ref:`About the examples <dataProcessing-about-examples>`.
 
 ..  rubric:: TypoScript
 

@@ -23,7 +23,7 @@ overrideAttribs
 
 ..  confval:: overrideAttribs
     :name: htmlparser-tags-overrideAttribs
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     If set, this string is preset as the attributes of the tag.
 
@@ -58,7 +58,7 @@ fixAttrib.[attribute].set
 
 ..  confval:: fixAttrib.[attribute].set
     :name: htmlparser-tags-fixAttrib-set
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     Force the attribute value to this value.
 
@@ -70,7 +70,7 @@ fixAttrib.[attribute].unset
 
 ..  confval:: fixAttrib.[attribute].unset
     :name: htmlparser-tags-fixAttrib-unset
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     If set, the attribute is unset.
 
@@ -82,7 +82,7 @@ fixAttrib.[attribute].default
 
 ..  confval:: fixAttrib.[attribute].default
     :name: htmlparser-tags-fixAttrib-default
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     If no attribute exists by this name, this value is set as default
     value (if this value is not blank)
@@ -95,7 +95,7 @@ fixAttrib.[attribute].always
 
 ..  confval:: fixAttrib.[attribute].always
     :name: htmlparser-tags-fixAttrib-always
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     If set, the attribute is always processed. Normally an attribute is
     processed only if it exists
@@ -108,7 +108,7 @@ fixAttrib.[attribute].trim
 
 ..  confval:: fixAttrib.[attribute].trim
     :name: htmlparser-tags-fixAttrib-trim
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     If true, the value is passed through the
     respective PHP-function.
@@ -121,7 +121,7 @@ fixAttrib.[attribute].intval
 
 ..  confval:: fixAttrib.[attribute].intval
     :name: htmlparser-tags-fixAttrib-intval
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     If true, the value is passed through the
     respective PHP-function.
@@ -134,7 +134,7 @@ fixAttrib.[attribute].upper
 
 ..  confval:: fixAttrib.[attribute].upper
     :name: htmlparser-tags-fixAttrib-upper
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     If true, the value is passed through the PHP function
     `strtoupper() <https://www.php.net/manual/en/function.strtoupper.php>`__.
@@ -147,7 +147,7 @@ fixAttrib.[attribute].lower
 
 ..  confval:: fixAttrib.[attribute].lower
     :name: htmlparser-tags-fixAttrib-lower
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     If true, the value is passed through the PHP function
     `strtolower() <https://www.php.net/manual/en/function.strtolower.php>`__.
@@ -185,7 +185,7 @@ fixAttrib.[attribute].removeIfFalse
 
 ..  confval:: fixAttrib.[attribute].removeIfFalse
     :name: htmlparser-tags-fixAttrib-removeIfFalse
-    :type: :ref:`data-type-boolean` / :typoscript:`blank` string
+    :type: :ref:`boolean <data-type-boolean>` / :typoscript:`blank` string
 
     If set, then the attribute is removed if it is false (= :typoscript:`0`).
     If this value is set to :typoscript:`blank` then the value must be a blank string
@@ -199,7 +199,7 @@ fixAttrib.[attribute].removeIfEquals
 
 ..  confval:: fixAttrib.[attribute].removeIfEquals
     :name: htmlparser-tags-fixAttrib-removeIfEquals
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     If the attribute value matches the value set here, then it is removed.
 
@@ -211,10 +211,10 @@ fixAttrib.[attribute].casesensitiveComp
 
 ..  confval:: fixAttrib.[attribute].casesensitiveComp
     :name: htmlparser-tags-fixAttrib-casesensitiveComp
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
-    If set, the comparison in :ref:`htmlparser-tags-fixAttrib-removeIfEquals`
-    and :ref:`htmlparser-tags-fixAttrib-list` will be case-sensitive.
+    If set, the comparison in :ref:`fixAttrib.[attribute].removeIfEquals <htmlparser-tags-fixAttrib-removeIfEquals>`
+    and :ref:`fixAttrib.[attribute].list <htmlparser-tags-fixAttrib-list>` will be case-sensitive.
     At this point, it's insensitive.
 
 
@@ -225,7 +225,7 @@ fixAttrib.[attribute].prefixRelPathWith
 
 ..  confval:: fixAttrib.[attribute].prefixRelPathWith
     :name: htmlparser-tags-fixAttrib-prefixRelPathWith
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     If the value of the attribute seems to be a relative URL (no scheme
     like "http" and no "/" as first char) then the value of this property
@@ -246,7 +246,7 @@ fixAttrib.[attribute].userFunc
 
 ..  confval:: fixAttrib.[attribute].userFunc
     :name: htmlparser-tags-fixAttrib-userFunc
-    :type: :ref:`data-type-function-name`
+    :type: :ref:`function name <data-type-function-name>`
 
     User function for processing of the attribute. The return value
     of this function will be used as the new tag value.
@@ -284,7 +284,7 @@ protect
 
 ..  confval:: protect
     :name: htmlparser-tags-protect
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     If set, the tag :html:`<>` is converted to :html:`&lt;` and :html:`&gt;`
 
@@ -296,7 +296,7 @@ remap
 
 ..  confval:: remap
     :name: htmlparser-tags-remap
-    :type: :ref:`data-type-string`
+    :type: :ref:`string <data-type-string>`
 
     If set, the tagname is remapped to this tagname
 
@@ -308,7 +308,7 @@ rmTagIfNoAttrib
 
 ..  confval:: rmTagIfNoAttrib
     :name: htmlparser-tags-rmTagIfNoAttrib
-    :type: :ref:`data-type-boolean`
+    :type: :ref:`boolean <data-type-boolean>`
 
     If set, then the tag is removed if no attributes happened to be there.
 
