@@ -154,7 +154,7 @@ dontCheckPid
 ..  confval:: dontCheckPid
     :name: records-dontCheckPid
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     Normally a record cannot be selected, if its parent page (pid) is not
     accessible for the website user. This option disables that check.

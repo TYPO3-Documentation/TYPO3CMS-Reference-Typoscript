@@ -45,7 +45,7 @@ special.mode
 ..  confval:: special.mode
     :name: hmenu-keywords-special-mode
     :type: string
-    :Default: `SYS_LASTCHANGED`
+    :default: `SYS_LASTCHANGED`
 
     Which field in the `pages` table should be used for sorting?
 
@@ -91,7 +91,7 @@ special.depth
 ..  confval:: special.depth
     :name: hmenu-keywords-special-depth
     :type: integer
-    :Default: 20
+    :default: 20
 
     Same as in section :ref:`"special = updated" <hmenu-special-updated-depth>`.
 
@@ -103,7 +103,7 @@ special.limit
 ..  confval:: special.limit
     :name: hmenu-keywords-special-limit
     :type: integer
-    :Default: 10
+    :default: 10
 
     Maximal number of items in the menu. Default is 10, maximum is 100.
 
@@ -115,7 +115,7 @@ special.excludeNoSearchPages
 ..  confval:: special.excludeNoSearchPages
     :name: hmenu-keywords-special-excludeNoSearchPages
     :type: boolean
-    :Default: false
+    :default: false
 
     If set, pages marked `No search` are not included.
 
@@ -151,7 +151,7 @@ special.keywordsField
 ..  confval:: special.keywordsField
     :name: hmenu-keywords-special-keywordsField
     :type: string
-    :Default: `keywords`
+    :default: `keywords`
 
     Defines the field in the `pages` table in which to search for the
     keywords. Default is the field name `keyword`. No check is done to see
@@ -165,7 +165,7 @@ special.keywordsField.sourceField
 ..  confval:: special.keywordsField.sourceField
     :name: hmenu-keywords-special-setKeywords-sourceField
     :type: string
-    :Default: `keywords`
+    :default: `keywords`
 
     Defines the field from the current page from which to take the
     keywords being matched. The default is `keyword`. (Notice that

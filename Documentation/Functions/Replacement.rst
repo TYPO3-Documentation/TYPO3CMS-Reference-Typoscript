@@ -55,7 +55,7 @@ useRegExp
 ..  confval:: useRegExp
     :name: replacement-useRegExp
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     Defines that the search and replace strings are considered as PCRE
     regular expressions.
@@ -74,7 +74,7 @@ useOptionSplitReplace
 ..  confval:: useOptionSplitReplace
     :name: replacement-useOptionSplitReplace
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     This property allows to use :ref:`optionSplit <optionsplit>` for the replace
     property. That way the replace property can be different depending on the

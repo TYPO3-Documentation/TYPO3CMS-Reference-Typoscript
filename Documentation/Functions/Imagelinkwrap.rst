@@ -26,7 +26,7 @@ enable
 ..  confval:: imageLinkWrap.enable
     :name: imagelinkwrap-enable
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     Whether or not to link the image. Must be set to True to make
     :typoscript:`imageLinkWrap` do anything at all.
@@ -52,7 +52,7 @@ width
 ..  confval:: imageLinkWrap.width
     :name: imagelinkwrap-width
     :type: :ref:`integer <data-type-positive-integer>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     Width of the image to be shown in pixels. If you add "m" to
     :typoscript:`width` or :typoscript:`height` or both then the width and
@@ -68,7 +68,7 @@ height
 ..  confval:: imageLinkWrap.height
     :name: imagelinkwrap-height
     :type: :ref:`integer <data-type-positive-integer>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     Width of the image to be shown in pixels. If you add "m" to
     :typoscript:`width` or :typoscript:`height` or both then the width and
@@ -84,7 +84,7 @@ effects
 ..  confval:: imageLinkWrap.effects
     :name: imagelinkwrap-effects
     :type: like :ref:`EFFECT <gifbuilder-effect>` of :ref:`GIFBUILDER <GIFBUILDER>`
-    :Default: 0
+    :default: 0
 
     Apply image effects to the preview image.
 
@@ -105,7 +105,7 @@ sample
 ..  confval:: imageLinkWrap.sample
     :name: imagelinkwrap-sample
     :type: :ref:`integer <data-type-positive-integer>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     :typoscript:`sample` is a switch which determines how the image
     processor (often GraphicsMagick or ImageMagick) calculates the preview
@@ -171,7 +171,7 @@ target
 ..  confval:: imageLinkWrap.target
     :name: imagelinkwrap-target
     :type: string / :ref:`stdWrap <stdwrap>`
-    :Default: :typoscript:`thePicture`
+    :default: :typoscript:`thePicture`
 
     This specifies the `target` attribute of the link. The attribute
     will only be created if the current :ref:`Doctype <setup-config-doctype>`
@@ -194,7 +194,7 @@ JSwindow
 ..  confval:: imageLinkWrap.JSwindow
     :name: imagelinkwrap-JSwindow
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     If true (:typoscript:`JSwindow = 1`) Javascript will be used to open
     the image in a new window. The window is automatically resized to match
@@ -209,7 +209,7 @@ JSwindow.expand
 ..  confval:: imageLinkWrap.JSwindow.expand
     :name: imagelinkwrap-JSwindow-expand
     :type: :typoscript:`x`, :typoscript:`y` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     :typoscript:`x` and :typoscript:`x` are of data type
     :ref:`integer <data-type-integer>`. The values are added to the width and height
@@ -225,7 +225,7 @@ JSwindow.newWindow
 ..  confval:: JSwindow.newWindow
     :name: imagelinkwrap-JSwindow-newWindow
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     If the :ref:`Doctype <setup-config-doctype>` allows the string
     attribute then the image will be opened in a window with the name given
@@ -258,7 +258,7 @@ JSwindow.altUrl\_noDefaultParams
 ..  confval:: imageLinkWrap.JSwindow.altUrl_noDefaultParams
     :name: imagelinkwrap-JSwindow-altUrl-noDefaultParams
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     If true (:typoscript:`JSwindow.altUrl_noDefaultParams = 1`) then the
     image parameters are not automatically appended to the
@@ -287,7 +287,7 @@ directImageLink
 ..  confval:: imageLinkWrap.directImageLink
     :name: imagelinkwrap-directImageLink
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     If true (:typoscript:`directImageLink = 1`) then a link will be
     generated that points directly to the image file. This means that no

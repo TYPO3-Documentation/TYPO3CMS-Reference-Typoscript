@@ -156,7 +156,7 @@ sorting.direction
 ..  confval:: sorting.direction
     :name: files-sorting-direction
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
-    :Default: asc
+    :default: asc
 
     The direction, in which the
     files should be sorted. Possible values are "asc" for ascending and

@@ -59,7 +59,7 @@ subst_elementUid
 ..  confval:: subst_elementUid
     :name: tmenuitem-subst-elementUid
     :type: :ref:`boolean <data-type-boolean>`
-    :Default: 0 (false)
+    :default: 0 (false)
 
     If set, all appearances of the string '{elementUid}' in the HTML code of the
     element (after wrapped in :ref:`.allWrap <tmenuitem-allWrap>`) are
@@ -136,7 +136,7 @@ ATagBeforeWrap
 ..  confval:: ATagBeforeWrap
     :name: tmenuitem-ATagBeforeWrap
     :type: :ref:`boolean <data-type-boolean>`
-    :Default: 0 (false)
+    :default: 0 (false)
 
     If set, the link is first wrapped with :ref:`*.linkWrap* <tmenuitem-linkWrap>`
     and then the :html:`<a>` tag.
@@ -186,7 +186,7 @@ doNotLinkIt
 ..  confval:: doNotLinkIt
     :name: tmenuitem-doNotLinkIt
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     If set, the link texts are not linked at all.
 
@@ -198,7 +198,7 @@ doNotShowLink
 ..  confval:: doNotShowLink
     :name: tmenuitem-doNotShowLink
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     If set, the text will not be shown at all (smart with spacers).
 
@@ -210,7 +210,7 @@ stdWrap2
 ..  confval:: stdWrap2
     :name: tmenuitem-stdWrap2
     :type: :ref:`Wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
-    :Default: \|
+    :default: \|
 
     stdWrap to the total link text and :html:`<a>` tag. (Notice that the plain
     default value passed to the stdWrap function is "\|".)

@@ -41,9 +41,9 @@ Options
 
     ..  confval:: as
         :name: MenuProcessor-as
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>`
-        :Default: "menu"
+        :default: "menu"
 
         Name for the variable in the Fluid template.
 
@@ -62,7 +62,7 @@ Options
     ..  confval:: entryLevel
         :name: MenuProcessor-entryLevel
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
-        :Default: 0
+        :default: 0
 
         Defines at which level in the rootLine the menu should start.
 
@@ -90,7 +90,7 @@ Options
     ..  confval:: excludeDoktypes
         :name: MenuProcessor-excludeDoktypes
         :type: list of :ref:`integer <data-type-integer>`
-        :Default: 6,254
+        :default: 6,254
 
         Enter the list of page document types (doktype) to exclude from menus.
         By default pages that are "backend user access only" (6) or "folder"
@@ -122,9 +122,9 @@ Options
 
     ..  confval:: expandAll
         :name: MenuProcessor-expandAll
-        :Required: true
+        :required: true
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
-        :Default: 1
+        :default: 1
         :Example: 0
 
         Include all submenus (`1`) or only those of the active pages (`0`).
@@ -135,9 +135,9 @@ Options
 
     ..  confval:: levels
         :name: MenuProcessor-levels
-        :Required: true
+        :required: true
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
-        :Default: 1
+        :default: 1
         :Example: 5
 
         Maximal number of levels to be included in the output array.
@@ -157,9 +157,9 @@ Options
 
     ..  confval:: includeSpacer
         :name: MenuProcessor-includeSpacer
-        :Required: true
+        :required: true
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
-        :Default: 0
+        :default: 0
         :Example: 1
 
         Include pages with type "spacer".
@@ -222,9 +222,9 @@ Options
 
     ..  confval:: titleField
         :name: MenuProcessor-titleField
-        :Required: true
+        :required: true
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: "nav_title // title"
+        :default: "nav_title // title"
         :Example: "subtitle"
 
         Fields to be used as title.

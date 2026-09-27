@@ -32,9 +32,9 @@ Options:
 
     ..  confval:: if
         :name: CommaSeparatedValueProcessor-if
-        :Required: false
+        :required: false
         :type: :ref:`if <if>` condition
-        :Default: ''
+        :default: ''
 
         If the condition is met, the data processor is processed.
 
@@ -44,9 +44,9 @@ Options:
 
     ..  confval:: fieldName
         :name: CommaSeparatedValueProcessor-fieldName
-        :Required: true
+        :required: true
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: ''
+        :default: ''
 
         Name of the field in the processed ContentObjectRenderer.
 
@@ -56,9 +56,9 @@ Options:
 
     ..  confval:: as
         :name: CommaSeparatedValueProcessor-as
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>`
-        :Default: defaults to the fieldName
+        :default: defaults to the fieldName
 
         The variable's name to be used in the Fluid template.
 
@@ -68,9 +68,9 @@ Options:
 
     ..  confval:: maximumColumns
         :name: CommaSeparatedValueProcessor-maximumColumns
-        :Required: false
+        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
-        :Default: :typoscript:`0`
+        :default: :typoscript:`0`
 
         Maximal number of columns to be transformed. Surplus columns will be
         silently dropped. When set to :typoscript:`0` (default) all columns will be
@@ -82,9 +82,9 @@ Options:
 
     ..  confval:: fieldDelimiter
         :name: CommaSeparatedValueProcessor-fieldDelimiter
-        :Required:  false
+        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: :typoscript:`,`
+        :default: :typoscript:`,`
 
         The field delimiter, a character separating the values.
 
@@ -94,9 +94,9 @@ Options:
 
     ..  confval:: fieldEnclosure
         :name: CommaSeparatedValueProcessor-fieldEnclosure
-        :Required:  false
+        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: :typoscript:`"`
+        :default: :typoscript:`"`
 
         The field enclosure, a character surrounding the values.
 
