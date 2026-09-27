@@ -33,7 +33,7 @@ TCA.
     ..  confval:: newContentElement.wizardItems
         :name: mod-wizards-newContentElement-wizardItems
         :type: array
-        :Path: mod.wizards.newContentElement.wizardItems
+        :Page TSconfig path: mod.wizards.newContentElement.wizardItems
 
         In the New Content Element Wizard, content element types are grouped
         together by type. Each such group can be configured independently. The
@@ -44,7 +44,7 @@ TCA.
         ..  confval:: removeItems
             :name: mod-wizards-newContentElement-wizardItems-removeItems
             :type: comma separated list of groups
-            :Path: mod.wizards.newContentElement.wizardItems.removeItems
+            :Page TSconfig path: mod.wizards.newContentElement.wizardItems.removeItems
 
             With this setting one or several groups with all their content
             elements can be hidden in the New Content Element Wizard.
@@ -59,7 +59,7 @@ TCA.
         ..  confval:: [group].before
             :name: mod-wizards-newContentElement-wizardItems-group-before
             :type: string
-            :Path: mod.wizards.newContentElement.wizardItems.[group].before
+            :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].before
 
             Sorts [group] in front of the group given.
 
@@ -68,7 +68,7 @@ TCA.
         ..  confval:: [group].after
             :name: mod-wizards-newContentElement-wizardItems-group-after
             :type: string
-            :Path: mod.wizards.newContentElement.wizardItems.[group].after
+            :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].after
 
             Sorts [group] after the group given.
 
@@ -77,7 +77,7 @@ TCA.
         ..  confval:: [group].header
             :name: mod-wizards-newContentElement-wizardItems-group-header
             :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
-            :Path: mod.wizards.newContentElement.wizardItems.[group].header
+            :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].header
 
             Name of the group.
 
@@ -86,7 +86,7 @@ TCA.
         ..  confval:: [group].elements
             :name: mod-wizards-newContentElement-wizardItems-group-elements
             :type: array
-            :Path: mod.wizards.newContentElement.wizardItems.[group].elements
+            :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements
 
             List of items in the group.
 
@@ -95,7 +95,7 @@ TCA.
             ..  confval:: [name]
                 :name: mod-wizards-newContentElement-wizardItems-group-elements-name
                 :type: array
-                :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name]
+                :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name]
 
                 Configuration for a single item.
 
@@ -104,7 +104,7 @@ TCA.
                 ..  confval:: iconIdentifier
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-iconIdentifier
                     :type: string
-                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconIdentifier
+                    :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconIdentifier
 
                     The icon identifier of the icon you want to display.
 
@@ -113,7 +113,7 @@ TCA.
                 ..  confval:: iconOverlay
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-iconOverlay
                     :type: string
-                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconOverlay
+                    :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconOverlay
 
                     The icon identifier of the overlay icon you want to use.
 
@@ -122,7 +122,7 @@ TCA.
                 ..  confval:: title
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-title
                     :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
-                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].title
+                    :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].title
 
                     Name of the item.
 
@@ -131,7 +131,7 @@ TCA.
                 ..  confval:: description
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-description
                     :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
-                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].description
+                    :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].description
 
                     Description text for the item.
 
@@ -140,7 +140,7 @@ TCA.
                 ..  confval:: tt_content_defValues
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-tt_content_defValues
                     :type: array
-                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].tt_content_defValues
+                    :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].tt_content_defValues
 
                     Default values for tt_content fields.
 
@@ -149,8 +149,8 @@ TCA.
                 ..  confval:: saveAndClose
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-saveAndClose
                     :type: bool
-                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].saveAndClose
-                    :Default: `false`
+                    :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].saveAndClose
+                    :default: `false`
 
                     If `true`, directs the user back to the :guilabel:`Page` module
                     directly instead of showing the FormEngine.
@@ -160,8 +160,8 @@ TCA.
                 ..  confval:: before
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-before
                     :type: string (comma separated list)
-                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].before
-                    :Default: [empty string]
+                    :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].before
+                    :default: [empty string]
 
                     ..  versionadded:: 14.2
 
@@ -173,8 +173,8 @@ TCA.
                 ..  confval:: after
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-after
                     :type: string (comma separated list)
-                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].after
-                    :Default: [empty string]
+                    :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].after
+                    :default: [empty string]
 
                     ..  versionadded:: 14.2
 
@@ -188,7 +188,7 @@ TCA.
         ..  confval:: [group].removeItems
             :name: mod-wizards-newContentElement-wizardItems-group-removeItems
             :type: Comma separated list
-            :Path: mod.wizards.newContentElement.wizardItems.[group].removeItems
+            :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].removeItems
 
             Comma separated list of content elements that should be hidden in
             [group].

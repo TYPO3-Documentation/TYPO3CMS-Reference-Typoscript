@@ -27,9 +27,9 @@ Options
 
     ..  confval:: as
         :name: SiteLanguageProcessor-as
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>`
-        :Default: "site"
+        :default: "site"
 
         The variable name to be used in the Fluid template.
 

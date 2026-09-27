@@ -49,7 +49,7 @@ Properties
     ..  confval:: alertPopups
         :name: useroptions-alertPopups
         :type: bitmask
-        :Default: 255 (show all warnings)
+        :default: 255 (show all warnings)
 
         Configure which Javascript popup alerts have to be displayed and which not:
 
@@ -117,8 +117,8 @@ Properties
         ..  confval:: all
             :name: useroptions-clearCache-all
             :type: boolean
-            :Default: 0
-            :Path: options.clearCache.all
+            :default: 0
+            :User TSconfig path: options.clearCache.all
 
             This will allow a non-admin user to clear frontend and page-related caches,
             plus some backend-related caches (that is everything including templates);
@@ -132,8 +132,8 @@ Properties
         ..  confval:: pages
             :name: useroptions-clearCache-pages
             :type: boolean
-            :Default: 0
-            :Path: options.clearCache.pages
+            :default: 0
+            :User TSconfig path: options.clearCache.pages
 
             If set to 1, this will allow a non-admin user to clear frontend and
             page-related caches.
@@ -145,7 +145,7 @@ Properties
     ..  confval:: clipboardNumberPads
         :name: useroptions-clipboardNumberPads
         :type: integer (0-20)
-        :Default: 3
+        :default: 3
 
         This allows you to enter how many pads you want on the clipboard.
 
@@ -240,8 +240,8 @@ Properties
         ..  confval:: dashboardPresetsForNewUsers
             :name: useroptions-dashboard-dashboardPresetsForNewUsers
             :type: list of dashboard identifiers
-            :Default: default
-            :Path: options.dashboard.dashboardPresetsForNewUsers
+            :default: default
+            :User TSconfig path: options.dashboard.dashboardPresetsForNewUsers
 
             List of dashboard identifiers to be used on initial dashboard module access.
 
@@ -259,7 +259,7 @@ Properties
     ..  confval:: defaultResourcesViewMode
         :name: useroptions-defaultResourcesViewMode
         :type: `list` or `tiles`
-        :Default: `tiles`
+        :default: `tiles`
 
         The option :typoscript:`options.defaultResourcesViewMode` has
         been introduced, which allows to define the initial display mode. Valid
@@ -344,7 +344,7 @@ Properties
     ..  confval:: enableBookmarks
         :name: useroptions-enableBookmarks
         :type: boolean
-        :Default: 1
+        :default: 1
 
         Enables the usage of bookmarks in the backend.
 
@@ -362,8 +362,8 @@ Properties
         ..  confval:: enableClipBoard
             :name: useroptions-enableClipBoard
             :type: list of keywords
-            :Default: selectable
-            :Path: options.file_list.enableClipBoard
+            :default: selectable
+            :User TSconfig path: options.file_list.enableClipBoard
 
             Determines whether the checkbox :guilabel:`Show clipboard` in the file list
             module is shown or hidden. If it is hidden, you can predefine it to be
@@ -387,8 +387,8 @@ Properties
         ..  confval:: displayColumnSelector
             :name: useroptions-file_list-displayColumnSelector
             :type: boolean
-            :Default: true
-            :Path: options.file_list.displayColumnSelector
+            :default: true
+            :User TSconfig path: options.file_list.displayColumnSelector
 
             The column selector is enabled by default and can be disabled with this
             option. The column selector is displayed at the top of each file list.
@@ -416,7 +416,7 @@ Properties
         ..  confval:: file_list.enableDisplayThumbnails
             :name: useroptions-file_list-enableDisplayThumbnails
             :type: list of keywords
-            :Default: selectable
+            :default: selectable
 
             Determines whether the checkbox :guilabel:`Display thumbnails` in the
             :guilabel:`Media` module is shown or hidden. If it is hidden, you can predefine it
@@ -440,8 +440,8 @@ Properties
         ..  confval:: filesPerPage
             :name: useroptions-file_list-filesPerPage
             :type: integer
-            :Default: 40
-            :Path: options.file_list.filesPerPage
+            :default: 40
+            :User TSconfig path: options.file_list.filesPerPage
 
             The maximum number of files shown per page in the :guilabel:`File > List`
             module.
@@ -453,8 +453,8 @@ Properties
         ..  confval:: primaryActions
             :name: useroptions-useroptions-file_list-primaryActions
             :type: string
-            :Default: :typoscript:`view,metadata,translations,delete`
-            :Path: options.file_list.primaryActions
+            :default: :typoscript:`view,metadata,translations,delete`
+            :User TSconfig path: options.file_list.primaryActions
 
             Option to add more primary actions to the list view,
             which are otherwise only accessible through the "..." menu in the file list
@@ -499,8 +499,8 @@ Properties
         ..  confval:: thumbnail.height
             :name: useroptions-file_list-thumbnail-height
             :type: integer
-            :Default: 64
-            :Path: options.file_list.thumbnail.height
+            :default: 64
+            :User TSconfig path: options.file_list.thumbnail.height
 
             All preview images in the file list will be rendered with the configured
             thumbnail height.
@@ -512,8 +512,8 @@ Properties
         ..  confval:: thumbnail.width
             :name: useroptions-file_list-thumbnail-width
             :type: integer
-            :Default: 64
-            :Path: options.file_list.thumbnail.width
+            :default: 64
+            :User TSconfig path: options.file_list.thumbnail.width
 
             All preview images in the file list will be rendered with the configured
             thumbnail width.
@@ -525,8 +525,8 @@ Properties
         ..  confval:: uploader.defaultAction
             :name: useroptions-file_list-uploader-defaultaction
             :type: string
-            :Default: :typoscript:`Cancel`
-            :Path: options.file_list.uploader.defaultAction
+            :default: :typoscript:`Cancel`
+            :User TSconfig path: options.file_list.uploader.defaultAction
 
             Default action for the modal that appears when during file upload a name
             collision occurs. Possible values:
@@ -552,7 +552,7 @@ Properties
         ..  confval:: altElementBrowserMountPoints
             :name: useroptions-folderTree-altElementBrowserMountPoints
             :type: list of "storageUid:folderName" items
-            :Path: options.folderTree.altElementBrowserMountPoints
+            :User TSconfig path: options.folderTree.altElementBrowserMountPoints
 
             Sets alternative filemounts for use in any folder tree, including in the
             :guilabel:`File > List` module, in the element browser and in file
@@ -587,7 +587,7 @@ Properties
 
         ..  confval:: label.<combined-identifier>
             :name: useroptions-folderTree-label
-            :Path: options.folderTree.label.<combined-identifier>
+            :User TSconfig path: options.folderTree.label.<combined-identifier>
 
             ..  versionadded:: 14.0
 
@@ -631,8 +631,8 @@ Properties
         ..  confval:: uploadFieldsInLinkBrowser
             :name: useroptions-folderTree-uploadFieldsInLinkBrowser
             :type: integer
-            :Default: 3
-            :Path: options.folderTree.uploadFieldsInLinkBrowser
+            :default: 3
+            :User TSconfig path: options.folderTree.uploadFieldsInLinkBrowser
 
             This value defines the number of upload fields in the element browser.
             Default value is 3, if set to 0, no upload form will be shown.
@@ -675,7 +675,7 @@ Properties
         ..  confval:: pages
             :name: useroptions-hideRecords-pages
             :type: list of page IDs
-            :Path: options.hideRecords.pages
+            :User TSconfig path: options.hideRecords.pages
 
             This setting hides records in the backend user interface. It is not an
             access restriction but makes defined records invisible. That means in
@@ -711,8 +711,8 @@ Properties
         ..  confval:: enableExportForNonAdminUser
             :name: useroptions-impexp-enableExportForNonAdminUser
             :type: boolean
-            :Default: 0
-            :Path: options.impexp.enableExportForNonAdminUser
+            :default: 0
+            :User TSconfig path: options.impexp.enableExportForNonAdminUser
 
             ..  note::
                 This option was introduced to avoid `information disclosure
@@ -740,7 +740,7 @@ Properties
             ..  confval:: default
                 :name: useroptions-liveSearch-actions-default
                 :type: string
-                :Path: options.liveSearch.actions.default
+                :User TSconfig path: options.liveSearch.actions.default
 
                 ..  versionadded:: 14.2
 
@@ -793,8 +793,8 @@ Properties
         ..  confval:: enableImportForNonAdminUser
             :name: useroptions-impexp-enableImportForNonAdminUser
             :type: boolean
-            :Default: 0
-            :Path: options.impexp.enableImportForNonAdminUser
+            :default: 0
+            :User TSconfig path: options.impexp.enableImportForNonAdminUser
 
             ..  note::
                 This option was introduced to avoid `information disclosure <https://typo3.org/security/advisory/typo3-core-sa-2016-015>`__.
@@ -840,7 +840,7 @@ Properties
         ..  confval:: altElementBrowserMountPoints
             :name: useroptions-pageTree-altElementBrowserMountPoints
             :type: list of integers
-            :Path: options.pageTree.altElementBrowserMountPoints
+            :User TSconfig path: options.pageTree.altElementBrowserMountPoints
 
             Sets alternative webmounts for use in the element browser. You
             separate page IDs by a comma. Non-existing page IDs are ignored. If
@@ -867,7 +867,7 @@ Properties
         ..  confval:: altElementBrowserMountPoints.append
             :name: useroptions-pageTree-altElementBrowserMountPoints-append
             :type: boolean
-            :Path: options.pageTree.altElementBrowserMountPoints.append
+            :User TSconfig path: options.pageTree.altElementBrowserMountPoints.append
 
             This option allows administrators to add additional mount points
             in the RTE and the wizard element browser instead of replacing
@@ -889,8 +889,8 @@ Properties
         ..  confval:: doktypesToShowInNewPageDragArea
             :name: useroptions-pageTree-doktypesToShowInNewPageDragArea
             :type: string
-            :Default: 1,6,4,7,3,254,255,199
-            :Path: options.pageTree.doktypesToShowInNewPageDragArea
+            :default: 1,6,4,7,3,254,255,199
+            :User TSconfig path: options.pageTree.doktypesToShowInNewPageDragArea
 
             If set, the node top panel feature can be configured by a comma-separated
             list. Each number stands for a :ref:`doktype ID <t3coreapi:list-of-page-types>`
@@ -908,7 +908,7 @@ Properties
         ..  confval:: excludeDoktypes
             :name: useroptions-pageTree-excludeDoktypes
             :type: list of integers
-            :Path: options.pageTree.excludeDoktypes
+            :User TSconfig path: options.pageTree.excludeDoktypes
 
             Excludes nodes (pages) with one of the defined
             :ref:`doktypes <t3coreapi:list-of-page-types>` from the page tree.
@@ -929,7 +929,7 @@ Properties
         ..  confval:: label.<page-id>
             :name: useroptions-pageTree-label
             :type: list of page IDs
-            :Path: options.pageTree.label.<page-id>
+            :User TSconfig path: options.pageTree.label.<page-id>
 
             Labels offer customizable color markings for tree nodes and require an
             associated label for accessibility.
@@ -961,7 +961,7 @@ Properties
         ..  confval:: showDomainNameWithTitle
             :name: useroptions-pageTree-showDomainNameWithTitle
             :type: boolean
-            :Path: options.pageTree.showDomainNameWithTitle
+            :User TSconfig path: options.pageTree.showDomainNameWithTitle
 
             If set, the domain name will be appended to the page title for
             pages that have :guilabel:`Is root of web site?` checked in the page properties.
@@ -974,8 +974,8 @@ Properties
         ..  confval:: searchByFrontendUri
             :name: useroptions-pageTree-searchByFrontendUri
             :type: boolean
-            :Path: options.pageTree.searchByFrontendUri
-            :Default: `true`
+            :User TSconfig path: options.pageTree.searchByFrontendUri
+            :default: `true`
 
             ..  versionadded:: 14.2
 
@@ -995,8 +995,8 @@ Properties
         ..  confval:: searchInTranslatedPages
             :name: useroptions-pageTree-searchInTranslatedPages
             :type: boolean
-            :Path: options.pageTree.searchInTranslatedPages
-            :Default: `true`
+            :User TSconfig path: options.pageTree.searchInTranslatedPages
+            :default: `true`
 
             ..  versionadded:: 14.1
 
@@ -1012,7 +1012,7 @@ Properties
         ..  confval:: showNavTitle
             :name: useroptions-pageTree-showNavTitle
             :type: boolean
-            :Path: options.pageTree.showNavTitle
+            :User TSconfig path: options.pageTree.showNavTitle
 
             If set, the navigation title is displayed in the page navigation tree
             instead of the normal page title. The page title is shown in a
@@ -1025,7 +1025,7 @@ Properties
         ..  confval:: showPageIdWithTitle
             :name: useroptions-pageTree-showPageIdWithTitle
             :type: boolean
-            :Path: options.pageTree.showPageIdWithTitle
+            :User TSconfig path: options.pageTree.showPageIdWithTitle
 
             If set, the titles in the page tree will have their ID numbers printed
             before the title.
@@ -1037,7 +1037,7 @@ Properties
         ..  confval:: showPathAboveMounts
             :name: useroptions-pageTree-showPathAboveMounts
             :type: boolean
-            :Path: options.pageTree.showPathAboveMounts
+            :User TSconfig path: options.pageTree.showPathAboveMounts
 
             If set, the user db mount path above the mount itself is shown.
             This is useful if you work a lot with user db mounts.
@@ -1055,7 +1055,7 @@ Properties
     ..  confval:: passwordReset
         :name: useroptions-passwordReset
         :type: boolean
-        :Default: 1
+        :default: 1
 
         If set to `0` the initiating of the password reset in the backend
         will be disabled. This does not affect the password reset by
@@ -1098,7 +1098,7 @@ Properties
     ..  confval:: saveDocNew
         :name: useroptions-saveDocNew
         :type: boolean / "top"
-        :Default: 1
+        :default: 1
 
         If set, a button :guilabel:`Save and create new` will appear in TCEFORMs.
 
@@ -1126,7 +1126,7 @@ Properties
     ..  confval:: saveDocView
         :name: useroptions-saveDocView
         :type: boolean
-        :Default: 1
+        :default: 1
 
         If set, a button :guilabel:`Save and view` will appear in TCEFORMs.
 
@@ -1142,7 +1142,7 @@ Properties
     ..  confval:: showDuplicate
         :name: useroptions-showDuplicate
         :type: boolean
-        :Default: 0
+        :default: 0
 
         If set, a button :guilabel:`Duplicate` will appear in TCEFORMs.
 

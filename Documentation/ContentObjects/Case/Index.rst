@@ -93,7 +93,7 @@ key
 ..  confval:: key
     :name: case-key
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
-    :Default: default
+    :default: default
 
     The key, which determines, which cObject will be rendered. Its
     value is expected to match the name of one of the cObjects from

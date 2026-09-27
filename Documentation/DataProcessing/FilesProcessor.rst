@@ -35,9 +35,9 @@ Options:
 
     ..  confval:: if
         :name: FilesProcessor-if
-        :Required: false
+        :required: false
         :type: :ref:`if <if>` condition
-        :Default: ''
+        :default: ''
 
         Only, if the condition is met the data processor is executed.
 
@@ -47,9 +47,9 @@ Options:
 
     ..  confval:: references
         :name: FilesProcessor-references
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
-        :Default: ''
+        :default: ''
         :Example: '1,303,42'
 
         If this option contains a comma-separated list of integers, these are
@@ -66,9 +66,9 @@ Options:
 
     ..  confval:: references.fieldName
         :name: FilesProcessor-references-fieldName
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: ''
+        :default: ''
         :Example: 'media'
 
         If both :typoscript:`references.fieldName` and
@@ -82,9 +82,9 @@ Options:
 
     ..  confval:: references.table
         :name: FilesProcessor-references.table
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: ''
+        :default: ''
         :Example: 'tt_content'
 
         If :typoscript:`references` should be interpreted as TypoScript
@@ -97,9 +97,9 @@ Options:
 
     ..  confval:: files
         :name: FilesProcessor-files
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
-        :Default: ''
+        :default: ''
         :Example: '1,303,42'
 
         If this option contains a comma-separated list of integers,
@@ -111,9 +111,9 @@ Options:
 
     ..  confval:: collections
         :name: FilesProcessor-collections
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
-        :Default: ''
+        :default: ''
         :Example: '1,303,42'
 
         If this option contains a comma-separated list of integers,
@@ -126,9 +126,9 @@ Options:
 
     ..  confval:: folders
         :name: FilesProcessor-folders
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>` (comma-separated folders), :ref:`stdWrap <stdWrap>`
-        :Default: ""
+        :default: ""
         :Example: "23:/other/folder/"
 
         Fetches all files from the referenced folders. The following syntax is
@@ -150,9 +150,9 @@ Options:
 
     ..  confval:: folders.recursive
         :name: FilesProcessor-folders-recursive
-        :Required: false
+        :required: false
         :type: bool  / :ref:`stdWrap <stdWrap>`
-        :Default: 0
+        :default: 0
         :Example: 1
 
         If set to a non-empty value file, records will be added from folders
@@ -164,9 +164,9 @@ Options:
 
     ..  confval:: sorting
         :name: FilesProcessor-sorting
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: ""
+        :default: ""
         :Example: "filesize"
 
         The property of the file records by which they should be sorted.
@@ -178,9 +178,9 @@ Options:
 
     ..  confval:: sorting.direction
         :name: FilesProcessor-sorting-direction
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default:  "ascending"
+        :default: "ascending"
         :Example: "descending"
 
         The sorting direction (:typoscript:`ascending` or :typoscript:`descending`).
@@ -191,9 +191,9 @@ Options:
 
     ..  confval:: as
         :name: FilesProcessor-as
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: "files"
+        :default: "files"
 
         The variable name to be used in the Fluid template.
 

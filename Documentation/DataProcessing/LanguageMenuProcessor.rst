@@ -37,7 +37,7 @@ Options:
 
     ..  confval:: if
         :name: LanguageMenuProcessor-if
-        :Required: false
+        :required: false
         :type: :ref:`if <if>` condition
 
         Only if the condition is met the data processor is executed.
@@ -48,9 +48,9 @@ Options:
 
     ..  confval:: languages
         :name: LanguageMenuProcessor-languages
-        :Required: true
+        :required: true
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: "auto"
+        :default: "auto"
         :Example: "0,1,2"
 
         A list of comma-separated language IDs (e.g. 0,1,2) to use for the menu
@@ -63,9 +63,9 @@ Options:
 
     ..  confval:: addQueryString.exclude
         :name: LanguageMenuProcessor-addQueryString-exclude
-        :Required: true
+        :required: true
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: ""
+        :default: ""
         :Example: "gclid,contrast"
 
         A list of comma-separated parameter names to be excluded from the language
@@ -77,9 +77,9 @@ Options:
 
     ..  confval:: as
         :name: LanguageMenuProcessor-as
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>`
-        :Default: defaults to the fieldName
+        :default: defaults to the fieldName
 
         The variable name to be used in the Fluid template.
 

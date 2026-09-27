@@ -30,7 +30,7 @@ Properties
 ..  confval:: special.value
     :name: hmenu-list-special-value
     :type: list of page IDs /:ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     This will generate a menu with the two pages (uid=35 and uid=56)
     listed:

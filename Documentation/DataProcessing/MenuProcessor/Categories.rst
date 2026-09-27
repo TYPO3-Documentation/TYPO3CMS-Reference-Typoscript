@@ -51,7 +51,7 @@ special.relation
 ..  confval:: special.relation
     :name: hmenu-categories-special-relation
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
-    :Default: `categories`
+    :default: `categories`
 
     Name of the categories-relation field to use for
     building the list of categorized pages, as there can
@@ -80,7 +80,7 @@ special.order
 ..  confval:: special.order
     :name: hmenu-categories-special-order
     :type: `asc` or `desc` / :ref:`stdWrap <stdwrap>`
-    :Default: `asc`
+    :default: `asc`
 
     Order in which the pages should be ordered, ascending or
     descending. Should be `asc` or `desc`, case-insensitive.

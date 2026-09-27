@@ -361,7 +361,7 @@ Properties for overriding and conditions
         ..  confval:: listNum.splitChar
             :name: stdwrap-listNum-splitChar
             :type: :ref:`string <data-type-string>`
-            :Default: `,` (comma)
+            :default: `,` (comma)
 
             ..  rubric:: Examples
 
@@ -887,7 +887,7 @@ Properties for parsing data
     ..  confval:: bytes
         :name: stdwrap-bytes
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
-        :Default: iec, 1024
+        :default: iec, 1024
 
         This is for number values. When the 'bytes' property is added and set
         to 'true' then a number will be formatted in 'bytes' style with two
