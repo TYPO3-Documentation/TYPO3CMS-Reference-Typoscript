@@ -32,7 +32,6 @@ Options:
 
     ..  confval:: if
         :name: CommaSeparatedValueProcessor-if
-        :required: false
         :type: :ref:`if <if>` condition
         :default: ''
 
@@ -56,7 +55,6 @@ Options:
 
     ..  confval:: as
         :name: CommaSeparatedValueProcessor-as
-        :required: false
         :type: :ref:`string <data-type-string>`
         :default: defaults to the fieldName
 
@@ -68,7 +66,6 @@ Options:
 
     ..  confval:: maximumColumns
         :name: CommaSeparatedValueProcessor-maximumColumns
-        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: :typoscript:`0`
 
@@ -82,7 +79,6 @@ Options:
 
     ..  confval:: fieldDelimiter
         :name: CommaSeparatedValueProcessor-fieldDelimiter
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: :typoscript:`,`
 
@@ -94,7 +90,6 @@ Options:
 
     ..  confval:: fieldEnclosure
         :name: CommaSeparatedValueProcessor-fieldEnclosure
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: :typoscript:`"`
 
