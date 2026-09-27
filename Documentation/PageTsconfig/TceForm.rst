@@ -1037,7 +1037,7 @@ suggest.minimumCharacters
 ..  confval:: suggest.minimumCharacters
     :name: tceform-suggest-minimumCharacters
     :type: positive integer
-    :Default: 2
+    :default: 2
 
     Minimum number of characters needed to start the search. Works only for single fields.
 
@@ -1108,7 +1108,7 @@ suggest.receiverClass
 ..  confval:: suggest.receiverClass
     :name: tceform-suggest-receiverClass
     :type: Fully Qualified PHP class name
-    :Default: :php:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`
+    :default: :php:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`
 
     PHP class alternative receiver class - the file that holds the class should be derived
     from :php:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`.
@@ -1165,7 +1165,7 @@ suggest.searchWholePhrase
 ..  confval:: suggest.searchWholePhrase
     :name: tceform-suggest-searchWholePhrase
     :type: boolean
-    :Default: 0
+    :default: 0
 
     Whether to do a `LIKE=%mystring%` (searchWholePhrase = 1) or a
     `LIKE=mystring%` (to do a real find as you type).

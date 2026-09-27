@@ -26,7 +26,7 @@ align
 ..  confval:: align
     :name: gifbuilder-crop-align
     :type: VHalign / :ref:`stdWrap <stdwrap>`
-    :Default: l, t
+    :default: l, t
 
     Pair of values, which defines the horizontal and vertical alignment of
     the crop frame.
@@ -73,7 +73,7 @@ backColor
 ..  confval:: backColor
     :name: gifbuilder-crop-backColor
     :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
-    :Default: The original background color
+    :default: The original background color
 
     Background color.
 

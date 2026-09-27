@@ -64,7 +64,7 @@ The following Item states are listed from the least to the highest priority:
     ..  confval:: NO
         :name: tmenu-common-property-no
         :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
-        :Default: 1 (true)
+        :default: 1 (true)
 
 
         The default "Normal" state rendering of Item. This is required for all
@@ -75,7 +75,7 @@ The following Item states are listed from the least to the highest priority:
     ..  confval:: IFSUB
         :name: tmenu-common-property-ifsub
         :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
-        :Default: 0
+        :default: 0
 
         Enable/Configuration for menu items which has subpages.
 
@@ -84,7 +84,7 @@ The following Item states are listed from the least to the highest priority:
     ..  confval:: ACT
         :name: tmenu-common-property-act
         :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
-        :Default: 0
+        :default: 0
 
         Enable/Configuration for menu items which are found in the rootLine.
 
@@ -93,7 +93,7 @@ The following Item states are listed from the least to the highest priority:
     ..  confval:: ACTIFSUB
         :name: tmenu-common-property-actifsub
         :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
-        :Default: 0
+        :default: 0
 
         Enable/Configuration for menu items which are found in the rootLine
         and have subpages.
@@ -103,7 +103,7 @@ The following Item states are listed from the least to the highest priority:
     ..  confval:: CUR
         :name: tmenu-common-property-cur
         :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
-        :Default: 0
+        :default: 0
 
         Enable/Configuration for a menu item if the item is the current page.
 
@@ -112,7 +112,7 @@ The following Item states are listed from the least to the highest priority:
     ..  confval:: CURIFSUB
         :name: tmenu-common-property-curifsub
         :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
-        :Default: 0
+        :default: 0
 
         Enable/Configuration for a menu item if the item is the current page
         and has subpages.
@@ -122,7 +122,7 @@ The following Item states are listed from the least to the highest priority:
     ..  confval:: USR
         :name: tmenu-common-property-usr
         :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
-        :Default: 0
+        :default: 0
 
         Enable/Configuration for menu items which are access restricted pages
         that a user has access to.
@@ -132,7 +132,7 @@ The following Item states are listed from the least to the highest priority:
     ..  confval:: SPC
         :name: tmenu-common-property-spc
         :type: :ref:`boolean <data-type-boolean>` / :ref:`TMENUITEM <tmenuitem>`
-        :Default: 0
+        :default: 0
 
         Enable/Configuration for 'Spacer' pages.
 
@@ -237,7 +237,7 @@ Properties
         ..  confval:: sectionIndex.useColPos
             :name: menu-common-properties-sectionIndex-useColPos
             :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
-            :Default: 0
+            :default: 0
 
             This property allows you to set the colPos which should be used in the
             where clause of the query. Possible values are integers, default is "0".
@@ -256,7 +256,7 @@ Properties
     ..  confval:: target
         :name: menu-common-properties-target
         :type: string
-        :Default: self
+        :default: self
 
         Target of the menu links
 

@@ -164,7 +164,7 @@ Properties of 'config'
     ..  confval:: cache_clearAtMidnight
         :name: config-cache-clearAtMidnight
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `0`
+        :default: `0`
 
         This setting ensures that the cache expires at midnight on the day that the
         page is scheduled to expire.
@@ -181,7 +181,7 @@ Properties of 'config'
     ..  confval:: cache_period
         :name: config-cache-period
         :type: :ref:`integer <data-type-integer>`
-        :Default: `31536000` *(= 365 days)*
+        :default: `31536000` *(= 365 days)*
 
         ..  versionchanged:: 14.3.1
             The default was raised from `86400` (24 hours) to `31536000`
@@ -199,7 +199,7 @@ Properties of 'config'
     ..  confval:: contentObjectExceptionHandler
         :name: config-contentObjectExceptionHandler
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `0`
+        :default: `0`
         :Example: :ref: `setup-config-contentObjectExceptionHandler`
 
         Exceptions which occur during the rendering of content objects (typically plugins)
@@ -236,7 +236,7 @@ Properties of 'config'
     ..  confval:: disableAllHeaderCode
         :name: config-disableAllHeaderCode
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `0`
+        :default: `0`
         :Example: :ref:`Provide JSON and disable HTML headers <setup-config-disableallheadercode>`
 
         If this is not set or set to `0`, the :ref:`PAGE object type in TypoScript <page>`
@@ -258,7 +258,7 @@ Properties of 'config'
     ..  confval:: disableBodyTag
         :name: config-disableBodyTag
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `0`
+        :default: `0`
 
         If this option is set, the TYPO3 core will not generate the
         opening :html:`<body ...>` part of the body tag. The closing :html:`</body>`
@@ -306,7 +306,7 @@ Properties of 'config'
     ..  confval:: disablePreviewNotification
         :name: config-disablePreviewNotification
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `0`
+        :default: `0`
 
         Disables the "preview" notification box.
 
@@ -315,7 +315,7 @@ Properties of 'config'
     ..  confval:: disableLanguageHeader
         :name: config-disableLanguageHeader
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `0`
+        :default: `0`
 
         TYPO3 by default sends a `Content-language: XX` HTTP header,
         where "XX" is the ISO code of the relevant language. The
@@ -363,7 +363,7 @@ Properties of 'config'
     ..  confval:: enableContentLengthHeader
         :name: config-enableContentLengthHeader
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `1`
+        :default: `1`
 
         If set, the header "content-length: [bytes of content]" is sent.
 
@@ -377,7 +377,7 @@ Properties of 'config'
     ..  confval:: extTarget
         :name: config-extTarget
         :type: target
-        :Default: `_top`
+        :default: `_top`
 
         Default external target. Used by :ref:`typolink <typolink>` if no extTarget is set.
 
@@ -394,7 +394,7 @@ Properties of 'config'
     ..  confval:: forceAbsoluteUrls
         :name: config-forceAbsoluteUrls
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `0`
+        :default: `0`
 
         If this option is set, all links, image references or assets
         previously built with a relative or absolute path (for example,
@@ -493,7 +493,7 @@ Properties of 'config'
     ..  confval:: index_descrLgd
         :name: config-index-descrLgd
         :type: :ref:`integer <data-type-integer>`
-        :Default: `200`
+        :default: `200`
 
         This indicates how many chars to preserve in the description of an
         indexed page. This can be used in search result output.
@@ -523,7 +523,7 @@ Properties of 'config'
     ..  confval:: index_metatags
         :name: config-index-metatags
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `1`
+        :default: `1`
 
         This allows the indexing of metatags to be switched on or off. It is
         switched on by default.
@@ -533,7 +533,7 @@ Properties of 'config'
     ..  confval:: inlineStyle2TempFile
         :name: config-inlineStyle2TempFile
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `1`
+        :default: `1`
         :Example: :ref:`inlineStyle2TempFile example <setup-config-inlinestyle2tempfile>`
 
         If set, the inline styles TYPO3 controls in the core are written to
@@ -696,7 +696,7 @@ Properties of 'config'
     ..  confval:: no_cache
         :name: config-no-cache
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `0`
+        :default: `0`
 
         If this is set to `1`, it disables the `pages` cache, meaning that the
         rendered result/response will not be saved to cache.
@@ -718,7 +718,7 @@ Properties of 'config'
     ..  confval:: noPageTitle
         :name: config-noPageTitle
         :type: :ref:`integer <data-type-integer>`
-        :Default: `0`
+        :default: `0`
         :Example: :ref:`Set a custom page renderer template <setup-config-pagerenderertemplatefile>`
 
         If you only want to have the site name (from the template record) in
@@ -734,7 +734,7 @@ Properties of 'config'
     ..  confval:: pageRendererTemplateFile
         :name: config-pageRendererTemplateFile
         :type: :ref:`string <data-type-string>`
-        :Default: file:`EXT:core/Resources/Private/Templates/PageRenderer.html`
+        :default: file:`EXT:core/Resources/Private/Templates/PageRenderer.html`
 
         Sets the template for page renderer class
         :php:`TYPO3\CMS\Core\Page\PageRenderer`.
@@ -753,7 +753,7 @@ Properties of 'config'
     ..  confval:: pageTitleFirst
         :name: config-pageTitleFirst
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `0`
+        :default: `0`
         :Example: :ref:`Reorder the default page title providers <setup-config-pagetitleproviders>`
 
         TYPO3 by default prints title tags in the format "website: page
@@ -781,7 +781,7 @@ Properties of 'config'
     ..  confval:: pageTitleSeparator
         :name: config-pageTitleSeparator
         :type: array
-        :Default: `:` *(colon with following space)*
+        :default: `:` *(colon with following space)*
         :Example: :ref:`Use custom separators between page title parts <setup-config-pagetitleseparator>`
 
         The symbols ouput in the title tag between the website
@@ -905,7 +905,7 @@ Properties of 'config'
     ..  confval:: showWebsiteTitle
         :name: config-showWebsiteTitle
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: 1
+        :default: 1
 
         This option can be used to specify whether the website title defined in
         the :ref:`site configuration <t3coreapi:sitehandling>` should be added
@@ -941,7 +941,7 @@ Properties of 'config'
     ..  confval:: spamProtectEmailAddresses_atSubst
         :name: config-spamProtectEmailAddresses-atSubst
         :type: :ref:`string <data-type-string>`
-        :Default: `(at)`
+        :default: `(at)`
         :Example: :ref:`Spam protect email addresses automatically <setup-config-spamprotectemailaddresses-lastdotsubst>`
 
         Substitute label for the at-sign (`@`).
@@ -951,7 +951,7 @@ Properties of 'config'
     ..  confval:: spamProtectEmailAddresses_lastDotSubst
         :name: config-spamProtectEmailAddresses-lastDotSubst
         :type: :ref:`string <data-type-string>`
-        :Default: `.` *(just a simple dot)*
+        :default: `.` *(just a simple dot)*
         :Example: :ref:`Spam protect email addresses automatically <setup-config-spamprotectemailaddresses-lastdotsubst>`
 
         Substitute label for the last dot in the email address.

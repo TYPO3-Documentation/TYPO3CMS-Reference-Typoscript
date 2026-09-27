@@ -46,7 +46,7 @@ Properties
     ..  confval:: 1, 2, 3, ...
         :name: hmenu-array
         :type: :ref:`menu object <data-type-menuobj>`
-        :Default: (no menu)
+        :default: (no menu)
 
         For every menu level, that should be rendered, an according entry must
         exist. It defines the menu object that should render the menu items on
@@ -94,7 +94,7 @@ Properties
     ..  confval:: entryLevel
         :name: hmenu-entryLevel
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
-        :Default: 0
+        :default: 0
 
         Defines at which level in the rootLine the menu should start.
 
@@ -184,7 +184,7 @@ Properties
     ..  confval:: excludeDoktypes
         :name: hmenu-excludeDoktypes
         :type: list of :ref:`integer <data-type-integer>`
-        :Default: 6,254
+        :default: 6,254
 
         See :confval:`MenuProcessor-excludeDoktypes`.
 

@@ -32,7 +32,7 @@ align
 ..  confval:: align
     :name: gifbuilder-box-align
     :type: VHalign / :ref:`stdWrap <stdwrap>`
-    :Default: l, t
+    :default: l, t
 
     Pair of values, which defines the horizontal and vertical alignment of
     the box in the image.
@@ -79,7 +79,7 @@ color
 ..  confval:: color
     :name: gifbuilder-box-color
     :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
-    :Default: black
+    :default: black
 
     Fill color of the box.
 
@@ -109,7 +109,7 @@ opacity
 ..  confval:: opacity
     :name: gifbuilder-box-opacity
     :type: positive integer (1-100) / :ref:`stdWrap <stdwrap>`
-    :Default: 100
+    :default: 100
 
     The degree to which the box conceals the background.
 

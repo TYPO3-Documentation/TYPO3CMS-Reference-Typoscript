@@ -63,7 +63,7 @@ BackendLayouts
 
 ..  confval:: BackendLayouts
     :type: array
-    :no-index:
+    :noindex:
 
     Backend Layouts were initially introduced in order to customize the view of
     the :guilabel:`Page` module in TYPO3 Backend for a page, but has then since grown also in
@@ -117,7 +117,7 @@ defLangBinding
 ..  confval:: defLangBinding
     :name: mod-web-layout-defLangBinding
     :type: boolean
-    :Default: 1
+    :default: 1
 
     ..  versionchanged:: 14.0
         Is not evaluated anymore. Editors will now always see the content
@@ -144,7 +144,7 @@ hideRestrictedCols
 ..  confval:: hideRestrictedCols
     :name: mod-web-layout-hideRestrictedCols
     :type: boolean
-    :Default: false
+    :default: false
 
     If activated, only columns will be shown in the backend that the editor is
     allowed to access. All columns with access restriction are hidden in that case.
@@ -177,7 +177,7 @@ localization.enableCopy
 ..  confval:: localization.enableCopy
     :name: mod-web-layout-localization-enableCopy
     :type: boolean
-    :Default: 1
+    :default: 1
 
     Enables the creation of copies of content elements into languages in the translation wizard ("free mode").
 
@@ -207,7 +207,7 @@ localization.enableTranslate
 ..  confval:: localization.enableTranslate
     :name: mod-web-layout-localization-enableTranslate
     :type: boolean
-    :Default: 1
+    :default: 1
 
     Enables simple translations of content elements in the translation wizard ("connected mode").
 
@@ -276,7 +276,7 @@ noCreateRecordsLink
 ..  confval:: noCreateRecordsLink
     :name: mod-web-layout-noCreateRecordsLink
     :type: boolean
-    :Default: 0
+    :default: 0
 
     If set, the link in the bottom of the page, "Create new record", is hidden.
 
