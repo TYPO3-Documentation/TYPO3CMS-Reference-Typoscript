@@ -1031,7 +1031,7 @@ Properties of 'config'
         `none:`
             The default XML prologue is *not* set.
 
-        Any other string is used
+        Any other string is used as the XML prologue itself.
 
 ..  _setup-config-examples:
 
