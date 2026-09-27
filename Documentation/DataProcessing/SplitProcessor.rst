@@ -29,9 +29,9 @@ Options
 
     ..  confval:: if
         :name: splitProcessor-if
-        :Required: false
+        :required: false
         :type: :ref:`if <if>` condition
-        :Default: ''
+        :default: ''
 
         Only if the condition is met the data processor is executed.
 
@@ -41,9 +41,9 @@ Options
 
     ..  confval:: fieldName
         :name: splitProcessor-fieldName
-        :Required: true
+        :required: true
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: ''
+        :default: ''
 
         Name of the field to be used.
 
@@ -53,9 +53,9 @@ Options
 
     ..  confval:: as
         :name: splitProcessor-as
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>`
-        :Default: defaults to the fieldName
+        :default: defaults to the fieldName
 
         The variable name to be used in the Fluid template.
 
@@ -65,9 +65,9 @@ Options
 
     ..  confval:: delimiter
         :name: splitProcessor-delimiter
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: Line Feed
+        :default: Line Feed
         :Example: ","
 
         The field delimiter, a character separating the values.
@@ -78,9 +78,9 @@ Options
 
     ..  confval:: filterIntegers
         :name: splitProcessor-filterIntegers
-        :Required: false
+        :required: false
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
-        :Default: 0
+        :default: 0
         :Example: 1
 
         If set to `1`, all values are being cast to int.
@@ -91,9 +91,9 @@ Options
 
     ..  confval:: filterUnique
         :name: splitProcessor-filterUnique
-        :Required: false
+        :required: false
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
-        :Default: 0
+        :default: 0
         :Example: 1
 
         If set to `1`, all duplicates will be removed.
@@ -104,9 +104,9 @@ Options
 
     ..  confval:: removeEmptyEntries
         :name: splitProcessor-removeEmptyEntries
-        :Required: false
+        :required: false
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
-        :Default: 0
+        :default: 0
         :Example: 1
 
         If set to `1`, all empty values will be removed.

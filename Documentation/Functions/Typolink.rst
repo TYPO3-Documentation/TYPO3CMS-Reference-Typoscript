@@ -36,7 +36,7 @@ extTarget
 ..  confval:: extTarget
     :name: typolink-extTarget
     :type: string / :ref:`stdWrap <stdwrap>`
-    :Default: "" (no target set)
+    :default: "" (no target set)
 
     Target used for external links
 
@@ -214,7 +214,7 @@ ATagBeforeWrap
 ..  confval:: ATagBeforeWrap
     :name: typolink-ATagBeforeWrap
     :type: :ref:`boolean <data-type-boolean>`
-    :Default: 0
+    :default: 0
 
     If set, the link is first wrapped with :typoscript:`wrap` and then the
     <A>-tag.
@@ -369,7 +369,7 @@ forceAbsoluteUrl
 ..  confval:: forceAbsoluteUrl
     :name: typolink-forceAbsoluteUrl
     :type: :ref:`boolean <data-type-boolean>`
-    :Default: :php:`false`
+    :default: :php:`false`
 
     Forces links to internal pages to be absolute, thus having a proper
     URL scheme and domain prepended.
@@ -675,7 +675,7 @@ page.type
 ..  confval:: page.type
     :name: typolink-handler-page-type
     :type: :ref:`integer <data-type-integer>`
-    :Default: 0
+    :default: 0
     :Example: `t3://page?uid=13&type=3`
 
     The type (:ref:`Properties <setup-page-typenum>` property of the :ref:`PAGE object type in TypoScript <page>` top level
@@ -792,7 +792,7 @@ folder.storage
     :name: typolink-handler-folder-storage
     :type: :ref:`string <data-type-string>`
     :Example: `t3://folder?storage=1&identifier=myfolder`
-    :Default: 0
+    :default: 0
 
     The file abstraction layer (FAL) storage UID to the given folder.
 

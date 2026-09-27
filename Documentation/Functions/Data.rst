@@ -188,7 +188,7 @@ date
 
 ..  confval:: date
     :name: data-date
-    :Default: :typoscript:`d/m Y`
+    :default: :typoscript:`d/m Y`
 
     Can be used with a colon and :ref:`date-conf <data-type-date-conf>`.
 

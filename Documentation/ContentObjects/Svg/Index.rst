@@ -41,7 +41,7 @@ width
 ..  confval:: width
     :name: svg-width
     :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
-    :Default: 600
+    :default: 600
 
     Width of the SVG.
 
@@ -53,7 +53,7 @@ height
 ..  confval:: height
     :name: svg-height
     :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
-    :Default: 400
+    :default: 400
 
     Height of the SVG.
 

@@ -32,7 +32,7 @@ backColor
 ..  confval:: backColor
     :name: gifbuilder-properties-backColor
     :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
-    :Default: white
+    :default: white
 
     Background color of the image.
 
@@ -142,7 +142,7 @@ format
 ..  confval:: format
     :name: gifbuilder-properties-format
     :type: "gif" / "jpg" / "jpeg" / "png" / "webp" / "avif"
-    :Default: png
+    :default: png
 
     File type of the output image.
 
@@ -193,7 +193,7 @@ offset
 ..  confval:: offset
     :name: gifbuilder-properties-offset
     :type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0,0
+    :default: 0,0
 
     Offset all objects on the image.
 
@@ -302,7 +302,7 @@ XY
 ..  confval:: XY
     :name: gifbuilder-properties-XY
     :type: x,y :ref:`+calc <gifbuilder-calc>` (1-2000) / :ref:`stdWrap <stdwrap>`
-    :Default: 120,50
+    :default: 120,50
 
     Size of the image file.
 

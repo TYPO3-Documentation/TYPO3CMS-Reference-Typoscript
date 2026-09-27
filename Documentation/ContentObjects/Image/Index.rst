@@ -105,7 +105,7 @@ emptyTitleHandling
 ..  confval:: emptyTitleHandling
     :name: image-emptyTitleHandling
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
-    :Default: useAlt
+    :default: useAlt
 
     Value can be "keepEmpty" to preserve an empty title attribute, or
     "useAlt" to use the alt attribute instead.
@@ -120,7 +120,7 @@ layoutKey
 ..  confval:: layoutKey
     :name: image-layoutKey
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
-    :Default: default
+    :default: default
 
     Defines the render layout for the IMAGE. The render layout is the HTML Code for the IMAGE itself.
     Default values include :typoscript:`default`, :typoscript:`srcset`, :typoscript:`picture`, :typoscript:`data`.
@@ -347,7 +347,7 @@ sourceCollection.dataKey.pixelDensity
 ..  confval:: sourceCollection.dataKey.pixelDensity
     :name: image-pixeldensity
     :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
-    :Default: 1
+    :default: 1
 
     Defines the density of the rendered Image, e.g. a retina display would
     have a density of 2, the density is a multiplier for the image

@@ -603,7 +603,7 @@ like()
 ..  confval:: like([search-string], [pattern])
     :name: tsconfig-condition-function-like
     :type: boolean
-    :parameter: [search-string] : string; [pattern]: string
+    :Parameter: [search-string] : string; [pattern]: string
 
     This function has two parameters. The first parameter is the string to search in,
     the second parameter is the search string.

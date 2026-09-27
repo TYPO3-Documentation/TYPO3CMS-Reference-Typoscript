@@ -132,7 +132,7 @@ plugins.
     ..  confval:: persistence.enableAutomaticCacheClearing
         :name: plugin-persistence-enableAutomaticCacheClearing
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `true`
+        :default: `true`
 
         **Only for Extbase plugins**.
         Enables the automatic cache clearing when changing data sets (see also
@@ -241,7 +241,7 @@ plugins.
     ..  confval:: mvc.callDefaultActionIfActionCantBeResolved
         :name: plugin-mvc-callDefaultActionIfActionCantBeResolved
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `false`
+        :default: `false`
         :Example: :ref:`Call default action if action cannot be resolved <setup-plugin-mvc-callDefaultActionIfActionCantBeResolved-example>`
 
         **Only for Extbase plugins**. If set, causes the controller to show
@@ -252,7 +252,7 @@ plugins.
     ..  confval:: mvc.throwPageNotFoundExceptionIfActionCantBeResolved
         :name: plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `false`
+        :default: `false`
         :Example: :ref:`Show 404 (page not found) page if action cannot be resolved <setup-plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved-example>`
 
         Same as :ref:`Properties for all frontend plugins based on Extbase <setup-plugin-mvc-callDefaultActionIfActionCantBeResolved>`
@@ -263,7 +263,7 @@ plugins.
     ..  confval:: mvc.showPageNotFoundIfTargetNotFoundException
         :name: plugin-mvc-showPageNotFoundIfTargetNotFoundException
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `false`
+        :default: `false`
 
         **Only for Extbase plugins**. By default, when calling an extbase
         controller action that is not registered for an Extbase plugin, a fatal
@@ -284,7 +284,7 @@ plugins.
     ..  confval:: mvc.showPageNotFoundIfRequiredArgumentIsMissingException
         :name: plugin-mvc-showPageNotFoundIfRequiredArgumentIsMissingException
         :type: :ref:`boolean <data-type-boolean>`
-        :Default: `false`
+        :default: `false`
 
         **Only for Extbase plugins**. By default, when calling an extbase
         controller action with missing/invalid required arguments a fatal
@@ -309,7 +309,7 @@ plugins.
     ..  confval:: format
         :name: plugin-format
         :type: :ref:`string <data-type-string>`
-        :Default: `html`
+        :default: `html`
         :Example: :ref:`Define alternative output formats for RSS feeds <extbase_format-example>`
 
         ..  warning::

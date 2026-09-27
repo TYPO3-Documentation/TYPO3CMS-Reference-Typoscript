@@ -238,7 +238,7 @@ negate
 ..  confval:: negate
     :name: if-negate
     :type: :ref:`boolean <data-type-boolean>`
-    :Default: 0
+    :default: 0
 
     This property is checked after all other properties. If set, it
     negates the result, which is present before its execution.

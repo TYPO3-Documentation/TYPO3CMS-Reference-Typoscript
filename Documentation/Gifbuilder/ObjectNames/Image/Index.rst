@@ -25,7 +25,7 @@ align
 ..  confval:: align
     :name: gifbuilder-image-align
     :type: VHalign / :ref:`stdWrap <stdwrap>`
-    :Default: 1,1
+    :default: 1,1
 
     Pair of values, which defines the horizontal and vertical alignment of
     the image.
@@ -96,7 +96,7 @@ offset
 ..  confval:: offset
     :name: gifbuilder-image-offset
     :type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0,0
+    :default: 0,0
 
     Offset of the image.
 
@@ -109,7 +109,7 @@ tile
 ..  confval:: tile
     :name: gifbuilder-image-tile
     :type: x,y / :ref:`stdWrap <stdwrap>`
-    :Default: 1,1
+    :default: 1,1
 
     Repeat the image x,y times (which creates the look of tiles).
 
