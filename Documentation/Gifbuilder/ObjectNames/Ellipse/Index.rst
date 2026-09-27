@@ -33,7 +33,7 @@ color
 ..  confval:: color
     :name: gifbuilder-ellipse-color
     :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
-    :Default: black
+    :default: black
 
     Fill color of the ellipse.
 

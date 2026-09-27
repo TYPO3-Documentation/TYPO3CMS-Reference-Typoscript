@@ -51,7 +51,7 @@ ext
 ..  confval:: ext
     :name: imgresource-ext
     :type: string / :ref:`stdWrap <stdwrap>`
-    :Default: web
+    :default: web
 
     Target file extension for the processed image. The value :typoscript:`web` checks if
     the file extension is one of gif, jpg, jpeg, png, or svg and if not it will find
@@ -144,7 +144,7 @@ sample
 ..  confval:: sample
     :name: imgresource-sample
     :type: :ref:`boolean <data-type-boolean>`
-    :Default: 0
+    :default: 0
 
     If set, `-sample` is used to scale images instead of `-geometry`. Sample
     does not use anti-aliasing and is therefore much faster.
@@ -158,7 +158,7 @@ noScale
 ..  confval:: noScale
     :name: imgresource-noScale
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     If set, the image itself will never be scaled. Only width and height
     are calculated according to the other properties, so that the image is
@@ -189,7 +189,7 @@ crop
 ..  confval:: crop
     :name: imgresource-crop
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
-    :Default: not-set (when file/image is a file_reference the crop value of
+    :default: not-set (when file/image is a file_reference the crop value of
 
     ..  versionchanged:: 13.2
         SVG images are now processed natively in SVG during cropping.
@@ -237,7 +237,7 @@ cropVariant
 ..  confval:: cropVariant
     :name: imgresource-cropVariant
     :type: :ref:`string <data-type-string>`
-    :Default: default
+    :default: default
 
     Since it's possible to define certain :ref:`crop variants <t3coreapi:cropvariants>`
     you can specify which one to use here.
@@ -295,7 +295,7 @@ treatIdAsReference
 ..  confval:: treatIdAsReference
     :name: imgresource-treatIdAsReference
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     If set, given UIDs are interpreted as UIDs to sys_file_reference
     instead of to sys_file. This allows using file references, for
@@ -358,7 +358,7 @@ stripProfile
 ..  confval:: stripProfile
     :name: imgresource-stripProfile
     :type: :ref:`boolean <data-type-boolean>`
-    :Default: 0
+    :default: 0
 
     If set, the GraphicsMagick/ImageMagick-command will use a
     stripProfile-command which shrinks the generated thumbnails. See the

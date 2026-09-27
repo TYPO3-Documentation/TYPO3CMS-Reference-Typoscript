@@ -55,7 +55,7 @@ special.mode
 ..  confval:: special.mode
     :name: hmenu-updated-special-mode
     :type: string
-    :Default: `SYS_LASTCHANGED`
+    :default: `SYS_LASTCHANGED`
 
     The field in the database, which should be used to get the information
     about the last update from.
@@ -91,7 +91,7 @@ special.depth
 ..  confval:: special.depth
     :name: hmenu-updated-special-depth
     :type: integer
-    :Default: 20
+    :default: 20
 
     Defines the tree depth.
 
@@ -110,7 +110,7 @@ special.beginAtLevel
 ..  confval:: special.beginAtLevel
     :name: hmenu-updated-special-beginAtLevel
     :type: integer
-    :Default: 0
+    :default: 0
 
     Determines starting level for the page trees generated based on .value
     and .depth.
@@ -147,7 +147,7 @@ special.limit
 ..  confval:: special.limit
     :name: hmenu-updated-special-limit
     :type: integer
-    :Default: 10
+    :default: 10
 
     Maximal number of items in the menu. Default is 10, max is 100.
 
@@ -159,7 +159,7 @@ special.excludeNoSearchPages
 ..  confval:: special.excludeNoSearchPages
     :name: hmenu-updated-special-excludeNoSearchPages
     :type: boolean
-    :Default: `false`
+    :default: `false`
 
     If set, pages marked `No search` are not included.
 

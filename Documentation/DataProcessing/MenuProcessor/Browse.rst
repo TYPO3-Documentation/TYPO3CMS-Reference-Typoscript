@@ -40,7 +40,7 @@ Properties
     ..  confval:: special.value
         :name: hmenu-browse-special-value
         :type: integer /:ref:`stdWrap <stdwrap>`
-        :Default: current page ID
+        :default: current page ID
 
         The default value can be overridden with a different page ID as starting
         point for the menu in some rare use cases.
@@ -50,7 +50,7 @@ Properties
     ..  confval:: special.items
         :name: hmenu-browse-special-items
         :type: list of item names separated by `|`
-        :Default: `index|up|next|prev`
+        :default: `index|up|next|prev`
 
         A list, separated by pipes `|`, containing the following item types:
 
@@ -97,7 +97,7 @@ Properties
     ..  confval:: special.items.prevnextToSection
         :name: hmenu-browse-special-items-prevnextToSection
         :type: boolean
-        :Default: false
+        :default: false
 
         If set, the `prev` and `next` navigation will jump to the next section
         when it reaches the end of pages in the current section. That way
@@ -109,7 +109,7 @@ Properties
     ..  confval:: special.excludeNoSearchPages
         :name: hmenu-browse-special-excludeNoSearchPages
         :type: boolean
-        :Default: false
+        :default: false
 
         If set, pages marked with the `no search` checkbox will be excluded from the menu.
 

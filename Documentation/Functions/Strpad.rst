@@ -28,7 +28,7 @@ length
 ..  confval:: length
     :name: strpad-length
     :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     The length of the output string. If the value is negative, less
     than, or equal to the length of the input value, no padding
@@ -42,7 +42,7 @@ padWith
 ..  confval:: padWith
     :name: strpad-padWith
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
-    :Default: (space character)
+    :default: (space character)
 
 
     The character(s) to pad with. The value of :typoscript:`padWith` may be
@@ -60,7 +60,7 @@ type
 ..  confval:: type
     :name: strpad-type
     :type: *(list of keywords)* / :ref:`stdWrap <stdwrap>`
-    :Default: right
+    :default: right
 
 
     The side(s) of the input value, on which the padding should be

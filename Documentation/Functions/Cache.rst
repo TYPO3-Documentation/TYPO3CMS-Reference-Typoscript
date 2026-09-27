@@ -58,7 +58,7 @@ lifetime
 ..  confval:: lifetime
     :name: cache-lifetime
     :type: mixed / :ref:`stdWrap <stdwrap>`
-    :Default: default
+    :default: default
 
     Lifetime of the content in cache.
 

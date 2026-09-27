@@ -78,7 +78,7 @@ renderObj
 ..  confval:: renderObj
     :name: content-renderObj
     :type: :ref:`Content Objects (cObject) <data-type-cObject>`
-    :Default: :typoscript:`< [table name]`
+    :default: :typoscript:`< [table name]`
 
     The cObject used for rendering the records resulting from the query in
     :ref:`select <cobj-content-select>`.

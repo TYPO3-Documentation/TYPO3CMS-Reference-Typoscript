@@ -59,7 +59,7 @@ clickTitleMode
 ..  confval:: clickTitleMode
     :name: mod-web-list-clickTitleMode
     :type: string
-    :Default: edit
+    :default: edit
 
     Keyword which defines what happens when a user clicks a record title in the list.
 
@@ -85,7 +85,7 @@ csvDelimiter
 ..  confval:: csvDelimiter
     :name: mod-web-list-csvDelimiter
     :type: string
-    :Default: `,`
+    :default: `,`
 
     Defines the default delimiter for CSV downloads (Microsoft Excel expects
     `;` to be set). The value set will be displayed as default delimiter in the
@@ -111,7 +111,7 @@ csvQuote
 ..  confval:: csvQuote
     :name: mod-web-list-csvQuote
     :type: string
-    :Default: `"`
+    :default: `"`
 
     Defines the default quoting character for CSV downloads. The value set will
     be displayed as default quoting in the download dialog in the list module.
@@ -189,7 +189,7 @@ displayColumnSelector
 ..  confval:: displayColumnSelector
     :name: mod-web-list-displayColumnSelector
     :type: boolean
-    :Default: `true`
+    :default: `true`
 
     The column selector is enabled by default and can be disabled with this
     option. The column selector is displayed at the top of each record list in
@@ -204,7 +204,7 @@ displayRecordDownload
 ..  confval:: displayRecordDownload
     :name: mod-web-list-displayRecordDownload
     :type: boolean
-    :Default: `1`
+    :default: `1`
 
     The "Download" functionality is available in the :guilabel:`Web > List`
     module via the "Download" button in the relevant
@@ -297,7 +297,7 @@ enableClipBoard
 ..  confval:: enableClipBoard
     :name: mod-web-list-enableClipBoard
     :type: list of keywords
-    :Default: `selectable`
+    :default: `selectable`
 
     Determines whether the checkbox "Show clipboard" in the list module is
     shown or hidden. If it is hidden, you can predefine it to be always
@@ -394,7 +394,7 @@ itemsLimitPerTable
 ..  confval:: itemsLimitPerTable
     :name: mod-web-list-itemsLimitPerTable
     :type:  positive integer
-    :Default: 20
+    :default: 20
 
     Set the default maximum number of items to show per table.
     The number must be between `0` and `10000`. If below or above this range,
@@ -427,7 +427,7 @@ itemsLimitSingleTable
 ..  confval:: itemsLimitSingleTable
     :name: mod-web-list-itemsLimitSingleTable
     :type:  positive integer
-    :Default: 100
+    :default: 100
 
     Set the default maximum number of items to show in single table view.
     The number must be between `0` and `10000`. If below or above this range,
@@ -460,7 +460,7 @@ listOnlyInSingleTableView
 ..  confval:: listOnlyInSingleTableView
     :name: mod-web-list-listOnlyInSingleTableView
     :type:  boolean
-    :Default: 0
+    :default: 0
 
     If set, the default view will not show the single records inside a
     table anymore, but only the available tables and the number of records
@@ -514,7 +514,7 @@ noCreateRecordsLink
 ..  confval:: noCreateRecordsLink
     :name: mod-web-list-noCreateRecordsLink
     :type:  boolean
-    :Default: 0
+    :default: 0
 
     If set, the link "Create new record" is hidden.
 
@@ -542,7 +542,7 @@ noExportRecordsLinks
 ..  confval:: noExportRecordsLinks
     :name: mod-web-list-noExportRecordsLinks
     :type:  boolean
-    :Default: 0
+    :default: 0
 
     ..  versionchanged:: 13.1.0, 12.4.11
         Up until these versions this option also hid the
@@ -581,7 +581,7 @@ noViewWithDokTypes
 ..  confval:: noViewWithDokTypes
     :name: mod-web-list-noViewWithDokTypes
     :type:  string (comma-separated list of integers)
-    :Default: `254,255`
+    :default: `254,255`
 
     Hide view icon for the defined :ref:`doktypes <t3coreapi:list-of-page-types>`.
 
@@ -596,7 +596,7 @@ table.[tableName].hideTable
 ..  confval:: table.[tableName].hideTable
     :name: mod-web-list-table-tableName-hideTable
     :type:  boolean
-    :Default: 0
+    :default: 0
 
     If set to non-zero, the table is hidden. If it is zero, table is shown
     even if table name is listed in "hideTables" list.

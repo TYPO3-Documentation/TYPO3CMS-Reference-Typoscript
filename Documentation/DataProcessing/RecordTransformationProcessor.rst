@@ -95,7 +95,7 @@ Options of the `record-transformation` data processor
     ..  confval:: as
         :name: RecordTransformationProcessor-as
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-        :Default: 'record' or 'records'
+        :default: 'record' or 'records'
 
         The target variable containing the resolved record objects.
         If empty, 'record' or 'records' (if multiple records are given) is used.
@@ -105,7 +105,7 @@ Options of the `record-transformation` data processor
     ..  confval:: if
         :name: RecordTransformationProcessor-if
         :type: :ref:`if <if>` condition
-        :Default: ''
+        :default: ''
 
         Only if the condition is met the Data Processor is executed.
 
@@ -114,7 +114,7 @@ Options of the `record-transformation` data processor
     ..  confval:: table
         :name: RecordTransformationProcessor-table
         :type: :ref:`string <data-type-string>`
-        :Default: auto-resolved
+        :default: auto-resolved
 
         The name of the database table of the records. Leave empty to auto-resolve
         the table from context.
@@ -126,7 +126,7 @@ Options of the `record-transformation` data processor
     ..  confval:: variableName
         :name: RecordTransformationProcessor-variableName
         :type: :ref:`string <data-type-string>`
-        :Default: 'data'
+        :default: 'data'
 
         The variable that contains the record(s) from a previous Data Processor,
         or from a :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` view.

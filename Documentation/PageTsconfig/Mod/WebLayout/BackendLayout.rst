@@ -35,7 +35,7 @@ BackendLayouts.[backendLayout]
 ..  confval:: BackendLayouts.[backendLayout]
     :name: mod-web-layout-BackendLayouts
     :type: array:guilabel:`Page` module
-    :Path: mod.web_layout.BackendLayouts
+    :Page TSconfig path: mod.web_layout.BackendLayouts
 
     ..  rubric:: title
 

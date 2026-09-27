@@ -50,7 +50,7 @@ http.extTarget
 ..  confval:: http.extTarget
     :name: makelinks-http-extTarget
     :type: string
-    :Default: \_top
+    :default: \_top
 
     The target of the link.
 
@@ -74,7 +74,7 @@ http.ATagBeforeWrap
 ..  confval:: http.ATagBeforeWrap
     :name: makelinks-http-ATagBeforeWrap
     :type: :ref:`boolean <data-type-boolean>`
-    :Default: 0
+    :default: 0
 
     If set, the link is first wrapped with :typoscript:`http.wrap` and then the
     :html:`<a>` tag.
@@ -149,7 +149,7 @@ mailto.ATagBeforeWrap
 ..  confval:: mailto.ATagBeforeWrap
     :name: makelinks-mailto.ATagBeforeWrap
     :type: :ref:`boolean <data-type-boolean>`
-    :Default: 0
+    :default: 0
 
     If set, the link is first wrapped with mailto :typoscript:`wrap` and then the
     :html:`<a>` tag.

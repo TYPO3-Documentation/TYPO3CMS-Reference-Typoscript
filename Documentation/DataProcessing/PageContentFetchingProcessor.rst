@@ -35,9 +35,9 @@ Options
 
     ..  confval:: as
         :name: PageContentFetchingProcessor-as
-        :Required: false
+        :required: false
         :type: :ref:`string <data-type-string>`
-        :Default: "content"
+        :default: "content"
 
         Name for the variable in the Fluid template.
 
@@ -45,9 +45,9 @@ Options
 
     ..  confval:: if
         :name: PageContentFetchingProcessor-if
-        :Required: false
+        :required: false
         :type: :ref:`if <if>` condition
-        :Default: ''
+        :default: ''
 
         Only if the condition is met the data processor is executed.
 

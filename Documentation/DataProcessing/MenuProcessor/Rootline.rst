@@ -61,7 +61,7 @@ special.reverseOrder
 ..  confval:: special.reverseOrder
     :name: hmenu-rootline-special-reverseOrder
     :type: boolean
-    :Default: `false`
+    :default: `false`
 
     If set to true, the order of the root line menu elements will be
     reversed.
@@ -74,7 +74,7 @@ special.targets.[level number]
 ..  confval:: special.targets.[level number]
     :name: hmenu-rootline-special-targets
     :type: boolean
-    :Default: `false`
+    :default: `false`
     :Example: :ref:`Example: Set targets for levels <hmenu-special-rootline-targets-example>`
 
     For framesets. You can set a default target and a target for each

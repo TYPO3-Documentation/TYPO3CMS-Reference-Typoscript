@@ -35,7 +35,7 @@ Properties
 ..  confval:: special.value
     :name: hmenu-directory-special-value
     :type: Comma separated list of page IDs /:ref:`stdWrap <stdwrap>`
-    :Default: current page ID
+    :default: current page ID
 
     This will generate a menu of all pages with pid = 35 and pid = 56.
 

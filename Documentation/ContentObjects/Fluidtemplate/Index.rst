@@ -174,7 +174,7 @@ format
 ..  confval:: format
     :name: fluidtemplate-format
     :type: keyword / :ref:`stdWrap <stdwrap>`
-    :Default: html
+    :default: html
 
     :typoscript:`format` sets the format of the current request. It can be something
     like "html", "xml", "png", "json" or even "rss.xml" or something similar.
