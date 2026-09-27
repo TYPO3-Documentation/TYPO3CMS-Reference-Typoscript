@@ -190,14 +190,13 @@ crop
     :name: imgresource-crop
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
     :default: not-set (when file/image is a file_reference the crop value of
+        the file reference is used)
 
     It is possible to define an area that should be taken (cropped) from the image.
     When not defined in typoscript the value will be taken from the file_reference when
     possible. With this setting you can override this behavior.
 
     SVG images are processed natively in SVG during cropping.
-
-    the file reference is used)
 
     ..  rubric:: Examples
 
