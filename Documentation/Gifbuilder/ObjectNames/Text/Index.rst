@@ -25,7 +25,7 @@ align
 ..  confval:: align
     :name: gifbuilder-text-align
     :type: align / :ref:`stdWrap <stdwrap>`
-    :Default: left
+    :default: left
 
     The alignment of the :ref:`text <gifbuilder-text-text>`.
 
@@ -44,7 +44,7 @@ angle
 ..  confval:: angle
     :name: gifbuilder-text-angle
     :type: integer
-    :Default: 0
+    :default: 0
     :Range: -90 to 90
 
     The rotation degree of the :ref:`text <gifbuilder-text-text>`.
@@ -62,7 +62,7 @@ antiAlias
 ..  confval:: antiAlias
     :name: gifbuilder-text-antiAlias
     :type: boolean
-    :Default: 1 (true)
+    :default: 1 (true)
 
     The FreeType antialiasing.
 
@@ -82,7 +82,7 @@ breakSpace
 ..  confval:: breakSpace
     :name: gifbuilder-text-breakSpace
     :type: float
-    :Default: 1.0
+    :default: 1.0
 
     Defines a value that is multiplied by the line height of the current
     element.
@@ -109,7 +109,7 @@ doNotStripHTML
 ..  confval:: doNotStripHTML
     :name: gifbuilder-text-doNotStripHTML
     :type: boolean
-    :Default: 0 (false)
+    :default: 0 (false)
 
     If set, HTML tags inserted in the :ref:`text <gifbuilder-text-text>` are
     **not** removed. Any other HTML code will be removed by default!
@@ -133,7 +133,7 @@ fontColor
 ..  confval:: fontColor
     :name: gifbuilder-text-fontColor
     :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
-    :Default: black
+    :default: black
 
     The font color.
 
@@ -146,7 +146,7 @@ fontFile
 ..  confval:: fontFile
     :name: gifbuilder-text-fontFile
     :type: resource / :ref:`stdWrap <stdwrap>`
-    :Default: Nimbus (Arial clone)
+    :default: Nimbus (Arial clone)
 
     The font face (TrueType :file:`*.ttf` and OpenType :file:`*.otf` fonts can be
     used).
@@ -160,7 +160,7 @@ fontSize
 ..  confval:: fontSize
     :name: gifbuilder-text-fontSize
     :type: positive integer / :ref:`stdWrap <stdwrap>`
-    :Default: 12
+    :default: 12
 
     The font size.
 
@@ -173,7 +173,7 @@ hide
 ..  confval:: hide
     :name: gifbuilder-text-hide
     :type: boolean / :ref:`stdWrap <stdwrap>`
-    :Default: 0 (false)
+    :default: 0 (false)
 
     If this is true, the text is **not** printed.
 
@@ -190,7 +190,7 @@ iterations
 ..  confval:: iterations
     :name: gifbuilder-text-iterations
     :type: positive integer / :ref:`stdWrap <stdwrap>`
-    :Default: 1
+    :default: 1
 
     How many times the :ref:`text <gifbuilder-text-text>` should be "printed"
     onto it self. This will add the effect of bold text.
@@ -297,7 +297,7 @@ offset
 ..  confval:: offset
     :name: gifbuilder-text-offset
     :type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
-    :Default: 0,0
+    :default: 0,0
 
     The offset of the :ref:`text <gifbuilder-text-text>`.
 
@@ -330,7 +330,7 @@ spacing
 ..  confval:: spacing
     :name: gifbuilder-text-spacing
     :type: positive integer / :ref:`stdWrap <stdwrap>`
-    :Default: 0
+    :default: 0
 
     The pixel distance between letters. This may render ugly!
 
@@ -473,7 +473,7 @@ textMaxLength
 ..  confval:: textMaxLength
     :name: gifbuilder-text-textMaxLength
     :type: integer
-    :Default: 100
+    :default: 100
 
     The maximum length of the :ref:`text <gifbuilder-text-text>`. This is just a
     natural break that prevents incidental rendering of very long texts!
@@ -487,6 +487,6 @@ wordSpacing
 ..  confval:: wordSpacing
     :name: gifbuilder-text-wordSpacing
     :type: positive integer / :ref:`stdWrap <stdwrap>`
-    :Default: :ref:`spacing <gifbuilder-text-spacing>` * 2
+    :default: :ref:`spacing <gifbuilder-text-spacing>` * 2
 
     The pixel distance between words.

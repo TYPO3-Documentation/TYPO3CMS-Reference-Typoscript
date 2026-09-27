@@ -203,7 +203,7 @@ Properties
     ..  confval:: bodyTag
         :name: page-bodyTag
         :type: string
-        :Default: `<body>`
+        :default: `<body>`
         :Example: :ref:`Set a class on the body tag <setup-page-bodytag-example>`
 
         Body tag on the page
@@ -298,7 +298,7 @@ Properties
     ..  confval:: headTag
         :name: page-headTag
         :type: string / :ref:`stdWrap <stdwrap>`
-        :Default: `<head>`
+        :default: `<head>`
 
         Head-tag if alternatives are wanted
 
@@ -654,7 +654,7 @@ Properties
     ..  confval:: typeNum
         :name: page-typeNum
         :type: :ref:`integer <data-type-integer>`
-        :Default: 0
+        :default: 0
 
         :Examples:
             *   :ref:`A page type used for ajax requests <page_examples_ajax>`

@@ -51,7 +51,7 @@ blur
 ..  confval:: blur
     :name: gifbuilder-effect-blur
     :type: integer (1-99)
-    :Default: 0
+    :default: 0
 
     Blurs the edges inside the image.
 
@@ -72,7 +72,7 @@ charcoal
 ..  confval:: charcoal
     :name: gifbuilder-effect-charcoal
     :type: integer (0-100)
-    :Default: 0
+    :default: 0
 
     Makes the image look as if it has been drawn with charcoal and defines
     the intensity of that effect.
@@ -114,7 +114,7 @@ edge
 ..  confval:: edge
     :name: gifbuilder-effect-edge
     :type: integer (0-99)
-    :Default: 0
+    :default: 0
 
     Detect edges within an image. This is a gray-scale operator, so it is
     applied to each of the three color channels separately. The value defines
@@ -195,7 +195,7 @@ gamma
 ..  confval:: gamma
     :name: gifbuilder-effect-gamma
     :type: double (0.5 - 3.0)
-    :Default: 1.0
+    :default: 1.0
 
     Sets the `gamma <https://en.wikipedia.org/wiki/Gamma_correction>`__ value.
 
@@ -257,7 +257,7 @@ rotate
 ..  confval:: rotate
     :name: gifbuilder-effect-rotate
     :type: integer (0-360)
-    :Default: 0
+    :default: 0
 
     Number of degrees for a clockwise rotation.
 
@@ -281,7 +281,7 @@ sharpen
 ..  confval:: sharpen
     :name: gifbuilder-effect-sharpen
     :type: integer (0-99)
-    :Default: 0
+    :default: 0
 
     Sharpens the edges inside the image.
 
@@ -302,7 +302,7 @@ shear
 ..  confval:: shear
     :name: gifbuilder-effect-shear
     :type: integer (-90 - 90)
-    :Default: 0
+    :default: 0
 
     Number of degrees for a horizontal shearing. Horizontal shearing
     slides one edge of the image along the X axis, creating a
@@ -326,7 +326,7 @@ solarize
 ..  confval:: solarize
     :name: gifbuilder-effect-solarize
     :type: integer (0-99)
-    :Default: 0
+    :default: 0
 
     Color reduction, "burning" the brightest colors black. The brighter the
     color, the darker the solarized color is. This happens in photography when
@@ -351,7 +351,7 @@ swirl
 ..  confval:: swirl
     :name: gifbuilder-effect-swirl
     :type: integer (0-1000)
-    :Default: 0
+    :default: 0
 
     The image is swirled or spun from its center.
 
@@ -372,7 +372,7 @@ wave
 ..  confval:: wave
     :name: gifbuilder-effect-wave
     :type: integer,integer (both 0-99)
-    :Default: 0,0
+    :default: 0,0
 
     Provide values for the amplitude and the length of a wave, separated by
     comma. All horizontal edges in the image will then be transformed by a wave

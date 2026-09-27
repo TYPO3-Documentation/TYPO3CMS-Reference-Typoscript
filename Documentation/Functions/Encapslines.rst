@@ -91,7 +91,7 @@ addAttributes.[*tagname*]
 ..  confval:: addAttributes
     :name: encapslines-addAttributes
     :type: array of :ref:`string <data-type-string>`
-    :Default: Always override/set the value of the attributes.
+    :default: Always override/set the value of the attributes.
 
     Attributes to set in the encapsulation tag.
 

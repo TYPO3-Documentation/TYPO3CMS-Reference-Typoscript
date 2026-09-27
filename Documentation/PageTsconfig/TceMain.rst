@@ -333,7 +333,7 @@ everybody
 ..  confval:: permissions.everybody
     :name: tcemain-permissions-everybody
     :type: list of strings or integer 0-31
-    :Default: 0
+    :default: 0
 
     Default permissions for everybody who is not the owner user or member of
     the owning group, key list: `show`, `edit`, `delete`, `new`, `editcontent`.
@@ -373,7 +373,7 @@ group
 ..  confval:: permissions.group
      :name: tcemain-permissions-group
      :type: list of strings or integer 0-31
-     :Default: show,edit,new,editcontent
+     :default: show,edit,new,editcontent
 
      Default permissions for group members, key list: `show`, `edit`, `new`,
      `editcontent`.
@@ -451,7 +451,7 @@ user
 ..  confval:: permissions.user
     :name: tcemain-permissions-user
     :type: list of strings or integer 0-31
-    :Default: show,edit,delete,new,editcontent
+    :default: show,edit,delete,new,editcontent
 
     Default permissions for owner user, key list: `show`, `edit`, `delete`,
     `new`, `editcontent`.
@@ -582,7 +582,7 @@ translateToMessage
 ..  confval:: translateToMessage
     :name: tcemain-translateToMessage
     :type: string
-    :Default: `Translate to %s:`
+    :default: `Translate to %s:`
 
     Defines the string that will be prepended to some field values if you copy an element to another
     language version. This applies to all fields where the TCA columns property

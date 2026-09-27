@@ -28,7 +28,7 @@ colPos_list
     :name: mod-share-colPos-list
     :type: comma separated list of integers
     :default: ''
-    :Path: mod.SHARED.colPos_list
+    :Page TSconfig path: mod.SHARED.colPos_list
 
     This setting controls which areas or columns of the backend layouts are
     editable. Columns configured in the :ref:`Backend Layout <backend-layouts>`,

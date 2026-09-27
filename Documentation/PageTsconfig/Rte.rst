@@ -151,7 +151,7 @@ buttons.link.targetSelector.disabled
 ..  confval:: buttons.link.targetSelector.disabled
     :name: rte-buttons-link-targetselector-disabled
     :type: boolean
-    :Default: 0
+    :default: 0
 
     If set, the selection of link target is removed from the link
     insertion/update dialog.
@@ -164,7 +164,7 @@ buttons.link.pageIdSelector.enabled
 ..  confval:: buttons.link.pageIdSelector.enabled
     :name: rte-buttons-link-pageidselector-enabled
     :type: boolean
-    :Default: 0
+    :default: 0
 
     If set, the specification of a page id, without using the page tree,
     is enabled in the link insertion/update dialog.
@@ -180,7 +180,7 @@ buttons.link.queryParametersSelector.enabled
 ..  confval:: buttons.link.queryParametersSelector.enabled
     :name: rte-buttons-link-queryparametersselector-enabled
     :type: boolean
-    :Default: 0
+    :default: 0
 
     If set, an additional field is enabbled in the link insertion/update
     dialogue allowing authors to specify query parameters to be added on
@@ -194,7 +194,7 @@ buttons.link.relAttribute.enabled
 ..  confval:: buttons.link.relAttribute.enabled
     :name: rte-buttons-link-relattribute-enabled
     :type: boolean
-    :Default: 0
+    :default: 0
 
     If set, an additional field is enabled in the link insertion/update
     dialogue allowing authors to specify a rel attribute to be added to
@@ -337,7 +337,7 @@ allowTagsOutside
 ..  confval:: proc.allowTagsOutside
     :name: rte-proc-allowTagsOutside
     :type: string with comma separated values
-    :Default: `address, article, aside, blockquote, footer, header, hr, nav, section, div`
+    :default: `address, article, aside, blockquote, footer, header, hr, nav, section, div`
 
     Applies for `ts_transform` and `css_transform` only.
 

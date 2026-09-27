@@ -66,7 +66,7 @@ pidInList
 ..  confval:: pidInList
     :name: select_pidInList
     :type: *list of page uids* / :ref:`stdWrap <stdWrap>`
-    :Default: :typoscript:`this`
+    :default: :typoscript:`this`
 
     Comma-separated list of pids of the record. This will be page uids (pids). For
     example when the select function works on the table tt_content, then this
@@ -108,7 +108,7 @@ recursive
 ..  confval:: recursive
     :name: select-recursive
     :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
-    :Default: 0
+    :default: 0
 
     Number of recursive levels for the pidInList.
 
@@ -235,7 +235,7 @@ includeRecordsWithoutDefaultTranslation
 ..  confval:: includeRecordsWithoutDefaultTranslation
     :name: select-includeRecordsWithoutDefaultTranslation
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
-    :Default: 0
+    :default: 0
 
     If content language overlay is activated and the option :typoscript:`languageField` is not disabled,
     :typoscript:`includeRecordsWithoutDefaultTranslation` allows to additionally fetch records,
@@ -250,7 +250,7 @@ selectFields
 ..  confval:: selectFields
     :name: select-selectFields
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
-    :Default: \*
+    :default: \*
 
     List of fields to select, or :php:`count(*)`.
 
