@@ -115,11 +115,9 @@ special.beginAtLevel
     Determines starting level for the page trees generated based on .value
     and .depth.
 
-    0 is default and includes the start id.
-
-    1 starts with the first row of subpages,
-
-    2 starts with the second row of subpages.
+    *   0 is default and includes the start id.
+    *   1 starts with the first row of subpages.
+    *   2 starts with the second row of subpages.
 
     **Note:** "depth" is relative to this property.
 
