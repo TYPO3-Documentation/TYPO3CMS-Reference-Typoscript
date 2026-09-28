@@ -68,7 +68,7 @@ charRangeMap
     configuration of the individual
     :ref:`GIFBUILDER objects <gifbuilder-object-names>`.
     In the :ref:`[array] <gifbuilder-properties-charRangeMap-array>`
-    example below the key is :typoscript:`123`.
+    example below the key is `123`.
 
     ..  note::
         If the key is already found in the local GIFBUILDER configuration the
