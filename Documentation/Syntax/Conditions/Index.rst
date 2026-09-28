@@ -93,7 +93,7 @@ Combining multiple TypoScript conditions with `and` or `or`
 -----------------------------------------------------------
 
 Multiple condition criteria can be combined using :typoscript:`or` or :typoscript:`||`,
-as well as :typoscript:`and` or :typoscript:`&&`
+as well as :typoscript:`and` or :typoscript:`&&`:
 
 ..  literalinclude:: _codesnippets/_andor.typoscript
     :caption: packages/my_site_package/Configuration/TypoScript/setup.typoscript
