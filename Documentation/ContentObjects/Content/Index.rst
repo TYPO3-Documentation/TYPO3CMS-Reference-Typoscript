@@ -104,16 +104,16 @@ slide
 
     Possible values are:
 
-    :typoscript:`-1`
+    `-1`
         Slide back up to the site root.
 
-    :typoscript:`1`
+    `1`
         Only the current level.
 
-    :typoscript:`2`
+    `2`
         Up from one level back.
 
-    Use :typoscript:`-1` in combination with :ref:`collect <cobj-content-slide-collect>`.
+    Use `-1` in combination with :ref:`collect <cobj-content-slide-collect>`.
 
 ..  _cobj-content-slide-collect:
 
@@ -126,7 +126,7 @@ slide.collect
 
     If set, all content elements found on the current and parent pages will be
     collected. Otherwise, the sliding would stop after the first hit. Set this
-    value to the amount of levels to collect on, or use :typoscript:`-1`
+    value to the amount of levels to collect on, or use `-1`
     to collect up to the site root.
 
 ..  _cobj-content-slide-collectFuzzy:
