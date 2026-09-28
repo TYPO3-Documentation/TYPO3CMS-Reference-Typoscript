@@ -36,7 +36,6 @@ Options:
 
     ..  confval:: if
         :name: DatabaseQueryProcessor-if
-        :required: false
         :type: :ref:`if <if>` condition
         :default: ''
 
@@ -60,7 +59,6 @@ Options:
 
     ..  confval:: as
         :name: DatabaseQueryProcessor-as
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: 'records'
 
@@ -72,7 +70,6 @@ Options:
 
     ..  confval:: dataProcessing
         :name: DatabaseQueryProcessor-dataProcessing
-        :required: false
         :type: array of :ref:`Data processors <dataProcessing>`
         :default: []
 

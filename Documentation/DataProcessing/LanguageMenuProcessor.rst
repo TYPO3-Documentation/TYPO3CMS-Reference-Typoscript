@@ -37,7 +37,6 @@ Options:
 
     ..  confval:: if
         :name: LanguageMenuProcessor-if
-        :required: false
         :type: :ref:`if <if>` condition
 
         Only if the condition is met the data processor is executed.
@@ -77,7 +76,6 @@ Options:
 
     ..  confval:: as
         :name: LanguageMenuProcessor-as
-        :required: false
         :type: :ref:`string <data-type-string>`
         :default: defaults to the fieldName
 

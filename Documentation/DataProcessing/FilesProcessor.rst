@@ -35,7 +35,6 @@ Options:
 
     ..  confval:: if
         :name: FilesProcessor-if
-        :required: false
         :type: :ref:`if <if>` condition
         :default: ''
 
@@ -47,7 +46,6 @@ Options:
 
     ..  confval:: references
         :name: FilesProcessor-references
-        :required: false
         :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
         :default: ''
         :Example: '1,303,42'
@@ -66,7 +64,6 @@ Options:
 
     ..  confval:: references.fieldName
         :name: FilesProcessor-references-fieldName
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: ''
         :Example: 'media'
@@ -82,7 +79,6 @@ Options:
 
     ..  confval:: references.table
         :name: FilesProcessor-references.table
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: ''
         :Example: 'tt_content'
@@ -97,7 +93,6 @@ Options:
 
     ..  confval:: files
         :name: FilesProcessor-files
-        :required: false
         :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
         :default: ''
         :Example: '1,303,42'
@@ -111,7 +106,6 @@ Options:
 
     ..  confval:: collections
         :name: FilesProcessor-collections
-        :required: false
         :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
         :default: ''
         :Example: '1,303,42'
@@ -126,7 +120,6 @@ Options:
 
     ..  confval:: folders
         :name: FilesProcessor-folders
-        :required: false
         :type: :ref:`string <data-type-string>` (comma-separated folders), :ref:`stdWrap <stdWrap>`
         :default: ""
         :Example: "23:/other/folder/"
@@ -150,7 +143,6 @@ Options:
 
     ..  confval:: folders.recursive
         :name: FilesProcessor-folders-recursive
-        :required: false
         :type: bool  / :ref:`stdWrap <stdWrap>`
         :default: 0
         :Example: 1
@@ -164,7 +156,6 @@ Options:
 
     ..  confval:: sorting
         :name: FilesProcessor-sorting
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: ""
         :Example: "filesize"
@@ -178,7 +169,6 @@ Options:
 
     ..  confval:: sorting.direction
         :name: FilesProcessor-sorting-direction
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: "ascending"
         :Example: "descending"
@@ -191,7 +181,6 @@ Options:
 
     ..  confval:: as
         :name: FilesProcessor-as
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: "files"
 

@@ -29,7 +29,6 @@ Options
 
     ..  confval:: if
         :name: splitProcessor-if
-        :required: false
         :type: :ref:`if <if>` condition
         :default: ''
 
@@ -53,7 +52,6 @@ Options
 
     ..  confval:: as
         :name: splitProcessor-as
-        :required: false
         :type: :ref:`string <data-type-string>`
         :default: defaults to the fieldName
 
@@ -65,7 +63,6 @@ Options
 
     ..  confval:: delimiter
         :name: splitProcessor-delimiter
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: Line Feed
         :Example: ","
@@ -78,7 +75,6 @@ Options
 
     ..  confval:: filterIntegers
         :name: splitProcessor-filterIntegers
-        :required: false
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
         :default: 0
         :Example: 1
@@ -91,7 +87,6 @@ Options
 
     ..  confval:: filterUnique
         :name: splitProcessor-filterUnique
-        :required: false
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
         :default: 0
         :Example: 1
@@ -104,7 +99,6 @@ Options
 
     ..  confval:: removeEmptyEntries
         :name: splitProcessor-removeEmptyEntries
-        :required: false
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
         :default: 0
         :Example: 1
