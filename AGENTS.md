@@ -128,6 +128,30 @@ on the published page until it was removed.
 A namespace already spelled out in the running text stays that way: writing
 the class whole is a deliberate choice where a section introduces it.
 
+## Confval options
+
+The renderer knows five `confval` options, and only in lower case:
+`:name:`, `:type:`, `:default:`, `:required:` and `:noindex:`. Any other
+option is printed as a field label exactly as written, so a misspelled
+built-in does not fail — it just renders wrong. `:no-index:` showed a
+stray "no-index" row while the value stayed linkable, and `:Default:` was
+printed as an ordinary field instead of the default value.
+
+*   Write the built-in options in lower case.
+*   Write `:required: true` only for a value that must be set. Leave the
+    option out otherwise; never write `:required: false`, which renders
+    nothing and only states the obvious.
+*   Write any other option as the label the reader sees, capitalized:
+    `:Example:`, `:Syntax:`, `:Parameter:`.
+*   Never write a bare `:Path:`. Name the configuration the path belongs
+    to: `:Page TSconfig path:` for `mod.*` and the other page TSconfig
+    paths, `:User TSconfig path:` for `options.*` and the other user
+    TSconfig paths, in line with `:TCA path:` in the TCA reference.
+*   Do not add a path to a property that has none of its own. A `stdWrap`
+    function, a content object's property or a data processor's option
+    works wherever its object is used, so a path would name a place that
+    does not exist.
+
 ## Commit message format
 
 Follow https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Howto/EditLocal.html:
