@@ -31,7 +31,6 @@ Options
 
     ..  confval:: fieldName
         :name: FlexFormProcessor-fieldname
-        :required: false
         :type: :ref:`string <data-type-string>`
         :default: 'pi_flexform'
 
@@ -43,7 +42,6 @@ Options
 
     ..  confval:: references
         :name: FlexFormProcessor-references
-        :required: false
         :type: array
 
         Associative array of FlexForm fields (key) and the according database field
@@ -62,7 +60,6 @@ Options
 
     ..  confval:: as
         :name: FlexFormProcessor-as
-        :required: false
         :type: :ref:`string <data-type-string>`
         :default: 'flexFormData'
 

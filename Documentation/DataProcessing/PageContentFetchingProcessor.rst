@@ -33,7 +33,6 @@ Options
 
     ..  confval:: as
         :name: PageContentFetchingProcessor-as
-        :required: false
         :type: :ref:`string <data-type-string>`
         :default: "content"
 
@@ -43,7 +42,6 @@ Options
 
     ..  confval:: if
         :name: PageContentFetchingProcessor-if
-        :required: false
         :type: :ref:`if <if>` condition
         :default: ''
 
