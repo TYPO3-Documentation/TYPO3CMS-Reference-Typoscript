@@ -147,10 +147,10 @@ addQueryString
 
     Possible values:
 
-    :typoscript:`0`
+    `0`
         No query parameters are added.
 
-    :typoscript:`1`
+    `1`
         Only query parameters resolved by
         :ref:`route enhancers <t3coreapi:routing-advanced-routing-configuration-enhancers>`
         are added, any other query arguments are rejected. This way, additional

@@ -684,7 +684,7 @@ Properties for parsing data
 
         Allows conversion of formatted dates to timestamps, for example to perform date calculations.
 
-        Possible values are :typoscript:`1` or any time string valid as the first
+        Possible values are `1` or any time string valid as the first
         argument of the PHP :php:`strtotime()` function.
 
         ..  rubric:: Examples
@@ -899,12 +899,12 @@ Properties for parsing data
 
         .labels = iec
             This is the default. IEC labels and base 1024 are used.
-            Built in IEC labels are :typoscript:`" | Ki| Mi| Gi| Ti| Pi| Ei| Zi| Yi"`.
+            Built in IEC labels are `" | Ki| Mi| Gi| Ti| Pi| Ei| Zi| Yi"`.
             You need to append a final string like 'B' or '-Bytes' yourself.
 
         .labels = si
             SI labels and base 1000 are used. Built in IEC labels are
-            :typoscript:`" | k| M| G| T| P| E| Z| Y"`.
+            `" | k| M| G| T| P| E| Z| Y"`.
             You need to append a final string like 'B' yourself.
 
         .labels = "..."

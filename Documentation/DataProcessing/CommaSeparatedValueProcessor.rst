@@ -67,10 +67,10 @@ Options:
     ..  confval:: maximumColumns
         :name: CommaSeparatedValueProcessor-maximumColumns
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
-        :default: :typoscript:`0`
+        :default: `0`
 
         Maximal number of columns to be transformed. Surplus columns will be
-        silently dropped. When set to :typoscript:`0` (default) all columns will be
+        silently dropped. When set to `0` (default) all columns will be
         transformed.
 
     ..  _CommaSeparatedValueProcessor-fieldDelimiter:
