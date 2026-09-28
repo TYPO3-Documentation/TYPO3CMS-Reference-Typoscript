@@ -42,7 +42,6 @@ Options:
 
     ..  confval:: filesProcessedDataKey
         :name: GalleryProcessor-filesProcessedDataKey
-        :required: true
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: 'files'
         :Example: 'myImages'
