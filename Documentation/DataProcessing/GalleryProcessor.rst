@@ -30,7 +30,6 @@ Options:
 
     ..  confval:: if
         :name: GalleryProcessor-if
-        :required: false
         :type: :ref:`if <if>` condition
         :default: ''
 
@@ -56,7 +55,6 @@ Options:
 
     ..  confval:: numberOfColumns
         :name: GalleryProcessor-numberOfColumns
-        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: field:imagecols
         :Example: 4
@@ -70,7 +68,6 @@ Options:
 
     ..  confval:: mediaOrientation
         :name: GalleryProcessor-mediaOrientation
-        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: field:imageorient
         :Example: 2
@@ -93,7 +90,6 @@ Options:
 
     ..  confval:: maxGalleryWidth
         :name: GalleryProcessor-maxGalleryWidth
-        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: 600
 
@@ -105,7 +101,6 @@ Options:
 
     ..  confval:: maxGalleryWidthInText
         :name: GalleryProcessor-maxGalleryWidthInText
-        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: 300
 
@@ -118,7 +113,6 @@ Options:
 
     ..  confval:: equalMediaHeight, equalMediaWidth
         :name: GalleryProcessor-equalMediaHeight
-        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: field:imageheight, field:imagewidth
         :Example: 300
@@ -141,7 +135,6 @@ Options:
 
     ..  confval:: columnSpacing
         :name: GalleryProcessor-columnSpacing
-        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: 0
         :Example: 4
@@ -154,7 +147,6 @@ Options:
 
     ..  confval:: borderEnabled
         :name: GalleryProcessor-borderEnabled
-        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: field:imageborder
         :Example: 1
@@ -169,7 +161,6 @@ Options:
 
     ..  confval:: borderWidth
         :name: GalleryProcessor-borderWidth
-        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: 0
         :Example: 2
@@ -182,7 +173,6 @@ Options:
 
     ..  confval:: borderPadding
         :name: GalleryProcessor-borderPadding
-        :required: false
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: 0
         :Example: 20
@@ -195,7 +185,6 @@ Options:
 
     ..  confval:: cropVariant
         :name: GalleryProcessor-cropVariant
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: "default"
         :Example: "mobile"
@@ -208,7 +197,6 @@ Options:
 
     ..  confval:: as
         :name: GalleryProcessor-as
-        :required: false
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: "files"
 
@@ -220,7 +208,6 @@ Options:
 
     ..  confval:: dataProcessing
         :name: GalleryProcessor-dataProcessing
-        :required: false
         :type: array of :ref:`Data processors <dataProcessing>`
         :default: []
 

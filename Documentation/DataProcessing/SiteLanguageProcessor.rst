@@ -27,7 +27,6 @@ Options
 
     ..  confval:: as
         :name: SiteLanguageProcessor-as
-        :required: false
         :type: :ref:`string <data-type-string>`
         :default: "site"
 
