@@ -113,12 +113,16 @@ language. Pick the one whose modal says something true.
 | What it is | How to write it |
 | --- | --- |
 | TypoScript property or value (`stdWrap`, `cObject`) | `:typoscript:` |
+| A bare number or quoted string (`0`, `-1`, `"B"`) | plain backticks |
 | A database table or column (`tt_content`, `colPos`) | plain backticks |
 | Actual SQL (`SELECT`, `JOIN`) | `:sql:` |
 | PHP variable, call, constant (`$cObj->data`, `PHP_INT_MAX`) | `:php:` |
 | A PHP class | its FQN in `:php-short:`, which prints the short name |
 | An HTML element or attribute | `:html:` |
 | A file path | `:file:`, a directory `:path:` |
+
+A number or a quoted string is a value, not code: the `:typoscript:` modal
+would claim it is TypoScript.
 
 Do not use `:code:`. It renders exactly like plain backticks, so it says
 nothing — and it swallows backslashes, which turned

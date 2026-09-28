@@ -387,7 +387,7 @@ fullRootLine
 
 Gets the value of a field of a page in the root line. The *pointer* is an
 absolute level, counted from the root page of the site downwards:
-:typoscript:`0` addresses the root page itself, :typoscript:`1` the page below
+`0` addresses the root page itself, `1` the page below
 it and so on. The numbers in square brackets indicate which page each value of
 *pointer* would point to:
 
