@@ -84,10 +84,10 @@ pidInList
         Allows to select records from the root-page level (records with pid=0,
         e.g. useful for the table "sys_category" and others).
 
-    **Special value:** :typoscript:`-1`
+    **Special value:** `-1`
         Allows to select versioned records in workspaces directly.
 
-    **Special value:** :typoscript:`0`
+    **Special value:** `0`
         Allows to disable the `pid` constraint completely. Requirements:
         :typoscript:`uidInList` *must* be set or the table *must* have the prefix
         "static\_\*".

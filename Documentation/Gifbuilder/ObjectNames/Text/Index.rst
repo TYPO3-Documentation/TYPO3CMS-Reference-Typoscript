@@ -70,7 +70,7 @@ antiAlias
         This option is not available, if
         :ref:`niceText <gifbuilder-text-niceText>` is enabled.
 
-        Setting this option to :typoscript:`0` will not work, if
+        Setting this option to `0` will not work, if
         :ref:`fontColor <gifbuilder-text-fontColor>` is set to black (or #000000).
 
 
