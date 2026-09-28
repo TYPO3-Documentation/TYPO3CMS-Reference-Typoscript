@@ -121,7 +121,6 @@ Options
 
     ..  confval:: expandAll
         :name: MenuProcessor-expandAll
-        :required: true
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
         :default: 1
         :Example: 0
@@ -134,7 +133,6 @@ Options
 
     ..  confval:: levels
         :name: MenuProcessor-levels
-        :required: true
         :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
         :default: 1
         :Example: 5
@@ -156,7 +154,6 @@ Options
 
     ..  confval:: includeSpacer
         :name: MenuProcessor-includeSpacer
-        :required: true
         :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
         :default: 0
         :Example: 1
@@ -221,7 +218,6 @@ Options
 
     ..  confval:: titleField
         :name: MenuProcessor-titleField
-        :required: true
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: "nav_title // title"
         :Example: "subtitle"
