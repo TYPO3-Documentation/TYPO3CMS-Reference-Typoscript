@@ -47,7 +47,6 @@ Options:
 
     ..  confval:: languages
         :name: LanguageMenuProcessor-languages
-        :required: true
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: "auto"
         :Example: "0,1,2"
@@ -62,7 +61,6 @@ Options:
 
     ..  confval:: addQueryString.exclude
         :name: LanguageMenuProcessor-addQueryString-exclude
-        :required: true
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
         :default: ""
         :Example: "gclid,contrast"
