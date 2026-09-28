@@ -187,7 +187,7 @@ fixAttrib.[attribute].removeIfFalse
     :name: htmlparser-tags-fixAttrib-removeIfFalse
     :type: :ref:`boolean <data-type-boolean>` / :typoscript:`blank` string
 
-    If set, then the attribute is removed if it is false (= :typoscript:`0`).
+    If set, then the attribute is removed if it is false (= `0`).
     If this value is set to :typoscript:`blank` then the value must be a blank string
     (that means a "zero" value will not be removed).
 

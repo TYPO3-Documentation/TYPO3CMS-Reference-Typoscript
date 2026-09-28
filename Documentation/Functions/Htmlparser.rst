@@ -148,7 +148,7 @@ keepNonMatchedTags
     :name: htmlparser-keepNonMatchedTags
     :type: :ref:`boolean <data-type-boolean>` / "protect"
 
-    If set (:typoscript:`1`), then all tags are kept regardless of tags present as
+    If set (`1`), then all tags are kept regardless of tags present as
     keys in :php:`$tags`-array.
 
     If :typoscript:`protect`, then the preserved tags have their :html:`<>`
