@@ -73,6 +73,6 @@ Examples
 ========
 
 ..  literalinclude:: _strpad.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 This results in "=TYPO3 - inspiring people to share.==".

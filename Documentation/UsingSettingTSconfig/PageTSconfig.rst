@@ -229,14 +229,14 @@ Example
 Default page TSconfig
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     RTE.default.proc.allowTagsOutside = hr
 
 Static page TSconfig included on the parent page
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     RTE.default.proc.allowTagsOutside := addToList(blockquote)
 

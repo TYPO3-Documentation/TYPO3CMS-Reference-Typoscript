@@ -49,7 +49,7 @@ Allows to set TYPO3s :guilabel:`Content > Layout` module back to inconsistent
 language mode:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_layout.allowInconsistentLanguageHandling = 1
 
@@ -79,7 +79,7 @@ Example: Define a backend layout
 
 ..  literalinclude:: WebLayout/_backendLayouts-example.tsconfig
     :language: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index::
     defaultLanguageLabel
@@ -155,7 +155,7 @@ hideRestrictedCols
     access to can be hidden:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
         mod.web_layout.hideRestrictedCols = 1
 
@@ -187,7 +187,7 @@ Example: Disable free mode button for localization
 --------------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_layout {
         localization.enableCopy = 0
@@ -217,7 +217,7 @@ Example: Disable "connected mode" button for translation
 --------------------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_layout {
         localization.enableTranslate = 0
@@ -261,7 +261,7 @@ Example: Disable "Languages" from the function menu
 ---------------------------------------------------
 
 ..  literalinclude:: _weblayout.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index::
@@ -301,9 +301,9 @@ tt_content.preview
     The syntax is as follows:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-        mod.web_layout.tt_content.preview.myextension_plugin = EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.fluid.html
+        mod.web_layout.tt_content.preview.myextension_plugin = EXT:my_sitepackage/Resources/Private/Templates/Preview/ExamplePlugin.fluid.html
 
     This way you can even switch between previews for your plugins by supplying the CType.
 
@@ -329,7 +329,7 @@ Example: Define previews for custom content elements
 ----------------------------------------------------
 
 ..  literalinclude:: _pageweblayoutpreview.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  toctree::
     :glob:

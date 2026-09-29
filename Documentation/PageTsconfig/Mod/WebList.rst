@@ -46,7 +46,7 @@ Example: Allow records of type pages or sys_category in the new record wizard
 -----------------------------------------------------------------------------
 
 ..  literalinclude:: _codesnippets/_pageTsConfigWebListAllowedNewTable.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  figure:: /Images/ManualScreenshots/List/PageTsModWebListAllowedNewTables.png
     :alt: The New record screen after modifying the allowed elements
@@ -158,7 +158,7 @@ Hide "Create new record" links in tables sys_category and tt_content
 --------------------------------------------------------------------
 
 ..  literalinclude:: _codesnippets/_create.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index:: disableSearchBox
@@ -226,7 +226,7 @@ displayRecordDownload
     If this option is set, it takes precedence over the general option.
 
     ..  literalinclude:: _codesnippets/_displayRecordDownload.typoscript
-        :caption: packages/my_sitepackage/Configuration/Sets/MySet/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/Sets/MySet/page.tsconfig
 
 
 ..  _pageTsConfigWebList-displayColumnSelector-example:
@@ -235,7 +235,7 @@ Example: Hide the column selector
 ---------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list.displayColumnSelector = 0
 
@@ -375,7 +375,7 @@ Example: Hide all translated records
 ------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list.hideTranslations = *
 
@@ -385,7 +385,7 @@ Example: Hide translated records in tables tt_content and tt_news
 -----------------------------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list.hideTranslations = tt_content, tt_news
 
@@ -416,7 +416,7 @@ Example: Limit items per table in overview to 10
 ------------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list {
         itemsLimitPerTable = 10
@@ -449,7 +449,7 @@ Example: Limit items in single table view to 10
 -----------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list {
         itemsLimitSingleTable = 10
@@ -480,7 +480,7 @@ Example: Only list records of tables in single-table mode
 ---------------------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list {
         listOnlyInSingleTableView = 1
@@ -530,7 +530,7 @@ Example: Hide the "Create new record" link.
 -------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list {
         noCreateRecordsLink = 1
@@ -589,7 +589,7 @@ TSconfig.
 Instead, configure the equivalent behavior using:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TSconfig/Page/TCEMAIN.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/TSconfig/Page/TCEMAIN.tsconfig
 
     TCEMAIN.preview.disableButtonForDokType = 199, 254
 
@@ -615,7 +615,7 @@ Example: Hide table tt_content
 ------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list.table.tt_content.hideTable = 1
 
@@ -642,7 +642,7 @@ Example: Hide the column selector for tt_content
 ------------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list.table.tt_content.displayColumnSelector = 0
 
@@ -652,7 +652,7 @@ Example: Hide the column selector for all tables but sys_category
 -----------------------------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list.displayColumnSelector = 0
     mod.web_list.table.sys_category.displayColumnSelector = 1
@@ -676,7 +676,7 @@ tableDisplayOrder
     to other table names.
 
     ..  literalinclude:: _codesnippets/_tableDisplayOrder.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/page.tsconfig
 
 ..  index::
     searchLevel.items
@@ -693,7 +693,7 @@ searchLevel.items
     Sets labels for each level label in the search level select box
 
     ..  literalinclude:: _codesnippets/_items.typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index::
     searchLevel.items

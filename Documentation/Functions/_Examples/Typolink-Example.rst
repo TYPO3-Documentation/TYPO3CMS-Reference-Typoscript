@@ -22,14 +22,14 @@ Given this TypoScript example:
 
 ..  literalinclude:: ../_StdWrap/_UserFunc.typoscript
     :language: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 This would first create a TypoLink
 :php-short:`\TYPO3\CMS\Frontend\Typolink\LinkResultInterface` that would resolve
 to something like
 :html:`<a href="/en/pages/4711?someKey=someValue" rel="noreferrer">My Link Text</a>`.
 
-But because :typoscript:`userFunc = MyVendor\SitePackage\UserFunctions\TypoLinkUserFunc->createUserFuncLink`
+But because :typoscript:`userFunc = MyVendor\MySitepackage\UserFunctions\TypoLinkUserFunc->createUserFuncLink`
 is defined you can now manipulate the generated link to your liking.
 
 The usual case would be to enrich the link with any kind of attributes, or also
@@ -37,7 +37,7 @@ to change existing ones:
 
 ..  literalinclude:: ../_StdWrap/_UserFuncSimple.php
     :language: php
-    :caption: EXT:site_package/Classes/UserFunctions/TypoLinkUserFunc.php
+    :caption: EXT:my_sitepackage/Classes/UserFunctions/TypoLinkUserFunc.php
 
 The method :php:`createUserFuncLink()` uses PHP attribute
 :php:`#[AsAllowedCallable]` to declare it as callable from TypoScript.
@@ -60,7 +60,7 @@ linked URL:
 
 ..  literalinclude:: ../_StdWrap/_UserFunc.php
     :language: php
-    :caption: EXT:site_package/Classes/UserFunctions/TypoLinkUserFunc.php
+    :caption: EXT:my_sitepackage/Classes/UserFunctions/TypoLinkUserFunc.php
 
 The method :php:`createUserFuncLink()` uses PHP attribute
 :php:`#[AsAllowedCallable]` to declare it as callable from TypoScript.

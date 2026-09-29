@@ -201,7 +201,7 @@ layout.layoutKey
     **Example:**
 
     ..  literalinclude:: _codesnippets/_layoutkey.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 layout.layoutKey.element
 ------------------------
@@ -304,7 +304,7 @@ sourceCollection
     define to suit your needs.
 
     ..  literalinclude:: _codesnippets/_sourcecollection.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 sourceCollection.dataKey
 ------------------------
@@ -539,7 +539,7 @@ Standard rendering
 ------------------
 
 ..  literalinclude:: _codesnippets/_standard.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 This returns:
 
@@ -560,7 +560,7 @@ Responsive/adaptive rendering
 -----------------------------
 
 ..  literalinclude:: _codesnippets/_responsive.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 This returns as an example all per default possible HTML output:

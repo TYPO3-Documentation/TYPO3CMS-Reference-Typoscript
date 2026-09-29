@@ -94,7 +94,7 @@ Example for effects
 ~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_effects.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _imagelinkwrap-sample:
@@ -147,7 +147,7 @@ Example setting a bodytag for the preview window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_bodytag.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _imagelinkwrap-wrap:
@@ -183,7 +183,7 @@ Example: Use an alternative target for the JavaScript Window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_target.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _imagelinkwrap-JSwindow:
@@ -323,7 +323,7 @@ resized images in the frontend. A more complete example is
 :ref:`Example: Images in lightbox "fancybox" <imageLinkWrap-example-fancybox>`.
 
 ..  literalinclude:: _codesnippets/_imageLinkWrap.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _imagelinkwrap-stdWrap:
@@ -386,7 +386,7 @@ Basic example: Create a link to the showpic script
 --------------------------------------------------
 
 ..  literalinclude:: _codesnippets/_showpic.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _imageLinkWrap-basic-example-directImageLink:
 
@@ -394,7 +394,7 @@ Basic example: Link directly to the original image
 --------------------------------------------------
 
 ..  literalinclude:: _codesnippets/_directImageLink.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _imageLinkWrap-example-popup-window:
@@ -403,7 +403,7 @@ Example: Larger display in a popup window
 -----------------------------------------
 
 ..  literalinclude:: _codesnippets/_window.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _imageLinkWrap-example-printlink:
@@ -412,7 +412,7 @@ Example: Printlink
 ------------------
 
 ..  literalinclude:: _codesnippets/_printlink.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 
@@ -425,4 +425,4 @@ Let's follow this `lightbox.ts example <https://github.com/georgringer/modernpac
 and use `fancybox <http://fancybox.net>`_:
 
 ..  literalinclude:: _codesnippets/_fancybox.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript

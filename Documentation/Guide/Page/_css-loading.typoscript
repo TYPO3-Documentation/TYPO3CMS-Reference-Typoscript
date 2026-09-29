@@ -11,6 +11,6 @@ page {
     )
   }
   includeCSS {
-    styles = EXT:site_package/Resources/Public/Css/styles.css
+    styles = EXT:my_sitepackage/Resources/Public/Css/styles.css
   }
 }

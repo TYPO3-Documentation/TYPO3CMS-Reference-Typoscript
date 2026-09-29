@@ -25,12 +25,12 @@ An imgResource one of the following:
 Here "file" is an imgResource:
 
 ..  literalinclude:: _codesnippets/_imgresource2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 GIFBUILDER:
 
 ..  literalinclude:: _codesnippets/_imgresource.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  contents::
@@ -96,19 +96,19 @@ width
     This crops 120x80px from the center of the scaled image:
 
     ..  literalinclude:: _codesnippets/_width3.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     This crops 100x100px; from landscape-images at the left and portrait-
     images centered:
 
     ..  literalinclude:: _codesnippets/_width2.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     This crops 100x100px; from landscape-images a bit right of the center
     and portrait-images a bit higher than centered:
 
     ..  literalinclude:: _codesnippets/_width.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _imgresource-height:
 
@@ -171,7 +171,7 @@ noScale
     Here :file:`test.jpg` could have 1600 x 1200 pixels for example:
 
     ..  literalinclude:: _codesnippets/_noScale.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     This example results in an image tag like the following. Note that
     `src="fileadmin/test.jpg"` is the *original* file:
@@ -203,21 +203,21 @@ crop
     Disable cropping set by the editor in the back-end:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         tt_content.image.20.1.file.crop =
 
     Overrule/set cropping for all images:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         tt_content.image.20.1.file.crop = 50,50,100,100
 
     Natively crop a SVG image:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         page.10 = IMAGE
         page.10.file = 2:/myfile.svg
@@ -244,7 +244,7 @@ cropVariant
     Use 'desktop' crop variant:
 
     ..  literalinclude:: _codesnippets/_cropVariant.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _imgresource-frame:
@@ -280,7 +280,7 @@ import
     data-array:
 
     ..  literalinclude:: _codesnippets/_import.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _imgresource-treatIdAsReference:
@@ -367,7 +367,7 @@ stripProfile
     ..  rubric:: Examples
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         10 = IMAGE
         10.file = fileadmin/images/image1.jpg
@@ -457,7 +457,7 @@ This scales the image :file:`fileadmin/toplogo.png` to the width of 200
 pixels:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     file = fileadmin/toplogo.png
     file.width = 200

@@ -2,7 +2,7 @@ page = PAGE
 page {
   10 = PAGEVIEW
   10 {
-    paths.10 = EXT:my_site_package/Resources/Private/Templates/Pages/
+    paths.10 = EXT:my_sitepackage/Resources/Private/Templates/Pages/
     # ...
     dataProcessing {
       10 = menu

@@ -44,7 +44,7 @@ So these will be the values that are set if the user has no access to the field 
 Example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/user.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
     # Show newly created pages by default
     TCAdefaults.pages.hidden = 0
@@ -71,7 +71,7 @@ can be done for example in the :file:`Configuration/TCA/Overrides` folder
 of an extension:
 
 ..  code-block:: php
-    :caption: EXT:site_package/Configuration/TCA/Overrides/pages.php
+    :caption: EXT:my_sitepackage/Configuration/TCA/Overrides/pages.php
 
     $GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype,fe_group';
 
@@ -81,7 +81,7 @@ Example: Set type specific default values in user TSconfig
 ==========================================================
 
 ..  literalinclude:: _types.typoscript
-    :caption: EXT:site_package/Configuration/user.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
 In this example: if a user with no write access to the field `tt_content.header_layout`
 creates a new content element of type `textmedia` the header layout will be set

@@ -130,4 +130,4 @@ The result of each data processor can then be used, assuming that the result is
 the first item of the array saved into the database.
 
 ..  literalinclude:: _code-snippets/_BrowseNavigation.fluid.html
-    :caption: EXT:site_package/Resources/Private/Templates/Partials/Navigation/Browse.fluid.html
+    :caption: EXT:my_sitepackage/Resources/Private/Templates/Partials/Navigation/Browse.fluid.html

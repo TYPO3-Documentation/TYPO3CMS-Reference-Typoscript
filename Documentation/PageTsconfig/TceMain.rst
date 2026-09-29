@@ -44,7 +44,7 @@ Example: Clear the cache for certain pages when a record is changed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_clearcachecmd.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  note::
 
@@ -112,7 +112,7 @@ Example: Do not hide pages when they are copy-pasted
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_disablehideatcopy.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 These settings adjust that a page which is copied will neither have "(copy X)" appended nor be hidden.
 
@@ -132,7 +132,7 @@ Example: Apply disableHideAtCopy as default to all tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEMAIN.default {
       disableHideAtCopy = 1
@@ -160,7 +160,7 @@ Example: Do not append the "(copy)" label to newly copied pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_disableprependatcopy.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 These settings adjust that a page which is copied will neither have "(copy X)" appended nor be hidden.
 
@@ -180,7 +180,7 @@ Example: Apply disablePrependAtCopy as default to all tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEMAIN.default {
       disablePrependAtCopy = 1
@@ -352,7 +352,7 @@ Example: Set permissions defaults so that everybody can see the page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  literalinclude:: _codesnippets/_everybody.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 The page "Community" was created with the settings from the example
 above. Compared to the two other pages created with default
@@ -393,7 +393,7 @@ Example: Set permission defaults so that the group can do anything with the new 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  literalinclude:: _codesnippets/_group.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 The page "Community" was created with the settings from the example
 above. Compared to the two other pages created with default
@@ -431,7 +431,7 @@ Example: Set default user group for permissions on new pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  literalinclude:: _codesnippets/_groupid.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 In this instance, backend group with UID 3 is "test_group". With the configuration
 above a new page would be created with this group setting instead of the default,
@@ -470,7 +470,7 @@ Example: Set permission defaults so that the pages owner can do anything
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  literalinclude:: _codesnippets/_actions.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index:: Page permissions; User id
 ..  _pagetcemain-permissions-userid:
@@ -498,7 +498,7 @@ Example: Set default user for permissions on new pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  literalinclude:: _codesnippets/_userid.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 In this instance, backend user with UID 2 is "test". With the configuration
 above a new page would be created with this owner setting instead of the default,
@@ -525,7 +525,7 @@ preview
     preview page for content elements as well, which might be handy if they are stored in a folder.
 
     ..  literalinclude:: _codesnippets/_preview.typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     The :typoscript:`previewPageId` is the uid of the page to use for preview. If this setting is omitted the
     current page will be used. If the current page is not a normal page, the root page will be chosen.

@@ -11,7 +11,7 @@ ExtensionManagementUtility::addTypoScript(
         module.tx_form {
             settings {
                 yamlConfigurations {
-                    100 = EXT:my_site_package/Configuration/Form/CustomFormSetup.yaml
+                    100 = EXT:my_sitepackage/Configuration/Form/CustomFormSetup.yaml
                 }
             }
         }
