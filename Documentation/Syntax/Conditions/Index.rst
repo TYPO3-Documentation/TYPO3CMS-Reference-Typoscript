@@ -37,7 +37,7 @@ Basic usage of TypoScript conditions
 ====================================
 
 ..  literalinclude:: _codesnippets/_basic.typoscript
-    :caption: packages/my_site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _typoscript-syntax-conditions-syntax:
 
@@ -72,7 +72,7 @@ is considered if the condition criteria did *not* evaluate to true.
 This is similar to a closing curly brace `}` in programming languages like PHP.
 
 ..  literalinclude:: _codesnippets/_condition.typoscript
-    :caption: packages/my_site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Conditions automatically stop at the end of a text snippet (file or record), even
 without :typoscript:`[END]` or :typoscript:`[GLOBAL]`. Another snippet on the same
@@ -96,19 +96,19 @@ Multiple condition criteria can be combined using :typoscript:`or` or :typoscrip
 as well as :typoscript:`and` or :typoscript:`&&`:
 
 ..  literalinclude:: _codesnippets/_andor.typoscript
-    :caption: packages/my_site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Single criteria can be negated using :typoscript:`not` or :typoscript:`!`
 
 ..  literalinclude:: _codesnippets/_not.typoscript
-    :caption: packages/my_site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 As in most programming languages, :typoscript:`not` binds more strongly than
 :typoscript:`and`, which in turn binds more strongly than :typoscript:`or`. Use
 parentheses whenever the intended grouping is not the default one:
 
 ..  literalinclude:: _codesnippets/_precedence.typoscript
-    :caption: packages/my_site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  warning::
     All criteria of a condition belong into *one* pair of square brackets.
@@ -147,7 +147,7 @@ Nesting conditions via TypoScript imports
 Conditions can *not* be nested within code blocks.
 
 ..  literalinclude:: _nesting.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  versionchanged:: 12.0
 

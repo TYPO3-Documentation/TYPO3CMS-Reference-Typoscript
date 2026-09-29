@@ -19,7 +19,7 @@ Basically `typolink` links the specified text according to
 the defined parameters. One example:
 
 ..  literalinclude:: _temp.link.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The example above will generate this HTML code:
 
@@ -38,7 +38,7 @@ The above example can actually be shortened, because the
 by a white space:
 
 ..  literalinclude:: _temp.link2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The exact syntax for `parameter` property is fully described,
 as usual, in the :ref:`TypoScript Reference <typolink>`.
@@ -46,4 +46,4 @@ as usual, in the :ref:`TypoScript Reference <typolink>`.
 It is even possible to define links that open in JavaScript popups:
 
 ..  literalinclude:: _temp.link3.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript

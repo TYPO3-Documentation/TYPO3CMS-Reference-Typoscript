@@ -51,7 +51,7 @@ To generate such an overlayed image with the GIFBUILDER you have to use
 code like the following:
 
 ..  literalinclude:: _codesnippets/_maskingSemiTransparent.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 You will need a background image. Here "backimage.jpg". For example:
 
@@ -177,7 +177,7 @@ The base image is the same as above. Below is the result - just see
 yourself:
 
 ..  literalinclude:: _codesnippets/_creatingSemiTransparent.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _gifbuilder-examples-creating-shadows-images:
 
@@ -202,7 +202,7 @@ Setup
 ~~~~~
 
 ..  literalinclude:: _codesnippets/_variant1Setup.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _gifbuilder-examples-creating-shadows-images-variant-1-result:
 
@@ -242,7 +242,7 @@ Setup
 ~~~~~
 
 ..  literalinclude:: _codesnippets/_variant2Setup.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _gifbuilder-examples-creating-shadows-images-variant-2-result:
 

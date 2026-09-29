@@ -42,7 +42,7 @@ because the value is imported from the header field in
 :php:`$cObj->data-array`.
 
 ..  literalinclude:: _codesnippets/_supply.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _stdwrap-properties:
 
@@ -123,7 +123,7 @@ Properties for getting data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
             page.10 = TEXT
             page.10.value = I am a Berliner!
@@ -157,7 +157,7 @@ Properties for getting data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
             page.10.field = title
 
@@ -166,7 +166,7 @@ Properties for getting data
         You can provide multiple field name options separated by "//".
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
             page.10.field = nav_title // title
 
@@ -277,7 +277,7 @@ Properties for overriding and conditions
 
         ..  rubric:: Examples
         ..  literalinclude:: _codesnippets/_conditions2.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         This example displays the content of the description field or, if that
         value is :php:`NULL`, the text "No description defined.".
@@ -339,7 +339,7 @@ Properties for overriding and conditions
         This would return "item 1":
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
             page.10 = TEXT
             page.10.value = item 1, item 2, item 3, item 4
@@ -348,7 +348,7 @@ Properties for overriding and conditions
         This would return "item 3"
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
             page.10 = TEXT
             page.10.value = item 1, item 2, item 3, item 4
@@ -369,7 +369,7 @@ Properties for overriding and conditions
             a random element
 
             ..  literalinclude:: _codesnippets/_conditions.typoscript
-                :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+                :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  _stdwrap-trim:
 
@@ -478,7 +478,7 @@ Properties for parsing data
         ..  rubric:: Examples
 
         ..  literalinclude:: _codesnippets/_parsing20.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  _stdwrap-parseFunc-sanitization:
 
@@ -491,14 +491,14 @@ Properties for parsing data
     by default). This is not recommended.
 
     ..  literalinclude:: _codesnippets/_parsing19.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     Since an invocation of :typoscript:`stdWrap.parseFunc` triggers HTML
     sanitization, the following example causes a lot of generated markup to be
     sanitized and can be solved by explicitly disabling it with :typoscript:`htmlSanitize = 0`.
 
     ..  literalinclude:: _codesnippets/_parsing18.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  _stdwrap-htmlparser:
 
@@ -617,7 +617,7 @@ Properties for parsing data
 
         ..  rubric:: Examples
         ..  literalinclude:: _codesnippets/_parsing17.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  _stdwrap-round:
 
@@ -668,7 +668,7 @@ Properties for parsing data
         Render in human readable form:
 
         ..  literalinclude:: _codesnippets/_parsing16.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         ..  note::
             You should consider using the more flexible function
@@ -690,10 +690,10 @@ Properties for parsing data
         ..  rubric:: Examples
 
         ..  literalinclude:: _codesnippets/_parsing15.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         ..  literalinclude:: _codesnippets/_parsing14.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  _data-type-strftime-conf:
     ..  _stdwrap-strftime:
@@ -774,21 +774,21 @@ Properties for parsing data
         ..  rubric:: Example: Full German output from a date/time value
 
         ..  literalinclude:: _codesnippets/_parsing13.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         will result in "Freitag, 17. März 2023 um 03:00:00 Nordamerikanische Westküsten-Sommerzeit".
 
         ..  rubric:: Example: Full French output from a relative date value
 
         ..  literalinclude:: _codesnippets/_parsing12.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         will result in "dimanche 12 mars 2023 à 11:16:44 heure d’été du Pacifique".
 
         ..  rubric:: Example: Custom format from a timestamp
 
         ..  literalinclude:: _codesnippets/_parsing11.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         will return the date in the ISO 8601 format: "2023-03-17T03:00:00+00:00"
 
@@ -829,7 +829,7 @@ Properties for parsing data
 
         ..  rubric:: Examples
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
             lib.ageFormat = TEXT
             lib.ageFormat.stdWrap.data = page:tstamp
@@ -867,7 +867,7 @@ Properties for parsing data
         Code:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
             10 = TEXT
             10.value = Hello world!
@@ -933,7 +933,7 @@ Properties for parsing data
             handling settings. Example:
 
         ..  literalinclude:: _codesnippets/_parsing10.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         will show `0` but may raise a warning or an exception.
 
@@ -942,47 +942,47 @@ Properties for parsing data
         Output value 1000 without special formatting. Shows `1000`:
 
         ..  literalinclude:: _codesnippets/_parsing9.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         Format value 1000 in IEC style with base=1024. Shows `0.98 Ki`:
 
         ..  literalinclude:: _codesnippets/_parsing8.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         Format value 1000 in IEC style with base=1024 and 'B' supplied by us.
         Shows `0.98 KiB`:
 
         ..  literalinclude:: _codesnippets/_parsing7.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         Format value 1000 in SI style with base=1000. Shows `1.00 k`:
 
         ..  literalinclude:: _codesnippets/_parsing6.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         Format value 1000 in SI style with base=1000 and 'b' supplied by us.
         Shows `1.00 kb`:
 
         ..  literalinclude:: _codesnippets/_parsing5.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         Format value 1000 with custom label and base=1000. Shows
         `1.00 x 1000 Bytes`:
 
         ..  literalinclude:: _codesnippets/_parsing4.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         Format value 1000 with custom label and base=1000. Shows
         `1.00 kilobyte (kB)`:
 
         ..  literalinclude:: _codesnippets/_parsing3.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         Format value 1000 with custom label and base=1024. Shows
         `0.98 kibibyte (KiB)`:
 
         ..  literalinclude:: _codesnippets/_parsing2.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  _stdwrap-substring:
 
@@ -1110,7 +1110,7 @@ Properties for parsing data
         ..  rubric:: Examples
 
         ..  literalinclude:: _codesnippets/_parsing.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  _stdwrap-doubleBrTag:
 
@@ -1276,7 +1276,7 @@ Properties for wrapping data
 
         ..  rubric:: Examples
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
             page.10.noTrimWrap = | val1 | val2 |
 
@@ -1285,7 +1285,7 @@ Properties for wrapping data
 
         ..  rubric:: Examples
         ..  literalinclude:: _codesnippets/_wrap3.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         :ref:`optionSplit <optionsplit>` will use the "\|\|" to determine two subparts. In
         each subpart :typoscript:`noTrimWrap` will then use the "^" as
@@ -1316,7 +1316,7 @@ Properties for wrapping data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
             page.10.dataWrap = <div id="{page : uid}"> | </div>
 
@@ -1369,7 +1369,7 @@ Properties for wrapping data
         ..  rubric:: Examples
 
         ..  literalinclude:: _codesnippets/_wrap2.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         In this example orderedStdWrap is executed on the value "a".
         :typoscript:`10.innerWrap` is executed first, followed by :typoscript:`10.wrap`.
@@ -1403,7 +1403,7 @@ Properties for wrapping data
         Displays the page title:
 
         ..  literalinclude:: _codesnippets/_wrap.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  warning::
         Never use this on content that can be edited in the backend. This would
@@ -1445,13 +1445,13 @@ Properties for wrapping data
         You can paste this example directly into a new template record:
 
         ..  literalinclude:: _StdWrap/_UserFunction.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         Your methods will get the parameters :php:`$content` and :php:`$conf`
         (in that order) and need to return a string.
 
         ..  literalinclude:: _StdWrap/_UserFunction.php
-            :caption: EXT:site_package/Classes/UserFunctions/YourClass.php
+            :caption: EXT:my_sitepackage/Classes/UserFunctions/YourClass.php
 
         For :typoscript:`page.10`: the content which exists when
         :typoscript:`postUserFunc` is executed, will be processed by the function
@@ -1514,7 +1514,7 @@ Properties for wrapping data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
             prefixComment = 2 | CONTENT ELEMENT, uid:{field:uid}/{field:CType}
 
@@ -1555,7 +1555,7 @@ Properties for sanitizing and caching data
         ..  rubric:: Examples
 
         ..  literalinclude:: _codesnippets/_cache2.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         will result in the following output:
 
@@ -1566,7 +1566,7 @@ Properties for sanitizing and caching data
         The following code is equivalent to the above, but specifies a builder:
 
         ..  literalinclude:: _codesnippets/_propertiesCache.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  _stdwrap-cache:
 
@@ -1642,7 +1642,7 @@ Example
 Content object ":ref:`TEXT <cobj-text>`" containing property "value":
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     10 = TEXT
     10.value = some text

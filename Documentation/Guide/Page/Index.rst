@@ -43,21 +43,21 @@ As we already saw in section :ref:`First steps <guide-first-steps>`, the followi
 "Hello World!":
 
 ..  literalinclude:: _hello-world.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 In a more common use case you want to load the page content from a Fluid
 template:
 
 ..  literalinclude:: _fluid-template.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 You need at least a
 :ref:`Minimal site package (see site package tutorial) <t3sitepackage:minimal-design>`
 to keep your templates in its private resources folder, for example
-:path:`/packages/site_package/Resources/Private/Templates`:
+:path:`EXT:my_sitepackage/Resources/Private/Templates`:
 
 ..  literalinclude:: _Default.fluid.html
-    :caption: /packages/site_package/Resources/Private/Templates/Pages/Default.fluid.html
+    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.fluid.html
 
 ..  note::
     Learn more about building site packages (website themes) with TypoScript and
@@ -73,7 +73,7 @@ You can write inline CSS using property
 in the public resources of your :ref:`Minimal site package <t3sitepackage:minimal-design>`:
 
 ..  literalinclude:: _css-loading.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _guide-page-loading-js:
 
@@ -85,7 +85,7 @@ You can write inline JavaScript using property
 in the public resources of your :ref:`Minimal site package <t3sitepackage:minimal-design>`:
 
 ..  literalinclude:: _javascript-loading.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  warning::
     If you are using inline JavaScript **never** pass any unescaped user input
@@ -103,13 +103,13 @@ Use property :confval:`shortcutIcon <t3tsref:page-shortcuticon>` to define
 the favicon:
 
 ..  literalinclude:: _favicon.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 You need to have a
 :ref:`Minimal site package (see site package tutorial) <t3sitepackage:minimal-design>`
 and put the favicon file in the public resources folder of that site package.
 If you followed the instruction from the site package tutorial that would be
-path :path:`/packages/site_package/Resources/Public/Icons`.
+path :path:`EXT:my_sitepackage/Resources/Public/Icons`.
 
 ..  _guide-page-tracking-code:
 
@@ -120,7 +120,7 @@ You can use the property :confval:`footerData.[array] <t3tsref:page-footerdata>`
 to enter some HTML code just before the closing `</body>` tag:
 
 ..  literalinclude:: _tracking-code.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  warning::
     The HTML is output directly. Never use any unescaped user input.

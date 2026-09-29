@@ -41,7 +41,7 @@ special.value
     listed.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         20 = HMENU
         20.special = updated

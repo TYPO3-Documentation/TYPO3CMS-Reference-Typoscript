@@ -101,7 +101,7 @@ Examples
 ========
 
 ..  literalinclude:: _codesnippets/_cacheExamples2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 In the above example the current time will be cached with the key
 "mycurrenttimestamp". This key is fixed and does not take the current
@@ -110,7 +110,7 @@ cObject will be cached and reused on all pages (showing you the same
 timestamp). :
 
 ..  literalinclude:: _codesnippets/_cache.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Here a dynamic key is used. It takes the page id and the language uid
 into account making the object page and language specific.
@@ -127,7 +127,7 @@ content objects. This skips the rendering even for content objects that evaluate
 Usage:
 
 ..  literalinclude:: _codesnippets/_class.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The commented part is :typoscript:`stdWrap.cache.` property available since 4.7,
 that does not stop the rendering of :typoscript:`COA` including all sub-cObjects.
