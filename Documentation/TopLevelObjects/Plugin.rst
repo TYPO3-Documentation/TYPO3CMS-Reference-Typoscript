@@ -64,7 +64,7 @@ Properties for all frontend plugin types
         default styles can be removed with:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
             plugin.tx_frontend._CSS_DEFAULT_STYLE >
             plugin.tx_indexedsearch._CSS_DEFAULT_STYLE >
@@ -507,6 +507,6 @@ Demonstrates:
     *   :confval:`plugin.[extension]._LOCAL_LANG <plugin-local-lang>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     plugin.tx_myextension_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus

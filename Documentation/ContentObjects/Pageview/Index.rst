@@ -349,7 +349,7 @@ You can use the directories defined in :confval:`pageview-paths` to
 define fallback directories for the templates:
 
 ..  literalinclude:: _extended.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The template for a page with a certain backend layout is first searched in
 :path:`EXT:my_special_sitepackage/Resources/Private/PageView/Pages/` then in

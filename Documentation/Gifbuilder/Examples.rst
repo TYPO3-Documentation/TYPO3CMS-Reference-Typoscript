@@ -51,7 +51,7 @@ To generate such an overlayed image with the GIFBUILDER you have to use
 code like the following:
 
 ..  literalinclude:: _codesnippets/_avif4.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 You will need a background image. Here "backimage.jpg". For example:
 
@@ -169,7 +169,7 @@ The base image is the same as above. Below is the result - just see
 yourself:
 
 ..  literalinclude:: _codesnippets/_avif3.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Creating shadows for images
 ===========================
@@ -188,7 +188,7 @@ Setup
 ~~~~~
 
 ..  literalinclude:: _codesnippets/_avif2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Result
 ~~~~~~
@@ -220,7 +220,7 @@ Setup
 ~~~~~
 
 ..  literalinclude:: _codesnippets/_avif.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Result
 ~~~~~~

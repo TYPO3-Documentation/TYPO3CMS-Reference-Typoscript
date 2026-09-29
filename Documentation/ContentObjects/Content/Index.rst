@@ -202,20 +202,20 @@ See PHP class :php:`\TYPO3\CMS\Frontend\ContentObject\ContentContentObject`
 for details on code level.
 
 ..  literalinclude:: _codesnippets/_detail4.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 Expanded form:
 
 ..  literalinclude:: _codesnippets/_detail3.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  literalinclude:: _codesnippets/_detail2.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  literalinclude:: _codesnippets/_detail.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 See also: :ref:`if <if>`, :ref:`select <select>`, :ref:`Wrap <data-type-wrap>`, :ref:`stdWrap <stdWrap>`,
@@ -230,7 +230,7 @@ Display all tt_content records from this page
 Here is an example of the CONTENT object:
 
 ..  literalinclude:: _codesnippets/_all.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 Since in the above example `.renderObj` is not set explicitly, TYPO3
 will automatically set :typoscript:`1.renderObj < tt_content`, so that `renderObj`
@@ -246,4 +246,4 @@ Apply special rendering
 Here is an example of record-rendering objects:
 
 ..  literalinclude:: _codesnippets/_rendering.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript

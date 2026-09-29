@@ -1,4 +1,4 @@
-name: my-vendor/my-site-package
+name: myvendor/my-sitepackage
 label: My Set
 dependencies:
   - my-vendor/my-other-set

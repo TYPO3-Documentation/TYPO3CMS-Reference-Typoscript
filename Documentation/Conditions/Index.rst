@@ -54,7 +54,7 @@ applicationContext
     Example:
 
     ..  literalinclude:: _codesnippets/_applicationContext.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; page
@@ -72,7 +72,7 @@ page
     Example:
 
     ..  literalinclude:: _codesnippets/_page.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; tree
@@ -107,7 +107,7 @@ tree.level
     Example:
 
     ..  literalinclude:: _codesnippets/_level.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; tree.pagelayout
@@ -126,7 +126,7 @@ tree.pagelayout
     Example:
 
     ..  literalinclude:: _codesnippets/_pagelayout.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     ..  attention::
         The value of `pagelayout` is a string, even when using BE layout records.
@@ -150,7 +150,7 @@ tree.rootLine
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [tree.rootLine[0]["uid"] == 1]
             # ...
@@ -174,7 +174,7 @@ tree.rootLineIds
     Example:
 
     ..  literalinclude:: _codesnippets/_rootLineIds.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index::
@@ -194,7 +194,7 @@ tree.rootLineParentIds
     Example:
 
     ..  literalinclude:: _codesnippets/_rootLineParentIds.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; backend
@@ -240,7 +240,7 @@ backend.user.isAdmin
     Example:
 
     ..  literalinclude:: _codesnippets/_isAdmin.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; backend.user.isLoggedIn
@@ -258,7 +258,7 @@ backend.user.isLoggedIn
     Example:
 
     ..  literalinclude:: _codesnippets/_isLoggedIn.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; backend.user.userId
@@ -276,7 +276,7 @@ backend.user.userId
     Example:
 
     ..  literalinclude:: _codesnippets/_userId.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; backend.user.userGroupIds
@@ -295,7 +295,7 @@ backend.user.userGroupIds
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [2 in backend.user.userGroupIds]
             # ...
@@ -317,7 +317,7 @@ backend.user.userGroupList
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [like(","~backend.user.userGroupList~",", "*,1,*")]
             # ...
@@ -365,7 +365,7 @@ frontend.user.isLoggedIn
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [frontend.user.isLoggedIn]
             # ...
@@ -387,7 +387,7 @@ frontend.user.userId
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [frontend.user.userId == 5]
             # ...
@@ -410,7 +410,7 @@ frontend.user.userGroupIds
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [4 in frontend.user.userGroupIds]
             # ...
@@ -432,7 +432,7 @@ frontend.user.userGroupList
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [like(","~frontend.user.userGroupList~",", "*,1,*")]
             # ...
@@ -467,7 +467,7 @@ workspace.workspaceId
     Example:
 
     ..  literalinclude:: _codesnippets/_workspaceId.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; workspace.isLive
@@ -485,7 +485,7 @@ workspace.isLive
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [workspace.isLive]
             # ...
@@ -507,7 +507,7 @@ workspace.isOffline
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [workspace.isOffline]
             # ...
@@ -542,7 +542,7 @@ typo3.version
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [typo3.version == "12.4.5"]
             # ...
@@ -564,7 +564,7 @@ typo3.branch
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [typo3.branch == "12.4"]
             # ...
@@ -586,7 +586,7 @@ typo3.devIpMask
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [typo3.devIpMask == "172.18.0.6"]
             # ...
@@ -613,7 +613,7 @@ date()
     Example:
 
     ..  literalinclude:: _codesnippets/_date.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; like
@@ -634,7 +634,7 @@ like()
     Example:
 
     ..  literalinclude:: _codesnippets/_like.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; traverse
@@ -659,7 +659,7 @@ traverse()
     Example:
 
     ..  literalinclude:: _codesnippets/_traverse.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     ..  tip::
         Checking for the :ref:`request object <t3coreapi:typo3-request>` to be
@@ -691,7 +691,7 @@ compatVersion()
     Example:
 
     ..  literalinclude:: _codesnippets/_compatVersion.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; getTSFE
@@ -720,7 +720,7 @@ getTSFE()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         # True, if the current page UID is 17. Use the page variable instead
         [getTSFE()?.id == 17]
@@ -741,7 +741,7 @@ getenv()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [getenv("VIRTUAL_HOST") == "www.example.org"]
             # ...
@@ -764,7 +764,7 @@ feature()
     Example:
 
     ..  literalinclude:: _codesnippets/_feature.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; ip
@@ -789,7 +789,7 @@ ip()
     Example:
 
     ..  literalinclude:: _codesnippets/_ip.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; request
@@ -845,7 +845,7 @@ request.getQueryParams()
     Example:
 
     ..  literalinclude:: _codesnippets/_request4.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; request.getParsedBody()
@@ -864,7 +864,7 @@ request.getParsedBody()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [request && traverse(request.getParsedBody(), 'foo') == 1]
             # ...
@@ -886,7 +886,7 @@ request.getHeaders()
     Example:
 
     ..  literalinclude:: _codesnippets/_request3.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; request.getCookieParams()
@@ -904,7 +904,7 @@ request.getCookieParams()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         [request && request.getCookieParams()['foo'] == 1]
             # ...
@@ -929,7 +929,7 @@ request.getNormalizedParams()
     Example:
 
     ..  literalinclude:: _codesnippets/_request2.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 
@@ -949,7 +949,7 @@ request.getPageArguments()
     Example:
 
     ..  literalinclude:: _codesnippets/_request.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 ..  index:: Conditions; session
 ..  _condition-functions-in-frontend-context-function-session:
@@ -970,7 +970,7 @@ session()
     Example:
 
     ..  literalinclude:: _codesnippets/_session.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; site
@@ -1020,12 +1020,12 @@ site()
     Example:
 
     ..  literalinclude:: _codesnippets/_site2.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     Site settings can also be used in the conditions in TypoScript constants:
 
     ..  literalinclude:: _codesnippets/_site.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/constants.typoscript
 
 ..  index:: Conditions; siteLanguage
 ..  _condition-functions-in-frontend-context-function-siteLanguage:
@@ -1092,7 +1092,7 @@ siteLanguage()
     Example:
 
     ..  literalinclude:: _codesnippets/_siteLanguage.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  index:: Conditions; loginUser

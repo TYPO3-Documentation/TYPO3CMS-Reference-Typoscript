@@ -80,13 +80,13 @@ references
     sys_file_reference with the UIDs 27 and 28.
 
     ..  literalinclude:: _codesnippets/_references2.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     This will fetch all relations to the image field of the
     tt_content record "256".
 
     ..  literalinclude:: _codesnippets/_filesReferences.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     This will fetch all items related to the page.media field.
 
@@ -135,7 +135,7 @@ folders
     Example for option :typoscript:`recursive`:
 
     ..  literalinclude:: _codesnippets/_folders.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _cobj-files-sorting:
 
@@ -206,7 +206,7 @@ renderObj
     **Example:**
 
     ..  literalinclude:: _codesnippets/_renderObj.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     This returns the size of the current file.
 
@@ -272,7 +272,7 @@ Then we use the :ref:`TEXT <cobj-text>` cObject as :ref:`renderObj <cobj-files-r
 to output the file size of all files that were found:
 
 ..  literalinclude:: _codesnippets/_files.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _cobj-files-examples-references:
@@ -287,7 +287,7 @@ as an :ref:`IMAGE <cobj-image>` cObject with some meta data coming from
 the file itself or from the reference to it (title):
 
 ..  literalinclude:: _codesnippets/_examplesReferences.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _cobj-files-examples-sliding:
@@ -299,4 +299,4 @@ One usual feature is to use images attached to pages and use
 them up and down the page tree, a process called "sliding".
 
 ..  literalinclude:: _codesnippets/_sliding.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript

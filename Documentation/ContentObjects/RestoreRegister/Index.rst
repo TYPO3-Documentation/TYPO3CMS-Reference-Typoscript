@@ -33,5 +33,4 @@ be used to load values into the register and to restore previous values
 again.
 
 ..  literalinclude:: _register.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript

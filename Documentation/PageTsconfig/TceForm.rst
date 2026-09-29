@@ -120,7 +120,7 @@ Example: Add header layout option
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_addItems.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 Instead of adding files by path, icon identifiers should be used.
 
@@ -161,7 +161,7 @@ Example: Override labels for document types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_altLabels.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  figure:: /Images/ManualScreenshots/List/PagesDoktypeDifferentLabels.png
     :alt: The Page types with modified labels
@@ -174,7 +174,7 @@ Example: Override labels for document types
     like on this example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.tt_content.space_before_class.altLabels.. = foo
 
@@ -218,14 +218,14 @@ Example: Substitute a marker in a plugin FlexForm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.PAGE_TSCONFIG_ID = 22
 
 In this example, the value will substitute the marker in a plugin FlexForm.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.tx_myextension_table.myfield.PAGE_TSCONFIG_ID = 22
 
@@ -250,14 +250,14 @@ Example: Substitute a list of IDs in a plugin FlexForm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.PAGE_TSCONFIG_IDLIST = 20,21,22
 
 In this example, the value will substitute the marker in a plugin FlexForm.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.tx_myextension_table.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
 
@@ -283,14 +283,14 @@ Example: Substitute a string in a plugin FlexForm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.PAGE_TSCONFIG_STR = %hello%
 
 In this example, the value will substitute the marker in a plugin FlexForm.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.tx_myextension_table.myfield.PAGE_TSCONFIG_STR = %hello%
 
@@ -422,7 +422,7 @@ config.treeConfig
     in the :ref:`TCA reference <t3tca:columns-select-properties-treeconfig>`:
 
     ..  literalinclude:: _codesnippets/_pageTsConfigTceFormConfigTreeConfig.typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     This property is available for various levels:
 
@@ -466,7 +466,7 @@ description
     define a description for a TCA field, next to its label.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
         TCEFORM.tt_content.header.description = override description
 
@@ -474,21 +474,21 @@ description
     specific language.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
         TCEFORM.tt_content.header.description.de = override description for DE
 
     The option can be used on a per record type basis, too.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
         TCEFORM.tt_content.header.types.textpic.description = override description for textpic
 
     Also referencing language labels is supported.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
         TCEFORM.tt_content.header.description = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:override_description
 
@@ -537,7 +537,7 @@ Example: Disable editing of the page title
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_disabled.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index::
     Records; select items  disable "INVALID VALUE"
@@ -581,7 +581,7 @@ Example: Disable "INVALID VALUE ..." label
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_pageFormEngineDisableNoMatchingElement.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 Now the selector box will default to the first element in the selector box:
 
@@ -616,7 +616,7 @@ fileFolderConfig
     available:
 
     ..  literalinclude:: _codesnippets/_fileFolderConfig.typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     This property is available for various levels:
 
@@ -695,7 +695,7 @@ Example: Show only standard and spacer pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_keepItems.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index::
     Records; Field label
@@ -735,7 +735,7 @@ Example: Override the label of a field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_tceformLabel.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index::
@@ -775,7 +775,7 @@ Example: Replace "INVALID VALUE ..." label with another string
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_noMatchingValueLabel.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  figure:: /Images/ManualScreenshots/List/SelectInvalidValueDifferentLabel.png
     :alt:  An invalid selector box value is indicated by a warning message
@@ -817,7 +817,7 @@ Example: Remove "Recycler" and "Spacer" page types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_removeItems.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index::
     FlexForm; Sheet description
@@ -883,7 +883,7 @@ Example: Rename the first tab of the FlexForm plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_sheetTitle.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index::
     Records; Suggest wizard
@@ -965,7 +965,7 @@ Example: limit storage_pid to the children of a certain page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.pages.storage_pid.suggest.default {
         addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
@@ -985,7 +985,7 @@ suggest.cssClass
     Add a CSS class to every list item of the result list.
 
     ..  literalinclude:: _codesnippets/_cssClass.typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index::
@@ -1007,7 +1007,7 @@ Example: Hide the suggest field for the storage_pid
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.pages.storage_pid.suggest.default {
         hide = 1
@@ -1033,7 +1033,7 @@ Example: Limit the suggest field to 30 characters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.suggest.default {
         maxPathTitleLength = 30
@@ -1059,7 +1059,7 @@ Example: Start the suggest search after 3 characters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCEFORM.pages.storage_pid.suggest.default {
         minimumCharacters = 3
@@ -1085,7 +1085,7 @@ Example: Set search depth for suggest field
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  literalinclude:: _codesnippets/_pidDepth.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index::
     Suggest wizard; pid list
@@ -1107,7 +1107,7 @@ Example: Limit suggest search to records on certain pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  literalinclude:: _codesnippets/_pidList.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index::
@@ -1157,7 +1157,7 @@ Example: Only search on pages with doktype=1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     ..  literalinclude:: _codesnippets/_searchCondition.typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index::
     Suggest wizard; Search whole phrase
@@ -1180,4 +1180,4 @@ Example: Search only for whole phrases
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  literalinclude:: _codesnippets/_searchWholePhrase.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig

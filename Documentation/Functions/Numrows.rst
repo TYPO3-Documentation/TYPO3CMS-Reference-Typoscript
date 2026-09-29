@@ -55,4 +55,4 @@ Get the number of content elements within certain `colPos` of the current
 page.
 
 ..  literalinclude:: _numRows.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript

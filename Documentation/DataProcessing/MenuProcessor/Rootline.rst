@@ -94,12 +94,12 @@ The following breadcrumb menu is created with the
 :ref:`MenuProcessor <MenuProcessor>`, based on the HMENU. It is styled via Fluid:
 
 ..  literalinclude:: _code-snippets/_BreadcrumbDataProcessor.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbDataProcessor.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/Menus/Setup/BreadcrumbDataProcessor.typoscript
 
 The following Fluid partial can be used to style the breadcrumb menu:
 
 ..  literalinclude:: /CodeSnippets/Menu/Template/BreadcrumbDataProcessor.html
-    :caption: EXT:site_package/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html
 
 ..  _hmenu-special-rootline-breadcrumb-pure:
 
@@ -109,7 +109,7 @@ Breadcrumb with pure TypoScript
 The following breadcrumb menu is styled with pure Typoscript:
 
 ..  literalinclude:: _code-snippets/_BreadcrumbLib.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbLib.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/Menus/Setup/BreadcrumbLib.typoscript
 
 ..  _hmenu-special-rootline-range-example:
 
@@ -121,7 +121,7 @@ example will start at level 1 and does not show the page the user is
 currently on:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     temp.breadcrumbs = HMENU
     temp.breadcrumbs.special = rootline
@@ -137,4 +137,4 @@ all other levels will have :html:`target="_top"` as defined for the
 :ref:`TMENU <tmenu>` property :confval:`menu-common-properties-target`.
 
 ..  literalinclude:: _targets.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript

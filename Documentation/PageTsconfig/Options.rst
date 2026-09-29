@@ -43,7 +43,7 @@ Example: Exclude two backend layouts from drop down selector
     Before: Two backend layout records shown in list module
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     # Exclude two backend layouts from drop down selector
     options.backendLayout.exclude = 1,2
@@ -78,4 +78,4 @@ Example: Set default upload
 ---------------------------
 
 ..  literalinclude:: _pagedefaultuploadfolder.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig

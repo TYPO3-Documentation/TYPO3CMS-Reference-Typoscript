@@ -90,7 +90,7 @@ externalBlocks
     overridden
 
     ..  literalinclude:: _codesnippets/_externalBlocks.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  _parsefunc-short:
@@ -111,7 +111,7 @@ short
     and "T3web" with a link to typo3.org.
 
     ..  literalinclude:: _codesnippets/_short.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  _parsefunc-plainTextStdWrap:
@@ -228,7 +228,7 @@ allowTags
     The example allows any tag, except :html:`<u>` which will be encoded:
 
     ..  literalinclude:: _codesnippets/_allowTags.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 
@@ -252,7 +252,7 @@ denyTags
     This allows :html:`<b>`, :html:`<i>`, :html:`<a>` and :html:`<img>` -tags to exist:
 
     ..  literalinclude:: _codesnippets/_denyTags.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  _parsefunc-if:
@@ -277,4 +277,4 @@ through the :ref:`makelinks <parsefunc-makelinks>`-functions and substitutes all
 :html:`<LINK>` and :html:`<TYPOLIST>`-tags with something else.
 
 ..  literalinclude:: _codesnippets/_parsefunc.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript

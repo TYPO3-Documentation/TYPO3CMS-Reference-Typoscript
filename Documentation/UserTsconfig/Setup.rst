@@ -49,7 +49,7 @@ Properties
 
         ..  literalinclude:: _Setup/_user-setup-default.tsconfig
             :language: typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
     ..  _user-setup-override:
 
@@ -85,7 +85,7 @@ Properties
         You can find the names of the fields in the :guilabel:`Configuration` module by browsing the "User Settings" array, example:
 
         ..  literalinclude:: _properties.typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
 backendTitleFormat
 ------------------

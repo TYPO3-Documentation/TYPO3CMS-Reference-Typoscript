@@ -37,7 +37,7 @@ encapsTagList
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         encapsTagList = div, p
 
@@ -98,7 +98,7 @@ addAttributes.[*tagname*]
     ([*tagname*] is in uppercase.)
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         addAttributes.P.setOnly = exists
 
@@ -112,7 +112,7 @@ addAttributes.[*tagname*]
     ..  rubric:: Example
 
     ..  literalinclude:: _codesnippets/_addAttributes.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  _encapslines-removeWrapping:
@@ -163,7 +163,7 @@ wrapNonWrappedLines
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         wrapNonWrappedLines = <p>|</p>
 
@@ -249,7 +249,7 @@ Examples
 ------------------------------------------------
 
 ..  literalinclude:: _codesnippets/_encapslinesExamples2.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 This example shows how to handle content rendered by TYPO3 and
 stylesheets where the :html:`<p>` tag is used to encapsulate each line.
@@ -287,7 +287,7 @@ Advanced example
 ----------------
 
 ..  literalinclude:: _codesnippets/_encapslines.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 This is an example of how to wrap the table field `tt_content.bodytext`
 with :html:`<p>` tags, setting the line distances to regular space like that

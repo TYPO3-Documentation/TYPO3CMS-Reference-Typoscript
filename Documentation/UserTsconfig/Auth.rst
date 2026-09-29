@@ -43,7 +43,7 @@ auth.mfa.required
     and can therefore also be used to unset the requirement by using `0` as value.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/user.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
         auth.mfa.required = 1
 
@@ -86,7 +86,7 @@ Example: Disable a multi-factor authentication provider
 -------------------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/user.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
     auth.mfa.disableProviders := addToList(totp)
 
@@ -96,6 +96,6 @@ Example: Set a recommended multi-factor authentication provider
 ---------------------------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/user.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
     auth.mfa.recommendedProvider = totp

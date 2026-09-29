@@ -127,14 +127,14 @@ from TypoScript. Use this TypoScript configuration:
 
 ..  literalinclude:: _ExampleTime.typoscript
     :language: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-The file :file:`EXT:site_package/Classes/UserFunctions/ExampleTime.php` might
+The file :file:`EXT:my_sitepackage/Classes/UserFunctions/ExampleTime.php` might
 amongst other things contain:
 
 ..  literalinclude:: _ExampleTime.php
     :language: php
-    :caption:  EXT:site_package/Classes/UserFunctions/ExampleTime.php
+    :caption:  EXT:my_sitepackage/Classes/UserFunctions/ExampleTime.php
 
 Here :typoscript:`page.10` will give back what the PHP function :php:`printTime()`
 returned. Since we did not use a :typoscript:`USER` object, but a
@@ -151,14 +151,14 @@ order. For this we use the following TypoScript:
 
 ..  literalinclude:: _ExampleListRecords.typoscript
     :language: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-The file :file:`EXT:site_package/Classes/UserFunctions/ExampleListRecords.php`
+The file :file:`EXT:my_sitepackage/Classes/UserFunctions/ExampleListRecords.php`
 may contain amongst other things:
 
 ..  literalinclude:: _ExampleListRecords.php
     :language: php
-    :caption: EXT:site_package/Classes/UserFunctions/ExampleListRecords.php
+    :caption: EXT:my_sitepackage/Classes/UserFunctions/ExampleListRecords.php
 
 Since we need an instance of the
 :php-short:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer` class, we
@@ -186,13 +186,13 @@ the local machine". You can make it available like this:
 
 ..  literalinclude:: _Hostname.typoscript
     :language: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-Contents of :file:`EXT:site_package/Classes/UserFunctions/Hostname.php`:
+Contents of :file:`EXT:my_sitepackage/Classes/UserFunctions/Hostname.php`:
 
 ..  literalinclude:: _Hostname.php
     :language: php
-    :caption: EXT:site_package/Classes/UserFunctions/Hostname.php
+    :caption: EXT:my_sitepackage/Classes/UserFunctions/Hostname.php
 
 ..  _cobj-user-custom-plugin:
 

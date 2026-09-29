@@ -16,7 +16,7 @@ Example
 =======
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     20 = ADJUST
     20.value = inputLevels = 13, 230
@@ -56,7 +56,7 @@ inputLevels
     to end at 190 of the original (which is set as 255 for the new image).
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         20 = ADJUST
         20.value = inputLevels = 50, 190
@@ -88,7 +88,7 @@ outputLevels
     above 190 in the image.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         20 = ADJUST
         20.value = outputLevels = 50, 190
@@ -108,7 +108,7 @@ autoLevels
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         20 = ADJUST
         20.value = autoLevels
