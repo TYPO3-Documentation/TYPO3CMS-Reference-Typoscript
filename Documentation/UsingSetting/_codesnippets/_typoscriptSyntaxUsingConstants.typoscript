@@ -1,4 +1,4 @@
-tx_my_sitepackage {
+tx_mysitepackage {
   bgCol = bg-primary
   file.toplogo = EXT:my_sitepackage/Resources/Public/Images/Logo.png
 }

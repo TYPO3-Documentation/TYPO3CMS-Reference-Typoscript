@@ -6,7 +6,7 @@
 1.param.cObject.stdWrap.intval = 1
 
 10 = CONTENT
-10.table = tx_my_table
+10.table = tx_myextension_mytable
 10.select {
   pidInList = this
   orderBy = sorting
@@ -17,5 +17,5 @@
 10.renderObj = COA
 10.renderObj {
   10 = TEXT
-  10.stdWrap.field = tx_my_text_field
+  10.stdWrap.field = my_text_field
 }

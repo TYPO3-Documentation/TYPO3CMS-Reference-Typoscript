@@ -1,8 +1,8 @@
-plugin.tx_blogexample_rssfeedxml {
+plugin.tx_myextension_rssfeedxml {
   // Use template List.xml
   format = xml
 }
-plugin.tx_blogexample_rssfeedatom {
+plugin.tx_myextension_rssfeedatom {
   // Use template List.atom
   format = atom
 }

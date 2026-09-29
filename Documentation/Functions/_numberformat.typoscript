@@ -15,7 +15,7 @@ lib.myPrice {
 
 lib.carViews = CONTENT
 lib.carViews {
-  table = tx_mycarext_car
+  table = tx_myextension_car
   select.pidInList = 42
   renderObj = TEXT
   renderObj {

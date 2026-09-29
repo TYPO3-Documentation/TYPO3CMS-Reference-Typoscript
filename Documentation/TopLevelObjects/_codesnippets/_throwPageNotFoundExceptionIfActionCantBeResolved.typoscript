@@ -1,4 +1,4 @@
-plugin.tx_blogexample {
+plugin.tx_myextension {
   mvc {
     throwPageNotFoundExceptionIfActionCantBeResolved = 1
   }
