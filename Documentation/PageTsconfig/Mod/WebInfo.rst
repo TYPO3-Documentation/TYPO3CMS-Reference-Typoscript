@@ -53,4 +53,4 @@ Example: Override the field definitions in the status module
 ------------------------------------------------------------
 
 ..  literalinclude:: _webinfo.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig

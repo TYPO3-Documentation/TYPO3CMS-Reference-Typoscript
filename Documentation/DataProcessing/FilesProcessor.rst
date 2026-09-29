@@ -231,7 +231,7 @@ The following example implements a slide functionality on root line
 for file resources:
 
 ..  literalinclude:: _references.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The :php-short:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor` can slide up
 the root line to collect images for Fluid templates. One usual feature is to
@@ -251,14 +251,14 @@ Therefore, you can do the following:
 
 ..  literalinclude:: _FilesProcessorFlexForm.typoscript
     :language: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 This assumes that the image was stored in a FlexForm in the table
 `tt_content` like this:
 
 ..  literalinclude:: _FlexFormWithImage.xml
     :language: xml
-    :caption: EXT:site_package/Configuration/FlexForm/MyFlexForm.xml
+    :caption: EXT:my_sitepackage/Configuration/FlexForm/MyFlexForm.xml
 
 Three images in the same content element (uid 15) having the FlexForm above
 would look like this in the the database table `sys_file_reference`:

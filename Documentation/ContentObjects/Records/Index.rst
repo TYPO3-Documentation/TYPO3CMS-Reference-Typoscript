@@ -209,7 +209,7 @@ The following example would display some related content
 referenced from the :guilabel:`page properties`.
 
 ..  literalinclude:: _codesnippets/_source.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Since no :typoscript:`conf` property is defined, the rendering will
 look for a top-level TypoScript object bearing the name of the
@@ -223,7 +223,7 @@ Selection with source II
 ------------------------
 
 ..  literalinclude:: _codesnippets/_ii.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 This example loads the content elements with the UIDs 10 and 12 no
 matter where these elements are located and whether these pages are
@@ -240,7 +240,7 @@ If you want to display categorized content with a :typoscript:`RECORDS` object
 you could do it like this:
 
 ..  literalinclude:: _codesnippets/_categories2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Contrary to the previous example, in this case the :typoscript:`conf` property
 is present and defines a very simple rendering of each content element
@@ -251,4 +251,4 @@ data processing. This way templating is much more flexible. See the following
 example from the system extension :file:`fluid_styled_content`:
 
 ..  literalinclude:: _codesnippets/_categories.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript

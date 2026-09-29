@@ -12,7 +12,7 @@ As an example, this enables the :guilabel:`Flush frontend caches` button in the
 upper right toolbar cache menu for non-admin users:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/user.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
     options.clearCache.pages = 1
 
@@ -85,7 +85,7 @@ Properties
         Example:
 
         ..  literalinclude:: _codesnippets/_properties5.typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
         Bookmark group 1 is loaded with the default label (Pages), group 2 is
         loaded and labeled as "My Group" and groups 3 and 4 are disabled.
@@ -97,7 +97,7 @@ Properties
         Custom language labels can also be used instead of a fixed label:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
             bookmarkGroups {
               2 = LLL:my_sitepackage.backend:bookmarkGroups.2
@@ -224,7 +224,7 @@ Properties
         Example:
 
         ..  literalinclude:: _codesnippets/_properties4.typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
     ..  _useroptions-dashboard:
 
@@ -248,7 +248,7 @@ Properties
             Example:
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/user.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                 options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
 
@@ -271,7 +271,7 @@ Properties
         has not already made a choice.
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
             options.defaultResourcesViewMode = list
 
@@ -299,7 +299,7 @@ Properties
         Example:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
             options.defaultUploadFolder = 2:user_folders/my_folder/
 
@@ -320,7 +320,7 @@ Properties
         Example:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
             options.disableDelete.tt_content = 1
 
@@ -404,7 +404,7 @@ Properties
             Example:
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/user.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                 # Disable the column selector
                 file_list.displayColumnSelector = 0
@@ -481,7 +481,7 @@ Properties
             Example:
 
             ..  literalinclude:: _codesnippets/_properties3.tsconfig
-                :caption: EXT:site_package/Configuration/user.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
             ..  figure:: /Images/ManualScreenshots/List/FileListPrimaryActions.png
                 :alt: Show primary action with additional copy, cut and replace buttons
@@ -577,7 +577,7 @@ Properties
             Example:
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/user.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                 options.folderTree.altElementBrowserMountPoints = _temp_/, 2:/templates, 1:/files/images
 
@@ -608,7 +608,7 @@ Properties
             Example:
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/user.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                 options.folderTree.label.1:/campaigns/ {
                     label = Campaign A
@@ -660,7 +660,7 @@ Properties
         Example:
 
         ..  literalinclude:: _codesnippets/_properties2.typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
     ..  _useroptions-hideRecords:
 
@@ -693,7 +693,7 @@ Properties
             Example:
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/user.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                 options.hideRecords.pages = 12,45
 
@@ -764,7 +764,7 @@ Properties
                 Set default behavior for all tables (in this case to "edit" mode):
 
                 ..  code-block:: typoscript
-                    :caption: EXT:site_package/Configuration/user.tsconfig
+                    :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                     options.liveSearch.actions.default = edit
 
@@ -772,14 +772,14 @@ Properties
                 table name in the setting:
 
                 ..  code-block:: typoscript
-                    :caption: EXT:site_package/Configuration/user.tsconfig
+                    :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                     options.liveSearch.actions.tt_content.default = layout
 
                 Set default behavior for a custom table:
 
                 ..  code-block:: typoscript
-                    :caption: EXT:site_package/Configuration/user.tsconfig
+                    :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                     options.liveSearch.actions.my_table.default = preview
 
@@ -856,7 +856,7 @@ Properties
             Example:
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/user.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                 options.pageTree.altElementBrowserMountPoints = 34,123
 
@@ -877,7 +877,7 @@ Properties
             Example:
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/user.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                 options.pageTree.altElementBrowserMountPoints = 34,123
                 options.pageTree.altElementBrowserMountPoints.append = 1
@@ -918,7 +918,7 @@ Properties
             Example:
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/user.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
                 options.pageTree.excludeDoktypes = 254,1
 
@@ -1065,7 +1065,7 @@ Properties
         can set the user TSconfig globally in your :file:`Configuration/user.tsconfig`:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
             options.passwordReset = 0
 
@@ -1114,7 +1114,7 @@ Properties
         in the top of the page (default is after instead of top).
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/user.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
             options.saveDocNew = 0
             options.saveDocNew.tt_content = top

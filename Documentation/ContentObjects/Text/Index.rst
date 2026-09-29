@@ -71,7 +71,7 @@ Examples
 ========
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     10 = TEXT
     10.value = This is a text in uppercase
@@ -81,7 +81,7 @@ The above example uses the stdWrap property :ref:`case <stdwrap-case>`. It
 returns "THIS IS A TEXT IN UPPERCASE".
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     10 = TEXT
     10.value.field = title
@@ -95,7 +95,7 @@ stored in the database field `title`). The header is then wrapped in
 Now let us have a look at an extract from a more complex example:
 
 ..  literalinclude:: _examples2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The above example returns the content, which was found in the field
 `bodytext` of the current record from $cObj->data-array. Here that
@@ -105,7 +105,7 @@ is useful inside :ref:`COA <cobj-coa>` objects.
 Here is the same example in its context:
 
 ..  literalinclude:: _text.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Here we use the cObject :ref:`CONTENT <cobj-content>` to return all content elements
 (records from the database table "tt_content"), which are on the

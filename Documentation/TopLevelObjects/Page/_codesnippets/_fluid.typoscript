@@ -3,13 +3,13 @@ page.10 = FLUIDTEMPLATE
 page.10 {
   templateName = Default
   layoutRootPaths {
-    10 = EXT:sitepackage/Resources/Private/Layouts
+    10 = EXT:my_sitepackage/Resources/Private/Layouts
   }
   partialRootPaths {
-    10 = EXT:sitepackage/Resources/Private/Partials
+    10 = EXT:my_sitepackage/Resources/Private/Partials
   }
   templateRootPaths {
-    10 = EXT:sitepackage/Resources/Private/Templates
+    10 = EXT:my_sitepackage/Resources/Private/Templates
   }
   variables {
     foo = TEXT

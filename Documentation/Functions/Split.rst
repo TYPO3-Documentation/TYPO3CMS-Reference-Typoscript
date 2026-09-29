@@ -86,7 +86,7 @@ returnCount
     ..  rubric:: Example
 
     ..  literalinclude:: _codesnippets/_returnCount.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _split-cObjNum:
@@ -119,7 +119,7 @@ cObjNum
     ..  rubric:: Example for stdWrap
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         1.current = 1
         1.wrap = <b> | </b>
@@ -127,7 +127,7 @@ cObjNum
     ..  rubric:: Example for stdWrap
 
     ..  literalinclude:: _codesnippets/_cObject.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _split-wrap:
 
@@ -155,5 +155,5 @@ bullet-gif (ln 8). Finally the whole thing is wrapped in the proper
 table-tags (ln 10). :
 
 ..  literalinclude:: _codesnippets/_split.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
     :linenos:

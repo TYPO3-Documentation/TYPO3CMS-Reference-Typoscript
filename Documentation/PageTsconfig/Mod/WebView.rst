@@ -56,7 +56,7 @@ With this configuration a new preset '1014' with size 1024x768 will be configure
 loaded from an xlf file and the category 'desktop'.
 
 ..  literalinclude:: _new.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  figure:: /Images/ManualScreenshots/View/WebViewTSConfigPreview.png
     :alt: Dropdown menu Width with added frame size called myPreview
@@ -84,4 +84,4 @@ Example: Show pages of type 42 in the preview
 ---------------------------------------------
 
 ..  literalinclude:: _showPages.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig

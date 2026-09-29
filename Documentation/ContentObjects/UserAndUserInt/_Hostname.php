@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vendor\SitePackage\UserFunctions;
+namespace MyVendor\MySitepackage\UserFunctions;
 
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Attribute\AsAllowedCallable;

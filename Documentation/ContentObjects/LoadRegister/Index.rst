@@ -42,7 +42,7 @@ Properties
     :typoscript:`head`.
 
     ..  literalinclude:: _array.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _cobj-load-register-examples:
 
@@ -50,7 +50,7 @@ Example:
 ========
 
 ..  literalinclude:: _register.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 In this example we first load a special value, which is given as a
 GET/POST parameter, into the register. Then we use a

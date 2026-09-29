@@ -32,7 +32,7 @@ Example
 =======
 
 ..  literalinclude:: _example2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 This example shows a part of a TypoScript which builds a 2 column menu based on
 a spacer page. A class is added to the ul tag depending on the value of the
@@ -43,7 +43,7 @@ the pages following the spacer page will get the class `col-right`.
 `variablename`. A register stack can be like any TypoScript setup.
 
 ..  literalinclude:: _register.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The "current" value is just an internal variable that can be used by functions
 to pass a single value on to another function later in the TypoScript

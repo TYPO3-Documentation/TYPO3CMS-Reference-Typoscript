@@ -114,7 +114,7 @@ In both the "Constants" and "Setup" fields, the
 used to include TypoScript contained inside files:
 
 ..  literalinclude:: _includes.typoscript
-    :caption: EXT:my_site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 ..  index:: TypoScript; Include from extensions
 ..  _static-includes:

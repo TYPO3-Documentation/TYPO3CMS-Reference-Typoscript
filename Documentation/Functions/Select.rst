@@ -56,7 +56,7 @@ uidInList
     ..  rubric:: Example
 
     ..  literalinclude:: _codesnippets/_uidInList.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _select_pidInList:
 
@@ -97,7 +97,7 @@ pidInList
     Fetch related `sys_category` records stored in the MM intermediate table:
 
     ..  literalinclude:: _codesnippets/_pidInList.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _select-recursive:
@@ -129,7 +129,7 @@ orderBy
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         orderBy = sorting, title
 
@@ -148,7 +148,7 @@ groupBy
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         groupBy = CType
 
@@ -196,7 +196,7 @@ where
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         where = (title LIKE '%SOMETHING%' AND NOT doktype)
 
@@ -204,7 +204,7 @@ where
     framework quote these fields:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
@@ -277,7 +277,7 @@ join, leftjoin, rightjoin
     Fetch related `sys_category` records stored in the MM intermediate table:
 
     ..  literalinclude:: _codesnippets/_join.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     See :ref:`pidInList <select_pidInList>` for more examples.
 
@@ -318,14 +318,14 @@ markers
     ..  rubric:: Example
 
     ..  literalinclude:: _codesnippets/_markers2.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     This example selects all records from table tt_content, which are on page 73 and
     which don't have the header set to the value provided by the Get/Post variable
     "first".
 
     ..  literalinclude:: _codesnippets/_markers.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
     This examples selects all records from the table tt_content which are on page 73
@@ -344,7 +344,7 @@ framework quote these fields (see
 <ext_core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript>`):
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     select.where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
@@ -373,7 +373,7 @@ See PHP source code for
 Condensed form:
 
 ..  literalinclude:: _codesnippets/_select.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 See also:
 

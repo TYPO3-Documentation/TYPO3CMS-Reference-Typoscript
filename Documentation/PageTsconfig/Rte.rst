@@ -56,16 +56,16 @@ Example: Disable RTE
 --------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     # Disable all RTEs
     RTE.default.disabled = 1
 
 ..  literalinclude:: _codesnippets/_disable2.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  literalinclude:: _codesnippets/_disable.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  _pageTsRteOverridePreset:
 
@@ -82,7 +82,7 @@ Summary:
     default preset (:typoscript:`RTE.default.preset`)
 
 ..  literalinclude:: _codesnippets/_pageTsRteOverridePreset.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  _pageTsRte-properties:
 
@@ -350,7 +350,7 @@ Example: Allow only hr tags outside of p and div
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     # Allow only hr tags outside of p and div
     RTE.default.proc.allowTagsOutside = hr
@@ -497,13 +497,13 @@ files <t3coreapi:configuration-files>`
 It can then be disabled per use case with a custom processing instruction:
 
 ..  literalinclude:: _rteProcessingHtmlSanitizeDisable.yaml
-    :caption: EXT:site_package/Configuration/Processing.yaml
+    :caption: EXT:my_sitepackage/Configuration/Processing.yaml
 
 With the feature flag enabled and nothing overridden, this is the
 configuration that applies:
 
 ..  literalinclude:: _rteProcessingHtmlSanitizeDefault.yaml
-    :caption: EXT:site_package/Configuration/Processing.yaml
+    :caption: EXT:my_sitepackage/Configuration/Processing.yaml
 
 
 ..  index::

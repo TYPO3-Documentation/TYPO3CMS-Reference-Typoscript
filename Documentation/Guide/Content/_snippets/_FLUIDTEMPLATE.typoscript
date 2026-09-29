@@ -3,12 +3,12 @@
   templateName = Default
 
   templateRootPaths {
-    0 = EXT:site_package/Resources/Private/Templates/Pages/
+    0 = EXT:my_sitepackage/Resources/Private/Templates/Pages/
   }
   partialRootPaths {
-    0 = EXT:site_package/Resources/Private/Partials/Pages/
+    0 = EXT:my_sitepackage/Resources/Private/Partials/Pages/
   }
   layoutRootPaths {
-    0 = EXT:site_package/Resources/Private/Layouts/Pages/
+    0 = EXT:my_sitepackage/Resources/Private/Layouts/Pages/
   }
 }
