@@ -89,7 +89,7 @@ The following rules apply:
 Some examples:
 
 ..  literalinclude:: _import.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _typoscript-syntax-includes-alternatives:

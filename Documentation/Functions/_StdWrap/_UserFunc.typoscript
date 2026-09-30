@@ -6,7 +6,7 @@ registration {
     language = 3
     ATagParams = rel="noreferrer"
     title = My Link Title
-    userFunc = MyVendor\MySitePackage\UserFunctions\TypoLinkUserFunc->createUserFuncLink
+    userFunc = MyVendor\MySitepackage\UserFunctions\TypoLinkUserFunc->createUserFuncLink
     userFunc {
       eventUid = TEXT
       eventUid.data = field:eventUid

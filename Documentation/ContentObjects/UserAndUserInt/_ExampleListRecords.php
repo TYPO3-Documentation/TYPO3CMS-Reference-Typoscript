@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MyVendor\SitePackage\UserFunctions;
+namespace MyVendor\MySitepackage\UserFunctions;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autoconfigure;

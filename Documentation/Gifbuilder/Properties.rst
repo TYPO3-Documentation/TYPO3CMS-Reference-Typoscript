@@ -125,7 +125,7 @@ charRangeMap
     **Example**:
 
     ..  literalinclude:: _pixelSpaceFontSizeRef.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     In this example :typoscript:`xSpaceBefore` and :typoscript:`xSpaceAfter`
     will be "3" when the font size is 24. If this configuration is used on a

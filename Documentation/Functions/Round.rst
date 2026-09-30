@@ -79,6 +79,6 @@ Examples
 ========
 
 ..  literalinclude:: _round.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 This returns `3.14`.

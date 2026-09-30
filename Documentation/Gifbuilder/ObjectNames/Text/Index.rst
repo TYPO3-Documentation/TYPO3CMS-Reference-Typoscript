@@ -422,7 +422,7 @@ splitRendering
     **Example:**
 
     ..  literalinclude:: _array.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  _gifbuilder-text-splitRendering-compX:

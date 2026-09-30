@@ -72,7 +72,7 @@ src
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         src = fileadmin/svg/tiger.svg
 
@@ -105,5 +105,4 @@ Example
 Output the SVG with the defined dimensions:
 
 ..  literalinclude:: _svg.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript

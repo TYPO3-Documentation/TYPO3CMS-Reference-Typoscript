@@ -13,4 +13,4 @@ Read more about FAL access permissions in the :ref:`permission chapter <t3coreap
 of the core API document, but find some examples below:
 
 ..  literalinclude:: _userTsConfigPermissions.typoscript
-    :caption: EXT:site_package/Configuration/user.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/user.tsconfig

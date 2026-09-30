@@ -284,7 +284,7 @@ settings
     ..  rubric:: Example
 
     ..  literalinclude:: _includes/_settings.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     To access copyrightYear in the template file use:
 
@@ -336,12 +336,12 @@ templateName
     ..  rubric:: Example 1
 
     ..  literalinclude:: _includes/_templateName.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     ..  rubric:: Example 2
 
     ..  literalinclude:: _includes/_templateNameAutomatic.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 ..  _cobj-fluidtemplate-properties-templaterootpath:
 
@@ -388,7 +388,7 @@ templateRootPaths
     ..  rubric:: Example
 
     ..  literalinclude:: _includes/_templateRootPaths.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 ..  _cobj-fluidtemplate-properties-variables:
 
@@ -520,4 +520,3 @@ It should look like this afterwards:
             *   :path:`Layouts`
             *   :path:`Pages`
             *   :path:`Partials`
-

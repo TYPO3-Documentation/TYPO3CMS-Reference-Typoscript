@@ -41,7 +41,7 @@ definition can be added to the :file:`Configuration/page.tsconfig` file of an
 extension:
 
 ..  literalinclude:: _syntax.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 If the target extension, identified by its composer name
 `my-vendor/my-extension`, provides the
@@ -89,7 +89,7 @@ into smaller partial files so an extension can override a specific partial only.
     numerical value wins:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
         templates.typo3/cms-linkvalidator {
             23 = other-vendor/other-extension:Resources/Private/TemplateOverrides/Linkvalidator

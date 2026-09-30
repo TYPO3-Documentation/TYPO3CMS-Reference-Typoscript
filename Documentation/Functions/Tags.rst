@@ -63,7 +63,7 @@ Properties
     ..  rubric:: Examples
 
     ..  literalinclude:: _array.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     This example would e.g. transform :html:`<BOLD>Important!</BOLD>`
     to :html:`<p style="font-weight: bold;">Important!</p>`.
@@ -88,4 +88,4 @@ the content of the tag.
 should be the image-reference in :file:`fileadmin/images/`.
 
 ..  literalinclude:: _tags.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript

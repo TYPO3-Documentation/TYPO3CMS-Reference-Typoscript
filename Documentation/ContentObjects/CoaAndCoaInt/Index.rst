@@ -102,13 +102,13 @@ Examples:
 =========
 
 ..  literalinclude:: _examples2.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 The previous example will print a simple :html:`<h1>` header, followed by the page
 content records and a :html:`<footer>` element.
 
 ..  literalinclude:: _int.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 This example will not be cached and so will display the current time
 on each page hit.

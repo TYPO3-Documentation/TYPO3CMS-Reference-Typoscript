@@ -52,7 +52,7 @@ Example: Condition applies in application context "Development"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [applicationContext == "Development"]
         // Your settings go here
@@ -65,7 +65,7 @@ This condition applies in any context that is "Production" or starts with
 "Production" (for example Production/Staging"):
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [applicationContext matches "/^Production/"]
         // Your settings go here
@@ -91,7 +91,7 @@ Example: Condition applies only on certain pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_page.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index:: Conditions; tree
@@ -129,7 +129,7 @@ Example: Condition applies on a page on root level
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_level.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  hint::
 
@@ -163,7 +163,7 @@ Example: Condition applies on pages with a certain backend layout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_pagelayout.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index::
@@ -186,7 +186,7 @@ Example: Condition applies on all subpages of page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [tree.rootLine[0]["uid"] == 1]
         // Your settings go here
@@ -214,7 +214,7 @@ Example: Condition applies if a page is in the root line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_rootLineIds.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index::
@@ -238,7 +238,7 @@ Example: Condition applies if a page's parent is in the root line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_rootLineParentIds.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index:: Conditions; backend
@@ -286,7 +286,7 @@ Example: Condition applies if the current backend user is an admin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_isAdmin.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index:: Conditions; backend.user.isLoggedIn
@@ -309,7 +309,7 @@ Example: Condition applies if any backend user is logged in
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [backend.user.isLoggedIn]
         // Your settings go here
@@ -334,7 +334,7 @@ Example: Condition applies if a certain backend user is logged in
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_userId.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index:: Conditions; backend.user.userGroupIds
@@ -355,7 +355,7 @@ Example: Condition applies if a backend user of a certain group is logged in
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [2 in backend.user.userGroupIds]
         // Your settings go here
@@ -381,7 +381,7 @@ Example: Condition applies if the groups of a user meet a certain pattern
 ..  todo: Does this example make sense? What does it really do?
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [like(","~backend.user.userGroupList~",", "*,1,*")]
         // Your settings go here
@@ -418,7 +418,7 @@ Example: Condition applies only in a certain workspace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [workspace.workspaceId == 0]
         // Your settings go here
@@ -443,7 +443,7 @@ Example: Condition applies only in live workspace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [workspace.isLive]
         // Your settings go here
@@ -468,7 +468,7 @@ Example: Condition applies only in offline workspace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [workspace.isOffline]
         // Your settings go here
@@ -505,7 +505,7 @@ Example: Condition only applies in an exact TYPO3 version like 13.4.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [typo3.version == "13.4.0"]
         // Your settings go here
@@ -531,7 +531,7 @@ Example: Condition applies in all TYPO3 versions of a branch like 13.4
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [typo3.branch == "13.4"]
         // Your settings go here
@@ -559,7 +559,7 @@ Example: Condition only applies if the devIpMask is set to a certain value
     IP of the currently logged in backend user or some such?
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [typo3.devIpMask == "203.0.113.6"]
         // Your settings go here
@@ -591,7 +591,7 @@ Example: Condition applies at certain dates or times
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_date.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index:: Conditions; like
@@ -614,7 +614,7 @@ Example: Use the "like()" function in conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_like.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index:: Conditions; traverse
@@ -642,7 +642,7 @@ Example: Condition applies if request parameter matches a certain value
 ..  todo: This example does not really make sense in the backend context?
 
 ..  literalinclude:: _codesnippets/_traverse.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
 ..  index:: Conditions; compatVersion
@@ -664,7 +664,7 @@ Example: Condition applies if the current TYPO3 version matches a pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_compatVersion.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  _tsconfig-condition-function-getenv:
 
@@ -684,7 +684,7 @@ Example: Condition applies if the virtual host is set to a certain value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     [getenv("VIRTUAL_HOST") == "www.example.org"]
         // Your settings go here
@@ -711,7 +711,7 @@ Example: condition applies if a feature toggle is enabled
 ..  todo: Add another feature as TypoScript.strictSyntax is not available anymore in current versions.
 
 ..  literalinclude:: _codesnippets/_feature.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  _tsconfig-condition-function-site:
 
@@ -757,4 +757,4 @@ Example: Condition applies if a certain value is set in the site configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _codesnippets/_site.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig

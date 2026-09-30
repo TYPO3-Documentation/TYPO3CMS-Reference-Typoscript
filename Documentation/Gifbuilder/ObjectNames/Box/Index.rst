@@ -64,7 +64,7 @@ align
     Horizontally centered, vertically at the bottom:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         align = c, b
 
@@ -113,5 +113,3 @@ opacity
 
     Mathematically speaking: Opacity = Transparency^-1, i.e. 100% opacity = 0%
     transparency.
-
-

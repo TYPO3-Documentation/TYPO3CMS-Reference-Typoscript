@@ -35,7 +35,7 @@ TYPO3 does not initialize :typoscript:`page` by default. You must initialize thi
 explicitly, for example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     page = PAGE
 

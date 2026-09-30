@@ -87,7 +87,7 @@ Example: Show a German flag on a NullSite
 This will show the German flag, and the text "deutsch" on hover.
 
 ..  literalinclude:: _pageTsConfigSharedDefaultLanguageLabel.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index::
     defaultLanguageLabel
@@ -145,5 +145,3 @@ disableSysNoteButton
     Disables the `sys_note` creation button in the modules' top button bar
     in the :guilabel:`Page`, :guilabel:`List` and :guilabel:`Info`
     modules.
-
-

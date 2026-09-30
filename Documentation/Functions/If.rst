@@ -50,7 +50,7 @@ bitAnd
     TYPO3 uses bits to store radio and checkboxes via TCA, `bitAnd` can be used to test against these fields.
 
     ..  literalinclude:: _codesnippets/_bitAnd.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
 ..  _if-contains:
@@ -67,7 +67,7 @@ contains
     ..  rubric:: Example
 
     ..  literalinclude:: _codesnippets/_contains.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
         :emphasize-lines: 11
 
 
@@ -99,7 +99,7 @@ endsWith
     ..  rubric:: Example
 
     ..  literalinclude:: _codesnippets/_endsWith.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
         :emphasize-lines: 7
 
 ..  _if-equals:
@@ -116,7 +116,7 @@ equals
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         if.equals = POST
         if.value.data = GETENV:REQUEST_METHOD
@@ -163,7 +163,7 @@ isInList
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
         if.isInList.field = uid
         if.value = 1,2,34,50,87
@@ -200,7 +200,7 @@ isNull
     ..  rubric:: Example
 
     ..  literalinclude:: _codesnippets/_isNull.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     This example returns "No description available.", if the content of
     the field "description" is :php:`NULL`.
@@ -263,7 +263,7 @@ startsWith
     ..  rubric:: Example
 
     ..  literalinclude:: _codesnippets/_startsWith.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
         :emphasize-lines: 6
 
 
@@ -302,7 +302,7 @@ If you want to compare values, you must load a base-value in the
 :typoscript:`value`-property. Example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     page.10.if.value = 10
     page.10.if.isGreaterThan = 11
@@ -313,7 +313,7 @@ greater than 10, which is the base-value.
 More complex is this:
 
 ..  literalinclude:: _codesnippets/_explanation.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 There are two conditions - :typoscript:`isGreaterThan` and :typoscript:`isTrue`.
 If they are both true, the total is true (both are connected with an AND).
@@ -329,4 +329,4 @@ This is a GIFBUILDER object that will write "NEW" on a menu-item if
 the field "newUntil" has a date less than the current date!
 
 ..  literalinclude:: _codesnippets/_if.typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript

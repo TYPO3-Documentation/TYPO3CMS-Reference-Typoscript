@@ -104,13 +104,13 @@ have to override the frontend TypoScript of another site set your site set
 should depend on the other site set:
 
 ..  literalinclude:: _Sets/_OverridingSet_config.yaml
-    :caption: packages/my_site_package/Configuration/Sets/MySitePackage/config.yaml
+    :caption: EXT:my_sitepackage/Configuration/Sets/MySitePackage/config.yaml
 
 Your extension can then safely override frontend TypoScript of the `some_extension`,
 for example:
 
 ..  code-block:: typoscript
-    :caption: packages/my_site_package/Configuration/Sets/MySitePackage/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/MySitePackage/setup.typoscript
 
     plugin.some_extension_pi1.settings.someSetting = Special setting
 
