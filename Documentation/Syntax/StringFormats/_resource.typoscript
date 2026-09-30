@@ -2,7 +2,7 @@
 page.10.settings.someFile = PKG:my-vendor/package-name:Resources/Public/Icons/MyIcon.svg
 
 # EXT still works
-page.10.settings.someFile = EXT:ext_name/Resources/Public/Icons/MyIcon.svg
+page.10.settings.someFile = EXT:my_sitepackage/Resources/Public/Icons/MyIcon.svg
 
 # App resources (files in the webroot) can be accessed with PKG:typo3/app:
 page.10.settings.someFile = PKG:typo3/app:public/typo3temp/assets/style.css

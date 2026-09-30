@@ -2,5 +2,5 @@
 10 {
   width = 600
   height = 600
-  src = EXT:my_ext/Resources/Public/Images/example.svg
+  src = EXT:my_sitepackage/Resources/Public/Images/example.svg
 }
