@@ -264,7 +264,7 @@ fixAttrib.[attribute].userFunc
     ..  code-block:: typoscript
         :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
-        lib.parser.fixAttrib.href.userFunc = \Vendor\ExtName\ClassName->function
+        lib.parser.fixAttrib.href.userFunc = \MyVendor\MySitepackage\UserFunctions\ClassName->function
 
     Two parameters are passed to the function:
 

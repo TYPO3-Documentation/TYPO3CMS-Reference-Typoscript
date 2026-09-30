@@ -322,12 +322,12 @@ name to a newer name, while providing full backwards compatibility for the
 legacy constant name, if still defined.
 
 Example that evaluates to `$config.oldThing` if set, otherwise the newer setting
-`$myext.thing` would be used:
+`$myextension.thing` would be used:
 
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
-    plugin.tx_myext.settings.example = {$config.oldThing ?? $myext.thing}
+    plugin.tx_myextension.settings.example = {$config.oldThing ?? $myextension.thing}
 
 The null coalescing operator cannot be used in conditions. Use
 `or <https://docs.typo3.org/permalink/t3tsref:typoscript-syntax-end-condition-or>`_

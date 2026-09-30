@@ -1,15 +1,15 @@
-plugin.tx_blogexample {
+plugin.tx_myextension {
   view {
     layoutRootPaths {
-      0 = EXT:blog_example/Resources/Private/Layouts/
+      0 = EXT:my_extension/Resources/Private/Layouts/
       10 = EXT:my_extension/Resources/Private/Layouts/
     }
     partialRootPaths {
-      0 = EXT:blog_example/Resources/Private/Partials/
+      0 = EXT:my_extension/Resources/Private/Partials/
       10 = EXT:my_extension/Resources/Private/Partials/
     }
     templateRootPaths {
-      0 = EXT:blog_example/Resources/Private/Templates/
+      0 = EXT:my_extension/Resources/Private/Templates/
       10 = EXT:my_extension/Resources/Private/Templates/
     }
   }
