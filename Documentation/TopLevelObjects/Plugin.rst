@@ -276,8 +276,8 @@ plugins.
 
         The configuration option can be either set on the global `config.tx_extbase`
         scope, or also plugin-specific via
-        `plugin.tx_yourextension.mvc.showPageNotFoundIfTargetNotFoundException` /
-        `plugin.tx_yourextension_pluginName.mvc.showPageNotFoundIfTargetNotFoundException`.
+        `plugin.tx_myextension.mvc.showPageNotFoundIfTargetNotFoundException` /
+        `plugin.tx_myextension_pluginName.mvc.showPageNotFoundIfTargetNotFoundException`.
 
     ..  rubric:: mvc.showPageNotFoundIfRequiredArgumentIsMissingException
 
@@ -297,8 +297,8 @@ plugins.
 
         The configuration option can be either set on the global `config.tx_extbase`
         scope, or also plugin-specific via
-        `plugin.tx_yourextension.mvc.showPageNotFoundIfRequiredArgumentIsMissingException` /
-        `plugin.tx_yourextension_pluginName.mvc.showPageNotFoundIfRequiredArgumentIsMissingException`.
+        `plugin.tx_myextension.mvc.showPageNotFoundIfRequiredArgumentIsMissingException` /
+        `plugin.tx_myextension_pluginName.mvc.showPageNotFoundIfRequiredArgumentIsMissingException`.
 
         Note that extension authors can also implement the Controller method
         :php:`ActionController->handleArgumentMappingExceptions()` to individually operate
@@ -414,7 +414,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].persistence.enableAutomaticCacheClearing <plugin-persistence-enableautomaticcacheclearing>`
 
 ..  literalinclude:: _codesnippets/_enableAutomaticCacheClearing.typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 ..  _setup-plugin-persistence-recursive-example:
 ..  _setup-plugin-persistence-storagePid-example:
@@ -429,7 +429,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].persistence.recursive <plugin-persistence-recursive>`
 
 ..  literalinclude:: _codesnippets/_newRecordStoragePid.typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 ..  _extbase_typoscript_configuration-view-example:
 
@@ -447,7 +447,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].view.templateRootPaths.[array] <plugin-view-templaterootpaths>`
 
 ..  literalinclude:: _codesnippets/_view.typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 ..  _extbase_typoscript_configuration-mvc-example:
 
@@ -463,7 +463,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].mvc.callDefaultActionIfActionCantBeResolved <plugin-mvc-calldefaultactionifactioncantberesolved>`
 
 ..  literalinclude:: _codesnippets/_callDefaultActionIfActionCantBeResolved.typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 ..  _setup-plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved-example:
 
@@ -474,7 +474,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].mvc.throwPageNotFoundExceptionIfActionCantBeResolved <plugin-mvc-throwpagenotfoundexceptionifactioncantberesolved>`
 
 ..  literalinclude:: _codesnippets/_throwPageNotFoundExceptionIfActionCantBeResolved.typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 
 ..  _extbase_format-examples:
@@ -491,7 +491,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].format <plugin-format>`
 
 ..  literalinclude:: _codesnippets/_format.typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 ..  _extbase_localization-examples:
 

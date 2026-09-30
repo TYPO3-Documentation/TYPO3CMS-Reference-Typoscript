@@ -1,13 +1,13 @@
-plugin.tx_blogexample {
+plugin.tx_myextension {
   persistence {
     storagePid = 42
     # Includes 4 sub-levels of the storagePid
     recursive = 4
 
-    T3docs\BlogExample\Domain\Model\Post {
+    MyVendor\MyExtension\Domain\Model\Post {
       newRecordStoragePid = 43
     }
-    T3docs\BlogExample\Domain\Model\Comment {
+    MyVendor\MyExtension\Domain\Model\Comment {
       newRecordStoragePid = 44
     }
   }

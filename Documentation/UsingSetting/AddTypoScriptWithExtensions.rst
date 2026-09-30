@@ -176,12 +176,12 @@ until now:
             *   setup.typoscript
 
 ..  code-block:: typoscript
-    :caption: packages/my_extension/Configuration/Sets/MySet/constants.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/MySet/constants.typoscript
 
     @import 'EXT:my_extension/Configuration/TypoScript/constants.typoscript'
 
 ..  code-block:: typoscript
-    :caption: packages/my_extension/Configuration/Sets/MySet/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/MySet/setup.typoscript
 
     @import 'EXT:my_extension/Configuration/TypoScript/setup.typoscript'
 
@@ -247,7 +247,7 @@ Each site set then provides the TypoScript files the according location by
 importing it, for example:
 
 ..  code-block:: typoscript
-    :caption: packages/my_extension/Configuration/Sets/MySpecialFeature2Set/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/MySpecialFeature2Set/setup.typoscript
 
     @import 'EXT:my_extension/Configuration/TypoScript/SpecialFeature2/setup.typoscript'
 

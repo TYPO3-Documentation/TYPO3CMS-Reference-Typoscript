@@ -3,6 +3,6 @@
   fieldName = my_flexform_field
   as = myOutputVariable
   dataProcessing {
-    10 = Vendor\MyExtension\DataProcessing\CustomFlexFormProcessor
+    10 = MyVendor\MyExtension\DataProcessing\CustomFlexFormProcessor
   }
 }

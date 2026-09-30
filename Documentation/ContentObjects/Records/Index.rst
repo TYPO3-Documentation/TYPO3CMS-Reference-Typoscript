@@ -118,11 +118,11 @@ tables
     ..  code-block:: typoscript
 
         tables = tt_content, tt_address, tt_links
-        conf.tx_myexttable = TEXT
-        conf.tx_myexttable.value = Hello world
+        conf.tx_myextension_mytable = TEXT
+        conf.tx_myextension_mytable.value = Hello world
 
     This adds the tables `tt_content`, `tt_address`, `tt_links` and
-    `tx_myexttable`.
+    `tx_myextension_mytable`.
 
 
 ..  index:: RECORDS; conf

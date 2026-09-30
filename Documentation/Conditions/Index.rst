@@ -1161,14 +1161,14 @@ constant is set to 1:
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-    [{$tx_my_extension.settings.feature1Enabled} == 1]
+    [{$tx_myextension.settings.feature1Enabled} == 1]
         page.10.value = The feature 1 of my_extension is enabled.
     [END]
 
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-    [{$tx_my_extension.settings.feature1Enabled} == "1"]
+    [{$tx_myextension.settings.feature1Enabled} == "1"]
         page.10.value = The feature 1 of my_extension is enabled.
     [END]
 
@@ -1179,14 +1179,14 @@ and was therefor interpreted as integer.
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-    [{$tx_my_extension.settings.feature1Enabled} === 1]
+    [{$tx_myextension.settings.feature1Enabled} === 1]
         page.10.value = The feature 1 of my_extension is enabled.
     [END]
 
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-    [{$tx_my_extension.settings.feature1Enabled} === "1"]
+    [{$tx_myextension.settings.feature1Enabled} === "1"]
         page.10.value = The feature 1 of my_extension is enabled.
     [END]
 
@@ -1204,7 +1204,7 @@ Following condition is always false:
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-    [{$tx_my_extension.settings.feature1Enabled} == "active"]
+    [{$tx_myextension.settings.feature1Enabled} == "active"]
         page.10.value = The feature 1 of my_extension is enabled.
     [END]
 
@@ -1213,7 +1213,7 @@ If you are working with strings in conditions please do it that way:
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-    ["{$tx_my_extension.settings.feature1Enabled}" == "active"]
+    ["{$tx_myextension.settings.feature1Enabled}" == "active"]
         page.10.value = The feature 1 of my_extension is enabled.
     [END]
 
@@ -1222,7 +1222,7 @@ Sure, strict type string comparisons are also working:
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-    ["{$tx_my_extension.settings.feature1Enabled}" === "active"]
+    ["{$tx_myextension.settings.feature1Enabled}" === "active"]
         page.10.value = The feature 1 of my_extension is enabled.
     [END]
 
