@@ -46,7 +46,7 @@ Example: Do not hide newly created pages by default
 ===================================================
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCAdefaults.pages.hidden = 0
 
@@ -56,4 +56,4 @@ Example: Set type specific default values
 =========================================
 
 ..  literalinclude:: _type.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig

@@ -194,7 +194,7 @@ TCA.
             [group].
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/page.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
                 mod.wizards.newContentElement.wizardItems {
                     special.removeItems := addToList(html)
@@ -207,7 +207,7 @@ Example: Add a new element to the "common" group
 
 ..  literalinclude:: _newContentElementWizard.tsconfig
     :language: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  _pageexample2:
 
@@ -216,7 +216,7 @@ Example: Create a new group and add an element to it
 
 ..  literalinclude:: _newContentElementWizardGroup.tsconfig
     :language: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 With the second example, the bottom of the new content element wizard shows:
 
@@ -253,7 +253,7 @@ Place the tt_news group at the top (after pages and content
 elements), other groups follow unchanged:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.wizards.newRecord.order = tt_news
 
@@ -289,7 +289,7 @@ Example: Hide the "Page (inside)" link in the "New Record" dialog
 -----------------------------------------------------------------
 
 ..  literalinclude:: _newRecordPages.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  figure:: /Images/ManualScreenshots/List/PageTsModWizardsNewRecordHideInside.png
     :alt: The modified New record screen without Page (inside)

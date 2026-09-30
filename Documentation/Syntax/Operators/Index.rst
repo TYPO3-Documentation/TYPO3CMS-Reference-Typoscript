@@ -243,7 +243,7 @@ parenthesis. These predefined functions are available:
     duplicate values, and the list is not sorted in any way.
 
     ..  literalinclude:: _codesnippets/_modification2.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 `removeFromList()`
     Remove a comma-separated list of values from an existing comma-separated
@@ -289,7 +289,7 @@ parenthesis. These predefined functions are available:
         Apply numeric sorting: Numbers from small to big, letters sorted after "0".
 
     ..  literalinclude:: _codesnippets/_modification.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 `getEnv()`
     Access a $_ENV value. Resolves to empty value if not set.

@@ -22,7 +22,7 @@ TYPO3 does not initialize :typoscript:`page` by default. You must initialize thi
 explicitly, for example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
 
@@ -80,7 +80,7 @@ This default behaviour can be changed by setting the property
 :ref:`Provide JSON and disable HTML headers <setup-config-disableallheadercode>`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     page.config.disableAllHeaderCode = 1
 
@@ -88,7 +88,7 @@ If the output represents another format different from HTML the HTTP header
 should also be set, for example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     page.config.additionalHeaders.10.header = Content-type:application/json
 
@@ -113,7 +113,7 @@ the page will be used.
 Example:
 
 ..  literalinclude:: _codesnippets/_multiple.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 See :ref:`An example page type used for JSON data <page_examples_json>`
 about an example for the latter page.
@@ -501,7 +501,7 @@ Properties
         There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :confval:`includeCSS <page-includeCSS>`.
 
         ..  literalinclude:: _codesnippets/_properties2.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  rubric:: includeJSLibs.[array]
 
@@ -522,7 +522,7 @@ Properties
         There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :confval:`includeCSS <page-includeCSS>`.
 
         ..  literalinclude:: _codesnippets/_properties.typoscript
-            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     ..  rubric:: inlineLanguageLabelFiles
 
@@ -691,7 +691,7 @@ Demonstrates:
 
 
 ..  literalinclude:: _codesnippets/_array.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 This renders to :html:`HelloWorld`.
 
@@ -704,7 +704,7 @@ Demonstrates:
     *   :confval:`page.bodyTag <page-bodytag>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     # This will lead to <body class="example"> if constant "bodyClass" is set accordingly.
     page.bodyTag = <body class="{$bodyClass}">
@@ -718,7 +718,7 @@ Demonstrates:
     *   :confval:`page.bodyTagAdd <page-bodyTagAdd>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     # This will lead to <body class="example">
     page.bodyTagAdd = class="example"
@@ -732,7 +732,7 @@ Demonstrates:
     *   :confval:`page.cssInline <page-cssInline>`
 
 ..  literalinclude:: _codesnippets/_cssinline.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-page-footerdata-example:
 
@@ -743,7 +743,7 @@ Demonstrates:
     *   :confval:`page.footerData <page-footerData>`
 
 ..  literalinclude:: _codesnippets/_footerdata.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-page-headerdata-example:
 
@@ -754,7 +754,7 @@ Demonstrates:
     *   :confval:`page.headerData <page-headerData>`
 
 ..  literalinclude:: _codesnippets/_headerdata.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-page-includecss-example:
 
@@ -765,7 +765,7 @@ Demonstrates:
     *   :confval:`page.includeCSS <page-includeCSS>`
 
 ..  literalinclude:: _codesnippets/_includecss.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _setup-page-includecsslibs-exqample:
@@ -777,7 +777,7 @@ Demonstrates:
     *   :confval:`page.includeCSSLibs <page-includeCSSLibs>`
 
 ..  literalinclude:: _codesnippets/_exqample.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-page-includejs-example:
 
@@ -788,7 +788,7 @@ Demonstrates:
     *   :confval:`page.includeJS <page-includeJS>`
 
 ..  literalinclude:: _codesnippets/_includejs.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-page-inlinelanguagelabelfiles-example:
 
@@ -799,7 +799,7 @@ Demonstrates:
     *   :confval:`page.inlineLanguageLabelFiles <page-inlineLanguageLabelFiles>`
 
 ..  literalinclude:: _codesnippets/_inlinelanguagelabelfiles.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-page-inlinesettings-example:
 
@@ -810,7 +810,7 @@ Demonstrates:
     *   :confval:`page.inlineSettings <page-inlineSettings>`
 
 ..  literalinclude:: _codesnippets/_inlinesettings.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Will produce following source
 
@@ -827,7 +827,7 @@ Demonstrates:
     *   :confval:`page.jsFooterInline <page-jsFooterInline>`
 
 ..  literalinclude:: _codesnippets/_jsfooterinline.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-page-jsinline-example:
 
@@ -838,7 +838,7 @@ Demonstrates:
     *   :confval:`page.jsFooterInline <page-jsFooterInline>`
 
 ..  literalinclude:: _codesnippets/_jsinline.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-page-meta-example:
 
@@ -849,7 +849,7 @@ Demonstrates:
     *   :confval:`page.meta <page-meta>`
 
 ..  literalinclude:: _codesnippets/_meta.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _setup-page-meta-example-keywords:
@@ -863,7 +863,7 @@ Demonstrates:
 If the page record is not set search up the root line of pages.
 
 ..  literalinclude:: _codesnippets/_keywords.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-page-meta-example-refresh:
 
@@ -874,7 +874,7 @@ Demonstrates:
     *   :confval:`page.meta <page-meta>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     page.meta.refresh = 5; url=https://example.org/
     page.meta.refresh.attribute = http-equiv
@@ -891,7 +891,7 @@ Meta tags with a different attribute name are supported like the
 Open Graph meta tags:
 
 ..  literalinclude:: _codesnippets/_og.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  note::
 
@@ -922,9 +922,9 @@ Demonstrates:
     *   :confval:`page.shortcutIcon <page-shortcutIcon>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
-    page.shortcutIcon = EXT:site_package/Resources/Public/Images/favicon.ico
+    page.shortcutIcon = EXT:my_sitepackage/Resources/Public/Images/favicon.ico
 
 ..  toctree::
     :hidden:

@@ -3,8 +3,8 @@ page {
   10 {
     templateName = Default
     templateRootPaths {
-      10 = EXT:sitedesign/Resources/Private/Templates
-      20 = EXT:sitemodification/Resources/Private/Templates
+      10 = EXT:my_base_sitepackage/Resources/Private/Templates
+      20 = EXT:my_sitepackage/Resources/Private/Templates
     }
   }
 }

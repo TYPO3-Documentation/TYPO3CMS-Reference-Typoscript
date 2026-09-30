@@ -36,13 +36,13 @@ To reuse the OOP analogy and compare with PHP:
 Example 1 (assign value to property in object1:
 
 ..  literalinclude:: _glossary2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 Example 2:
 
 ..  literalinclude:: _glossary.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Note: OBJECTTYPE1 and OTHER are not real object types (as used in TypoScript) and are used here only to
 illustrate the example.

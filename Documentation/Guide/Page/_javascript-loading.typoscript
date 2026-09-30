@@ -9,6 +9,6 @@ page {
     )
   }
   includeJSFooter {
-    main = EXT:site_package/Resources/Public/JavaScript/main.js
+    main = EXT:my_sitepackage/Resources/Public/JavaScript/main.js
   }
 }

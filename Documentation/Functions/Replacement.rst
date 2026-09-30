@@ -63,7 +63,7 @@ useRegExp
     ..  rubric:: Example
 
     ..  literalinclude:: _codesnippets/_useRegExp.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _replacement-useOptionSplitReplace:
@@ -87,7 +87,7 @@ Examples
 ========
 
 ..  literalinclude:: _codesnippets/_examples3.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 This returns: "There are an animal, an animal and an animal around the
 block! Yeah!".
@@ -95,11 +95,11 @@ block! Yeah!".
 The following examples demonstrate the use of :ref:`optionSplit <optionsplit>`:
 
 ..  literalinclude:: _codesnippets/_replacementExamples2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 This returns: "There1are2a3cat,3a3dog3and3a3tiger3in3da3hood!3Yeah!"
 
 ..  literalinclude:: _codesnippets/_replacement.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 This returns: "There are a tiny cat, a midsized dog and a big tiger in da hood! Yeah!"

@@ -26,7 +26,7 @@ As a result all A-tags generated from this definition will have the `class` attr
 set like this: :html:`<a class="z" ... >`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     topmenu.1.NO {
         ATagParams = class="z"
@@ -85,7 +85,7 @@ will be ignored.
 On the input side we may have for example:
 
 ..  literalinclude:: _codesnippets/_mainParts.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
 Our terminology:
@@ -111,7 +111,7 @@ subparts is `||`.
 Example:
 
 ..  literalinclude:: _codesnippets/_subParts.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 **Rule:** There can be any number of subparts.
 
@@ -131,7 +131,7 @@ We have all three mainparts A, R and Z. And each mainpart is split into three
 subparts:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
 
@@ -145,7 +145,7 @@ And this is what happens:
 
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
 
@@ -909,10 +909,10 @@ Test Code 1 (TypoScript)
 ========================
 
 ..  literalinclude:: _codesnippets/_code12.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/constants.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript
 
 ..  literalinclude:: _codesnippets/_code1.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _optionsplit-test-code-1-result:
 Test Code 1 Result
@@ -946,10 +946,10 @@ Test Code 2 (TypoScript)
 This is the code that was used to produce many of the above examples.
 
 ..  literalinclude:: _codesnippets/_code22.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/constants.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript
 
 ..  literalinclude:: _codesnippets/_code2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _optionsplit-test-code-2-result:
 Test Code 2 Result

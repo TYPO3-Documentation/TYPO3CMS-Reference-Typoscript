@@ -57,7 +57,7 @@ Here :typoscript:`bgCol` is set to "red", :typoscript:`file.toplogo` is set to
 expected location.
 
 ..  literalinclude:: _codesnippets/_definition.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/constants.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript
     :emphasize-lines: 2,7
 
 The objects in the highlighted lines contain the reserved word "file" and the
@@ -76,7 +76,7 @@ one would perform any ordinary string replacement. Constants are used in the
 :typoscript:`$` sign:
 
 ..  literalinclude:: _codesnippets/_typoscriptSyntaxUsingConstants2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 Only constants, which are actually defined in the :guilabel:`Constants` field
 or an included :file:`constants.typoscript` file, are

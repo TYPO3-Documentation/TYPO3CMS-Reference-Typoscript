@@ -14,15 +14,15 @@ to pass data to render a menu to the Fluid template.
 Configure the data processor in TypoScript:
 
 ..  literalinclude:: _menu.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 And render the menu in your Fluid template. You need at least a
 :ref:`Minimal site package (see site package tutorial) <t3sitepackage:minimal-design>`
 to keep your templates in its private resources folder, for example
-:path:`/packages/site_package/Resources/Private/Templates`:
+:path:`EXT:my_sitepackage/Resources/Private/Templates`:
 
 ..  literalinclude:: _MenuTemplate.fluid.html
-    :caption: /packages/site_package/Resources/Private/Templates/Pages/Default.fluid.html
+    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.fluid.html
 
 Find more examples on how to configure and render menus with TypoScript and
 Fluid in chapter

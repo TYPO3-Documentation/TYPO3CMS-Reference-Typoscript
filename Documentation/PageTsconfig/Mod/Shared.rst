@@ -92,7 +92,7 @@ Example: Show a German flag on a NullSite
 This will show the German flag, and the text "deutsch" on hover.
 
 ..  literalinclude:: _show.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  index::
     defaultLanguageLabel

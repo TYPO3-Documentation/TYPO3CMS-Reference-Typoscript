@@ -97,7 +97,7 @@ http.keep
     get the following results:
 
     ..  literalinclude:: _keep.typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _makelinks-http-ATagParams:
 
@@ -113,7 +113,7 @@ http.ATagParams
     ..  rubric:: Examples
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         http.ATagParams = class="board"
 
@@ -169,6 +169,6 @@ mailto.ATagParams
     ..  rubric:: Examples
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         mailto.ATagParams = class="board"

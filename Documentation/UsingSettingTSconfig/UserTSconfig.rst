@@ -118,7 +118,7 @@ from top to bottom.
 *   Add in user TSconfig
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/user.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
         page.RTE.default.showButtons = bold
 
@@ -127,7 +127,7 @@ from top to bottom.
 *   Add later in user TSconfig
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/user.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
         page.RTE.default.showButtons := addToList(italic)
 
@@ -144,12 +144,12 @@ Let's say the user is a member of a *usergroup* with this
 configuration:
 
 ..  literalinclude:: _values.typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 Then we set the following values in the TSconfig field of the specific *user*.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/user.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
     page.TCAdefaults.tt_content.header = 234
     options.clearCache.all = 1
@@ -177,7 +177,7 @@ To illustrate this feature let's say new pages and copied pages are not hidden
 by default:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCAdefaults.pages.hidden = 0
     TCEMAIN.table.pages.disableHideAtCopy = 1
@@ -187,7 +187,7 @@ user group, new and copied pages will be hidden for that group. The user TSconfi
 be used is the same, but prefixed with :tsconfig:`page.`
 
 ..  literalinclude:: _pageoverridingpagetsconfigwithusertsconfig.typoscript
-    :caption: EXT:site_package/Configuration/TSconfig/editors.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/TSconfig/editors.tsconfig
 
 ..  attention::
 
@@ -200,13 +200,13 @@ be used is the same, but prefixed with :tsconfig:`page.`
     but the value "italic".
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
         # Enable the "bold" button in Page TSconfig (!)
         RTE.default.showButtons = bold
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/user.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
         # Try to additionally add the "italic" button in User TSconfig (!)
         page.RTE.default.showButtons := addToList(italic)

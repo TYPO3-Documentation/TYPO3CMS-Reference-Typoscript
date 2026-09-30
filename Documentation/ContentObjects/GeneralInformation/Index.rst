@@ -43,7 +43,7 @@ values.
 This example will show you how it works:
 
 ..  literalinclude:: _reusingCobjects2.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 First :typoscript:`lib.stdheader` is defined. This is (and must be) a cObject! (In
 this case it is :ref:`COA <cobj-coa>`.)
@@ -87,7 +87,7 @@ Example:
 --------
 
 ..  literalinclude:: _reusingCobjects.typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The result is this configuration:
 
