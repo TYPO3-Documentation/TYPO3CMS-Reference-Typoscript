@@ -20,12 +20,12 @@ TYPO3 v12
 -------------------------------------------------------
 
 ..  versionchanged:: 12.0
-    TYPO3 v12 ships CKEditor 5, see `Breaking: #96874 - CKEditor-related
-    plugins and configuration
-    <https://docs.typo3.org/permalink/changelog:breaking-96874-1664488429>`_.
-    CKEditor 5 has no `contentsLangDirection` option, so the page TSconfig
-    setting no longer had any effect. The last remnants in the Core were
-    removed with issue `#99916 <https://forge.typo3.org/issues/99916>`_.
+    :changelog: breaking-96874-1664488429
+
+    TYPO3 v12 ships CKEditor 5. CKEditor 5 has no `contentsLangDirection`
+    option, so the page TSconfig setting no longer had any effect. The last
+    remnants in the Core were removed with issue `#99916
+    <https://forge.typo3.org/issues/99916>`_.
 
 The text direction of the rich text editor now follows the content language
 of the edited record and is determined automatically. There is no page
