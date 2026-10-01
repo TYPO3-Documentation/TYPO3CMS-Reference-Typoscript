@@ -74,8 +74,9 @@ Properties of 'config'
 ======================
 
 ..  versionchanged:: 14.0
-    `config.absRefPrefix` was removed. See
-    `Breaking: #108114 - Global frontend content link prefixing removed <https://docs.typo3.org/permalink/changelog:breaking-108114-1763085569>`_
+    :changelog: breaking-108114-1763085569
+
+    `config.absRefPrefix` was removed.
 
 ..  confval-menu::
     :name: config-properties

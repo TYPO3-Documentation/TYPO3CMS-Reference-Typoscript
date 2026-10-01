@@ -897,9 +897,11 @@ Properties
             that should be added to the node top panel.
 
             ..  deprecated:: 14.2
-                See `Deprecation: #109196 - Deprecate doktypesToShowInNewPageDragArea user TSconfig <https://docs.typo3.org/permalink/changelog:deprecation-109196-1742122800>`_.
-                Remove this option from your configuration; the page tree now automatically
-                determines available doktypes based on the user's group permissions.
+                :changelog: deprecation-109196-1742122800
+
+                Remove this option from your configuration; the page tree now
+                automatically determines available doktypes based on the user's
+                group permissions.
 
         ..  _useroptions-pageTree-excludeDoktypes:
 

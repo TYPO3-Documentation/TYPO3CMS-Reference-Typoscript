@@ -9,12 +9,11 @@ parseFunc
 =========
 
 ..  versionchanged:: 14.0
+    :changelog: breaking-107438-1736592000
 
     `lib.parseFunc.allowTags` and `lib.parseFunc_RTE.allowTags` do not contain
     default values anymore. HTML sanitization is continued to be  handled by
     the htmlSanitizer.
-
-    See also: `Breaking: #107438 - Default parseFunc configuration for Fluid Styled Content <https://docs.typo3.org/permalink/changelog:breaking-107438-1736592000>`_
 
 This object is used to parse some content for stuff like special typo
 tags, the :ref:`makelinks <makeLinks>`-things and so on...
@@ -235,13 +234,11 @@ allowTags
     :default: Empty
 
     ..  versionchanged:: 14.0
+        :changelog: breaking-107438-1736592000
 
         `lib.parseFunc.allowTags` and `lib.parseFunc_RTE.allowTags` do not contain
         default values anymore. HTML sanitization is continued to be  handled by
         the htmlSanitizer.
-
-        See also: `Breaking: #107438 - Default parseFunc configuration for Fluid
-        Styled Content <https://docs.typo3.org/permalink/changelog:breaking-107438-1736592000>`_
 
     HTML sanitization is handled by the htmlSanitizer in general. `allowTags`
     and `denyTags` can be used to further limit the allowed HTML tags.
