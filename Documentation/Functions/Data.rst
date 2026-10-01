@@ -780,15 +780,15 @@ path
 Example: Resolve the path to a file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get path to file `rsaauth.js` (inside extension rsaauth) relative to siteroot:
+Get the URL of a JavaScript file in the site package:
 
 ..  code-block:: typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
-    lib.foo.data = path : EXT:rsaauth/resources/rsaauth.js
+    lib.foo.data = path : EXT:my_sitepackage/Resources/Public/JavaScript/main.js
 
-It can also be helpful in combination with the stdWrap function
-:ref:`insertData <stdwrap-insertData>`:
+With the stdWrap function :ref:`insertData <stdwrap-insertData>`, the URL can
+be used inside a value, here to link a favicon in the page head:
 
 ..  literalinclude:: _codesnippets/_dataTypeGettextPath.typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
