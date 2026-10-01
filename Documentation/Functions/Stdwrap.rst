@@ -891,7 +891,7 @@ Properties for parsing data
             You need to append a final string like 'B' or '-Bytes' yourself.
 
         .labels = si
-            SI labels and base 1000 are used. Built in IEC labels are
+            SI labels and base 1000 are used. Built in SI labels are
             `" | k| M| G| T| P| E| Z| Y"`.
             You need to append a final string like 'B' yourself.
 
