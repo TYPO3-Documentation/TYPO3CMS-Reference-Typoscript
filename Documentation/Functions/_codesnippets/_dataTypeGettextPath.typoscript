@@ -1,5 +1,5 @@
 page.headerData.10 = TEXT
 page.headerData.10 {
-  data = path : EXT:site/Resources/Public/Images/logo.png
-  wrap = <a href="|">
+  value = <link rel="icon" href="{path : EXT:my_sitepackage/Resources/Public/Icons/favicon.svg}">
+  insertData = 1
 }
