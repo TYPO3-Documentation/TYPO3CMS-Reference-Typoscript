@@ -16,7 +16,7 @@ HTMLparser\_tags
 Properties
 ==========
 
-..  _htmlparser-tags-overrideAttribs:
+..  _htmlparser-tags-overrideattribs:
 
 overrideAttribs
 ---------------
@@ -28,7 +28,7 @@ overrideAttribs
     If set, this string is preset as the attributes of the tag.
 
 
-..  _htmlparser-tags-allowedAttribs:
+..  _htmlparser-tags-allowedattribs:
 
 allowedAttribs
 --------------
@@ -51,7 +51,7 @@ allowedAttribs
         All attributes are allowed.
 
 
-..  _htmlparser-tags-fixAttrib-set:
+..  _htmlparser-tags-fixattrib-set:
 
 fixAttrib.[attribute].set
 -------------------------
@@ -63,7 +63,7 @@ fixAttrib.[attribute].set
     Force the attribute value to this value.
 
 
-..  _htmlparser-tags-fixAttrib-unset:
+..  _htmlparser-tags-fixattrib-unset:
 
 fixAttrib.[attribute].unset
 ---------------------------
@@ -75,7 +75,7 @@ fixAttrib.[attribute].unset
     If set, the attribute is unset.
 
 
-..  _htmlparser-tags-fixAttrib-default:
+..  _htmlparser-tags-fixattrib-default:
 
 fixAttrib.[attribute].default
 -----------------------------
@@ -88,7 +88,7 @@ fixAttrib.[attribute].default
     value (if this value is not blank)
 
 
-..  _htmlparser-tags-fixAttrib-always:
+..  _htmlparser-tags-fixattrib-always:
 
 fixAttrib.[attribute].always
 ----------------------------
@@ -101,7 +101,7 @@ fixAttrib.[attribute].always
     processed only if it exists
 
 
-..  _htmlparser-tags-fixAttrib-trim:
+..  _htmlparser-tags-fixattrib-trim:
 
 fixAttrib.[attribute].trim
 --------------------------
@@ -114,7 +114,7 @@ fixAttrib.[attribute].trim
     respective PHP-function.
 
 
-..  _htmlparser-tags-fixAttrib-intval:
+..  _htmlparser-tags-fixattrib-intval:
 
 fixAttrib.[attribute].intval
 ----------------------------
@@ -127,7 +127,7 @@ fixAttrib.[attribute].intval
     respective PHP-function.
 
 
-..  _htmlparser-tags-fixAttrib-upper:
+..  _htmlparser-tags-fixattrib-upper:
 
 fixAttrib.[attribute].upper
 ---------------------------
@@ -140,7 +140,7 @@ fixAttrib.[attribute].upper
     `strtoupper() <https://www.php.net/manual/en/function.strtoupper.php>`__.
 
 
-..  _htmlparser-tags-fixAttrib-lower:
+..  _htmlparser-tags-fixattrib-lower:
 
 fixAttrib.[attribute].lower
 ---------------------------
@@ -153,7 +153,7 @@ fixAttrib.[attribute].lower
     `strtolower() <https://www.php.net/manual/en/function.strtolower.php>`__.
 
 
-..  _htmlparser-tags-fixAttrib-range:
+..  _htmlparser-tags-fixattrib-range:
 
 fixAttrib.[attribute].range
 ---------------------------
@@ -165,7 +165,7 @@ fixAttrib.[attribute].range
     Setting integer range.
 
 
-..  _htmlparser-tags-fixAttrib-list:
+..  _htmlparser-tags-fixattrib-list:
 
 fixAttrib.[attribute].list
 --------------------------
@@ -178,7 +178,7 @@ fixAttrib.[attribute].list
     first element.
 
 
-..  _htmlparser-tags-fixAttrib-removeIfFalse:
+..  _htmlparser-tags-fixattrib-removeiffalse:
 
 fixAttrib.[attribute].removeIfFalse
 -----------------------------------
@@ -192,7 +192,7 @@ fixAttrib.[attribute].removeIfFalse
     (that means a "zero" value will not be removed).
 
 
-..  _htmlparser-tags-fixAttrib-removeIfEquals:
+..  _htmlparser-tags-fixattrib-removeifequals:
 
 fixAttrib.[attribute].removeIfEquals
 ------------------------------------
@@ -204,7 +204,7 @@ fixAttrib.[attribute].removeIfEquals
     If the attribute value matches the value set here, then it is removed.
 
 
-..  _htmlparser-tags-fixAttrib-casesensitiveComp:
+..  _htmlparser-tags-fixattrib-casesensitivecomp:
 
 fixAttrib.[attribute].casesensitiveComp
 ---------------------------------------
@@ -213,12 +213,12 @@ fixAttrib.[attribute].casesensitiveComp
     :name: htmlparser-tags-fixAttrib-casesensitiveComp
     :type: :ref:`boolean <data-type-boolean>`
 
-    If set, the comparison in :ref:`fixAttrib.[attribute].removeIfEquals <htmlparser-tags-fixAttrib-removeIfEquals>`
-    and :ref:`fixAttrib.[attribute].list <htmlparser-tags-fixAttrib-list>` will be case-sensitive.
+    If set, the comparison in :ref:`fixAttrib.[attribute].removeIfEquals <htmlparser-tags-fixattrib-removeifequals>`
+    and :ref:`fixAttrib.[attribute].list <htmlparser-tags-fixattrib-list>` will be case-sensitive.
     At this point, it's insensitive.
 
 
-..  _htmlparser-tags-fixAttrib-prefixRelPathWith:
+..  _htmlparser-tags-fixattrib-prefixrelpathwith:
 
 fixAttrib.[attribute].prefixRelPathWith
 ---------------------------------------
@@ -239,7 +239,7 @@ fixAttrib.[attribute].prefixRelPathWith
         lib.parser.fixAttrib.src.prefixRelPathWith = https://example.org/typo3/32/dummy/
 
 
-..  _htmlparser-tags-fixAttrib-userFunc:
+..  _htmlparser-tags-fixattrib-userfunc:
 
 fixAttrib.[attribute].userFunc
 ------------------------------
@@ -301,7 +301,7 @@ remap
     If set, the tagname is remapped to this tagname
 
 
-..  _htmlparser-tags-rmTagIfNoAttrib:
+..  _htmlparser-tags-rmtagifnoattrib:
 
 rmTagIfNoAttrib
 ---------------

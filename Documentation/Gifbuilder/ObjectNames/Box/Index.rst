@@ -76,7 +76,7 @@ color
 
 ..  confval:: color
     :name: gifbuilder-box-color
-    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-graphiccolor>` / :ref:`stdWrap <stdwrap>`
     :default: black
 
     Fill color of the box.

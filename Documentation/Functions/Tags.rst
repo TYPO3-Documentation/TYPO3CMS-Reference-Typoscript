@@ -7,7 +7,7 @@ tags
 ====
 
 Used to create custom tags and define how they should be parsed. This
-is used in conjunction with :ref:`parseFunc <parseFunc>`.
+is used in conjunction with :ref:`parseFunc <parsefunc>`.
 
 The best known is the "link" tag, which is used to create links.
 
@@ -57,7 +57,7 @@ Properties
     newlines before and after the content of the tag should be stripped.
 
     **[cObject].breakoutTypoTagContent:** :ref:`boolean <data-type-boolean>` option, which tells
-    :ref:`parseFunc <parseFunc>` that this block of content is breaking up the nonTypoTag
+    :ref:`parseFunc <parsefunc>` that this block of content is breaking up the nonTypoTag
     content and that the content after this must be re-wrapped.
 
     ..  rubric:: Examples

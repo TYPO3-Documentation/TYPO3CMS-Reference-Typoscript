@@ -42,7 +42,7 @@ Can handle links of the form:
     http://example.org
 
 
-..  _makelinks-http-extTarget:
+..  _makelinks-http-exttarget:
 
 http.extTarget
 ~~~~~~~~~~~~~~
@@ -66,7 +66,7 @@ http.wrap
 
     Wrap around the link.
 
-..  _makelinks-http-ATagBeforeWrap:
+..  _makelinks-http-atagbeforewrap:
 
 http.ATagBeforeWrap
 ~~~~~~~~~~~~~~~~~~~
@@ -99,7 +99,7 @@ http.keep
     ..  literalinclude:: _keep.typoscript
         :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-..  _makelinks-http-ATagParams:
+..  _makelinks-http-atagparams:
 
 http.ATagParams
 ~~~~~~~~~~~~~~~
@@ -130,7 +130,7 @@ the text in the following form:
 
     mailto:name@example.org
 
-..  _makelinks-mailto.wrap:
+..  _makelinks-mailto-wrap:
 
 mailto.wrap
 ~~~~~~~~~~~
@@ -141,7 +141,7 @@ mailto.wrap
 
     Wrap around the link.
 
-..  _makelinks-mailto.ATagBeforeWrap:
+..  _makelinks-mailto-atagbeforewrap:
 
 mailto.ATagBeforeWrap
 ~~~~~~~~~~~~~~~~~~~~~
@@ -155,7 +155,7 @@ mailto.ATagBeforeWrap
     :html:`<a>` tag.
 
 
-..  _makelinks-mailto.ATagParams:
+..  _makelinks-mailto-atagparams:
 
 mailto.ATagParams
 ~~~~~~~~~~~~~~~~~

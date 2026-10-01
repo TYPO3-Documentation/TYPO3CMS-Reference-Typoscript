@@ -71,24 +71,24 @@ Properties for all frontend plugin types
 
         However, you will then have to define according styles yourself.
 
-..  _extbase_typoscript_configuration-settings:
+..  _extbase-typoscript-configuration-settings:
 ..  _setup-plugin-local-lang-lang-key-label-key:
-..  _extbase_format:
-..  _setup-plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved:
-..  _setup-plugin-mvc-callDefaultActionIfActionCantBeResolved:
+..  _extbase-format:
+..  _setup-plugin-mvc-throwpagenotfoundexceptionifactioncantberesolved:
+..  _setup-plugin-mvc-calldefaultactionifactioncantberesolved:
 ..  _setup-plugin-view:
 ..  _setup-plugin-persistence-recursive:
-..  _setup-plugin-view-layoutRootPaths:
-..  _setup-plugin-view-partialRootPaths:
-..  _setup-plugin-view-templateRootPaths:
-..  _setup-plugin-view-pluginNamespace:
-..  _setup-plugin-persistence-storagePid:
-..  _setup-plugin-persistence-classes-classname-newRecordStoragePid:
-..  _setup-plugin-persistence-enableAutomaticCacheClearing:
-..  _extbase_persistence-enableAutomaticCacheClearing:
-..  _extbase_typoscript_configuration-persistence:
-..  _extbase_typoscript_configuration-general:
-..  _setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty:
+..  _setup-plugin-view-layoutrootpaths:
+..  _setup-plugin-view-partialrootpaths:
+..  _setup-plugin-view-templaterootpaths:
+..  _setup-plugin-view-pluginnamespace:
+..  _setup-plugin-persistence-storagepid:
+..  _setup-plugin-persistence-classes-classname-newrecordstoragepid:
+..  _setup-plugin-persistence-enableautomaticcacheclearing:
+..  _extbase-persistence-enableautomaticcacheclearing:
+..  _extbase-typoscript-configuration-persistence:
+..  _extbase-typoscript-configuration-general:
+..  _setup-plugin-configuration-ignoreflexformsettingsifempty:
 ..  _setup-plugin-extbase:
 
 Properties for all frontend plugins based on Extbase
@@ -107,7 +107,7 @@ plugins.
     ..  confval:: ignoreFlexFormSettingsIfEmpty
         :name: plugin-ignoreFlexFormSettingsIfEmpty
         :type: :ref:`string <data-type-string>`
-        :Example: :ref:`Ignore certain FlexForm settings if empty <setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty-example>`
+        :Example: :ref:`Ignore certain FlexForm settings if empty <setup-plugin-configuration-ignoreflexformsettingsifempty-example>`
 
         Define :ref:`FlexForm <t3coreapi:flexforms>` settings that will be
         ignored in the extension settings merge process, if their value is
@@ -123,7 +123,7 @@ plugins.
     ..  confval:: persistence
         :name: plugin-persistence
         :type: array of settings
-        :Example: :ref:`Set recursive storage PID for Extbase plugin <setup-plugin-persistence-storagePid-example>`
+        :Example: :ref:`Set recursive storage PID for Extbase plugin <setup-plugin-persistence-storagepid-example>`
 
         Settings, relevant to the persistence layer of Extbase.
 
@@ -143,7 +143,7 @@ plugins.
     ..  confval:: persistence.storagePid
         :name: plugin-persistence-storagePid
         :type: :ref:`string <data-type-string>` (comma separated list of integers)
-        :Example: :ref:`Set recursive storage PID for Extbase plugin <setup-plugin-persistence-storagePid-example>`
+        :Example: :ref:`Set recursive storage PID for Extbase plugin <setup-plugin-persistence-storagepid-example>`
 
         **Only for Extbase plugins**. List of page IDs, from which all records
         are read.
@@ -153,7 +153,7 @@ plugins.
     ..  confval:: persistence.classes.[classname].newRecordStoragePid
         :name: plugin-persistence-classes-classname-newRecordStoragePid
         :type: :ref:`integer <data-type-integer>`
-        :Example: :ref:`Set storage PID for new records of Extbase plugin <setup-plugin-persistence-classes-classname-newRecordStoragePid-example>`
+        :Example: :ref:`Set storage PID for new records of Extbase plugin <setup-plugin-persistence-classes-classname-newrecordstoragepid-example>`
 
         **Only for Extbase plugins**. Page ID, where new records for objects
         of the class `[classname]` are stored.
@@ -163,7 +163,7 @@ plugins.
     ..  confval:: persistence.recursive
         :name: plugin-persistence-recursive
         :type: :ref:`integer <data-type-integer>`
-        :Example: :ref:`Set recursive storage PID for Extbase plugin <setup-plugin-persistence-storagePid-example>`
+        :Example: :ref:`Set recursive storage PID for Extbase plugin <setup-plugin-persistence-storagepid-example>`
 
         **Only for Extbase plugins**. Number of sub-levels of the
         storagePid are read.
@@ -242,7 +242,7 @@ plugins.
         :name: plugin-mvc-callDefaultActionIfActionCantBeResolved
         :type: :ref:`boolean <data-type-boolean>`
         :default: `false`
-        :Example: :ref:`Call default action if action cannot be resolved <setup-plugin-mvc-callDefaultActionIfActionCantBeResolved-example>`
+        :Example: :ref:`Call default action if action cannot be resolved <setup-plugin-mvc-calldefaultactionifactioncantberesolved-example>`
 
         **Only for Extbase plugins**. If set, causes the controller to show
         its default action if the called action is not allowed by the controller.
@@ -253,9 +253,9 @@ plugins.
         :name: plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved
         :type: :ref:`boolean <data-type-boolean>`
         :default: `false`
-        :Example: :ref:`Show 404 (page not found) page if action cannot be resolved <setup-plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved-example>`
+        :Example: :ref:`Show 404 (page not found) page if action cannot be resolved <setup-plugin-mvc-throwpagenotfoundexceptionifactioncantberesolved-example>`
 
-        Same as :ref:`Properties for all frontend plugins based on Extbase <setup-plugin-mvc-callDefaultActionIfActionCantBeResolved>`
+        Same as :ref:`Properties for all frontend plugins based on Extbase <setup-plugin-mvc-calldefaultactionifactioncantberesolved>`
         but this will raise a "page not found" error.
 
     ..  rubric:: mvc.showPageNotFoundIfTargetNotFoundException
@@ -310,7 +310,7 @@ plugins.
         :name: plugin-format
         :type: :ref:`string <data-type-string>`
         :default: `html`
-        :Example: :ref:`Define alternative output formats for RSS feeds <extbase_format-example>`
+        :Example: :ref:`Define alternative output formats for RSS feeds <extbase-format-example>`
 
         ..  warning::
             Using this parameter is considered bad practice. In most cases it is better
@@ -363,12 +363,12 @@ Extbase plugin TypoScript examples
 ..  contents::
     :local:
 
-..  _extbase_typoscript_configuration-general-example:
+..  _extbase-typoscript-configuration-general-example:
 
 Plugin general examples
 -----------------------
 
-..  _setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty-example:
+..  _setup-plugin-configuration-ignoreflexformsettingsifempty-example:
 
 Examples: Ignore certain FlexForm settings if empty
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -400,12 +400,12 @@ integrators are advised to use :typoscript:`addToList` or
     plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := removeFromList(field1)
     plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := addToList(field3)
 
-..  _extbase_typoscript_configuration-persistence-example:
+..  _extbase-typoscript-configuration-persistence-example:
 
 Plugin persistence Examples
 ---------------------------
 
-..  _extbase_persistence-enableAutomaticCacheClearing-example:
+..  _extbase-persistence-enableautomaticcacheclearing-example:
 
 Example: Disable automatic cache clearing for an Extbase plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -417,8 +417,8 @@ Demonstrates:
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 ..  _setup-plugin-persistence-recursive-example:
-..  _setup-plugin-persistence-storagePid-example:
-..  _setup-plugin-persistence-classes-classname-newRecordStoragePid-example:
+..  _setup-plugin-persistence-storagepid-example:
+..  _setup-plugin-persistence-classes-classname-newrecordstoragepid-example:
 
 Example: Set recursive storage PID for Extbase plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -431,7 +431,7 @@ Demonstrates:
 ..  literalinclude:: _codesnippets/_newRecordStoragePid.typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-..  _extbase_typoscript_configuration-view-example:
+..  _extbase-typoscript-configuration-view-example:
 
 Plugin view Examples
 --------------------
@@ -449,12 +449,12 @@ Demonstrates:
 ..  literalinclude:: _codesnippets/_view.typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-..  _extbase_typoscript_configuration-mvc-example:
+..  _extbase-typoscript-configuration-mvc-example:
 
 Plugin MVC Examples
 -------------------
 
-..  _setup-plugin-mvc-callDefaultActionIfActionCantBeResolved-example:
+..  _setup-plugin-mvc-calldefaultactionifactioncantberesolved-example:
 
 Example: Call default action if action cannot be resolved
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -465,7 +465,7 @@ Demonstrates:
 ..  literalinclude:: _codesnippets/_callDefaultActionIfActionCantBeResolved.typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-..  _setup-plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved-example:
+..  _setup-plugin-mvc-throwpagenotfoundexceptionifactioncantberesolved-example:
 
 Example: Show 404 (page not found) page if action cannot be resolved
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -477,12 +477,12 @@ Demonstrates:
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 
-..  _extbase_format-examples:
+..  _extbase-format-examples:
 
 Plugin format examples
 ----------------------
 
-..  _extbase_format-example:
+..  _extbase-format-example:
 
 Example: Define alternative output formats for RSS feeds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -493,7 +493,7 @@ Demonstrates:
 ..  literalinclude:: _codesnippets/_format.typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-..  _extbase_localization-examples:
+..  _extbase-localization-examples:
 
 Plugin localization examples
 ----------------------------

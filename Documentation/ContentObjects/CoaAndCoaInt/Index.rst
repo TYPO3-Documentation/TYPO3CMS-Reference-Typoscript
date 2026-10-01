@@ -71,7 +71,7 @@ if
 
     If `if` returns false, the COA is **not** rendered.
 
-..  _cobj-coa-stdWrap:
+..  _cobj-coa-stdwrap:
 
 stdWrap
 -------
@@ -91,7 +91,7 @@ wrap
     :name: coa-wrap
     :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
-     Wraps all rendered cObjects. Executed before property :ref:`stdWrap <cobj-coa-stdWrap>`.
+     Wraps all rendered cObjects. Executed before property :ref:`stdWrap <cobj-coa-stdwrap>`.
 
 
 ..  _cobj-cobj-array-examples:

@@ -72,7 +72,7 @@ Properties
             *not* remove it again but rather set it blank if you want to disable
             the effect again!
 
-    ..  _user-setup-fields-fieldName-disabled:
+    ..  _user-setup-fields-fieldname-disabled:
 
     ..  rubric:: setup.fields.[fieldName].disabled
 
@@ -93,7 +93,7 @@ backendTitleFormat
 
     ..  index::  User settings; Format of window title in backend
 
-    ..  _user-setup-backendTitleFormat:
+    ..  _user-setup-backendtitleformat:
 
     ..  confval:: backendTitleFormat
         :name: user-setup-backendTitleFormat
@@ -113,7 +113,7 @@ copyLevels
 
     ..  index:: User settings; Copy levels
 
-    ..  _user-setup-copyLevels:
+    ..  _user-setup-copylevels:
 
     ..  confval:: copyLevels
         :name: user-setup-copyLevels
@@ -128,7 +128,7 @@ edit_docModuleUpload
 
     ..  index:: File upload; In doc module
 
-    ..  _user-setup-edit-docModuleUpload:
+    ..  _user-setup-edit-docmoduleupload:
 
     ..  confval:: edit_docModuleUpload
         :name: user-setup-edit-docModuleUpload
@@ -138,9 +138,9 @@ edit_docModuleUpload
 
         ..  note::
             The uploaded file will be stored in the default upload folder,
-            see :ref:`user TSconfig <useroptions-defaultUploadFolder>` and :ref:`page TSconfig <pagedefaultuploadfolder>`
+            see :ref:`user TSconfig <useroptions-defaultuploadfolder>` and :ref:`page TSconfig <pagedefaultuploadfolder>`
 
-    ..  _user-setup-emailMeAtLogin:
+    ..  _user-setup-emailmeatlogin:
 
     ..  rubric:: emailMeAtLogin
 
@@ -161,7 +161,7 @@ edit_docModuleUpload
         One of the language keys. For current options see
         :ref:`Supported languages <t3coreapi:i18n_languages>`, for example `dk`, `de`, `es` etc.
 
-    ..  _user-setup-neverHideAtCopy:
+    ..  _user-setup-neverhideatcopy:
 
     ..  rubric:: neverHideAtCopy
 
@@ -171,7 +171,7 @@ edit_docModuleUpload
 
         If set, then the hideAtCopy feature for records in TCE will not be used.
 
-    ..  _user-setup-showHiddenFilesAndFolders:
+    ..  _user-setup-showhiddenfilesandfolders:
 
     ..  rubric:: showHiddenFilesAndFolders
 
@@ -181,7 +181,7 @@ edit_docModuleUpload
 
         If set, hidden files and folders will be shown in the filelist.
 
-    ..  _user-setup-startModule:
+    ..  _user-setup-startmodule:
 
     ..  rubric:: startModule
 
@@ -192,7 +192,7 @@ edit_docModuleUpload
         Name of the module that is called when the user logs into the backend, for
         example `web_layout`, `web_list`, `web_view`, `web_info`, `web_ts` etc.
 
-    ..  _user-setup-titleLen:
+    ..  _user-setup-titlelen:
 
     ..  rubric:: titleLen
 

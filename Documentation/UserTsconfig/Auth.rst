@@ -21,7 +21,7 @@ Properties
     :display: table
     :type:
 
-..  _user-auth-be-redirectToURL:
+..  _user-auth-be-redirecttourl:
 
 ..  confval:: auth.BE.redirectToURL
     :name: user-auth-be-redirectToURL
@@ -47,7 +47,7 @@ auth.mfa.required
 
         auth.mfa.required = 1
 
-..  _user-auth-mfa-disableProviders:
+..  _user-auth-mfa-disableproviders:
 
 auth.mfa.disableProviders
 -------------------------
@@ -55,14 +55,14 @@ auth.mfa.disableProviders
 ..  confval:: auth.mfa.disableProviders
     :name: auth.mfa.disableProviders
     :type: string, comma separated list of strings
-    :Example: :ref:`Example: Disable a multi-factor authentication provider <user-auth-mfa-disableProviders-example>`
+    :Example: :ref:`Example: Disable a multi-factor authentication provider <user-auth-mfa-disableproviders-example>`
 
     Disable multi-factor authentication providers for the current user or group.
     It overrules the configuration from the Backend usergroup "Access List". This
     means, if a provider is allowed in "Access List" but disallowed with TSconfig,
     it will be disallowed for the user or user group.
 
-..  _user-auth-mfa-recommendedProvider:
+..  _user-auth-mfa-recommendedprovider:
 
 auth.mfa.recommendedProvider
 ----------------------------
@@ -70,7 +70,7 @@ auth.mfa.recommendedProvider
 ..  confval:: auth.mfa.recommendedProvider
     :name: auth.mfa.recommendedProvider
     :type: string
-    :Example: :ref:`Example: Set a recommended multi-factor authentication provider <user-auth-mfa-recommendedProvider-example>`
+    :Example: :ref:`Example: Set a recommended multi-factor authentication provider <user-auth-mfa-recommendedprovider-example>`
 
     Set a recommended multi-factor authentication provider on a per user or user group basis, which overrules
     the global configuration.
@@ -80,7 +80,7 @@ auth.mfa.recommendedProvider
 Examples
 ========
 
-..  _user-auth-mfa-disableProviders-example:
+..  _user-auth-mfa-disableproviders-example:
 
 Example: Disable a multi-factor authentication provider
 -------------------------------------------------------
@@ -90,7 +90,7 @@ Example: Disable a multi-factor authentication provider
 
     auth.mfa.disableProviders := addToList(totp)
 
-..  _user-auth-mfa-recommendedProvider-example:
+..  _user-auth-mfa-recommendedprovider-example:
 
 Example: Set a recommended multi-factor authentication provider
 ---------------------------------------------------------------

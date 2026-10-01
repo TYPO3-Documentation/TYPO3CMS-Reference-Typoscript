@@ -91,7 +91,7 @@ Breadcrumb styled with Fluid
 -----------------------------
 
 The following breadcrumb menu is created with the
-:ref:`MenuProcessor <MenuProcessor>`, based on the HMENU. It is styled via Fluid:
+:ref:`MenuProcessor <menuprocessor>`, based on the HMENU. It is styled via Fluid:
 
 ..  literalinclude:: _code-snippets/_BreadcrumbDataProcessor.typoscript
     :caption: EXT:my_sitepackage/Configuration/TypoScript/Menus/Setup/BreadcrumbDataProcessor.typoscript

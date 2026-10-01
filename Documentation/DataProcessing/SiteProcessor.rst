@@ -1,6 +1,6 @@
 :navigation-title: site
 ..  include:: /Includes.rst.txt
-..  _SiteProcessor:
+..  _siteprocessor:
 
 =====================
 `site` data processor
@@ -12,7 +12,7 @@ alias `site`, fetches data from the :ref:`site configuration
 
 ..  contents:: Table of contents
 
-..  _SiteProcessor-options:
+..  _siteprocessor-options:
 
 Options
 =======
@@ -22,7 +22,7 @@ Options
     :type:
     :Default:
 
-    ..  _SiteProcessor-as:
+    ..  _siteprocessor-as:
 
     ..  confval:: as
         :name: SiteProcessor-as
@@ -31,12 +31,12 @@ Options
 
         The variable name to be used in the Fluid template.
 
-..  _SiteProcessor-examples:
+..  _siteprocessor-examples:
 
 Example: Output some data from the site configuration
 =====================================================
 
-Please see also :ref:`About the examples <dataProcessing-about-examples>`.
+Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 ..  rubric:: TypoScript
 

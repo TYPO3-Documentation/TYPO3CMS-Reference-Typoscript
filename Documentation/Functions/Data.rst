@@ -1,6 +1,6 @@
 ..  include:: /Includes.rst.txt
 ..  index:: Function; getText
-..  _data-type-function-getText:
+..  _data-type-function-gettext:
 ..  _data-type-gettext:
 
 ==============
@@ -791,7 +791,7 @@ Get the URL of a JavaScript file in the site package:
 
     lib.foo.data = path : EXT:my_sitepackage/Resources/Public/JavaScript/main.js
 
-With the stdWrap function :ref:`insertData <stdwrap-insertData>`, the URL can
+With the stdWrap function :ref:`insertData <stdwrap-insertdata>`, the URL can
 be used inside a value, here to link a favicon in the page head:
 
 ..  literalinclude:: _codesnippets/_path.typoscript
@@ -850,7 +850,7 @@ Example: Get the page type
 
     lib.foo.data = request : routing | pageType
 
-..  _data-type-gettext-request-example-queryArguments:
+..  _data-type-gettext-request-example-queryarguments:
 
 Example: Get a query argument
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -947,7 +947,7 @@ configuration key(s) to access.
     page.10.data = site:customConfigKey.nested.value
 
 
-..  _data-type-siteLanguage:
+..  _data-type-sitelanguage:
 
 siteLanguage
 ------------
@@ -1021,7 +1021,7 @@ siteLanguage
         The website title for this language. Note: there is no automatic fallback to the
         :typoscript:`site:websiteTitle`.
 
-..  _data-type-siteLanguage-example:
+..  _data-type-sitelanguage-example:
 
 Example: Get values from the current site language
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1029,7 +1029,7 @@ Example: Get values from the current site language
 ..  literalinclude:: _codesnippets/_siteLanguage.typoscript
     :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-..  _data-type-siteSettings:
+..  _data-type-sitesettings:
 
 siteSettings
 ------------
@@ -1040,7 +1040,7 @@ siteSettings
     Access the :ref:`site settings <t3coreapi:sitehandling-settings>` of the
     current site.
 
-..  _data-type-siteSettings-example:
+..  _data-type-sitesettings-example:
 
 Example: Access the redirects HTTP status code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -57,7 +57,7 @@ min
     Minimum number of splits.
 
 
-..  _split-returnKey:
+..  _split-returnkey:
 
 returnKey
 ---------
@@ -71,7 +71,7 @@ returnKey
     function.
 
 
-..  _split-returnCount:
+..  _split-returncount:
 
 returnCount
 -----------
@@ -89,7 +89,7 @@ returnCount
         :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
-..  _split-cObjNum:
+..  _split-cobjnum:
 
 cObjNum
 -------
@@ -102,7 +102,7 @@ cObjNum
     treat the items, resulting from the split.
 
 
-..  _split-cObject:
+..  _split-cobject:
 
 1,2,3,4
 -------

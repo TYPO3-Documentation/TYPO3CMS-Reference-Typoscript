@@ -24,25 +24,25 @@ Properties
     :ref:`stdWrap <stdwrap>` function.
 
 
-..  _gifbuilder-properties-backColor:
+..  _gifbuilder-properties-backcolor:
 
 backColor
 =========
 
 ..  confval:: backColor
     :name: gifbuilder-properties-backColor
-    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-graphiccolor>` / :ref:`stdWrap <stdwrap>`
     :default: white
 
     Background color of the image.
 
 
-..  _gifbuilder-properties-charRangeMap:
+..  _gifbuilder-properties-charrangemap:
 
 charRangeMap
 ============
 
-..  _gifbuilder-properties-charRangeMap-array:
+..  _gifbuilder-properties-charrangemap-array:
 
 [array]
 -------
@@ -64,10 +64,10 @@ charRangeMap
     **The key:**
 
     The value of the array key will be the key used when forcing the
-    configuration into :ref:`splitRendering <gifbuilder-text-splitRendering>`
+    configuration into :ref:`splitRendering <gifbuilder-text-splitrendering>`
     configuration of the individual
     :ref:`GIFBUILDER objects <gifbuilder-object-names>`.
-    In the :ref:`[array] <gifbuilder-properties-charRangeMap-array>`
+    In the :ref:`[array] <gifbuilder-properties-charrangemap-array>`
     example below the key is `123`.
 
     ..  note::
@@ -76,20 +76,20 @@ charRangeMap
         local configurations which override the global setting.
 
 
-..  _gifbuilder-properties-charRangeMap-charMapConfig:
+..  _gifbuilder-properties-charrangemap-charmapconfig:
 
 [array].charMapConfig
 ---------------------
 
 ..  confval:: charRangeMap.[array].charMapConfig
     :name: gifbuilder-properties-charRangeMap-charMapConfig
-    :type: :ref:`TEXT <gifbuilder-text>` / :ref:`splitRendering.[array] <gifbuilder-text-splitRendering>` configuration
+    :type: :ref:`TEXT <gifbuilder-text>` / :ref:`splitRendering.[array] <gifbuilder-text-splitrendering>` configuration
 
     splitRendering configuration to set.
     See :ref:`GIFBUILDER TEXT object <gifbuilder-text>` for details.
 
 
-..  _gifbuilder-properties-charRangeMap-fontSizeMultiplicator:
+..  _gifbuilder-properties-charrangemap-fontsizemultiplicator:
 
 [array].fontSizeMultiplicator
 -----------------------------
@@ -100,11 +100,11 @@ charRangeMap
 
     If set, this will take the font size of the
     :ref:`GIFBUILDER TEXT object <gifbuilder-text>` and multiply with this
-    amount (xx.xx) and override the :ref:`fontSize <gifbuilder-text-fontSize>` property
-    inside :ref:`[array].charMapConfig <gifbuilder-properties-charRangeMap-charMapConfig>`.
+    amount (xx.xx) and override the :ref:`fontSize <gifbuilder-text-fontsize>` property
+    inside :ref:`[array].charMapConfig <gifbuilder-properties-charrangemap-charmapconfig>`.
 
 
-..  _gifbuilder-properties-charRangeMap-pixelSpaceFontSizeRef:
+..  _gifbuilder-properties-charrangemap-pixelspacefontsizeref:
 
 [array].pixelSpaceFontSizeRef
 -----------------------------
@@ -161,7 +161,7 @@ format
         Support for WebP and AVIF have been added.
 
 
-..  _gifbuilder-properties-maxHeight:
+..  _gifbuilder-properties-maxheight:
 
 maxHeight
 =========
@@ -173,7 +173,7 @@ maxHeight
     Maximal height of the image file.
 
 
-..  _gifbuilder-properties-maxWidth:
+..  _gifbuilder-properties-maxwidth:
 
 maxWidth
 ========
@@ -231,7 +231,7 @@ speed
     https://www.php.net/manual/en/function.imageavif.php for more details).
 
 
-..  _gifbuilder-properties-transparentBackground:
+..  _gifbuilder-properties-transparentbackground:
 
 transparentBackground
 =====================
@@ -244,24 +244,24 @@ transparentBackground
     color found at position 0,0 of the image (upper left corner) transparent.
 
     If you render text, you should leave the
-    :ref:`niceText <gifbuilder-text-niceText>` option **off** as the result will
+    :ref:`niceText <gifbuilder-text-nicetext>` option **off** as the result will
     probably be more precise without the :typoscript:`niceText` antialiasing
     hack.
 
 
-..  _gifbuilder-properties-transparentColor:
+..  _gifbuilder-properties-transparentcolor:
 
 transparentColor
 ================
 
 ..  confval:: transparentColor
     :name: gifbuilder-properties-transparentColor
-    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-graphiccolor>` / :ref:`stdWrap <stdwrap>`
 
     Specify a color that should be transparent.
 
 
-..  _gifbuilder-properties-transparentColor-closest:
+..  _gifbuilder-properties-transparentcolor-closest:
 
 closest
 -------
@@ -275,10 +275,10 @@ closest
 
     ..  note::
         You may experience that this does not work, if you render text with the
-        :ref:`niceText <gifbuilder-text-niceText>` option.
+        :ref:`niceText <gifbuilder-text-nicetext>` option.
 
 
-..  _gifbuilder-properties-workArea:
+..  _gifbuilder-properties-workarea:
 
 workArea
 ========
@@ -294,7 +294,7 @@ workArea
     of the work area will be printed outside this area.
 
 
-..  _gifbuilder-properties-XY:
+..  _gifbuilder-properties-xy:
 
 XY
 ==
@@ -307,7 +307,7 @@ XY
     Size of the image file.
 
 
-..  _gifbuilder-properties-reduceColors:
+..  _gifbuilder-properties-reducecolors:
 
 reduceColors
 ============

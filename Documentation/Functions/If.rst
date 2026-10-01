@@ -34,7 +34,7 @@ Also check the explanations and the examples further below!
 Properties
 ==========
 
-..  _if-bitAnd:
+..  _if-bitand:
 
 bitAnd
 ------
@@ -71,7 +71,7 @@ contains
         :emphasize-lines: 11
 
 
-..  _if-directReturn:
+..  _if-directreturn:
 
 directReturn
 ------------
@@ -85,7 +85,7 @@ directReturn
     true/false with a TypoScript constant.
 
 
-..  _if-endsWith:
+..  _if-endswith:
 
 endsWith
 --------
@@ -122,7 +122,7 @@ equals
         if.value.data = GETENV:REQUEST_METHOD
 
 
-..  _if-isFalse:
+..  _if-isfalse:
 
 isFalse
 -------
@@ -134,7 +134,7 @@ isFalse
     If the content is "false", which is empty or zero.
 
 
-..  _if-isGreaterThan:
+..  _if-isgreaterthan:
 
 isGreaterThan
 -------------
@@ -146,7 +146,7 @@ isGreaterThan
     Returns true, if the content is greater than :typoscript:`value`.
 
 
-..  _if-isInList:
+..  _if-isinlist:
 
 isInList
 --------
@@ -171,7 +171,7 @@ isInList
     This returns true, if the uid is part of the list in :typoscript:`value`.
 
 
-..  _if-isLessThan:
+..  _if-islessthan:
 
 isLessThan
 ----------
@@ -183,14 +183,14 @@ isLessThan
     Returns true, if the content is less than :typoscript:`value`.
 
 
-..  _if-isNull:
+..  _if-isnull:
 
 isNull
 ------
 
 ..  confval:: isNull
     :name: if-isNull
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     If the resulting content of the :typoscript:`stdWrap` is null (:php:`NULL` type in PHP).
 
@@ -206,7 +206,7 @@ isNull
     the field "description" is :php:`NULL`.
 
 
-..  _if-isPositive:
+..  _if-ispositive:
 
 isPositive
 ----------
@@ -218,7 +218,7 @@ isPositive
     Returns true, if the content is positive.
 
 
-..  _if-isTrue:
+..  _if-istrue:
 
 isTrue
 ------
@@ -249,7 +249,7 @@ negate
     overall return ends up being true.
 
 
-..  _if-startsWith:
+..  _if-startswith:
 
 startsWith
 ----------
@@ -289,7 +289,7 @@ The "if"-function is a very odd way of returning true or false!
 Beware!
 
 "if" is normally used to decide whether to render an object or to return
-a value (see the :ref:`Content Objects (cObject) <data-type-cobject>` and :ref:`stdWrap <stdWrap>`).
+a value (see the :ref:`Content Objects (cObject) <data-type-cobject>` and :ref:`stdWrap <stdwrap>`).
 
 Here is how it works:
 

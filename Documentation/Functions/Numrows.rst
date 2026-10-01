@@ -16,7 +16,7 @@ rows, which were returned by the query.
     :local:
 
 ..  index:: _numRows; Properties
-..  _numRows-properties:
+..  _numrows-properties:
 
 Properties
 ==========
@@ -46,7 +46,7 @@ select
     The sub-property :typoscript:`selectFields` is overridden internally with
     `count(*)`.
 
-..  _numRows-examples:
+..  _numrows-examples:
 
 Example
 =======

@@ -4,7 +4,7 @@
     user TSconfig; Extensions
     user TSconfig; tx_*
 
-..  _user_tx:
+..  _user-tx:
 
 ====
 tx_*

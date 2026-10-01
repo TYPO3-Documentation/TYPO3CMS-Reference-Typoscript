@@ -231,7 +231,7 @@ With the second example, the bottom of the new content element wizard shows:
 ..  index::
     Wizards; record
     New Record wizard; order
-..  _mod-wizards-newRecord-order:
+..  _mod-wizards-newrecord-order:
 
 newRecord.order
 ===============
@@ -247,7 +247,7 @@ newRecord.order
     Records are grouped by extension keys, plus the special key "system"
     for records provided by the TYPO3 Core.
 
-..  _mod-wizards-newRecord-order-example:
+..  _mod-wizards-newrecord-order-example:
 
 Example: Place the tt_news group at the top of the new record dialog
 --------------------------------------------------------------------
@@ -270,7 +270,7 @@ elements), other groups follow unchanged:
     Wizards; record
     New Record wizard; After page button
     New Record wizard; Inside page button
-..  _mod-wizards-newRecord-pages:
+..  _mod-wizards-newrecord-pages:
 
 newRecord.pages
 ===============
@@ -292,7 +292,7 @@ newRecord.pages
     show.pageSelectPosition
         Show or hide the link to create new pages at a selected position.
 
-..  _mod-wizards-newRecord-pages-example:
+..  _mod-wizards-newrecord-pages-example:
 
 Example: Hide the "Page (inside)" link in the "New Record" dialog
 -----------------------------------------------------------------

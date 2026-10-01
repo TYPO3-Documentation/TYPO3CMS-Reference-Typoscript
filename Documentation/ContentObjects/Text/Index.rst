@@ -40,7 +40,7 @@ value
 
     Text, which you want to output.
 
-..  _cobj-text-stdWrap:
+..  _cobj-text-stdwrap:
 
 stdWrap
 -------

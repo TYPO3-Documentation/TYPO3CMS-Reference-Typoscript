@@ -240,7 +240,7 @@ permissions
 -----------
 
 ..  index:: Page permissions; copyFromParent
-..  _pagetcemain-permissions-copyFromParent:
+..  _pagetcemain-permissions-copyfromparent:
 
 Value copyFromParent
 ~~~~~~~~~~~~~~~~~~~~
@@ -293,7 +293,7 @@ everybody
     `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
 
     It also possible to set the value
-    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
+    :ref:`copyFromParent <pagetcemain-permissions-copyfromparent>` to inherit
     the value from the parent page.
 
 ..  _pagetcemain-permissions-everybody-example:
@@ -333,7 +333,7 @@ group
     `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
 
     It also possible to set the value
-    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
+    :ref:`copyFromParent <pagetcemain-permissions-copyfromparent>` to inherit
     the value from the parent page.
 
 
@@ -369,7 +369,7 @@ groupid
     of the backend user creating the page.
 
     By setting the value of this property to
-    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` the owner
+    :ref:`copyFromParent <pagetcemain-permissions-copyfromparent>` the owner
     group is copied from the newly created pages parent page.
 
     The owner group of a newly created page can be hardcoded by setting this
@@ -411,7 +411,7 @@ user
     `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
 
     It also possible to set the value
-    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
+    :ref:`copyFromParent <pagetcemain-permissions-copyfromparent>` to inherit
     the value from the parent page.
 
 ..  _pagetcemain-permissions-actions-example:
@@ -436,7 +436,7 @@ userid
     copied the page.
 
     By setting the value of this property to
-    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` the owner
+    :ref:`copyFromParent <pagetcemain-permissions-copyfromparent>` the owner
     group is copied from the newly created pages parent page.
 
     When this property is set to a positive integer the owner of new pages is

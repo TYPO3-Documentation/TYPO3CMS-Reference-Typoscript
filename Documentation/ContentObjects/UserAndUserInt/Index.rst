@@ -43,7 +43,7 @@ Properties
     :display: table
     :type:
 
-..  _cobj-user-userFunc:
+..  _cobj-user-userfunc:
 
 userFunc
 --------
@@ -85,14 +85,14 @@ userFunc
     passed to your function (in the second parameter). This allows you to
     process them further in any way you wish.
 
-..  _cobj-user-stdWrap:
+..  _cobj-user-stdwrap:
 
 stdWrap
 -------
 
 ..  confval:: stdWrap
     :name: user-stdWrap
-    :type: :ref:`stdWrap <stdWrap>`.
+    :type: :ref:`stdWrap <stdwrap>`.
 
 ..  _cobj-user-cache:
 
@@ -175,7 +175,7 @@ Example 3
 ---------
 
 Another example can be found in the documentation of the stdWrap
-property :ref:`postUserFunc <stdwrap-postUserFunc>` There you can also see how to work with
+property :ref:`postUserFunc <stdwrap-postuserfunc>` There you can also see how to work with
 :php:`$cObj`, the reference to the parent (calling) cObject.
 
 Example 4

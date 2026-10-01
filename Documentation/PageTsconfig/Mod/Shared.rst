@@ -34,7 +34,7 @@ colPos_list
 
     The default backend layout only has one column, which has the id 0.
 
-..  _example_for_backend_layout:
+..  _example-for-backend-layout:
 
 Example: Make a column in a backend layout not editable
 -------------------------------------------------------
@@ -56,7 +56,7 @@ that would be the columns left (colPos = 0) and right (colPos = 2).
 ..  index::
     defaultLanguageFlag
     Localization; Default language flag
-..  _pageTsConfigSharedDefaultLanguageLabel:
+..  _pagetsconfigshareddefaultlanguagelabel:
 
 defaultLanguageFlag
 ===================

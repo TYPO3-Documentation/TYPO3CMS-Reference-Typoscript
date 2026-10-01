@@ -77,7 +77,7 @@ params
 
     HTML <IMG> parameters
 
-..  _cobj-image-altText:
+..  _cobj-image-alttext:
 
 altText
 -------
@@ -88,7 +88,7 @@ altText
 
     If no alt text is specified, an empty alt text will be used.
 
-..  _cobj-image-titleText:
+..  _cobj-image-titletext:
 
 titleText
 ---------
@@ -97,7 +97,7 @@ titleText
     :name: image-titleText
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
-..  _cobj-image-emptyTitleHandling:
+..  _cobj-image-emptytitlehandling:
 
 emptyTitleHandling
 ------------------
@@ -250,7 +250,7 @@ layout.layoutKey.source
 
 ..  confval:: layout.layoutKey.source
     :name: image-layout-layoutkey-source
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     Defines the HTML code for the :html:`###SOURCECOLLECTION###`
     of the :ref:`layout.layoutKey.element <cobj-image-layout-layoutkey-element>`.
@@ -316,7 +316,7 @@ sourceCollection.dataKey
 
 ..  confval:: sourceCollection.dataKey
     :name: image-dataKey
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     Definition of your image size definition depending on your responsive
     layout, breakpoints and display density.
@@ -346,7 +346,7 @@ sourceCollection.dataKey.pixelDensity
 
 ..  confval:: sourceCollection.dataKey.pixelDensity
     :name: image-pixeldensity
-    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
     :default: 1
 
     Defines the density of the rendered Image, e.g. a retina display would
@@ -365,7 +365,7 @@ sourceCollection.dataKey.width
 
 ..  confval:: sourceCollection.dataKey.width
     :name: image-datakey-width
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
          Defines the width for the html code of the image defined in this
          source collection. For the image file itself the width will be multiplied by
@@ -381,7 +381,7 @@ sourceCollection.dataKey.height
 
 ..  confval:: sourceCollection.dataKey.height
     :name: image-datakey-height
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     Defines the height for the html code of the image defined in this
     source collection. For the image file itself the height will be multiplied by
@@ -393,11 +393,11 @@ sourceCollection.dataKey.maxW
 
 
 ..  index:: IMAGE; sourceCollection.dataKey.maxW
-..  _cobj-image-datakey-maxW:
+..  _cobj-image-datakey-maxw:
 
 ..  confval:: sourceCollection.dataKey.maxW
     :name: image-datakey-maxW
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     Defines the maxW for the html code of the image defined in this
     source collection. For the image file itself the maxW will be multiplied by
@@ -409,11 +409,11 @@ sourceCollection.dataKey.maxH
 
 
 ..  index:: IMAGE; sourceCollection.dataKey.maxH
-..  _cobj-image-datakey-maxH:
+..  _cobj-image-datakey-maxh:
 
 ..  confval:: sourceCollection.dataKey.maxH
     :name: image-datakey-maxH
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     Defines the maxH for the html code of the image defined in this
     source collection. For the image file itself the maxH will be multiplied by
@@ -425,11 +425,11 @@ sourceCollection.dataKey.minW
 
 
 ..  index:: IMAGE; sourceCollection.dataKey.minW
-..  _cobj-image-datakey-minW:
+..  _cobj-image-datakey-minw:
 
 ..  confval:: sourceCollection.dataKey.minW
     :name: image-datakey-minW
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     Defines the minW for the html code of the image defined in this
     source collection. For the image file itself the minW will be multiplied by
@@ -441,11 +441,11 @@ sourceCollection.dataKey.minH
 
 
 ..  index:: IMAGE; sourceCollection.dataKey.minH
-..  _cobj-image-datakey-minH:
+..  _cobj-image-datakey-minh:
 
 ..  confval:: sourceCollection.dataKey.minH
     :name: image-datakey-minH
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     Defines the minH for the html code of the image defined in this
     source collection. For the image file itself the minH will be multiplied by
@@ -481,7 +481,7 @@ sourceCollection.dataKey.*
     setting the image size, but will be available as additional markers for
     the image template. See the example mediaquery.
 
-..  _cobj-image-linkWrap:
+..  _cobj-image-linkwrap:
 
 linkWrap
 --------
@@ -492,7 +492,7 @@ linkWrap
 
     (before ".wrap")
 
-..  _cobj-image-imageLinkWrap:
+..  _cobj-image-imagelinkwrap:
 
 imageLinkWrap
 -------------
@@ -516,7 +516,7 @@ wrap
 
     Wrap for the image tag.
 
-..  _cobj-image-stdWrap:
+..  _cobj-image-stdwrap:
 
 stdWrap
 -------

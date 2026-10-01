@@ -35,7 +35,7 @@ Properties
     :display: table
     :type:
 
-..  _cobj-case-array-of-cObjects:
+..  _cobj-case-array-of-cobjects:
 
 array of cObjects
 -----------------
@@ -70,7 +70,7 @@ default
     :type: :ref:`cObject <data-type-cobject>`
 
     Use this to define the rendering for *those* values of :ref:`key <cobj-case-key>` that
-    do *not* match any of the values of the :ref:`array of cObjects <cobj-case-array-of-cObjects>`. If no
+    do *not* match any of the values of the :ref:`array of cObjects <cobj-case-array-of-cobjects>`. If no
     default cObject is defined, an empty string will be returned for
     the default case.
 
@@ -102,12 +102,12 @@ key
     is rendered.
 
     This property defines the source of the value that will be matched against
-    the values of the :ref:`array of cObjects <cobj-case-array-of-cObjects>`. It will generally not be a
-    simple string, but use its :ref:`stdWrap <stdWrap>` properties to retrieve a
+    the values of the :ref:`array of cObjects <cobj-case-array-of-cobjects>`. It will generally not be a
+    simple string, but use its :ref:`stdWrap <stdwrap>` properties to retrieve a
     dynamic value from some specific source, typically a field of the
     current record. See the :ref:`example below <cobj-case-examples>`.
 
-..  _cobj-case-setCurrent:
+..  _cobj-case-setcurrent:
 
 setCurrent
 ----------
@@ -118,7 +118,7 @@ setCurrent
 
     Sets the "current" value.
 
-..  _cobj-case-stdWrap:
+..  _cobj-case-stdwrap:
 
 stdWrap
 -------
@@ -127,7 +127,7 @@ stdWrap
     :name: case-stdWrap
     :type: :ref:`stdWrap <stdwrap>`
 
-    :ref:`stdWrap <stdWrap>` around any object that was rendered no matter what the
+    :ref:`stdWrap <stdwrap>` around any object that was rendered no matter what the
     :ref:`key <cobj-case-key>` value is.
 
 
