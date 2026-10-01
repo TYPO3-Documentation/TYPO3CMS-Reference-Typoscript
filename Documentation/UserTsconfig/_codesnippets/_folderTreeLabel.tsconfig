@@ -1,0 +1,4 @@
+options.folderTree.label.1:/campaigns/ {
+  label = Campaign A
+  color = #ff8700
+}
