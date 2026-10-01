@@ -1,6 +1,6 @@
 :navigation-title: gallery
 ..  include:: /Includes.rst.txt
-..  _GalleryProcessor:
+..  _galleryprocessor:
 
 ========================
 `gallery` data processor
@@ -9,12 +9,12 @@
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor`,
 alias `gallery`, provides the logic for working with galleries and
 calculates the maximum asset size. It uses the files already present in
-the `processedData` array for its calculations. The :ref:`files data processor <FilesProcessor>` can
+the `processedData` array for its calculations. The :ref:`files data processor <filesprocessor>` can
 be used to fetch the files.
 
 ..  contents:: Table of contents
 
-..  _GalleryProcessor-options:
+..  _galleryprocessor-options:
 
 Options:
 ========
@@ -24,7 +24,7 @@ Options:
     :type:
     :Default:
 
-    ..  _GalleryProcessor-if:
+    ..  _galleryprocessor-if:
 
     ..  rubric:: if
 
@@ -35,39 +35,39 @@ Options:
 
         Only if the condition is met the data processor is executed.
 
-    ..  _GalleryProcessor-filesProcessedDataKey:
+    ..  _galleryprocessor-filesprocesseddatakey:
 
     ..  rubric:: filesProcessedDataKey
 
     ..  confval:: filesProcessedDataKey
         :name: GalleryProcessor-filesProcessedDataKey
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: 'files'
         :Example: 'myImages'
 
         Key of the array previously processed by the
         :php-short:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor`.
 
-    ..  _GalleryProcessor-numberOfColumns:
+    ..  _galleryprocessor-numberofcolumns:
 
     ..  rubric:: numberOfColumns
 
     ..  confval:: numberOfColumns
         :name: GalleryProcessor-numberOfColumns
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: field:imagecols
         :Example: 4
 
         Expects the desired number of columns. Defaults to the value of the field
         `imagecols` (:guilabel:`Number of Columns`) if used with content elements.
 
-    ..  _GalleryProcessor-mediaOrientation:
+    ..  _galleryprocessor-mediaorientation:
 
     ..  rubric:: mediaOrientation
 
     ..  confval:: mediaOrientation
         :name: GalleryProcessor-mediaOrientation
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: field:imageorient
         :Example: 2
 
@@ -83,36 +83,36 @@ Options:
 
             Media orientation in the content elements such as text with images
 
-    ..  _GalleryProcessor-maxGalleryWidth:
+    ..  _galleryprocessor-maxgallerywidth:
 
     ..  rubric:: maxGalleryWidth
 
     ..  confval:: maxGalleryWidth
         :name: GalleryProcessor-maxGalleryWidth
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: 600
 
         Maximal gallery width in pixels.
 
-    ..  _GalleryProcessor-maxGalleryWidthInText:
+    ..  _galleryprocessor-maxgallerywidthintext:
 
     ..  rubric:: maxGalleryWidthInText
 
     ..  confval:: maxGalleryWidthInText
         :name: GalleryProcessor-maxGalleryWidthInText
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: 300
 
         Maximal gallery width in pixels if displayed in a text.
 
-    ..  _GalleryProcessor-equalMediaHeight:
-    ..  _GalleryProcessor-equalMediaWidth:
+    ..  _galleryprocessor-equalmediaheight:
+    ..  _galleryprocessor-equalmediawidth:
 
     ..  rubric:: equalMediaHeight, equalMediaWidth
 
     ..  confval:: equalMediaHeight, equalMediaWidth
         :name: GalleryProcessor-equalMediaHeight
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: field:imageheight, field:imagewidth
         :Example: 300
 
@@ -128,25 +128,25 @@ Options:
 
             Media height and width in the content element Text and Images
 
-    ..  _GalleryProcessor-columnSpacing:
+    ..  _galleryprocessor-columnspacing:
 
     ..  rubric:: columnSpacing
 
     ..  confval:: columnSpacing
         :name: GalleryProcessor-columnSpacing
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: 0
         :Example: 4
 
         Space between columns in pixels
 
-    ..  _GalleryProcessor-borderEnabled:
+    ..  _galleryprocessor-borderenabled:
 
     ..  rubric:: borderEnabled
 
     ..  confval:: borderEnabled
         :name: GalleryProcessor-borderEnabled
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: field:imageborder
         :Example: 1
 
@@ -154,70 +154,70 @@ Options:
         fields `imageborder` (:guilabel:`Number of Columns`) if used with content
         elements.
 
-    ..  _GalleryProcessor-borderWidth:
+    ..  _galleryprocessor-borderwidth:
 
     ..  rubric:: borderWidth
 
     ..  confval:: borderWidth
         :name: GalleryProcessor-borderWidth
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: 0
         :Example: 2
 
         Width of the border in pixels.
 
-    ..  _GalleryProcessor-borderPadding:
+    ..  _galleryprocessor-borderpadding:
 
     ..  rubric:: borderPadding
 
     ..  confval:: borderPadding
         :name: GalleryProcessor-borderPadding
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: 0
         :Example: 20
 
         Padding around the border in pixels.
 
-    ..  _GalleryProcessor-cropVariant:
+    ..  _galleryprocessor-cropvariant:
 
     ..  rubric:: cropVariant
 
     ..  confval:: cropVariant
         :name: GalleryProcessor-cropVariant
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: "default"
         :Example: "mobile"
 
         See :ref:`crop variants in the TCA reference <t3tca:columns-imageManipulation-properties-cropVariants>`
 
-    ..  _GalleryProcessor-as:
+    ..  _galleryprocessor-as:
 
     ..  rubric:: as
 
     ..  confval:: as
         :name: GalleryProcessor-as
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: "files"
 
         The variable name to be used in the Fluid template.
 
-    ..  _GalleryProcessor-dataProcessing:
+    ..  _galleryprocessor-dataprocessing:
 
     ..  rubric:: dataProcessing
 
     ..  confval:: dataProcessing
         :name: GalleryProcessor-dataProcessing
-        :type: array of :ref:`Data processors <dataProcessing>`
+        :type: array of :ref:`Data processors <dataprocessing>`
         :default: []
 
         Array of data processors to be applied to all fetched records.
 
-..  _GalleryProcessor-example-rows-columns:
+..  _galleryprocessor-example-rows-columns:
 
 Example: display images in rows and columns
 ===========================================
 
-Please see also :ref:`About the examples <dataProcessing-about-examples>`.
+Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 ..  rubric:: TypoScript
 
@@ -225,14 +225,14 @@ As the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor` expects
 the data of the files to be present in the the `processedData` array, the
 :php-short:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor` always has to be
 called first. Execution depends on the key in the
-:ref:`dataProcessing <GalleryProcessor-dataProcessing>` array, not the order in
+:ref:`dataProcessing <galleryprocessor-dataprocessing>` array, not the order in
 which they are put there.
 
 The content of
-:ref:`filesProcessedDataKey <GalleryProcessor-filesProcessedDataKey>` in the
+:ref:`filesProcessedDataKey <galleryprocessor-filesprocesseddatakey>` in the
 :php-short:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor` has to be equal
-to the content of :ref:`as <FilesProcessor-as>` in the
-:ref:`FilesProcessor <FilesProcessor>`:
+to the content of :ref:`as <filesprocessor-as>` in the
+:ref:`FilesProcessor <filesprocessor>`:
 
 ..  figure:: /Images/ManualScreenshots/DataProcessing/GalleryProcessor.png
     :zoom: lightbox

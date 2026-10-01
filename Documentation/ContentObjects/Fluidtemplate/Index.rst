@@ -42,7 +42,7 @@ The following data is available in the Fluid template:
         it contains data in the Fluid Property `data`.
     *   If called in the context of Extbase it contains the data assigned to the view
         in the :ref:`Controller <t3coreapi:extbase-action-controller>`.
-    *   Use the :ref:`record-transformation data processor <RecordTransformationProcessor>` to get additional computed
+    *   Use the :ref:`record-transformation data processor <recordtransformationprocessor>` to get additional computed
         information from the `data` array.
 
 *   The `settings` array set by the parameter
@@ -78,7 +78,7 @@ Properties
     :display: table
     :type:
 
-..  _cobj-_fluidtemplate-cache:
+..  _cobj-fluidtemplate-cache:
 
 cache
 -----
@@ -89,7 +89,7 @@ cache
 
     See :ref:`cache function description <cache>` for details.
 
-..  _fluidtemplate-dataProcessing:
+..  _fluidtemplate-dataprocessing:
 
 dataProcessing
 --------------
@@ -105,7 +105,7 @@ dataProcessing
 
     ..  note::
 
-        This content was moved to the subpage :ref:`Data processors <dataProcessing>`.
+        This content was moved to the subpage :ref:`Data processors <dataprocessing>`.
 
 ..  _cobj-fluidtemplate-properties-extbase-controlleractionname:
 
@@ -408,12 +408,12 @@ variables
     to the current data set.
 
 
-..  _cobj-fluidtemplate-example-RecordTransformationProcessor:
+..  _cobj-fluidtemplate-example-recordtransformationprocessor:
 
 Example: Usage with RecordTransformationProcessor
 =================================================
 
-The :ref:`record-transformation data processor <RecordTransformationProcessor>` transforms the current data array of
+The :ref:`record-transformation data processor <recordtransformationprocessor>` transforms the current data array of
 the `FLUIDTEMPLATE` to a record object.
 
 This can be used for content elements of
@@ -425,7 +425,7 @@ element "Text" has its data transformed for easier and enhanced usage.
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 For usage of the variables within Fluid see
-:ref:`Example: Usage with FLUIDTEMPLATE <RecordTransformationProcessor-fluidtemplate-example>`.
+:ref:`Example: Usage with FLUIDTEMPLATE <recordtransformationprocessor-fluidtemplate-example>`.
 
 ..  _cobj-fluidtemplate-examples:
 
@@ -454,7 +454,7 @@ titles. The copyright year will be taken from the TypoScript constant
 
 ..  seealso::
 
-    *   :ref:`Data processors <dataProcessing>` examples
+    *   :ref:`Data processors <dataprocessing>` examples
     *   :ref:`Create a custom content element type (CType) <t3coreapi:adding-your-own-content-elements>`
     *   :ref:`Site Package Tutorial <t3sitepackage:start>`
 

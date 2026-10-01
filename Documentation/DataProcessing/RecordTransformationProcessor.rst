@@ -1,7 +1,7 @@
 :navigation-title: record-transformation
 
 ..  include:: /Includes.rst.txt
-..  _RecordTransformationProcessor:
+..  _recordtransformationprocessor:
 
 ======================================
 `record-transformation` data processor
@@ -27,19 +27,19 @@ on the record, such `tt_content.textmedia` for Content Elements.
 
 ..  contents:: Table of contents
 
-..  _RecordTransformationProcessor-databasequeryprocessor-example:
+..  _recordtransformationprocessor-databasequeryprocessor-example:
 
 Example: Usage with the DatabaseQueryProcessor
 ==============================================
 
 Example usage for the Data Processor in conjunction with the
-:ref:`database-query data processor <DatabaseQueryProcessor>`.
+:ref:`database-query data processor <databasequeryprocessor>`.
 
 ..  literalinclude:: _RecordTransformationProcessor/_WithDatabaseQueryProcessor.typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 
-..  _RecordTransformationProcessor-fluidtemplate-example:
+..  _recordtransformationprocessor-fluidtemplate-example:
 
 Example: Usage with FLUIDTEMPLATE
 =================================
@@ -52,7 +52,7 @@ element "Text" has its data transformed for easier and enhanced usage.
 ..  literalinclude:: _RecordTransformationProcessor/_WithDatabaseFluidTemplate.typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
-..  _RecordTransformationProcessor-fluid:
+..  _recordtransformationprocessor-fluid:
 
 Usage in Fluid
 ==============
@@ -76,7 +76,7 @@ Overview of all possibilities:
 
 ..  contents:: Table of contents
 
-..  _RecordTransformationProcessor-options:
+..  _recordtransformationprocessor-options:
 
 Options of the `record-transformation` data processor
 =====================================================
@@ -90,7 +90,7 @@ Options of the `record-transformation` data processor
 
     ..  confval:: as
         :name: RecordTransformationProcessor-as
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: 'record' or 'records'
 
         The target variable containing the resolved record objects.

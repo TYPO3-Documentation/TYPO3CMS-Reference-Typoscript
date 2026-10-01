@@ -71,7 +71,7 @@ file
 
 ..  confval:: file
     :name: gifbuilder-image-file
-    :type: :ref:`imgResource <data-type-imgResource>`
+    :type: :ref:`imgResource <data-type-imgresource>`
 
     The image file.
 
@@ -83,7 +83,7 @@ mask
 
 ..  confval:: mask
     :name: gifbuilder-image-mask
-    :type: :ref:`imgResource <data-type-imgResource>`
+    :type: :ref:`imgResource <data-type-imgresource>`
 
     Optional mask image for the image file.
 

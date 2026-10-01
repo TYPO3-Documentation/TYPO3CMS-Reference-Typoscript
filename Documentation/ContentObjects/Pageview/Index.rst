@@ -201,13 +201,13 @@ Properties
     ..  confval:: dataProcessing.[key]
         :name: pageview-dataProcessing
         :type: :ref:`path <data-type-path>` with :ref:`stdWrap <stdwrap>`
-        :Example: :ref:`Example: Display a main menu and a breadcrumb on the page <cobj-pageview-dataProcessing-example>`
+        :Example: :ref:`Example: Display a main menu and a breadcrumb on the page <cobj-pageview-dataprocessing-example>`
 
-        Add one or multiple :ref:`data processors <dataProcessing>`. The
+        Add one or multiple :ref:`data processors <dataprocessing>`. The
         sub-property :typoscript:`options` can be used to pass parameters to the
         processor class.
 
-        It is recommended to use the  :ref:`PageContentFetchingProcessor <PageContentFetchingProcessor>`
+        It is recommended to use the  :ref:`PageContentFetchingProcessor <pagecontentfetchingprocessor>`
         to fetch the content elements from the page, respecting the
         :ref:`backend layout <t3coreapi:be-layout>`.
 
@@ -247,7 +247,7 @@ Properties
 Examples
 ========
 
-..  _cobj-pageview-dataProcessing-example:
+..  _cobj-pageview-dataprocessing-example:
 
 Example: Display a main menu and a breadcrumb on the page
 ---------------------------------------------------------

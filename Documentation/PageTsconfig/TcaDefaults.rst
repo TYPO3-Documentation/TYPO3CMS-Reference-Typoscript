@@ -2,7 +2,7 @@
 ..  index::
     TCAdefaults
     Records; Default values
-..  _pageTsTcaDefaults:
+..  _pagetstcadefaults:
 
 ===========
 TCAdefaults
@@ -20,7 +20,7 @@ for various TCA column types to be set or overridden, for instance for
 Default values can be set at the type level: `TCAdefaults.[table name].[field].types.[type]`
 or field level: `TCAdefaults.[table name].[field]`
 
-This key is also available at the :ref:`User TSconfig level <userTsTcaDefaults>`.
+This key is also available at the :ref:`User TSconfig level <usertstcadefaults>`.
 The order of setting default values when creating new records in the backend is
 this:
 
@@ -40,7 +40,7 @@ this:
     FlexForm data structure.
 
 
-..  _pageTsTcaDefaults-example:
+..  _pagetstcadefaults-example:
 
 Example: Do not hide newly created pages by default
 ===================================================
@@ -50,7 +50,7 @@ Example: Do not hide newly created pages by default
 
     TCAdefaults.pages.hidden = 0
 
-..  _pageTsTcaDefaults-example-type:
+..  _pagetstcadefaults-example-type:
 
 Example: Set type specific default values
 =========================================

@@ -7,7 +7,7 @@ CROP
 ====
 
 ..  note::
-    This object resets :ref:`workArea <gifbuilder-properties-workArea>` to the
+    This object resets :ref:`workArea <gifbuilder-properties-workarea>` to the
     new dimensions of the image!
 
 ..  _gifbuilder-crop-properties:
@@ -65,14 +65,14 @@ align
         align = c, b
 
 
-..  _gifbuilder-crop-backColor:
+..  _gifbuilder-crop-backcolor:
 
 backColor
 ---------
 
 ..  confval:: backColor
     :name: gifbuilder-crop-backColor
-    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-graphiccolor>` / :ref:`stdWrap <stdwrap>`
     :default: The original background color
 
     Background color.

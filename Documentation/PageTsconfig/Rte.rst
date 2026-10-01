@@ -3,7 +3,7 @@
     RTE
     Rich text editor
     see: Rich text editor; RTE
-..  _pageTsRte:
+..  _pagetsrte:
 
 ===
 RTE
@@ -14,7 +14,7 @@ Please refer to the :ref:`RTE chapter <t3coreapi:rte>` in Core API document
 for more general information on RTE configuration and data processing.
 
 The order in which the configuration for the RTE is loaded is (the first one which
-is set will be used, see :ref:`example <pageTsRteOverridePreset>` below):
+is set will be used, see :ref:`example <pagetsrteoverridepreset>` below):
 
 1.  preset defined for a specific field via page TSconfig
 2.  :ref:`richtextConfiguration <t3tca:columns-text-properties-richtextConfiguration>`
@@ -45,12 +45,12 @@ more information about configuring EXT:rte_ckeditor, see the
 ..  contents::
     :local:
 
-..  _pageTsRte-examples:
+..  _pagetsrte-examples:
 
 Examples
 ========
 
-..  _pageTsRte-example-disable:
+..  _pagetsrte-example-disable:
 
 Example: Disable RTE
 --------------------
@@ -67,7 +67,7 @@ Example: Disable RTE
 ..  literalinclude:: _codesnippets/_disable.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-..  _pageTsRteOverridePreset:
+..  _pagetsrteoverridepreset:
 
 Example: Override preset
 ------------------------
@@ -84,7 +84,7 @@ Summary:
 ..  literalinclude:: _codesnippets/_pageTsRteOverridePreset.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-..  _pageTsRte-properties:
+..  _pagetsrte-properties:
 
 Properties
 ==========
@@ -285,7 +285,7 @@ This means that options limited to `ts_transform` will also work for `ts_css` of
 
 ..  index::
     RTE; Classes allowed
-..  _rte-proc-allowedClasses:
+..  _rte-proc-allowedclasses:
 
 allowedClasses
 ~~~~~~~~~~~~~~
@@ -310,7 +310,7 @@ allowedClasses
 ..  index::
     RTE; HTML tags allowed
     RTE; Tags allowed
-..  _rte-proc-allowTags:
+..  _rte-proc-allowtags:
 
 allowTags
 ~~~~~~~~~
@@ -328,7 +328,7 @@ allowTags
 
 ..  index::
     RTE; Tags outside paragraphs
-..  _rte-proc-allowTagsOutside:
+..  _rte-proc-allowtagsoutside:
 
 allowTagsOutside
 ~~~~~~~~~~~~~~~~
@@ -356,7 +356,7 @@ Example: Allow only hr tags outside of p and div
 
 ..  index::
     RTE; block elements
-..  _rte-proc-blockElementList:
+..  _rte-proc-blockelementlist:
 
 blockElementList
 ~~~~~~~~~~~~~~~~
@@ -370,7 +370,7 @@ blockElementList
 
 ..  index::
     RTE; tags denyed
-..  _rte-proc-denyTags:
+..  _rte-proc-denytags:
 
 denyTags
 ~~~~~~~~
@@ -385,7 +385,7 @@ denyTags
 
 ..  index::
     RTE; HTMLparser DB entry
-..  _rte-proc-entryHTMLparser_db:
+..  _rte-proc-entryhtmlparser-db:
 
 entryHTMLparser_db
 ~~~~~~~~~~~~~~~~~~
@@ -401,7 +401,7 @@ entryHTMLparser_db
 
 ..  index::
     RTE; HTMLparser RTE entry
-..  _rte-proc-entryHTMLparser_rte:
+..  _rte-proc-entryhtmlparser-rte:
 
 entryHTMLparser_rte
 ~~~~~~~~~~~~~~~~~~~
@@ -417,7 +417,7 @@ entryHTMLparser_rte
 
 ..  index::
     RTE; HTMLparser DB exit
-..  _rte-proc-exitHTMLparser_db:
+..  _rte-proc-exithtmlparser-db:
 
 exitHTMLparser_db
 ~~~~~~~~~~~~~~~~~
@@ -433,7 +433,7 @@ exitHTMLparser_db
 
 ..  index::
     RTE; HTMLparser RTE exit
-..  _rte-proc-exitHTMLparser_rte:
+..  _rte-proc-exithtmlparser-rte:
 
 exitHTMLparser_rte
 ~~~~~~~~~~~~~~~~~~
@@ -450,7 +450,7 @@ exitHTMLparser_rte
 
 ..  index::
     RTE; HTMLparser DB
-..  _pageTsRteProcHtmlParserDb:
+..  _pagetsrteprochtmlparserdb:
 
 HTMLparser_db
 ~~~~~~~~~~~~~
@@ -475,7 +475,7 @@ HTMLparser_db
         Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options `keepNonMatchedTags`
         and `htmlSpecialChars` are *not* observed. They are preset internally.
 
-..  _pageTsRteProcHtmlParserDb-Sanitization:
+..  _pagetsrteprochtmlparserdb-sanitization:
 
 Sanitization
 ^^^^^^^^^^^^
@@ -507,7 +507,7 @@ configuration that applies:
 
 ..  index::
     RTE; HTMLparser RTE
-..  _rte-proc-HTMLparser_rte:
+..  _rte-proc-htmlparser-rte:
 
 HTMLparser_rte
 ~~~~~~~~~~~~~~
@@ -534,7 +534,7 @@ HTMLparser_rte
 
 ..  index::
     RTE; Transformations overruled
-..  _rte-proc-:
+..  _rte-proc:
 
 overruleMode
 ~~~~~~~~~~~~

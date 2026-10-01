@@ -7,7 +7,7 @@ IMG\_RESOURCE
 =============
 
 Objects of type IMG_RESOURCE returns a reference to an image, possibly
-wrapped with :ref:`stdWrap <cobj-img-resource-stdWrap>`. It can be used, for example,
+wrapped with :ref:`stdWrap <cobj-img-resource-stdwrap>`. It can be used, for example,
 for putting background images in tables or
 table rows or to import an image in your own include scripts.
 Depending on your use case you might prefer using the cObject
@@ -45,7 +45,7 @@ file
     :name: img-resource-file
     :type: :ref:`->imgResource <imgresource>`
 
-..  _cobj-img-resource-stdWrap:
+..  _cobj-img-resource-stdwrap:
 
 stdWrap
 -------

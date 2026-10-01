@@ -1,7 +1,7 @@
 :navigation-title: Browse
 ..  include:: /Includes.rst.txt
 ..  _hmenu-special-browse:
-..  _MenuProcessor-special-browse:
+..  _menuprocessor-special-browse:
 
 ===========================================
 Browse navigation - previous and next links
@@ -25,7 +25,7 @@ table of contents and so on.
 ..  contents::
     :local:
 
-..  _MenuProcessor-special-browse-properties:
+..  _menuprocessor-special-browse-properties:
 
 Properties
 ==========
@@ -113,7 +113,7 @@ Properties
 
         If set, pages marked with the `no search` checkbox will be excluded from the menu.
 
-..  _MenuProcessor-special-browse-example:
+..  _menuprocessor-special-browse-example:
 
 Example: Display a browse navigation
 ====================================

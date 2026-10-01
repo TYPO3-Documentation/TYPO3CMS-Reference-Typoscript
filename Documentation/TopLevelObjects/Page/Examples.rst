@@ -1,13 +1,13 @@
 ..  include:: /Includes.rst.txt
 ..  index::
     PAGE; Examples
-..  _page_examples:
+..  _page-examples:
 
 =============
 PAGE Examples
 =============
 
-..  _page_examples_hello_world:
+..  _page-examples-hello-world:
 
 A simple "Hello World" Example
 ==============================
@@ -19,7 +19,7 @@ Demonstrates:
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _page_examples_fluid:
+..  _page-examples-fluid:
 
 A page using a Fluid template
 =============================
@@ -31,7 +31,7 @@ Demonstrates:
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _page_examples_ajax:
+..  _page-examples-ajax:
 
 A page type used for ajax requests
 ==================================
@@ -50,7 +50,7 @@ This can be achieved for example by using a non-cacheable array, the
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _page_examples_json:
+..  _page-examples-json:
 
 A page type used for JSON data
 ==============================

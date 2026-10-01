@@ -2,7 +2,7 @@
 ..  index::
     Functions; imgResource
     imgResource
-..  _data-type-imgResource:
+..  _data-type-imgresource:
 ..  _imgresource:
 
 ===========
@@ -42,7 +42,7 @@ GIFBUILDER:
 Properties
 ==========
 
-..  _data-type-imageExtension:
+..  _data-type-imageextension:
 ..  _imgresource-ext:
 
 ext
@@ -150,7 +150,7 @@ sample
     does not use anti-aliasing and is therefore much faster.
 
 
-..  _imgresource-noScale:
+..  _imgresource-noscale:
 
 noScale
 -------
@@ -225,7 +225,7 @@ crop
 
 
 
-..  _imgresource-cropVariant:
+..  _imgresource-cropvariant:
 
 cropVariant
 -----------
@@ -283,7 +283,7 @@ import
         :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _imgresource-treatIdAsReference:
+..  _imgresource-treatidasreference:
 
 treatIdAsReference
 ------------------
@@ -298,7 +298,7 @@ treatIdAsReference
     example with :typoscript:`import.data = levelmedia: ...`.
 
 
-..  _imgresource-maxW:
+..  _imgresource-maxw:
 
 maxW
 ----
@@ -310,7 +310,7 @@ maxW
     Maximum width
 
 
-..  _imgresource-maxH:
+..  _imgresource-maxh:
 
 maxH
 ----
@@ -322,7 +322,7 @@ maxH
     Maximum height
 
 
-..  _imgresource-minW:
+..  _imgresource-minw:
 
 minW
 ----
@@ -334,7 +334,7 @@ minW
     Minimum width (overrules maxW/maxH)
 
 
-..  _imgresource-minH:
+..  _imgresource-minh:
 
 minH
 ----
@@ -346,7 +346,7 @@ minH
     Minimum height (overrules maxW/maxH)
 
 
-..  _imgresource-stripProfile:
+..  _imgresource-stripprofile:
 
 stripProfile
 ------------
@@ -392,7 +392,7 @@ m.mask
 
 ..  confval:: m.mask
     :name: imgresource-masking-mask
-    :type: :ref:`imgResource <data-type-imgResource>`
+    :type: :ref:`imgResource <data-type-imgresource>`
 
     The mask with which the image is masked onto :typoscript:`m.bgImg`. Both :typoscript:`m.mask`
     and :typoscript:`m.bgImg` **is scaled to fit** the size of the imgResource image!
@@ -400,26 +400,26 @@ m.mask
     **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
 
-..  _imgresource-masking-bgImg:
+..  _imgresource-masking-bgimg:
 
 m.bgImg
 ~~~~~~~
 
 ..  confval:: m.bgImg
     :name: imgresource-masking-bgImg
-    :type: :ref:`imgResource <data-type-imgResource>`
+    :type: :ref:`imgResource <data-type-imgresource>`
 
     **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
 
-..  _imgresource-masking-bottomImg:
+..  _imgresource-masking-bottomimg:
 
 m.bottomImg
 ~~~~~~~~~~~
 
 ..  confval:: m.bottomImg
     :name: imgresource-masking-bottomImg
-    :type: :ref:`imgResource <data-type-imgResource>`
+    :type: :ref:`imgResource <data-type-imgresource>`
 
     An image masked by :typoscript:`m.bottomImg_mask` onto :typoscript:`m.bgImg` before the
     imgResources is masked by :typoscript:`m.mask`.
@@ -433,14 +433,14 @@ m.bottomImg
     images.
 
 
-..  _imgresource-masking-bottomImg-mask:
+..  _imgresource-masking-bottomimg-mask:
 
 m.bottomImg\_mask
 ~~~~~~~~~~~~~~~~~
 
 ..  confval:: m.bottomImg_mask
     :name: imgresource-masking-bottomImg-mask
-    :type: :ref:`imgResource <data-type-imgResource>`
+    :type: :ref:`imgResource <data-type-imgresource>`
 
     (optional)
 

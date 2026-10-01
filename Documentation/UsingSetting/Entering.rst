@@ -2,7 +2,7 @@
 
 ..  include:: /Includes.rst.txt
 ..  index:: TypoScript; TypoScript backend module
-..  _typoscript_module:
+..  _typoscript-module:
 ..  _typoscript-syntax-typoscript-templates-structure:
 
 =========================
@@ -30,7 +30,7 @@ stored in the database in table `sys_template`).
 ..  contents:: The following submodules are available:
     :depth: 1
 
-..  _typoscript_module_overview:
+..  _typoscript-module-overview:
 
 Submodule "TypoScript records overview"
 =======================================
@@ -74,7 +74,7 @@ The documentation of the constant editors comment format can still be found
 at `Comment Syntax <https://docs.typo3.org/permalink/t3tsref:typoscript-syntax-constant-editor-comments@12.4>`_
 
 
-..  _typoscript_module_edit:
+..  _typoscript-module-edit:
 
 Submodule "Edit TypoScript Record"
 ==================================
@@ -146,7 +146,7 @@ TypoScript record.
 
 
 ..  index:: TypoScript; Include other TypoScript templates
-..  _basedOn:
+..  _basedon:
 
 Include other TypoScript records
 --------------------------------

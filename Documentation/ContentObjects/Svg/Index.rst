@@ -76,7 +76,7 @@ src
 
         src = fileadmin/svg/tiger.svg
 
-..  _cobj-svg-renderMode:
+..  _cobj-svg-rendermode:
 
 renderMode
 ----------
@@ -87,7 +87,7 @@ renderMode
 
     Setting `renderMode` to inline will render an inline version of the SVG.
 
-..  _cobj-svg-stdWrap:
+..  _cobj-svg-stdwrap:
 
 stdWrap
 -------
