@@ -58,8 +58,7 @@ return [
       'page-contentFromPid-hideinmenu' => 'apps-pagetree-page-content-from-page-hideinmenu',
       'default' => 'apps-pagetree-page-default',
     ],
-    // Will be filled automatically, if ctrl.security.ignorePageTypeRestrictions is enabled for a table.
-    'defaultAllowedRecordTypes' => [],
+    'searchFields' => 'title,nav_title,subtitle,url,slug,keywords,description,abstract,author,author_email',
   ],
   // ...
 ];
