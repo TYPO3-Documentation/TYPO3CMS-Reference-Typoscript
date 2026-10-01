@@ -1,4 +1,4 @@
-plugin.tx_blogexample_admin {
+plugin.tx_myextension_admin {
   persistence {
     enableAutomaticCacheClearing = 0
   }

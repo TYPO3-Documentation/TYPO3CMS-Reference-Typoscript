@@ -1,4 +1,4 @@
-[{$tx_my_extension.settings.feature1Enabled} == 1]
+[{$tx_myextension.settings.feature1Enabled} == 1]
 page.10.value = The feature 1 of my_extension is enabled.
 [ELSE]
 page.10.value = The feature 1 of my_extension is not enabled.

@@ -26,7 +26,7 @@ has a better compression (= smaller file size) than jpg files.
     and older or systems forked from that may lack AVIF support.
 
 ..  literalinclude:: _snippets/_avif.typoscript
-    :caption: EXT:config/sites/my_site/setup.typoscript
+    :caption: config/sites/my_site/setup.typoscript
 
 
 Masking semi-transparent images (Logos) onto other images

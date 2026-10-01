@@ -490,7 +490,7 @@ description
     ..  code-block:: typoscript
         :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-        TCEFORM.tt_content.header.description = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:override_description
+        TCEFORM.tt_content.header.description = LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:override_description
 
 ..  index::
     Records; field disabled
