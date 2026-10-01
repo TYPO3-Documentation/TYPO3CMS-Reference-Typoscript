@@ -1,6 +1,6 @@
 :navigation-title: page-content
 ..  include:: /Includes.rst.txt
-..  _PageContentFetchingProcessor:
+..  _pagecontentfetchingprocessor:
 
 =============================
 `page-content` data processor
@@ -19,7 +19,7 @@ display the content elements.
 
 ..  contents:: Table of contents
 
-..  _PageContentFetchingProcessor-options:
+..  _pagecontentfetchingprocessor-options:
 
 Options
 =======
@@ -47,7 +47,7 @@ Options
 
         Only if the condition is met the data processor is executed.
 
-..  _PageContentFetchingProcessor-example:
+..  _pagecontentfetchingprocessor-example:
 
 Example: Use the page-content data processor to display the content
 ===================================================================
@@ -75,7 +75,7 @@ The :ref:`backend layout <t3coreapi:be-layout>` is defined like this:
 ..  literalinclude:: _PageContentFetchingProcessor/_BackendLayout.tsconfig
     :caption: config/sites/my-site/page.tsconfig
 
-..  _PageContentFetchingProcessor-AfterContentHasBeenFetchedEvent:
+..  _pagecontentfetchingprocessor-aftercontenthasbeenfetchedevent:
 
 Modify the result via AfterContentHasBeenFetchedEvent
 =====================================================

@@ -25,7 +25,7 @@ gets cached, as opposed to the :ref:`getText.getenv <data-type-gettext-getenv>`
 feature.
 
 
-..  _getEnv-examples:
+..  _getenv-examples:
 
 Example
 =======

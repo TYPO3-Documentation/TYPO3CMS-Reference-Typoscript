@@ -83,7 +83,7 @@ effects
 
 ..  confval:: imageLinkWrap.effects
     :name: imagelinkwrap-effects
-    :type: like :ref:`EFFECT <gifbuilder-effect>` of :ref:`GIFBUILDER <GIFBUILDER>`
+    :type: like :ref:`EFFECT <gifbuilder-effect>` of :ref:`GIFBUILDER <gifbuilder>`
     :default: 0
 
     Apply image effects to the preview image.
@@ -129,7 +129,7 @@ title
     Needs :typoscript:`JSwindow = 1`.
 
 
-..  _imagelinkwrap-bodyTag:
+..  _imagelinkwrap-bodytag:
 
 bodyTag
 -------
@@ -186,7 +186,7 @@ Example: Use an alternative target for the JavaScript Window
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _imagelinkwrap-JSwindow:
+..  _imagelinkwrap-jswindow:
 
 JSwindow
 --------
@@ -201,7 +201,7 @@ JSwindow
     the dimensions of the image.
 
 
-..  _imagelinkwrap-JSwindow-expand:
+..  _imagelinkwrap-jswindow-expand:
 
 JSwindow.expand
 ---------------
@@ -217,7 +217,7 @@ JSwindow.expand
     preview window.
 
 
-..  _imagelinkwrap-JSwindow-newWindow:
+..  _imagelinkwrap-jswindow-newwindow:
 
 JSwindow.newWindow
 ------------------
@@ -237,7 +237,7 @@ JSwindow.newWindow
     This guarantees that each image is opened in a new window.
 
 
-..  _imagelinkwrap-JSwindow-altUrl:
+..  _imagelinkwrap-jswindow-alturl:
 
 JSwindow.altUrl
 ---------------
@@ -250,7 +250,7 @@ JSwindow.altUrl
     Otherwise the default "showpic" script will be used.
 
 
-..  _imagelinkwrap-JSwindow-altUrl-noDefaultParams:
+..  _imagelinkwrap-jswindow-alturl-nodefaultparams:
 
 JSwindow.altUrl\_noDefaultParams
 --------------------------------
@@ -279,7 +279,7 @@ typolink
     everything else.
 
 
-..  _imagelinkwrap-directImageLink:
+..  _imagelinkwrap-directimagelink:
 
 directImageLink
 ---------------
@@ -294,7 +294,7 @@ directImageLink
     "showpic" script will be used.
 
 
-..  _imagelinkwrap-linkParams:
+..  _imagelinkwrap-linkparams:
 
 linkParams
 ----------
@@ -312,21 +312,21 @@ linkParams
 Example: Use alternative parameters for the a-tag
 Needs :typoscript:`JSwindow = 0`.
 
-..  _imageLinkWrap-example-topup:
-..  _imageLinkWrap-example:
+..  _imagelinkwrap-example-topup:
+..  _imagelinkwrap-example:
 
 Example: Use alternative parameters for the a-tag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This way it is possible to use a lightbox and to display
 resized images in the frontend. A more complete example is
-:ref:`Example: Images in lightbox "fancybox" <imageLinkWrap-example-fancybox>`.
+:ref:`Example: Images in lightbox "fancybox" <imagelinkwrap-example-fancybox>`.
 
 ..  literalinclude:: _codesnippets/_imageLinkWrap.typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _imagelinkwrap-stdWrap:
+..  _imagelinkwrap-stdwrap:
 
 stdWrap
 -------
@@ -349,12 +349,12 @@ If set to True (:typoscript:`= 1`) then this function attaches a link to an imag
 that opens a special view of the image. By default the link points to
 the a "showpic" script that knows how to deal with several parameters.
 The script checks an md5-hash to make sure that the parameters are unchanged.
-See :ref:`Basic example: Create a link to the showpic script <imageLinkWrap-basic-example-showpic>`.
+See :ref:`Basic example: Create a link to the showpic script <imagelinkwrap-basic-example-showpic>`.
 
 There is an alternative. You may set :typoscript:`directImageLink` to True
 (:typoscript:`= 1`). In that case the link will directly point to the image
 - no intermediate script is involved. This method can well be used to display
-images in a lightbox. See :ref:`Basic example: Link directly to the original image <imageLinkWrap-basic-example-directImageLink>`
+images in a lightbox. See :ref:`Basic example: Link directly to the original image <imagelinkwrap-basic-example-directimagelink>`
 and the lightbox examples on this page.
 
 If :typoscript:`JSwindow` is True (:typoscript:`= 1`) more fancy
@@ -380,7 +380,7 @@ Implementation
 Examples for imageLinkWrap
 ==========================
 
-..  _imageLinkWrap-basic-example-showpic:
+..  _imagelinkwrap-basic-example-showpic:
 
 Basic example: Create a link to the showpic script
 --------------------------------------------------
@@ -388,7 +388,7 @@ Basic example: Create a link to the showpic script
 ..  literalinclude:: _codesnippets/_showpic.typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
-..  _imageLinkWrap-basic-example-directImageLink:
+..  _imagelinkwrap-basic-example-directimagelink:
 
 Basic example: Link directly to the original image
 --------------------------------------------------
@@ -397,7 +397,7 @@ Basic example: Link directly to the original image
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _imageLinkWrap-example-popup-window:
+..  _imagelinkwrap-example-popup-window:
 
 Example: Larger display in a popup window
 -----------------------------------------
@@ -406,7 +406,7 @@ Example: Larger display in a popup window
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _imageLinkWrap-example-printlink:
+..  _imagelinkwrap-example-printlink:
 
 Example: Printlink
 ------------------
@@ -416,7 +416,7 @@ Example: Printlink
 
 
 
-..  _imageLinkWrap-example-fancybox:
+..  _imagelinkwrap-example-fancybox:
 
 Example: Images in lightbox "fancybox"
 --------------------------------------

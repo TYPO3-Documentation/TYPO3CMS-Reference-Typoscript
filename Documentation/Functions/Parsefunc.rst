@@ -16,7 +16,7 @@ parseFunc
     the htmlSanitizer.
 
 This object is used to parse some content for stuff like special typo
-tags, the :ref:`makelinks <makeLinks>`-things and so on...
+tags, the :ref:`makelinks <makelinks>`-things and so on...
 
 ..  contents::
     :local:
@@ -27,7 +27,7 @@ tags, the :ref:`makelinks <makeLinks>`-things and so on...
 Properties
 ==========
 
-..  _parsefunc-externalBlocks:
+..  _parsefunc-externalblocks:
 
 externalBlocks
 --------------
@@ -121,7 +121,7 @@ short
         :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _parsefunc-plainTextStdWrap:
+..  _parsefunc-plaintextstdwrap:
 
 plainTextStdWrap
 ----------------
@@ -133,7 +133,7 @@ plainTextStdWrap
     This is :ref:`stdWrap <stdwrap>` properties for all non-tag content.
 
 
-..  _parsefunc-userFunc:
+..  _parsefunc-userfunc:
 
 userFunc
 --------
@@ -151,27 +151,27 @@ userFunc
             (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
 
     This passes the non-tag content to a function of your own choice.
-    Similar to, for example, :ref:`postUserFunc <stdwrap-postUserFunc>` in :ref:`stdWrap <stdWrap>`,
-    or :ref:`typolink.userFunc <typolink-userFunc>`.
+    Similar to, for example, :ref:`postUserFunc <stdwrap-postuserfunc>` in :ref:`stdWrap <stdwrap>`,
+    or :ref:`typolink.userFunc <typolink-userfunc>`.
 
-..  _parsefunc-nonTypoTagStdWrap:
+..  _parsefunc-nontypotagstdwrap:
 
 nonTypoTagStdWrap
 -----------------
 
 ..  confval:: nonTypoTagStdWrap
     :name: parsefunc-nonTypoTagStdWrap
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
-    Like :ref:`plainTextStdWrap <parsefunc-plainTextStdWrap>`. Difference:
+    Like :ref:`plainTextStdWrap <parsefunc-plaintextstdwrap>`. Difference:
 
     :typoscript:`parsefunc-plainTextStdWrap` works on ALL non-tag pieces in the
-    text. :ref:`nonTypoTagStdWrap <parsefunc-nonTypoTagStdWrap>` is post processing of all text
+    text. :ref:`nonTypoTagStdWrap <parsefunc-nontypotagstdwrap>` is post processing of all text
     (including tags) between special TypoTags
     (unless :typoscript:`breakoutTypoTagContent` is not set for the TypoTag).
 
 
-..  _parsefunc-nonTypoTagUserFunc:
+..  _parsefunc-nontypotaguserfunc:
 
 nonTypoTagUserFunc
 ------------------
@@ -188,8 +188,8 @@ nonTypoTagUserFunc
             attribute :php:`#[AsAllowedCallable]`
             (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
 
-    Like :ref:`userFunc <parsefunc-userFunc>`.
-    Differences is (like :ref:`nonTypoTagStdWrap <parsefunc-nonTypoTagStdWrap>`)
+    Like :ref:`userFunc <parsefunc-userfunc>`.
+    Differences is (like :ref:`nonTypoTagStdWrap <parsefunc-nontypotagstdwrap>`)
     that this is post processing of all content pieces around TypoTags while
     :typoscript:`userFunc` processes all non-tag content.
     (Notice: :typoscript:`breakoutTypoTagContent` must be set for the TypoTag
@@ -223,7 +223,7 @@ tags
     something.
 
 
-..  _parsefunc-allowTags:
+..  _parsefunc-allowtags:
 
 allowTags
 ---------
@@ -248,7 +248,7 @@ allowTags
     unless :typoscript:`htmlSanitize` is disabled explicitly.
 
     If a tag is found in :typoscript:`allowTags`, the corresponding tag in
-    :ref:`denyTags <parsefunc-denyTags>` is ignored!
+    :ref:`denyTags <parsefunc-denytags>` is ignored!
 
     ..  rubric:: Example
 
@@ -268,7 +268,7 @@ allowTags
         + lib.parseFunc_RTE.allowTags = b,span,i,em,wbr..
 
 
-..  _parsefunc-denyTags:
+..  _parsefunc-denytags:
 
 denyTags
 --------
@@ -279,7 +279,7 @@ denyTags
 
     List of tags, which may **not** exist in code! (use :typoscript:`*` for all.)
 
-    Lowest priority: If a tag is **not** found in :ref:`allowTags <parsefunc-allowTags>`,
+    Lowest priority: If a tag is **not** found in :ref:`allowTags <parsefunc-allowtags>`,
     :typoscript:`denyTags` is checked.
     If denyTags is not :typoscript:`*` and the tag is not found in the list, the tag may exist!
 

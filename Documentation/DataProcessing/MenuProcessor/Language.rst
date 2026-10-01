@@ -11,7 +11,7 @@ Pure TypoScript language menu (For backward compatibility)
     It is still possible to create a menu with :typoscript:`special = userfunction`
     for backward compatibility reasons to be used with HMENU.
 
-    The :ref:`LanguageMenuProcessor <LanguageMenuProcessor>` can be used to
+    The :ref:`LanguageMenuProcessor <languagemenuprocessor>` can be used to
     create a language menu styled by Fluid.
 
 See :ref:`TYPO3 11.5 - Language menu <t3tsref/11.5:hmenu-special-language>` for examples

@@ -23,7 +23,7 @@ languages. Each register can store a complex TypoScript block. Use
 :ref:`RESTORE_REGISTER <cobj-restore-register>` to pull a variable from the stack
 and curly braces around a variable name to read the current value of the
 variable. You need a :ref:`data <stdwrap-data>` or a
-:ref:`dataWrap <stdwrap-dataWrap>` cObject. The registers cannot be read
+:ref:`dataWrap <stdwrap-datawrap>` cObject. The registers cannot be read
 on other places than inside of these cObjects.
 
 ..  _using-setting-register-example:

@@ -68,7 +68,7 @@ defaultUploadFolder
     :type: string
 
     Identical to the user TSconfig setting
-    :ref:`options.defaultUploadFolder <useroptions-defaultUploadFolder>`,
+    :ref:`options.defaultUploadFolder <useroptions-defaultuploadfolder>`,
     this allows the setting of a default upload folder per page.
 
     If specified and the given folder exists, this setting will override the

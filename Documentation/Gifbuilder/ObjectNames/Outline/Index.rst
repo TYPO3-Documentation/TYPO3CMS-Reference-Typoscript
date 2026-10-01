@@ -30,12 +30,12 @@ color
 
 ..  confval:: color
     :name: gifbuilder-outline-color
-    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-graphiccolor>` / :ref:`stdWrap <stdwrap>`
 
     Color of the outline.
 
 
-..  _gifbuilder-outline-textObjNum:
+..  _gifbuilder-outline-textobjnum:
 
 textObjNum
 ----------

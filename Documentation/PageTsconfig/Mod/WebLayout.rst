@@ -24,7 +24,7 @@ Configuration options of the :guilabel:`Content > Layout` module.
     Localization; Independently translated content
     allowInconsistentLanguageHandling
 
-..  _mod-web-layout-allowInconsistentLanguageHandling:
+..  _mod-web-layout-allowinconsistentlanguagehandling:
 
 allowInconsistentLanguageHandling
 =================================
@@ -41,7 +41,7 @@ allowInconsistentLanguageHandling
 
     If you want to go back to the old, inconsistent behavior, you can toggle it back on using this switch.
 
-..  _mod-web-layout-allowInconsistentLanguageHandling-example:
+..  _mod-web-layout-allowinconsistentlanguagehandling-example:
 
 Example: Allow inconsistent language modes
 ------------------------------------------
@@ -57,7 +57,7 @@ language mode:
 
 ..  index:: BackendLayouts
 
-..  _mod-web-layout-backendLayouts:
+..  _mod-web-layout-backendlayouts:
 
 BackendLayouts
 ==============
@@ -73,7 +73,7 @@ BackendLayouts
 
     See also the dedicated chapter :ref:`Backend layouts <backend-layouts>`.
 
-..  _mod-web-layout-backendLayouts-example:
+..  _mod-web-layout-backendlayouts-example:
 
 Example: Define a backend layout
 --------------------------------
@@ -86,7 +86,7 @@ Example: Define a backend layout
     defaultLanguageLabel
     Localization; Default language label
 
-..  _mod-web-layout-defaultLanguageLabel:
+..  _mod-web-layout-defaultlanguagelabel:
 
 defaultLanguageLabel
 ====================
@@ -104,13 +104,13 @@ defaultLanguageLabel
 
     Alternate label for "Default" when language labels are shown in the interface.
 
-    Overrides the same property from :ref:`mod.SHARED <pageTsConfigSharedDefaultLanguageLabel>` if set.
+    Overrides the same property from :ref:`mod.SHARED <pagetsconfigshareddefaultlanguagelabel>` if set.
 
 ..  index::
     defLangBinding
     Localization; Show default content element
 
-..  _mod-web-layout-defLangBinding:
+..  _mod-web-layout-deflangbinding:
 
 defLangBinding
 ==============
@@ -137,7 +137,7 @@ defLangBinding
     hideRestrictedCols
     Page columns; Hide restricted
 
-..  _mod-web-layout-hideRestrictedCols:
+..  _mod-web-layout-hiderestrictedcols:
 
 hideRestrictedCols
 ==================
@@ -170,7 +170,7 @@ hideRestrictedCols
     Localization; Free mode
     Localization; Copy content elements
 
-..  _mod-web-layout-localization-enableCopy:
+..  _mod-web-layout-localization-enablecopy:
 
 localization.enableCopy
 =======================
@@ -182,7 +182,7 @@ localization.enableCopy
 
     Enables the creation of copies of content elements into languages in the translation wizard ("free mode").
 
-..  _mod-web-layout-localization-enableCopy-example:
+..  _mod-web-layout-localization-enablecopy-example:
 
 Example: Disable free mode button for localization
 --------------------------------------------------
@@ -200,7 +200,7 @@ Example: Disable free mode button for localization
     Localization; Connected mode
     Localization; Translate content elements
 
-..  _mod-web-layout-localization-enableTranslate:
+..  _mod-web-layout-localization-enabletranslate:
 
 localization.enableTranslate
 ============================
@@ -212,7 +212,7 @@ localization.enableTranslate
 
     Enables simple translations of content elements in the translation wizard ("connected mode").
 
-..  _mod-web-layout-localization-enableTranslate-example:
+..  _mod-web-layout-localization-enabletranslate-example:
 
 Example: Disable "connected mode" button for translation
 --------------------------------------------------------

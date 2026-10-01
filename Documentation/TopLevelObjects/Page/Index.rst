@@ -48,7 +48,7 @@ introduction into this object.
 If no `PAGE` object is found, the error "No page configured for type=0." is
 displayed. See chapter :ref:`Troubleshooting <t3tsref:guide-troubleshooting>`.
 
-..  _page_output:
+..  _page-output:
 
 Output of the PAGE object
 =========================
@@ -96,7 +96,7 @@ should also be set, for example:
     PAGE; typeNum
     PAGE; Multiple pages
 
-..  _page_multiple:
+..  _page-multiple:
 
 Multiple pages
 ==============
@@ -115,7 +115,7 @@ Example:
 ..  literalinclude:: _codesnippets/_multiple.typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
-See :ref:`An example page type used for JSON data <page_examples_json>`
+See :ref:`An example page type used for JSON data <page-examples-json>`
 about an example for the latter page.
 
 In the frontend, the original URLs that are generated will include the type and
@@ -124,7 +124,7 @@ an id parameter (for the page id), example (for json and page id 22):
 :samp:`/index.php?id=22&type=1`
 
 
-..  _page_guidelines:
+..  _page-guidelines:
 
 Guidelines
 ----------
@@ -164,7 +164,7 @@ is very common and most documentation will imply that your main page object is c
 ..  _setup-page-typenum:
 ..  _setup-page-wrap:
 ..  _setup-page-array:
-..  _page_properties:
+..  _page-properties:
 
 Properties
 ==========
@@ -183,8 +183,8 @@ Properties
 
         :Examples:
             *   :ref:`Render "Hello World" <setup-page-array-example>`
-            *   :ref:`A simple "Hello World" Example <page_examples_hello_world>`
-            *   :ref:`A page using a Fluid template <page_examples_fluid>`
+            *   :ref:`A simple "Hello World" Example <page-examples-hello-world>`
+            *   :ref:`A page using a Fluid template <page-examples-fluid>`
 
         These properties can be used to define any number of objects,
         just like you can do with a :ref:`COA content object <cobj-coa>`.
@@ -241,8 +241,8 @@ Properties
         :type: :ref:`->CONFIG <config>`
 
         :Examples:
-               *   :ref:`A page type used for ajax requests <page_examples_ajax>`
-               *   :ref:`A page type used for JSON data <page_examples_json>`
+               *   :ref:`A page type used for ajax requests <page-examples-ajax>`
+               *   :ref:`A page type used for JSON data <page-examples-json>`
 
             Configuration for the page. Any entries made here override the same
             entries in the top-level object :ref:`config: TypoScript configuration <config>`.
@@ -265,7 +265,7 @@ Properties
         :type: :ref:`cObject <data-type-cobject>`
         :Example: :ref:`Add a script and a comment to the page footer <setup-page-footerdata-example>`
 
-        Same as :ref:`Properties <setup-page-headerData>`,
+        Same as :ref:`Properties <setup-page-headerdata>`,
         except that this block gets included at the bottom of the page
         (just before the closing :html:`</body>` tag).
 
@@ -657,8 +657,8 @@ Properties
         :default: 0
 
         :Examples:
-            *   :ref:`A page type used for ajax requests <page_examples_ajax>`
-            *   :ref:`A page type used for JSON data <page_examples_json>`
+            *   :ref:`A page type used for ajax requests <page-examples-ajax>`
+            *   :ref:`A page type used for JSON data <page-examples-json>`
 
         This determines the typeId of the page. The `&type=` parameter in the URL
         determines, which page object will be rendered. The value defaults to 0 for
@@ -673,13 +673,13 @@ Properties
 
         Wraps the content of the cObject array.
 
-..  _page_property-examples:
+..  _page-property-examples:
 
 Page property examples
 ======================
 
 Also see the dedicated chapter of how to use the
-PAGE object: :ref:`PAGE Examples <page_examples>`
+PAGE object: :ref:`PAGE Examples <page-examples>`
 
 ..  _setup-page-array-example:
 
