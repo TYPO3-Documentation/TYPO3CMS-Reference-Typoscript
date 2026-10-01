@@ -25,7 +25,7 @@ User TSconfig v15 changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  deprecated:: 14.0
-    See `Deprecation: #106969 - Deprecate User TSConfig auth.BE.redirectToURL <https://docs.typo3.org/permalink/changelog:deprecation-106969-1750853865>`_.
+    :changelog: deprecation-106969-1750853865
 
 The TSconfig option :tsconfig:`auth.BE.redirectToURL` has been
 removed.
@@ -72,7 +72,7 @@ See also: `TypoScriptFrontendController, TSFE <https://docs.typo3.org/permalink/
 ======================================================
 
 ..  versionchanged:: 14.0
-    See `Breaking: #108114 - Global frontend content link prefixing removed <https://docs.typo3.org/permalink/changelog:breaking-108114-1763085569>`_
+    :changelog: breaking-108114-1763085569
 
 Instances should check the rendered frontend for broken links after upgrading
 to TYPO3 v14 and substitute hard coded link generation with proper API calls,
