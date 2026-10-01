@@ -55,13 +55,9 @@ Example:
     since this is triggered by the values listed in the `ctrl` section of
     :file:`typo3/sysext/core/Configuration/TCA/pages.php`:
 
-    ..  code-block:: php
+    ..  literalinclude:: _codesnippets/_pages.php
         :caption: typo3/sysext/core/Configuration/TCA/pages.php
-
-        'ctrl' => [
-          'useColumnsForDefaultValues' => 'doktype,fe_group,hidden',
-          ...
-        ]
+        :visible-lines: 1-4, 17, 63-65
 
 If 'hidden' is in the list, it gets overridden with the "neighbor" record value (see
 :php:`\TYPO3\CMS\Backend\Form\FormDataProvider\DatabaseRowInitializeNew::setDefaultsFromNeighborRow`)
