@@ -17,7 +17,7 @@ HMENU
 
 Objects of type HMENU generate hierarchical menus. In a
 :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` the HMENU can be used as
-a DataProcessor called :ref:`MenuProcessor <MenuProcessor>`, which
+a DataProcessor called :ref:`MenuProcessor <menuprocessor>`, which
 internally uses the HMENU functionality.
 
 The cObject HMENU allows you to define the global settings of the menu

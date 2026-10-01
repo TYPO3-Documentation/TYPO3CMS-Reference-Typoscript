@@ -1,6 +1,6 @@
 :navigation-title: menu
 ..  include:: /Includes.rst.txt
-..  _MenuProcessor:
+..  _menuprocessor:
 
 =====================
 `menu` data processor
@@ -25,7 +25,7 @@ Additional data processing is supported and will be applied to each record.
     <https://github.com/b13/menus/blob/master/README.md>`__ for more
     information.
 
-..  _MenuProcessor-options:
+..  _menuprocessor-options:
 
 Options
 =======
@@ -35,7 +35,7 @@ Options
     :type:
     :Default:
 
-    ..  _MenuProcessor-as:
+    ..  _menuprocessor-as:
 
     ..  rubric:: as
 
@@ -115,25 +115,25 @@ Options
 
             page.10.dataProcessing.20.excludeUidList = 34,2,current
 
-    ..  _MenuProcessor-expandAll:
+    ..  _menuprocessor-expandall:
 
     ..  rubric:: expandAll
 
     ..  confval:: expandAll
         :name: MenuProcessor-expandAll
-        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
         :default: 1
         :Example: 0
 
         Include all submenus (`1`) or only those of the active pages (`0`).
 
-    ..  _MenuProcessor-levels:
+    ..  _menuprocessor-levels:
 
     ..  rubric:: levels
 
     ..  confval:: levels
         :name: MenuProcessor-levels
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: 1
         :Example: 5
 
@@ -148,13 +148,13 @@ Options
         If set, pages with the checkbox "Page enabled in menus" disabled will still be included
         in menus.
 
-    ..  _MenuProcessor-includeSpacer:
+    ..  _menuprocessor-includespacer:
 
     ..  rubric:: includeSpacer
 
     ..  confval:: includeSpacer
         :name: MenuProcessor-includeSpacer
-        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
         :default: 0
         :Example: 1
 
@@ -200,7 +200,7 @@ Options
         `language-menu data processor <https://docs.typo3.org/permalink/t3tsref:languagemenuprocessor>`_
         to create language menus.
 
-        See the section about the :ref:`.special property <MenuProcessor-special>`.
+        See the section about the :ref:`.special property <menuprocessor-special>`.
 
         ..  rubric:: value
 
@@ -210,21 +210,21 @@ Options
 
             List of page uid's to use for the special menu. What they are used
             for depends on the menu type as defined by ".special"; see the
-            section about the :ref:`.special property <MenuProcessor-special>`.
+            section about the :ref:`.special property <menuprocessor-special>`.
 
-    ..  _MenuProcessor-titleField:
+    ..  _menuprocessor-titlefield:
 
     ..  rubric:: titleField
 
     ..  confval:: titleField
         :name: MenuProcessor-titleField
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: "nav_title // title"
         :Example: "subtitle"
 
         Fields to be used as title.
 
-..  _MenuProcessor-special:
+..  _menuprocessor-special:
 
 Special menu types
 ==================
@@ -237,12 +237,12 @@ The following special menu types are available:
 
     *
 
-..  _MenuProcessor-example-two-levels:
+..  _menuprocessor-example-two-levels:
 
 Example: Two level menu of the web page
 =======================================
 
-Please see also :ref:`About the examples <dataProcessing-about-examples>`.
+Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 ..  rubric:: TypoScript
 

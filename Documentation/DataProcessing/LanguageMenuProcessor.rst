@@ -1,6 +1,6 @@
 :navigation-title: language-menu
 ..  include:: /Includes.rst.txt
-..  _LanguageMenuProcessor:
+..  _languagemenuprocessor:
 
 ============================
 language-menu data processor
@@ -21,7 +21,7 @@ assigned to the :typoscript:`FLUIDTEMPLATE` as a variable.
     <https://github.com/b13/menus/blob/master/README.md>`__ for more
     information.
 
-..  _LanguageMenuProcessor-options:
+..  _languagemenuprocessor-options:
 
 Options:
 ========
@@ -31,7 +31,7 @@ Options:
     :type:
     :Default:
 
-    ..  _LanguageMenuProcessor-if:
+    ..  _languagemenuprocessor-if:
 
     ..  rubric:: if
 
@@ -41,13 +41,13 @@ Options:
 
         Only if the condition is met the data processor is executed.
 
-    ..  _LanguageMenuProcessor-languages:
+    ..  _languagemenuprocessor-languages:
 
     ..  rubric:: languages
 
     ..  confval:: languages
         :name: LanguageMenuProcessor-languages
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: "auto"
         :Example: "0,1,2"
 
@@ -55,20 +55,20 @@ Options:
         creation or `auto` to load from the :ref:`site configuration
         <t3coreapi:sitehandling>`.
 
-    ..  _LanguageMenuProcessor-addQueryString-exclude:
+    ..  _languagemenuprocessor-addquerystring-exclude:
 
     ..  rubric:: addQueryString.exclude
 
     ..  confval:: addQueryString.exclude
         :name: LanguageMenuProcessor-addQueryString-exclude
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: ""
         :Example: "gclid,contrast"
 
         A list of comma-separated parameter names to be excluded from the language
         menu URLs.
 
-    ..  _LanguageMenuProcessor-as:
+    ..  _languagemenuprocessor-as:
 
     ..  rubric:: as
 
@@ -79,12 +79,12 @@ Options:
 
         The variable name to be used in the Fluid template.
 
-..  _LanguageMenuProcessor-example:
+..  _languagemenuprocessor-example:
 
 Example: Menu of all language from site configuration
 =====================================================
 
-Please see also :ref:`About the examples <dataProcessing-about-examples>`.
+Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 ..  rubric:: TypoScript
 

@@ -35,7 +35,7 @@ Condition variables available in TSconfig
 
 
 ..  index:: Conditions; applicationContext
-..  _tsconfig-condition-applicationContext:
+..  _tsconfig-condition-applicationcontext:
 
 applicationContext
 ------------------
@@ -46,7 +46,7 @@ applicationContext
 
     The current application context as a string. See :ref:`Application context <t3coreapi:bootstrapping-context>`.
 
-..  _tsconfig-condition-applicationContext-example:
+..  _tsconfig-condition-applicationcontext-example:
 
 Example: Condition applies in application context "Development"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -170,7 +170,7 @@ Example: Condition applies on pages with a certain backend layout
 
 ..  index::
     Conditions; tree.rootLine
-..  _tsconfig-condition-tree-rootLine:
+..  _tsconfig-condition-tree-rootline:
 
 tree.rootLine
 -------------
@@ -182,7 +182,7 @@ tree.rootLine
     An array of arrays with UIDs and PIDs. Only available in page TSconfig, not
     in user TSconfig.
 
-..  _tsconfig-condition-tree-rootLine-example:
+..  _tsconfig-condition-tree-rootline-example:
 
 Example: Condition applies on all subpages of page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -198,7 +198,7 @@ Example: Condition applies on all subpages of page
 ..  index::
     Conditions; tree.rootLineIds
     Conditions; Pid in rootline
-..  _tsconfig-condition-tree-rootLineIds:
+..  _tsconfig-condition-tree-rootlineids:
 
 tree.rootLineIds
 ----------------
@@ -210,7 +210,7 @@ tree.rootLineIds
     An array of UIDs of the root line. Only available in page TSconfig, not
     in user TSconfig.
 
-..  _tsconfig-condition-tree-rootLineIds-example:
+..  _tsconfig-condition-tree-rootlineids-example:
 
 Example: Condition applies if a page is in the root line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -222,7 +222,7 @@ Example: Condition applies if a page is in the root line
 ..  index::
     Conditions; tree.rootLineParentIds
     Conditions; Pid up in rootline
-..  _tsconfig-condition-tree-rootLineParentIds:
+..  _tsconfig-condition-tree-rootlineparentids:
 
 tree.rootLineParentIds
 ----------------------
@@ -234,7 +234,7 @@ tree.rootLineParentIds
     An array of parent UIDs of the root line. Only available in page TSconfig, not
     in user TSconfig.
 
-..  _tsconfig-condition-tree-rootLineParentIds-example:
+..  _tsconfig-condition-tree-rootlineparentids-example:
 
 Example: Condition applies if a page's parent is in the root line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -271,7 +271,7 @@ backend.user
 ..  index::
     Conditions; backend.user.isAdmin
     Conditions; Admin logged in
-..  _tsconfig-condition-backend-user-isAdmin:
+..  _tsconfig-condition-backend-user-isadmin:
 
 backend.user.isAdmin
 --------------------
@@ -282,7 +282,7 @@ backend.user.isAdmin
 
     True if current user is admin.
 
-..  _tsconfig-condition-backend-user-isAdmin-example:
+..  _tsconfig-condition-backend-user-isadmin-example:
 
 Example: Condition applies if the current backend user is an admin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -292,7 +292,7 @@ Example: Condition applies if the current backend user is an admin
 
 
 ..  index:: Conditions; backend.user.isLoggedIn
-..  _tsconfig-condition-backend-user-isLoggedIn:
+..  _tsconfig-condition-backend-user-isloggedin:
 
 backend.user.isLoggedIn
 -----------------------
@@ -305,7 +305,7 @@ backend.user.isLoggedIn
 
 ..  todo: When does this make sense? TSconfig is only applied in backend context...
 
-..  _tsconfig-condition-backend-user-isLoggedIn-example:
+..  _tsconfig-condition-backend-user-isloggedin-example:
 
 Example: Condition applies if any backend user is logged in
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -319,7 +319,7 @@ Example: Condition applies if any backend user is logged in
 
 
 ..  index:: Conditions; backend.user.userId
-..  _tsconfig-condition-backend-user-userId:
+..  _tsconfig-condition-backend-user-userid:
 
 backend.user.userId
 -------------------
@@ -330,7 +330,7 @@ backend.user.userId
 
     UID of current user.
 
-..  _tsconfig-condition-backend-user-userId-example:
+..  _tsconfig-condition-backend-user-userid-example:
 
 Example: Condition applies if a certain backend user is logged in
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -340,7 +340,7 @@ Example: Condition applies if a certain backend user is logged in
 
 
 ..  index:: Conditions; backend.user.userGroupIds
-..  _tsconfig-condition-backend-user-userGroupIds:
+..  _tsconfig-condition-backend-user-usergroupids:
 
 backend.user.userGroupIds
 -------------------------
@@ -351,7 +351,7 @@ backend.user.userGroupIds
 
     Array of user group IDs of the current backend user.
 
-..  _tsconfig-condition-backend-user-userGroupIds-example:
+..  _tsconfig-condition-backend-user-usergroupids-example:
 
 Example: Condition applies if a backend user of a certain group is logged in
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -364,7 +364,7 @@ Example: Condition applies if a backend user of a certain group is logged in
     [END]
 
 ..  index:: Conditions; backend.user.userGroupList
-..  _tsconfig-condition-backend-user-userGroupList:
+..  _tsconfig-condition-backend-user-usergrouplist:
 
 backend.user.userGroupList
 --------------------------
@@ -375,7 +375,7 @@ backend.user.userGroupList
 
     Comma-separated list of group UIDs.
 
-..  _tsconfig-condition-backend-user-userGroupList-example:
+..  _tsconfig-condition-backend-user-usergrouplist-example:
 
 Example: Condition applies if the groups of a user meet a certain pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -403,7 +403,7 @@ workspace
 
 
 ..  index:: Conditions; workspace.workspaceId
-..  _tsconfig-condition-workspace-workspaceId:
+..  _tsconfig-condition-workspace-workspaceid:
 
 workspace.workspaceId
 ---------------------
@@ -414,7 +414,7 @@ workspace.workspaceId
 
     UID of current workspace.
 
-..  _tsconfig-condition-workspace-workspaceId-example:
+..  _tsconfig-condition-workspace-workspaceid-example:
 
 Example: Condition applies only in a certain workspace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -428,7 +428,7 @@ Example: Condition applies only in a certain workspace
 
 
 ..  index:: Conditions; workspace.isLive
-..  _tsconfig-condition-workspace-isLive:
+..  _tsconfig-condition-workspace-islive:
 
 workspace.isLive
 ----------------
@@ -439,7 +439,7 @@ workspace.isLive
 
     True if current workspace is live.
 
-..  _tsconfig-condition-workspace-isLive-example:
+..  _tsconfig-condition-workspace-islive-example:
 
 Example: Condition applies only in live workspace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -453,7 +453,7 @@ Example: Condition applies only in live workspace
 
 
 ..  index:: Conditions; workspace.isOffline
-..  _tsconfig-condition-workspace-isOffline:
+..  _tsconfig-condition-workspace-isoffline:
 
 workspace.isOffline
 -------------------
@@ -464,7 +464,7 @@ workspace.isOffline
 
     True if current workspace is offline
 
-..  _tsconfig-condition-workspace-isOffline-example:
+..  _tsconfig-condition-workspace-isoffline-example:
 
 Example: Condition applies only in offline workspace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -541,7 +541,7 @@ Example: Condition applies in all TYPO3 versions of a branch like 14.3
 
 
 ..  index:: Conditions; typo3.devIpMask
-..  _tsconfig-condition-typo3-devIpMask:
+..  _tsconfig-condition-typo3-devipmask:
 
 typo3.devIpMask
 ---------------
@@ -552,7 +552,7 @@ typo3.devIpMask
 
     :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']`
 
-..  _tsconfig-condition-typo3-devIpMask-example:
+..  _tsconfig-condition-typo3-devipmask-example:
 
 Example: Condition only applies if the devIpMask is set to a certain value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -648,7 +648,7 @@ Example: Condition applies if request parameter matches a certain value
 
 
 ..  index:: Conditions; compatVersion
-..  _tsconfig-condition-function-compatVersion:
+..  _tsconfig-condition-function-compatversion:
 
 compatVersion()
 ---------------
@@ -660,7 +660,7 @@ compatVersion()
 
     Compares against the current TYPO3 branch.
 
-..  _tsconfig-condition-function-compatVersion-example:
+..  _tsconfig-condition-function-compatversion-example:
 
 Example: Condition applies if the current TYPO3 version matches a pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -740,15 +740,15 @@ site()
 
     site("languages")
         Returns an array of available languages for current site.
-        For more information, see :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
+        For more information, see :ref:`siteLanguage() <condition-functions-in-frontend-context-function-sitelanguage>`.
 
     site("allLanguages")
         Returns an array of available and unavailable languages for the current site.
-        For more information, see :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
+        For more information, see :ref:`siteLanguage() <condition-functions-in-frontend-context-function-sitelanguage>`.
 
     site("defaultLanguage")
         Returns the default language for current site.
-        For more information, see :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
+        For more information, see :ref:`siteLanguage() <condition-functions-in-frontend-context-function-sitelanguage>`.
 
     site("configuration")
         Returns an array with all available configuration for the current site.

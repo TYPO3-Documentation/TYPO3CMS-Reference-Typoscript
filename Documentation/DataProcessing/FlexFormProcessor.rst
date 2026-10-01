@@ -1,6 +1,6 @@
 :navigation-title: flex-form
 ..  include:: /Includes.rst.txt
-..  _FlexFormProcessor:
+..  _flexformprocessor:
 ..  index:: FlexForm, DataProcessing
 
 ==========================
@@ -15,7 +15,7 @@ FlexForm data of a given field into a Fluid-readable array.
 
 ..  contents:: Table of contents
 
-..  _FlexFormProcessor-options:
+..  _flexformprocessor-options:
 
 Options
 =======
@@ -25,7 +25,7 @@ Options
     :type:
     :Default:
 
-    ..  _FlexFormProcessor-fieldname:
+    ..  _flexformprocessor-fieldname:
 
     ..  rubric:: fieldName
 
@@ -36,7 +36,7 @@ Options
 
         Field name of the column the FlexForm data is stored in.
 
-    ..  _FlexFormProcessor-references:
+    ..  _flexformprocessor-references:
 
     ..  rubric:: references
 
@@ -49,12 +49,12 @@ Options
 
         Each FlexForm field, which should be resolved, needs a reference definition
         to the :ref:`foreign_match_fields <t3tca:columns-inline-properties-foreign-match-fields>`.
-        This reference is used in the :ref:`FilesProcessor <FilesProcessor>` to
+        This reference is used in the :ref:`FilesProcessor <filesprocessor>` to
         resolve the correct :ref:`FAL <t3coreapi:fal>` resource.
 
-        See :ref:`Example of resolving FAL references <FlexFormProcessor-resolving-fal>`.
+        See :ref:`Example of resolving FAL references <flexformprocessor-resolving-fal>`.
 
-    ..  _FlexFormProcessor-as:
+    ..  _flexformprocessor-as:
 
     ..  rubric:: as
 
@@ -65,12 +65,12 @@ Options
 
         Name for the variable in the Fluid template.
 
-..  _FlexFormProcessor-examples:
+..  _flexformprocessor-examples:
 
 Examples
 ========
 
-..  _FlexFormProcessor-example-minimal:
+..  _flexformprocessor-example-minimal:
 
 Example of a minimal TypoScript configuration
 ---------------------------------------------
@@ -83,7 +83,7 @@ Example of a minimal TypoScript configuration
 The converted array can be accessed within the Fluid template with the
 :html:`{flexFormData}` variable.
 
-..  _FlexFormProcessor-example-advanced:
+..  _flexformprocessor-example-advanced:
 
 Example of an advanced TypoScript configuration
 -----------------------------------------------
@@ -94,7 +94,7 @@ Example of an advanced TypoScript configuration
 The converted array can be accessed within the Fluid template with the
 :html:`{myOutputVariable}` variable.
 
-..  _FlexFormProcessor-example-sub-processor:
+..  _flexformprocessor-example-sub-processor:
 
 Example with a custom sub-processor
 -----------------------------------
@@ -102,7 +102,7 @@ Example with a custom sub-processor
 ..  literalinclude:: _codesnippets/_processor.typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
-..  _FlexFormProcessor-resolving-fal:
+..  _flexformprocessor-resolving-fal:
 
 Example of resolving FAL references
 -----------------------------------

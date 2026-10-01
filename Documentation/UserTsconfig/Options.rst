@@ -27,7 +27,7 @@ Properties
     :type:
     :Default:
 
-    ..  _useroptions-additionalPreviewLanguages:
+    ..  _useroptions-additionalpreviewlanguages:
 
     ..  rubric:: additionalPreviewLanguages
 
@@ -42,7 +42,7 @@ Properties
         :yaml:`languageId` property of the
         :ref:`site configuration <t3coreapi:sitehandling-addingLanguages>`.
 
-    ..  _useroptions-alertPopups:
+    ..  _useroptions-alertpopups:
 
     ..  rubric:: alertPopups
 
@@ -59,7 +59,7 @@ Properties
         *   8 – FE editing
         *   128 – other (not used yet)
 
-    ..  _useroptions-bookmarkGroups:
+    ..  _useroptions-bookmarkgroups:
 
     ..  rubric:: bookmarkGroups
 
@@ -103,14 +103,14 @@ Properties
               2 = LLL:my_sitepackage.backend:bookmarkGroups.2
             }
 
-    ..  _useroptions-clearCache:
+    ..  _useroptions-clearcache:
 
     ..  rubric:: clearCache
 
     ..  confval:: clearCache
         :name: useroptions-clearCache
 
-        ..  _useroptions-clearCache-all:
+        ..  _useroptions-clearcache-all:
 
         ..  rubric:: all
 
@@ -125,7 +125,7 @@ Properties
             if it is explicitly set to 0 for an admin user, it will remove the clear all
             option on toolbar for that user.
 
-        ..  _useroptions-clearCache-pages:
+        ..  _useroptions-clearcache-pages:
 
         ..  rubric:: pages
 
@@ -138,7 +138,7 @@ Properties
             If set to 1, this will allow a non-admin user to clear frontend and
             page-related caches.
 
-    ..  _useroptions-clipboardNumberPads:
+    ..  _useroptions-clipboardnumberpads:
 
     ..  rubric:: clipboardNumberPads
 
@@ -149,7 +149,7 @@ Properties
 
         This allows you to enter how many pads you want on the clipboard.
 
-    ..  _useroptions-contextMenu-key-disableItems:
+    ..  _useroptions-contextmenu-key-disableitems:
 
     ..  rubric:: contextMenu.table.[tableName][.context].disableItems
 
@@ -233,7 +233,7 @@ Properties
     ..  confval:: dashboard
         :name: useroptions-dashboard
 
-        ..  _useroptions-dashboard-dashboardPresetsForNewUsers:
+        ..  _useroptions-dashboard-dashboardpresetsfornewusers:
 
         ..  rubric:: dashboardPresetsForNewUsers
 
@@ -252,7 +252,7 @@ Properties
 
                 options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
 
-    ..  _useroptions-defaultResourcesViewMode:
+    ..  _useroptions-defaultresourcesviewmode:
 
     ..  rubric:: defaultResourcesViewMode
 
@@ -275,7 +275,7 @@ Properties
 
             options.defaultResourcesViewMode = list
 
-    ..  _useroptions-defaultUploadFolder:
+    ..  _useroptions-defaultuploadfolder:
 
     ..  rubric:: defaultUploadFolder
 
@@ -303,7 +303,7 @@ Properties
 
             options.defaultUploadFolder = 2:user_folders/my_folder/
 
-    ..  _useroptions-disableDelete:
+    ..  _useroptions-disabledelete:
 
     ..  rubric:: disableDelete
 
@@ -324,7 +324,7 @@ Properties
 
             options.disableDelete.tt_content = 1
 
-    ..  _useroptions-dontMountAdminMounts:
+    ..  _useroptions-dontmountadminmounts:
 
     ..  rubric:: dontMountAdminMounts
 
@@ -337,7 +337,7 @@ Properties
         ..  note::
             Only for admin users. For other users it has no effect.
 
-    ..  _useroptions-enableBookmarks:
+    ..  _useroptions-enablebookmarks:
 
     ..  rubric:: enableBookmarks
 
@@ -348,14 +348,14 @@ Properties
 
         Enables the usage of bookmarks in the backend.
 
-    ..  _useroptions-file_list:
+    ..  _useroptions-file-list:
 
     ..  rubric:: file_list
 
     ..  confval:: file_list
         :name: useroptions-file_list
 
-        ..  _useroptions-file_list-enableClipBoard:
+        ..  _useroptions-file-list-enableclipboard:
 
         ..  rubric:: enableClipBoard
 
@@ -380,7 +380,7 @@ Properties
             :typoscript:`selectable`
                 The checkbox is shown so that the option can be selected by the user.
 
-        ..  _useroptions-file_list-displayColumnSelector:
+        ..  _useroptions-file-list-displaycolumnselector:
 
         ..  rubric:: displayColumnSelector
 
@@ -409,7 +409,7 @@ Properties
                 # Disable the column selector
                 file_list.displayColumnSelector = 0
 
-        ..  _useroptions-file_list-enableDisplayThumbnails:
+        ..  _useroptions-file-list-enabledisplaythumbnails:
 
         ..  rubric:: file_list.enableDisplayThumbnails
 
@@ -433,7 +433,7 @@ Properties
             :typoscript:`selectable`
                 The checkbox is shown so that the option can be selected by the user.
 
-        ..  _useroptions-file_list-filesPerPage:
+        ..  _useroptions-file-list-filesperpage:
 
         ..  rubric:: filesPerPage
 
@@ -446,7 +446,7 @@ Properties
             The maximum number of files shown per page in the :guilabel:`File > List`
             module.
 
-        ..  _useroptions-file_list-primaryActions:
+        ..  _useroptions-file-list-primaryactions:
 
         ..  rubric:: primaryActions
 
@@ -492,7 +492,7 @@ Properties
                 site set up multilingual the button "translations" is not rendered in
                 that TYPO3 environment.
 
-        ..  _useroptions-file_list-thumbnail-height:
+        ..  _useroptions-file-list-thumbnail-height:
 
         ..  rubric:: thumbnail.height
 
@@ -505,7 +505,7 @@ Properties
             All preview images in the file list will be rendered with the configured
             thumbnail height.
 
-        ..  _useroptions-file_list-thumbnail-width:
+        ..  _useroptions-file-list-thumbnail-width:
 
         ..  rubric:: thumbnail.width
 
@@ -518,7 +518,7 @@ Properties
             All preview images in the file list will be rendered with the configured
             thumbnail width.
 
-        ..  _useroptions-file_list-uploader-defaultaction:
+        ..  _useroptions-file-list-uploader-defaultaction:
 
         ..  rubric:: uploader.defaultAction
 
@@ -545,7 +545,7 @@ Properties
     ..  confval:: folderTree
         :name: useroptions-folderTree
 
-        ..  _useroptions-folderTree-altElementBrowserMountPoints:
+        ..  _useroptions-foldertree-altelementbrowsermountpoints:
 
         ..  rubric:: altElementBrowserMountPoints
 
@@ -581,7 +581,7 @@ Properties
 
                 options.folderTree.altElementBrowserMountPoints = _temp_/, 2:/templates, 1:/files/images
 
-        ..  _useroptions-folderTree-label:
+        ..  _useroptions-foldertree-label:
 
         ..  rubric:: label.<combined-identifier>
 
@@ -619,7 +619,7 @@ Properties
             ..  seealso::
                 :ref:`Feature: #107683 <ext_core:feature-107683-1234567890>`
 
-        ..  _useroptions-folderTree-uploadFieldsInLinkBrowser:
+        ..  _useroptions-foldertree-uploadfieldsinlinkbrowser:
 
         ..  rubric:: uploadFieldsInLinkBrowser
 
@@ -632,7 +632,7 @@ Properties
             This value defines the number of upload fields in the element browser.
             Default value is 3, if set to 0, no upload form will be shown.
 
-    ..  _useroptions-hideModules:
+    ..  _useroptions-hidemodules:
 
     ..  rubric:: hideModules
 
@@ -657,13 +657,13 @@ Properties
         ..  literalinclude:: _codesnippets/_properties2.typoscript
             :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
-    ..  _useroptions-hideRecords:
+    ..  _useroptions-hiderecords:
 
     ..  rubric:: hideRecords
 
     ..  confval:: hideRecords
 
-        ..  _useroptions-hideRecords-pages:
+        ..  _useroptions-hiderecords-pages:
 
         ..  rubric:: pages
 
@@ -699,7 +699,7 @@ Properties
     ..  confval:: impexp
         :name: useroptions-impexp
 
-        ..  _useroptions-impexp-enableExportForNonAdminUser:
+        ..  _useroptions-impexp-enableexportfornonadminuser:
 
         ..  rubric:: enableExportForNonAdminUser
 
@@ -718,7 +718,7 @@ Properties
             module and export data. This should only be enabled for trustworthy
             backend users, as it might impose a security risk.
 
-        ..  _useroptions-impexp-enableImportForNonAdminUser:
+        ..  _useroptions-impexp-enableimportfornonadminuser:
 
     ..  rubric:: liveSearch
 
@@ -799,7 +799,7 @@ Properties
             module and import data. This should only be enabled for trustworthy
             backend users, as it might impose a security risk.
 
-    ..  _useroptions-mayNotCreateEditBookmarks:
+    ..  _useroptions-maynotcreateeditbookmarks:
 
     ..  rubric:: mayNotCreateEditBookmarks
 
@@ -809,7 +809,7 @@ Properties
 
         If set, the user can not create or edit bookmarks.
 
-    ..  _useroptions-noThumbsInEB:
+    ..  _useroptions-nothumbsineb:
 
     ..  rubric:: noThumbsInEB
 
@@ -819,16 +819,16 @@ Properties
 
         If set, then image thumbnails are not shown in the element browser.
 
-    ..  _useroptions-overridePageModule:
+    ..  _useroptions-overridepagemodule:
 
-    ..  _useroptions-pageTree:
+    ..  _useroptions-pagetree:
 
     ..  rubric:: pageTree
 
     ..  confval:: pageTree
         :name: useroptions-pageTree
 
-        ..  _useroptions-pageTree-altElementBrowserMountPoints:
+        ..  _useroptions-pagetree-altelementbrowsermountpoints:
 
         ..  rubric:: altElementBrowserMountPoints
 
@@ -845,7 +845,7 @@ Properties
 
             These alternative webmounts **replace** configured DB mount points
             unless you use the
-            :ref:`altElementBrowserMountPoints.append <useroptions-pageTree-altElementBrowserMountPoints-append>`
+            :ref:`altElementBrowserMountPoints.append <useroptions-pagetree-altelementbrowsermountpoints-append>`
             option.
 
             Example:
@@ -855,7 +855,7 @@ Properties
 
                 options.pageTree.altElementBrowserMountPoints = 34,123
 
-        ..  _useroptions-pageTree-altElementBrowserMountPoints-append:
+        ..  _useroptions-pagetree-altelementbrowsermountpoints-append:
 
         ..  rubric:: altElementBrowserMountPoints.append
 
@@ -877,7 +877,7 @@ Properties
                 options.pageTree.altElementBrowserMountPoints = 34,123
                 options.pageTree.altElementBrowserMountPoints.append = 1
 
-        ..  _useroptions-pageTree-doktypesToShowInNewPageDragArea:
+        ..  _useroptions-pagetree-doktypestoshowinnewpagedragarea:
 
         ..  rubric:: doktypesToShowInNewPageDragArea
 
@@ -898,7 +898,7 @@ Properties
                 automatically determines available doktypes based on the user's
                 group permissions.
 
-        ..  _useroptions-pageTree-excludeDoktypes:
+        ..  _useroptions-pagetree-excludedoktypes:
 
         ..  rubric:: excludeDoktypes
 
@@ -919,7 +919,7 @@ Properties
 
                 options.pageTree.excludeDoktypes = 254,1
 
-        ..  _useroptions-pageTree-label:
+        ..  _useroptions-pagetree-label:
 
         ..  rubric:: label.<page-id>
 
@@ -951,7 +951,7 @@ Properties
 
         ..  todo:: does this still work with site configuration?
 
-        ..  _useroptions-pageTree-showDomainNameWithTitle:
+        ..  _useroptions-pagetree-showdomainnamewithtitle:
 
         ..  rubric:: showDomainNameWithTitle
 
@@ -964,7 +964,7 @@ Properties
             pages that have :guilabel:`Is root of web site?` checked in the page properties.
             Useful if there are several domains in one page tree.
 
-        ..  _useroptions-pageTree-searchByFrontendUri:
+        ..  _useroptions-pagetree-searchbyfrontenduri:
 
         ..  rubric:: searchByFrontendUri
 
@@ -985,7 +985,7 @@ Properties
             the page tree toolbar menu. The preference is stored in the backend
             user configuration, allowing each user to customize their search behavior.
 
-        ..  _useroptions-pageTree-searchInTranslatedPages:
+        ..  _useroptions-pagetree-searchintranslatedpages:
 
         ..  rubric:: searchInTranslatedPages
 
@@ -1002,7 +1002,7 @@ Properties
             multilingual installations. User permissions (language restrictions) and
             workspace context are respected.
 
-        ..  _useroptions-pageTree-showNavTitle:
+        ..  _useroptions-pagetree-shownavtitle:
 
         ..  rubric:: showNavTitle
 
@@ -1015,7 +1015,7 @@ Properties
             instead of the normal page title. The page title is shown in a
             tooltip if the mouse hovers the navigation title.
 
-        ..  _useroptions-pageTree-showPageIdWithTitle:
+        ..  _useroptions-pagetree-showpageidwithtitle:
 
         ..  rubric:: showPageIdWithTitle
 
@@ -1027,7 +1027,7 @@ Properties
             If set, the titles in the page tree will have their ID numbers printed
             before the title.
 
-        ..  _useroptions-pageTree-showPathAboveMounts:
+        ..  _useroptions-pagetree-showpathabovemounts:
 
         ..  rubric:: showPathAboveMounts
 
@@ -1045,7 +1045,7 @@ Properties
 
                 Active user db mount
 
-    ..  _useroptions-passwordReset:
+    ..  _useroptions-passwordreset:
 
     ..  rubric:: passwordReset
 
@@ -1077,7 +1077,7 @@ Properties
 
             $GLOBALS['TYPO3_CONF_VARS']['BE']['passwordReset'] = false
 
-    ..  _useroptions-saveClipboard:
+    ..  _useroptions-saveclipboard:
 
     ..  rubric:: saveClipboard
 
@@ -1088,7 +1088,7 @@ Properties
         If set, the clipboard content will be preserved for the next login.
         Normally the clipboard content lasts only during the session.
 
-    ..  _useroptions-saveDocNew:
+    ..  _useroptions-savedocnew:
 
     ..  rubric:: saveDocNew
 
@@ -1116,7 +1116,7 @@ Properties
             options.saveDocNew = 0
             options.saveDocNew.tt_content = top
 
-    ..  _useroptions-saveDocView:
+    ..  _useroptions-savedocview:
 
     ..  rubric:: saveDocView
 
@@ -1132,7 +1132,7 @@ Properties
         Any value set for a single table will override the default value set for
         :typoscript:`saveDocView`.
 
-    ..  _useroptions-showDuplicate:
+    ..  _useroptions-showduplicate:
 
     ..  rubric:: showDuplicate
 
@@ -1148,7 +1148,7 @@ Properties
         Any value set for a single table will override the default value set for
         :typoscript:`showDuplicate`.
 
-    ..  _useroptions-showHistory:
+    ..  _useroptions-showhistory:
 
     ..  rubric:: showHistory
 

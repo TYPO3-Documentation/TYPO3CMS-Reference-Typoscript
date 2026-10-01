@@ -39,7 +39,7 @@ function to avoid this.
 
 
 ..  index:: Conditions; applicationContext
-..  _condition-applicationContext:
+..  _condition-applicationcontext:
 
 applicationContext
 ==================
@@ -136,7 +136,7 @@ tree.pagelayout
 
 ..  index::
     Conditions; tree.rootLine
-..  _condition-tree-rootLine:
+..  _condition-tree-rootline:
 
 tree.rootLine
 -------------
@@ -160,7 +160,7 @@ tree.rootLine
 ..  index::
     Conditions; tree.rootLineIds
     Conditions; PID in rootline
-..  _condition-tree-rootLineIds:
+..  _condition-tree-rootlineids:
 
 tree.rootLineIds
 ----------------
@@ -180,7 +180,7 @@ tree.rootLineIds
 ..  index::
     Conditions; tree.rootLineParentIds
     Conditions; PID up in rootline
-..  _condition-tree-rootLineParentIds:
+..  _condition-tree-rootlineparentids:
 
 tree.rootLineParentIds
 ----------------------
@@ -226,7 +226,7 @@ backend.user
 ..  index::
     Conditions; backend.user.isAdmin
     Conditions; Admin logged in
-..  _condition-backend-user-isAdmin:
+..  _condition-backend-user-isadmin:
 
 backend.user.isAdmin
 --------------------
@@ -244,7 +244,7 @@ backend.user.isAdmin
 
 
 ..  index:: Conditions; backend.user.isLoggedIn
-..  _condition-backend-user-isLoggedIn:
+..  _condition-backend-user-isloggedin:
 
 backend.user.isLoggedIn
 -----------------------
@@ -262,7 +262,7 @@ backend.user.isLoggedIn
 
 
 ..  index:: Conditions; backend.user.userId
-..  _condition-backend-user-userId:
+..  _condition-backend-user-userid:
 
 backend.user.userId
 -------------------
@@ -280,7 +280,7 @@ backend.user.userId
 
 
 ..  index:: Conditions; backend.user.userGroupIds
-..  _condition-backend-user-userGroupIds:
+..  _condition-backend-user-usergroupids:
 
 backend.user.userGroupIds
 -------------------------
@@ -303,7 +303,7 @@ backend.user.userGroupIds
 
 
 ..  index:: Conditions; backend.user.userGroupList
-..  _condition-backend-user-userGroupList:
+..  _condition-backend-user-usergrouplist:
 
 backend.user.userGroupList
 --------------------------
@@ -351,7 +351,7 @@ frontend.user
 
 
 ..  index:: Conditions; frontend.user.isLoggedIn
-..  _condition-frontend-user-isLoggedIn:
+..  _condition-frontend-user-isloggedin:
 
 frontend.user.isLoggedIn
 ------------------------
@@ -373,7 +373,7 @@ frontend.user.isLoggedIn
 
 
 ..  index:: Conditions; frontend.user.userId
-..  _condition-frontend-user-userId:
+..  _condition-frontend-user-userid:
 
 frontend.user.userId
 --------------------
@@ -395,7 +395,7 @@ frontend.user.userId
 
 
 ..  index:: Conditions; frontend.user.userGroupIds
-..  _condition-frontend-user-userGroupIds:
+..  _condition-frontend-user-usergroupids:
 
 frontend.user.userGroupIds
 --------------------------
@@ -418,7 +418,7 @@ frontend.user.userGroupIds
 
 
 ..  index:: Conditions; frontend.user.userGroupList
-..  _condition-frontend-user-userGroupList:
+..  _condition-frontend-user-usergrouplist:
 
 frontend.user.userGroupList
 ---------------------------
@@ -453,7 +453,7 @@ workspace
 
 
 ..  index:: Conditions; workspace.workspaceId
-..  _condition-workspace-workspaceId:
+..  _condition-workspace-workspaceid:
 
 workspace.workspaceId
 ---------------------
@@ -471,7 +471,7 @@ workspace.workspaceId
 
 
 ..  index:: Conditions; workspace.isLive
-..  _condition-workspace-isLive:
+..  _condition-workspace-islive:
 
 workspace.isLive
 ----------------
@@ -493,7 +493,7 @@ workspace.isLive
 
 
 ..  index:: Conditions; workspace.isOffline
-..  _condition-workspace-isOffline:
+..  _condition-workspace-isoffline:
 
 workspace.isOffline
 -------------------
@@ -572,7 +572,7 @@ typo3.branch
 
 
 ..  index:: Conditions; typo3.devIpMask
-..  _condition-typo3-devIpMask:
+..  _condition-typo3-devipmask:
 
 typo3.devIpMask
 ---------------
@@ -675,7 +675,7 @@ traverse()
         One can use the `?? []` workaround.
 
 ..  index:: Conditions; compatVersion
-..  _condition-function-compatVersion:
+..  _condition-function-compatversion:
 
 compatVersion()
 ===============
@@ -694,8 +694,8 @@ compatVersion()
         :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _condition-function-getTSFE:
-..  _condition-function-getTSFE-migration:
+..  _condition-function-gettsfe:
+..  _condition-function-gettsfe-migration:
 
 getTSFE(): Migration
 ====================
@@ -803,7 +803,7 @@ request()
 
 
 ..  index:: Conditions; request.getQueryParams()
-..  _condition-function-request-getQueryParams():
+..  _condition-function-request-getqueryparams:
 
 request.getQueryParams()
 ------------------------
@@ -834,7 +834,7 @@ request.getQueryParams()
 
 
 ..  index:: Conditions; request.getParsedBody()
-..  _condition-function-request-getParsedBody():
+..  _condition-function-request-getparsedbody:
 
 request.getParsedBody()
 -----------------------
@@ -857,7 +857,7 @@ request.getParsedBody()
 
 
 ..  index:: Conditions; request.getHeaders()
-..  _condition-function-request-getHeaders():
+..  _condition-function-request-getheaders:
 
 request.getHeaders()
 --------------------
@@ -875,7 +875,7 @@ request.getHeaders()
 
 
 ..  index:: Conditions; request.getCookieParams()
-..  _condition-function-request-getCookieParams():
+..  _condition-function-request-getcookieparams:
 
 request.getCookieParams()
 -------------------------
@@ -897,7 +897,7 @@ request.getCookieParams()
 
 
 ..  index:: Conditions; request.getNormalizedParams()
-..  _condition-function-request-getNormalizedParams():
+..  _condition-function-request-getnormalizedparams:
 
 request.getNormalizedParams()
 -----------------------------
@@ -919,7 +919,7 @@ request.getNormalizedParams()
 
 
 ..  index:: Conditions; request.getPageArguments()
-..  _condition-function-request-getPageArguments():
+..  _condition-function-request-getpagearguments:
 
 request.getPageArguments()
 --------------------------
@@ -987,17 +987,17 @@ site()
     :typoscript:`site("languages")`
         Returns an array of the available languages for the current site.
         For deeper information, see
-        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
+        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-sitelanguage>`.
 
     :typoscript:`site("allLanguages")`
         Returns an array of available and unavailable languages for the current
         site. For deeper information, see
-        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
+        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-sitelanguage>`.
 
     :typoscript:`site("defaultLanguage")`
         Returns the default language for the current site.
         For deeper information, see
-        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-siteLanguage>`.
+        :ref:`siteLanguage() <condition-functions-in-frontend-context-function-sitelanguage>`.
 
     :typoscript:`site("configuration")`
         Returns an array with the available configuration for the current site.
@@ -1013,7 +1013,7 @@ site()
         :caption: EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript
 
 ..  index:: Conditions; siteLanguage
-..  _condition-functions-in-frontend-context-function-siteLanguage:
+..  _condition-functions-in-frontend-context-function-sitelanguage:
 
 siteLanguage()
 ==============

@@ -28,7 +28,7 @@ must set the property by :typoscript:`returnLast = url` or
 Properties
 ==========
 
-..  _typolink-extTarget:
+..  _typolink-exttarget:
 
 extTarget
 ---------
@@ -41,7 +41,7 @@ extTarget
     Target used for external links
 
 
-..  _typolink-fileTarget:
+..  _typolink-filetarget:
 
 fileTarget
 ----------
@@ -96,7 +96,7 @@ no\_cache
     Adds `&no_cache=1` to the link
 
 
-..  _typolink-additionalParams:
+..  _typolink-additionalparams:
 
 additionalParams
 ----------------
@@ -130,7 +130,7 @@ additionalParams
     ..  note:: additionalParams are only considered for internal links.
 
 
-..  _typolink-addQueryString:
+..  _typolink-addquerystring:
 
 addQueryString
 --------------
@@ -167,7 +167,7 @@ addQueryString
         :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _typolink-addQueryString-exclude:
+..  _typolink-addquerystring-exclude:
 
 addQueryString.exclude
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -206,7 +206,7 @@ wrap
     Wraps the links.
 
 
-..  _typolink-ATagBeforeWrap:
+..  _typolink-atagbeforewrap:
 
 ATagBeforeWrap
 --------------
@@ -361,7 +361,7 @@ parameter
                 typolink.parameter.data = parameters : allParams
 
 
-..  _typolink-forceAbsoluteUrl:
+..  _typolink-forceabsoluteurl:
 
 forceAbsoluteUrl
 ----------------
@@ -374,14 +374,14 @@ forceAbsoluteUrl
     Forces links to internal pages to be absolute, thus having a proper
     URL scheme and domain prepended.
 
-    Additional sub-property: :ref:`forceAbsoluteUrl.scheme <typolink-forceAbsoluteUrl-scheme>`
+    Additional sub-property: :ref:`forceAbsoluteUrl.scheme <typolink-forceabsoluteurl-scheme>`
 
 ..  note::
-    If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
-    is enabled, :ref:`forceAbsoluteUrl.scheme <typolink-forceAbsoluteUrl-scheme>` is overridden.
+    If the option :ref:`config.forceAbsoluteUrls <setup-config-forceabsoluteurls>`
+    is enabled, :ref:`forceAbsoluteUrl.scheme <typolink-forceabsoluteurl-scheme>` is overridden.
 
 
-..  _typolink-forceAbsoluteUrl-scheme:
+..  _typolink-forceabsoluteurl-scheme:
 
 forceAbsoluteUrl.scheme
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -412,7 +412,7 @@ title
     Sets the title parameter of the A-tag.
 
 
-..  _typolink-JSwindow-params:
+..  _typolink-jswindow-params:
 
 JSwindow\_params
 ----------------
@@ -430,7 +430,7 @@ JSwindow\_params
         page.10.typolink.JSwindow_params = status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,toolbar=1
 
 
-..  _typolink-returnLast:
+..  _typolink-returnlast:
 
 returnLast
 ----------
@@ -470,7 +470,7 @@ section
     section on another page.
 
 
-..  _typolink-ATagParams:
+..  _typolink-atagparams:
 
 ATagParams
 ----------
@@ -489,7 +489,7 @@ ATagParams
         page.10.typolink.ATagParams = class="board"
 
 
-..  _typolink-linkAccessRestrictedPages:
+..  _typolink-linkaccessrestrictedpages:
 
 linkAccessRestrictedPages
 -------------------------
@@ -502,7 +502,7 @@ linkAccessRestrictedPages
     to the page even though the page cannot be accessed.
 
 
-..  _typolink-userFunc:
+..  _typolink-userfunc:
 
 userFunc
 --------
@@ -579,7 +579,7 @@ userFunc
     See :ref:`Examples for typolink.userFunc <typolink-userfunc-examples>` for more details.
 
 ..  index:: typolink; Resource references
-..  _typolink-resource_references:
+..  _typolink-resource-references:
 
 Resource references
 ===================
@@ -875,7 +875,7 @@ record.identifier
     The (individual) identifier of the link building configuration to be used.
 
     The same identifier is used as key in the TypoScript configuration of
-    the frontend rendering: :ref:`Properties of 'config' <setup-config-recordLinks>` and the :ref:`TSconfig
+    the frontend rendering: :ref:`Properties of 'config' <setup-config-recordlinks>` and the :ref:`TSconfig
     backend link handler configuration <pagetcemaintables-linkhandler>`
 
 ..  _typolink-handler-record-uid:

@@ -20,7 +20,7 @@ User function menu (For backward compatibility)
     It is still possible to create a menu with :typoscript:`special = userfunction`
     for backward compatibility reasons.
 
-    However we would advise you to write a :ref:`customized MenuProcessor <CustomDataProcessors>`
+    However we would advise you to write a :ref:`customized MenuProcessor <customdataprocessors>`
     and style the output with Fluid instead.
 
 See :ref:`TYPO3 11.5 -Userfunction menu <t3tsref/11.5:hmenu-special-userfunction>`
