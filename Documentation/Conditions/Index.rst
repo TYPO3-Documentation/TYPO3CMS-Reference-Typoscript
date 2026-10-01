@@ -701,7 +701,8 @@ getTSFE(): Migration
 ====================
 
 ..  versionchanged:: 14.0
-    `Breaking: #107473 - TypoScript condition function getTSFE() removed <https://docs.typo3.org/permalink/changelog:breaking-107473-1758113238>`_
+    :changelog: breaking-107473-1758113238
+
     The TypoScript condition function `getTSFE()` has been removed. Using a
     condition like `getTSFE()` will never evaluate to true and needs adaption.
 

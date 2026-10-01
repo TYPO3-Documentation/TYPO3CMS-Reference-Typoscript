@@ -113,8 +113,7 @@ cObj
     :name: data-cObj
 
     ..  deprecated:: 14.3
-
-        See `Deprecation: #109575 - Various ContentObjectRenderer properties/methods <https://docs.typo3.org/permalink/changelog:deprecation-109575>`_
+        :changelog: deprecation-109575
 
 ..  _data-type-gettext-cobj-example-get-number:
 

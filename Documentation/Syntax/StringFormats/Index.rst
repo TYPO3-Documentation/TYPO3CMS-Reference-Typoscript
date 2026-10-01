@@ -140,11 +140,10 @@ resource
     :name: data-type-resource
 
     ..  versionchanged:: 14.0
+        :changelog: feature-107537-1759136314
 
-        The resource handling has been streamlined, see
-        :ref:`System resource API for system file access and public
-        URI generation <changelog:feature-107537-1759136314>`. It now
-        supports different resource formats.
+        The resource handling has been streamlined. It now supports different
+        resource formats.
 
     These types are supported:
 
