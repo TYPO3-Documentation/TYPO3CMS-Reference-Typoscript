@@ -66,13 +66,13 @@ Properties
 ==========
 
 ..  versionchanged:: 14.0
+    :changelog: feature-108166-1763400992
+
     Fluid 5 introduces a dedicated file extension for Fluid template, partial
     and layout files, for example :file:`.fluid.html` instead of plain
     :file:`.html`. A fallback mechanism keeps existing files without this
-    extension working, so renaming is entirely optional. See
-    `Feature: #108166 - Fluid File Extension and Template Resolving
-    <https://docs.typo3.org/permalink/changelog:feature-108166-1763400992>`_
-    for the resolving order and the reasoning behind the change.
+    extension working, so renaming is entirely optional. The changelog entry
+    explains the resolving order and the reasoning behind the change.
 
 ..  confval-menu::
     :display: table
