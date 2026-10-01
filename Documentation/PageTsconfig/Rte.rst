@@ -94,15 +94,14 @@ Properties
     :local:
 
 ..  versionchanged:: 12.0
+    :changelog: breaking-96874-1664488429
+
     The page TSconfig option :typoscript:`RTE.config.contentsLanguageDirection`
-    has no effect anymore. TYPO3 v12 ships CKEditor 5, see `Breaking: #96874 -
-    CKEditor-related plugins and configuration
-    <https://docs.typo3.org/permalink/changelog:breaking-96874-1664488429>`_.
-    CKEditor 5 has no `contentsLangDirection` option, and the last Core code
-    setting it was removed with issue
-    `#99916 <https://forge.typo3.org/issues/99916>`_. The text direction now
-    follows the content language of the edited record and is determined
-    automatically.
+    has no effect anymore. TYPO3 v12 ships CKEditor 5. CKEditor 5 has no
+    `contentsLangDirection` option, and the last Core code setting it was
+    removed with issue `#99916 <https://forge.typo3.org/issues/99916>`_. The
+    text direction now follows the content language of the edited record and is
+    determined automatically.
 
 ..  index:: RTE; disable
 
