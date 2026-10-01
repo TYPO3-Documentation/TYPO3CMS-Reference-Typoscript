@@ -21,7 +21,7 @@ Properties
     :display: table
     :type:
 
-..  _user-auth-be-redirectToURL:
+..  _user-auth-be-redirecttourl:
 
 ..  confval:: auth.BE.redirectToURL
     :name: user-auth-be-redirectToURL
