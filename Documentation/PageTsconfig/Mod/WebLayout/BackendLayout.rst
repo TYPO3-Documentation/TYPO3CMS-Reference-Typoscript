@@ -157,7 +157,7 @@ BackendLayouts.[backendLayout]
                 :type: comma separated strings
 
                 ..  versionadded:: 14.1
-                    See `Feature: #108623 - Allow content element restrictions per colPos <https://docs.typo3.org/permalink/changelog:feature-108623-1768315053>`_
+                    :changelog: feature-108623-1768315053
 
                 Allow only configured types of content elements (referencing
                 `tt_content.CType` with names like "text", "textmedia",
@@ -170,7 +170,7 @@ BackendLayouts.[backendLayout]
                 :type: comma separated strings
 
                 ..  versionadded:: 14.1
-                    See `Feature: #108623 - Allow content element restrictions per colPos <https://docs.typo3.org/permalink/changelog:feature-108623-1768315053>`_
+                    :changelog: feature-108623-1768315053
 
                 Disallow configured types of content elements (referencing
                 `tt_content.CType` with names like "text", "textmedia",
