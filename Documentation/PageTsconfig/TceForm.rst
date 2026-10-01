@@ -345,27 +345,8 @@ config
      `typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
      within :ref:`FormEngine code <t3coreapi:FormEngine>` defines details:
 
-     ..  code-block:: php
+     ..  literalinclude:: _codesnippets/_FormEngineUtility.php
          :caption: typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php
-
-          'input' => ['size', 'max', 'readOnly'],
-          'number' => ['size', 'readOnly'],
-          'email' => ['size', 'readOnly'],
-          'link' => ['size', 'readOnly'],
-          'password' => ['size', 'readOnly'],
-          'datetime' => ['size', 'readOnly'],
-          'color' => ['size', 'readOnly'],
-          'uuid' => ['size', 'enableCopyToClipboard'],
-          'text' => ['cols', 'rows', 'wrap', 'max', 'readOnly'],
-          'json' => ['cols', 'rows', 'readOnly'],
-          'check' => ['cols', 'readOnly'],
-          'select' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'treeConfig', 'fileFolderConfig'],
-          'category' => ['size', 'maxitems', 'minitems', 'readOnly', 'treeConfig'],
-          'group' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'elementBrowserEntryPoints'],
-          'folder' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'elementBrowserEntryPoints'],
-          'inline' => ['appearance', 'behaviour', 'foreign_label', 'foreign_selector', 'foreign_unique', 'maxitems', 'minitems', 'size', 'autoSizeMax', 'symmetric_label', 'readOnly'],
-          'file' => ['appearance', 'behaviour', 'maxitems', 'minitems', 'readOnly'],
-          'imageManipulation' => ['ratios', 'cropVariants'],
 
      The reason that not all properties can be changed is that
      internally, the :ref:`DataHandler <t3coreapi:datahandler-basics>` performs database
