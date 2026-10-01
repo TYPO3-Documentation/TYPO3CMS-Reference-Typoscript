@@ -23,7 +23,7 @@ like this:
 Properties
 ==========
 
-..  _encapslines-encapsTagList:
+..  _encapslines-encapstaglist:
 
 encapsTagList
 -------------
@@ -54,7 +54,7 @@ encapsTagList
         <B>Some text</B>
 
 
-..  _encapslines-remapTag:
+..  _encapslines-remaptag:
 
 remapTag.[*tagname*]
 --------------------
@@ -83,7 +83,7 @@ remapTag.[*tagname*]
     ([*tagname*] is in uppercase.)
 
 
-..  _encapslines-addAttributes:
+..  _encapslines-addattributes:
 
 addAttributes.[*tagname*]
 -------------------------
@@ -115,7 +115,7 @@ addAttributes.[*tagname*]
         :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 
-..  _encapslines-removeWrapping:
+..  _encapslines-removewrapping:
 
 removeWrapping
 --------------
@@ -149,7 +149,7 @@ removeWrapping
         <b>Some text</b>
 
 
-..  _encapslines-wrapNonWrappedLines:
+..  _encapslines-wrapnonwrappedlines:
 
 wrapNonWrappedLines
 -------------------
@@ -182,48 +182,48 @@ wrapNonWrappedLines
         <p>Some text</p>
 
 
-..  _encapslines-innerStdWrap-all:
+..  _encapslines-innerstdwrap-all:
 
 innerStdWrap\_all
 -----------------
 
 ..  confval:: innerStdWrap_all
     :name: encapslines-innerStdWrap-all
-    :type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     Wraps the content inside all lines, whether they are encapsulated or
     not.
 
 
-..  _encapslines-encapsLinesStdWrap:
+..  _encapslines-encapslinesstdwrap:
 
 encapsLinesStdWrap.[*tagname*]
 ------------------------------
 
 ..  confval:: encapsLinesStdWrap
     :name: encapslines-encapsLinesStdWrap
-    :type: array of :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+    :type: array of :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Wraps the content inside all encapsulated lines.
 
     ([*tagname*] is in uppercase.)
 
 
-..  _encapslines-defaultAlign:
+..  _encapslines-defaultalign:
 
 defaultAlign
 ------------
 
 ..  confval:: defaultAlign
     :name: encapslines-defaultAlign
-    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     If set, this value is set as the default "align" value of the wrapping
-    tags, both from :ref:`encapsTagList <encapslines-encapsTagList>` and
-    :ref:`nonWrappedTag <encapslines-nonWrappedTag>`
+    tags, both from :ref:`encapsTagList <encapslines-encapstaglist>` and
+    :ref:`nonWrappedTag <encapslines-nonwrappedtag>`
 
 
-..  _encapslines-nonWrappedTag:
+..  _encapslines-nonwrappedtag:
 
 nonWrappedTag
 -------------

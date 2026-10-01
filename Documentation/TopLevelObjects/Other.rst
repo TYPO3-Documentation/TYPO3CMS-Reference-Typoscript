@@ -46,7 +46,7 @@ styles
 
 ..  index:: Top-level objects; tt_content
 ..  _tlo-tt:
-..  _tlo-tt_content:
+..  _tlo-tt-content:
 
 tt_content
 ==========

@@ -1,6 +1,6 @@
 :navigation-title: comma-separated-value
 ..  include:: /Includes.rst.txt
-..  _CommaSeparatedValueProcessor:
+..  _commaseparatedvalueprocessor:
 
 ======================================
 `comma-separated-value` data processor
@@ -16,7 +16,7 @@ and enclosure into account, before it is passed to the view.
 
 ..  contents:: Table of contents
 
-..  _CommaSeparatedValueProcessor-options:
+..  _commaseparatedvalueprocessor-options:
 
 Options:
 ========
@@ -26,7 +26,7 @@ Options:
     :type:
     :Default:
 
-    ..  _CommaSeparatedValueProcessor-if:
+    ..  _commaseparatedvalueprocessor-if:
 
     ..  rubric:: if
 
@@ -37,19 +37,19 @@ Options:
 
         If the condition is met, the data processor is processed.
 
-    ..  _CommaSeparatedValueProcessor-fieldName:
+    ..  _commaseparatedvalueprocessor-fieldname:
 
     ..  rubric:: fieldName
 
     ..  confval:: fieldName
         :name: CommaSeparatedValueProcessor-fieldName
         :required: true
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: ''
 
         Name of the field in the processed ContentObjectRenderer.
 
-    ..  _CommaSeparatedValueProcessor-as:
+    ..  _commaseparatedvalueprocessor-as:
 
     ..  rubric:: as
 
@@ -60,47 +60,47 @@ Options:
 
         The variable's name to be used in the Fluid template.
 
-    ..  _CommaSeparatedValueProcessor-maximumColumns:
+    ..  _commaseparatedvalueprocessor-maximumcolumns:
 
     ..  rubric:: maximumColumns
 
     ..  confval:: maximumColumns
         :name: CommaSeparatedValueProcessor-maximumColumns
-        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
         :default: `0`
 
         Maximal number of columns to be transformed. Surplus columns will be
         silently dropped. When set to `0` (default) all columns will be
         transformed.
 
-    ..  _CommaSeparatedValueProcessor-fieldDelimiter:
+    ..  _commaseparatedvalueprocessor-fielddelimiter:
 
     ..  rubric:: fieldDelimiter
 
     ..  confval:: fieldDelimiter
         :name: CommaSeparatedValueProcessor-fieldDelimiter
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: :typoscript:`,`
 
         The field delimiter, a character separating the values.
 
-    ..  _CommaSeparatedValueProcessor-fieldEnclosure:
+    ..  _commaseparatedvalueprocessor-fieldenclosure:
 
     ..  rubric:: fieldEnclosure
 
     ..  confval:: fieldEnclosure
         :name: CommaSeparatedValueProcessor-fieldEnclosure
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: :typoscript:`"`
 
         The field enclosure, a character surrounding the values.
 
-..  _CommaSeparatedValueProcessor-examples:
+..  _commaseparatedvalueprocessor-examples:
 
 Example: Transforming comma separated content into a html table
 ===============================================================
 
-Please see also :ref:`About the examples <dataProcessing-about-examples>`.
+Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 In this example, the `bodytext` field contains comma-separated
 values (CSV) data. To support different formats, the separator between

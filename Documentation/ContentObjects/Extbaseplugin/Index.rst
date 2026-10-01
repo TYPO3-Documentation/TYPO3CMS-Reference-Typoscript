@@ -33,7 +33,7 @@ cache
 
     See :ref:`cache function description <cache>` for details.
 
-..  _cobj-extbaseplugin-extensionName:
+..  _cobj-extbaseplugin-extensionname:
 
 extensionName
 -------------
@@ -44,7 +44,7 @@ extensionName
 
     The :ref:`extension name <t3coreapi:extension-naming-extensionName>`.
 
-..  _cobj-extbaseplugin-pluginName:
+..  _cobj-extbaseplugin-pluginname:
 
 pluginName
 ----------

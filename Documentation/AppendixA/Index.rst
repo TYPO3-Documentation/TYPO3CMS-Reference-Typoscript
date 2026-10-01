@@ -52,7 +52,7 @@ This will stdWrap the content with the properties of `.stdWrap` of the
 
 
 ..  _appendix-include-internal-variables:
-..  _TypoScript-Frontend-Controller:
+..  _typoscript-frontend-controller:
 
 TypoScriptFrontendController, TSFE
 ==================================
@@ -169,7 +169,7 @@ Example of an extension using the Extbase's `ActionController`:
     :caption: EXT:my_extension/Classes/Controller/MyExtensionController.php
 
 
-..  _appendix-include-tsfe-rootLine:
+..  _appendix-include-tsfe-rootline:
 
 TypoScriptFrontendController->rootLine
 --------------------------------------

@@ -1,7 +1,7 @@
 ..  include:: /Includes.rst.txt
 ..  index:: TCAdefaults
 ..  highlight:: php
-..  _userTsTcaDefaults:
+..  _usertstcadefaults:
 
 ===========
 TCAdefaults
@@ -12,12 +12,12 @@ for various TCA types, for instance for :ref:`type=input <t3tca:columns-input-pr
 
 The full path of a setting include the table and the field name: `TCAdefaults.[table name].[field]`
 
-This key is also available on :ref:`Page TSconfig level <pageTsTcaDefaults>`, the order of default
+This key is also available on :ref:`Page TSconfig level <pagetstcadefaults>`, the order of default
 values when creating new records in the backend is this:
 
 #.  Value from :php:`$GLOBALS['TCA']`
 #.  Value from User TSconfig (these settings)
-#.  Value from :ref:`Page TSconfig <pageTsTcaDefaults>`
+#.  Value from :ref:`Page TSconfig <pagetstcadefaults>`
 #.  Value from "defVals" GET variables
 #.  Value from previous record based on 'useColumnsForDefaultValues'
 

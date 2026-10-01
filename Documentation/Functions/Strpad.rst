@@ -15,7 +15,7 @@ for the operation.
     :local:
 
 ..  index:: strPad; Properties
-..  _strPad-properties:
+..  _strpad-properties:
 
 Properties
 ==========
@@ -34,7 +34,7 @@ length
     than, or equal to the length of the input value, no padding
     takes place.
 
-..  _strpad-padWith:
+..  _strpad-padwith:
 
 padWith
 -------

@@ -37,7 +37,7 @@ clear when reading through the single properties below and looking at the exampl
 
 ..  youtube:: B3IQq7pIJ_o
 
-..  _tceformApplyPropertiesFlexForm:
+..  _tceformapplypropertiesflexform:
 
 Applying properties to FlexForm fields
 --------------------------------------
@@ -76,7 +76,7 @@ Properties
 
 ..  index::
     Records; select items added
-..  _tceform-addItems:
+..  _tceform-additems:
 
 addItems
 --------
@@ -108,13 +108,13 @@ addItems
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.addItems`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
     ..  warning::
         Do not add page types this way (using `TCEFORM.pages.doktype.addItems`), instead the proper
         PHP API should be used to do this, see :ref:`Core APIs <t3coreapi:page-types>` for details.
 
-..  _tceform-addItems-example:
+..  _tceform-additems-example:
 
 Example: Add header layout option
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,7 +126,7 @@ Instead of adding files by path, icon identifiers should be used.
 
 ..  index::
     Records; labels changed
-..  _tceform-altLabels:
+..  _tceform-altlabels:
 
 altLabels
 ---------
@@ -153,9 +153,9 @@ altLabels
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.altLabels`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
-..  _tceform-altLabels-example:
+..  _tceform-altlabels-example:
 
 Example: Override labels for document types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -194,7 +194,7 @@ Note the *double dot* after `altLabels`.
     The issue has been fixed in **TYPO3 13.4.21+** as well as in **TYPO3 14.1+**.
     Overriding the label via Page TSconfig (`altLabels`) works again as expected, and the TCA-based workaround is no longer required.
 
-..  _tceform-page_tsconfig_id:
+..  _tceform-page-tsconfig-id:
 
 PAGE_TSCONFIG_ID
 ----------------
@@ -212,7 +212,7 @@ PAGE_TSCONFIG_ID
     This value can be used for the TCA property :ref:`foreign_table_where <t3tca:columns-select-properties-foreign-table-where>`
     and for the `addWhere` part of the :ref:`suggest wizard <pagetceformsuggest>`.
 
-..  _tceform-page_tsconfig_id-example:
+..  _tceform-page-tsconfig-id-example:
 
 Example: Substitute a marker in a plugin FlexForm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -233,7 +233,7 @@ This example might be used for a record in an extension. It refers to a
 table called `tx_myextension_table` and the field `myfield`. Here the marker will
 be substituted by the value `22`.
 
-..  _tceform-page_tsconfig_idlist:
+..  _tceform-page-tsconfig-idlist:
 
 PAGE_TSCONFIG_IDLIST
 --------------------
@@ -244,7 +244,7 @@ PAGE_TSCONFIG_IDLIST
 
     See above.
 
-..  _tceform-page_tsconfig_idlist-example:
+..  _tceform-page-tsconfig-idlist-example:
 
 Example: Substitute a list of IDs in a plugin FlexForm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -266,7 +266,7 @@ table called `tx_myextension_table` and the field `myfield`. Here the marker wil
 be substituted by the list of integers.
 
 
-..  _tceform-page_tsconfig_str:
+..  _tceform-page-tsconfig-str:
 
 PAGE_TSCONFIG_STR
 -----------------
@@ -277,7 +277,7 @@ PAGE_TSCONFIG_STR
 
     See above.
 
-..  _tceform-page_tsconfig_str-example:
+..  _tceform-page-tsconfig-str-example:
 
 Example: Substitute a string in a plugin FlexForm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -301,7 +301,7 @@ be substituted by the given value.
 
 ..  index::
     Records; field configuration
-..  _pageTsConfigTceFormColorPalette:
+..  _pagetsconfigtceformcolorpalette:
 
 colorPalette
 ------------
@@ -317,7 +317,7 @@ colorPalette
      color pickers within :ref:`FormEngine <t3coreapi:FormEngine>`. If no palette
      is defined, FormEngine falls back to all configured colors.
 
-..  _pageTsConfigTceFormColorPalette-example:
+..  _pagetsconfigtceformcolorpalette-example:
 
 Example: Assign a palette to a field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -328,7 +328,7 @@ Example: Assign a palette to a field
 
 ..  index::
     Records; field configuration
-..  _pageTsConfigTceFormConfig:
+..  _pagetsconfigtceformconfig:
 
 config
 ------
@@ -387,7 +387,7 @@ config
 
 ..  index::
     Records; tree configuration
-..  _pageTsConfigTceFormConfigTreeConfig:
+..  _pagetsconfigtceformconfigtreeconfig:
 
 config.treeConfig
 -----------------
@@ -396,7 +396,7 @@ config.treeConfig
     :name: tceform-config-treeConfig
     :type: array
 
-    The `treeConfig` sub properties of :ref:`TCEFORM.config <pageTsConfigTceFormConfig>` are dedicated to the TCA config type
+    The `treeConfig` sub properties of :ref:`TCEFORM.config <pagetsconfigtceformconfig>` are dedicated to the TCA config type
     `select` with :ref:`renderType=selectTree <t3tca:columns-select-rendertype-selectTree>`
     and to the TCA config type :ref:`category <t3tca:columns-category>`. A couple of
     :ref:`treeConfig <t3tca:columns-select-properties-treeconfig>` properties can be overridden on page TSconfig level, see their detailed description
@@ -424,7 +424,7 @@ config.treeConfig
 
         Where `sDEF` is the sheet name and :typoscript:`myext_pi1` the name
         of the plugin. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
 
 ..  index::
@@ -504,13 +504,13 @@ disabled
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.disabled`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.disabled`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
 ..  _tceform-disabled-example:
 
@@ -522,7 +522,7 @@ Example: Disable editing of the page title
 
 ..  index::
     Records; select items  disable "INVALID VALUE"
-..  _pageFormEngineDisableNoMatchingElement:
+..  _pageformenginedisablenomatchingelement:
 
 disableNoMatchingValueElement
 -----------------------------
@@ -554,9 +554,9 @@ disableNoMatchingValueElement
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.disableNoMatchingValueElement`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
-..  _pageFormEngineDisableNoMatchingElement-example:
+..  _pageformenginedisablenomatchingelement-example:
 
 Example: Disable "INVALID VALUE ..." label
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -574,7 +574,7 @@ Now the selector box will default to the first element in the selector box:
 
 ..  index::
     Records; fileFolderConfig
-..  _fileFolderConfig:
+..  _filefolderconfig:
 
 fileFolderConfig
 ----------------
@@ -611,11 +611,11 @@ fileFolderConfig
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.fileFolderConfig.folder`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
 ..  index::
     Records; select items user function
-..  _itemsProcFunc:
+..  _itemsprocfunc:
 
 itemsProcFunc
 -------------
@@ -640,11 +640,11 @@ itemsProcFunc
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.itemsProcFunc`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
 ..  index::
     Records; select items remove
-..  _tceform-keepItems:
+..  _tceform-keepitems:
 
 keepItems
 ---------
@@ -668,9 +668,9 @@ keepItems
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.keepItems`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
-..  _tceform-keepItems-example:
+..  _tceform-keepitems-example:
 
 Example: Show only standard and spacer pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -681,7 +681,7 @@ Example: Show only standard and spacer pages
 ..  index::
     Records; Field label
 
-..  _tceform_label:
+..  _tceform-label:
 
 label
 -----
@@ -708,9 +708,9 @@ label
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.label`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
-..  _tceform_label-example:
+..  _tceform-label-example:
 
 Example: Override the label of a field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -721,7 +721,7 @@ Example: Override the label of a field
 
 ..  index::
     Records; label for no matching value
-..  _tceform-noMatchingValue_label:
+..  _tceform-nomatchingvalue-label:
 
 noMatchingValue_label
 ---------------------
@@ -731,7 +731,7 @@ noMatchingValue_label
     :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
 
     This property applies only to items in :ref:`TCA type=select <t3tca:columns-select>` fields, it allows defining
-    a different label of the :ref:`noMatchingValue <pageFormEngineDisableNoMatchingElement>` element.
+    a different label of the :ref:`noMatchingValue <pageformenginedisablenomatchingelement>` element.
 
     It is possible to use the placeholder `%s` to insert the value. If the property is set to empty,
     the label will be blank.
@@ -748,9 +748,9 @@ noMatchingValue_label
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.noMatchingValue_label`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
-..  _tceform-noMatchingValue_label-example:
+..  _tceform-nomatchingvalue-label-example:
 
 Example: Replace "INVALID VALUE ..." label with another string
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -766,7 +766,7 @@ Example: Replace "INVALID VALUE ..." label with another string
 
 ..  index::
     Records; select items remove
-..  _tceform-removeItems:
+..  _tceform-removeitems:
 
 removeItems
 -----------
@@ -790,9 +790,9 @@ removeItems
         `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.removeItems`
 
         Where `sDEF` is the sheet name. For a description
-        see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+        see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
-..  _tceform-removeItems-example:
+..  _tceform-removeitems-example:
 
 Example: Remove "Recycler" and "Spacer" page types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -802,7 +802,7 @@ Example: Remove "Recycler" and "Spacer" page types
 
 ..  index::
     FlexForm; Sheet description
-..  _tceform-sheetDescription:
+..  _tceform-sheetdescription:
 
 sheetDescription
 ----------------
@@ -817,12 +817,12 @@ sheetDescription
     `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetDescription`.
 
     Where `sDEF` is the sheet name. For a description
-    see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+    see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
 
 ..  index::
     FlexForm; Sheet short description
-..  _tceform-sheetShortDescr:
+..  _tceform-sheetshortdescr:
 
 sheetShortDescr
 ---------------
@@ -837,11 +837,11 @@ sheetShortDescr
     `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetShortDescription`.
 
     Where `sDEF` is the sheet name. For a description
-    see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+    see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
 ..  index::
     FlexForm; Sheet title
-..  _tceform-sheetTitle:
+..  _tceform-sheettitle:
 
 sheetTitle
 ----------
@@ -856,9 +856,9 @@ sheetTitle
     `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetTitle`.
 
     Where `sDEF` is the sheet name. For a description
-    see the section :ref:`Applying properties to FlexForm fields <tceformApplyPropertiesFlexForm>` on this page.
+    see the section :ref:`Applying properties to FlexForm fields <tceformapplypropertiesflexform>` on this page.
 
-..  _tceform-sheetTitle-example:
+..  _tceform-sheettitle-example:
 
 Example: Rename the first tab of the FlexForm plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -905,7 +905,7 @@ Configuration of one suggest wizard field in a flex form field of one table for 
 
 ..  index::
     Suggest wizard; Search fields additional
-..  _tceform-suggest-additionalSearchFields:
+..  _tceform-suggest-additionalsearchfields:
 
 suggest.additionalSearchFields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -921,7 +921,7 @@ suggest.additionalSearchFields
 
 ..  index::
     Suggest wizard;  Where statement
-..  _tceform-suggest-addWhere:
+..  _tceform-suggest-addwhere:
 
 suggest.addWhere
 ~~~~~~~~~~~~~~~~
@@ -940,7 +940,7 @@ suggest.addWhere
     *   :ref:`###PAGE_TSCONFIG_IDLIST### <page_tsconfig_idlist>`
     *   :ref:`###PAGE_TSCONFIG_STR### <page_tsconfig_str>`
 
-..  _tceform-suggest-addWhere-example:
+..  _tceform-suggest-addwhere-example:
 
 Example: limit storage_pid to the children of a certain page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -954,7 +954,7 @@ Example: limit storage_pid to the children of a certain page
 
 ..  index::
     Suggest wizard; CSS class
-..  _tceform-suggest-cssClass:
+..  _tceform-suggest-cssclass:
 
 suggest.cssClass
 ~~~~~~~~~~~~~~~~
@@ -997,7 +997,7 @@ Example: Hide the suggest field for the storage_pid
 
 ..  index::
     Suggest wizard; Characters max
-..  _tceform-suggest-maxPathTitleLength:
+..  _tceform-suggest-maxpathtitlelength:
 
 suggest.maxPathTitleLength
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1008,7 +1008,7 @@ suggest.maxPathTitleLength
 
     Maximum number of characters to display when a path element is too long.
 
-..  _tceform-suggest-maxPathTitleLength-example:
+..  _tceform-suggest-maxpathtitlelength-example:
 
 Example: Limit the suggest field to 30 characters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1022,7 +1022,7 @@ Example: Limit the suggest field to 30 characters
 
 ..  index::
     Suggest wizard; Characters min
-..  _tceform-suggest-minimumCharacters:
+..  _tceform-suggest-minimumcharacters:
 
 suggest.minimumCharacters
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1034,7 +1034,7 @@ suggest.minimumCharacters
 
     Minimum number of characters needed to start the search. Works only for single fields.
 
-..  _tceform-suggest-minimumCharacters-example:
+..  _tceform-suggest-minimumcharacters-example:
 
 Example: Start the suggest search after 3 characters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1049,7 +1049,7 @@ Example: Start the suggest search after 3 characters
 
 ..  index::
     Suggest wizard; pid levels
-..  _tceform-suggest-pidDepth:
+..  _tceform-suggest-piddepth:
 
 suggest.pidDepth
 ~~~~~~~~~~~~~~~~
@@ -1060,7 +1060,7 @@ suggest.pidDepth
 
     Expand pidList by this number of levels. Only has an effect, if pidList has a value.
 
-..  _tceform-suggest-pidDepth-example:
+..  _tceform-suggest-piddepth-example:
 
 Example: Set search depth for suggest field
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1070,7 +1070,7 @@ Example: Set search depth for suggest field
 
 ..  index::
     Suggest wizard; pid list
-..  _tceform-suggest-pidList:
+..  _tceform-suggest-pidlist:
 
 suggest.pidList
 ~~~~~~~~~~~~~~~
@@ -1082,7 +1082,7 @@ suggest.pidList
     Limit the search to certain pages (and their subpages). When pidList is empty all pages will be included
     in the search as long as the backend user is allowed to see them.
 
-..  _tceform-suggest-pidList-example:
+..  _tceform-suggest-pidlist-example:
 
 Example: Limit suggest search to records on certain pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1093,7 +1093,7 @@ Example: Limit suggest search to records on certain pages
 
 ..  index::
     Suggest wizard; receiver php class
-..  _tceform-suggest-receiverClass:
+..  _tceform-suggest-receiverclass:
 
 suggest.receiverClass
 ~~~~~~~~~~~~~~~~~~~~~
@@ -1108,7 +1108,7 @@ suggest.receiverClass
 
 ..  index::
     Suggest wizard; rendering user function
-..  _tceform-suggest-renderFunc:
+..  _tceform-suggest-renderfunc:
 
 suggest.renderFunc
 ~~~~~~~~~~~~~~~~~~
@@ -1121,7 +1121,7 @@ suggest.renderFunc
 
 ..  index::
     Suggest wizard; Where statement
-..  _tceform-suggest-searchCondition:
+..  _tceform-suggest-searchcondition:
 
 suggest.searchCondition
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -1132,7 +1132,7 @@ suggest.searchCondition
 
     Additional WHERE clause (no AND needed to prepend).
 
-..  _tceform-suggest-searchCondition-example:
+..  _tceform-suggest-searchcondition-example:
 
 Example: Only search on pages with doktype=1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1142,7 +1142,7 @@ Example: Only search on pages with doktype=1
 
 ..  index::
     Suggest wizard; Search whole phrase
-..  _tceform-suggest-searchWholePhrase:
+..  _tceform-suggest-searchwholephrase:
 
 suggest.searchWholePhrase
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1155,7 +1155,7 @@ suggest.searchWholePhrase
     Whether to do a `LIKE=%mystring%` (searchWholePhrase = 1) or a
     `LIKE=mystring%` (to do a real find as you type).
 
-..  _tceform-suggest-searchWholePhrase-example:
+..  _tceform-suggest-searchwholephrase-example:
 
 Example: Search only for whole phrases
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

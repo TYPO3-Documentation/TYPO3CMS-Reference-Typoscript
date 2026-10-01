@@ -38,4 +38,4 @@ Then assign the colors to your palettes:
 
 Now you can assign a color palette to one field, to all fields of a table or
 as a global configuration, see
-:ref:`TCEFORM.colorPalette <pageTsConfigTceFormColorPalette>`.
+:ref:`TCEFORM.colorPalette <pagetsconfigtceformcolorpalette>`.

@@ -1,6 +1,6 @@
 ..  include:: /Includes.rst.txt
 ..  index:: File permissions
-..  _userTsConfigPermissions:
+..  _usertsconfigpermissions:
 
 ===========
 permissions

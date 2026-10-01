@@ -1,13 +1,13 @@
 ..  include:: /Includes.rst.txt
 
 ..  _cobj-fluidtemplate-properties-dataprocessing:
-..  _dataProcessing:
+..  _dataprocessing:
 
 ===============
 Data processors
 ===============
 
-:ref:`dataProcessing <fluidtemplate-dataProcessing>` is a property of
+:ref:`dataProcessing <fluidtemplate-dataprocessing>` is a property of
 :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` and :ref:`PAGEVIEW <cobj-pageview>`.
 
 The property adds one or multiple processors to manipulate the :php:`$data`
@@ -35,7 +35,7 @@ for example for comma-separated values, related files or related records.
     SplitProcessor
     CustomDataProcessors
 
-..  _dataProcessing-about-examples:
+..  _dataprocessing-about-examples:
 
 About the examples
 ==================

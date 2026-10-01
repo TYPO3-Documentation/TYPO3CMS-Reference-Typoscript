@@ -2,7 +2,7 @@
 ..  index::
     TCAdefaults
     Records; Default values
-..  _pageTsTcaDefaults:
+..  _pagetstcadefaults:
 
 ===========
 TCAdefaults
@@ -13,11 +13,11 @@ for various TCA types, for instance for :ref:`type=input <t3tca:columns-input-pr
 
 The full path of a setting include the table and the field name: `TCAdefaults.[table name].[field]`
 
-This key is also available on :ref:`User TSconfig level <userTsTcaDefaults>`, the order of default
+This key is also available on :ref:`User TSconfig level <usertstcadefaults>`, the order of default
 values when creating new records in the backend is this:
 
 #.  Value from `$GLOBALS['TCA']`
-#.  Value from :ref:`user TSconfig <userTsTcaDefaults>`
+#.  Value from :ref:`user TSconfig <usertstcadefaults>`
 #.  Value from page TSconfig (these settings)
 #.  Value from "defVals" GET variables
 #.  Value from previous record based on
@@ -28,7 +28,7 @@ values when creating new records in the backend is this:
     These can only be addressed via :xml:`<default>` elements within the
     FlexForm data structure.
 
-..  _pageTsTcaDefaults-example:
+..  _pagetstcadefaults-example:
 
 Example: Do not hide newly created pages by default
 ===================================================

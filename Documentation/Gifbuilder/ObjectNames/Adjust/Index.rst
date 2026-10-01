@@ -31,7 +31,7 @@ Properties
     :local:
 
 
-..  _gifbuilder-adjust-inputLevels:
+..  _gifbuilder-adjust-inputlevels:
 
 inputLevels
 -----------
@@ -62,7 +62,7 @@ inputLevels
         20.value = inputLevels = 50, 190
 
 
-..  _gifbuilder-adjust-outputLevels:
+..  _gifbuilder-adjust-outputlevels:
 
 outputLevels
 ------------
@@ -94,7 +94,7 @@ outputLevels
         20.value = outputLevels = 50, 190
 
 
-..  _gifbuilder-adjust-autoLevels:
+..  _gifbuilder-adjust-autolevels:
 
 autoLevels
 ----------
@@ -102,8 +102,8 @@ autoLevels
 ..  confval:: autoLevels
     :name: gifbuilder-adjust-autoLevels
 
-    Sets the :ref:`inputLevels <gifbuilder-adjust-inputLevels>` and
-    :ref:`outputLevels <gifbuilder-adjust-outputLevels>` automatically.
+    Sets the :ref:`inputLevels <gifbuilder-adjust-inputlevels>` and
+    :ref:`outputLevels <gifbuilder-adjust-outputlevels>` automatically.
 
     **Example:**
 

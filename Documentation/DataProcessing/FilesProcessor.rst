@@ -1,6 +1,6 @@
 :navigation-title: files
 ..  include:: /Includes.rst.txt
-..  _FilesProcessor:
+..  _filesprocessor:
 
 ======================
 `files` data processor
@@ -19,7 +19,7 @@ automatically.
 
 ..  contents:: Table of contents
 
-..  _FilesProcessor-options:
+..  _filesprocessor-options:
 
 Options:
 ========
@@ -29,7 +29,7 @@ Options:
     :type:
     :Default:
 
-    ..  _FilesProcessor-if:
+    ..  _filesprocessor-if:
 
     ..  rubric:: if
 
@@ -40,13 +40,13 @@ Options:
 
         Only, if the condition is met the data processor is executed.
 
-    ..  _FilesProcessor-references:
+    ..  _filesprocessor-references:
 
     ..  rubric:: references
 
     ..  confval:: references
         :name: FilesProcessor-references
-        :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdwrap>`
         :default: ''
         :Example: '1,303,42'
 
@@ -55,16 +55,16 @@ Options:
 
         The corresponding file records are added to the output array.
 
-        :ref:`stdWrap <stdWrap>` properties can also be used, see
-        :ref:`Example 2: use stdWrap property on references <FilesProcessor-stdWrap-on-references>`.
+        :ref:`stdWrap <stdwrap>` properties can also be used, see
+        :ref:`Example 2: use stdWrap property on references <filesprocessor-stdwrap-on-references>`.
 
-    ..  _FilesProcessor-references-fieldName:
+    ..  _filesprocessor-references-fieldname:
 
     ..  rubric:: references.fieldName
 
     ..  confval:: references.fieldName
         :name: FilesProcessor-references-fieldName
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: ''
         :Example: 'media'
 
@@ -73,13 +73,13 @@ Options:
         the referenced table and field, for example the `media` field of a
         `tt_content` record.
 
-    ..  _FilesProcessor-references-table:
+    ..  _filesprocessor-references-table:
 
     ..  rubric:: references.table
 
     ..  confval:: references.table
         :name: FilesProcessor-references.table
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: ''
         :Example: 'tt_content'
 
@@ -87,26 +87,26 @@ Options:
         :ref:`select <select>` function, :typoscript:`references.fieldName` must be set to
         the desired field name of the table to be queried.
 
-    ..  _FilesProcessor-files:
+    ..  _filesprocessor-files:
 
     ..  rubric:: files
 
     ..  confval:: files
         :name: FilesProcessor-files
-        :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdwrap>`
         :default: ''
         :Example: '1,303,42'
 
         If this option contains a comma-separated list of integers,
         these are treated as uids of files (`sys_file`).
 
-    ..  _FilesProcessor-collections:
+    ..  _filesprocessor-collections:
 
     ..  rubric:: collections
 
     ..  confval:: collections
         :name: FilesProcessor-collections
-        :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` (comma-separated integers) / :ref:`stdWrap <stdwrap>`
         :default: ''
         :Example: '1,303,42'
 
@@ -114,13 +114,13 @@ Options:
         these are treated as uids of collections. The file records in each
         collection are then being added to the output array.
 
-    ..  _FilesProcessor-folders:
+    ..  _filesprocessor-folders:
 
     ..  rubric:: folders
 
     ..  confval:: folders
         :name: FilesProcessor-folders
-        :type: :ref:`string <data-type-string>` (comma-separated folders), :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` (comma-separated folders), :ref:`stdWrap <stdwrap>`
         :default: ""
         :Example: "23:/other/folder/"
 
@@ -137,61 +137,61 @@ Options:
             Folder :file:`/folderInMyFileadmin/something/` from the default storage
             `0` (:file:`fileadmin`)
 
-    ..  _FilesProcessor-folders-recursive:
+    ..  _filesprocessor-folders-recursive:
 
     ..  rubric:: folders.recursive
 
     ..  confval:: folders.recursive
         :name: FilesProcessor-folders-recursive
-        :type: bool  / :ref:`stdWrap <stdWrap>`
+        :type: bool  / :ref:`stdWrap <stdwrap>`
         :default: 0
         :Example: 1
 
         If set to a non-empty value file, records will be added from folders
         recursively.
 
-    ..  _FilesProcessor-sorting:
+    ..  _filesprocessor-sorting:
 
     ..  rubric:: sorting
 
     ..  confval:: sorting
         :name: FilesProcessor-sorting
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: ""
         :Example: "filesize"
 
         The property of the file records by which they should be sorted.
         For example, filesize or title.
 
-    ..  _FilesProcessor-sorting-direction:
+    ..  _filesprocessor-sorting-direction:
 
     ..  rubric:: sorting.direction
 
     ..  confval:: sorting.direction
         :name: FilesProcessor-sorting-direction
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: "ascending"
         :Example: "descending"
 
         The sorting direction (:typoscript:`ascending` or :typoscript:`descending`).
 
-    ..  _FilesProcessor-as:
+    ..  _filesprocessor-as:
 
     ..  rubric:: as
 
     ..  confval:: as
         :name: FilesProcessor-as
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: "files"
 
         The variable name to be used in the Fluid template.
 
-..  _FilesProcessor-example-render-image:
+..  _filesprocessor-example-render-image:
 
 Example 1: Render the images stored in field image
 ==================================================
 
-Please see also :ref:`About the examples <dataProcessing-about-examples>`.
+Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 ..  rubric:: TypoScript
 
@@ -222,7 +222,7 @@ The array `images` contains the data of the files now:
     using debug. See :ref:`Using FAL in the frontend <t3coreapi:fal-using-fal-frontend>`.
 
 
-..  _FilesProcessor-stdWrap-on-references:
+..  _filesprocessor-stdwrap-on-references:
 
 Example 2: use stdWrap property on references
 =============================================
@@ -238,7 +238,7 @@ the root line to collect images for Fluid templates. One usual feature is to
 take images attached to pages and use them on the page tree as header images in
 the frontend.
 
-..  _FilesProcessor-FlexForm:
+..  _filesprocessor-flexform:
 
 Example 3: files from a FlexForm
 ================================

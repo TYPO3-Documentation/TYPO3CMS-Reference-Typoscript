@@ -31,14 +31,14 @@ in the :php:`$GLOBALS['TCA']`.
 Properties
 ==========
 
-..  _select-uidInList:
+..  _select-uidinlist:
 
 uidInList
 ---------
 
 ..  confval:: uidInList
     :name: select-uidInList
-    :type: *list of record uids* / :ref:`stdWrap <stdWrap>`
+    :type: *list of record uids* / :ref:`stdWrap <stdwrap>`
 
     Comma-separated list of record uids from the according database table.
     For example when the select function works on the table `tt_content`, then
@@ -48,7 +48,7 @@ uidInList
     *current record*.
 
     ..  attention::
-        :ref:`pidInList <select_pidInList>` defaults to :typoscript:`this`.
+        :ref:`pidInList <select-pidinlist>` defaults to :typoscript:`this`.
         Therefore by default only records
         from the current page are available for :typoscript:`uidInList`. If records
         should be fetched globally, :typoscript:`pidInList = 0` should also be set.
@@ -58,14 +58,14 @@ uidInList
     ..  literalinclude:: _codesnippets/_uidInList.typoscript
         :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-..  _select_pidInList:
+..  _select-pidinlist:
 
 pidInList
 ---------
 
 ..  confval:: pidInList
     :name: select_pidInList
-    :type: *list of page uids* / :ref:`stdWrap <stdWrap>`
+    :type: *list of page uids* / :ref:`stdWrap <stdwrap>`
     :default: :typoscript:`this`
 
     Comma-separated list of pids of the record. This will be page uids (pids). For
@@ -119,7 +119,7 @@ recursive
 
 ..  confval:: recursive
     :name: select-recursive
-    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
     :default: 0
 
     Number of recursive levels for the pidInList.
@@ -127,14 +127,14 @@ recursive
     ..  note::
         :typoscript:`recursive` is ignored for *special keyword* :typoscript:`pidInList=root`.
 
-..  _select-orderBy:
+..  _select-orderby:
 
 orderBy
 -------
 
 ..  confval:: orderBy
     :name: select-orderBy
-    :type: *SQL-orderBy* / :ref:`stdWrap <stdWrap>`
+    :type: *SQL-orderBy* / :ref:`stdWrap <stdwrap>`
 
     ORDER BY clause without the words "ORDER BY".
 
@@ -146,14 +146,14 @@ orderBy
         orderBy = sorting, title
 
 
-..  _select-groupBy:
+..  _select-groupby:
 
 groupBy
 -------
 
 ..  confval:: groupBy
     :name: select-groupBy
-    :type: *SQL-groupBy* / :ref:`stdWrap <stdWrap>`
+    :type: *SQL-groupBy* / :ref:`stdWrap <stdwrap>`
 
     GROUP BY clause without the words "GROUP BY".
 
@@ -172,7 +172,7 @@ max
 
 ..  confval:: max
     :name: select-max
-    :type: :ref:`integer <data-type-integer>` + :ref:`Calc <objects-calc>` +"total" / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`integer <data-type-integer>` + :ref:`Calc <objects-calc>` +"total" / :ref:`stdWrap <stdwrap>`
 
     Max records
 
@@ -186,7 +186,7 @@ begin
 
 ..  confval:: begin
     :name: select-begin
-    :type: :ref:`integer <data-type-integer>` + :ref:`Calc <objects-calc>` +"total" / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`integer <data-type-integer>` + :ref:`Calc <objects-calc>` +"total" / :ref:`stdWrap <stdwrap>`
 
     Begin with record number *value*.
 
@@ -201,7 +201,7 @@ where
 
 ..  confval:: where
     :name: select-where
-    :type: *SQL-where* / :ref:`stdWrap <stdWrap>`
+    :type: *SQL-where* / :ref:`stdWrap <stdwrap>`
 
     WHERE clause without the word "WHERE".
 
@@ -221,14 +221,14 @@ where
         where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
 
-..  _select-languageField:
+..  _select-languagefield:
 
 languageField
 -------------
 
 ..  confval:: languageField
     :name: select-languageField
-    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     This defaults to whatever is defined in TCA "ctrl"-section in the
     "languageField". Change it to overwrite the behaviour in your query.
@@ -239,14 +239,14 @@ languageField
     This behaviour can be disabled by setting :typoscript:`languageField = 0`.
 
 
-..  _select-includeRecordsWithoutDefaultTranslation:
+..  _select-includerecordswithoutdefaulttranslation:
 
 includeRecordsWithoutDefaultTranslation
 ---------------------------------------
 
 ..  confval:: includeRecordsWithoutDefaultTranslation
     :name: select-includeRecordsWithoutDefaultTranslation
-    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
     :default: 0
 
     If content language overlay is activated and the option :typoscript:`languageField` is not disabled,
@@ -254,14 +254,14 @@ includeRecordsWithoutDefaultTranslation
     which do **not** have a parent in the default language.
 
 
-..  _select-selectFields:
+..  _select-selectfields:
 
 selectFields
 ------------
 
 ..  confval:: selectFields
     :name: select-selectFields
-    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
     :default: \*
 
     List of fields to select, or :php:`count(*)`.
@@ -279,7 +279,7 @@ join, leftjoin, rightjoin
 
 ..  confval:: join, leftjoin, rightjoin
     :name: select-join
-    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     Enter the JOIN clause without :sql:`JOIN`, `LEFT OUTER JOIN` and `RIGHT OUTER JOIN`
     respectively.
@@ -291,7 +291,7 @@ join, leftjoin, rightjoin
     ..  literalinclude:: _codesnippets/_join.typoscript
         :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-    See :ref:`pidInList <select_pidInList>` for more examples.
+    See :ref:`pidInList <select-pidinlist>` for more examples.
 
 
 ..  _select-markers:
@@ -345,7 +345,7 @@ markers
     whatever.wrap ('something').
 
 
-..  _selectQuotingOfFields:
+..  _selectquotingoffields:
 
 Quoting of fields
 =================
@@ -391,5 +391,5 @@ See also:
     and rendering the output with :typoscript:`renderObj`
 *   :ref:`Wrap <data-type-wrap>`: enclosing results within text, used in some of the
     examples above
-*   :ref:`stdWrap <stdWrap>`: for more functionality, can be used in some of the properties,
+*   :ref:`stdWrap <stdwrap>`: for more functionality, can be used in some of the properties,
     such as :typoscript:`pidInList`, :typoscript:`selectFields` etc.

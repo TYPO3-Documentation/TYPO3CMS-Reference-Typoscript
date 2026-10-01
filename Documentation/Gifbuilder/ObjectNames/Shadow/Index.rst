@@ -37,7 +37,7 @@ color
 
 ..  confval:: color
     :name: gifbuilder-shadow-color
-    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-graphiccolor>` / :ref:`stdWrap <stdwrap>`
 
     The color of the shadow.
 
@@ -83,7 +83,7 @@ opacity
     Only active with a value for :ref:`blur <gifbuilder-shadow-blur>`.
 
 
-..  _gifbuilder-shadow-textObjNum:
+..  _gifbuilder-shadow-textobjnum:
 
 textObjNum
 ----------

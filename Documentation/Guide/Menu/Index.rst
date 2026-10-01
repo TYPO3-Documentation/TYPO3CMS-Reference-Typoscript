@@ -8,7 +8,7 @@ Create a menu with TypoScript
 Until now, we learned how the page *content* is rendered; however, the
 page *navigation* is missing.
 
-TYPO3 provides a special data processor, the :ref:`menu data processor <MenuProcessor>`
+TYPO3 provides a special data processor, the :ref:`menu data processor <menuprocessor>`
 to pass data to render a menu to the Fluid template.
 
 Configure the data processor in TypoScript:
@@ -30,7 +30,7 @@ Fluid in chapter
 
 You can find more examples on how to output menus of different styles, including
 multi-level menus, breadcrumbs, language menus, and sitemaps in the chapter
-about the :ref:`menu data processor <MenuProcessor>`.
+about the :ref:`menu data processor <menuprocessor>`.
 
 ..  note::
     Before data processors were introduced it was common to use the TypoScript

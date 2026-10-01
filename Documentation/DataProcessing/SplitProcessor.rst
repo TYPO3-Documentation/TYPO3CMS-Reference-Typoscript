@@ -1,6 +1,6 @@
 :navigation-title: split
 ..  include:: /Includes.rst.txt
-..  _splitProcessor:
+..  _splitprocessor:
 
 ======================
 `split` data processor
@@ -13,7 +13,7 @@ Whitespaces are automatically trimmed.
 
 ..  contents:: Table of contents
 
-..  _splitProcessor-options:
+..  _splitprocessor-options:
 
 Options
 =======
@@ -23,7 +23,7 @@ Options
     :type:
     :Default:
 
-    ..  _splitProcessor-if:
+    ..  _splitprocessor-if:
 
     ..  rubric:: if
 
@@ -34,19 +34,19 @@ Options
 
         Only if the condition is met the data processor is executed.
 
-    ..  _splitProcessor-fieldName:
+    ..  _splitprocessor-fieldname:
 
     ..  rubric:: fieldName
 
     ..  confval:: fieldName
         :name: splitProcessor-fieldName
         :required: true
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: ''
 
         Name of the field to be used.
 
-    ..  _splitProcessor-as:
+    ..  _splitprocessor-as:
 
     ..  rubric:: as
 
@@ -57,60 +57,60 @@ Options
 
         The variable name to be used in the Fluid template.
 
-    ..  _splitProcessor-delimiter:
+    ..  _splitprocessor-delimiter:
 
     ..  rubric:: delimiter
 
     ..  confval:: delimiter
         :name: splitProcessor-delimiter
-        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
         :default: Line Feed
         :Example: ","
 
         The field delimiter, a character separating the values.
 
-    ..  _splitProcessor-filterIntegers:
+    ..  _splitprocessor-filterintegers:
 
     ..  rubric:: filterIntegers
 
     ..  confval:: filterIntegers
         :name: splitProcessor-filterIntegers
-        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
         :default: 0
         :Example: 1
 
         If set to `1`, all values are being cast to int.
 
-    ..  _splitProcessor-filterUnique:
+    ..  _splitprocessor-filterunique:
 
     ..  rubric:: filterUnique
 
     ..  confval:: filterUnique
         :name: splitProcessor-filterUnique
-        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
         :default: 0
         :Example: 1
 
         If set to `1`, all duplicates will be removed.
 
-    ..  _splitProcessor-removeEmptyEntries:
+    ..  _splitprocessor-removeemptyentries:
 
     ..  rubric:: removeEmptyEntries
 
     ..  confval:: removeEmptyEntries
         :name: splitProcessor-removeEmptyEntries
-        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdWrap>`
+        :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
         :default: 0
         :Example: 1
 
         If set to `1`, all empty values will be removed.
 
-..  _splitProcessor-example-split-url:
+..  _splitprocessor-example-split-url:
 
 Example: Splitting a URL
 ========================
 
-Please see also :ref:`About the examples <dataProcessing-about-examples>`.
+Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 
 ..  rubric:: TypoScript
