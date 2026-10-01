@@ -57,9 +57,11 @@ TypoScriptFrontendController, TSFE
 ----------------------------------
 
 ..  versionchanged:: 14.0
+    :changelog: breaking-107831-1761307521
 
-    Deprecated with `Deprecation: #105230 - TypoScriptFrontendController and $GLOBALS['TSFE'] <https://docs.typo3.org/permalink/changelog:deprecation-105230-1728374467>`_,
-    removed with `Breaking: #107831 - Removed TypoScriptFrontendController <https://docs.typo3.org/permalink/changelog:breaking-107831-1761307521>`_.
+    Deprecated with `Deprecation: #105230 - TypoScriptFrontendController and
+    $GLOBALS['TSFE'] <https://docs.typo3.org/permalink/changelog:deprecation-105230-1728374467>`_
+    and removed in 14.0.
 
 See also: `TypoScriptFrontendController, TSFE <https://docs.typo3.org/permalink/t3tsref:typoscript-frontend-controller@v13>`_
 
@@ -91,8 +93,9 @@ Conditions loginUser(), usergroup() have been removed
 -----------------------------------------------------
 
 ..  versionchanged:: 13.0
-    Deprecated with `Deprecation: #100349 - TypoScript loginUser() and usergroup() conditions <https://docs.typo3.org/permalink/changelog:deprecation-100349-1680097287>`_,
-    removed with v13. Use the variables
+    :changelog: deprecation-100349-1680097287
+
+    Deprecated with v12, removed with v13. Use the variables
     :ref:`frontend.user <condition-frontend-user>` and :ref:`backend.user <condition-backend-user>` instead.
 
 
@@ -115,12 +118,12 @@ TYPO3 v12
 -------------------------------------------------------
 
 ..  versionchanged:: 12.0
-    TYPO3 v12 ships CKEditor 5, see `Breaking: #96874 - CKEditor-related
-    plugins and configuration
-    <https://docs.typo3.org/permalink/changelog:breaking-96874-1664488429>`_.
-    CKEditor 5 has no `contentsLangDirection` option, so the page TSconfig
-    setting no longer had any effect. The last remnants in the Core were
-    removed with issue `#99916 <https://forge.typo3.org/issues/99916>`_.
+    :changelog: breaking-96874-1664488429
+
+    TYPO3 v12 ships CKEditor 5. CKEditor 5 has no `contentsLangDirection`
+    option, so the page TSconfig setting no longer had any effect. The last
+    remnants in the Core were removed with issue `#99916
+    <https://forge.typo3.org/issues/99916>`_.
 
 The text direction of the rich text editor now follows the content language
 of the edited record and is determined automatically. There is no page
