@@ -6,7 +6,7 @@
 Colors in TypoScript GIFBUILDER
 ===============================
 
-..  _data-type-GraphicColor:
+..  _data-type-graphiccolor:
 ..  confval:: GraphicColor
     :name: data-type-GraphicColor
 

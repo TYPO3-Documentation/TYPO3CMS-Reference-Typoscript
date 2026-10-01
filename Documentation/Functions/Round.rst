@@ -22,7 +22,7 @@ selected round method.
 Properties
 ==========
 
-..  _round-roundType:
+..  _round-roundtype:
 
 roundType
 ---------

@@ -16,7 +16,7 @@ HTMLparser
 Properties
 ==========
 
-..  _htmlparser-allowTags:
+..  _htmlparser-allowtags:
 
 allowTags
 ---------
@@ -28,7 +28,7 @@ allowTags
     Default allowed tags.
 
 
-..  _htmlparser-stripEmptyTags:
+..  _htmlparser-stripemptytags:
 
 stripEmptyTags
 --------------
@@ -40,7 +40,7 @@ stripEmptyTags
     Passes the content to PHPs :php:`strip_tags()`.
 
 
-..  _htmlparser-stripEmptyTags-keepTags:
+..  _htmlparser-stripemptytags-keeptags:
 
 stripEmptyTags.keepTags
 -----------------------
@@ -68,7 +68,7 @@ tags.[tagname]
     [tagname] in lowercase.
 
 
-..  _htmlparser-localNesting:
+..  _htmlparser-localnesting:
 
 localNesting
 ------------
@@ -81,7 +81,7 @@ localNesting
     have the nesting-flag set to true.
 
 
-..  _htmlparser-globalNesting:
+..  _htmlparser-globalnesting:
 
 globalNesting
 -------------
@@ -94,7 +94,7 @@ globalNesting
     have the nesting-flag set to "global".
 
 
-..  _htmlparser-rmTagIfNoAttrib:
+..  _htmlparser-rmtagifnoattrib:
 
 rmTagIfNoAttrib
 ---------------
@@ -104,10 +104,10 @@ rmTagIfNoAttrib
     :type: (ibid)
 
     List of tags (among the already set tags), which will be forced to
-    have the :ref:`rmTagIfNoAttrib <htmlparser-rmTagIfNoAttrib>` set to true.
+    have the :ref:`rmTagIfNoAttrib <htmlparser-rmtagifnoattrib>` set to true.
 
 
-..  _htmlparser-noAttrib:
+..  _htmlparser-noattrib:
 
 noAttrib
 --------
@@ -121,7 +121,7 @@ noAttrib
     will be removed.
 
 
-..  _htmlparser-removeTags:
+..  _htmlparser-removetags:
 
 removeTags
 ----------
@@ -139,7 +139,7 @@ removeTags
     ..  literalinclude:: _removeTags.typoscript
         :caption: EXT:my_extension/Configuration/TypoScript/page.tsconfig
 
-..  _htmlparser-keepNonMatchedTags:
+..  _htmlparser-keepnonmatchedtags:
 
 keepNonMatchedTags
 ------------------
@@ -158,7 +158,7 @@ keepNonMatchedTags
     be allowed! So you might probably want to set this value!
 
 
-..  _htmlparser-htmlSpecialChars:
+..  _htmlparser-htmlspecialchars:
 
 htmlSpecialChars
 ----------------

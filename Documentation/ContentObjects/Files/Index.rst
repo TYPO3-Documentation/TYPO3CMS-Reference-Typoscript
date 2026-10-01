@@ -174,7 +174,7 @@ begin
     The first item to return. If not set (default), items beginning
     with the first one are returned.
 
-..  _cobj-files-maxItems:
+..  _cobj-files-maxitems:
 
 maxItems
 --------
@@ -184,11 +184,11 @@ maxItems
     :type: :ref:`integer <data-type-integer>` / :ref:`stdWrap <stdwrap>`
 
     Maximum number of items to return. If not set (default), all items
-    are returned. If :ref:`begin <cobj-files-begin>` and :ref:`maxItems <cobj-files-maxItems>`
+    are returned. If :ref:`begin <cobj-files-begin>` and :ref:`maxItems <cobj-files-maxitems>`
     together exceed the number of available items, no items beyond the
     last available item will be returned.
 
-..  _cobj-files-renderObj:
+..  _cobj-files-renderobj:
 
 renderObj
 ---------
@@ -210,7 +210,7 @@ renderObj
 
     This returns the size of the current file.
 
-..  _cobj-files-stdWrap:
+..  _cobj-files-stdwrap:
 
 stdWrap
 -------
@@ -245,7 +245,7 @@ references.uid
 
     The UID of the record from which to fetch the referenced files.
 
-..  _cobj-files-references-fieldName:
+..  _cobj-files-references-fieldname:
 
 references.fieldName
 --------------------
@@ -268,7 +268,7 @@ Usage with files
 
 In this example, we first load files using several of the methods
 explained above (using sys_file UIDs, collection UIDs, and folders).
-Then we use the :ref:`TEXT <cobj-text>` cObject as :ref:`renderObj <cobj-files-renderObj>`
+Then we use the :ref:`TEXT <cobj-text>` cObject as :ref:`renderObj <cobj-files-renderobj>`
 to output the file size of all files that were found:
 
 ..  literalinclude:: _codesnippets/_files.typoscript

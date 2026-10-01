@@ -92,7 +92,7 @@ Example: Set the template root paths
     :caption: EXT:my_extension/ext_typoscript_setup.typoscript
 
 ..  index:: module; view.partialRootPaths
-..  _tlo-module-properties-partialRootPaths:
+..  _tlo-module-properties-partialrootpaths:
 
 view.partialRootPaths
 ----------------------

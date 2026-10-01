@@ -23,7 +23,7 @@ Configuration options of the :guilabel:`Content > Status` module.
 ..  index::
     fieldDefinitions
     Pagetree overview; Available fields
-..  _fieldDefinitions-webinfo:
+..  _fielddefinitions-webinfo:
 
 fieldDefinitions
 ================
@@ -48,7 +48,7 @@ fieldDefinitions
 
     The string `###ALL_TABLES###` is replaced with a list of all table names an editor has access to.
 
-..  _fieldDefinitions-webinfo-example:
+..  _fielddefinitions-webinfo-example:
 
 Example: Override the field definitions in the status module
 ------------------------------------------------------------

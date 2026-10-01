@@ -47,7 +47,7 @@ replace
     Defines the string to be used for the replacement.
 
 
-..  _replacement-useRegExp:
+..  _replacement-useregexp:
 
 useRegExp
 ---------
@@ -66,7 +66,7 @@ useRegExp
         :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _replacement-useOptionSplitReplace:
+..  _replacement-useoptionsplitreplace:
 
 useOptionSplitReplace
 ---------------------

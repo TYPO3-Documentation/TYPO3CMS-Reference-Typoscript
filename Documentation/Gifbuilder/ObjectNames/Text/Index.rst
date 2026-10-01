@@ -51,10 +51,10 @@ angle
 
     ..  note::
         The angle is not available, if :ref:`spacing <gifbuilder-text-spacing>`
-        / :ref:`wordSpacing <gifbuilder-text-wordSpacing>` is set.
+        / :ref:`wordSpacing <gifbuilder-text-wordspacing>` is set.
 
 
-..  _gifbuilder-text-antiAlias:
+..  _gifbuilder-text-antialias:
 
 antiAlias
 ---------
@@ -68,13 +68,13 @@ antiAlias
 
     ..  note::
         This option is not available, if
-        :ref:`niceText <gifbuilder-text-niceText>` is enabled.
+        :ref:`niceText <gifbuilder-text-nicetext>` is enabled.
 
         Setting this option to `0` will not work, if
-        :ref:`fontColor <gifbuilder-text-fontColor>` is set to black (or #000000).
+        :ref:`fontColor <gifbuilder-text-fontcolor>` is set to black (or #000000).
 
 
-..  _gifbuilder-text-breakSpace:
+..  _gifbuilder-text-breakspace:
 
 breakSpace
 ----------
@@ -88,7 +88,7 @@ breakSpace
     element.
 
 
-..  _gifbuilder-text-breakWidth:
+..  _gifbuilder-text-breakwidth:
 
 breakWidth
 ----------
@@ -101,7 +101,7 @@ breakWidth
     force an automatic line break.
 
 
-..  _gifbuilder-text-doNotStripHTML:
+..  _gifbuilder-text-donotstriphtml:
 
 doNotStripHTML
 --------------
@@ -125,20 +125,20 @@ emboss
     :type: GIFBUILDER object :ref:`->EMBOSS <gifbuilder-emboss>`
 
 
-..  _gifbuilder-text-fontColor:
+..  _gifbuilder-text-fontcolor:
 
 fontColor
 ---------
 
 ..  confval:: fontColor
     :name: gifbuilder-text-fontColor
-    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-graphiccolor>` / :ref:`stdWrap <stdwrap>`
     :default: black
 
     The font color.
 
 
-..  _gifbuilder-text-fontFile:
+..  _gifbuilder-text-fontfile:
 
 fontFile
 --------
@@ -152,7 +152,7 @@ fontFile
     used).
 
 
-..  _gifbuilder-text-fontSize:
+..  _gifbuilder-text-fontsize:
 
 fontSize
 --------
@@ -197,10 +197,10 @@ iterations
 
     ..  note::
         This option is not available, if
-        :ref:`niceText <gifbuilder-text-niceText>` is enabled.
+        :ref:`niceText <gifbuilder-text-nicetext>` is enabled.
 
 
-..  _gifbuilder-text-maxWidth:
+..  _gifbuilder-text-maxwidth:
 
 maxWidth
 --------
@@ -210,14 +210,14 @@ maxWidth
     :type: positive integer / :ref:`stdWrap <stdwrap>`
 
     Sets the maximum width in pixels, the :ref:`text <gifbuilder-text-text>`
-    must be. Reduces the :ref:`fontSize <gifbuilder-text-fontSize>`, if the
+    must be. Reduces the :ref:`fontSize <gifbuilder-text-fontsize>`, if the
     text does not fit within this width.
 
     Does not support setting alternative font sizes in
-    :ref:`splitRendering <gifbuilder-text-splitRendering>` options.
+    :ref:`splitRendering <gifbuilder-text-splitrendering>` options.
 
 
-..  _gifbuilder-text-niceText:
+..  _gifbuilder-text-nicetext:
 
 niceText
 --------
@@ -233,7 +233,7 @@ niceText
     The principle of this function is to create a black/white image file in
     twice or more times the size of the actual image file and then print the
     text onto this in a scaled dimension. Afterwards GraphicsMagick/ImageMagick
-    scales down the mask and masks the :ref:`fontColor <gifbuilder-text-fontColor>` down on
+    scales down the mask and masks the :ref:`fontColor <gifbuilder-text-fontcolor>` down on
     the original image file through the temporary mask.
 
     The fact that the font is actually rendered in the double size and
@@ -242,7 +242,7 @@ niceText
     then do not use the function.
 
 
-..  _gifbuilder-text-niceText-after:
+..  _gifbuilder-text-nicetext-after:
 
 after
 ~~~~~
@@ -253,7 +253,7 @@ after
     GraphicsMagick/ImageMagick parameters after scale.
 
 
-..  _gifbuilder-text-niceText-before:
+..  _gifbuilder-text-nicetext-before:
 
 before
 ~~~~~~
@@ -264,7 +264,7 @@ before
     GraphicsMagick/ImageMagick parameters before scale.
 
 
-..  _gifbuilder-text-niceText-scaleFactor:
+..  _gifbuilder-text-nicetext-scalefactor:
 
 scaleFactor
 ~~~~~~~~~~~
@@ -276,7 +276,7 @@ scaleFactor
     The scaling factor.
 
 
-..  _gifbuilder-text-niceText-sharpen:
+..  _gifbuilder-text-nicetext-sharpen:
 
 sharpen
 ~~~~~~~
@@ -335,7 +335,7 @@ spacing
     The pixel distance between letters. This may render ugly!
 
 
-..  _gifbuilder-text-splitRendering:
+..  _gifbuilder-text-splitrendering:
 
 splitRendering
 --------------
@@ -351,12 +351,12 @@ splitRendering
     for example, Japanese and there is a separate font file for each.
 
     You can also render keywords in another
-    :ref:`font <gifbuilder-text-fontFile>` /
-    :ref:`size <gifbuilder-text-fontSize>` /
-    :ref:`color <gifbuilder-text-fontColor>`.
+    :ref:`font <gifbuilder-text-fontfile>` /
+    :ref:`size <gifbuilder-text-fontsize>` /
+    :ref:`color <gifbuilder-text-fontcolor>`.
 
 
-..  _gifbuilder-text-splitRendering-array:
+..  _gifbuilder-text-splitrendering-array:
 
 [array]
 ~~~~~~~
@@ -368,8 +368,8 @@ splitRendering
     With keyword being [charRange, highlightWord].
 
     *   **splitRendering.[array] = keyword** with keyword being
-        [:ref:`charRange <gifbuilder-text-splitRendering-charRange>`,
-        :ref:`highlightWord <gifbuilder-text-splitRendering-highlightWord>`]
+        [:ref:`charRange <gifbuilder-text-splitrendering-charrange>`,
+        :ref:`highlightWord <gifbuilder-text-splitrendering-highlightword>`]
 
     *   **splitRendering.[array] {**
 
@@ -378,7 +378,7 @@ splitRendering
         *   **fontSize:** Alternative font size for this rendering.
 
         *   **color:** Alternative color for this rendering, works *only*
-            without :ref:`niceText <gifbuilder-text-niceText>`.
+            without :ref:`niceText <gifbuilder-text-nicetext>`.
 
         *   **xSpaceBefore:** x space before this part.
 
@@ -390,7 +390,7 @@ splitRendering
 
         **}**
 
-    ..  _gifbuilder-text-splitRendering-charRange:
+    ..  _gifbuilder-text-splitrendering-charrange:
 
     **Keyword: charRange**
 
@@ -400,7 +400,7 @@ splitRendering
     for example, :typoscript:`- 200` or :typoscript:`200 -` and single values,
     for example, :typoscript:`65, 66, 67`.
 
-    ..  _gifbuilder-text-splitRendering-highlightWord:
+    ..  _gifbuilder-text-splitrendering-highlightword:
 
     **Keyword: highlightWord**
 
@@ -410,7 +410,7 @@ splitRendering
     **Limitations:**
 
     *   The pixel compensation values are not corrected for scale factor used
-        with :ref:`niceText <gifbuilder-text-niceText>`. Basically this means
+        with :ref:`niceText <gifbuilder-text-nicetext>`. Basically this means
         that when :typoscript:`niceText` is used, these values will have only
         the half effect.
 
@@ -425,7 +425,7 @@ splitRendering
         :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 
-..  _gifbuilder-text-splitRendering-compX:
+..  _gifbuilder-text-splitrendering-compx:
 
 compX
 ~~~~~
@@ -437,7 +437,7 @@ compX
     Additional pixel space between parts, x direction.
 
 
-..  _gifbuilder-text-splitRendering-compY:
+..  _gifbuilder-text-splitrendering-compy:
 
 compY
 ~~~~~
@@ -465,7 +465,7 @@ text
     example, the :typoscript:`GIFBUILDER` object is used in TypoScript.
 
 
-..  _gifbuilder-text-textMaxLength:
+..  _gifbuilder-text-textmaxlength:
 
 textMaxLength
 -------------
@@ -479,7 +479,7 @@ textMaxLength
     natural break that prevents incidental rendering of very long texts!
 
 
-..  _gifbuilder-text-wordSpacing:
+..  _gifbuilder-text-wordspacing:
 
 wordSpacing
 -----------

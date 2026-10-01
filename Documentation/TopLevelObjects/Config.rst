@@ -23,13 +23,13 @@ can be set like this:
     :depth: 1
 
 ..  _setup-config-xmlprologue:
-..  _setup-config-typolinklinkaccessrestrictedpages-ATagParams:
+..  _setup-config-typolinklinkaccessrestrictedpages-atagparams:
 ..  _setup-config-typolinklinkaccessrestrictedpages-addparams:
 ..  _setup-config-sendcacheheaders:
 ..  _setup-config-showwebsitetitle:
 ..  _setup-config-spamprotectemailaddresses:
 ..  _setup-config-spamprotectemailaddresses-atsubst:
-..  _setup-config-recordLinks:
+..  _setup-config-recordlinks:
 ..  _setup-config-removedefaultcss:
 ..  _setup-config-pagetitle:
 ..  _setup-config-pagetitlefirst:
@@ -45,17 +45,17 @@ can be set like this:
 ..  _setup-config-htmltag-stdwrap:
 ..  _setup-config-index-descrlgd:
 ..  _setup-config-index-enable:
-..  _setup-config-forceAbsoluteUrls:
+..  _setup-config-forceabsoluteurls:
 ..  _setup-config-forcetypevalue:
 ..  _setup-config-headercomment:
 ..  _setup-config-enablecontentlengthheader:
 ..  _setup-config-exttarget:
 ..  _setup-config-filetarget:
-..  _setup-config-disableCanonical:
-..  _setup-config-disableHrefLang:
+..  _setup-config-disablecanonical:
+..  _setup-config-disablehreflang:
 ..  _setup-config-disableprefixcomment:
 ..  _setup-config-disablepreviewnotification:
-..  _disableLanguageHeader:
+..  _disablelanguageheader:
 ..  _setup-config-doctype:
 ..  _setup-config-disablebodytag:
 ..  _setup-config-debug:
@@ -236,7 +236,7 @@ Properties of 'config'
         :Example: :ref:`Provide JSON and disable HTML headers <setup-config-disableallheadercode>`
 
         If this is not set or set to `0`, the :ref:`PAGE object type in TypoScript <page>`
-        outputs a HTML skeleton, see :ref:`Output of the PAGE object <page_output>`.
+        outputs a HTML skeleton, see :ref:`Output of the PAGE object <page-output>`.
 
         To disable the default behaviour set :typoscript:`disableAllHeaderCode = 1`.
         The page then consists of only the cObject array
@@ -293,7 +293,7 @@ Properties of 'config'
         :name: config-disablePrefixComment
         :type: :ref:`boolean <data-type-boolean>`
 
-        If set, stdWrap :ref:`prefixComment <stdwrap-prefixComment>` will be disabled, thus
+        If set, stdWrap :ref:`prefixComment <stdwrap-prefixcomment>` will be disabled, thus
         preventing any potentially revealing and space-consuming comments in the HTML
         source code.
 
@@ -403,7 +403,7 @@ Properties of 'config'
         ..  note::
             Setting this option will override :ref:`config.absRefPrefix
             <setup-config-absrefprefix>` and any typolink
-            :ref:`forceAbsoluteUrl <typolink-forceAbsoluteUrl>` options.
+            :ref:`forceAbsoluteUrl <typolink-forceabsoluteurl>` options.
 
     ..  rubric:: forceTypeValue
 
@@ -742,7 +742,7 @@ Properties of 'config'
         :type: :ref:`stdWrap <stdwrap>`
 
         stdWrap for the page title. This option will be executed *after* all
-        other processing options like :ref:`Properties of 'config' <setup-config-pageTitleFirst>`.
+        other processing options like :ref:`Properties of 'config' <setup-config-pagetitlefirst>`.
 
     ..  rubric:: pageTitleFirst
 
@@ -820,7 +820,7 @@ Properties of 'config'
 
         **Special case:** If the value is set to the string `external`, then the default
         JavaScript is written to a temporary file and included in that file.
-        See :ref:`inlineStyle2TempFile example <setup-config-inlineStyle2TempFile>`.
+        See :ref:`inlineStyle2TempFile example <setup-config-inlinestyle2tempfile>`.
 
     ..  rubric:: sendCacheHeaders
 
@@ -1077,7 +1077,7 @@ changed:
 
     config.cache.all = fe_users:current
 
-..  _setup-config-contentObjectExceptionHandler:
+..  _setup-config-contentobjectexceptionhandler:
 
 contentObjectExceptionHandler example
 -------------------------------------
@@ -1383,7 +1383,7 @@ class "restricted" is added to the anchor tag.
 ..  _setup-config-compresscss:
 ..  _setup-config-compressjs:
 ..  _setup-config-concatenatecss:
-..  _setup-config-concatenateJs:
+..  _setup-config-concatenatejs:
 
 Frontend asset concatenation and compression not supported
 ==========================================================

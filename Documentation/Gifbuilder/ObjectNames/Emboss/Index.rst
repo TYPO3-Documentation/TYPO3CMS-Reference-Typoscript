@@ -32,14 +32,14 @@ blur
     are relevant.
 
 
-..  _gifbuilder-emboss-highColor:
+..  _gifbuilder-emboss-highcolor:
 
 highColor
 ---------
 
 ..  confval:: highColor
     :name: gifbuilder-emboss-highColor
-    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-graphiccolor>` / :ref:`stdWrap <stdwrap>`
 
     Upper border color.
 
@@ -57,14 +57,14 @@ intensity
     combined with a blurred shadow - create a kind of soft-edged outline.
 
 
-..  _gifbuilder-emboss-lowColor:
+..  _gifbuilder-emboss-lowcolor:
 
 lowColor
 --------
 
 ..  confval:: lowColor
     :name: gifbuilder-emboss-lowColor
-    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-GraphicColor>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`Colors in TypoScript GIFBUILDER <data-type-graphiccolor>` / :ref:`stdWrap <stdwrap>`
 
     Lower border color.
 
@@ -97,7 +97,7 @@ offset
     Offset of the emboss.
 
 
-..  _gifbuilder-emboss-textObjNum:
+..  _gifbuilder-emboss-textobjnum:
 
 textObjNum
 ----------

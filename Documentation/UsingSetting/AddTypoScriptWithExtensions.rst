@@ -110,7 +110,7 @@ for example:
 
     plugin.some_extension_pi1.settings.someSetting = Special setting
 
-..  _extdev-add-typoscript-sets-v12-static_includes:
+..  _extdev-add-typoscript-sets-v12-static-includes:
 ..  _extdev-static-includes:
 ..  _extdev-add-typoscript-sets-v12:
 

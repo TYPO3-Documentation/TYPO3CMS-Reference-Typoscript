@@ -22,7 +22,7 @@ Configuration options of the :guilabel:`Content > Records` module.
 ..  index::
     allowedNewTables
     Buttons; Create new
-..  _pageTsConfigWebListAllowedNewTables:
+..  _pagetsconfigweblistallowednewtables:
 
 allowedNewTables
 ================
@@ -34,14 +34,14 @@ allowedNewTables
     If this list is set, then only tables listed here will have a link to "create new" in the page and sub pages.
     This also affects the "Create new record" content element wizard.
 
-    This is the opposite of :ref:`deniedNewTables property <pageTsConfigWebListDeniedNewTables>`.
+    This is the opposite of :ref:`deniedNewTables property <pagetsconfigweblistdeniednewtables>`.
 
     ..  note::
 
         Technically records can be created (e.g. by copying/moving), so this is not a security feature.
         The point is to reduce the number of options for new records visually.
 
-..  _pageTsConfigWebListAllowedNewTable-example:
+..  _pagetsconfigweblistallowednewtable-example:
 
 Example: Allow records of type pages or sys_category in the new record wizard
 -----------------------------------------------------------------------------
@@ -56,7 +56,7 @@ Example: Allow records of type pages or sys_category in the new record wizard
 
 
 ..  index:: clickTitleMode
-..  _pageTsConfigWebList-clickTitleMode:
+..  _pagetsconfigweblist-clicktitlemode:
 
 clickTitleMode
 ==============
@@ -82,7 +82,7 @@ clickTitleMode
 ..  index::
     csvDelimiter
     CSV Exports; Delimiter
-..  _pageTsConfigWebList-csvDelimiter:
+..  _pagetsconfigweblist-csvdelimiter:
 
 csvDelimiter
 ============
@@ -110,7 +110,7 @@ Example: Use semicolon as delimiter CSV downloads
 ..  index::
     csvQuote
     CSV Downloads; Quoting character
-..  _pageTsConfigWebList-csvQuote:
+..  _pagetsconfigweblist-csvquote:
 
 csvQuote
 ========
@@ -124,7 +124,7 @@ csvQuote
     be displayed as default quoting in the download dialog in the
     :guilabel:`Content > Records` module.
 
-..  _pageTsConfigWebList-csvQuote-example:
+..  _pagetsconfigweblist-csvquote-example:
 
 Example: Use single quotes as quoting character for CSV downloads
 -----------------------------------------------------------------
@@ -137,7 +137,7 @@ Example: Use single quotes as quoting character for CSV downloads
 ..  index::
     deniedNewTables
     Buttons; Create new
-..  _pageTsConfigWebListDeniedNewTables:
+..  _pagetsconfigweblistdeniednewtables:
 
 deniedNewTables
 ===============
@@ -149,7 +149,7 @@ deniedNewTables
     If this list is set, then the tables listed here won't have a link to "create new record" in the page
     and sub pages. This also affects the "Create new record" content element wizard.
 
-    This is the opposite of :ref:`allowedNewTables property <pageTsConfigWebListAllowedNewTables>`.
+    This is the opposite of :ref:`allowedNewTables property <pagetsconfigweblistallowednewtables>`.
 
     If `allowedNewTables` and `deniedNewTables` contain a common subset, `deniedNewTables` takes precedence.
 
@@ -163,7 +163,7 @@ Hide "Create new record" links in tables sys_category and tt_content
 
 
 ..  index:: disableSearchBox
-..  _pageTsConfigWebList-disableSearchBox:
+..  _pagetsconfigweblist-disablesearchbox:
 
 disableSearchBox
 ======================
@@ -176,7 +176,7 @@ disableSearchBox
 
 
 ..  index:: disableSingleTableView
-..  _pageTsConfigWebList-disableSingleTableView:
+..  _pagetsconfigweblist-disablesingletableview:
 
 disableSingleTableView
 ======================
@@ -191,7 +191,7 @@ disableSingleTableView
 
 
 ..  index:: displayColumnSelector
-..  _pageTsConfigWebList-displayColumnSelector:
+..  _pagetsconfigweblist-displaycolumnselector:
 
 displayColumnSelector
 =====================
@@ -206,7 +206,7 @@ displayColumnSelector
     the :guilabel:`List` module. It can be used to compare different fields of
     the listed records.
 
-..  _pageTsConfigWebList-displayRecordDownload:
+..  _pagetsconfigweblist-displayrecorddownload:
 
 displayRecordDownload
 =====================
@@ -230,7 +230,7 @@ displayRecordDownload
         :caption: EXT:my_sitepackage/Configuration/Sets/MySet/page.tsconfig
 
 
-..  _pageTsConfigWebList-displayColumnSelector-example:
+..  _pagetsconfigweblist-displaycolumnselector-example:
 
 Example: Hide the column selector
 ---------------------------------
@@ -240,7 +240,7 @@ Example: Hide the column selector
 
     mod.web_list.displayColumnSelector = 0
 
-..  _pageTsConfigWebList-downloadPresets:
+..  _pagetsconfigweblist-downloadpresets:
 
 downloadPresets
 ===============
@@ -275,7 +275,7 @@ downloadPresets
     Additionally, the list of presets can be manipulated via the PSR-14 event
     :ref:`\TYPO3\CMS\Backend\RecordList\Event\BeforeRecordDownloadPresetsAreDisplayedEvent <t3coreapi:BeforeRecordDownloadPresetsAreDisplayedEvent>`.
 
-..  _pageTsConfigWebList-downloadPresets-example:
+..  _pagetsconfigweblist-downloadpresets-example:
 
 Example: Create download presets for table page
 -----------------------------------------------
@@ -295,7 +295,7 @@ the existing default settings using the same TypoScript path.
     Buttons; Show clipboard
     Clipboard; Enable
 
-..  _pageTsConfigWebList-enableClipBoard:
+..  _pagetsconfigweblist-enableclipboard:
 
 enableClipBoard
 ===============
@@ -324,7 +324,7 @@ enableClipBoard
 ..  index::
     enableDisplayBigControlPanel
     Content Records module; Extended view
-..  _pageTsConfigWebList-enableDisplayBigControlPanel:
+..  _pagetsconfigweblist-enabledisplaybigcontrolpanel:
 
 enableDisplayBigControlPanel
 ============================
@@ -337,7 +337,7 @@ enableDisplayBigControlPanel
 ..  index::
     hideTables
     Content Records module; Hide tables
-..  _pageTsConfigWebList-hideTables:
+..  _pagetsconfigweblist-hidetables:
 
 hideTables
 ==========
@@ -355,7 +355,7 @@ hideTables
     hideTranslations
     Content Records module; Hide translations
     Localization; Hide translations in Content Records module
-..  _pageTsConfigWebList-hideTranslations:
+..  _pagetsconfigweblist-hidetranslations:
 
 hideTranslations
 ================
@@ -370,7 +370,7 @@ hideTranslations
     Use `*` to hide all records of additional website languages in all tables or set
     single table names as comma-separated list.
 
-..  _pageTsConfigWebList-hideTranslations-example-all:
+..  _pagetsconfigweblist-hidetranslations-example-all:
 
 Example: Hide all translated records
 ------------------------------------
@@ -380,7 +380,7 @@ Example: Hide all translated records
 
     mod.web_list.hideTranslations = *
 
-..  _pageTsConfigWebList-hideTranslations-example:
+..  _pagetsconfigweblist-hidetranslations-example:
 
 Example: Hide translated records in tables tt_content and tt_news
 -----------------------------------------------------------------
@@ -393,7 +393,7 @@ Example: Hide translated records in tables tt_content and tt_news
 ..  index::
     itemsLimitPerTable
     Content Records module; Items per table
-..  _pageTsConfigWebList-itemsLimitPerTable:
+..  _pagetsconfigweblist-itemslimitpertable:
 
 itemsLimitPerTable
 ==================
@@ -411,7 +411,7 @@ itemsLimitPerTable
     of the table, it will override this TSconfig option.
     For example, the `maxDBListItems` for the `pages` table is `30` by default.
 
-..  _pageTsConfigWebList-itemsLimitPerTable-example:
+..  _pagetsconfigweblist-itemslimitpertable-example:
 
 Example: Limit items per table in overview to 10
 ------------------------------------------------
@@ -426,7 +426,7 @@ Example: Limit items per table in overview to 10
 ..  index::
     itemsLimitSingleTable
     Content Records module; Items per table in single table view
-..  _pageTsConfigWebList-itemsLimitSingleTable:
+..  _pagetsconfigweblist-itemslimitsingletable:
 
 itemsLimitSingleTable
 =====================
@@ -444,7 +444,7 @@ itemsLimitSingleTable
     of the table, it will override this TSconfig option.
     For example, the `maxSingleDBListItems` for the `pages` table is `50` by default.
 
-..  _pageTsConfigWebList-itemsLimitSingleTable-example:
+..  _pagetsconfigweblist-itemslimitsingletable-example:
 
 Example: Limit items in single table view to 10
 -----------------------------------------------
@@ -459,7 +459,7 @@ Example: Limit items in single table view to 10
 ..  index::
     listOnlyInSingleTableView
     Content Records module; Records in single table view only
-..  _pageTsConfigWebList-listOnlyInSingleTableView:
+..  _pagetsconfigweblist-listonlyinsingletableview:
 
 listOnlyInSingleTableView
 =========================
@@ -475,7 +475,7 @@ listOnlyInSingleTableView
     single table view, that means when a table has been clicked. This is
     very practical for pages containing many records from many tables!
 
-..  _pageTsConfigWebList-listOnlyInSingleTableView-example:
+..  _pagetsconfigweblist-listonlyinsingletableview-example:
 
 Example: Only list records of tables in single-table mode
 ---------------------------------------------------------
@@ -497,7 +497,7 @@ The result will be that records from tables are only listed in the single-table 
 ..  index::
     newPageWizard.override
     Pages; New wizard
-..  _pageTsConfigWebList-newPageWizard-override:
+..  _pagetsconfigweblist-newpagewizard-override:
 
 newPageWizard.override
 ======================
@@ -513,7 +513,7 @@ newPageWizard.override
 ..  index::
     noCreateRecordsLink
     Buttons; Create new record
-..  _pageTsConfigWebList-noCreateRecordsLink:
+..  _pagetsconfigweblist-nocreaterecordslink:
 
 noCreateRecordsLink
 ===================
@@ -525,7 +525,7 @@ noCreateRecordsLink
 
     If set, the link "Create new record" is hidden.
 
-..  _pageTsConfigWebList-noCreateRecordsLink-example:
+..  _pagetsconfigweblist-nocreaterecordslink-example:
 
 Example: Hide the "Create new record" link.
 -------------------------------------------
@@ -541,7 +541,7 @@ Example: Hide the "Create new record" link.
 ..  index::
     noExportRecordsLinks
     Buttons; Export
-..  _pageTsConfigWebList-noExportRecordsLinks:
+..  _pagetsconfigweblist-noexportrecordslinks:
 
 noExportRecordsLinks
 ====================
@@ -566,7 +566,7 @@ noExportRecordsLinks
         module. Bulk export of data is still possible via the context menu of
         the page tree.
 
-..  _pageTsConfigWebList-noExportRecordsLinks-example:
+..  _pagetsconfigweblist-noexportrecordslinks-example:
 
 Example: Hide the "Download" and "Export" links
 -----------------------------------------------
@@ -574,7 +574,7 @@ Example: Hide the "Download" and "Export" links
 ..  literalinclude:: /CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.typoscript
     :caption: EXT:examples/Configuration/TsConfig/Page/Mod/noExportRecordsLinks.tsconfig
 
-..  _pageTsConfigWebList-noViewWithDokTypes:
+..  _pagetsconfigweblist-noviewwithdoktypes:
 
 noViewWithDokTypes (removed)
 ============================
@@ -597,7 +597,7 @@ Instead, configure the equivalent behavior using:
 ..  index::
     table.[tableName].hideTable
     Content Records module; Hide tables
-..  _pageTsConfigWebList-table-tableName-hideTable:
+..  _pagetsconfigweblist-table-tablename-hidetable:
 
 table.[tableName].hideTable
 ===========================
@@ -610,7 +610,7 @@ table.[tableName].hideTable
     If set to non-zero, the table is hidden. If it is zero, table is shown
     even if table name is listed in "hideTables" list.
 
-..  _pageTsConfigWebList-table-tableName-hideTable-example:
+..  _pagetsconfigweblist-table-tablename-hidetable-example:
 
 Example: Hide table tt_content
 ------------------------------
@@ -624,7 +624,7 @@ Example: Hide table tt_content
 ..  index::
     table.[tableName].displayColumnSelector
     Content Records module; columns selector
-..  _pageTsConfigWebList-table-tableName-displayColumnSelector:
+..  _pagetsconfigweblist-table-tablename-displaycolumnselector:
 
 table.[tableName].displayColumnSelector
 =======================================
@@ -637,7 +637,7 @@ table.[tableName].displayColumnSelector
     table gets hidden. If the column selectors have been disabled globally
     this option can be used to enable it for a specific table.
 
-..  _pageTsConfigWebList-table-tableName-displayColumnSelector-example-disable:
+..  _pagetsconfigweblist-table-tablename-displaycolumnselector-example-disable:
 
 Example: Hide the column selector for tt_content
 ------------------------------------------------
@@ -647,7 +647,7 @@ Example: Hide the column selector for tt_content
 
     mod.web_list.table.tt_content.displayColumnSelector = 0
 
-..  _pageTsConfigWebList-table-tableName-displayColumnSelector-example-enable:
+..  _pagetsconfigweblist-table-tablename-displaycolumnselector-example-enable:
 
 Example: Hide the column selector for all tables but sys_category
 -----------------------------------------------------------------
@@ -662,7 +662,7 @@ Example: Hide the column selector for all tables but sys_category
 ..  index::
     tableDisplayOrder
     Content Records module; Order tables
-..  _pageTsConfigWebList-tableDisplayOrder:
+..  _pagetsconfigweblist-tabledisplayorder:
 
 tableDisplayOrder
 =================
@@ -682,7 +682,7 @@ tableDisplayOrder
 ..  index::
     searchLevel.items
     Items; Search level
-..  _pageTsConfigWebList-searchLevel-items:
+..  _pagetsconfigweblist-searchlevel-items:
 
 searchLevel.items
 =================
@@ -700,7 +700,7 @@ searchLevel.items
     searchLevel.items
     Items; Search level
 
-..  _pageTsConfigWebList-searchLevel-default:
+..  _pagetsconfigweblist-searchlevel-default:
 
 searchLevel.default
 ===================
@@ -722,7 +722,7 @@ searchLevel.default
     Those options can already be extended using the TSconfig option
     :confval:`mod-web-list-searchLevel-items`.
 
-..  _pageTsConfigWebList-searchLevel-default-example:
+..  _pagetsconfigweblist-searchlevel-default-example:
 
 Example: Set the default search level to "infinite levels"
 ----------------------------------------------------------

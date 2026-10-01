@@ -1,7 +1,7 @@
 :navigation-title: site-language
 
 ..  include:: /Includes.rst.txt
-..  _SiteLanguageProcessor:
+..  _sitelanguageprocessor:
 
 ==============================
 `site-language` data processor
@@ -13,7 +13,7 @@ alias `site-language`, fetches language-related data from the
 
 ..  contents:: Table of contents
 
-..  _SiteLanguageProcessor-options:
+..  _sitelanguageprocessor-options:
 
 Options
 =======
@@ -23,7 +23,7 @@ Options
     :type:
     :Default:
 
-    ..  _SiteLanguageProcessor-as:
+    ..  _sitelanguageprocessor-as:
 
     ..  confval:: as
         :name: SiteLanguageProcessor-as
@@ -32,12 +32,12 @@ Options
 
         The variable name to be used in the Fluid template.
 
-..  _SiteLanguageProcessor-example:
+..  _sitelanguageprocessor-example:
 
 Example: Output some data from the site language configuration
 ==============================================================
 
-Please see also :ref:`About the examples <dataProcessing-about-examples>`.
+Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 ..  rubric:: TypoScript
 
