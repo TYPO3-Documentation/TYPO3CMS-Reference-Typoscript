@@ -607,13 +607,8 @@ Properties
 
             Example:
 
-            ..  code-block:: typoscript
+            ..  literalinclude:: _codesnippets/_folderTreeLabel.tsconfig
                 :caption: EXT:my_sitepackage/Configuration/user.tsconfig
-
-                options.folderTree.label.1:/campaigns/ {
-                    label = Campaign A
-                    color = #ff8700
-                }
 
             ..  note::
                 Only one label per folder can be set through this method.
