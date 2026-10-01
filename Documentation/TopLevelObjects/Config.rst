@@ -16,13 +16,8 @@
 The `config` top-level object does not have to be initialized. Configuration
 can be set like this:
 
-..  code-block::
+..  literalinclude:: _codesnippets/_headerComment.typoscript
     :caption: config/sites/my_site/setup.typoscript
-
-    # TypoScript
-    config {
-        headerComment = Made with ❤ by your TYPO3 Documentation Team
-    }
 
 ..  contents:: Table of content
     :depth: 1
