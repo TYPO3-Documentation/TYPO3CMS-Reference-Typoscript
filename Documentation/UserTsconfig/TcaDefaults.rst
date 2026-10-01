@@ -45,7 +45,7 @@ Example:
 
     ..  literalinclude:: _codesnippets/_pages.php
         :caption: typo3/sysext/core/Configuration/TCA/pages.php
-        :visible-lines: 1-4, 17, 63-65
+        :visible-lines: 1-4, 17, 62-64
 
 If 'hidden' is in the list, it gets overridden with the "neighbor" record value (see
 :php:`\TYPO3\CMS\Backend\Form\FormDataProvider\DatabaseRowInitializeNew::setDefaultsFromNeighborRow`)
