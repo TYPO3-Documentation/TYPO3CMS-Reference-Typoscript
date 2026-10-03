@@ -67,11 +67,23 @@ Properties
         :name: useroptions-bookmarkGroups
         :type: Array of integers / strings
 
-        Set groups of bookmarks that can be accessed by the user. This affects the
-        bookmarks toolbar item in the top right of the backend.
+        ..  versionchanged:: 14.2
+            :changelog: feature-108796-1738078800
 
-        By default, 5 default groups will be defined globally (shared, can
-        only be set by admins) and also for each user (personal bookmarks):
+            The default groups are defined in the user TSconfig of
+            EXT:backend instead of PHP. The value of a group is its label;
+            `0` and `1` no longer disable or enable a group.
+
+        Set the groups of bookmarks that can be accessed by the user. This
+        affects the bookmarks toolbar item in the top right of the backend.
+
+        Each group has a positive integer as its ID, and the value is its
+        label: a static text or a reference to a translated label. Every
+        group exists once for the bookmarks of the user and once as a global
+        group, whose bookmarks are visible to all users but can only be set by
+        administrators. The ID `100` is reserved.
+
+        Five groups are defined by default:
 
         1.  Pages
         2.  Records
@@ -79,29 +91,21 @@ Properties
         4.  Tools
         5.  Miscellaneous
 
-        Set 0 to disable one of these group IDs, 1 to enable it (this is the
-        default) or "string" to change the label accordingly.
+        To remove a group, unset it with `>` or set it to an empty value.
+
+        Configure the groups only globally, for example in the
+        :file:`user.tsconfig` of an extension, and not per user or user
+        group. Different groups for different users can lead to unexpected
+        behavior.
 
         Example:
 
         ..  literalinclude:: _codesnippets/_properties5.typoscript
             :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
-        Bookmark group 1 is loaded with the default label (Pages), group 2 is
-        loaded and labeled as "My Group" and groups 3 and 4 are disabled.
-        Group 5 has not been set, so it will be displayed by default, just
-        like group 1.
-
-        ..  versionadded:: 11.0
-
-        Custom language labels can also be used instead of a fixed label:
-
-        ..  code-block:: typoscript
-            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
-
-            bookmarkGroups {
-              2 = LLL:my_sitepackage.backend:bookmarkGroups.2
-            }
+        Group 2 is labeled "My Group", groups 3 and 4 are removed, and group
+        10 is added with a translated label. Groups 1 and 5 keep their default
+        labels.
 
     ..  _useroptions-clearcache:
 
