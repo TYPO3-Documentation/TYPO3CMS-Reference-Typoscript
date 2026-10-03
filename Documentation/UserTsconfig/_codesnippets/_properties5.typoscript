@@ -1,6 +1,9 @@
-bookmarkGroups {
-  1 = 1
+options.bookmarkGroups {
+  # Rename the default group "Records"
   2 = My Group
-  3 = 0
-  4 =
+  # Remove the default groups "Files" and "Tools"
+  3 >
+  4 >
+  # Add a group with a translated label
+  10 = my_sitepackage.backend:bookmarkGroups.10
 }
