@@ -31,6 +31,15 @@ First, define the colors by name and RGB value:
 ..  literalinclude:: _pagecolorpalettes2.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
+..  versionadded:: 13.4.25
+    :changelog: feature-101843-1693895770
+
+    A color can have a `label`.
+
+A `label` is optional. Together with the value, it becomes the tooltip of the
+color's swatch, for example "TYPO3 orange (#ff8700)", and screen readers
+announce it. The swatch of a color without a label shows only the value.
+
 Then assign the colors to your palettes:
 
 ..  literalinclude:: _pagecolorpalettes.typoscript
