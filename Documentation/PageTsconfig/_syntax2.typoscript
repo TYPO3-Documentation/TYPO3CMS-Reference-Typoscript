@@ -2,6 +2,7 @@ colorPalettes {
   colors {
     typo3 {
       value = #ff8700
+      label = TYPO3 orange
     }
     blue {
       value = #0080c9
@@ -11,6 +12,7 @@ colorPalettes {
     }
     valid {
       value = #5abc55
+      label = my_sitepackage.be:color.valid
     }
     error {
       value = #dd123d
