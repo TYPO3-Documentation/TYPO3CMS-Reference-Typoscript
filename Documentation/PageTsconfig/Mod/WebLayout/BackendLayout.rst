@@ -108,9 +108,12 @@ BackendLayouts.[backendLayout]
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-identifier
                 :type: string
 
-                An identifier that can be used by the page content
-                DataProcessor to identify the content elements in this
-                area.
+                The name of this content area in the frontend.
+                :ref:`PAGEVIEW <cobj-pageview>` provides the area under this
+                name, for example :fluid:`{content.main}`, see
+                :confval:`content <pageview-data-content>`. The
+                :ref:`page-content data processor <pagecontentfetchingprocessor>`
+                uses it as the key for the content elements of the area.
 
                 It is a more meaningful representation than just :confval:`colPos <mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-colPos>`,
                 such as "main", "sidebar" and "footerArea".
