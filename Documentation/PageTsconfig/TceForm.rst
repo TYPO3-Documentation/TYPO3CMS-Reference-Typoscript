@@ -200,7 +200,7 @@ PAGE_TSCONFIG_ID
 ..  note::
 
     This value can be used for the TCA property :ref:`foreign_table_where <t3tca:columns-select-properties-foreign-table-where>`,
-    for the `addWhere` part of the :ref:`suggest wizard <pagetceformsuggest>`
+    for the `addWhere` part of the :ref:`suggest wizard <pagetceformsuggest>`,
     and for the :ref:`startingPoints <tceform-tree-startingpoints-markers>`
     of a tree.
 
