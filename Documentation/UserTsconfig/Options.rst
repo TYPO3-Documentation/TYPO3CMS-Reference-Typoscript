@@ -71,8 +71,7 @@ Properties
             :changelog: feature-108796-1738078800
 
             The default groups are defined in the user TSconfig of
-            EXT:backend instead of PHP. The value of a group is its label;
-            `0` and `1` no longer disable or enable a group.
+            EXT:backend instead of PHP, and the value of a group is its label.
 
         Set the groups of bookmarks that can be accessed by the user. This
         affects the bookmarks toolbar item in the top right of the backend.
