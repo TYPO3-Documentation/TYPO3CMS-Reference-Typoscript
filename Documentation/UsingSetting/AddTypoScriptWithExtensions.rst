@@ -203,38 +203,38 @@ set is needed:
 
     *   packages/my_extension/Configuration
 
-            *   TypoScript
+        *   TypoScript
 
-                *   SpecialFeature1
-
-                    *   constants.typoscript
-                    *   setup.typoscript
-
-                *   SpecialFeature2
-
-                    *   setup.typoscript
+            *   SpecialFeature1
 
                 *   constants.typoscript
                 *   setup.typoscript
 
-            *   Sets
+            *   SpecialFeature2
 
-                *   MyMainSet
+                *   setup.typoscript
 
-                    *   config.yaml
-                    *   constants.typoscript
-                    *   setup.typoscript
+            *   constants.typoscript
+            *   setup.typoscript
 
-                *   MySpecialFeature1Set
+        *   Sets
 
-                    *   config.yaml
-                    *   constants.typoscript
-                    *   setup.typoscript
+            *   MyMainSet
 
-                *   MySpecialFeature2Set
+                *   config.yaml
+                *   constants.typoscript
+                *   setup.typoscript
 
-                    *   config.yaml
-                    *   setup.typoscript
+            *   MySpecialFeature1Set
+
+                *   config.yaml
+                *   constants.typoscript
+                *   setup.typoscript
+
+            *   MySpecialFeature2Set
+
+                *   config.yaml
+                *   setup.typoscript
 
 For backward compability reasons :php:`ExtensionManagementUtility::addStaticFile`
 still needs to be called for each folder that should be available in the TypoScript
