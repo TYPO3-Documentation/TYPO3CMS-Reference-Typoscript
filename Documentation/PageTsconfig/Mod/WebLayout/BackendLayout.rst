@@ -124,10 +124,11 @@ BackendLayouts.[backendLayout]
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-slideMode
                 :type: string, "" (empty string), "slide", "collect", "collectReverse"
 
-                An identifier that can be used by the page content
-                DataProcessor to identify content elements in this
-                area.
+                Whether the content elements of this area are also taken
+                from the parent pages.
 
+                `""` (empty string, default)
+                    Use only the content of the current page
                 `slide`
                     If no content is found, check the parent pages for more content
                 `collect`
