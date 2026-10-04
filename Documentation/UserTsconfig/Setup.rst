@@ -88,13 +88,11 @@ Properties
         ..  literalinclude:: _properties.typoscript
             :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
-backendTitleFormat
-------------------
-
-
     ..  index::  User settings; Format of window title in backend
 
     ..  _user-setup-backendtitleformat:
+
+    ..  rubric:: backendTitleFormat
 
     ..  confval:: backendTitleFormat
         :name: user-setup-backendTitleFormat
@@ -107,14 +105,11 @@ backendTitleFormat
         `sitenameFirst`
             [sitename] · [title]
 
-copyLevels
-----------
-
-
-
     ..  index:: User settings; Copy levels
 
     ..  _user-setup-copylevels:
+
+    ..  rubric:: copyLevels
 
     ..  confval:: copyLevels
         :name: user-setup-copyLevels
@@ -122,14 +117,11 @@ copyLevels
 
         Recursive Copy: Enter the number of page sub-levels to include, when a page is copied
 
-edit_docModuleUpload
---------------------
-
-
-
     ..  index:: File upload; In doc module
 
     ..  _user-setup-edit-docmoduleupload:
+
+    ..  rubric:: edit_docModuleUpload
 
     ..  confval:: edit_docModuleUpload
         :name: user-setup-edit-docModuleUpload
