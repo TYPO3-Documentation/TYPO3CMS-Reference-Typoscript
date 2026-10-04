@@ -158,7 +158,6 @@ addQueryString
         behaviour.
 
     :typoscript:`untrusted`
-
         Any given query parameters of the current request are added.
 
     ..  rubric:: Example
