@@ -95,6 +95,9 @@ The extension key is appended to the title in the selector, so the title
 cannot be a
 `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_.
 
+Do not use a comma in the file path. TYPO3 removes every comma from it,
+because a comma separates the selected files in the field.
+
 ..  index:: pair: User TSconfig; Default values
 ..  _usersettingdefaultusertsconfig:
 
