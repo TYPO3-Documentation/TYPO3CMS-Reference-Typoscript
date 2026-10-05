@@ -13,6 +13,7 @@ mod.web_layout.BackendLayouts {
                 name = frontend.ttc:colPos.I.3
                 colPos = 3
                 colspan = 1
+                identifier = stage
                 allowedContentTypes = header, tx_myextension_stage
               }
             }

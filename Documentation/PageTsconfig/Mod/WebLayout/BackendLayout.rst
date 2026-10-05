@@ -107,6 +107,17 @@ BackendLayouts.[backendLayout]
             ..  confval:: identifier
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-identifier
                 :type: string
+                :required: true
+
+                ..  versionchanged:: 15.0
+                    :changelog: breaking-109783-1776735296
+
+                    Before, a column without an identifier got a generated
+                    one.
+
+                Every column needs an identifier. If a column has none, the
+                frontend throws an exception when it renders a page with
+                this backend layout.
 
                 The name of this content area in the frontend.
                 :ref:`PAGEVIEW <cobj-pageview>` provides the area under this
