@@ -70,8 +70,7 @@ Properties
         ..  versionchanged:: 14.2
             :changelog: feature-108796-1738078800
 
-            The default groups are defined in the user TSconfig of
-            EXT:backend instead of PHP, and the value of a group is its label.
+            Before, the default groups were defined in PHP.
 
         Set the groups of bookmarks that can be accessed by the user. This
         affects the bookmarks toolbar item in the top right of the backend.
@@ -82,7 +81,8 @@ Properties
         group, whose bookmarks are visible to all users but can only be set by
         administrators. The ID `100` is reserved.
 
-        Five groups are defined by default:
+        Five groups are defined by default, in the user TSconfig of
+        EXT:backend:
 
         1.  Pages
         2.  Records
