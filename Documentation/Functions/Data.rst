@@ -767,11 +767,11 @@ path
     ..  versionchanged:: 14.0
         :changelog: breaking-107537-1760339938
 
-        :typoscript:`path` returns an absolute URL, starting with a slash.
-        Before, it returned a path relative to the site root.
+        Before, :typoscript:`path` returned a path relative to the site root.
 
-    Path to a file, for example, that is in an extension. Returns an empty value if the file
-    does not exist.
+    Path to a file, for example, that is in an extension. Returns the URL of
+    the file as an absolute URL, starting with a slash. Returns an empty value
+    if the file does not exist.
 
     The URL contains no cache buster. Use :ref:`asset <data-type-gettext-asset>`
     to get one.
