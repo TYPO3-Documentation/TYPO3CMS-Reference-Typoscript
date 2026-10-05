@@ -39,11 +39,15 @@ redirection.
 `options.pageTree.doktypesToShowInNewPageDragArea` removed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+..  deprecated:: 14.2
+    :changelog: deprecation-109196-1742122800
+
 ..  versionchanged:: 15.0
     :changelog: breaking-109783-1776735296
 
 ..  confval:: doktypesToShowInNewPageDragArea
     :name: useroptions-pageTree-doktypesToShowInNewPageDragArea
+    :deprecated: 14.2 deprecation-109196-1742122800
     :removed: 15.0 breaking-109783-1776735296
 
 The user TSconfig option
