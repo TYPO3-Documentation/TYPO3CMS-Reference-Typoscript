@@ -37,13 +37,15 @@ First, define the colors by name and RGB value:
     A color can have a `label`.
 
 ..  versionchanged:: 14.3.1
-    The label can be a reference to a translated label, for example
-    `my_sitepackage.be:color.valid`, see
-    `Translation domain mapping <https://docs.typo3.org/permalink/t3coreapi:label-reference-domain>`_.
+    Before, the label could only be a static text.
 
 A `label` is optional. Together with the value, it becomes the tooltip of the
 color's swatch, for example "TYPO3 orange (#ff8700)", and screen readers
 announce it. The swatch of a color without a label shows only the value.
+
+The label can be a static text or a reference to a translated label, for
+example `my_sitepackage.be:color.valid`, see
+`Translation domain mapping <https://docs.typo3.org/permalink/t3coreapi:label-reference-domain>`_.
 
 Then assign the colors to your palettes:
 
