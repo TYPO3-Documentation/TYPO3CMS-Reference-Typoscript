@@ -527,12 +527,14 @@ preview
     ..  versionchanged:: 14.2
         :changelog: feature-108831-1738522284
 
-        The workspaces module uses this configuration for the shareable
-        preview link of a record of any table, not only of a page. The link
-        uses :typoscript:`previewPageId`, :typoscript:`fieldToParameterMap`,
-        and :typoscript:`additionalGetParameters`. If
-        `options.workspaces.previewPageId <https://docs.typo3.org/permalink/typo3/cms-workspaces:pagetsconfig-options-workspaces-previewpageid>`_
-        is set, it takes precedence over :typoscript:`previewPageId`.
+        Before, the workspaces module created shareable preview links only
+        for pages.
+
+    The workspaces module uses this configuration for the shareable preview
+    link of a record. The link uses :typoscript:`previewPageId`,
+    :typoscript:`fieldToParameterMap`, and :typoscript:`additionalGetParameters`.
+    If `options.workspaces.previewPageId <https://docs.typo3.org/permalink/typo3/cms-workspaces:pagetsconfig-options-workspaces-previewpageid>`_
+    is set, it takes precedence over :typoscript:`previewPageId`.
 
     ..  literalinclude:: _codesnippets/_preview.typoscript
         :caption: EXT:my_sitepackage/Configuration/page.tsconfig
