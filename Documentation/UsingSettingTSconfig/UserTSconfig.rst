@@ -25,10 +25,11 @@ Importing the user TSconfig into a backend user or group
     :guilabel:`Options > TSconfig`.
 
     ..  figure:: /Images/ManualScreenshots/BackendUsers/TSconfigUserInput.png
-        :alt: The TSconfig field in the Options tab of a backend user
+        :alt: The TSconfig and Include static TSconfig fields in the Options tab of a backend user
         :class: with-shadow
 
-        The :guilabel:`TSconfig` field in the :guilabel:`Options` tab of a backend user
+        The :guilabel:`TSconfig` and :guilabel:`Include static TSconfig`
+        fields in the :guilabel:`Options` tab of a backend user
 
 #.  Enter the following TSconfig to import a configuration file from your
     sitepackage:
@@ -68,7 +69,8 @@ database.
 #.  Open the record of the user or group.
 #.  Go to the tab :guilabel:`Options`, then to
     :guilabel:`Include static TSconfig` and select the desired configurations
-    from the :guilabel:`Available Items`.
+    from the :guilabel:`Available Items`, see the
+    :ref:`figure above <userthetsconfigfield>`.
 
 ..  _register-static-user-tsconfig:
 
