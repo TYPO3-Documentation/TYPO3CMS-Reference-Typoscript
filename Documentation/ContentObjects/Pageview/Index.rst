@@ -106,7 +106,7 @@ Additional variables can be defined with property
         :confval:`identifier <mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-identifier>`
         of its column, for example :fluid:`{content.main}`, and provides:
 
-        *   `identifier`, `name`, `colPos` and `slideMode` as defined in the
+        *   `identifier`, `name`, `colPos`, and `slideMode` as defined in the
             backend layout
         *   `allowedContentTypes` and `disallowedContentTypes`
         *   `configuration`, the complete configuration of the column
