@@ -26,7 +26,7 @@ useful if you want to incorporate your own data processing or content.
 Basically USER and USER\_INT are user defined cObjects, because they
 call a function or method, which you control!
 
-If you call a method in a class (which is of course instantiated as an
+If you call a method in a class (which is instantiated as an
 object), the internal variable :php:`$cObj` of that class is set with a
 *reference* to the parent cObject. This offers you an API of functions,
 which might be more or less relevant for you. See
