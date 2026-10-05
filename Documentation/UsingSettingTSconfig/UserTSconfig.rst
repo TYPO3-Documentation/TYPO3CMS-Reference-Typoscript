@@ -50,6 +50,49 @@ group is loaded. The order in which the groups are added to the user in field
 The TSconfig from latter groups overrides the TSconfig from earlier groups if
 both define the same property.
 
+..  index:: pair: User TSconfig; Include static
+..  _include-static-user-tsconfig:
+
+Include static user TSconfig into a backend user or group
+=========================================================
+
+..  versionadded:: 14.2
+    :changelog: feature-78412-1719144405
+
+User TSconfig files that an extension has
+:ref:`registered <register-static-user-tsconfig>` can be selected in the
+record of a backend user or group, just like static page TSconfig in the page
+properties. The configuration stays in the file and is not stored in the
+database.
+
+#.  Open the record of the user or group.
+#.  Go to the tab :guilabel:`Options`, then to
+    :guilabel:`Include static TSconfig` and select the desired configurations
+    from the :guilabel:`Available Items`.
+
+..  _register-static-user-tsconfig:
+
+Register static user TSconfig files
+-----------------------------------
+
+Register user TSconfig files for backend users in the
+:file:`Configuration/TCA/Overrides/be_users.php` of any extension:
+
+..  literalinclude:: _UserTSconfig/_be_users.php
+    :language: php
+    :caption: EXT:my_sitepackage/Configuration/TCA/Overrides/be_users.php
+
+Register them for backend user groups in
+:file:`Configuration/TCA/Overrides/be_groups.php`:
+
+..  literalinclude:: _UserTSconfig/_be_groups.php
+    :language: php
+    :caption: EXT:my_sitepackage/Configuration/TCA/Overrides/be_groups.php
+
+The extension key is appended to the title in the selector, so the title
+cannot be a
+`label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_.
+
 ..  index:: pair: User TSconfig; Default values
 ..  _usersettingdefaultusertsconfig:
 
