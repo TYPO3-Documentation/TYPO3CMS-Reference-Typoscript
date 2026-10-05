@@ -173,7 +173,20 @@ Options:
         :default: "ascending"
         :Example: "descending"
 
-        The sorting direction (:typoscript:`ascending` or :typoscript:`descending`).
+        ..  versionchanged:: 15.0
+            :changelog: important-110540-1788349876
+
+            Before, an unknown value sorted the files in ascending order.
+
+        The direction in which the files are sorted. These values are
+        possible, in upper or lower case:
+
+        *   `asc` or `ascending`
+        *   `desc` or `descending`
+        *   `rand` or `random` for a random order
+
+        Any other value, also an empty one, throws an exception. The
+        direction is only used if :typoscript:`sorting` is set.
 
     ..  _filesprocessor-as:
 
