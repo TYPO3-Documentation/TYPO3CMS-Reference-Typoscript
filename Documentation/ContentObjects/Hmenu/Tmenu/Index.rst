@@ -382,14 +382,14 @@ Properties
         :type: :ref:`integer <data-type-integer>` (page ID) / keyword "NONE"
 
         If set, pages in the menu will include pages with frontend user group
-        access enabled. However the page is of course not accessible and
+        access enabled. However the page is not accessible and
         therefore the URL in the menu will be linked to the page with the ID
         of this value. On that page you could put a login form or other
         message.
 
         If the value is "NONE" the link will not be changed and the site will
         perform page-not-found handling when clicked (which can be used to
-        capture the event and act accordingly of course). This means that the
+        capture the event and act accordingly). This means that the
         link's URL will point to the page even if it is not accessible by the
         current frontend user. Note that the default behavior of page-not-found
         handling is to show the parent page instead.
@@ -422,8 +422,8 @@ Properties
         The first variable passed to this function is the "menuArr" array with
         the menu items as they are collected based on the type of menu.
 
-        You're free to manipulate or add to this array as you like. Just
-        remember to return the array again!
+        You're free to manipulate or add to this array as you like.
+        Remember to return the array again!
 
         **Note:**
 

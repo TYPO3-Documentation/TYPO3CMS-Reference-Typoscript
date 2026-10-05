@@ -6,7 +6,7 @@
 Getting started: A quick introduction into TypoScript
 =====================================================
 
-Learn the fundamentals of TypoScript in just 45 minutes.
+Learn the fundamentals of TypoScript in 45 minutes.
 
 Furthermore, you can find a full reference of all object types and properties of
 TypoScript in the menu  on the left, including the
