@@ -197,7 +197,7 @@ layoutRootPath
     ..  note::
         It is recommended to use
         :ref:`layoutRootPaths <cobj-fluidtemplate-properties-layoutrootpaths>` (note the
-        plural "s") as it can easily be extended by custom templates in the
+        plural "s") as it can be extended by custom templates in the
         sitepackage.
 
 ..  _cobj-fluidtemplate-properties-layoutrootpaths:
@@ -246,7 +246,7 @@ partialRootPath
     ..  note::
         It is recommended to use
         :ref:`partialRootPaths <cobj-fluidtemplate-properties-partialrootpaths>` (note the
-        plural "s") as it can be easily extended by custom templates provided
+        plural "s") as it can be extended by custom templates provided
         by the sitepackage.
 
 ..  _cobj-fluidtemplate-properties-partialrootpaths:
@@ -361,7 +361,7 @@ templateRootPath
     ..  note::
         It is recommended to use
         :ref:`templateRootPaths <cobj-fluidtemplate-properties-templaterootpaths>` (note the
-        plural "s") as it can be easily extended by custom templates provided
+        plural "s") as it can be extended by custom templates provided
         by the sitepackage.
 
 ..  _cobj-fluidtemplate-properties-templaterootpaths:

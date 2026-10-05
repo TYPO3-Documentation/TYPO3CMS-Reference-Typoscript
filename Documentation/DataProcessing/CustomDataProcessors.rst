@@ -16,7 +16,7 @@ data processor:
     :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CustomCategoryProcessor.typoscript
 
 The available configuration depends on the implementation of the
-specific custom data processor, of course.
+specific custom data processor.
 
 ..  rubric:: Example output
 

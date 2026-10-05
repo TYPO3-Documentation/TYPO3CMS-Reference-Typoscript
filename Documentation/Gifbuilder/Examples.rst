@@ -173,8 +173,7 @@ background image shine through into the box.
 Here is an example: It is done with an :ref:`IMAGE cObject <cobj-image>`. Then
 you could retrieve the background image from the media field, for example.
 
-The base image is the same as above. Below is the result - just see
-yourself:
+The base image is the same as above. Below is the result:
 
 ..  literalinclude:: _codesnippets/_creatingSemiTransparent.typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript

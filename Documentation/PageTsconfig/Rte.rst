@@ -280,7 +280,7 @@ configuration of the transformations. For instance you may disable the mapping b
 Notice how many properties relate to specific transformations only! Also notice that the meta-transformations
 `ts_css` imply other transformations.
 
-This means that options limited to `ts_transform` will also work for `ts_css` of course.
+This means that options limited to `ts_transform` will also work for `ts_css`.
 
 
 ..  index::

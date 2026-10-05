@@ -980,7 +980,7 @@ Properties
             ..  versionadded:: 14.2
 
             Set by default. The page tree filter supports searching for pages
-            by frontend URI. Editors can now easily locate a backend page
+            by frontend URI. Editors can now locate a backend page
             by its frontend URI. Permissions to edit/see
             the page are evaluated. Invalid or non-matching URIs are ignored.
 
@@ -1001,7 +1001,7 @@ Properties
             ..  versionadded:: 14.1
 
             Set by default. The page tree filter supports searching for pages
-            through their translated content, making it easy to find pages in
+            through their translated content, which helps editors find pages in
             multilingual installations. User permissions (language restrictions) and
             workspace context are respected.
 
