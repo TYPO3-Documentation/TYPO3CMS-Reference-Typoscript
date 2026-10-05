@@ -26,7 +26,7 @@ Conditions are a TypoScript syntax construct. They are thus available in both
 frontend TypoScript and backend TSconfig. However, condition criteria are based
 on prepared variables and functions, and those are different in frontend
 TypoScript and backend TSconfig. For example, the :typoscript:`frontend` variable does
-not exist in TSconfig, it is (obviously) impossible to have a backend TSconfig
+not exist in TSconfig, it is impossible to have a backend TSconfig
 condition that checks for a logged in frontend user.
 
 ..  contents:: Table of contents

@@ -17,7 +17,7 @@ Reading content records
     an extension with new content elements, it will be necessary to understand
     this relationship to be able to design your own TypoScript properly.
 
-Obviously entering all content for the website would be terribly tiresome,
+Entering all content for the website would be terribly tiresome,
 although possible from a theoretical point of view.
 
 What we want is to have a TypoScript which gathers the content automatically.

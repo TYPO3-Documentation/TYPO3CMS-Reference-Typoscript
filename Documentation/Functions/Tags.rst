@@ -76,7 +76,7 @@ Example
 This example creates 4 custom tags. The :html:`<LINK>`-, :html:`<TYPOLIST>`-,
 :html:`<GRAFIX>`- and :html:`<PIC>`-tags:
 
-:html:`<LINK>` is made into a typolink and provides an easy way of creating
+:html:`<LINK>` is made into a typolink and provides a way of creating
 links in text.
 
 :html:`<TYPOLIST>` is used to create bullet-lists.

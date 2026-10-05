@@ -13,7 +13,7 @@ colorPalettes
 TYPO3 provides a :ref:`color picker component <t3tca:columns-color>` that
 supports color palettes, or swatches. The colors can be configured and assigned
 to palettes. This way, for example, colors defined in a corporate design can be
-selected by a simple click. Multiple color palettes can be configured.
+selected with one click. Multiple color palettes can be configured.
 
 ..  figure:: /Images/ManualScreenshots/ColorPalettes/ColorPalette.png
     :alt: Example of a color palette
