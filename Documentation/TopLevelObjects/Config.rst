@@ -592,6 +592,17 @@ Properties of 'config'
 
         You can use the pipe character (|) to access nested properties.
 
+        ..  versionchanged:: 15.0
+            :changelog: important-35069-1787591772
+
+            Before, a parameter listed here was always added to the link, even
+            if :typoscript:`addQueryString.exclude` listed it.
+
+        A link with :typoscript:`typolink.addQueryString` leaves out a parameter
+        listed here if
+        :confval:`addQueryString.exclude <typolink-addQueryString-exclude>`
+        lists it as well.
+
         ..  note::
 
             Do **not** include the `type` and `L` parameters in the linkVars
