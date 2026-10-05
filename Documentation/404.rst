@@ -34,6 +34,23 @@ If a redirect after a successful backend login is required, it is
 recommended to create custom PSR-15 middleware to handle the
 redirection.
 
+..  _useroptions-pagetree-doktypestoshowinnewpagedragarea:
+
+`options.pageTree.doktypesToShowInNewPageDragArea` removed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  versionchanged:: 15.0
+    :changelog: breaking-109783-1776735296
+
+..  confval:: doktypesToShowInNewPageDragArea
+    :name: useroptions-pageTree-doktypesToShowInNewPageDragArea
+    :removed: 15.0 breaking-109783-1776735296
+
+The user TSconfig option
+:tsconfig:`options.pageTree.doktypesToShowInNewPageDragArea` has been removed.
+The page tree toolbar shows the page types that the groups of the backend user
+allow. Remove the option from your configuration.
+
 ..  _not-found-v14:
 
 TYPO3 v14

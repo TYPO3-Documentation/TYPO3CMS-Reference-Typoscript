@@ -880,27 +880,6 @@ Properties
                 options.pageTree.altElementBrowserMountPoints = 34,123
                 options.pageTree.altElementBrowserMountPoints.append = 1
 
-        ..  _useroptions-pagetree-doktypestoshowinnewpagedragarea:
-
-        ..  rubric:: doktypesToShowInNewPageDragArea
-
-        ..  confval:: doktypesToShowInNewPageDragArea
-            :name: useroptions-pageTree-doktypesToShowInNewPageDragArea
-            :type: string
-            :default: 1,6,4,7,3,254,255,199
-            :User TSconfig path: options.pageTree.doktypesToShowInNewPageDragArea
-
-            If set, the node top panel feature can be configured by a comma-separated
-            list. Each number stands for a :ref:`doktype ID <t3coreapi:list-of-page-types>`
-            that should be added to the node top panel.
-
-            ..  deprecated:: 14.2
-                :changelog: deprecation-109196-1742122800
-
-                Remove this option from your configuration; the page tree now
-                automatically determines available doktypes based on the user's
-                group permissions.
-
         ..  _useroptions-pagetree-excludedoktypes:
 
         ..  rubric:: excludeDoktypes
