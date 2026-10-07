@@ -8,6 +8,12 @@
 TMENU
 =====
 
+..  confval:: TMENU
+    :name: tmenu
+    :type: menu object
+
+    Renders one level of an :typoscript:`HMENU` as text links.
+
 ..  warning::
     This TypoScript object is still available to provide backward compatibility
     for old sites. When creating a new menu or refactoring an existing one

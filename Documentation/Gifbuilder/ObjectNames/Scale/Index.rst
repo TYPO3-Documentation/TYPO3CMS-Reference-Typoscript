@@ -6,6 +6,12 @@
 SCALE
 =====
 
+..  confval:: SCALE
+    :name: gifbuilder-scale
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Scales the image to the given dimensions.
+
 This scales the GIFBUILDER object to the provided dimensions.
 
 ..  note::

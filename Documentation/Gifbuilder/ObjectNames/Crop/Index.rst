@@ -6,6 +6,12 @@
 CROP
 ====
 
+..  confval:: CROP
+    :name: gifbuilder-crop
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Crops the image to the area set in its property `crop`.
+
 ..  note::
     This object resets :ref:`workArea <gifbuilder-properties-workarea>` to the
     new dimensions of the image!

@@ -10,6 +10,12 @@
 CONTENT
 =======
 
+..  confval:: CONTENT
+    :name: cobj-content
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Selects records from a database table and renders each of them.
+
 An object with the content type CONTENT is designed to generate content by allowing to
 finely select records and have them rendered.
 
@@ -30,6 +36,7 @@ Properties
 ==========
 
 ..  confval-menu::
+    :exclude: cobj-content
     :display: table
     :type:
 

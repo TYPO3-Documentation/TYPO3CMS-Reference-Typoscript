@@ -8,6 +8,13 @@
 imageLinkWrap
 =============
 
+..  confval:: imageLinkWrap
+    :name: imagelinkwrap
+    :type: :ref:`function <functions>`
+
+    Wraps an image in a link that opens a larger version of the image, for
+    example in a pop-up window.
+
 
 ..  contents::
     :local:

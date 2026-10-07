@@ -6,6 +6,13 @@
 GIFBUILDER
 ==========
 
+..  confval:: GIFBUILDER
+    :name: gifbuilder
+    :type: :ref:`imgResource <imgresource>`
+
+    Creates an image file from a numbered list of GIFBUILDER objects, such
+    as texts and images.
+
 :typoscript:`GIFBUILDER` is an object type, which is used in many situations for
 creating image files (for example, GIF, PNG or JPG). Wherever the
 ->GIFBUILDER object type is mentioned, these are the properties that apply.

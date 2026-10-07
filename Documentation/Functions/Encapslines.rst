@@ -8,6 +8,13 @@
 encapsLines
 ===========
 
+..  confval:: encapsLines
+    :name: encapslines
+    :type: :ref:`function <functions>`
+
+    Processes a text line by line: it wraps each line in a tag, unless the
+    line is already wrapped in one of the allowed tags.
+
 This function is a sub-function of :ref:`stdWrap <stdwrap>` and can be used
 like this:
 

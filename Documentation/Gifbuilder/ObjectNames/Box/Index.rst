@@ -6,7 +6,11 @@
 BOX
 ===
 
-Prints a filled box.
+..  confval:: BOX
+    :name: gifbuilder-box
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Prints a filled box.
 
 ..  _gifbuilder-box-example:
 

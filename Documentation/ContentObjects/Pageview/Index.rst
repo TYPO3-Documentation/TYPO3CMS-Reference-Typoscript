@@ -6,6 +6,13 @@
 PAGEVIEW
 ========
 
+..  confval:: PAGEVIEW
+    :name: cobj-pageview
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Renders a page with a Fluid template, which it finds by naming
+    conventions from the backend layout of the page.
+
 This content object has very specific conventions and
 defaults, that requires (and allows) less configuration as compared to using
 `FLUIDTEMPLATE <https://docs.typo3.org/permalink/t3tsref:cobj-template>`_.

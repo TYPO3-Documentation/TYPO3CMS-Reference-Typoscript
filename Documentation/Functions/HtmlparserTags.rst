@@ -8,6 +8,13 @@
 HTMLparser\_tags
 ================
 
+..  confval:: HTMLparser_tags
+    :name: function-htmlparser-tags
+    :type: :ref:`function <functions>`
+
+    Configures how :typoscript:`HTMLparser` handles one tag, set in its
+    property :typoscript:`tags.[tagname]`.
+
 ..  contents::
     :local:
 

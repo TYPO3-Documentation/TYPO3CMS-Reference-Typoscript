@@ -9,6 +9,13 @@
 HMENU
 =====
 
+..  confval:: HMENU
+    :name: cobj-hmenu
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Renders a hierarchical menu of pages. For a new menu, use the menu
+    data processor instead.
+
 ..  warning::
     This TypoScript object is still available to provide backward compatibility
     for old sites. When creating a new menu or refactoring an existing one

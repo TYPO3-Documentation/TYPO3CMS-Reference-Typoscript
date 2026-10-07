@@ -12,6 +12,20 @@
 Content object array - COA, COA\_INT
 ====================================
 
+..  confval:: COA
+    :name: cobj-coa
+    :type: :ref:`cObject <data-type-cobject>`
+
+    A content object array: renders the content objects placed in it under
+    numeric keys, in the order of the keys.
+
+..  confval:: COA_INT
+    :name: cobj-coa-int
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Works like :typoscript:`COA`, but is rendered non-cached, so every
+    content object inside it is rendered non-cached as well.
+
 ..  note::
 
     *   COA is an object type (= complex data type).
@@ -35,6 +49,7 @@ Properties
 
 ..  confval-menu::
     :display: table
+    :exclude: cobj-coa,cobj-coa-int
     :type:
 
 ..  _cobj-coa-index:

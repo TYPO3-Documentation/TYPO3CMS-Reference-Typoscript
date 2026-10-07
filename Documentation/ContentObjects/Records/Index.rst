@@ -9,6 +9,13 @@
 RECORDS
 =======
 
+..  confval:: RECORDS
+    :name: cobj-records
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Renders records from one or more tables, given as a list of records
+    or by category.
+
 This object is meant for displaying lists of records from a variety of
 tables. Contrary to the :ref:`CONTENT <cobj-content>` object, it does
 not allow very fine selections of records (as it has no :typoscript:`select`
@@ -34,6 +41,7 @@ Properties
 ==========
 
 ..  confval-menu::
+    :exclude: cobj-records
     :display: table
     :type:
 

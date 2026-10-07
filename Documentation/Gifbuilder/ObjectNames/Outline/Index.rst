@@ -6,6 +6,12 @@
 OUTLINE
 =======
 
+..  confval:: OUTLINE
+    :name: gifbuilder-outline
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Draws a colored outline around a text.
+
 :typoscript:`OUTLINE` creates a colored contour line around the shapes of the
 associated text.
 

@@ -8,7 +8,11 @@
 typolink
 ========
 
-Wraps the incoming value in a link with an HTML 'a' tag.
+..  confval:: typolink
+    :name: typolink
+    :type: :ref:`function <functions>`
+
+    Wraps the incoming value in a link with an HTML 'a' tag.
 
 If you do not want to have the HTML 'a' tag around the link, then you
 must set the property by :typoscript:`returnLast = url` or

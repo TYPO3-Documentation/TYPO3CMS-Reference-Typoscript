@@ -8,6 +8,12 @@
 FILES
 =====
 
+..  confval:: FILES
+    :name: cobj-files
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Renders information about files from the File Abstraction Layer (FAL).
+
 A content object of type FILES uses the :ref:`File Abstraction Layer <t3coreapi:fal>`
 (FAL) and is used to display information about files.
 
@@ -20,6 +26,7 @@ Properties
 ==========
 
 ..  confval-menu::
+    :exclude: cobj-files
     :display: table
     :type:
 

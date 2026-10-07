@@ -7,6 +7,12 @@
 EXTBASEPLUGIN
 =============
 
+..  confval:: EXTBASEPLUGIN
+    :name: cobj-extbaseplugin
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Renders an Extbase plugin.
+
 The content object :typoscript:`EXTBASEPLUGIN` allows to render
 :ref:`Extbase <t3coreapi:extbase>` plugins.
 
@@ -19,6 +25,7 @@ Properties
 ==========
 
 ..  confval-menu::
+    :exclude: cobj-extbaseplugin
     :display: table
     :type:
 

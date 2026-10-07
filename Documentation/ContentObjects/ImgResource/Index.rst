@@ -6,6 +6,12 @@
 IMG\_RESOURCE
 =============
 
+..  confval:: IMG_RESOURCE
+    :name: cobj-img-resource
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Returns the path of an image file, without an :html:`<img>` tag.
+
 Objects of type IMG_RESOURCE returns a reference to an image, possibly
 wrapped with :ref:`stdWrap <cobj-img-resource-stdwrap>`. It can be used, for example,
 for putting background images in tables or
@@ -22,6 +28,7 @@ Properties
 ==========
 
 ..  confval-menu::
+    :exclude: cobj-img-resource
     :display: table
     :type:
 

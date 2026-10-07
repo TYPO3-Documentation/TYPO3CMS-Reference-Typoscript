@@ -6,6 +6,13 @@
 ADJUST
 ======
 
+..  confval:: ADJUST
+    :name: gifbuilder-adjust
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Adjusts the tonal range of the image, like the levels dialog of an
+    image editor.
+
 This lets you adjust the tonal range like in the "levels" dialog of
 Photoshop. You can set the input and output levels and that way remap
 the tonal range of the image. If you need to adjust the gamma value,

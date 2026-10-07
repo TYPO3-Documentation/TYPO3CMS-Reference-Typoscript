@@ -13,6 +13,12 @@
 `config`: TypoScript configuration
 ==================================
 
+..  confval:: config
+    :name: config
+    :type: :ref:`toplevel <top-level-objects>`
+
+    Sets options for the rendering and output of the frontend page.
+
 The `config` top-level object does not have to be initialized. Configuration
 can be set like this:
 

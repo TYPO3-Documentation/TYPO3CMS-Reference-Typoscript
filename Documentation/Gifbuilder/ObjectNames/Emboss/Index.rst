@@ -6,6 +6,12 @@
 EMBOSS
 ======
 
+..  confval:: EMBOSS
+    :name: gifbuilder-emboss
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Makes a text look embossed, with two shadows in opposite directions.
+
 The :typoscript:`EMBOSS` object uses two shadow offsets in opposite directions
 and with different colors to create an effect of light cast onto an embossed
 text.

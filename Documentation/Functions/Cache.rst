@@ -6,6 +6,13 @@
 cache
 =====
 
+..  confval:: cache
+    :name: cache
+    :type: :ref:`function <functions>`
+
+    Stores the rendered content in the caching framework and reads it from
+    there, so that it is not rendered again.
+
 Stores the rendered content into the caching framework and reads it
 from there. This allows you to reuse this content without prior
 rendering. The presence of :typoscript:`cache.key` will trigger this feature. It

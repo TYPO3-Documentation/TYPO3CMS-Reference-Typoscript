@@ -9,6 +9,12 @@
 FLUIDTEMPLATE
 =============
 
+..  confval:: FLUIDTEMPLATE
+    :name: cobj-fluidtemplate
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Renders content with a Fluid template.
+
 An object of type :typoscript:`FLUIDTEMPLATE` combines TypoScript with the Fluid
 templating engine.
 
@@ -75,6 +81,7 @@ Properties
     explains the resolving order and the reasoning behind the change.
 
 ..  confval-menu::
+    :exclude: cobj-fluidtemplate
     :display: table
     :type:
 

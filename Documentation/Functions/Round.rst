@@ -6,6 +6,12 @@
 round
 =====
 
+..  confval:: round
+    :name: round
+    :type: :ref:`function <functions>`
+
+    Rounds a number up, down, or to a given number of decimals.
+
 With this property you can round the value up, down or to a certain
 number of decimals. For each roundType the according PHP function will
 be used.

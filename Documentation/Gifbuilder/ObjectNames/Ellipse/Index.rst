@@ -6,7 +6,11 @@
 ELLIPSE
 =======
 
-Prints a filled ellipse.
+..  confval:: ELLIPSE
+    :name: gifbuilder-ellipse
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Prints a filled ellipse.
 
 ..  _gifbuilder-ellipse-example:
 

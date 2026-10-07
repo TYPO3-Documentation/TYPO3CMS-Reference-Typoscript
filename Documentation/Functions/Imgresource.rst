@@ -9,6 +9,13 @@
 imgResource
 ===========
 
+..  confval:: imgResource
+    :name: imgresource
+    :type: :ref:`function <functions>`
+
+    Defines an image file, a file resource or a :typoscript:`GIFBUILDER`
+    object, with properties to scale and convert it.
+
 An imgResource one of the following:
 
 #.  A :confval:`data-type-resource` plus imgResource properties.

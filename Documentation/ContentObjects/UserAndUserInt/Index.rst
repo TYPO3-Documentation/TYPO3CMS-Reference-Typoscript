@@ -12,6 +12,20 @@
 USER and USER\_INT
 ==================
 
+..  confval:: USER
+    :name: cobj-user
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Calls a PHP function or a method in a class, to incorporate your own
+    data processing or content. The output is cached with the page.
+
+..  confval:: USER_INT
+    :name: cobj-user-int
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Works like :typoscript:`USER`, but is rendered non-cached, outside the
+    main page rendering.
+
 ..  important::
 
     ..  versionchanged:: 14.0
@@ -19,9 +33,6 @@ USER and USER\_INT
         PHP functions called via TypoScript **must** now use the PHP
         attribute :php:`#[AsAllowedCallable]`
         (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
-
-This calls either a PHP function or a method in a class. This is very
-useful if you want to incorporate your own data processing or content.
 
 Basically USER and USER\_INT are user defined cObjects, because they
 call a function or method, which you control!
@@ -32,9 +43,6 @@ object), the internal variable :php:`$cObj` of that class is set with a
 which might be more or less relevant for you. See
 :file:`ContentObjectRenderer.php` in the TYPO3 source code; access to :typoscript:`typolink`
 or :typoscript:`stdWrap` are only two of the gimmicks you get.
-
-If you create this object as :typoscript:`USER_INT`, it will be rendered non-cached,
-outside the main page-rendering.
 
 ..  contents::
     :local:
@@ -49,6 +57,7 @@ Properties
 
 ..  confval-menu::
     :display: table
+    :exclude: cobj-user,cobj-user-int
     :type:
 
 ..  _cobj-user-userfunc:
