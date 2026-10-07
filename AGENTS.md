@@ -189,6 +189,31 @@ printed as an ordinary field instead of the default value.
     works wherever its object is used, so a path would name a place that
     does not exist.
 
+## Object types and functions
+
+Every content object, top-level object, function and GIFBUILDER object has
+a confval directly under its page headline. render-guides reads these from
+`confvals.json` to show a popover for a `:typoscript:` role in any manual,
+and finds them by their anchor, so their names follow a fixed scheme:
+
+| What it is | `:name:` | `:type:` |
+| --- | --- | --- |
+| Content object | `cobj-<type>`, for example `cobj-user-int` | ``:ref:`cObject <data-type-cobject>` `` |
+| Top-level object | the name, for example `page` or `config` | ``:ref:`toplevel <top-level-objects>` `` |
+| Function | the name, for example `stdwrap` | ``:ref:`function <functions>` `` |
+| GIFBUILDER object | `gifbuilder-<type>`, for example `gifbuilder-text` | ``:ref:`GIFBUILDER object <gifbuilder-object-names>` `` |
+
+*   Write the confval title exactly as a role writes the name: `USER_INT`,
+    `PAGE`, `stdWrap`. The popover matches only that spelling, so a
+    lowercase `page` does not find the `PAGE` box.
+*   If the anchor is already taken by a published confval, use
+    `function-<name>` instead, as `function-htmlparser-tags` does. The
+    popover does not find such a box.
+*   The first paragraph is the popover summary: one or two sentences that
+    say what the type does.
+*   An unfiltered `confval-menu` lists every confval of its page, the box
+    included. Add `:exclude: <name>` to the property table of such a page.
+
 ## Commit message format
 
 Follow https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Howto/EditLocal.html:
