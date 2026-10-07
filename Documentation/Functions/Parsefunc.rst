@@ -8,15 +8,19 @@
 parseFunc
 =========
 
+..  confval:: parseFunc
+    :name: parsefunc
+    :type: :ref:`function <functions>`
+
+    Parses content such as rich text: it renders tags with content objects
+    and turns plain web and email addresses into links.
+
 ..  versionchanged:: 14.0
     :changelog: breaking-107438-1736592000
 
     `lib.parseFunc.allowTags` and `lib.parseFunc_RTE.allowTags` do not contain
     default values anymore. HTML sanitization is continued to be  handled by
     the htmlSanitizer.
-
-This object is used to parse some content for stuff like special typo
-tags, the :ref:`makelinks <makelinks>`-things and so on...
 
 ..  contents::
     :local:

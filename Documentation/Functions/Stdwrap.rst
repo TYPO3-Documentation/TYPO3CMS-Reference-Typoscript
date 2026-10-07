@@ -10,6 +10,13 @@
 stdWrap
 =======
 
+..  confval:: stdWrap
+    :name: stdwrap
+    :type: :ref:`function <functions>`
+
+    Gets, changes, and wraps a value. Many properties of content objects
+    and functions accept stdWrap properties.
+
 A "stdWrap" TypoScript property ("standard wrap") is a function that "wraps"
 text values. A TEXT object value is parsed by the stdWrap function using the value's properties
 as parameters.

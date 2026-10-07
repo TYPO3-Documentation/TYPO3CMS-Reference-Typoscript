@@ -6,6 +6,13 @@
 split
 =====
 
+..  confval:: split
+    :name: split
+    :type: :ref:`function <functions>`
+
+    Splits the content at a character and renders each part with its own
+    functions.
+
 This object is used to split the input by a character and then parse
 the result onto some functions.
 

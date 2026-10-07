@@ -8,6 +8,13 @@
 IMAGE
 =====
 
+..  confval:: IMAGE
+    :name: cobj-image
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Renders an :html:`<img>` tag for the image file set in its property
+    `file`.
+
 Objects of type IMAGE return an image tag with the image file defined in the property
 "file" and is processed using the properties that are set on the object.
 
@@ -32,6 +39,7 @@ Properties
 ==========
 
 ..  confval-menu::
+    :exclude: cobj-image
     :display: table
     :type:
 

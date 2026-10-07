@@ -6,7 +6,11 @@
 WORKAREA
 ========
 
-Sets another work area.
+..  confval:: WORKAREA
+    :name: gifbuilder-workarea
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Sets another work area.
 
 ..  _gifbuilder-workarea-properties:
 

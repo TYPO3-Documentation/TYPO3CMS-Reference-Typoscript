@@ -8,6 +8,12 @@
 numRows
 =======
 
+..  confval:: numRows
+    :name: numrows
+    :type: :ref:`function <functions>`
+
+    Returns the number of records that a select query finds.
+
 This object allows you to specify a :sql:`SELECT` query, which will be
 executed in the database. The object then returns the number of
 rows, which were returned by the query.

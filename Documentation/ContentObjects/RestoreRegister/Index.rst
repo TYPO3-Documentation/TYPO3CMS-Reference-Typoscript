@@ -8,6 +8,13 @@
 RESTORE\_REGISTER
 =================
 
+..  confval:: RESTORE_REGISTER
+    :name: cobj-restore-register
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Removes the values that the latest :typoscript:`LOAD_REGISTER` set in
+    the register.
+
 This unsets the latest changes in the register array as set by
 :ref:`LOAD_REGISTER <cobj-load-register>`.
 

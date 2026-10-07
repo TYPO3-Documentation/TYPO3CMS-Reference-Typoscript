@@ -8,6 +8,13 @@
 plugin
 ======
 
+..  confval:: plugin
+    :name: plugin
+    :type: :ref:`toplevel <top-level-objects>`
+
+    Holds the configuration of the frontend plugins, for example in
+    :typoscript:`plugin.tx_myextension_pi1`.
+
 This is used for extensions in TYPO3 set up as frontend plugins.
 Typically you can set configuration properties of the plugin here. Say
 you have an extension with the key "myext" and it has a frontend

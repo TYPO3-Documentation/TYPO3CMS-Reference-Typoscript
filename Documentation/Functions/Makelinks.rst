@@ -6,6 +6,12 @@
 makelinks
 =========
 
+..  confval:: makelinks
+    :name: makelinks
+    :type: :ref:`function <functions>`
+
+    Turns web addresses and email addresses in a text into links.
+
 :typoscript:`makelinks` substitutes all appearances of web addresses or mail links
 with a real link tag. Web addresses and mail links must be contained in
 the text in the following form:

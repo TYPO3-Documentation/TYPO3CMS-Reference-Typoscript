@@ -6,7 +6,11 @@
 SHADOW
 ======
 
-Creates a shadow under the associated text.
+..  confval:: SHADOW
+    :name: gifbuilder-shadow
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Creates a shadow under the associated text.
 
 ..  _gifbuilder-shadow-properties:
 

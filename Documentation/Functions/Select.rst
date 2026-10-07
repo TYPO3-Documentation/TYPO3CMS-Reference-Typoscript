@@ -8,6 +8,12 @@
 select
 ======
 
+..  confval:: select
+    :name: select
+    :type: :ref:`function <functions>`
+
+    Builds an SQL query that selects records from the database.
+
 This object generates an SQL-select statement to select records
 from the database.
 

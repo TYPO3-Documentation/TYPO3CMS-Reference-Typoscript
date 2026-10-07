@@ -8,6 +8,13 @@
 HTMLparser
 ==========
 
+..  confval:: HTMLparser
+    :name: htmlparser
+    :type: :ref:`function <functions>`
+
+    Cleans up HTML: it keeps, removes, or changes tags and their
+    attributes.
+
 ..  contents::
     :local:
 

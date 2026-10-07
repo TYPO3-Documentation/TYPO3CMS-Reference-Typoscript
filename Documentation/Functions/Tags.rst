@@ -6,6 +6,12 @@
 tags
 ====
 
+..  confval:: tags
+    :name: tags
+    :type: :ref:`function <functions>`
+
+    Defines custom tags and how :typoscript:`parseFunc` renders them.
+
 Used to create custom tags and define how they should be parsed. This
 is used in conjunction with :ref:`parseFunc <parsefunc>`.
 

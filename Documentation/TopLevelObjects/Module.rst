@@ -7,6 +7,13 @@
 module
 ======
 
+..  confval:: module
+    :name: module
+    :type: :ref:`toplevel <top-level-objects>`
+
+    Holds the configuration of the backend modules, for example in
+    :typoscript:`module.tx_myextension`.
+
 The backend module of an extension can be configured via TypoScript.
 The configuration is done in
 :typoscript:`module.tx_<lowercaseextensionname>_<lowercasepluginname>`.

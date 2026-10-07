@@ -6,6 +6,13 @@
 CASE
 ====
 
+..  confval:: CASE
+    :name: cobj-case
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Renders one of several content objects, chosen by the value of its
+    property `key`, like a `switch` statement in PHP.
+
 ..  note::
 
     *   CASE is an object type (= complex data type).
@@ -32,6 +39,7 @@ Properties
 ==========
 
 ..  confval-menu::
+    :exclude: cobj-case
     :display: table
     :type:
 

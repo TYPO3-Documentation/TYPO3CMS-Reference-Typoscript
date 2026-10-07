@@ -6,6 +6,13 @@
 replacement
 ===========
 
+..  confval:: replacement
+    :name: replacement
+    :type: :ref:`function <functions>`
+
+    Searches and replaces text in the current content, optionally with
+    regular expressions.
+
 This object performs an ordered search and replace operation on the
 current content with the possibility of using `PCRE regular expressions`_.
 An array with numeric indices defines the order of actions and thus

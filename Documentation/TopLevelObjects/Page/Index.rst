@@ -13,7 +13,11 @@
 `PAGE` object type in TypoScript
 ================================
 
-This defines what is rendered in the frontend.
+..  confval:: PAGE
+    :name: page
+    :type: :ref:`toplevel <top-level-objects>`
+
+    Defines what is rendered in the frontend.
 
 PAGE is an object type. A good habit is to use :typoscript:`page` as
 the top-level object name for the main `PAGE` object of a website.

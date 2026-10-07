@@ -6,7 +6,11 @@
 TEXT
 ====
 
-Renders a text.
+..  confval:: TEXT
+    :name: gifbuilder-text
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Renders a text.
 
 ..  _gifbuilder-text-properties:
 

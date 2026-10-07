@@ -7,6 +7,13 @@
 optionSplit
 ===========
 
+..  confval:: optionSplit
+    :name: optionsplit
+    :type: :ref:`function <functions>`
+
+    Assigns different values to the items of a list, such as menu items,
+    depending on their position.
+
 ..  contents:: On this page:
     :local:
     :backlinks: top

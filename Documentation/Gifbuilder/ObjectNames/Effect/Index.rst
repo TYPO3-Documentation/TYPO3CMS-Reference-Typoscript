@@ -6,6 +6,13 @@
 EFFECT
 ======
 
+..  confval:: EFFECT
+    :name: gifbuilder-effect
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Applies one or more effects to the image, such as blur, sharpen, or
+    gamma.
+
 The :typoscript:`EFFECT` object allows to apply one or more of the
 :ref:`following effects <gifbuilder-effect-effects>` to the image.
 

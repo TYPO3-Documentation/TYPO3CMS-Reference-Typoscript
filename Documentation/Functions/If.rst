@@ -8,6 +8,12 @@
 if
 ==
 
+..  confval:: if
+    :name: if
+    :type: :ref:`function <functions>`
+
+    Checks conditions and returns true only if all of them are met.
+
 Allows you to check multiple conditions.
 
 This function returns true, if **all** of the present conditions are met

@@ -6,6 +6,12 @@
 SVG
 ===
 
+..  confval:: SVG
+    :name: cobj-svg
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Inserts an SVG image, from a file or from XML data.
+
 With this object type you can insert a SVG. You can use XML data directly
 or reference a file.
 
@@ -19,6 +25,7 @@ Properties
 ==========
 
 ..  confval-menu::
+    :exclude: cobj-svg
     :display: table
     :type:
 

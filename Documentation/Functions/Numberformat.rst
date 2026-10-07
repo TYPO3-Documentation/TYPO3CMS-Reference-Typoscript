@@ -6,6 +6,13 @@
 numberFormat
 ============
 
+..  confval:: numberFormat
+    :name: numberformat
+    :type: :ref:`function <functions>`
+
+    Formats a number, for example as a price, with the PHP function
+    :php:`number_format()`.
+
 With this property you can format a float value and display it as you
 want, for example as a price. It is a wrapper for the :php:`number_format()`
 function of PHP.

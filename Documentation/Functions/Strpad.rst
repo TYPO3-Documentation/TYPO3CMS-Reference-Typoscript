@@ -6,6 +6,12 @@
 strPad
 ======
 
+..  confval:: strPad
+    :name: strpad
+    :type: :ref:`function <functions>`
+
+    Pads a value to a given length, on the left, the right, or both sides.
+
 This property returns the input value padded to a certain length. The
 padding is added on the left side, the right side or on both sides.
 :typoscript:`strPad` uses the PHP function `str_pad() <https://www.php.net/str-pad>`__

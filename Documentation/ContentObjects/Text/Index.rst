@@ -6,7 +6,11 @@
 TEXT
 ====
 
-A content object of the type "TEXT" can be used to output static text or HTML.
+..  confval:: TEXT
+    :name: cobj-text
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Outputs static text or HTML.
 
 stdWrap properties are available under the property "value" and on the
 very rootlevel of the object.
@@ -27,6 +31,7 @@ Properties
 
 ..  confval-menu::
     :display: table
+    :exclude: cobj-text
     :type:
 
 ..  _cobj-text-value:

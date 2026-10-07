@@ -6,7 +6,11 @@
 IMAGE
 =====
 
-Renders an image file.
+..  confval:: IMAGE
+    :name: gifbuilder-image
+    :type: :ref:`GIFBUILDER object <gifbuilder-object-names>`
+
+    Renders an image file.
 
 ..  _gifbuilder-image-properties:
 

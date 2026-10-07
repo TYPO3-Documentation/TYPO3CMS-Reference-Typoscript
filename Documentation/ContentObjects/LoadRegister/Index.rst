@@ -8,6 +8,13 @@
 LOAD\_REGISTER
 ==============
 
+..  confval:: LOAD_REGISTER
+    :name: cobj-load-register
+    :type: :ref:`cObject <data-type-cobject>`
+
+    Sets values in the register, a stack of values that can be read with
+    the getText key `register`.
+
 The register is working like a stack: With each call new content can be
 put on top of the stack. :ref:`RESTORE_REGISTER <cobj-restore-register>`
 can be used to remove the element at the topmost position again.
@@ -27,6 +34,7 @@ Properties
 ==========
 
 ..  confval-menu::
+    :exclude: cobj-load-register
     :display: table
     :type:
 
