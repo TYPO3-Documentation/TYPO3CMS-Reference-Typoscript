@@ -25,7 +25,7 @@ Properties
     :name: useroptions
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  _useroptions-additionalpreviewlanguages:
 

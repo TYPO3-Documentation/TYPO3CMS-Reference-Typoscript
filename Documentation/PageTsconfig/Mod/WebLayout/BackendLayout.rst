@@ -29,6 +29,8 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
 
 ..  confval-menu::
 
+..  _backend-layouts-backendlayout:
+
 BackendLayouts.[backendLayout]
 ------------------------------
 

@@ -25,7 +25,7 @@ Properties
 ..  confval-menu::
     :display: table
     :type:
-    :Default:
+    :default:
 
 ..  _hmenu-special-updated-value:
 

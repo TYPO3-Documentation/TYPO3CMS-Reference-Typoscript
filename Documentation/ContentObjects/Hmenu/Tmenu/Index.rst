@@ -57,7 +57,7 @@ The following Item states are listed from the least to the highest priority:
     :caption: TMENU item states
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  rubric:: NO
 
@@ -173,7 +173,7 @@ Properties
     :caption: TMENU Properties
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  rubric:: expAll
 

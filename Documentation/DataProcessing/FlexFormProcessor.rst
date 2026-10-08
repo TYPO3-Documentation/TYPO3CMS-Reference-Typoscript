@@ -23,7 +23,7 @@ Options
 ..  confval-menu::
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  _flexformprocessor-fieldname:
 
