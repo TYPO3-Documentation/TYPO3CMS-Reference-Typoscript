@@ -29,7 +29,7 @@ Properties
     :name: user-setup
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  _user-setup-default:
 

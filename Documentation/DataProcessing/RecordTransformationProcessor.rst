@@ -84,7 +84,7 @@ Options of the `record-transformation` data processor
 ..  confval-menu::
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  rubric:: as
 
