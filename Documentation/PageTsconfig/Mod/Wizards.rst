@@ -162,8 +162,7 @@ TCA.
                     :type: string (comma separated list)
                     :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].before
                     :default: [empty string]
-
-                    ..  versionadded:: 14.2
+                    :added: 14.2
 
                     Influences the order of content elements within wizard tabs
                     in the new content element wizard by setting `before` and `after` values in Page TSconfig.
@@ -175,8 +174,7 @@ TCA.
                     :type: string (comma separated list)
                     :Page TSconfig path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].after
                     :default: [empty string]
-
-                    ..  versionadded:: 14.2
+                    :added: 14.2
 
                     Same as described in `before` section.
 
