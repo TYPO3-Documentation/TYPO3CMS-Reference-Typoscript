@@ -43,9 +43,12 @@ clearer after you have read through the properties below and looked at the examp
 Applying properties to FlexForm fields
 --------------------------------------
 
-..  deprecated:: 14.0
-    Using a comma-separated value for `[dataStructureKey]` is deprecated and
-    will stop working in TYPO3 v15.
+..  versionchanged:: 15.0
+    :changelog: breaking-109783-1776735296
+
+    A comma-separated `[dataStructureKey]` in the former form
+    `list_type,CType` is no longer resolved. Use the CType or the record type
+    alone.
 
 Other properties also apply to :ref:`FlexForm <t3coreapi:flexforms>` fields,
 in this case the full property path including the data structure key has to
