@@ -119,6 +119,8 @@ Examples
     a dependency of your project. Then, your classes will load without issues when you refer
     to them by their class name.
 
+..  _cobj-user-examples-example-1:
+
 Example 1
 ---------
 
@@ -140,6 +142,8 @@ Here :typoscript:`page.10` will give back what the PHP function :php:`printTime(
 returned. Since we did not use a :typoscript:`USER` object, but a
 :typoscript:`USER_INT` object, this function is executed on every page hit.
 Thus, in this example, the current time is displayed in red letters each time.
+
+..  _cobj-user-examples-example-2:
 
 Example 2
 ---------
@@ -171,12 +175,16 @@ at the beginning and then the headers of the content elements on the
 page in reversed order. Note how we defined the property
 "reverseOrder" for this USER object and how we used it in the PHP code.
 
+..  _cobj-user-examples-example-3:
+
 Example 3
 ---------
 
 Another example can be found in the documentation of the stdWrap
 property :ref:`postUserFunc <stdwrap-postuserfunc>` There you can also see how to work with
 :php:`$cObj`, the reference to the parent (calling) cObject.
+
+..  _cobj-user-examples-example-4:
 
 Example 4
 ---------

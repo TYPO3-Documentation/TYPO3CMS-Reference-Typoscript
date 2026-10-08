@@ -58,6 +58,8 @@ Example: Condition applies in application context "Development"
         // Your settings go here
     [END]
 
+..  _tsconfig-condition-application-context-example-condition-applies:
+
 Example: Condition applies in any application context that starts with "Production"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

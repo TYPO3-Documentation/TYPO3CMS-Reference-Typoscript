@@ -4,6 +4,8 @@
     mod; web_info
     Modules; Info
 
+..  _page-tsconfig-mod-web-info:
+
 ========
 web_info
 ========

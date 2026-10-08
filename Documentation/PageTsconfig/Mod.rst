@@ -14,6 +14,8 @@ Configuration for backend modules. This is the part of page TSconfig
 with the most options, most sections affect the main TYPO3 editing modules
 like :guilabel:`Web > Page` and :guilabel:`Web > List`.
 
+..  _pagemod-properties:
+
 Properties
 ==========
 

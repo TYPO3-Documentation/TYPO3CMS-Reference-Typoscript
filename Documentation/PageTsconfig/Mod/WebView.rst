@@ -20,6 +20,8 @@ Configuration options of the "Web > View" module.
     Preview; Tablet
     Preview; Mobile
 
+..  _pagewebview-previewframewidths:
+
 previewFrameWidths
 ==================
 
@@ -41,6 +43,8 @@ previewFrameWidths
     <key>.height
         Height of the preset
 
+..  _pagewebview-previewframewidths-example-define-new:
+
 Example: Define a new preview preset
 ------------------------------------
 
@@ -59,6 +63,8 @@ loaded from an xlf file and the category 'desktop'.
 ..  index::
     View module; type parameter
 
+..  _pagewebview-type:
+
 type
 ====
 
@@ -67,6 +73,8 @@ type
     :type: positive integer
 
     Enter the value of the `&type=` parameter passed to the webpage.
+
+..  _pagewebview-type-example-show-pages:
 
 Example: Show pages of type 42 in the preview
 ---------------------------------------------

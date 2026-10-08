@@ -13,6 +13,8 @@ Calc
 ====
 
 
+..  _objects-calc-calculating-values-calc:
+
 Calculating values (+calc)
 ==========================
 
@@ -22,6 +24,8 @@ operators have no "weight".* The calculation is done from left to
 right instead of order of operations (multiplication and division before addition and subtraction).
 
 
+..  _objects-calc-calculating-values-calc-value-calculated:
+
 How value is calculated
 -----------------------
 
@@ -30,6 +34,8 @@ How value is calculated
     45 + 34 * 2 = 158
     (which is the same as this in ordinary arithmetic: (45+34)*2=158)
 
+
+..  _objects-calc-calculating-values-calc-calc-usage-example:
 
 calc usage example
 ------------------

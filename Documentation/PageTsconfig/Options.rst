@@ -8,6 +8,8 @@ options
 
 Various options for the page affecting the Core at various points.
 
+..  _pageoptions-properties:
+
 Properties
 ==========
 
@@ -73,6 +75,8 @@ defaultUploadFolder
     value defined in user TSconfig.
 
     The syntax is "storage_uid:file_path".
+
+..  _pageoptions-properties-example-set-default:
 
 Example: Set default upload
 ---------------------------

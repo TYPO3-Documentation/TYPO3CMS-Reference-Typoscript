@@ -12,6 +12,8 @@ the tonal range of the image. If you need to adjust the gamma value,
 have a look at the :ref:`EFFECT <gifbuilder-effect>` object.
 
 
+..  _gifbuilder-adjust-example:
+
 Example
 =======
 

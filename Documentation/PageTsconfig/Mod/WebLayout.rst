@@ -256,6 +256,8 @@ Example: Disable "Languages" from the function menu
     noCreateRecordsLink
     Buttons; Create new record
 
+..  _pagewebpage-nocreaterecordslink:
+
 noCreateRecordsLink
 ===================
 

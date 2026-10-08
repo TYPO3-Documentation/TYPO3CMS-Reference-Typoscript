@@ -274,6 +274,8 @@ for the backend <typo3/cms-form:concepts-configuration-yamlregistration-backend>
     loaded in sites depending on **site sets as TypoScript providers**.
 
 
+..  _extdev-add-typoscript-more-information:
+
 More information
 ================
 
