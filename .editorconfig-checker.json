@@ -1,6 +1,9 @@
 {
   "Exclude": [
     "^\\.Build/",
+    "^var/",
+    "^config/",
+    "^Build/Screenshots/node_modules/",
     "\\.rst$",
     "\\.rst\\.txt$",
     "\\.diff$",
