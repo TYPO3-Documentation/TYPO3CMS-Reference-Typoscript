@@ -179,8 +179,18 @@ addQueryString.exclude
     :name: typolink-addQueryString-exclude
     :type: :ref:`string <data-type-string>`
 
+    ..  versionchanged:: 15.0
+        :changelog: important-35069-1787591772
+
+        Before, a parameter from :confval:`config.linkVars <config-linkVars>`
+        was added to the link again.
+
     List of query arguments to exclude from the link. Typical examples are
     :typoscript:`L` or :typoscript:`cHash`.
+
+    The list also removes the parameters that
+    :confval:`config.linkVars <config-linkVars>` adds to the link, as long as
+    :typoscript:`addQueryString` is active.
 
     ..  attention::
         This property should not be used for cached contents without a valid
