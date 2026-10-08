@@ -254,8 +254,16 @@ Properties for overriding and conditions
         :name: stdwrap-override
         :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
-        If `override` returns something other than "" or zero (trimmed), the
-        content is loaded with this.
+        ..  versionchanged:: 14.3.7
+            :changelog: important-81619-1787572925
+
+            Before, the value `0` did not replace the content. To keep the
+            previous output, remove :typoscript:`override` or guard it with
+            :typoscript:`override.if`.
+
+        Replaces the content with the value of `override`. The content stays
+        unchanged only if the value is empty or consists of whitespace. The
+        value `0` replaces the content as well.
 
     ..  _stdwrap-preifemptylistnum:
 
