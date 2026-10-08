@@ -33,7 +33,7 @@ Options
 ..  confval-menu::
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  _menuprocessor-as:
 

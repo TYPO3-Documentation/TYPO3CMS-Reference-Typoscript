@@ -27,7 +27,7 @@ Properties
 ..  confval-menu::
     :display: table
     :type:
-    :Default:
+    :default:
 
 ..  _tmenuitem-allwrap:
 

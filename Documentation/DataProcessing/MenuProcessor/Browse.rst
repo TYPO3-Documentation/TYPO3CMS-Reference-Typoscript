@@ -33,7 +33,7 @@ Properties
 ..  confval-menu::
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  rubric:: special.value
 
