@@ -35,3 +35,6 @@ Thumbs.db
 /.ddev/
 !/.ddev/config.yaml
 /var/
+# TYPO3 instance of make screenshots
+/config/
+/Build/Screenshots/node_modules/

@@ -40,6 +40,18 @@ CONTRIBUTING.md                  # how to contribute
   of the example.
 - `make test` — full test suite (docs, lint, cgl, yaml, typoscript, json,
   editorconfig)
+- `make screenshots` — take the backend screenshots listed in
+  `Build/Screenshots/screenshots.mjs` from a throwaway TYPO3 instance, built
+  from `.Build` (run `make install` first in a new worktree).
+  `Build/Scripts/runTests.sh -s screenshots List/PagesDoktypeDifferentLabels`
+  takes only the named ones. `Build/Screenshots/create-records.php` gives
+  each page TSconfig example a page of its own whose TSconfig field holds
+  the snippet the documentation includes, so the screenshot shows what the
+  example does. A screenshot of a whole module (`window: true`) shows the
+  backend 1000 px wide, so readers see where the module is in the menu: the
+  page tree is hidden and every other menu group collapsed. Give it an
+  `until` element to end below, so the image takes no more room on the page
+  than it needs. Commit only the images that really changed.
 
 ## Documentation writing rules
 
