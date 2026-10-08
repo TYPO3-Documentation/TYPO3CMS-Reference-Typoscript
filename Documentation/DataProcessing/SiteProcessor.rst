@@ -20,7 +20,7 @@ Options
 ..  confval-menu::
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  _siteprocessor-as:
 

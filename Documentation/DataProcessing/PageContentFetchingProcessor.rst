@@ -29,7 +29,7 @@ Options
 ..  confval-menu::
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  rubric:: as
 

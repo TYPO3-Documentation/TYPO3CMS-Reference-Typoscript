@@ -14,6 +14,8 @@
         check-link-text="true"
         interlink-shortcode="t3tsref"
         confval-default="TypoScript"
+        check-headline-anchors="true"
+        confval-fields="Example, User TSconfig path, Page TSconfig path, Syntax, Implementation, Parameter, Context, Allowed values, Range, Special value, added, changed, deprecated, removed"
     />
     <project
         title="TypoScript Explained"

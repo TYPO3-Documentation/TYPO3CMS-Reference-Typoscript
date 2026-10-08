@@ -88,6 +88,8 @@ effects
 
     Apply image effects to the preview image.
 
+..  _imagelinkwrap-effects-example-effects:
+
 Example for effects
 ~~~~~~~~~~~~~~~~~~~
 
@@ -139,6 +141,8 @@ bodyTag
     This is the `<body>`-tag of the preview window.
     Needs :typoscript:`JSwindow = 1`.
 
+..  _imagelinkwrap-body-tag-example-setting-bodytag:
+
 Example setting a bodytag for the preview window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -172,6 +176,8 @@ target
     This specifies the `target` attribute of the link. The attribute
     will only be created if the current :ref:`Doctype <setup-config-doctype>`
     allows it. Needs :typoscript:`JSwindow = 1`. Default: 'thePicture'.
+
+..  _imagelinkwrap-target-example-alternative-target:
 
 Example: Use an alternative target for the JavaScript Window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -303,6 +309,8 @@ linkParams
     for :typoscript:`linkParams` that you would use for :ref:`typolink <typolink>`.
     Needs :typoscript:`JSwindow = 0`.
 
+..  _imagelinkwrap-example:
+
 Example: Use alternative parameters for the a-tag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -327,6 +335,8 @@ stdWrap
     This adds :ref:`stdWrap <stdwrap>` functionality to the almost final
     result.
 
+..  _imagelinkwrap-what-it-does:
+
 What it does
 ============
 
@@ -348,6 +358,8 @@ If :typoscript:`JSwindow` is True (:typoscript:`= 1`) more fancy
 features are available since the preview now is opened by Javascript.
 Then the Javascript window title, size, background-color and more can be set to
 special values.
+
+..  _imagelinkwrap-implementation:
 
 Implementation
 ==============
