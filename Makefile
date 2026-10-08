@@ -47,6 +47,10 @@ fix: fix-cgl ## Apply all automatic fixes
 fix-cgl: ## Fix TYPO3 coding guidelines violations
 	Build/Scripts/runTests.sh -s cgl
 
+.PHONY: screenshots
+screenshots: ## Take the backend screenshots from a TYPO3 instance
+	Build/Scripts/runTests.sh -s screenshots
+
 .PHONY: install
 install: ## Install/update the Composer dependencies
 	Build/Scripts/runTests.sh -s composerUpdate
