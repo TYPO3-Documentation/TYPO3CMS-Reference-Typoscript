@@ -326,6 +326,24 @@ config
 ..  confval:: config
     :name: tceform-config
 
+     ..  deprecated:: 15.0
+         :changelog: deprecation-110865-1790803661
+
+         For a field of TCA type `uuid`, the option
+         :typoscript:`config.enableCopyToClipboard` has moved to
+         :typoscript:`config.appearance.copyToClipboard`. The old option still
+         works until TYPO3 v16.0, but logs a deprecation. Before, the value
+         `0` did not hide the copy to clipboard button.
+
+         ..  code-block:: tsconfig
+             :caption: EXT:my_extension/Configuration/page.tsconfig
+
+             # Before
+             TCEFORM.tx_myextension_domain_model_item.identifier.config.enableCopyToClipboard = 0
+
+             # After
+             TCEFORM.tx_myextension_domain_model_item.identifier.config.appearance.copyToClipboard = 0
+
      This setting allows to override TCA field configuration. This will influence configuration settings in
      :php:`$GLOBALS['TCA'][<tableName>]['columns'][<fieldName>]['config'][<key>]`, see
      :ref:`TCA reference <t3tca:columns-properties-config>` for details.
