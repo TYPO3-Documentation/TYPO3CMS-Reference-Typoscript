@@ -22,7 +22,7 @@ Options:
 ..  confval-menu::
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  _galleryprocessor-if:
 

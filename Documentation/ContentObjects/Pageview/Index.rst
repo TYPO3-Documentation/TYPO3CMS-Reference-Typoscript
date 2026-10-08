@@ -223,8 +223,7 @@ Properties
     ..  confval:: paths.[priority]
         :name: pageview-paths
         :type: :ref:`path <data-type-path>` with :ref:`stdWrap <stdwrap>`
-        :Example: :ref:`Example: Define a path that contains all templates <cobj-pageview-paths-example>`
-        :Example 2: :ref:`Example: Define fallbacks for a template paths <cobj-pageview-paths-example-extended>`
+        :Example: :ref:`Example: Define a path that contains all templates <cobj-pageview-paths-example>`, :ref:`Example: Define fallbacks for a template paths <cobj-pageview-paths-example-extended>`
 
         Sets an array of paths for the Fluid templates, usually
         :file:`EXT:my_extension/Resources/Private/PageView/` or a

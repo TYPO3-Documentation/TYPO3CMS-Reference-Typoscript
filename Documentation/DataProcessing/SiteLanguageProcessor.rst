@@ -21,7 +21,7 @@ Options
 ..  confval-menu::
     :display: table
     :type:
-    :Default:
+    :default:
 
     ..  _sitelanguageprocessor-as:
 

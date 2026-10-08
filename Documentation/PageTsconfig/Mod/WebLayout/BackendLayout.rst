@@ -26,6 +26,8 @@ tutorial: :ref:`Create backend page layouts <t3sitepackage:backend-page-layouts>
 
 ..  confval-menu::
 
+..  _backend-layouts-backendlayout:
+
 BackendLayouts.[backendLayout]
 ------------------------------
 
