@@ -510,7 +510,18 @@ Properties of 'config'
         :name: config-index-externals
         :type: :ref:`boolean <data-type-boolean>`
 
+        ..  versionchanged:: 14.3.7
+            :changelog: important-59007-1786032000
+
+            Before, files of a storage that is not public were not indexed.
+            To keep them out of the index, disable
+            :typoscript:`index_externals` or remove them from the index.
+
         If set, external media linked to on pages is indexed.
+
+        This includes files of a storage that is not public, which are linked
+        through the file dump script with a valid token. Search results link to
+        the file dump URL, which checks access to the file itself.
 
         Automatically enabled when :t3-ext:`indexed_search` is enabled.
 
