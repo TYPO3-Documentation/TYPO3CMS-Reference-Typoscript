@@ -591,8 +591,7 @@ Properties
         ..  confval:: label.<combined-identifier>
             :name: useroptions-folderTree-label
             :User TSconfig path: options.folderTree.label.<combined-identifier>
-
-            ..  versionadded:: 14.0
+            :added: 14.0
 
             Labels offer customizable color markings for file storage tree
             nodes and require an associated label for accessibility.
@@ -739,8 +738,7 @@ Properties
                 :name: useroptions-liveSearch-actions-default
                 :type: string
                 :User TSconfig path: options.liveSearch.actions.default
-
-                ..  versionadded:: 14.2
+                :added: 14.2
 
                 This option allow integrators to set default behaviour for
                 search results. Behavior can be set globally or for a particular table.
@@ -976,8 +974,7 @@ Properties
             :type: boolean
             :User TSconfig path: options.pageTree.searchByFrontendUri
             :default: `true`
-
-            ..  versionadded:: 14.2
+            :added: 14.2
 
             Set by default. The page tree filter supports searching for pages
             by frontend URI. Editors can now locate a backend page
@@ -997,8 +994,7 @@ Properties
             :type: boolean
             :User TSconfig path: options.pageTree.searchInTranslatedPages
             :default: `true`
-
-            ..  versionadded:: 14.1
+            :added: 14.1
 
             Set by default. The page tree filter supports searching for pages
             through their translated content, which helps editors find pages in
