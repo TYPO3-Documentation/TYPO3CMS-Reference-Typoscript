@@ -1,0 +1,6 @@
+page = PAGE
+page {
+  10 = PAGEVIEW
+  10.paths.10 = EXT:site_package/Resources/Private/Templates/
+  shortcutIcon = {$SitePackage.favicon}
+}
