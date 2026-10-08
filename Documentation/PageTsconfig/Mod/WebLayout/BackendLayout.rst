@@ -158,9 +158,7 @@ BackendLayouts.[backendLayout]
             ..  confval:: allowedContentTypes
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-allowedContentTypes
                 :type: comma separated strings
-
-                ..  versionadded:: 14.1
-                    :changelog: feature-108623-1768315053
+                :added: 14.1 feature-108623-1768315053
 
                 Allow only configured types of content elements (referencing
                 `tt_content.CType` with names like "text", "textmedia",
@@ -171,9 +169,7 @@ BackendLayouts.[backendLayout]
             ..  confval:: disallowedContentTypes
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-disallowedContentTypes
                 :type: comma separated strings
-
-                ..  versionadded:: 14.1
-                    :changelog: feature-108623-1768315053
+                :added: 14.1 feature-108623-1768315053
 
                 Disallow configured types of content elements (referencing
                 `tt_content.CType` with names like "text", "textmedia",

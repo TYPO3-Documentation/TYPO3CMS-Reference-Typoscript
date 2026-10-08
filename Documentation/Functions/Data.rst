@@ -111,9 +111,7 @@ cObj
 
 ..  confval:: cObj
     :name: data-cObj
-
-    ..  deprecated:: 14.3
-        :changelog: deprecation-109575
+    :deprecated: 14.3 deprecation-109575
 
 ..  _data-type-gettext-cobj-example-get-number:
 
