@@ -1081,8 +1081,7 @@ locale()
 
 ..  confval:: locale()
     :name: condition-locale
-
-    ..  versionadded:: 14.0
+    :added: 14.0
 
     This expression allows integrators and developers to access
     the current site locale, which is provided as a locale object of type

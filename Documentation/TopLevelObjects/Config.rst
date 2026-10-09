@@ -551,8 +551,7 @@ Properties of 'config'
     ..  confval:: linkSecurityRelValue
         :name: config-linkSecurityRelValue
         :type: `noreferrer` (default) or `noopener`
-
-        ..  versionadded:: 14.2
+        :added: 14.2
 
         Define global `rel` attribute for external links. This can be changed
         from the default behavior `noreferrer` to less strict option `noopener`.
