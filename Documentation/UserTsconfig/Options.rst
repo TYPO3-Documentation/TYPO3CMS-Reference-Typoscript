@@ -163,7 +163,7 @@ Properties
         List of :ref:`context menu <t3coreapi:context-menu>` ("clickmenu") items to
         disable.
 
-        ..  figure:: /Images/ManualScreenshots/List/PagesContextMenu.png
+        ..  figure:: /Images/GeneratedScreenshots/List/PagesContextMenu.png
             :alt: Context menu of the page tree
             :class: with-shadow
 
@@ -486,7 +486,7 @@ Properties
             ..  literalinclude:: _codesnippets/_properties3.tsconfig
                 :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
-            ..  figure:: /Images/ManualScreenshots/List/FileListPrimaryActions.png
+            ..  figure:: /Images/GeneratedScreenshots/List/FileListPrimaryActions.png
                 :alt: Show primary action with additional copy, cut and replace buttons
                 :class: with-shadow
 
@@ -918,7 +918,7 @@ Properties
 
             Display:
 
-            ..  figure:: /Images/ManualScreenshots/List/optionsPageTreeLabel.png
+            ..  figure:: /Images/GeneratedScreenshots/List/optionsPageTreeLabel.png
                 :alt: Page with configured color and label
                 :class: with-shadow
 
