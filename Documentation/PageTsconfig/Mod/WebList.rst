@@ -49,7 +49,7 @@ Example: Allow records of type pages or sys_category in the new record wizard
 ..  literalinclude:: _codesnippets/_pageTsConfigWebListAllowedNewTable.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-..  figure:: /Images/ManualScreenshots/List/PageTsModWebListAllowedNewTables.png
+..  figure:: /Images/GeneratedScreenshots/List/PageTsModWebListAllowedNewTables.png
     :alt: The New record screen after modifying the allowed elements
 
     The New record screen after modifying the allowed elements
@@ -104,7 +104,10 @@ Example: Use semicolon as delimiter CSV downloads
 ..  literalinclude:: /CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript
     :caption: EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig
 
-..  include:: /Images/ManualScreenshots/WebList/ExportDialog.rst.txt
+..  figure:: /Images/GeneratedScreenshots/WebList/ExportDialog.png
+    :alt: The download dialog with a semicolon as delimiter and a single quote as quoting character
+
+    The download dialog of the :guilabel:`Content > Records` module
 
 
 ..  index::
@@ -132,7 +135,10 @@ Example: Use single quotes as quoting character for CSV downloads
 ..  literalinclude:: /CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript
     :caption: EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig
 
-..  include:: /Images/ManualScreenshots/WebList/ExportDialog.rst.txt
+..  figure:: /Images/GeneratedScreenshots/WebList/ExportDialog.png
+    :alt: The download dialog with a semicolon as delimiter and a single quote as quoting character
+
+    The download dialog of the :guilabel:`Content > Records` module
 
 ..  index::
     deniedNewTables
@@ -472,16 +478,12 @@ listOnlyInSingleTableView
 Example: Only list records of tables in single-table mode
 ---------------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_listOnlyInSingleTableView.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
-
-    mod.web_list {
-        listOnlyInSingleTableView = 1
-    }
 
 The result will be that records from tables are only listed in the single-table mode:
 
-..  figure:: /Images/ManualScreenshots/List/PageTsModWebListListOnlyInSingleTableView.png
+..  figure:: /Images/GeneratedScreenshots/List/PageTsModWebListListOnlyInSingleTableView.png
     :alt: The Content Records module after activating the single-table mode
 
     The :guilabel:`Content > Records` module after activating the single-table mode
