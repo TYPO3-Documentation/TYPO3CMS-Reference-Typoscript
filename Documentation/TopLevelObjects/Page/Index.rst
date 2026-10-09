@@ -337,6 +337,14 @@ Properties
         `alternate`
             If set (boolean) then the rel-attribute will be
             "alternate stylesheet".
+        `crossorigin`
+            ..  versionadded:: 14.2
+                :changelog: feature-109187-1774695399
+
+            Sets the :html:`crossorigin` attribute of the :html:`<link>` tag.
+            It is set to `anonymous` automatically for a
+            :ref:`URI resource <data-type-resource>` that has an
+            :typoscript:`integrity`.
         `forceOnTop`
             Boolean flag. If set, this file will be added on top
             of all other files.
@@ -348,6 +356,16 @@ Properties
         `inline`
             If set, the content of the CSS file is inlined using
             :html:`<style>` tags. Note that external files are not inlined.
+        `integrity`
+            ..  versionadded:: 14.2
+                :changelog: feature-109187-1774695399
+
+            Sets the :html:`integrity` attribute of the :html:`<link>` tag, so
+            that browsers can check the file with subresource integrity. It
+            takes the same values as :typoscript:`integrity` of
+            :confval:`includeJS <page-includeJS>`, including `auto`. A
+            file included with :typoscript:`inline` gets no
+            :html:`integrity` attribute.
         `media`
             Setting the media attribute of the :html:`<style>` tag.
         `title`
@@ -387,6 +405,14 @@ Properties
         `alternate`
             If set (boolean) then the rel-attribute will be
             "alternate stylesheet".
+        `crossorigin`
+            ..  versionadded:: 14.2
+                :changelog: feature-109187-1774695399
+
+            Sets the :html:`crossorigin` attribute of the :html:`<link>` tag.
+            It is set to `anonymous` automatically for a
+            :ref:`URI resource <data-type-resource>` that has an
+            :typoscript:`integrity`.
         `forceOnTop`
             Boolean flag. If set, this file will be added on top
             of all other files.
@@ -395,6 +421,14 @@ Properties
             evaluate to TRUE for the file to be included. If they do not evaluate
             to TRUE, the file will not be included. Extensive usage might cause
             huge numbers of temporary files to be created. See ->if for details.
+        `integrity`
+            ..  versionadded:: 14.2
+                :changelog: feature-109187-1774695399
+
+            Sets the :html:`integrity` attribute of the :html:`<link>` tag, so
+            that browsers can check the file with subresource integrity. It
+            takes the same values as :typoscript:`integrity` of
+            :confval:`includeJS <page-includeJS>`, including `auto`.
         `media`
             Setting the media attribute of the :html:`<style>` tag.
         `title`
@@ -461,10 +495,21 @@ Properties
             set to :typoscript:`html5`. Otherwise :html:`text/javascript` is used as type.
 
         `integrity`
+            ..  versionchanged:: 14.2
+                :changelog: feature-109187-1774695398
+
+                The value `auto` has been added.
+
             Adds the integrity attribute to the script element to let
             browsers ensure subresource integrity. Useful in hosting scenarios with
             resources externalized to CDN's. See `SRI <https://www.w3.org/TR/SRI/>`_ for
             more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
+
+            Set it to `auto` to let TYPO3 compute a SHA-256 hash of the file
+            and cache it. For a remote URL, TYPO3 downloads the file to
+            compute the hash, so use `auto` only for a server you trust. If
+            TYPO3 cannot compute the hash, it logs an error and leaves out
+            the attribute.
 
         `data`
             Array with key/value for additional attributes to be added to
