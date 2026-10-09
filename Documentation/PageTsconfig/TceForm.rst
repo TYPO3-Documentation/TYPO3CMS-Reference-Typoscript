@@ -167,7 +167,7 @@ Example: Override labels for document types
 ..  literalinclude:: _codesnippets/_altLabels.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-..  figure:: /Images/ManualScreenshots/List/PagesDoktypeDifferentLabels.png
+..  figure:: /Images/GeneratedScreenshots/List/PagesDoktypeDifferentLabels.png
     :alt: The Page types with modified labels
 
     The Page types with modified labels
@@ -447,7 +447,7 @@ config.treeConfig
 description
 -----------
 
-..  figure:: /Images/ManualScreenshots/Input1.png
+..  figure:: /Images/GeneratedScreenshots/Input1.png
     :zoom: lightbox
     :alt: A common input field in the TYPO3 backend
 
@@ -459,10 +459,8 @@ description
     :ref:`TCA description <t3tca:columns-properties-description>`, which allows to
     define a description for a TCA field, next to its label.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_description.typoscript
         :caption: EXT:my_sitepackage/Configuration/page.tsconfig
-
-        TCEFORM.tt_content.header.description = override description
 
     As already known from other properties, this can also be configured for a
     specific language.
@@ -548,7 +546,7 @@ disableNoMatchingValueElement
     If a selector box value is not available among the options in the box, the default behavior
     of TYPO3 is to preserve the value and to show a label which warns about this special state:
 
-    ..  figure:: /Images/ManualScreenshots/List/SelectInvalidValue.png
+    ..  figure:: /Images/GeneratedScreenshots/List/SelectInvalidValue.png
         :alt: A missing selector box value is indicated by a warning message
 
         A missing selector box value is indicated by a warning message
@@ -579,7 +577,7 @@ Example: Disable "INVALID VALUE ..." label
 
 Now the selector box will default to the first element in the selector box:
 
-..  figure:: /Images/ManualScreenshots/List/SelectNoInvalidValue.png
+..  figure:: /Images/GeneratedScreenshots/List/SelectNoInvalidValue.png
     :alt: Instead of show a warning message the system choose the first element in the selector box
 
     Instead of show a warning message the system choose the first element in the selector box
@@ -771,7 +769,7 @@ Example: Replace "INVALID VALUE ..." label with another string
 ..  literalinclude:: _codesnippets/_noMatchingValueLabel.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-..  figure:: /Images/ManualScreenshots/List/SelectInvalidValueDifferentLabel.png
+..  figure:: /Images/GeneratedScreenshots/List/SelectInvalidValueDifferentLabel.png
     :alt:  An invalid selector box value is indicated by a warning message
 
     An invalid selector box value is indicated by a warning message
@@ -890,7 +888,7 @@ suggest
 Configuration of the suggest wizard that is available and often enabled
 for :ref:`TCA type=group <t3tca:columns-group>` fields.
 
-..  figure:: /Images/ManualScreenshots/List/TcaTypeGroupSuggest.png
+..  figure:: /Images/GeneratedScreenshots/List/TcaTypeGroupSuggest.png
     :alt: A configured suggest wizard
 
     A configured suggest wizard

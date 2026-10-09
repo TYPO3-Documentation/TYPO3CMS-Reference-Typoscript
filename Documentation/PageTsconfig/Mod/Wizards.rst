@@ -218,7 +218,7 @@ Example: Create a new group and add an element to it
 
 With the second example, the bottom of the new content element wizard shows:
 
-..  figure:: /Images/ManualScreenshots/List/PageTsModWizardsNewContentElementExample2.png
+..  figure:: /Images/GeneratedScreenshots/List/PageTsModWizardsNewContentElementExample2.png
     :alt: Added entry in the new content element wizard
 
     Added entry in the new content element wizard
@@ -289,7 +289,7 @@ Example: Hide the "Page (inside)" link in the "New Record" dialog
 ..  literalinclude:: _newRecordPages.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-..  figure:: /Images/ManualScreenshots/List/PageTsModWizardsNewRecordHideInside.png
+..  figure:: /Images/GeneratedScreenshots/List/PageTsModWizardsNewRecordHideInside.png
     :alt: The modified New record screen without Page (inside)
 
     The modified new record screen without page (inside)

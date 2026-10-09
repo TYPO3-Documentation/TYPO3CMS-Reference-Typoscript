@@ -174,8 +174,8 @@ and open the tab :guilabel:`Resources`.
 
 You can enter page TSconfig directly into the field :guilabel:`Page TSconfig`:
 
-..  figure:: /Images/ManualScreenshots/List/TSconfigPageInput.png
-    :alt: TSconfig-related fields in the Resources tab of a page
+..  figure:: /Images/GeneratedScreenshots/List/TSconfigPageInput.png
+    :alt: The Page TSconfig field in the Resources tab of a page
     :class: with-shadow
 
 Page TSconfig inserted directly into the page properties is applied to the

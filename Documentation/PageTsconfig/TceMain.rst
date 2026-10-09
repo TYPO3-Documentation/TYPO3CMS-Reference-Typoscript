@@ -118,10 +118,10 @@ These settings adjust that a page which is copied will neither have "(copy X)" a
 
 The last page in this tree, labeled "Test", is used as original to be copied. The first sub page was
 copied using the settings from the above example: It is labeled "Test" and is visible exactly like
-the original page. The page "Test (copy 2)" in the middle was in contrast copied in default mode:
+the original page. The page "Test (copy 1)" in the middle was in contrast copied in default mode:
 The page is hidden and the "(copy X)" suffix is added, if another page with the same named existed already.
 
-..  figure:: /Images/ManualScreenshots/List/PageCopyWithSuffix.png
+..  figure:: /Images/GeneratedScreenshots/List/PageCopyWithSuffix.png
     :alt: Hidden page with added suffix after copying its original page
 
     Hidden page with added suffix after copying its original page
@@ -166,10 +166,10 @@ These settings adjust that a page which is copied will neither have "(copy X)" a
 
 The last page in this tree, labeled "Test", is used as original to be copied. The first sub page was
 copied using the settings from the above example: It is labeled "Test" and is visible exactly like
-the original page. The page "Test (copy 2)" in the middle was in contrast copied in default mode:
+the original page. The page "Test (copy 1)" in the middle was in contrast copied in default mode:
 The page is hidden and the "(copy X)" suffix is added, if another page with the same named existed already.
 
-..  figure:: /Images/ManualScreenshots/List/PageCopyWithSuffix.png
+..  figure:: /Images/GeneratedScreenshots/List/PageCopyWithSuffix.png
     :alt: Hidden page with added suffix after copying its original page
 
     Hidden page with added suffix after copying its original page
