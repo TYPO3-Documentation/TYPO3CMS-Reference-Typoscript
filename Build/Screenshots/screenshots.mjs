@@ -25,7 +25,7 @@ const field = (name) => `.form-group:has(code:text-is("[${name}]"))`;
 const {
   root, backendLayouts, allowedNewTables, altLabels, newRecordHideInside, newContentElementGroup,
   invalidValue, invalidValueLabel, invalidValueDisabled, singleTableView, backendLayoutExclude, description,
-  headerContent, csvExport, copies, copyOriginal, labels, labelLast, site,
+  headerContent, csvExport, exportButtons, noExportButtons, copies, copyOriginal, labels, labelLast, site,
 } =
   JSON.parse(readFileSync('../../var/screenshot-records.json', 'utf8'));
 
@@ -37,6 +37,14 @@ const newRecordWizard = (id) => ({
   from: 'h1',
   // A list that the TSconfig empties stays in the page, but invisible
   to: '.list-group >> visible=true',
+});
+
+// The Content > Records module in single-table view, the only view with the
+// Export button of the import/export extension
+const exportButtonView = (id) => ({
+  url: `${moduleUrl('content/records', id)}&table=tt_content`,
+  window: true,
+  until: '.recordlist',
 });
 
 // A page in the page tree, which is outside of the module frame
@@ -209,6 +217,8 @@ const screenshots = {
     },
     modal: true,
   },
+  'WebList/WithExportButtons': exportButtonView(exportButtons),
+  'WebList/NoExportButtons': exportButtonView(noExportButtons),
 
 };
 
