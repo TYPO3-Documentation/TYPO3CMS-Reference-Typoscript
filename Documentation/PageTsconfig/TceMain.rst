@@ -524,6 +524,18 @@ preview
     use case is to have previews for blog and news records, and this feature allows you to define a different
     preview page for content elements as well, which might be handy if they are stored in a folder.
 
+    ..  versionchanged:: 14.2
+        :changelog: feature-108831-1738522284
+
+        Before, the workspaces module created shareable preview links only
+        for pages.
+
+    The workspaces module uses this configuration for the shareable preview
+    link of a record. The link uses :typoscript:`previewPageId`,
+    :typoscript:`fieldToParameterMap`, and :typoscript:`additionalGetParameters`.
+    If `options.workspaces.previewPageId <https://docs.typo3.org/permalink/typo3/cms-workspaces:pagetsconfig-options-workspaces-previewpageid>`_
+    is set, it takes precedence over :typoscript:`previewPageId`.
+
     ..  literalinclude:: _codesnippets/_preview.typoscript
         :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
