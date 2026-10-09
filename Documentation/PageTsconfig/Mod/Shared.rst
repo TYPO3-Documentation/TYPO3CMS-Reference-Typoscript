@@ -79,10 +79,10 @@ defaultLanguageFlag
     Values as listed in the "Select flag icon" of a language record in the backend are allowed, including
     the value "multiple".
 
-    ..  figure:: /Images/ManualScreenshots/List/SelectFlagIcon.png
-        :alt: The flag selector of a language record in the backend
+    ..  figure:: /Images/GeneratedScreenshots/List/SelectFlagIcon.png
+        :alt: The flag selector of a language in the site configuration
 
-        The flag selector of a language record in the backend
+        The flag selector of a language in the site configuration
 
 ..  _page-ts-config-shared-default-language-label-example-show:
 

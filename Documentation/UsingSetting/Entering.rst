@@ -193,7 +193,7 @@ setting came from. Use the
 :ref:`Submodule "Included TypoScript" <typoscript-syntax-typoscript-templates-structure-analyzer>` to analyze where
 TypoScript was set and this module to look at the result.
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/ActiveTypoScript.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/ActiveTypoScript.png
     :alt: Screenshot of the Active TypoScript submodule in the TYPO3 Backend
 
     Debug the parsed and combined TypoScript
