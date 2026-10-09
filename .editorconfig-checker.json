@@ -4,6 +4,7 @@
     "^var/",
     "^config/",
     "^Build/Screenshots/node_modules/",
+    "^Documentation-GENERATED-temp/",
     "\\.rst$",
     "\\.rst\\.txt$",
     "\\.diff$",
