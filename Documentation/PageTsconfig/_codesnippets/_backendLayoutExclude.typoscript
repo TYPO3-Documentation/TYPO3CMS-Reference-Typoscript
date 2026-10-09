@@ -1,0 +1,2 @@
+# Exclude two backend layouts from drop down selector
+options.backendLayout.exclude = 1,2

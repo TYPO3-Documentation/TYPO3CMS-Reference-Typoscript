@@ -39,18 +39,15 @@ backendLayout.exclude
 Example: Exclude two backend layouts from drop down selector
 ------------------------------------------------------------
 
-..  figure:: /Images/ManualScreenshots/List/BackendLayoutID.png
+..  figure:: /Images/GeneratedScreenshots/List/BackendLayoutID.png
     :alt: Two backend layout records shown in Content Records module
 
     Before: Two backend layout records shown in :guilabel:`Content > Records` module
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_backendLayoutExclude.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-    # Exclude two backend layouts from drop down selector
-    options.backendLayout.exclude = 1,2
-
-..  figure:: /Images/ManualScreenshots/List/BackendLayoutsExcluded.png
+..  figure:: /Images/GeneratedScreenshots/List/BackendLayoutsExcluded.png
     :alt: Drop down without backend layouts
 
     After: Drop down without backend layouts
