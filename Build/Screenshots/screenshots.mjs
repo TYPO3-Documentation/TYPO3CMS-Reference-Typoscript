@@ -26,7 +26,8 @@ const {
   root, backendLayouts, allowedNewTables, altLabels, newRecordHideInside, newContentElementGroup,
   invalidValue, invalidValueLabel, invalidValueDisabled, singleTableView, backendLayoutExclude, description,
   headerContent, csvExport, exportButtons, noExportButtons, templatePage,
-  staticIncludes, staticIncludesRecord, syntaxError, setsRoot, copies, copyOriginal, labels, labelLast, site,
+  staticIncludes, staticIncludesRecord, syntaxError, permissionsEverybody, permissionsGroup,
+  permissionsGroupid, permissionsUserid, testUser, layoutPage, textmedia, rootTemplate, setsRoot, copies, copyOriginal, labels, labelLast, site,
 } =
   JSON.parse(readFileSync('../../var/screenshot-records.json', 'utf8'));
 
@@ -57,6 +58,19 @@ const openPanel = async (frame, id) => {
     await frame.page().waitForTimeout(500);
   }
 };
+
+// The permissions of a page and its subpages, with the page "Community"
+// that the example created marked
+const permissionsView = (id) => ({
+  // Wide, so that the table fits next to the page tree
+  width: 1600,
+  url: moduleUrl('users/permissions', id),
+  prepare: async (frame) => {
+    await frame.locator('tr:has-text("Community")').first()
+      .evaluate((row) => { row.style.outline = '3px solid #ff8700'; row.style.outlineOffset = '-3px'; });
+  },
+  element: '#typo3-permissionList',
+});
 
 // A page in the page tree, which is outside of the module frame
 const node = (uid) => `.node[data-id="${uid}"]`;
@@ -313,6 +327,75 @@ const screenshots = {
     url: moduleUrl('web/typoscript/analyzer', syntaxError),
     window: true,
     until: '#template-analyzer-setup-errors-body',
+  },
+
+  'Access/PermissionsEverybody': permissionsView(permissionsEverybody),
+  'Access/PermissionsGroup': permissionsView(permissionsGroup),
+  'Access/PermissionsGroupid': permissionsView(permissionsGroupid),
+  'Access/PermissionsUserid': permissionsView(permissionsUserid),
+
+  'BackendLayouts/PageModule': {
+    url: moduleUrl('web/layout', layoutPage),
+    window: true,
+    until: '.t3-grid-container',
+  },
+  'BackendLayouts/PageProperties': {
+    url: editUrl('pages', layoutPage),
+    tab: 'Appearance',
+    from: field('backend_layout'),
+    to: field('backend_layout_next_level'),
+  },
+  'Info/PageTsModWebInfoFieldDefinitions': {
+    url: moduleUrl('web/info/overview', root),
+    prepare: async (frame) => {
+      // A screenshot cannot show the native list of a select, so the select
+      // of the field sets shows all its items as a list box instead
+      await frame.locator('select#pages').evaluate((select) => {
+        select.size = select.options.length;
+      });
+    },
+    from: 'label[for="pages"]',
+    to: 'select#pages',
+  },
+  'TypoScriptModule/RootlevelFlag': {
+    url: editUrl('sys_template', rootTemplate),
+    tab: 'Advanced Options',
+    from: field('clear'),
+    to: field('root'),
+  },
+  'Fluidtemplate/ImageOrientation': {
+    url: editUrl('tt_content', textmedia),
+    tab: 'Media',
+    from: '.form-section-headline:text-is("Gallery Settings")',
+    to: field('imagecols'),
+  },
+  'Fluidtemplate/MediaHeight': {
+    url: editUrl('tt_content', textmedia),
+    tab: 'Media',
+    from: '.form-section-headline:text-is("Media Adjustments")',
+    to: field('imageborder'),
+  },
+  'BackendUsers/TSconfigUserInput': {
+    url: editUrl('be_users', testUser),
+    tab: 'Options',
+    element: field('TSconfig'),
+  },
+  'Configuration/UserTSconfigOverview': {
+    // Short, the tree of the administrator is long
+    height: 700,
+    url: `${baseUrl}/typo3/module/system/config?tree=beUserTsConfig`,
+    prepare: async (frame) => {
+      await frame.locator('li:has(> .treelist-group .treelist-label:text-is("options.")) > typo3-backend-tree-node-toggle[aria-expanded="false"]')
+        .first().click();
+    },
+    window: true,
+    until: '.t3js-collapse-states-search-tree',
+  },
+  'UserSettings/UserSettings': {
+    url: `${baseUrl}/typo3/module/user/setup`,
+    tab: 'Personalization',
+    window: true,
+    until: ':nth-match(.form-group:visible, 3)',
   },
 
 };

@@ -13,7 +13,7 @@ TypoScript, the Fluid template for a webpage is chosen depending on which backen
 layout a page has. (The TypoScript :confval:`data:pagelayout <t3tsref:data-pagelayout>`
 function retrieves the backend layout).
 
-..  figure:: /Images/ManualScreenshots/BackendLayouts/PageModule.png
+..  figure:: /Images/GeneratedScreenshots/BackendLayouts/PageModule.png
 
     The :guilabel:`Content > Layout` module with a backend layout that has 3 content areas.
 
@@ -45,7 +45,7 @@ BackendLayouts.[backendLayout]
         The title of a backend layout. It will be displayed in the page
         properties in the backend.
 
-        ..  figure:: /Images/ManualScreenshots/BackendLayouts/PageProperties.png
+        ..  figure:: /Images/GeneratedScreenshots/BackendLayouts/PageProperties.png
             :caption: Choose the backend layout in the page properties
 
     ..  rubric:: icon

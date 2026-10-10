@@ -169,6 +169,74 @@ foreach (['invalidValue', 'invalidValueLabel', 'invalidValueDisabled'] as $key) 
     $connection->update('pages', ['doktype' => 77], ['uid' => $uids[$key]]);
 }
 
+// The permission examples: on a page of its own, two pages are created with
+// the default permissions, then "Community" with the snippet in the TSconfig
+// of the page above. The group and the user the snippets name by uid exist
+// under other uids here.
+$dataHandler = $process(['be_groups' => [
+    'NEWeditors' => ['pid' => 0, 'title' => 'Editors'],
+    'NEWtestGroup' => ['pid' => 0, 'title' => 'test_group'],
+]]);
+$testGroup = $dataHandler->substNEWwithIDs['NEWtestGroup'];
+$dataHandler = $process(['be_users' => ['NEWtest' => [
+    'pid' => 0,
+    'username' => 'test',
+    'password' => 'Screenshots-' . bin2hex(random_bytes(8)) . '!X',
+    'usergroup' => (string)$dataHandler->substNEWwithIDs['NEWeditors'],
+    // The example of importing user TSconfig from a site package
+    'TSconfig' => "@import 'EXT:my_sitepackage/Configuration/TsConfig/User/my_editor.tsconfig'\n",
+]]]);
+$testUser = $dataHandler->substNEWwithIDs['NEWtest'];
+$uids['testUser'] = $testUser;
+$permissions = [
+    'permissionsEverybody' => ['everybody', 'PageTsconfig/_codesnippets/_everybody.typoscript'],
+    'permissionsGroup' => ['group', 'PageTsconfig/_codesnippets/_group.typoscript'],
+    'permissionsGroupid' => ['groupid', 'PageTsconfig/_codesnippets/_groupid.typoscript'],
+    'permissionsUserid' => ['userid', 'PageTsconfig/_codesnippets/_userid.typoscript'],
+];
+foreach ($permissions as $key => [$property, $path]) {
+    $dataHandler = $process(['pages' => [
+        'NEWpermissions' => ['pid' => 1, 'title' => 'Permissions: ' . $property, 'hidden' => 0],
+    ]]);
+    $uids[$key] = $dataHandler->substNEWwithIDs['NEWpermissions'];
+    foreach (['Page 1', 'Page 2'] as $title) {
+        $process(['pages' => ['NEWpage' => ['pid' => $uids[$key], 'title' => $title, 'hidden' => 0]]]);
+    }
+    $tsconfig = str_replace(
+        ['groupid = 3', 'userid = 2'],
+        ['groupid = ' . $testGroup, 'userid = ' . $testUser],
+        $snippet($path)
+    );
+    $process(['pages' => [$uids[$key] => ['TSconfig' => $tsconfig]]]);
+    GeneralUtility::makeInstance(CacheManager::class)->getCache('runtime')->flush();
+    $process(['pages' => ['NEWcommunity' => ['pid' => $uids[$key], 'title' => 'Community', 'hidden' => 0]]]);
+}
+
+// A backend layout with three content areas in two rows, as in the site
+// package tutorial, in the page TSconfig of a page that uses it. Only this
+// page offers it, so the exclude example still excludes every layout.
+$dataHandler = $process(['pages' => ['NEWlayoutPage' => [
+    'pid' => 1,
+    'title' => 'Page with backend layout',
+    'hidden' => 0,
+    'TSconfig' => "mod.web_layout.BackendLayouts.stageAndColumns {\n"
+        . "  title = Stage and two columns\n"
+        . "  config.backend_layout {\n    colCount = 2\n    rowCount = 2\n    rows {\n"
+        . "      1.columns.1 {\n        name = Stage\n        colPos = 1\n        colspan = 2\n      }\n"
+        . "      2.columns {\n        1 {\n          name = Normal\n          colPos = 0\n        }\n"
+        . "        2 {\n          name = Right\n          colPos = 2\n        }\n      }\n    }\n  }\n}\n",
+]]]);
+$uids['layoutPage'] = $dataHandler->substNEWwithIDs['NEWlayoutPage'];
+// The layout is only offered once the page has the TSconfig
+GeneralUtility::makeInstance(CacheManager::class)->getCache('runtime')->flush();
+$process(['pages' => [$uids['layoutPage'] => ['backend_layout' => 'pagets__stageAndColumns']]]);
+$dataHandler = $process(['tt_content' => [
+    'NEWstage' => ['pid' => $uids['layoutPage'], 'colPos' => 1, 'CType' => 'header', 'header' => 'Welcome', 'hidden' => 0],
+    'NEWnormal' => ['pid' => $uids['layoutPage'], 'colPos' => 0, 'CType' => 'textmedia', 'header' => 'About us', 'bodytext' => '<p>Some text next to an image.</p>', 'hidden' => 0],
+    'NEWright' => ['pid' => $uids['layoutPage'], 'colPos' => 2, 'CType' => 'menu_subpages', 'header' => 'Subpages', 'hidden' => 0],
+]]);
+$uids['textmedia'] = $dataHandler->substNEWwithIDs['NEWnormal'];
+
 // The TypoScript module examples: a TypoScript record with the constants
 // example of the manual, one with the static includes of Fluid Styled
 // Content, which bring constants for the constant editor, and one with a
@@ -215,7 +283,7 @@ $uids['setsRoot'] = $dataHandler->substNEWwithIDs['NEWsetsRoot'];
 // The TypoScript of the root page, replacing the one of "typo3 setup"
 $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('sys_template');
 $connection->delete('sys_template', ['pid' => 1]);
-$process(['sys_template' => ['NEWtemplate' => [
+$dataHandler = $process(['sys_template' => ['NEWtemplate' => [
     'pid' => 1,
     'title' => 'Site package',
     'root' => 1,
@@ -223,6 +291,7 @@ $process(['sys_template' => ['NEWtemplate' => [
     'constants' => $fixture('constants.typoscript'),
     'config' => $fixture('setup.typoscript'),
 ]]]);
+$uids['rootTemplate'] = $dataHandler->substNEWwithIDs['NEWtemplate'];
 
 // Without site sets and the TypoScript file that "typo3 setup" writes next
 // to the site configuration, the TypoScript of the root page comes from the

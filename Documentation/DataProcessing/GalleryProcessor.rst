@@ -76,7 +76,7 @@ Options:
         `imageorient` (:guilabel:`Position and Alignment`) if used with content
         elements.
 
-        ..  figure:: /Images/ManualScreenshots/Fluidtemplate/ImageOrientation.png
+        ..  figure:: /Images/GeneratedScreenshots/Fluidtemplate/ImageOrientation.png
             :alt: Media orientation Palette
             :zoom: lightbox
             :alt: Screenshot of the image settings as found in the TYPO3 backend when editing an image
@@ -121,7 +121,7 @@ Options:
         `imagewidth` (:guilabel:`Width of each element (px)`) if used with
         content elements.
 
-        ..  figure:: /Images/ManualScreenshots/Fluidtemplate/MediaHeight.png
+        ..  figure:: /Images/GeneratedScreenshots/Fluidtemplate/MediaHeight.png
             :alt: Media height and width in the content element Text and Images
             :zoom: lightbox
             :alt: Screenshots of Media Adjustments in the TYPO3 backend
