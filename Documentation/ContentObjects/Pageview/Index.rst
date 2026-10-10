@@ -94,6 +94,35 @@ Additional variables can be defined with property
     :display: table
     :type:
 
+    ..  rubric:: content
+
+    ..  confval:: content
+        :name: pageview-data-content
+        :type: :php:`\TYPO3\CMS\Core\Page\ContentAreaCollection`
+        :Example: :ref:`Example: Render the content elements of a column <cobj-pageview-data-content-example>`
+
+        ..  versionadded:: 14.2
+            :changelog: feature-104974-1726401724
+
+        The content areas of the current
+        :ref:`backend layout <t3coreapi:be-layout>`, each with its content
+        elements. The variable name can be changed with
+        :confval:`contentAs <pageview-contentAs>`.
+
+        A content area is addressed by the
+        :confval:`identifier <mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-identifier>`
+        of its column, for example :fluid:`{content.main}`, and provides:
+
+        *   `identifier`, `name`, `colPos`, and `slideMode` as defined in the
+            backend layout
+        *   `allowedContentTypes` and `disallowedContentTypes`
+        *   `configuration`, the complete configuration of the column
+        *   `records`, the content elements as
+            :ref:`Record objects <t3coreapi:record_objects>`
+
+        The content elements of an area are only loaded when the area is
+        accessed.
+
     ..  rubric:: language
 
     ..  confval:: language
@@ -184,6 +213,18 @@ Example: Link to the root page of the current site
     :language: html
     :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
 
+..  _cobj-pageview-data-content-example:
+
+Example: Render the content elements of a column
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The backend layout of the page has a column with the identifier `main`. The
+`f:render.contentArea <https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render-contentarea>`_
+ViewHelper renders all its content elements:
+
+..  literalinclude:: _includes/_RenderContentArea.fluid.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
+
 ..  _cobj-pageview-properties:
 
 Properties
@@ -203,6 +244,29 @@ Properties
 
         See :ref:`cache function description <cache>` for details.
 
+    ..  rubric:: contentAs
+
+    ..  confval:: contentAs
+        :name: pageview-contentAs
+        :type: :ref:`string <data-type-string>`
+        :default: content
+
+        ..  versionadded:: 14.2
+            :changelog: feature-104974-1726401724
+
+        Name of the variable that holds the
+        :confval:`content areas <pageview-data-content>` of the page.
+
+        If :confval:`variables <pageview-variables>` defines a variable
+        `content`, set :typoscript:`contentAs` to another name, otherwise the
+        rendering fails with an exception. A variable with the name set here is
+        replaced by the content areas.
+
+        Data processors run after the content areas have been added. A
+        processor that writes to the same variable name replaces them, for
+        example the :ref:`page-content data processor <pagecontentfetchingprocessor>`
+        with its default :confval:`as <PageContentFetchingProcessor-as>`.
+
     ..  rubric:: dataProcessing.[key]
 
     ..  confval:: dataProcessing.[key]
@@ -214,9 +278,8 @@ Properties
         sub-property :typoscript:`options` can be used to pass parameters to the
         processor class.
 
-        It is recommended to use the  :ref:`PageContentFetchingProcessor <pagecontentfetchingprocessor>`
-        to fetch the content elements from the page, respecting the
-        :ref:`backend layout <t3coreapi:be-layout>`.
+        The content elements of the page need no data processor: they are
+        available in the variable :confval:`content <pageview-data-content>`.
 
     ..  rubric:: paths.[priority]
 
