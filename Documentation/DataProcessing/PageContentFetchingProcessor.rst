@@ -17,6 +17,11 @@ the Fluid template. You can use the
 :ref:`f:cObject ViewHelper <t3viewhelper:typo3-fluid-cobject>` to
 display the content elements.
 
+..  tip::
+    Since TYPO3 14.2, :ref:`PAGEVIEW <cobj-pageview>` provides the content
+    elements of the page without this data processor, see
+    :confval:`content <pageview-data-content>`.
+
 ..  contents:: Table of contents
 
 ..  _pagecontentfetchingprocessor-options:
