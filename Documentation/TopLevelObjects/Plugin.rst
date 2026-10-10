@@ -281,8 +281,8 @@ plugins.
         When this configuration option is set to `1` (true), instead the default
         "Page not Found" page will be shown instead (with a 404 HTTP header by default).
 
-        The configuration option can be either set on the global `config.tx_extbase`
-        scope, or also plugin-specific via
+        The configuration option can be either set on the global
+        :typoscript:`config.tx_extbase` scope, or also plugin-specific via
         `plugin.tx_myextension.mvc.showPageNotFoundIfTargetNotFoundException` /
         `plugin.tx_myextension_pluginName.mvc.showPageNotFoundIfTargetNotFoundException`.
 
@@ -302,8 +302,8 @@ plugins.
         When this configuration option is set to `1` (true), instead the default
         "Page not Found" page will be shown instead (with a 404 HTTP header by default).
 
-        The configuration option can be either set on the global `config.tx_extbase`
-        scope, or also plugin-specific via
+        The configuration option can be either set on the global
+        :typoscript:`config.tx_extbase` scope, or also plugin-specific via
         `plugin.tx_myextension.mvc.showPageNotFoundIfRequiredArgumentIsMissingException` /
         `plugin.tx_myextension_pluginName.mvc.showPageNotFoundIfRequiredArgumentIsMissingException`.
 
