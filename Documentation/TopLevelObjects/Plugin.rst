@@ -414,7 +414,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].persistence.enableAutomaticCacheClearing <plugin-persistence-enableautomaticcacheclearing>`
 
 ..  literalinclude:: _codesnippets/_enableAutomaticCacheClearing.typoscript
-    :caption: EXT:my_extension/Configuration/Sets/MyExtension/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-plugin-persistence-recursive-example:
 ..  _setup-plugin-persistence-storagepid-example:
@@ -429,7 +429,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].persistence.recursive <plugin-persistence-recursive>`
 
 ..  literalinclude:: _codesnippets/_newRecordStoragePid.typoscript
-    :caption: EXT:my_extension/Configuration/Sets/MyExtension/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  _extbase-typoscript-configuration-view-example:
 
@@ -447,7 +447,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].view.templateRootPaths.[array] <plugin-view-templaterootpaths>`
 
 ..  literalinclude:: _codesnippets/_view.typoscript
-    :caption: EXT:my_extension/Configuration/Sets/MyExtension/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  _extbase-typoscript-configuration-mvc-example:
 
@@ -463,7 +463,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].mvc.callDefaultActionIfActionCantBeResolved <plugin-mvc-calldefaultactionifactioncantberesolved>`
 
 ..  literalinclude:: _codesnippets/_callDefaultActionIfActionCantBeResolved.typoscript
-    :caption: EXT:my_extension/Configuration/Sets/MyExtension/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-plugin-mvc-throwpagenotfoundexceptionifactioncantberesolved-example:
 
@@ -474,7 +474,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].mvc.throwPageNotFoundExceptionIfActionCantBeResolved <plugin-mvc-throwpagenotfoundexceptionifactioncantberesolved>`
 
 ..  literalinclude:: _codesnippets/_throwPageNotFoundExceptionIfActionCantBeResolved.typoscript
-    :caption: EXT:my_extension/Configuration/Sets/MyExtension/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _extbase-format-examples:
@@ -491,7 +491,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].format <plugin-format>`
 
 ..  literalinclude:: _codesnippets/_format.typoscript
-    :caption: EXT:my_extension/Configuration/Sets/MyExtension/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  _extbase-localization-examples:
 
