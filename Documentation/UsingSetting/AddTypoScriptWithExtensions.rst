@@ -25,7 +25,7 @@ Provide TypoScript in your extension or site package
 
 TypoScript files **must** have the ending :file:`.typoscript`.
 
-They are located in :path:`Configuration/Sets/MySet` within your
+They are located in :path:`Configuration/Sets/Main` within your
 extension. Read more about how to
 :ref:`provide the TypoScript as set for TYPO3 v13 and above <extdev-add-typoscript-sets>`
 and :ref:`how to provide TypoScript for both TYPO3 v13 and v12 <extdev-add-typoscript-sets-v12>`.
@@ -48,13 +48,13 @@ The file structure of the extension could, for example look like this:
 
         *   Sets
 
-            *   MyExtension
+            *   Main
 
                 *   :ref:`config.yaml <extdev-add-typoscript-sets-main>`
                 *   :ref:`constants.typoscript <extdev-add-typoscript-sets-typoscript>`
                 *   :ref:`setup.typoscript <extdev-add-typoscript-sets-typoscript>`
 
-            *   MyExtensionWithACoolFeature
+            *   WithACoolFeature
 
                 *   :ref:`config.yaml <extdev-add-typoscript-sets-feature>`
                 *   :ref:`setup.typoscript <extdev-add-typoscript-sets-typoscript>`
@@ -66,9 +66,9 @@ The file structure of the extension could, for example look like this:
     *   composer.json
     *   ...
 
-With the extension's TypoScript residing in :file:`EXT:my_extension/Configuration/Sets/MyExtension`
+With the extension's TypoScript residing in :file:`EXT:my_extension/Configuration/Sets/Main`
 and the TypoScript for some optional feature in
-:file:`EXT:my_extension/Configuration/Sets/MyExtensionWithACoolFeature`. Let us assume, that the
+:file:`EXT:my_extension/Configuration/Sets/WithACoolFeature`. Let us assume, that the
 optional feature depends on the main TypoScript.
 
 The sets can now be defined for TYPO3 v13 as follows:
@@ -80,7 +80,7 @@ The main set of the extension
 
 ..  literalinclude:: _Sets/_MyExtension_config.yaml
     :language: yaml
-    :caption: EXT:my_extension/Configuration/Sets/MyExtension/config.yaml
+    :caption: EXT:my_extension/Configuration/Sets/Main/config.yaml
 
 
 ..  _extdev-add-typoscript-sets-feature:
@@ -90,7 +90,7 @@ The sub set for an optional feature
 
 ..  literalinclude:: _Sets/_MyExtensionWithACoolFeature_config.yaml
     :language: yaml
-    :caption: EXT:my_extension/Configuration/Sets/MyExtensionWithACoolFeature/config.yaml
+    :caption: EXT:my_extension/Configuration/Sets/WithACoolFeature/config.yaml
 
 
 ..  _extdev-add-typoscript-sets-override:
@@ -104,13 +104,13 @@ have to override the frontend TypoScript of another site set your site set
 should depend on the other site set:
 
 ..  literalinclude:: _Sets/_OverridingSet_config.yaml
-    :caption: EXT:my_sitepackage/Configuration/Sets/MySitePackage/config.yaml
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/config.yaml
 
 Your extension can then safely override frontend TypoScript of the `some_extension`,
 for example:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_sitepackage/Configuration/Sets/MySitePackage/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     plugin.some_extension_pi1.settings.someSetting = Special setting
 
@@ -163,7 +163,7 @@ until now:
 
         *   Sets
 
-            *   MySet
+            *   Main
 
                 *   config.yaml
                 *   constants.typoscript
@@ -176,12 +176,12 @@ until now:
             *   setup.typoscript
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/Sets/MySet/constants.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/constants.typoscript
 
     @import 'EXT:my_extension/Configuration/TypoScript/constants.typoscript'
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/Sets/MySet/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     @import 'EXT:my_extension/Configuration/TypoScript/setup.typoscript'
 
@@ -219,7 +219,7 @@ set is needed:
 
         *   Sets
 
-            *   MyMainSet
+            *   Main
 
                 *   config.yaml
                 *   constants.typoscript

@@ -102,7 +102,7 @@ Example: load page TSconfig from the site set and the site
 Let us assume, you have a site set defined in your extension:
 
 ..  code-block:: yaml
-    :caption: EXT:my_extension/Configuration/Sets/MySet/config.yaml
+    :caption: EXT:my_extension/Configuration/Sets/Main/config.yaml
 
     name: my-vendor/my-set
     label: My Set
@@ -128,7 +128,7 @@ of all sites that depend on this set:
 
 
 ..  code-block:: tsconfig
-    :caption: EXT:my_extension/Configuration/Sets/MySet/page.tsconfig
+    :caption: EXT:my_extension/Configuration/Sets/Main/page.tsconfig
 
     # This tsconfig will be loaded for pages in all sites that depend on set 'my-vendor/my-set'
     # [...]
