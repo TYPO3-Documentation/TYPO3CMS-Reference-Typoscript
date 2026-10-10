@@ -7,7 +7,7 @@
 Constants
 =========
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantEditor.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/ConstantEditor.png
     :alt: Screenshot of the TYPO3 Backend showing the constant editor
 
     The :ref:`Constant Editor <constant-editor>` in the TYPO3 backend
@@ -103,7 +103,7 @@ defined in the constants field or a file called :file:`constants.typoscript`:
 ..  literalinclude:: _codesnippets/_typoscriptSyntaxUsingConstants.typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantAndSetupRecord.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/ConstantAndSetupRecord.png
     :alt: Screenshot of the TypoScript record editor showing the Constants and Setup fields
 
     The fields :guilabel:`Constants` and :guilabel:`Setup` in the TypoScript backend record
@@ -112,7 +112,7 @@ You can use the sub module :guilabel:`Sites > TypoScript > Active TypoScript`
 to display which values are assigned to constants. The constant key is displayed in red, the
 replacement in green:
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantsInActiveTypoScript.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/ConstantsInActiveTypoScript.png
     :alt: Screenshot of the Active TypoScript with constants substituted
 
 ..  note::

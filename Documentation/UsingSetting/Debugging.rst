@@ -22,7 +22,7 @@ Analyzing defined constants
 The backend submodule :guilabel:`Sites > TypoScript > Active TypoScript`
 provides a tree view to all defined TypoScript Constants on the currently active page.
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantsDisplayActiveTypoScript.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/ConstantsDisplayActiveTypoScript.png
     :alt: A Screenshot showing the "Constants" section of the "Active TypoScript" submodule.
 
     Analyzing defined TypoScript Constants in the :guilabel:`Active TypoScript` submodule.
@@ -36,7 +36,7 @@ Finding errors
 There are no tools that will tell whether the given TypoScript code is 100%
 correct. The :guilabel:`Included TypoScript` will warn about syntax errors though:
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/IncludedTypoScriptWarnings.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/IncludedTypoScriptWarnings.png
     :alt: The submodule 'Included TypoScript' showing a syntax warning
 
 In the frontend, the :composer:`typo3/cms-adminpanel` is another possibility

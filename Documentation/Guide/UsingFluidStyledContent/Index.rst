@@ -21,7 +21,7 @@ You should see a list of all used TypoScript records and files and how they poss
 include one another. All TypoScript is evaluated by TYPO3 CMS from top to
 bottom.
 
-..  figure:: /Images/ManualScreenshots/IncludedTypoScript.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/IncludedTypoScript.png
     :alt: Screenshot of the module Sites > TypoScript > Included TypoScript
 
     Click on the :guilabel:`{ }`,  "show code", button to see the code

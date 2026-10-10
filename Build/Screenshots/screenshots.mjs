@@ -25,7 +25,8 @@ const field = (name) => `.form-group:has(code:text-is("[${name}]"))`;
 const {
   root, backendLayouts, allowedNewTables, altLabels, newRecordHideInside, newContentElementGroup,
   invalidValue, invalidValueLabel, invalidValueDisabled, singleTableView, backendLayoutExclude, description,
-  headerContent, csvExport, exportButtons, noExportButtons, copies, copyOriginal, labels, labelLast, site,
+  headerContent, csvExport, exportButtons, noExportButtons, templatePage,
+  staticIncludes, staticIncludesRecord, syntaxError, setsRoot, copies, copyOriginal, labels, labelLast, site,
 } =
   JSON.parse(readFileSync('../../var/screenshot-records.json', 'utf8'));
 
@@ -46,6 +47,16 @@ const exportButtonView = (id) => ({
   window: true,
   until: '.recordlist',
 });
+
+// Opens a panel of the Active TypoScript module. The module remembers which
+// panels are open, so a panel an earlier screenshot opened is open already.
+const openPanel = async (frame, id) => {
+  const closed = frame.locator(`#${id}[aria-expanded="false"]`);
+  if (await closed.count() > 0) {
+    await closed.click();
+    await frame.page().waitForTimeout(500);
+  }
+};
 
 // A page in the page tree, which is outside of the module frame
 const node = (uid) => `.node[data-id="${uid}"]`;
@@ -87,8 +98,7 @@ const screenshots = {
       await search.press('Enter');
       await frame.waitForLoadState('networkidle');
       // The search opens the matching nodes, but not the panel around them
-      await frame.locator('#panel-tree-heading-setup').click();
-      await frame.page().waitForTimeout(500);
+      await openPanel(frame, 'panel-tree-heading-setup');
       // A focused search field would show its focus ring
       await frame.locator('h1').click();
     },
@@ -220,6 +230,91 @@ const screenshots = {
   'WebList/WithExportButtons': exportButtonView(exportButtons),
   'WebList/NoExportButtons': exportButtonView(noExportButtons),
 
+  'TypoScriptModule/TypoScriptRecordsOverview': {
+    url: moduleUrl('web/typoscript/records-overview', root),
+    window: true,
+    until: 'table',
+  },
+  'TypoScriptModule/EditTypoScriptRecord': {
+    url: moduleUrl('web/typoscript/overview', templatePage),
+    window: true,
+    until: 'a:has-text("Edit the whole TypoScript record")',
+  },
+  // Opened from the TypoScript module, as the documentation describes it, so
+  // the menu shows where the form comes from
+  'TypoScriptModule/ConstantAndSetupRecord': {
+    url: moduleUrl('web/typoscript/overview', templatePage),
+    prepare: async (frame) => {
+      await frame.getByRole('link', { name: 'Edit the whole TypoScript record' }).click();
+      await frame.locator(field('config')).waitFor();
+    },
+    window: true,
+    until: field('config'),
+  },
+  'TypoScriptModule/IncludeTypoScriptSet': {
+    url: editUrl('sys_template', staticIncludesRecord),
+    tab: 'Advanced Options',
+    element: field('include_static_file'),
+  },
+  'TypoScriptModule/IncludeTypoScriptRecords': {
+    url: editUrl('sys_template', staticIncludesRecord),
+    tab: 'Advanced Options',
+    element: field('basedOn'),
+  },
+  'TypoScriptModule/ConstantEditor': {
+    url: moduleUrl('web/typoscript/constant-editor', staticIncludes),
+    window: true,
+    // The first constant is enough to show what the editor is like
+    until: ':nth-match(.input-group:visible, 1)',
+  },
+  // The search opens the tree down to the matching key, but not the panel
+  // around it
+  'TypoScriptModule/ConstantsInActiveTypoScript': {
+    url: moduleUrl('typoscript/active', templatePage),
+    prepare: async (frame) => {
+      const search = frame.getByRole('searchbox');
+      await search.fill('bodyTag');
+      await search.press('Enter');
+      await frame.waitForLoadState('networkidle');
+      await openPanel(frame, 'panel-tree-heading-setup');
+      // A focused search field would show its focus ring
+      await frame.locator('h1').click();
+    },
+    window: true,
+    until: '.treelist-group:has-text("bodyTag")',
+  },
+  'TypoScriptModule/ConstantsDisplayActiveTypoScript': {
+    url: moduleUrl('typoscript/active', templatePage),
+    prepare: async (frame) => {
+      const search = frame.getByRole('searchbox');
+      await search.fill('toplogo');
+      await search.press('Enter');
+      await frame.waitForLoadState('networkidle');
+      await openPanel(frame, 'panel-tree-heading-constant');
+      await frame.locator('h1').click();
+    },
+    window: true,
+    until: '#typoscript-active-constant-ast-body .treelist-group:has-text("toplogo")',
+  },
+  'TypoScriptModule/IncludedTypoScript': {
+    url: moduleUrl('web/typoscript/analyzer', setsRoot),
+    prepare: async (frame) => {
+      // Opens the site and its sets, down to the files of each set
+      for (const label of ['[site:sets]', 'site:sets:sets']) {
+        await frame.locator(`#template-analyzer-setup-tree-body li:has(> .row :text("${label}")) > typo3-backend-tree-node-toggle[aria-expanded="false"]`)
+          .first().click();
+        await frame.page().waitForTimeout(300);
+      }
+    },
+    window: true,
+    until: '#template-analyzer-setup-tree-body .treelist-group:has-text("set:typo3/fluid-styled-content-css")',
+  },
+  'TypoScriptModule/IncludedTypoScriptWarnings': {
+    url: moduleUrl('web/typoscript/analyzer', syntaxError),
+    window: true,
+    until: '#template-analyzer-setup-errors-body',
+  },
+
 };
 
 // Hides the page tree and collapses the groups of the module menu, except
@@ -235,6 +330,11 @@ const collapseNavigation = async () => {
   );
   while (await groups.count() > 0) {
     await groups.first().click();
+  }
+  // The group of the module stays as an earlier screenshot left it
+  const active = page.locator('button[data-modulemenu-collapsible="true"][aria-expanded="false"].modulemenu-action-active');
+  if (await active.count() > 0) {
+    await active.first().click();
   }
   // The clicked buttons would look selected
   await page.evaluate(() => document.activeElement?.blur());
