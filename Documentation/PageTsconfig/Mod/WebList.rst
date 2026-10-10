@@ -545,28 +545,40 @@ noExportRecordsLinks
     :type:  boolean
     :default: 0
 
-    If set, the :guilabel:`Download` button is hidden
-    in the :guilabel:`Content > Records` module.
+    If set, the :guilabel:`Export` button of the system extension
+    Import/Export (EXT:impexp) is hidden in the :guilabel:`Content > Records`
+    module. The module shows this button only in single-table view, when
+    one table is listed alone.
 
     This option is important, for example, to disable batch
-    download of sensitive data via t3d exports.
+    export of sensitive data via t3d files.
 
-    ..  include:: /Images/ManualScreenshots/WebList/WithExportButtons.rst.txt
+    The :guilabel:`Download` button of each table is not affected. Hide it
+    with :confval:`mod-web-list-displayRecordDownload`.
 
-    ..  include:: /Images/ManualScreenshots/WebList/NoExportButtons.rst.txt
+    ..  figure:: /Images/GeneratedScreenshots/WebList/WithExportButtons.png
+        :alt: The single-table view of the page content with the Export button next to Edit page properties
+
+        The single-table view of the :guilabel:`Content > Records` module with
+        the :guilabel:`Export` button
+
+    ..  figure:: /Images/GeneratedScreenshots/WebList/NoExportButtons.png
+        :alt: The single-table view of the page content without the Export button
+
+        The same view with `noExportRecordsLinks = 1`
 
     ..  note::
-        This option only hides the buttons in the :guilabel:`Content > Records`
+        This option only hides the button in the :guilabel:`Content > Records`
         module. Bulk export of data is still possible via the context menu of
         the page tree.
 
 ..  _pagetsconfigweblist-noexportrecordslinks-example:
 
-Example: Hide the "Download" and "Export" links
------------------------------------------------
+Example: Hide the "Export" button
+---------------------------------
 
 ..  literalinclude:: /CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.typoscript
-    :caption: EXT:examples/Configuration/TsConfig/Page/Mod/noExportRecordsLinks.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 ..  _pagetsconfigweblist-noviewwithdoktypes:
 
