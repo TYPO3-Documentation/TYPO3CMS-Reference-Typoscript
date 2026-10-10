@@ -13,7 +13,7 @@ Default values and override values for the :guilabel:`User Settings` module.
 
 The :guilabel:`User > User settings` module may only represent a subset of the options from the table below.
 
-..  figure:: /Images/ManualScreenshots/UserSettings/UserSettings.png
+..  figure:: /Images/GeneratedScreenshots/UserSettings/UserSettings.png
     :alt: Default values and overriding values in the "User > User settings" module
 
     Default values and overriding values in the :guilabel:`User > User settings` module

@@ -24,7 +24,7 @@ Importing the user TSconfig into a backend user or group
 #.  Open the record of the user or group. Go to
     :guilabel:`Options > TSconfig`.
 
-    ..  figure:: /Images/ManualScreenshots/BackendUsers/TSconfigUserInput.png
+    ..  figure:: /Images/GeneratedScreenshots/BackendUsers/TSconfigUserInput.png
         :alt: The TSconfig field in the Options tab of a backend user
         :class: with-shadow
 
@@ -88,7 +88,7 @@ using the :guilabel:`System > Configuration` backend module and choosing the
 action :guilabel:`$GLOBALS['BE_USER']->getTSConfig() (User TSconfig)`. However
 this module can only be accessed by admins.
 
-..  figure:: /Images/ManualScreenshots/Configuration/UserTSconfigOverview.png
+..  figure:: /Images/GeneratedScreenshots/Configuration/UserTSconfigOverview.png
     :alt: Viewing user TSconfig using the Configuration module
     :class: with-shadow
 
