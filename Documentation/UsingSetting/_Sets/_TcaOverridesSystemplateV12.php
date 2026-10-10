@@ -12,12 +12,12 @@ call_user_func(function () {
   if ($versionInformation->getMajorVersion() < 13) {
     ExtensionManagementUtility::addStaticFile(
       $extensionKey,
-      'Configuration/Sets/MyExtension',
+      'Configuration/Sets/Main',
       'My Extension, main TypoScript, always include',
     );
     ExtensionManagementUtility::addStaticFile(
       $extensionKey,
-      'Configuration/Sets/MyExtensionWithACoolFeature',
+      'Configuration/Sets/WithACoolFeature',
       'My Extension, Cool feature',
     );
   }

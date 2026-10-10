@@ -233,7 +233,7 @@ displayRecordDownload
     If this option is set, it takes precedence over the general option.
 
     ..  literalinclude:: _codesnippets/_displayRecordDownload.typoscript
-        :caption: EXT:my_sitepackage/Configuration/Sets/MySet/page.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/page.tsconfig
 
 
 ..  _pagetsconfigweblist-displaycolumnselector-example:
