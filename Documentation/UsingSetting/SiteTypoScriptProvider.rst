@@ -97,7 +97,7 @@ of :t3ext:`fluid_styled_content` and :t3ext:`felogin`:
 
 ..  literalinclude:: _Sets/_MySitepackage_config.yaml
     :language: yaml
-    :caption: EXT:my_sitepackage/Configuration/Sets/MySitepackage/config.yaml
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/config.yaml
 
 The set can be included as a dependency by other sets or a
 :ref:`site configuration <typoscript-site-sets-site-example>`.
@@ -106,12 +106,12 @@ The set can include further TypoScript constants or setup. It can use
 :typoscript:`@import` statements to import TypoScript from another location:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_sitepackage/Configuration/Sets/MySitepackage/constants.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript
 
     @import 'EXT:my_sitepackage/Configuration/TypoScript/Constants'
 
 ..  code-block:: typoscript
-    :caption: EXT:my_sitepackage/Configuration/Sets/MySitepackage/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     @import 'EXT:my_sitepackage/Configuration/TypoScript/Setup'
 
