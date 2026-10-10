@@ -1041,7 +1041,7 @@ Properties for parsing data
 
         Crops the content to a certain length.
 
-        You can define up to three parameters, where the third one is
+        You can define up to three parameters, where the second and third ones are
         optional. The syntax is:
         [number of characters to keep] \| [ellipsis] \| [keep whole words]
 
@@ -1052,8 +1052,8 @@ Properties for parsing data
 
         ellipsis (string): The symbols to be added replacing the part that was
         cropped. If the number of characters to keep is positive, the string will
-        be *prepended* with the ellipsis, if it is negative, the string will
-        be *appended* with the ellipsis.
+        be *appended* with the ellipsis, if it is negative, the string will
+        be *prepended* with the ellipsis.
 
         keep whole words (boolean): If set to 0 (default), the string is
         cropped after the defined number of characters. If set to 1,
@@ -1063,13 +1063,13 @@ Properties for parsing data
         ..  rubric:: Examples
 
         :typoscript:`20 | ...` => max 20 characters. If more, the value will be truncated
-        to the first 20 characters and prepended with "..."
+        to the first 20 characters and appended with "..."
 
         :typoscript:`-20 | ...` => max 20 characters. If more, the value will be truncated
-        to the last 20 characters and appended with "..."
+        to the last 20 characters and prepended with "..."
 
         :typoscript:`20 | ... | 1` => max 20 characters. If more, the value will be
-        truncated to the first 20 characters and prepended with "...". If
+        truncated to the first 20 characters and appended with "...". If
         the division is in the middle of a word, the rest of that word will be
         removed.
 
