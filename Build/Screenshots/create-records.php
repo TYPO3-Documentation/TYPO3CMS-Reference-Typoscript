@@ -169,6 +169,49 @@ foreach (['invalidValue', 'invalidValueLabel', 'invalidValueDisabled'] as $key) 
     $connection->update('pages', ['doktype' => 77], ['uid' => $uids[$key]]);
 }
 
+// The TypoScript module examples: a TypoScript record with the constants
+// example of the manual, one with the static includes of Fluid Styled
+// Content, which bring constants for the constant editor, and one with a
+// syntax error
+$dataHandler = $process(['pages' => [
+    'NEWtemplatePage' => ['pid' => 1, 'title' => 'TypoScript record', 'hidden' => 0],
+    'NEWstaticIncludes' => ['pid' => 1, 'title' => 'Static includes', 'hidden' => 0],
+    'NEWsyntaxError' => ['pid' => 1, 'title' => 'Syntax error', 'hidden' => 0],
+]]);
+$uids['templatePage'] = $dataHandler->substNEWwithIDs['NEWtemplatePage'];
+$uids['staticIncludes'] = $dataHandler->substNEWwithIDs['NEWstaticIncludes'];
+$uids['syntaxError'] = $dataHandler->substNEWwithIDs['NEWsyntaxError'];
+$dataHandler = $process(['sys_template' => [
+    'NEWtemplateRecord' => [
+        'pid' => $uids['templatePage'],
+        'title' => 'TypoScript record',
+        'constants' => $snippet('UsingSetting/_codesnippets/_typoscriptSyntaxUsingConstants.typoscript'),
+        'config' => $snippet('UsingSetting/_codesnippets/_example2.typoscript'),
+    ],
+    'NEWstaticIncludesRecord' => [
+        'pid' => $uids['staticIncludes'],
+        'title' => 'Static includes',
+        'include_static_file' => 'EXT:fluid_styled_content/Configuration/TypoScript/,EXT:fluid_styled_content/Configuration/TypoScript/Styling/',
+    ],
+    'NEWsyntaxErrorRecord' => [
+        'pid' => $uids['syntaxError'],
+        'title' => 'Syntax error',
+        'config' => $fixture('syntaxError.typoscript'),
+    ],
+]]);
+$uids['staticIncludesRecord'] = $dataHandler->substNEWwithIDs['NEWstaticIncludesRecord'];
+// Includes the record with the constants example as well, so the field of
+// included records is not empty
+$process(['sys_template' => [$uids['staticIncludesRecord'] => [
+    'basedOn' => (string)$dataHandler->substNEWwithIDs['NEWtemplateRecord'],
+]]]);
+
+// A second site, whose TypoScript comes from site sets instead of a record
+$dataHandler = $process(['pages' => [
+    'NEWsetsRoot' => ['pid' => 0, 'title' => 'Site with sets', 'is_siteroot' => 1, 'hidden' => 0],
+]]);
+$uids['setsRoot'] = $dataHandler->substNEWwithIDs['NEWsetsRoot'];
+
 // The TypoScript of the root page, replacing the one of "typo3 setup"
 $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('sys_template');
 $connection->delete('sys_template', ['pid' => 1]);
@@ -192,6 +235,12 @@ GeneralUtility::makeInstance(SiteWriter::class)->write($site->getIdentifier(), $
 foreach (['setup.typoscript', 'constants.typoscript'] as $file) {
     @unlink(Environment::getConfigPath() . '/sites/' . $site->getIdentifier() . '/' . $file);
 }
+// The second site takes the same configuration, with the sets of Fluid
+// Styled Content
+$configuration['rootPageId'] = $uids['setsRoot'];
+$configuration['base'] = 'http://localhost:8080/sets/';
+$configuration['dependencies'] = ['typo3/fluid-styled-content-css'];
+GeneralUtility::makeInstance(SiteWriter::class)->write('sets', $configuration);
 
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
 GeneralUtility::mkdir_deep(Environment::getVarPath());
