@@ -36,7 +36,7 @@ fieldDefinitions
     :guilabel:`Content > Status` module, by default ship with the entries
     "Basic settings", "Record overview", and "Cache and age".
 
-    ..  figure:: /Images/ManualScreenshots/Info/PageTsModWebInfoFieldDefinitions.png
+    ..  figure:: /Images/GeneratedScreenshots/Info/PageTsModWebInfoFieldDefinitions.png
         :alt: Default entries of Pagetree Overview
 
         Default entries of Pagetree Overview
