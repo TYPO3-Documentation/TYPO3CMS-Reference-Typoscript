@@ -91,7 +91,7 @@ and rendered as the first line of the code:
 
 ```rst
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
 ```
@@ -105,15 +105,15 @@ copies the example into that file gets a working result:
 
 | What the block shows | Caption |
 | --- | --- |
-| Frontend TypoScript setup | `EXT:site_package/Configuration/Sets/Main/setup.typoscript` |
-| TypoScript constants | `EXT:site_package/Configuration/Sets/Main/constants.typoscript` |
-| Page TSconfig | `EXT:site_package/Configuration/Sets/Main/page.tsconfig`, or the extension's own `EXT:site_package/Configuration/page.tsconfig` |
-| User TSconfig | `EXT:site_package/Configuration/user.tsconfig` |
+| Frontend TypoScript setup | `EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript` |
+| TypoScript constants | `EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript` |
+| Page TSconfig | `EXT:my_sitepackage/Configuration/Sets/Main/page.tsconfig`, or the extension's own `EXT:my_sitepackage/Configuration/page.tsconfig` |
+| User TSconfig | `EXT:my_sitepackage/Configuration/user.tsconfig` |
 | Site configuration | `config/sites/my_site/config.yaml` |
 | Rendered output rather than a file | `Example output` (`Example input` for the value going in) |
 | A shell command | the prompt for the directory it is run from, for example `typo3_root$` |
 
-Do **not** write `EXT:site_package/Configuration/TypoScript/setup.typoscript`.
+Do **not** write `EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript`.
 Nothing includes that file unless the reader wires it up by hand, so it answers
 the reader's question wrongly. A site set is included as soon as a site lists
 it, an extension's `Configuration/page.tsconfig` has been picked up
@@ -123,10 +123,11 @@ such a block.
 
 ### Which placeholder extension
 
-The table above says `site_package`, but that is not automatic: this manual
-documents both sides of TypoScript. Pick the name by what the example is about.
+The table above says `my_sitepackage`, the name the other TYPO3 manuals use
+as well, but that is not automatic: this manual documents both sides of
+TypoScript. Pick the name by what the example is about.
 
-*   **`site_package`** for theming and site output — page templates, menus,
+*   **`my_sitepackage`** for theming and site output — page templates, menus,
     titles, the site's own TypoScript and TSconfig.
 *   **`my_extension`** for what an extension brings along — its own fields
     (`tx_myextension_myfield`), tables, plugins and their configuration.
@@ -140,12 +141,12 @@ Two adjacent code blocks may legitimately use different names:
     lib.foo.data = fullRootLine : 0, tx_myextension_myfield
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = fullRootLine : 1, title
 ```
 
-Do not settle this by counting which name appears more often. `site_package`
+Do not settle this by counting which name appears more often. `my_sitepackage`
 leads by a wide margin, but that only reflects how many examples happen to be
 about output — it does not make it the house form for an example about an
 extension's own field.
