@@ -243,9 +243,10 @@ parameter
     :type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
     This is the main data that is used for creating the link. It can be
-    the id of a page, the URL of some external page, an email address or
+    the id of a page, the URL of some external page, an email address, or
     a reference to a file on the server. On top of this there can be
-    additional information for specifying a target, a class and a title.
+    additional information for specifying a target, a class, a title,
+    additional parameters, a `rel` attribute, and a `download` attribute.
     Below are a few examples followed by full explanations.
 
     ..  rubric:: Examples
@@ -372,6 +373,54 @@ parameter
                 :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
                 typolink.parameter.data = parameters : allParams
+
+    5.  Additional parameters
+
+        The fifth value adds parameters to the URL of a link to a page, like
+        the :ref:`additionalParams <typolink-additionalparams>` property:
+
+        ..  code-block:: typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
+
+            page.10.typolink.parameter = t3://page?uid=51 - - - &print=1
+
+    6.  Relationship
+
+        ..  versionadded:: 14.2
+            :changelog: feature-99699-1772582400
+
+        The sixth value sets the :html:`rel` attribute of the link. It
+        overrides a :html:`rel` attribute from :typoscript:`ATagParams`.
+        Enclose several values in double quotes:
+
+        ..  code-block:: typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
+
+            page.10.typolink.parameter = https://example.com/ - - - - "nofollow sponsored"
+
+    7.  Download
+
+        ..  versionadded:: 14.2
+            :changelog: feature-100254-1742119200
+
+        The seventh value sets the :html:`download` attribute of the link.
+        The browser then downloads the file instead of opening it.
+
+        *   With the value `true`, the attribute has no value. The browser
+            uses the name of the file.
+        *   Any other value is the file name for the download.
+
+        ..  code-block:: typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
+
+            page.10.typolink.parameter = t3://file?uid=42 - - - - - report.pdf
+
+        which is converted to a link like this:
+
+        ..  code-block:: html
+            :caption: Example output
+
+            <a href="/fileadmin/reports/annual-report-2026.pdf" download="report.pdf">
 
 
 ..  _typolink-forceabsoluteurl:
