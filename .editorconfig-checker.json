@@ -1,6 +1,7 @@
 {
   "Exclude": [
     "^\\.Build/",
+    "^Documentation-GENERATED-temp/",
     "\\.rst$",
     "\\.rst\\.txt$",
     "\\.diff$",
