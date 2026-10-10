@@ -979,6 +979,38 @@ Properties of 'config'
 
         Substitute label for the last dot in the email address.
 
+    ..  rubric:: tx_extbase
+
+    ..  confval:: tx_extbase
+        :name: config-tx-extbase
+        :type: array
+        :Example: :ref:`Set defaults for all Extbase plugins <setup-config-tx-extbase>`
+
+        Default configuration for all Extbase plugins and backend modules of
+        the installation. Extbase starts from this configuration and merges
+        the configuration of the extension and of the plugin over it:
+        `plugin.tx_myextension` and `plugin.tx_myextension_pluginname` in
+        the frontend, `module.tx_myextension` and
+        `module.tx_myextension_modulename` in the backend.
+
+        It takes the same properties as the
+        :ref:`plugin configuration of an Extbase extension <setup-plugin-extbase>`,
+        for example `persistence` and `mvc`.
+
+        TYPO3 sets these defaults:
+
+        ..  code-block:: typoscript
+            :caption: EXT:extbase/ext_localconf.php
+
+            config.tx_extbase {
+                mvc {
+                    throwPageNotFoundExceptionIfActionCantBeResolved = 0
+                }
+                persistence {
+                    enableAutomaticCacheClearing = 1
+                }
+            }
+
     ..  rubric:: tx_[extension key with no underscores]_[*]
 
     ..  confval:: tx_[extension key with no underscores]_[*]
@@ -1372,6 +1404,21 @@ Demonstrates:
     *   :confval:`config.spamProtectEmailAddresses_lastDotSubst <config-spamProtectEmailAddresses_lastDotSubst>`
 
 ..  literalinclude:: _codesnippets/_lastdotsubst.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
+
+..  _setup-config-tx-extbase:
+
+Set defaults for all Extbase plugins
+------------------------------------
+
+Demonstrates:
+    *   :confval:`config.tx_extbase <config-tx-extbase>`
+
+All Extbase plugins read and store their records on page 42 and show the
+"Page not found" page when a record in the URL does not exist, unless an
+extension or plugin sets a value of its own:
+
+..  literalinclude:: _codesnippets/_txExtbase.typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _setup-config-tx-extension-key-with-no-underscores:
