@@ -74,6 +74,8 @@ $examples = [
     'backendLayoutExclude' => ['Excluded backend layouts', 'PageTsconfig/_codesnippets/_backendLayoutExclude.typoscript'],
     'description' => ['Field description', 'PageTsconfig/_codesnippets/_description.typoscript'],
     'csvExport' => ['CSV download', 'CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript'],
+    'exportButtons' => ['Export button', null],
+    'noExportButtons' => ['No export button', 'CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.typoscript'],
 ];
 $data = ['pages' => []];
 foreach ($examples as $key => [$title, $path]) {
@@ -100,6 +102,8 @@ $dataHandler = $process([
         'NEWcontent2' => ['pid' => $uids['singleTableView'], 'CType' => 'text', 'header' => 'About us'],
         'NEWheader' => ['pid' => $uids['description'], 'CType' => 'header', 'header' => 'Our services'],
         'NEWcsv' => ['pid' => $uids['csvExport'], 'CType' => 'text', 'header' => 'Welcome'],
+        'NEWexport' => ['pid' => $uids['exportButtons'], 'CType' => 'text', 'header' => 'Welcome'],
+        'NEWnoExport' => ['pid' => $uids['noExportButtons'], 'CType' => 'text', 'header' => 'Welcome'],
     ],
 ]);
 $uids['headerContent'] = $dataHandler->substNEWwithIDs['NEWheader'];
