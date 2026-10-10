@@ -333,10 +333,35 @@ plugins.
         :type: :ref:`string <data-type-string>`
         :Example: :ref:`Override a language key in an Extbase plugin <setup-plugin-local-lang-example>`
 
-        Can be used to override the default language labels for Extbase plugins.
-        The `lang-key` setup part is `default` for the default language of the
-        website or the 2-letter (ISO 639-1) code for the language. `label-key`
-        is the 'trans-unit id' XML value in the XLF language file which
+        ..  versionchanged:: 15.0
+            :changelog: important-110175-1790179101
+
+            Before, `default` overrode the English labels of the XLIFF files,
+            and a `lang-key` with a country code did not fall back to its
+            language. To override an English label, use `en` or `en-US`
+            instead of `default`.
+
+        Overrides the labels of an Extbase plugin. The `lang-key` is one of
+        the following:
+
+        *   A language in lowercase, for example `fr`.
+        *   A language with a country: the language in lowercase, a dash, and
+            the country code in uppercase, for example `fr-LU`. TYPO3
+            normalizes the key, so other spellings such as `fr_LU` or
+            `fr-lu` select the same locale.
+        *   `default`, for labels that do not exist anywhere else.
+
+        For the current locale, TYPO3 uses the first label that it finds:
+
+        #.  The override for the locale, for example `fr-LU`
+        #.  The override for its language, for example `fr`
+        #.  The label from the XLIFF file of the locale or its fallback
+            locales
+        #.  The override for `default`
+
+        To override an English label, use `en` or `en-US`.
+
+        `label-key` is the 'trans-unit id' XML value in the XLF language file which
         resides in the path :file:`Resources/Private/Language` of the
         extension or in the :file:`typo3conf/l10n/[lang-key]`
         (:file:`var/labels/[lang-key]` in composer mode) subfolder of the
@@ -517,3 +542,4 @@ Demonstrates:
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     plugin.tx_myextension_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
+    plugin.tx_myextension_pi1._LOCAL_LANG.en.list_mode_1 = The first mode
