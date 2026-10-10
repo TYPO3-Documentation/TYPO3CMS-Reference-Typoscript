@@ -39,7 +39,7 @@ This submodule shows all pages that contain TypoScript either by having
 a TypoScript record or by having a
 :ref:`Site Set TypoScript provider <t3coreapi:site-sets-typoscript>`.
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/TypoScriptRecordsOverview.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/TypoScriptRecordsOverview.png
     :alt: Screenshot of Submodule "TypoScript records overview" in the TYPO3 backend
 
 If TypoScript was added by a record, it is linked.
@@ -66,7 +66,7 @@ used a special format of
 `Comments <https://docs.typo3.org/permalink/t3tsref:typoscript-syntax-syntax-comment-blocks>`_
 to display a form for editing the constants.
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantEditor.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/ConstantEditor.png
     :alt: Screenshot of the TYPO3 Backend showing the constant editor
 
 It is not recommended to newly introduce constants in the constant editor.
@@ -86,13 +86,13 @@ Submodule "Edit TypoScript Record"
 This can be done in the :guilabel:`Sites > TypoScript` module in
 the submodule :guilabel:`Edit TypoScript Record`.
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/EditTypoScriptRecord.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/EditTypoScriptRecord.png
     :alt: The submodule "Edit TypoScript Record" in the TYPO3 Backend.
 
 When you click on :guilabel:`Edit the whole TypoScript record` you can edit
 the complete record:
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantAndSetupRecord.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/ConstantAndSetupRecord.png
     :alt: The submodule whole TypoScript record in edit mode
 
 As the TypoScript record is just a normal record it can also be seen in and
@@ -136,7 +136,7 @@ TypoScript record.
 
 #.  Click the templates to include in :guilabel:`Available Items`.
 
-    ..  figure:: /Images/ManualScreenshots/TypoScriptModule/IncludeTypoScriptSet.png
+    ..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/IncludeTypoScriptSet.png
         :alt: "Include TypoScript sets" by choosing from the "Available items"
 
 ..  tip::
@@ -154,8 +154,8 @@ Include other TypoScript records
 Apart from this, it is also possible to include other TypoScript template
 records (in the field called :guilabel:`Include TypoScript records`).
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/IncludeTypoScriptSet.png
-    :alt: Include TypoScript records
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/IncludeTypoScriptRecords.png
+    :alt: The field "Include TypoScript records" with one included record
 
 ..  index:: TypoScript; Included TypoScript
 ..  _typoscript-syntax-typoscript-templates-structure-analyzer:
@@ -169,7 +169,7 @@ an overview of this structure. It shows all the TypoScript files that apply to
 the currently selected page, taking into account inclusions and inheritance
 along the page tree.
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/IncludedTypoScript.png
+..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/IncludedTypoScript.png
     :alt: A visual representation of how TypoScript is included.
 
 TypoScript definitions are taken into consideration from top to bottom, which means
