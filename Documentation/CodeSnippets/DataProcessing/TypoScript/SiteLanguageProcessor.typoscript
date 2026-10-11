@@ -1,6 +1,6 @@
 tt_content {
-  examples_dataprocsitelanguage =< lib.contentElement
-  examples_dataprocsitelanguage {
+  myextension_dataprocsitelanguage =< lib.contentElement
+  myextension_dataprocsitelanguage {
     templateName = DataProcSiteLanguage
     dataProcessing.10 = site-language
     dataProcessing.10 {

@@ -45,7 +45,7 @@ Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\SiteLanguageProcessor`
 the following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SiteLanguageProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteLanguageProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
@@ -53,7 +53,7 @@ In the Fluid template the properties of the site language configuration can
 be accessed:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSiteLanguage.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSiteLanguage.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcSiteLanguage.fluid.html
 
 ..  rubric:: Output
 

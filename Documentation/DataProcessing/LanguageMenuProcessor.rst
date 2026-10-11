@@ -92,14 +92,14 @@ Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor`
 the following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/LanguageMenuProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/LanguageMenuProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 This generated menu can be used in Fluid like this:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcLangMenu.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcLangMenu.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcLangMenu.fluid.html
 
 ..  rubric:: Output
 

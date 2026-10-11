@@ -272,18 +272,18 @@ foreach (['noTypoScript' => 'no-typoscript', 'noPage' => 'no-page'] as $root => 
 // with one content element of the type that its TypoScript snippet defines,
 // rendered with the Fluid template of the documentation
 $examples = [
-    'dataProcSite' => ['title' => 'SiteProcessor', 'snippet' => 'SiteProcessor', 'CType' => 'examples_dataprocsite'],
-    'dataProcSiteLanguage' => ['title' => 'SiteLanguageProcessor', 'snippet' => 'SiteLanguageProcessor', 'CType' => 'examples_dataprocsitelanguage'],
+    'dataProcSite' => ['title' => 'SiteProcessor', 'snippet' => 'SiteProcessor', 'CType' => 'myextension_dataprocsite'],
+    'dataProcSiteLanguage' => ['title' => 'SiteLanguageProcessor', 'snippet' => 'SiteLanguageProcessor', 'CType' => 'myextension_dataprocsitelanguage'],
     'dataProcSplit' => [
         'title' => 'SplitProcessor',
         'snippet' => 'SplitProcessor',
-        'CType' => 'examples_dataprocsplit',
+        'CType' => 'myextension_dataprocsplit',
         'header_link' => 'https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/DataProcessing/SplitProcessor.html',
     ],
     'dataProcCsv' => [
         'title' => 'CommaSeparatedValueProcessor',
         'snippet' => 'CommaSeparatedValueProcessor',
-        'CType' => 'examples_newcontentcsv',
+        'CType' => 'myextension_dataproccsv',
         'bodytext' => implode("\n", array_map(
             static fn(int $row): string => implode(',', array_map(
                 static fn(int $column): string => "\"This is row $row column $column\"",
@@ -295,13 +295,13 @@ $examples = [
         'imagecols' => 2,
         'tx_myextension_separator' => ',',
     ],
-    'dataProcMenu' => ['title' => 'MenuProcessor', 'snippet' => 'MenuProcessor', 'CType' => 'examples_dataprocmenu'],
-    'dataProcLanguageMenu' => ['title' => 'LanguageMenuProcessor', 'snippet' => 'LanguageMenuProcessor', 'CType' => 'examples_dataproclang'],
-    'dataProcFiles' => ['title' => 'FilesProcessor', 'snippet' => 'FilesProcessor', 'CType' => 'examples_dataprocfiles', 'images' => 2],
+    'dataProcMenu' => ['title' => 'MenuProcessor', 'snippet' => 'MenuProcessor', 'CType' => 'myextension_dataprocmenu'],
+    'dataProcLanguageMenu' => ['title' => 'LanguageMenuProcessor', 'snippet' => 'LanguageMenuProcessor', 'CType' => 'myextension_dataproclang'],
+    'dataProcFiles' => ['title' => 'FilesProcessor', 'snippet' => 'FilesProcessor', 'CType' => 'myextension_dataprocfiles', 'images' => 2],
     'dataProcGallery' => [
         'title' => 'GalleryProcessor',
         'snippet' => 'GalleryProcessor',
-        'CType' => 'examples_dataprocgallery',
+        'CType' => 'myextension_dataprocgallery',
         'images' => 3,
         // The example takes the border from this field
         'imageborder' => 1,

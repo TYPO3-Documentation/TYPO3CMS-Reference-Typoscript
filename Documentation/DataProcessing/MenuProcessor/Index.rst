@@ -250,14 +250,14 @@ Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor` the
 following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/MenuProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/MenuProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 This generated menu can be used in Fluid like this:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcMenu.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcMenu.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcMenu.fluid.html
 
 ..  rubric:: Output
 
