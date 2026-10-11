@@ -137,7 +137,10 @@ and the data of the photo in `files`.
 
 ..  figure:: /Images/GeneratedScreenshots/DataProcessing/DatabaseQueryProcessor.png
     :class: with-shadow
-    :alt: Dump of the speaker records and the list of speakers
+    :alt: Dump of the variable speakers with 3 records, each with data and
+        files, and three cards: Alex Example of Example Agency with a photo,
+        Kai Muster of Muster AG, and Robin Sample of Sample Ltd, each with a
+        short biography
 
 ..  _databasequeryprocessor-examples:
 

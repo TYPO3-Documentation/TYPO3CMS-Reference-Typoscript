@@ -110,4 +110,6 @@ does not get linked in the template.
 
 ..  figure:: /Images/GeneratedScreenshots/DataProcessing/LanguageMenuProcessor.png
     :zoom: lightbox
-    :alt: Output of a LanguageMenuProcessor, including debug output
+    :alt: Dump of the variable languageNavigation with 3 languages, and a list
+        in which "English" is a link, while "Dansk" and "Deutsch" are shown
+        without a link

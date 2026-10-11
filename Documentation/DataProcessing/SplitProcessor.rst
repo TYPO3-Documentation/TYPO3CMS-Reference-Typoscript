@@ -135,4 +135,7 @@ The array now contains the split strings:
 
 ..  figure:: /Images/GeneratedScreenshots/DataProcessing/SplitProcessor.png
     :zoom: lightbox
-    :alt: Output of a SplitProcessor, including debug output
+    :alt: Dump of the variable urlParts with 10 parts: "https:", an empty
+        string, "docs.typo3.org", "m", "typo3", "reference-typoscript", "main",
+        "en-us", "DataProcessing", and "SplitProcessor.html", and the output
+        that shows the parts separated by slashes
