@@ -267,6 +267,65 @@ foreach (['noTypoScript' => 'no-typoscript', 'noPage' => 'no-page'] as $root => 
     GeneralUtility::makeInstance(SiteWriter::class)->write($identifier, $configuration);
 }
 
+// A site for the examples of the data processors: each example gets a page
+// with one content element of the type that its TypoScript snippet defines,
+// rendered with the Fluid template of the documentation
+$examples = [
+    'dataProcSite' => ['title' => 'SiteProcessor', 'snippet' => 'SiteProcessor', 'CType' => 'examples_dataprocsite'],
+    'dataProcSiteLanguage' => ['title' => 'SiteLanguageProcessor', 'snippet' => 'SiteLanguageProcessor', 'CType' => 'examples_dataprocsitelanguage'],
+    'dataProcSplit' => [
+        'title' => 'SplitProcessor',
+        'snippet' => 'SplitProcessor',
+        'CType' => 'examples_dataprocsplit',
+        'header_link' => 'https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/DataProcessing/SplitProcessor.html',
+    ],
+    'dataProcCsv' => [
+        'title' => 'CommaSeparatedValueProcessor',
+        'snippet' => 'CommaSeparatedValueProcessor',
+        'CType' => 'examples_newcontentcsv',
+        'bodytext' => implode("\n", array_map(
+            static fn(int $row): string => implode(',', array_map(
+                static fn(int $column): string => "\"This is row $row column $column\"",
+                range(1, 3)
+            )),
+            range(1, 3)
+        )),
+        // The example keeps two of the three columns
+        'imagecols' => 2,
+        'tx_examples_separator' => ',',
+    ],
+];
+$dataHandler = $process(['pages' => [
+    'NEWdataProcessors' => ['pid' => 0, 'title' => 'Data processors', 'is_siteroot' => 1, 'hidden' => 0],
+]]);
+$uids['dataProcessors'] = $dataHandler->substNEWwithIDs['NEWdataProcessors'];
+$pages = [];
+foreach (array_reverse($examples, true) as $key => $example) {
+    $pages['NEW' . $key] = ['pid' => $uids['dataProcessors'], 'title' => $example['title'], 'hidden' => 0];
+}
+$dataHandler = $process(['pages' => $pages]);
+// The content element types exist only in the TypoScript of the examples,
+// not in the TCA, so the DataHandler would refuse them. The CSV example
+// reads its separator from a field of the examples extension.
+$contentConnection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
+$contentConnection->executeStatement('ALTER TABLE tt_content ADD COLUMN tx_examples_separator VARCHAR(1) DEFAULT \'\' NOT NULL');
+$setup = "page = PAGE\npage.10 < styles.content.get\n\n"
+    // TYPO3 refuses a path with "..", like the one in $documentation
+    . 'lib.contentElement.templateRootPaths.200 = ' . realpath($documentation . 'CodeSnippets/DataProcessing/Template') . "/\n";
+foreach ($examples as $key => $example) {
+    $uids[$key] = $dataHandler->substNEWwithIDs['NEW' . $key];
+    $contentConnection->insert('tt_content', array_merge(
+        array_diff_key($example, ['title' => true, 'snippet' => true]),
+        ['pid' => $uids[$key], 'colPos' => 0, 'tstamp' => time(), 'crdate' => time()]
+    ));
+    $setup .= "\n" . $snippet('CodeSnippets/DataProcessing/TypoScript/' . $example['snippet'] . '.typoscript');
+}
+$configuration['rootPageId'] = $uids['dataProcessors'];
+$configuration['base'] = 'http://localhost:8080/data-processors/';
+$configuration['dependencies'] = ['typo3/fluid-styled-content'];
+GeneralUtility::makeInstance(SiteWriter::class)->write('data-processors', $configuration);
+file_put_contents(Environment::getConfigPath() . '/sites/data-processors/setup.typoscript', $setup);
+
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
 GeneralUtility::mkdir_deep(Environment::getVarPath());
 file_put_contents(Environment::getVarPath() . '/screenshot-records.json', json_encode($uids, JSON_PRETTY_PRINT) . "\n");

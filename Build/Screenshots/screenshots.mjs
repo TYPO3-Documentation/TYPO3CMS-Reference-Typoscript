@@ -64,6 +64,21 @@ const hideRequestId = async (frame) => {
   await frame.locator('.typo3-error-page-requestid').evaluate((element) => element.remove());
 };
 
+// The example of a data processor on its page in the site of
+// create-records.php: the output of its Fluid template, styled with
+// Bootstrap like the examples extension it comes from
+const dataProcessor = (title) => ({
+  url: `${baseUrl}/data-processors/${title.toLowerCase()}`,
+  frontend: true,
+  prepare: async (frame) => {
+    await frame.page().addStyleTag({ path: 'node_modules/bootstrap/dist/css/bootstrap.min.css' });
+    // The templates have no layout, so nothing keeps the output off the edge
+    await frame.page().addStyleTag({ content: `body { padding: ${margin}px; }` });
+  },
+  element: 'body',
+  margin: 0,
+});
+
 // A page in the page tree, which is outside of the module frame
 const node = (uid) => `.node[data-id="${uid}"]`;
 // Opens pages in the page tree, from the top down: the tree opens only the
@@ -339,6 +354,10 @@ const screenshots = {
     window: true,
     until: '.trace-head',
   },
+  'DataProcessing/SiteProcessor': dataProcessor('SiteProcessor'),
+  'DataProcessing/SiteLanguageProcessor': dataProcessor('SiteLanguageProcessor'),
+  'DataProcessing/SplitProcessor': dataProcessor('SplitProcessor'),
+  'DataProcessing/CommaSeparatedValueProcessor': dataProcessor('CommaSeparatedValueProcessor'),
 };
 
 // Hides the page tree and collapses the groups of the module menu, except
