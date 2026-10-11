@@ -1,0 +1,22 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+  <h2>Data in variable speakers</h2>
+  <f:debug inline="true">{speakers}</f:debug>
+
+  <h2>Output</h2>
+  <div class="row">
+    <f:for each="{speakers}" as="speaker">
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <f:if condition="{speaker.files.0}">
+            <f:image image="{speaker.files.0}" class="card-img-top h-auto" width="400"/>
+          </f:if>
+          <div class="card-body">
+            <h5 class="card-title">{speaker.data.name}</h5>
+            <h6 class="card-subtitle text-body-secondary">{speaker.data.company}</h6>
+            <div class="card-text"><f:format.html>{speaker.data.bio}</f:format.html></div>
+          </div>
+        </div>
+      </div>
+    </f:for>
+  </div>
+</html>

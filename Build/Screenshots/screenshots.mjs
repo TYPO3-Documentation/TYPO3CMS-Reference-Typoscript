@@ -362,6 +362,7 @@ const screenshots = {
   'DataProcessing/LanguageMenuProcessor': dataProcessor('LanguageMenuProcessor'),
   'DataProcessing/FilesProcessor': dataProcessor('FilesProcessor'),
   'DataProcessing/GalleryProcessor': dataProcessor('GalleryProcessor'),
+  'DataProcessing/DatabaseQueryProcessor': dataProcessor('DatabaseQueryProcessor'),
 };
 
 // Hides the page tree and collapses the groups of the module menu, except

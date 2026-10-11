@@ -306,6 +306,9 @@ $examples = [
         // The example takes the border from this field
         'imageborder' => 1,
     ],
+    // The TypoScript of this example comes with the set of the example
+    // extension in Documentation/CodeSnippets/my_extension
+    'dataProcDb' => ['title' => 'DatabaseQueryProcessor', 'CType' => 'myextension_speakers'],
 ];
 $dataHandler = $process(['pages' => [
     'NEWdataProcessors' => ['pid' => 0, 'title' => 'Data processors', 'is_siteroot' => 1, 'hidden' => 0],
@@ -327,6 +330,13 @@ $process(['pages' => [
     'NEWmenuPage2' => ['pid' => $uids['dataProcMenu'], 'title' => 'Second page', 'hidden' => 0],
     'NEWmenuPage1' => ['pid' => $uids['dataProcMenu'], 'title' => 'First page', 'hidden' => 0],
 ]]);
+// The folder with the speakers that the database query example reads from
+// the field "pages" of its content element
+$dataHandler = $process(['pages' => [
+    'NEWspeakers' => ['pid' => $uids['dataProcDb'], 'title' => 'Speakers', 'doktype' => 254, 'hidden' => 0],
+]]);
+$uids['speakers'] = $dataHandler->substNEWwithIDs['NEWspeakers'];
+$examples['dataProcDb']['pages'] = (string)$uids['speakers'];
 // The content element types exist only in the TypoScript of the examples,
 // not in the TCA, so the DataHandler would refuse them. The CSV example
 // reads its separator from a field of the examples extension.
@@ -350,6 +360,36 @@ foreach ([[0x1f6feb, 'Blue circle'], [0x2da44e, 'Green circle'], [0xfb8500, 'Ora
     imagepng($image, $path);
     $files[] = [$storage->addFile($path, $folder, strtolower(str_replace(' ', '-', $title)) . '.png'), $title];
 }
+// The speakers of the example extension, the first one with a photo: a
+// drawn silhouette
+$image = imagecreatetruecolor(600, 600);
+imagefill($image, 0, 0, imagecolorallocate($image, 0xdd, 0xe3, 0xea));
+$grey = imagecolorallocate($image, 0x8c, 0x95, 0x9f);
+imagefilledellipse($image, 300, 230, 220, 220, $grey);
+imagefilledellipse($image, 300, 600, 440, 380, $grey);
+imagepng($image, Environment::getVarPath() . '/speaker.png');
+$photo = $storage->addFile(Environment::getVarPath() . '/speaker.png', $folder, 'speaker.png');
+$speakers = [
+    ['Alex Example', 'Example Agency', '<p>Alex builds extensions for <strong>public institutions</strong>.</p>'],
+    ['Robin Sample', 'Sample Ltd', '<p>Robin maintains the TypoScript of several large sites.</p>'],
+    ['Kai Muster', 'Muster AG', '<p>Kai teaches editors how to work with content elements.</p>'],
+];
+$dataHandler = $process(['tx_myextension_speaker' => array_combine(
+    array_map(static fn(int $i): string => 'NEWspeaker' . $i, array_keys($speakers)),
+    array_map(static fn(array $speaker): array => [
+        'pid' => $uids['speakers'], 'name' => $speaker[0], 'company' => $speaker[1], 'bio' => $speaker[2],
+    ], $speakers)
+)]);
+$process([
+    'sys_file_reference' => ['NEWphoto' => [
+        'pid' => $uids['speakers'],
+        'uid_local' => $photo->getUid(),
+        'uid_foreign' => $dataHandler->substNEWwithIDs['NEWspeaker0'],
+        'tablenames' => 'tx_myextension_speaker',
+        'fieldname' => 'photo',
+    ]],
+    'tx_myextension_speaker' => [$dataHandler->substNEWwithIDs['NEWspeaker0'] => ['photo' => 'NEWphoto']],
+]);
 foreach ($examples as $key => $example) {
     $contentConnection->insert('tt_content', array_merge(
         array_diff_key($example, ['title' => true, 'snippet' => true, 'images' => true]),
@@ -370,11 +410,13 @@ foreach ($examples as $key => $example) {
             'crdate' => time(),
         ]);
     }
-    $setup .= "\n" . $snippet('CodeSnippets/DataProcessing/TypoScript/' . $example['snippet'] . '.typoscript');
+    if (isset($example['snippet'])) {
+        $setup .= "\n" . $snippet('CodeSnippets/DataProcessing/TypoScript/' . $example['snippet'] . '.typoscript');
+    }
 }
 $configuration['rootPageId'] = $uids['dataProcessors'];
 $configuration['base'] = 'http://localhost:8080/data-processors/';
-$configuration['dependencies'] = ['typo3/fluid-styled-content'];
+$configuration['dependencies'] = ['typo3/fluid-styled-content', 'myvendor/my-extension'];
 // Languages that the pages are not translated into, which the language
 // menu example shows as unavailable
 $language = $configuration['languages'][0];
