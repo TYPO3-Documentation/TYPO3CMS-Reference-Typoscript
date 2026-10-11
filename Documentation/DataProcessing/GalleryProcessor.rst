@@ -234,9 +234,8 @@ The content of
 to the content of :ref:`as <filesprocessor-as>` in the
 :ref:`FilesProcessor <filesprocessor>`:
 
-..  figure:: /Images/ManualScreenshots/DataProcessing/GalleryProcessor.png
-    :zoom: lightbox
-    :alt: Output of a GalleryProcessor, including debug output
+..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.typoscript
+    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/GalleryProcessor.typoscript
 
 ..  rubric:: The Fluid template
 
