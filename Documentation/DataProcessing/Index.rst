@@ -40,30 +40,23 @@ for example for comma-separated values, related files or related records.
 About the examples
 ==================
 
-All examples listed here can be found in the TYPO3 Documentation Team
-extension `examples <https://extensions.typo3.org/extension/examples/>`__.
+The examples come from an extension, `my_extension`. Each example defines a
+content element type of its own in the TypoScript setup of the extension, and
+renders it with a Fluid template from the extension. To add a content element
+type, see :ref:`Create a custom content element type (CType)
+<t3coreapi:adding-your-own-content-elements>`.
 
-Once the extension t3docs/examples is installed the examples are available
-as content elements:
+You can also use data processors in page templates. There they work on the
+page record, and all fields of the `pages` table are available.
 
-..  figure:: /Images/ManualScreenshots/DataProcessors.png
-    :class: with-shadow
-
-All examples listing here depend on
-:ref:`Create a custom content element type (CType) <t3coreapi:adding-your-own-content-elements>`.  Data processors can
-also be used in rendering page templates. In this case TypoScript context
-would be the page record and all fields of the :typoscript:`pages` table
-are available.
-
-All examples base on :typoscript:`lib.contentElement`, which is provided by
-the system extension :doc:`fluid_styled_content <typo3/cms-fluid-styled-content:Index>`.
-
-In this system extension it is defined as follows:
+All examples are based on :typoscript:`lib.contentElement`, which the system
+extension :doc:`fluid_styled_content <typo3/cms-fluid-styled-content:Index>`
+provides. The system extension defines it as follows:
 
 ..  literalinclude:: _about.typoscript
-    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:fluid_styled_content/Configuration/TypoScript/Helper/ContentElement.typoscript
 
-The extension `examples` also sets the paths to the additional templates:
+The extension `my_extension` adds the paths to its own templates:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/DataProcessingTemplates.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/General.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript

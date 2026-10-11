@@ -44,14 +44,14 @@ Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\SiteProcessor` the
 following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SiteProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 In the Fluid template the properties of the site configuration can be accessed:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSite.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSite.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcSite.fluid.html
 
 ..  rubric:: Output
 

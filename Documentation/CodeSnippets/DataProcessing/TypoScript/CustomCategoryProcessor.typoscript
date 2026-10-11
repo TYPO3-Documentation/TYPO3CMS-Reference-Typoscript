@@ -1,6 +1,6 @@
 tt_content {
-  examples_dataproccustom =< lib.contentElement
-  examples_dataproccustom {
+  myextension_dataproccustom =< lib.contentElement
+  myextension_dataproccustom {
     templateName = DataProcCustom
     dataProcessing.10 = custom-category
     dataProcessing.10 {

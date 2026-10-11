@@ -199,14 +199,14 @@ Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor` the
 following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/FilesProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/FilesProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 Then iterate over the files in the :ref:`Fluid <t3coreapi:fluid>` template:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcFiles.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcFiles.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcFiles.fluid.html
 
 ..  rubric:: Output
 

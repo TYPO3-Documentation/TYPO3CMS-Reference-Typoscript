@@ -120,14 +120,14 @@ With the help of the
 scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SplitProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 In the Fluid template then iterate over the split data:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSplit.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSplit.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcSplit.fluid.html
 
 ..  rubric:: Output
 

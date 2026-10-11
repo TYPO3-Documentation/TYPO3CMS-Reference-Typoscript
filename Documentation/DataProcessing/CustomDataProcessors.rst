@@ -13,7 +13,7 @@ Custom data processors can be used in TypoScript just like any other
 data processor:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/CustomCategoryProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CustomCategoryProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 The available configuration depends on the implementation of the
 specific custom data processor.
