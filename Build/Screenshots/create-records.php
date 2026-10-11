@@ -21,6 +21,7 @@ use TYPO3\CMS\Core\Core\SystemEnvironmentBuilder;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\DataHandling\DataHandler;
 use TYPO3\CMS\Core\Localization\LanguageServiceFactory;
+use TYPO3\CMS\Core\Resource\StorageRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 $classLoader = require __DIR__ . '/../../.Build/vendor/autoload.php';
@@ -296,6 +297,15 @@ $examples = [
     ],
     'dataProcMenu' => ['title' => 'MenuProcessor', 'snippet' => 'MenuProcessor', 'CType' => 'examples_dataprocmenu'],
     'dataProcLanguageMenu' => ['title' => 'LanguageMenuProcessor', 'snippet' => 'LanguageMenuProcessor', 'CType' => 'examples_dataproclang'],
+    'dataProcFiles' => ['title' => 'FilesProcessor', 'snippet' => 'FilesProcessor', 'CType' => 'examples_dataprocfiles', 'images' => 2],
+    'dataProcGallery' => [
+        'title' => 'GalleryProcessor',
+        'snippet' => 'GalleryProcessor',
+        'CType' => 'examples_dataprocgallery',
+        'images' => 3,
+        // The example takes the border from this field
+        'imageborder' => 1,
+    ],
 ];
 $dataHandler = $process(['pages' => [
     'NEWdataProcessors' => ['pid' => 0, 'title' => 'Data processors', 'is_siteroot' => 1, 'hidden' => 0],
@@ -325,11 +335,41 @@ $contentConnection->executeStatement('ALTER TABLE tt_content ADD COLUMN tx_examp
 $setup = "page = PAGE\npage.10 < styles.content.get\n\n"
     // TYPO3 refuses a path with "..", like the one in $documentation
     . 'lib.contentElement.templateRootPaths.200 = ' . realpath($documentation . 'CodeSnippets/DataProcessing/Template') . "/\n";
+// Plain images for the examples with files, drawn here, so that nobody
+// else holds a right to them
+$storage = GeneralUtility::makeInstance(StorageRepository::class)->getDefaultStorage();
+// In a folder below user_upload, so the root of fileadmin, which the file
+// list screenshot shows, stays the same
+$folder = $storage->createFolder('data-processors', $storage->getFolder('user_upload'));
+$files = [];
+foreach ([[0x1f6feb, 'Blue circle'], [0x2da44e, 'Green circle'], [0xfb8500, 'Orange circle']] as $i => [$color, $title]) {
+    $image = imagecreatetruecolor(800, 600);
+    imagefill($image, 0, 0, imagecolorallocate($image, 0xf6, 0xf8, 0xfa));
+    imagefilledellipse($image, 400, 300, 400, 400, imagecolorallocate($image, $color >> 16, ($color >> 8) & 0xff, $color & 0xff));
+    $path = Environment::getVarPath() . '/circle-' . $i . '.png';
+    imagepng($image, $path);
+    $files[] = [$storage->addFile($path, $folder, strtolower(str_replace(' ', '-', $title)) . '.png'), $title];
+}
 foreach ($examples as $key => $example) {
     $contentConnection->insert('tt_content', array_merge(
-        array_diff_key($example, ['title' => true, 'snippet' => true]),
-        ['pid' => $uids[$key], 'colPos' => 0, 'tstamp' => time(), 'crdate' => time()]
+        array_diff_key($example, ['title' => true, 'snippet' => true, 'images' => true]),
+        ['pid' => $uids[$key], 'colPos' => 0, 'tstamp' => time(), 'crdate' => time(), 'image' => $example['images'] ?? 0]
     ));
+    $content = (int)$contentConnection->lastInsertId();
+    foreach (array_slice($files, 0, $example['images'] ?? 0) as $i => [$file, $title]) {
+        $contentConnection->insert('sys_file_reference', [
+            'pid' => $uids[$key],
+            'uid_local' => $file->getUid(),
+            'uid_foreign' => $content,
+            'tablenames' => 'tt_content',
+            'fieldname' => 'image',
+            'sorting_foreign' => $i + 1,
+            'title' => $title,
+            'description' => 'An image drawn for this example',
+            'tstamp' => time(),
+            'crdate' => time(),
+        ]);
+    }
     $setup .= "\n" . $snippet('CodeSnippets/DataProcessing/TypoScript/' . $example['snippet'] . '.typoscript');
 }
 $configuration['rootPageId'] = $uids['dataProcessors'];
