@@ -1,6 +1,6 @@
 tt_content {
-  examples_newcontentcsv =< lib.contentElement
-  examples_newcontentcsv {
+  myextension_dataproccsv =< lib.contentElement
+  myextension_dataproccsv {
     templateName = DataProcCsv
     dataProcessing.10 = comma-separated-value
     dataProcessing.10 {

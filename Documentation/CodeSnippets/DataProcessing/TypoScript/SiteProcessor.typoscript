@@ -1,6 +1,6 @@
 tt_content {
-  examples_dataprocsite =< lib.contentElement
-  examples_dataprocsite {
+  myextension_dataprocsite =< lib.contentElement
+  myextension_dataprocsite {
     templateName = DataProcSite
     dataProcessing.10 = site
     dataProcessing.10 {

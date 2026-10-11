@@ -126,7 +126,7 @@ We define the :typoscript:`dataProcessing` property to use the
 :php-short:`\TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor`:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/CommaSeparatedValueProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
@@ -134,7 +134,7 @@ In the Fluid template, you can iterate over the processed data. "myContentTable"
 be used as a variable :html:`{myContentTable}` inside Fluid for iteration.
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcCsv.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcCsv.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcCsv.fluid.html
 
 ..  rubric:: Output
 

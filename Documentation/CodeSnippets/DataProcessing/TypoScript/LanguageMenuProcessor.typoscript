@@ -1,6 +1,6 @@
 tt_content {
-  examples_dataproclang =< lib.contentElement
-  examples_dataproclang {
+  myextension_dataproclang =< lib.contentElement
+  myextension_dataproclang {
     templateName = DataProcLangMenu
     dataProcessing.10 = language-menu
     dataProcessing.10 {

@@ -235,12 +235,12 @@ to the content of :ref:`as <filesprocessor-as>` in the
 :ref:`FilesProcessor <filesprocessor>`:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/GalleryProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcGallery.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcGallery.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcGallery.fluid.html
 
 ..  rubric:: Output
 
