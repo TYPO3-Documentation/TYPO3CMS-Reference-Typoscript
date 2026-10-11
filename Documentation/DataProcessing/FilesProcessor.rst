@@ -211,9 +211,8 @@ Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor` the
 following scenario is possible:
 
-..  figure:: /Images/ManualScreenshots/DataProcessing/FilesProcessor.png
-    :zoom: lightbox
-    :alt: Output of a FilesProcessor, including debug output
+..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/FilesProcessor.typoscript
+    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/FilesProcessor.typoscript
 
 ..  rubric:: The Fluid template
 
