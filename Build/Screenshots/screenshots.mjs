@@ -400,6 +400,9 @@ await page.click('#t3-login-submit');
 await page.waitForURL(/\/typo3\/(main|module)/);
 
 const names = process.argv.length > 2 ? process.argv.slice(2) : Object.keys(screenshots);
+// The frontend comes last: its error pages log their exceptions, which the
+// backend then counts as errors in the badge of its system information menu
+names.sort((a, b) => Number(screenshots[a]?.frontend ?? false) - Number(screenshots[b]?.frontend ?? false));
 for (const name of names) {
   const screenshot = screenshots[name];
   if (screenshot === undefined) {
