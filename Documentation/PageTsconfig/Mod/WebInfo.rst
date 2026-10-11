@@ -32,14 +32,18 @@ fieldDefinitions
     :name: mod-web-info-fieldDefinitions
     :type: array
 
-    The available fields in the "Pagetree overview" module in the
-    :guilabel:`Content > Status` module, by default ship with the entries
-    "Basic settings", "Record overview", and "Cache and age".
+    The "Pagetree overview" of the :guilabel:`Content > Status` module lets
+    you choose which fields it shows. The system extension
+    :composer:`typo3/cms-info` ships the entries "Basic settings",
+    "Record overview", "Cache and Age", and "Layouts". The system extension
+    :composer:`typo3/cms-seo` adds "SEO" and "Social Media".
 
     ..  figure:: /Images/GeneratedScreenshots/Info/PageTsModWebInfoFieldDefinitions.png
-        :alt: Default entries of Pagetree Overview
+        :alt: Select box "Type" with the entries "SEO", "Social Media", "Basic
+            settings", "Record overview", "Cache and Age", and "Layouts"
 
-        Default entries of Pagetree Overview
+        Default entries of the "Pagetree overview", with the system extension
+        `seo` installed
 
     By using page TsConfig it is possible to change the available fields and add additional entries to the select box.
 
