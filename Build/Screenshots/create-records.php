@@ -293,7 +293,7 @@ $examples = [
         )),
         // The example keeps two of the three columns
         'imagecols' => 2,
-        'tx_examples_separator' => ',',
+        'tx_myextension_separator' => ',',
     ],
     'dataProcMenu' => ['title' => 'MenuProcessor', 'snippet' => 'MenuProcessor', 'CType' => 'examples_dataprocmenu'],
     'dataProcLanguageMenu' => ['title' => 'LanguageMenuProcessor', 'snippet' => 'LanguageMenuProcessor', 'CType' => 'examples_dataproclang'],
@@ -338,10 +338,8 @@ $dataHandler = $process(['pages' => [
 $uids['speakers'] = $dataHandler->substNEWwithIDs['NEWspeakers'];
 $examples['dataProcDb']['pages'] = (string)$uids['speakers'];
 // The content element types exist only in the TypoScript of the examples,
-// not in the TCA, so the DataHandler would refuse them. The CSV example
-// reads its separator from a field of the examples extension.
+// not in the TCA, so the DataHandler would refuse them
 $contentConnection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
-$contentConnection->executeStatement('ALTER TABLE tt_content ADD COLUMN tx_examples_separator VARCHAR(1) DEFAULT \'\' NOT NULL');
 $setup = "page = PAGE\npage.10 < styles.content.get\n\n"
     // TYPO3 refuses a path with "..", like the one in $documentation
     . 'lib.contentElement.templateRootPaths.200 = ' . realpath($documentation . 'CodeSnippets/DataProcessing/Template') . "/\n";

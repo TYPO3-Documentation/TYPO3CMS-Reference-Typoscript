@@ -6,7 +6,7 @@ tt_content {
     dataProcessing.10 {
       if.isTrue.field = bodytext
       fieldName = bodytext
-      fieldDelimiter.field = tx_examples_separator
+      fieldDelimiter.field = tx_myextension_separator
       fieldEnclosure = "
       maximumColumns.field = imagecols
       as = myTable
