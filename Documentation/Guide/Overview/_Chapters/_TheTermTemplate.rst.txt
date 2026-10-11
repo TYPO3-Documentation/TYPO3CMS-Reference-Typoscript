@@ -25,7 +25,7 @@ Troubleshooting
 Common mistakes made in the TypoScript configuration can cause a message like this:
 
 ..  figure:: /Images/GeneratedScreenshots/FrontendOutput/NoTypoScriptRecordFoundDebuggingOff.png
-    :alt: Error page "500 Internal Server Error" with the reason "No site configuration or TypoScript template record found!"
+    :alt: Error page "500 Internal Server Error" of a site without TypoScript
 
 If you turn on the :ref:`debug mode <t3coreapi:troubleshooting-debug-mode>`
 you will get more detailed information:
@@ -33,18 +33,19 @@ you will get more detailed information:
 ..  figure:: /Images/GeneratedScreenshots/FrontendOutput/NoTypoScriptRecordFound.png
     :alt: Exception "No site configuration or TypoScript template record found!"
 
-`No site configuration or TypoScript template record found!`: This error
-appears if the site uses no site set and has no TypoScript of its own, and no
-TypoScript record is found on the page or on a page above it.
+`No site configuration or TypoScript template record found!`: TYPO3 shows
+this error if it finds no TypoScript for the page. The site uses no site set
+and has no TypoScript of its own. Neither the page nor a page above it has a
+TypoScript record.
 
 ..  figure:: /Images/GeneratedScreenshots/FrontendOutput/NoPageConfigured.png
     :alt: Exception "No page configured for type=0."
 
 `No page configured for type=0.`: This error appears if the TypoScript
 configuration of the current page contains no :ref:`PAGE <guide-page>`
-object with `typeNum` 0.
+object with :typoscript:`typeNum` 0.
 
-The following TypoScript setup code is enough to remove this warning:
+The following TypoScript setup code is enough to remove this error:
 
 ..  literalinclude:: /Guide/Overview/_snippets/_page1.typoscript
 
