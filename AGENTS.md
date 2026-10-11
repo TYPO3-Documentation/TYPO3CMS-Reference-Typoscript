@@ -227,6 +227,16 @@ and finds them by their anchor, so their names follow a fixed scheme:
 *   An unfiltered `confval-menu` lists every confval of its page, the box
     included. Add `:exclude: <name>` to the property table of such a page.
 
+## Alt texts of screenshots
+
+An alt text says what the screenshot shows, including the messages, labels,
+and values that the text relies on:
+https://docs.typo3.org/permalink/h2document:guidelines-for-images-alt-text
+
+When `make screenshots` replaces an image, compare it with its alt text and
+update the alt text if the image shows different text:
+https://docs.typo3.org/permalink/h2document:guidelines-for-images-alt-text-update
+
 ## Commit message format
 
 Follow https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Howto/EditLocal.html:
