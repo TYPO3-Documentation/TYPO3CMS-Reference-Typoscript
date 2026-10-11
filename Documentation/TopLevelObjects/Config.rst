@@ -999,17 +999,8 @@ Properties of 'config'
 
         TYPO3 sets these defaults:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_txExtbaseDefaults.typoscript
             :caption: EXT:extbase/ext_localconf.php
-
-            config.tx_extbase {
-                mvc {
-                    throwPageNotFoundExceptionIfActionCantBeResolved = 0
-                }
-                persistence {
-                    enableAutomaticCacheClearing = 1
-                }
-            }
 
     ..  rubric:: tx_[extension key with no underscores]_[*]
 
