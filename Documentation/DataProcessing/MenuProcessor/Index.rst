@@ -266,4 +266,8 @@ menu items of level 2 in an array called `children`.
 
 ..  figure:: /Images/GeneratedScreenshots/DataProcessing/MenuProcessor.png
     :zoom: lightbox
-    :alt: Output of a MenuProcessor, including debug output
+    :alt: Dump of the variable headerMenu with 9 menu items, and a menu with
+        the links SiteProcessor, SiteLanguageProcessor, SplitProcessor,
+        CommaSeparatedValueProcessor, MenuProcessor with a dropdown for its
+        subpages, LanguageMenuProcessor, FilesProcessor, GalleryProcessor, and
+        DatabaseQueryProcessor

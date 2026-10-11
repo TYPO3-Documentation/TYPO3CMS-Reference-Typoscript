@@ -249,4 +249,6 @@ there is a desired width and height supplied.
 
 ..  figure:: /Images/GeneratedScreenshots/DataProcessing/GalleryProcessor.png
     :class: with-shadow
-    :alt: Gallery dump and output
+    :alt: Dump of the variable gallery with the keys position, width 1000,
+        count, columnSpacing 0, border, and rows with 1 row, and the output
+        with an orange, a green, and a blue circle, each in a green border

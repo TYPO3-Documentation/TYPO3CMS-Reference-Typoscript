@@ -143,4 +143,7 @@ In this example, the field data of the last column will be stripped off. Therefo
 
 ..  figure:: /Images/GeneratedScreenshots/DataProcessing/CommaSeparatedValueProcessor.png
     :zoom: lightbox
-    :alt: Output of a CommaSeparatedValueProcessor, including debug output of the provided data structure
+    :alt: Dump of the variable myTable with 3 rows of 2 items each, and a table
+        under the headline "Output, 2 columns separated by char ,", with the
+        rows 1 to 3 and the columns "This is row 1 column 1" and "This is row 1
+        column 2" up to "This is row 3 column 2"
