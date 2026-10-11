@@ -212,6 +212,16 @@ $dataHandler = $process(['pages' => [
 ]]);
 $uids['setsRoot'] = $dataHandler->substNEWwithIDs['NEWsetsRoot'];
 
+// Two more sites, whose frontend shows the errors of a missing TypoScript
+// configuration: one has no TypoScript at all, the other one has a
+// TypoScript record without a PAGE object
+$dataHandler = $process(['pages' => [
+    'NEWnoTypoScript' => ['pid' => 0, 'title' => 'Site without TypoScript', 'is_siteroot' => 1, 'hidden' => 0],
+    'NEWnoPage' => ['pid' => 0, 'title' => 'Site without a page', 'is_siteroot' => 1, 'hidden' => 0],
+]]);
+$uids['noTypoScript'] = $dataHandler->substNEWwithIDs['NEWnoTypoScript'];
+$uids['noPage'] = $dataHandler->substNEWwithIDs['NEWnoPage'];
+
 // The TypoScript of the root page, replacing the one of "typo3 setup"
 $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('sys_template');
 $connection->delete('sys_template', ['pid' => 1]);
@@ -222,6 +232,14 @@ $process(['sys_template' => ['NEWtemplate' => [
     'clear' => 3,
     'constants' => $fixture('constants.typoscript'),
     'config' => $fixture('setup.typoscript'),
+]]]);
+// The record of the site without a page, created after the one of the root
+// page, so the uids that the screenshots show stay the same
+$process(['sys_template' => ['NEWnoPageRecord' => [
+    'pid' => $uids['noPage'],
+    'title' => 'Main TypoScript',
+    'root' => 1,
+    'clear' => 3,
 ]]]);
 
 // Without site sets and the TypoScript file that "typo3 setup" writes next
@@ -241,6 +259,13 @@ $configuration['rootPageId'] = $uids['setsRoot'];
 $configuration['base'] = 'http://localhost:8080/sets/';
 $configuration['dependencies'] = ['typo3/fluid-styled-content-css'];
 GeneralUtility::makeInstance(SiteWriter::class)->write('sets', $configuration);
+// The sites of the error examples, without sets
+unset($configuration['dependencies']);
+foreach (['noTypoScript' => 'no-typoscript', 'noPage' => 'no-page'] as $root => $identifier) {
+    $configuration['rootPageId'] = $uids[$root];
+    $configuration['base'] = 'http://localhost:8080/' . $identifier . '/';
+    GeneralUtility::makeInstance(SiteWriter::class)->write($identifier, $configuration);
+}
 
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
 GeneralUtility::mkdir_deep(Environment::getVarPath());
