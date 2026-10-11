@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "devDependencies": {
+    "bootstrap": "5.3.8",
     "playwright": "1.63.0"
   }
 }

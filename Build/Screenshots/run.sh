@@ -37,5 +37,5 @@ ${PHP_RUN} .Build/bin/typo3 cache:flush
 
 ${WEB_START}
 trap '${WEB_STOP}' EXIT
-# Playwright is installed once, so later runs work without the network
-${BROWSER_RUN} sh -c "( [ -d node_modules/playwright ] || npm ci --no-audit --no-fund ) && DUMP=${DUMP:-} node screenshots.mjs $*"
+# The packages are installed once, so later runs work without the network
+${BROWSER_RUN} sh -c "( [ -d node_modules/playwright ] && [ -d node_modules/bootstrap ] || npm ci --no-audit --no-fund ) && DUMP=${DUMP:-} node screenshots.mjs $*"
