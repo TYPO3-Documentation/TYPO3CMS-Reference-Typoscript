@@ -59,5 +59,5 @@ be accessed:
 
 The array now contains the information from the site language configuration:
 
-..  figure:: /Images/ManualScreenshots/SiteLanguageProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/SiteLanguageProcessor.png
     :class: with-shadow

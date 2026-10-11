@@ -140,6 +140,6 @@ be used as a variable :html:`{myContentTable}` inside Fluid for iteration.
 Using :typoscript:`maximumColumns` limits the amount of columns in the multi dimensional array.
 In this example, the field data of the last column will be stripped off. Therefore the output would be:
 
-..  figure:: /Images/ManualScreenshots/DataProcessing/CommaSeparatedValueProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/CommaSeparatedValueProcessor.png
     :zoom: lightbox
     :alt: Output of a CommaSeparatedValueProcessor, including debug output of the provided data structure
