@@ -24,6 +24,13 @@ ${PHP_RUN} .Build/bin/typo3 extension:setup
 ${PHP_RUN} .Build/bin/typo3 configuration:set BE/debug 1
 # The PHP web server provides no SERVER_NAME to compare the host with
 ${PHP_RUN} .Build/bin/typo3 configuration:set SYS/trustedHostsPattern '.*'
+# The browser connects from 127.0.0.1, which devIPmask lists, so the frontend
+# shows its errors in debug mode. Trusted as a proxy, the browser can send
+# another client address instead, which shows the error page of a visitor.
+${PHP_RUN} .Build/bin/typo3 configuration:set SYS/devIPmask '127.0.0.1'
+${PHP_RUN} .Build/bin/typo3 configuration:set SYS/displayErrors -- -1
+${PHP_RUN} .Build/bin/typo3 configuration:set SYS/reverseProxyIP '127.0.0.1'
+${PHP_RUN} .Build/bin/typo3 configuration:set SYS/reverseProxyHeaderMultiValue 'first'
 ${PHP_RUN} php Build/Screenshots/create-records.php
 # The caches still hold the TypoScript of the site that "typo3 setup" created
 ${PHP_RUN} .Build/bin/typo3 cache:flush
