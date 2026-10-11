@@ -190,6 +190,16 @@ printed as an ordinary field instead of the default value.
     works wherever its object is used, so a path would name a place that
     does not exist.
 
+## Alt texts of screenshots
+
+An alt text says what the screenshot shows, including the messages, labels,
+and values that the text relies on:
+https://docs.typo3.org/permalink/h2document:guidelines-for-images-alt-text
+
+When you replace a screenshot, compare it with its alt text and
+update the alt text if the image shows different text:
+https://docs.typo3.org/permalink/h2document:guidelines-for-images-alt-text-update
+
 ## Commit message format
 
 Follow https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Howto/EditLocal.html:
