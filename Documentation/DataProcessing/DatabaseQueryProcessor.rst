@@ -103,38 +103,41 @@ For usage of the variables within Fluid see
 
 ..  _databasequeryprocessor-examples:
 
-Example: Display haiku records
-==============================
+Example: Display speaker records
+================================
 
 Please see also :ref:`About the examples <dataprocessing-about-examples>`.
+
+In this example, an extension stores the speakers of a conference in the
+table `tx_myextension_speaker`, with the fields `name`, `company`, `bio`, and
+`photo`. A content element lists the speakers that are stored in the folder
+selected in its field `pages` (:guilabel:`Record Storage Page`).
 
 ..  rubric:: TypoScript
 
 We define the :typoscript:`dataProcessing` property to use the
 :php-short:`\TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor`:
 
-..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/DatabaseQueryProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/DatabaseQueryProcessor.typoscript
+..  literalinclude:: /CodeSnippets/my_extension/Configuration/Sets/Main/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
-In the Fluid template then iterate over the records. As we used the recursive
-data processor :ref:`files data processor <filesprocessor>` on the image records, we can also output
-the images.
+In the Fluid template, iterate over the records. As the
+:ref:`files data processor <filesprocessor>` processes the photo of each
+record, the template can output the photos as well.
 
-..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcDb.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcDb.fluid.html
+..  literalinclude:: /CodeSnippets/my_extension/Resources/Private/Templates/ContentElements/Speakers.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/Speakers.fluid.html
 
 ..  rubric:: Output
 
 Each entry of the records array contains the data of the table in `data`
-and the data of the images in `files`.
+and the data of the photo in `files`.
 
-..  figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/DatabaseProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/DatabaseQueryProcessor.png
     :class: with-shadow
-    :alt: Haiku record data dump and output
-
-    Haiku record data dump and output
+    :alt: Dump of the speaker records and the list of speakers
 
 ..  _databasequeryprocessor-examples:
 

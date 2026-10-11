@@ -1,0 +1,23 @@
+lib.contentElement.templateRootPaths.20 = EXT:my_extension/Resources/Private/Templates/ContentElements/
+
+tt_content {
+  myextension_speakers =< lib.contentElement
+  myextension_speakers {
+    templateName = Speakers
+    dataProcessing.10 = database-query
+    dataProcessing.10 {
+      if.isTrue.field = pages
+      table = tx_myextension_speaker
+      pidInList.field = pages
+      orderBy = name
+      as = speakers
+      # Fetches the photo of each speaker
+      dataProcessing {
+        10 = files
+        10 {
+          references.fieldName = photo
+        }
+      }
+    }
+  }
+}
