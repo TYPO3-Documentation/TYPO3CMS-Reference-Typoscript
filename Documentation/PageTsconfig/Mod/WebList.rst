@@ -97,7 +97,7 @@ Example: Use semicolon as delimiter CSV downloads
 -------------------------------------------------
 
 ..  literalinclude:: /CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript
-    :caption: EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
 ..  include:: /Images/ManualScreenshots/WebList/ExportDialog.rst.txt
 
@@ -124,7 +124,7 @@ Example: Use single quotes as quoting character for CSV downloads
 -----------------------------------------------------------------
 
 ..  literalinclude:: /CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript
-    :caption: EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
 ..  include:: /Images/ManualScreenshots/WebList/ExportDialog.rst.txt
 
