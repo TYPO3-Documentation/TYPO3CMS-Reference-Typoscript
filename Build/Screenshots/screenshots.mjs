@@ -58,6 +58,12 @@ const openPanel = async (frame, id) => {
   }
 };
 
+// The error page names a request id that differs on every request, so the
+// image would change with every run
+const hideRequestId = async (frame) => {
+  await frame.locator('.typo3-error-page-requestid').evaluate((element) => element.remove());
+};
+
 // A page in the page tree, which is outside of the module frame
 const node = (uid) => `.node[data-id="${uid}"]`;
 // Opens pages in the page tree, from the top down: the tree opens only the
@@ -314,7 +320,25 @@ const screenshots = {
     window: true,
     until: '#template-analyzer-setup-errors-body',
   },
-
+  'FrontendOutput/NoTypoScriptRecordFound': {
+    url: `${baseUrl}/no-typoscript/`,
+    frontend: true,
+    window: true,
+    until: '.trace-head',
+  },
+  'FrontendOutput/NoTypoScriptRecordFoundDebuggingOff': {
+    url: `${baseUrl}/no-typoscript/`,
+    frontend: true,
+    visitor: true,
+    prepare: hideRequestId,
+    element: '.typo3-error-page-container',
+  },
+  'FrontendOutput/NoPageConfigured': {
+    url: `${baseUrl}/no-page/`,
+    frontend: true,
+    window: true,
+    until: '.trace-head',
+  },
 };
 
 // Hides the page tree and collapses the groups of the module menu, except
@@ -358,12 +382,16 @@ for (const name of names) {
     throw new Error(`Unknown screenshot "${name}"`);
   }
   await page.setViewportSize({
-    width: screenshot.width ?? (screenshot.window ? 1000 : 1280),
+    width: screenshot.width ?? (screenshot.window || screenshot.frontend ? 1000 : 1280),
     height: screenshot.height ?? viewportHeight,
   });
+  // A client address that devIPmask does not list, which run.sh lets the
+  // browser send: the frontend shows its errors as to a visitor
+  await page.setExtraHTTPHeaders(screenshot.visitor ? { 'X-Forwarded-For': '192.0.2.1' } : {});
   await page.goto(screenshot.url);
   await page.waitForLoadState('networkidle');
-  const frame = page.frame({ name: 'list_frame' });
+  // A frontend page has no module frame around it
+  const frame = screenshot.frontend ? page.mainFrame() : page.frame({ name: 'list_frame' });
   await frame.waitForLoadState('networkidle');
   // The backend remembers the last tab of a form, so every form opens a
   // tab of its own: General, unless the screenshot names another one
@@ -375,7 +403,7 @@ for (const name of names) {
     await screenshot.prepare(frame);
     await page.waitForTimeout(500);
   }
-  if (screenshot.window) {
+  if (screenshot.window && !screenshot.frontend) {
     await collapseNavigation();
   }
   // A hovered tab or button would look selected
@@ -393,7 +421,8 @@ for (const name of names) {
     continue;
   }
   if (screenshot.window) {
-    // The whole backend, which also shows where the module is in the menu.
+    // The whole backend, which also shows where the module is in the menu,
+    // or the whole frontend page.
     // It ends below the element named in "until", so the image takes no more
     // room on the page than it needs.
     let clip;
