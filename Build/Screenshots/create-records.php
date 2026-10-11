@@ -294,6 +294,8 @@ $examples = [
         'imagecols' => 2,
         'tx_examples_separator' => ',',
     ],
+    'dataProcMenu' => ['title' => 'MenuProcessor', 'snippet' => 'MenuProcessor', 'CType' => 'examples_dataprocmenu'],
+    'dataProcLanguageMenu' => ['title' => 'LanguageMenuProcessor', 'snippet' => 'LanguageMenuProcessor', 'CType' => 'examples_dataproclang'],
 ];
 $dataHandler = $process(['pages' => [
     'NEWdataProcessors' => ['pid' => 0, 'title' => 'Data processors', 'is_siteroot' => 1, 'hidden' => 0],
@@ -304,6 +306,17 @@ foreach (array_reverse($examples, true) as $key => $example) {
     $pages['NEW' . $key] = ['pid' => $uids['dataProcessors'], 'title' => $example['title'], 'hidden' => 0];
 }
 $dataHandler = $process(['pages' => $pages]);
+foreach (array_keys($examples) as $key) {
+    $uids[$key] = $dataHandler->substNEWwithIDs['NEW' . $key];
+}
+// The second level of the menu example, with a spacer between the pages,
+// which the template shows as a divider
+$process(['pages' => [
+    'NEWmenuPage3' => ['pid' => $uids['dataProcMenu'], 'title' => 'Third page', 'hidden' => 0],
+    'NEWmenuSpacer' => ['pid' => $uids['dataProcMenu'], 'title' => 'Spacer', 'doktype' => 199, 'hidden' => 0],
+    'NEWmenuPage2' => ['pid' => $uids['dataProcMenu'], 'title' => 'Second page', 'hidden' => 0],
+    'NEWmenuPage1' => ['pid' => $uids['dataProcMenu'], 'title' => 'First page', 'hidden' => 0],
+]]);
 // The content element types exist only in the TypoScript of the examples,
 // not in the TCA, so the DataHandler would refuse them. The CSV example
 // reads its separator from a field of the examples extension.
@@ -313,7 +326,6 @@ $setup = "page = PAGE\npage.10 < styles.content.get\n\n"
     // TYPO3 refuses a path with "..", like the one in $documentation
     . 'lib.contentElement.templateRootPaths.200 = ' . realpath($documentation . 'CodeSnippets/DataProcessing/Template') . "/\n";
 foreach ($examples as $key => $example) {
-    $uids[$key] = $dataHandler->substNEWwithIDs['NEW' . $key];
     $contentConnection->insert('tt_content', array_merge(
         array_diff_key($example, ['title' => true, 'snippet' => true]),
         ['pid' => $uids[$key], 'colPos' => 0, 'tstamp' => time(), 'crdate' => time()]
@@ -323,6 +335,15 @@ foreach ($examples as $key => $example) {
 $configuration['rootPageId'] = $uids['dataProcessors'];
 $configuration['base'] = 'http://localhost:8080/data-processors/';
 $configuration['dependencies'] = ['typo3/fluid-styled-content'];
+// Languages that the pages are not translated into, which the language
+// menu example shows as unavailable
+$language = $configuration['languages'][0];
+$configuration['languages'][] = array_merge($language, [
+    'title' => 'Dansk', 'languageId' => 1, 'base' => '/da/', 'locale' => 'da_DK.UTF-8', 'navigationTitle' => 'Dansk', 'flag' => 'dk',
+]);
+$configuration['languages'][] = array_merge($language, [
+    'title' => 'Deutsch', 'languageId' => 2, 'base' => '/de/', 'locale' => 'de_DE.UTF-8', 'navigationTitle' => 'Deutsch', 'flag' => 'de',
+]);
 GeneralUtility::makeInstance(SiteWriter::class)->write('data-processors', $configuration);
 file_put_contents(Environment::getConfigPath() . '/sites/data-processors/setup.typoscript', $setup);
 
