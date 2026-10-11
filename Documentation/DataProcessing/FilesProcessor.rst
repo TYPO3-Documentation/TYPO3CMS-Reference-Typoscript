@@ -225,7 +225,7 @@ Then iterate over the files in the :ref:`Fluid <t3coreapi:fluid>` template:
 
 The array `images` contains the data of the files now:
 
-..  figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/FilesProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/FilesProcessor.png
     :class: with-shadow
     :alt: files dump and output
 

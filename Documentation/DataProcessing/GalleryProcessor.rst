@@ -247,6 +247,6 @@ to the content of :ref:`as <filesprocessor-as>` in the
 The array now contains the images ordered in rows and columns. For each image
 there is a desired width and height supplied.
 
-..  figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/GalleryProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/GalleryProcessor.png
     :class: with-shadow
     :alt: Gallery dump and output

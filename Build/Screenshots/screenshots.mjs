@@ -360,6 +360,8 @@ const screenshots = {
   'DataProcessing/CommaSeparatedValueProcessor': dataProcessor('CommaSeparatedValueProcessor'),
   'DataProcessing/MenuProcessor': dataProcessor('MenuProcessor'),
   'DataProcessing/LanguageMenuProcessor': dataProcessor('LanguageMenuProcessor'),
+  'DataProcessing/FilesProcessor': dataProcessor('FilesProcessor'),
+  'DataProcessing/GalleryProcessor': dataProcessor('GalleryProcessor'),
 };
 
 // Hides the page tree and collapses the groups of the module menu, except
