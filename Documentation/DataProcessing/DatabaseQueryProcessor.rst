@@ -139,7 +139,7 @@ and the data of the images in `files`.
 
     Haiku record data dump and output
 
-..  _databasequeryprocessor-examples:
+..  _databasequeryprocessor-example-mm-workspaces:
 
 Example: Display sorted records from an MM table working with workspaces
 ========================================================================
