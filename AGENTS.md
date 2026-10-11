@@ -229,16 +229,13 @@ and finds them by their anchor, so their names follow a fixed scheme:
 
 ## Alt texts of screenshots
 
-An alt text says what the screenshot shows: the messages, labels, and values
-that the surrounding text relies on. A reader who cannot see the image depends
-on it, and so does an agent that would otherwise have to load the image.
-Generic text such as "Output of a MenuProcessor" is not enough.
+An alt text says what the screenshot shows, including the messages, labels,
+and values that the text relies on:
+https://docs.typo3.org/permalink/h2document:guidelines-for-images-alt-text
 
-*   Wrap a long alt text over several lines, indented below `:alt:`. Never
-    shorten it to keep the line length.
-*   When you replace a screenshot, with `make screenshots` or by hand, compare
-    the new image with its alt text. If the text in the image changed, update
-    the alt text: a message, a menu item, a label, or the number of entries.
+When `make screenshots` replaces an image, compare it with its alt text and
+update the alt text if the image shows different text:
+https://docs.typo3.org/permalink/h2document:guidelines-for-images-alt-text-update
 
 ## Commit message format
 
