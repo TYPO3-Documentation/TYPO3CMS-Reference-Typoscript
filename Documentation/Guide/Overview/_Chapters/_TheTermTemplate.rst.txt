@@ -25,7 +25,8 @@ Troubleshooting
 Common mistakes made in the TypoScript configuration can cause a message like this:
 
 ..  figure:: /Images/GeneratedScreenshots/FrontendOutput/NoTypoScriptRecordFoundDebuggingOff.png
-    :alt: Error page "500 Internal Server Error" of a site without TypoScript
+    :alt: Error page "500 Internal Server Error" with the reason "No site
+        configuration or TypoScript template record found!"
 
 If you turn on the :ref:`debug mode <t3coreapi:troubleshooting-debug-mode>`
 you will get more detailed information:
