@@ -40,7 +40,9 @@ a TypoScript record or by having a
 :ref:`Site Set TypoScript provider <t3coreapi:site-sets-typoscript>`.
 
 ..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/TypoScriptRecordsOverview.png
-    :alt: Screenshot of Submodule "TypoScript records overview" in the TYPO3 backend
+    :alt: Module "TypoScript Overview" with a table of the pages that have
+        TypoScript and the columns "Page title", "TypoScript definitions",
+        "Site set", and "Marked as root"
 
 If TypoScript was added by a record, it is linked.
 
