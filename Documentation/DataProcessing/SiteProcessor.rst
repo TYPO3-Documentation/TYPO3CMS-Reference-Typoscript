@@ -44,19 +44,21 @@ Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\SiteProcessor` the
 following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SiteProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 In the Fluid template the properties of the site configuration can be accessed:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSite.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSite.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcSite.fluid.html
 
 ..  rubric:: Output
 
 The array now contains the information from the site configuration:
 
-..  figure:: /Images/ManualScreenshots/DataProcessing/SiteProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/SiteProcessor.png
     :zoom: lightbox
-    :alt: Output of a SiteProcessor, including debug output
+    :alt: Dump of the variable site, a Site object with the identifier
+        "data-processors", its base, its configuration, 3 languages, and 2
+        sets, and the output "Base url: http://localhost:8080/data-processors/"

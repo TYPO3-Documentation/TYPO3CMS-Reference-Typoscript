@@ -235,18 +235,20 @@ to the content of :ref:`as <filesprocessor-as>` in the
 :ref:`FilesProcessor <filesprocessor>`:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/GalleryProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcGallery.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcGallery.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcGallery.fluid.html
 
 ..  rubric:: Output
 
 The array now contains the images ordered in rows and columns. For each image
 there is a desired width and height supplied.
 
-..  figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/GalleryProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/GalleryProcessor.png
     :class: with-shadow
-    :alt: Gallery dump and output
+    :alt: Dump of the variable gallery with the keys position, width 1000,
+        count, columnSpacing 0, border, and rows with 1 row, and the output
+        with an orange, a green, and a blue circle, each in a green border

@@ -250,20 +250,24 @@ Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor` the
 following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/MenuProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/MenuProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 This generated menu can be used in Fluid like this:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcMenu.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcMenu.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcMenu.fluid.html
 
 ..  rubric:: Output
 
 The array now contains the menu items on level one. Each item in return has the
 menu items of level 2 in an array called `children`.
 
-..  figure:: /Images/ManualScreenshots/DataProcessing/MenuProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/MenuProcessor.png
     :zoom: lightbox
-    :alt: Output of a MenuProcessor, including debug output
+    :alt: Dump of the variable headerMenu with 9 menu items, and a menu with
+        the links SiteProcessor, SiteLanguageProcessor, SplitProcessor,
+        CommaSeparatedValueProcessor, MenuProcessor with a dropdown for its
+        subpages, LanguageMenuProcessor, FilesProcessor, GalleryProcessor, and
+        DatabaseQueryProcessor

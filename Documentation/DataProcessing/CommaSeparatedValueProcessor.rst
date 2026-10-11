@@ -103,8 +103,9 @@ Example: Transforming comma separated content into a html table
 Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 In this example, the `bodytext` field contains comma-separated
-values (CSV) data. To support different formats, the separator between
-the values can be specified.
+values (CSV) data. To support different formats, an extension adds the field
+`tx_myextension_separator` to `tt_content`. An editor enters the separator
+between the values in this field.
 
 This example is also described in-depth in :ref:`TYPO3 Explained:
 Extended content element example <t3coreapi:AddingCE-Extended-Example>`.
@@ -125,7 +126,7 @@ We define the :typoscript:`dataProcessing` property to use the
 :php-short:`\TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor`:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/CommaSeparatedValueProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
@@ -133,13 +134,16 @@ In the Fluid template, you can iterate over the processed data. "myContentTable"
 be used as a variable :html:`{myContentTable}` inside Fluid for iteration.
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcCsv.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcCsv.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcCsv.fluid.html
 
 ..  rubric:: Output
 
 Using :typoscript:`maximumColumns` limits the amount of columns in the multi dimensional array.
 In this example, the field data of the last column will be stripped off. Therefore the output would be:
 
-..  figure:: /Images/ManualScreenshots/DataProcessing/CommaSeparatedValueProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/CommaSeparatedValueProcessor.png
     :zoom: lightbox
-    :alt: Output of a CommaSeparatedValueProcessor, including debug output of the provided data structure
+    :alt: Dump of the variable myTable with 3 rows of 2 items each, and a table
+        under the headline "Output, 2 columns separated by char ,", with the
+        rows 1 to 3 and the columns "This is row 1 column 1" and "This is row 1
+        column 2" up to "This is row 3 column 2"

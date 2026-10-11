@@ -21,6 +21,7 @@ use TYPO3\CMS\Core\Core\SystemEnvironmentBuilder;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\DataHandling\DataHandler;
 use TYPO3\CMS\Core\Localization\LanguageServiceFactory;
+use TYPO3\CMS\Core\Resource\StorageRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 $classLoader = require __DIR__ . '/../../.Build/vendor/autoload.php';
@@ -212,6 +213,16 @@ $dataHandler = $process(['pages' => [
 ]]);
 $uids['setsRoot'] = $dataHandler->substNEWwithIDs['NEWsetsRoot'];
 
+// Two more sites, whose frontend shows the errors of a missing TypoScript
+// configuration: one has no TypoScript at all, the other one has a
+// TypoScript record without a PAGE object
+$dataHandler = $process(['pages' => [
+    'NEWnoTypoScript' => ['pid' => 0, 'title' => 'Site without TypoScript', 'is_siteroot' => 1, 'hidden' => 0],
+    'NEWnoPage' => ['pid' => 0, 'title' => 'Site without a page', 'is_siteroot' => 1, 'hidden' => 0],
+]]);
+$uids['noTypoScript'] = $dataHandler->substNEWwithIDs['NEWnoTypoScript'];
+$uids['noPage'] = $dataHandler->substNEWwithIDs['NEWnoPage'];
+
 // The TypoScript of the root page, replacing the one of "typo3 setup"
 $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('sys_template');
 $connection->delete('sys_template', ['pid' => 1]);
@@ -222,6 +233,14 @@ $process(['sys_template' => ['NEWtemplate' => [
     'clear' => 3,
     'constants' => $fixture('constants.typoscript'),
     'config' => $fixture('setup.typoscript'),
+]]]);
+// The record of the site without a page, created after the one of the root
+// page, so the uids that the screenshots show stay the same
+$process(['sys_template' => ['NEWnoPageRecord' => [
+    'pid' => $uids['noPage'],
+    'title' => 'Main TypoScript',
+    'root' => 1,
+    'clear' => 3,
 ]]]);
 
 // Without site sets and the TypoScript file that "typo3 setup" writes next
@@ -241,6 +260,172 @@ $configuration['rootPageId'] = $uids['setsRoot'];
 $configuration['base'] = 'http://localhost:8080/sets/';
 $configuration['dependencies'] = ['typo3/fluid-styled-content-css'];
 GeneralUtility::makeInstance(SiteWriter::class)->write('sets', $configuration);
+// The sites of the error examples, without sets
+unset($configuration['dependencies']);
+foreach (['noTypoScript' => 'no-typoscript', 'noPage' => 'no-page'] as $root => $identifier) {
+    $configuration['rootPageId'] = $uids[$root];
+    $configuration['base'] = 'http://localhost:8080/' . $identifier . '/';
+    GeneralUtility::makeInstance(SiteWriter::class)->write($identifier, $configuration);
+}
+
+// A site for the examples of the data processors: each example gets a page
+// with one content element of the type that its TypoScript snippet defines,
+// rendered with the Fluid template of the documentation
+$examples = [
+    'dataProcSite' => ['title' => 'SiteProcessor', 'snippet' => 'SiteProcessor', 'CType' => 'myextension_dataprocsite'],
+    'dataProcSiteLanguage' => ['title' => 'SiteLanguageProcessor', 'snippet' => 'SiteLanguageProcessor', 'CType' => 'myextension_dataprocsitelanguage'],
+    'dataProcSplit' => [
+        'title' => 'SplitProcessor',
+        'snippet' => 'SplitProcessor',
+        'CType' => 'myextension_dataprocsplit',
+        'header_link' => 'https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/DataProcessing/SplitProcessor.html',
+    ],
+    'dataProcCsv' => [
+        'title' => 'CommaSeparatedValueProcessor',
+        'snippet' => 'CommaSeparatedValueProcessor',
+        'CType' => 'myextension_dataproccsv',
+        'bodytext' => implode("\n", array_map(
+            static fn(int $row): string => implode(',', array_map(
+                static fn(int $column): string => "\"This is row $row column $column\"",
+                range(1, 3)
+            )),
+            range(1, 3)
+        )),
+        // The example keeps two of the three columns
+        'imagecols' => 2,
+        'tx_myextension_separator' => ',',
+    ],
+    'dataProcMenu' => ['title' => 'MenuProcessor', 'snippet' => 'MenuProcessor', 'CType' => 'myextension_dataprocmenu'],
+    'dataProcLanguageMenu' => ['title' => 'LanguageMenuProcessor', 'snippet' => 'LanguageMenuProcessor', 'CType' => 'myextension_dataproclang'],
+    'dataProcFiles' => ['title' => 'FilesProcessor', 'snippet' => 'FilesProcessor', 'CType' => 'myextension_dataprocfiles', 'images' => 2],
+    'dataProcGallery' => [
+        'title' => 'GalleryProcessor',
+        'snippet' => 'GalleryProcessor',
+        'CType' => 'myextension_dataprocgallery',
+        'images' => 3,
+        // The example takes the border from this field
+        'imageborder' => 1,
+    ],
+    // The TypoScript of this example comes with the set of the example
+    // extension in Documentation/CodeSnippets/my_extension
+    'dataProcDb' => ['title' => 'DatabaseQueryProcessor', 'CType' => 'myextension_speakers'],
+];
+$dataHandler = $process(['pages' => [
+    'NEWdataProcessors' => ['pid' => 0, 'title' => 'Data processors', 'is_siteroot' => 1, 'hidden' => 0],
+]]);
+$uids['dataProcessors'] = $dataHandler->substNEWwithIDs['NEWdataProcessors'];
+$pages = [];
+foreach (array_reverse($examples, true) as $key => $example) {
+    $pages['NEW' . $key] = ['pid' => $uids['dataProcessors'], 'title' => $example['title'], 'hidden' => 0];
+}
+$dataHandler = $process(['pages' => $pages]);
+foreach (array_keys($examples) as $key) {
+    $uids[$key] = $dataHandler->substNEWwithIDs['NEW' . $key];
+}
+// The second level of the menu example, with a spacer between the pages,
+// which the template shows as a divider
+$process(['pages' => [
+    'NEWmenuPage3' => ['pid' => $uids['dataProcMenu'], 'title' => 'Third page', 'hidden' => 0],
+    'NEWmenuSpacer' => ['pid' => $uids['dataProcMenu'], 'title' => 'Spacer', 'doktype' => 199, 'hidden' => 0],
+    'NEWmenuPage2' => ['pid' => $uids['dataProcMenu'], 'title' => 'Second page', 'hidden' => 0],
+    'NEWmenuPage1' => ['pid' => $uids['dataProcMenu'], 'title' => 'First page', 'hidden' => 0],
+]]);
+// The folder with the speakers that the database query example reads from
+// the field "pages" of its content element
+$dataHandler = $process(['pages' => [
+    'NEWspeakers' => ['pid' => $uids['dataProcDb'], 'title' => 'Speakers', 'doktype' => 254, 'hidden' => 0],
+]]);
+$uids['speakers'] = $dataHandler->substNEWwithIDs['NEWspeakers'];
+$examples['dataProcDb']['pages'] = (string)$uids['speakers'];
+// The content element types exist only in the TypoScript of the examples,
+// not in the TCA, so the DataHandler would refuse them
+$contentConnection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
+$setup = "page = PAGE\npage.10 < styles.content.get\n\n"
+    // TYPO3 refuses a path with "..", like the one in $documentation
+    . 'lib.contentElement.templateRootPaths.200 = ' . realpath($documentation . 'CodeSnippets/DataProcessing/Template') . "/\n";
+// Plain images for the examples with files, drawn here, so that nobody
+// else holds a right to them
+$storage = GeneralUtility::makeInstance(StorageRepository::class)->getDefaultStorage();
+// In a folder below user_upload, so the root of fileadmin, which the file
+// list screenshot shows, stays the same
+$folder = $storage->createFolder('data-processors', $storage->getFolder('user_upload'));
+$files = [];
+foreach ([[0x1f6feb, 'Blue circle'], [0x2da44e, 'Green circle'], [0xfb8500, 'Orange circle']] as $i => [$color, $title]) {
+    $image = imagecreatetruecolor(800, 600);
+    imagefill($image, 0, 0, imagecolorallocate($image, 0xf6, 0xf8, 0xfa));
+    imagefilledellipse($image, 400, 300, 400, 400, imagecolorallocate($image, $color >> 16, ($color >> 8) & 0xff, $color & 0xff));
+    $path = Environment::getVarPath() . '/circle-' . $i . '.png';
+    imagepng($image, $path);
+    $files[] = [$storage->addFile($path, $folder, strtolower(str_replace(' ', '-', $title)) . '.png'), $title];
+}
+// The speakers of the example extension, the first one with a photo: a
+// drawn silhouette
+$image = imagecreatetruecolor(600, 600);
+imagefill($image, 0, 0, imagecolorallocate($image, 0xdd, 0xe3, 0xea));
+$grey = imagecolorallocate($image, 0x8c, 0x95, 0x9f);
+imagefilledellipse($image, 300, 230, 220, 220, $grey);
+imagefilledellipse($image, 300, 600, 440, 380, $grey);
+imagepng($image, Environment::getVarPath() . '/speaker.png');
+$photo = $storage->addFile(Environment::getVarPath() . '/speaker.png', $folder, 'speaker.png');
+$speakers = [
+    ['Alex Example', 'Example Agency', '<p>Alex builds extensions for <strong>public institutions</strong>.</p>'],
+    ['Robin Sample', 'Sample Ltd', '<p>Robin maintains the TypoScript of several large sites.</p>'],
+    ['Kai Muster', 'Muster AG', '<p>Kai teaches editors how to work with content elements.</p>'],
+];
+$dataHandler = $process(['tx_myextension_speaker' => array_combine(
+    array_map(static fn(int $i): string => 'NEWspeaker' . $i, array_keys($speakers)),
+    array_map(static fn(array $speaker): array => [
+        'pid' => $uids['speakers'], 'name' => $speaker[0], 'company' => $speaker[1], 'bio' => $speaker[2],
+    ], $speakers)
+)]);
+$process([
+    'sys_file_reference' => ['NEWphoto' => [
+        'pid' => $uids['speakers'],
+        'uid_local' => $photo->getUid(),
+        'uid_foreign' => $dataHandler->substNEWwithIDs['NEWspeaker0'],
+        'tablenames' => 'tx_myextension_speaker',
+        'fieldname' => 'photo',
+    ]],
+    'tx_myextension_speaker' => [$dataHandler->substNEWwithIDs['NEWspeaker0'] => ['photo' => 'NEWphoto']],
+]);
+foreach ($examples as $key => $example) {
+    $contentConnection->insert('tt_content', array_merge(
+        array_diff_key($example, ['title' => true, 'snippet' => true, 'images' => true]),
+        ['pid' => $uids[$key], 'colPos' => 0, 'tstamp' => time(), 'crdate' => time(), 'image' => $example['images'] ?? 0]
+    ));
+    $content = (int)$contentConnection->lastInsertId();
+    foreach (array_slice($files, 0, $example['images'] ?? 0) as $i => [$file, $title]) {
+        $contentConnection->insert('sys_file_reference', [
+            'pid' => $uids[$key],
+            'uid_local' => $file->getUid(),
+            'uid_foreign' => $content,
+            'tablenames' => 'tt_content',
+            'fieldname' => 'image',
+            'sorting_foreign' => $i + 1,
+            'title' => $title,
+            'description' => 'An image drawn for this example',
+            'tstamp' => time(),
+            'crdate' => time(),
+        ]);
+    }
+    if (isset($example['snippet'])) {
+        $setup .= "\n" . $snippet('CodeSnippets/DataProcessing/TypoScript/' . $example['snippet'] . '.typoscript');
+    }
+}
+$configuration['rootPageId'] = $uids['dataProcessors'];
+$configuration['base'] = 'http://localhost:8080/data-processors/';
+$configuration['dependencies'] = ['typo3/fluid-styled-content', 'myvendor/my-extension'];
+// Languages that the pages are not translated into, which the language
+// menu example shows as unavailable
+$language = $configuration['languages'][0];
+$configuration['languages'][] = array_merge($language, [
+    'title' => 'Dansk', 'languageId' => 1, 'base' => '/da/', 'locale' => 'da_DK.UTF-8', 'navigationTitle' => 'Dansk', 'flag' => 'dk',
+]);
+$configuration['languages'][] = array_merge($language, [
+    'title' => 'Deutsch', 'languageId' => 2, 'base' => '/de/', 'locale' => 'de_DE.UTF-8', 'navigationTitle' => 'Deutsch', 'flag' => 'de',
+]);
+GeneralUtility::makeInstance(SiteWriter::class)->write('data-processors', $configuration);
+file_put_contents(Environment::getConfigPath() . '/sites/data-processors/setup.typoscript', $setup);
 
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
 GeneralUtility::mkdir_deep(Environment::getVarPath());

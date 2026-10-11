@@ -1,6 +1,6 @@
 tt_content {
-  examples_dataprocgallery =< lib.contentElement
-  examples_dataprocgallery {
+  myextension_dataprocgallery =< lib.contentElement
+  myextension_dataprocgallery {
     templateName = DataProcGallery
     dataProcessing {
       # Process files

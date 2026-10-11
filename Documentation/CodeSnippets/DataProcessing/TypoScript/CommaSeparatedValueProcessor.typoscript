@@ -1,12 +1,12 @@
 tt_content {
-  examples_newcontentcsv =< lib.contentElement
-  examples_newcontentcsv {
+  myextension_dataproccsv =< lib.contentElement
+  myextension_dataproccsv {
     templateName = DataProcCsv
     dataProcessing.10 = comma-separated-value
     dataProcessing.10 {
       if.isTrue.field = bodytext
       fieldName = bodytext
-      fieldDelimiter.field = tx_examples_separator
+      fieldDelimiter.field = tx_myextension_separator
       fieldEnclosure = "
       maximumColumns.field = imagecols
       as = myTable

@@ -1,6 +1,6 @@
 tt_content {
-  examples_dataprocsplit =< lib.contentElement
-  examples_dataprocsplit {
+  myextension_dataprocsplit =< lib.contentElement
+  myextension_dataprocsplit {
     templateName = DataProcSplit
     dataProcessing.10 = split
     dataProcessing.10 {

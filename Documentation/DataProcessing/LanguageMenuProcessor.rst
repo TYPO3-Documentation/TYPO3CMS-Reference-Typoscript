@@ -92,14 +92,14 @@ Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor`
 the following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/LanguageMenuProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/LanguageMenuProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 This generated menu can be used in Fluid like this:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcLangMenu.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcLangMenu.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcLangMenu.fluid.html
 
 ..  rubric:: Output
 
@@ -108,6 +108,8 @@ configuration. As the current page is not translated into German, the
 German language has the :php:`item.available` set to `false`. It therefore
 does not get linked in the template.
 
-..  figure:: /Images/ManualScreenshots/DataProcessing/LanguageMenuProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/LanguageMenuProcessor.png
     :zoom: lightbox
-    :alt: Output of a LanguageMenuProcessor, including debug output
+    :alt: Dump of the variable languageNavigation with 3 languages, and a list
+        in which "English" is a link, while "Dansk" and "Deutsch" are shown
+        without a link

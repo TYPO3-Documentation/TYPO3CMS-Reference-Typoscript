@@ -24,27 +24,29 @@ Troubleshooting
 
 Common mistakes made in the TypoScript configuration can cause a message like this:
 
-..  figure:: /Images/ManualScreenshots/NoTypoScriptTemplateFoundDebuggingOff.png
-    :alt: Error message "No TypoScript record found!"
+..  figure:: /Images/GeneratedScreenshots/FrontendOutput/NoTypoScriptRecordFoundDebuggingOff.png
+    :alt: Error page "500 Internal Server Error" with the reason "No site
+        configuration or TypoScript template record found!"
 
 If you turn on the :ref:`debug mode <t3coreapi:troubleshooting-debug-mode>`
 you will get more detailed information:
 
-..  figure:: /Images/ManualScreenshots/NoTypoScriptTemplateFound.png
-   :alt: Error message "No TypoScript record found!"
+..  figure:: /Images/GeneratedScreenshots/FrontendOutput/NoTypoScriptRecordFound.png
+    :alt: Exception "No site configuration or TypoScript template record found!"
 
-`No TypoScript record found!`: This warning appears if no TypoScript record,
-with the `root level` flag enabled, is found in the page tree.
+`No site configuration or TypoScript template record found!`: TYPO3 shows
+this error if it finds no TypoScript for the page. The site uses no site set
+and has no TypoScript of its own. Neither the page nor a page above it has a
+TypoScript record.
 
-..  figure:: /Images/ManualScreenshots/ThePageIsNotConfigured.png
-   :alt: Error message "The page is not configured!"
+..  figure:: /Images/GeneratedScreenshots/FrontendOutput/NoPageConfigured.png
+    :alt: Exception "No page configured for type=0."
 
-`The page is not configured! [type=0][]`. This means that there is no TypoScript
-object of type PAGE with typeNum=0 configured.`: This warning appears if the
-TypoScript Configuration of the current page contains no :ref:`PAGE <guide-page>`
-definition.
+`No page configured for type=0.`: This error appears if the TypoScript
+configuration of the current page contains no :ref:`PAGE <guide-page>`
+object with :typoscript:`typeNum` 0.
 
-The following TypoScript setup code is enough to remove this warning:
+The following TypoScript setup code is enough to remove this error:
 
 ..  literalinclude:: /Guide/Overview/_snippets/_page1.typoscript
 

@@ -1,6 +1,6 @@
 tt_content {
-  examples_dataprocmenu =< lib.contentElement
-  examples_dataprocmenu {
+  myextension_dataprocmenu =< lib.contentElement
+  myextension_dataprocmenu {
     templateName = DataProcMenu
     dataProcessing.10 = menu
     dataProcessing.10 {

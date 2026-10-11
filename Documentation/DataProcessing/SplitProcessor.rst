@@ -120,19 +120,22 @@ With the help of the
 scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.typoscript
-    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SplitProcessor.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  rubric:: The Fluid template
 
 In the Fluid template then iterate over the split data:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSplit.fluid.html
-    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSplit.fluid.html
+    :caption: EXT:my_extension/Resources/Private/Templates/ContentElements/DataProcSplit.fluid.html
 
 ..  rubric:: Output
 
 The array now contains the split strings:
 
-..  figure:: /Images/ManualScreenshots/DataProcessing/SplitProcessor.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/SplitProcessor.png
     :zoom: lightbox
-    :alt: Output of a SplitProcessor, including debug output
+    :alt: Dump of the variable urlParts with 10 parts: "https:", an empty
+        string, "docs.typo3.org", "m", "typo3", "reference-typoscript", "main",
+        "en-us", "DataProcessing", and "SplitProcessor.html", and the output
+        that shows the parts separated by slashes
