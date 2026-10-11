@@ -104,8 +104,8 @@ Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 In this example, the `bodytext` field contains comma-separated
 values (CSV) data. To support different formats, an extension adds the field
-`tx_myextension_separator` to `tt_content`, in which the separator between the
-values can be specified.
+`tx_myextension_separator` to `tt_content`. An editor enters the separator
+between the values in this field.
 
 This example is also described in-depth in :ref:`TYPO3 Explained:
 Extended content element example <t3coreapi:AddingCE-Extended-Example>`.
