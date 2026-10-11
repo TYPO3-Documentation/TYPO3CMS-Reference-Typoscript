@@ -142,7 +142,7 @@ and the data of the photo in `files`.
         Kai Muster of Muster AG, and Robin Sample of Sample Ltd, each with a
         short biography
 
-..  _databasequeryprocessor-examples:
+..  _databasequeryprocessor-example-mm-workspaces:
 
 Example: Display sorted records from an MM table working with workspaces
 ========================================================================
