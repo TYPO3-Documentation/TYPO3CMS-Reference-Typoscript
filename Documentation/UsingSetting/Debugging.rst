@@ -37,7 +37,9 @@ There are no tools that will tell whether the given TypoScript code is 100%
 correct. The :guilabel:`Included TypoScript` will warn about syntax errors though:
 
 ..  figure:: /Images/GeneratedScreenshots/TypoScriptModule/IncludedTypoScriptWarnings.png
-    :alt: The submodule 'Included TypoScript' showing a syntax warning
+    :alt: Module "Included TypoScript" for the record "Syntax error", with
+        the syntax scanner warning 'Brace in excess in "[sys_template:3]
+        Syntax error", line number "4"'
 
 In the frontend, the :composer:`typo3/cms-adminpanel` is another possibility
 to debug TypoScript: use its section called :guilabel:`TypoScript`. It shows
