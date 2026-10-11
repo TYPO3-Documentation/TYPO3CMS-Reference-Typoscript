@@ -214,7 +214,9 @@ The array `images` contains the data of the files now:
 
 ..  figure:: /Images/GeneratedScreenshots/DataProcessing/FilesProcessor.png
     :class: with-shadow
-    :alt: files dump and output
+    :alt: Dump of the variable images with 2 file references, and two cards
+        with the images "Green circle" and "Blue circle", each with the
+        description "An image drawn for this example"
 
 ..  note::
     For technical reasons file references do not show all available data on

@@ -59,4 +59,6 @@ The array now contains the information from the site configuration:
 
 ..  figure:: /Images/GeneratedScreenshots/DataProcessing/SiteProcessor.png
     :zoom: lightbox
-    :alt: Output of a SiteProcessor, including debug output
+    :alt: Dump of the variable site, a Site object with the identifier
+        "data-processors", its base, its configuration, 3 languages, and 2
+        sets, and the output "Base url: http://localhost:8080/data-processors/"

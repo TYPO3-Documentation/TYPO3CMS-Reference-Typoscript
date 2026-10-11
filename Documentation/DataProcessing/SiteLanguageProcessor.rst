@@ -61,3 +61,7 @@ The array now contains the information from the site language configuration:
 
 ..  figure:: /Images/GeneratedScreenshots/DataProcessing/SiteLanguageProcessor.png
     :class: with-shadow
+    :alt: Dump of the variable language with the properties of the language
+        "English", such as the languageId 0, the locale "en_US.UTF-8", and the
+        base "http://localhost:8080/data-processors/", and the output "language
+        id: 0"
