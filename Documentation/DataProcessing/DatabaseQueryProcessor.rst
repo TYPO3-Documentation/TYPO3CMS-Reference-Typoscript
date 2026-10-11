@@ -110,8 +110,8 @@ Please see also :ref:`About the examples <dataprocessing-about-examples>`.
 
 In this example, an extension stores the speakers of a conference in the
 table `tx_myextension_speaker`, with the fields `name`, `company`, `bio`, and
-`photo`. A content element lists the speakers that are stored in the folder
-selected in its field `pages` (:guilabel:`Record Storage Page`).
+`photo`. A content element lists the speakers from the folder in its field
+`pages`.
 
 ..  rubric:: TypoScript
 
