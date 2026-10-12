@@ -28,6 +28,7 @@ const {
   headerContent, csvExport, exportButtons, noExportButtons, templatePage,
   staticIncludes, staticIncludesRecord, syntaxError, permissionsEverybody, permissionsGroup,
   permissionsGroupid, permissionsUserid, testUser, layoutPage, textmedia, rootTemplate, setsRoot, copies, copyOriginal, labels, labelLast, site,
+  track,
 } =
   JSON.parse(readFileSync('../../var/screenshot-records.json', 'utf8'));
 
@@ -367,6 +368,17 @@ const screenshots = {
     frontend: true,
     window: true,
     until: '.trace-head',
+  },
+  'ColorPalettes/ColorPalette': {
+    url: editUrl('tx_myextension_track', track),
+    // The color picker with the swatches of the palette opens on a click
+    prepare: async (frame) => {
+      await frame.locator(`${field('color')} input.form-control`).click();
+      await frame.locator('.alwan').waitFor();
+    },
+    // From the label, so the image is no wider than the picker
+    from: `${field('color')} label`,
+    to: '.alwan',
   },
   'DataProcessing/SiteProcessor': dataProcessor('SiteProcessor'),
   'DataProcessing/SiteLanguageProcessor': dataProcessor('SiteLanguageProcessor'),
