@@ -427,6 +427,27 @@ $configuration['languages'][] = array_merge($language, [
 GeneralUtility::makeInstance(SiteWriter::class)->write('data-processors', $configuration);
 file_put_contents(Environment::getConfigPath() . '/sites/data-processors/setup.typoscript', $setup);
 
+// The color palette example, last so that the uids above stay the same: a
+// folder whose TSconfig holds the colors and palettes of the documentation
+// and assigns a palette to the color field of a track of the example
+// extension. A standard page does not allow the records of that table.
+$dataHandler = $process(['pages' => ['NEWcolorPalettes' => [
+    'pid' => 1,
+    'title' => 'Color palettes',
+    'doktype' => 254,
+    'hidden' => 0,
+    'TSconfig' => $snippet('PageTsconfig/_syntax2.typoscript') . "\n"
+        . $snippet('PageTsconfig/_basicSyntax.typoscript') . "\n"
+        . "TCEFORM.tx_myextension_track.color.colorPalette = key_colors\n",
+]]]);
+$uids['colorPalettes'] = $dataHandler->substNEWwithIDs['NEWcolorPalettes'];
+$dataHandler = $process(['tx_myextension_track' => ['NEWtrack' => [
+    'pid' => $uids['colorPalettes'],
+    'title' => 'Main hall',
+    'color' => '#ff8700',
+]]]);
+$uids['track'] = $dataHandler->substNEWwithIDs['NEWtrack'];
+
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
 GeneralUtility::mkdir_deep(Environment::getVarPath());
 file_put_contents(Environment::getVarPath() . '/screenshot-records.json', json_encode($uids, JSON_PRETTY_PRINT) . "\n");

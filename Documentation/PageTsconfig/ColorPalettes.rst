@@ -15,8 +15,9 @@ supports color palettes, or swatches. The colors can be configured and assigned
 to palettes. This way, for example, colors defined in a corporate design can be
 selected with one click. Multiple color palettes can be configured.
 
-..  figure:: /Images/ManualScreenshots/ColorPalettes/ColorPalette.png
-    :alt: Example of a color palette
+..  figure:: /Images/GeneratedScreenshots/ColorPalettes/ColorPalette.png
+    :alt: Color picker of the field "Color" with the value #ff8700 and the
+        palette "key_colors" below it: swatches in orange, blue, and dark grey
     :class: with-shadow
 
     Example of a color palette
