@@ -238,8 +238,9 @@ menu.functions
 
     Disable elements of the "Function selector" in the document header of the module.
 
-    ..  figure:: /Images/ManualScreenshots/Page/FunctionMenuPageModule.png
-        :alt: The function menu of the Content Layout module
+    ..  figure:: /Images/GeneratedScreenshots/Page/FunctionMenuPageModule.png
+        :alt: The module Content > Layout of a translated page with its function
+            menu open, which offers the views "Layout" and "Language Comparison"
 
     The function keys are numerical:
 
