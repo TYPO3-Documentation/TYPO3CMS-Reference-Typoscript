@@ -375,6 +375,7 @@ const screenshots = {
   'DataProcessing/FilesProcessor': dataProcessor('FilesProcessor'),
   'DataProcessing/GalleryProcessor': dataProcessor('GalleryProcessor'),
   'DataProcessing/DatabaseQueryProcessor': dataProcessor('DatabaseQueryProcessor'),
+  'DataProcessing/CustomDataProcessors': dataProcessor('CustomCategoryProcessor'),
 
   'Page/FunctionMenuPageModule': {
     url: moduleUrl('web/layout', functionMenu),
