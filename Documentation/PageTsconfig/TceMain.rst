@@ -213,6 +213,22 @@ linkHandler
         Default css class for a link of this type, can be overridden in the
         link wizard.
 
+    :typoscript:`cssClass.items`
+        ..  versionadded:: 15.0
+            :changelog: feature-98074-1791406656
+
+        CSS classes that the :guilabel:`CSS-Class` field of the link browser
+        suggests for a link of this type. Each entry has a `value`, the CSS
+        class or several classes separated by spaces, and an optional
+        `label`. The label is a plain text or a localization reference. Without
+        a label, the field shows the value. Editors can still enter any other
+        class. A list for a link type replaces the global list.
+
+        This applies to the link browser of TCA fields of type
+        `link <https://docs.typo3.org/permalink/t3tca:columns-link>`_. The
+        classes of the link browser of the rich text editor are configured in
+        the CKEditor configuration.
+
     Global configuration (applies to all link types):
 
     ..  code-block:: typoscript
@@ -229,6 +245,34 @@ linkHandler
         TCEMAIN.linkHandler.url.target.default = _blank
         TCEMAIN.linkHandler.page.target.default = _self
         TCEMAIN.linkHandler.file.cssClass.default = file-link
+
+    Suggest CSS classes for all link types:
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/page.tsconfig
+
+        TCEMAIN.linkHandler.properties.cssClass.items {
+          10 {
+            value = btn btn-primary
+            label = LLL:my_sitepackage.messages:linkClass.buttonPrimary
+          }
+          20 {
+            value = link-arrow
+            label = Arrow link
+          }
+        }
+
+    Suggest other CSS classes for file links only:
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/page.tsconfig
+
+        TCEMAIN.linkHandler.file.cssClass.items {
+          10 {
+            value = link-download
+            label = Download
+          }
+        }
 
     ..  hint::
 
