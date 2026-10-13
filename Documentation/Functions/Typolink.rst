@@ -382,7 +382,7 @@ parameter
         ..  code-block:: typoscript
             :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
-            page.10.typolink.parameter = https://example.com/ - - - - "nofollow sponsored"
+            page.10.typolink.parameter = https://example.org/ - - - - "nofollow sponsored"
 
     7.  Download
 
