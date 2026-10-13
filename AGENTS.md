@@ -109,6 +109,11 @@ automatically since TYPO3 v12 and `Configuration/user.tsconfig` since v13.
 Many captions in this manual still use the old path; correct it when you touch
 such a block.
 
+A TSconfig file that TYPO3 does not load on its own, such as a static file
+that an extension registers, goes below `Configuration/TsConfig/`. Write the
+folder in CamelCase, like `TypoScript/`. The glossary spelling TSconfig is for
+prose, not for directory names. The file name ends with `.tsconfig`.
+
 ### Which placeholder extension
 
 The table above says `my_sitepackage`, the name the other TYPO3 manuals use
