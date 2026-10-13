@@ -60,10 +60,12 @@ Preview module.
 ..  literalinclude:: _new.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-..  figure:: /Images/ManualScreenshots/View/WebViewTSConfigPreview.png
-    :alt: Dropdown menu Width with added frame size called myPreview
+..  figure:: /Images/GeneratedScreenshots/View/WebViewTSConfigPreview.png
+    :alt: The module Content > Preview with its list of presets open. After the
+        desktop presets 1280px/1024px, 1440px/1024px, and 1920px/1080px, the
+        list shows the new preset "Desktop" with 1024px/768px.
 
-    Dropdown menu Width with added frame size called myPreview
+    The new preset in the list of presets of the Preview module
 
 
 ..  index::
