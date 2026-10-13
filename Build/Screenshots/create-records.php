@@ -187,6 +187,8 @@ $dataHandler = $process(['be_users' => ['NEWtest' => [
     'usergroup' => (string)$dataHandler->substNEWwithIDs['NEWeditors'],
     // The example of importing user TSconfig from a site package
     'TSconfig' => "@import 'EXT:my_sitepackage/Configuration/TsConfig/User/my_editor.tsconfig'\n",
+    // The static user TSconfig file of my_extension
+    'tsconfig_includes' => 'EXT:my_extension/Configuration/TsConfig/User/editor.tsconfig',
 ]]]);
 $testUser = $dataHandler->substNEWwithIDs['NEWtest'];
 $uids['testUser'] = $testUser;

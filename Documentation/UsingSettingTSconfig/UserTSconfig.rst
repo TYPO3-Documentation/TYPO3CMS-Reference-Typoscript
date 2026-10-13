@@ -25,7 +25,10 @@ Importing the user TSconfig into a backend user or group
     :guilabel:`Options > TSconfig`.
 
     ..  figure:: /Images/GeneratedScreenshots/BackendUsers/TSconfigUserInput.png
-        :alt: The TSconfig and Include static TSconfig fields in the Options tab of a backend user
+        :alt: The field "TSconfig" with the line @import
+            'EXT:my_sitepackage/Configuration/TsConfig/User/my_editor.tsconfig'.
+            Below it, the field "Include static TSconfig" with the selected
+            item "Editor (my_extension)" and the path of its file.
         :class: with-shadow
 
         The :guilabel:`TSconfig` and :guilabel:`Include static TSconfig`
