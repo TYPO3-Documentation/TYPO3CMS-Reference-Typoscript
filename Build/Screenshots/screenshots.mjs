@@ -376,6 +376,13 @@ const screenshots = {
   'DataProcessing/GalleryProcessor': dataProcessor('GalleryProcessor'),
   'DataProcessing/DatabaseQueryProcessor': dataProcessor('DatabaseQueryProcessor'),
   'DataProcessing/CustomDataProcessors': dataProcessor('CustomCategoryProcessor'),
+  // The image itself, which GIFBUILDER renders, without the page around it
+  'Gifbuilder/GifbuilderExample': {
+    url: `${baseUrl}/data-processors/gifbuilder`,
+    frontend: true,
+    element: 'img',
+    margin: 0,
+  },
 
   'Page/FunctionMenuPageModule': {
     url: moduleUrl('web/layout', functionMenu),

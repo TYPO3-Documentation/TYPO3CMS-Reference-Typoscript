@@ -35,8 +35,9 @@ printed onto it + 20 pixels.
 
 The generated image looks like:
 
-..  figure:: /Images/ManualScreenshots/FrontendOutput/Gifbuilder/typo3-gifbuilder-example.png
+..  figure:: /Images/GeneratedScreenshots/Gifbuilder/GifbuilderExample.png
     :class: with-shadow
-    :alt: TYPO3 GIFBUILDER Example
+    :alt: An orange image with the white text "TYPO3 GIFBUILDER Example", 20
+        pixels wider and higher than the text
 
     The rendered image from the example above
