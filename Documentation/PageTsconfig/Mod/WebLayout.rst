@@ -244,9 +244,9 @@ menu.functions
 
     The function keys are numerical:
 
-    Columns
+    Layout
         1
-    Languages
+    Language Comparison
         2
 
     ..  warning::
@@ -259,8 +259,8 @@ menu.functions
 
 ..  _pageblindingfunctionmenuoptions-weblayout-example:
 
-Example: Disable "Languages" from the function menu
----------------------------------------------------
+Example: Disable "Language Comparison" in the function menu
+-----------------------------------------------------------
 
 ..  literalinclude:: _weblayout.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
