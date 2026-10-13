@@ -4,7 +4,13 @@
     "description": "Example extension of the TypoScript Reference: the records that its examples render",
     "license": "GPL-2.0-or-later",
     "require": {
-        "typo3/cms-core": "^14.3"
+        "typo3/cms-core": "^14.3",
+        "typo3/cms-frontend": "^14.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyVendor\\MyExtension\\": "Classes/"
+        }
     },
     "extra": {
         "typo3/cms": {

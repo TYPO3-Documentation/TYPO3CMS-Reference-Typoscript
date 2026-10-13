@@ -5,7 +5,6 @@ tt_content {
     dataProcessing.10 = custom-category
     dataProcessing.10 {
       as = categories
-      categoryList.field = categories
     }
   }
 }

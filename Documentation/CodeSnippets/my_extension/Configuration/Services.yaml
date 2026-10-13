@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  MyVendor\MyExtension\:
+    resource: '../Classes/*'
+
+  MyVendor\MyExtension\DataProcessing\CustomCategoryProcessor:
+    tags:
+      - name: 'data.processor'
+        identifier: 'custom-category'

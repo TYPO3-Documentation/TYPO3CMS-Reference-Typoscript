@@ -484,6 +484,43 @@ $process(['tt_content' => ['NEWpreviewContent' => [
     'bodytext' => '<p>Some text to preview at different screen sizes.</p>',
 ]]]);
 
+// The custom data processor example: a content element with two categories,
+// which the processor of the example extension reads through the MM table.
+// Hidden in menus, so that the menu examples stay the same.
+$dataHandler = $process([
+    'pages' => ['NEWcustomProcessor' => [
+        'pid' => $uids['dataProcessors'],
+        'title' => 'CustomCategoryProcessor',
+        'hidden' => 0,
+        'nav_hide' => 1,
+    ]],
+    'sys_category' => [
+        'NEWcategoryTypoScript' => ['pid' => $uids['dataProcessors'], 'title' => 'TypoScript'],
+        'NEWcategoryFluid' => ['pid' => $uids['dataProcessors'], 'title' => 'Fluid'],
+    ],
+]);
+$uids['customProcessor'] = $dataHandler->substNEWwithIDs['NEWcustomProcessor'];
+$contentConnection->insert('tt_content', [
+    'pid' => $uids['customProcessor'],
+    'colPos' => 0,
+    'CType' => 'myextension_dataproccustom',
+    'categories' => 2,
+    'tstamp' => time(),
+    'crdate' => time(),
+]);
+$content = (int)$contentConnection->lastInsertId();
+foreach (['NEWcategoryTypoScript', 'NEWcategoryFluid'] as $i => $category) {
+    GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('sys_category_record_mm')->insert('sys_category_record_mm', [
+        'uid_local' => $dataHandler->substNEWwithIDs[$category],
+        'uid_foreign' => $content,
+        'tablenames' => 'tt_content',
+        'fieldname' => 'categories',
+        'sorting_foreign' => $i + 1,
+    ]);
+}
+$setup .= "\n" . $snippet('CodeSnippets/DataProcessing/TypoScript/CustomCategoryProcessor.typoscript');
+file_put_contents(Environment::getConfigPath() . '/sites/data-processors/setup.typoscript', $setup);
+
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
 GeneralUtility::mkdir_deep(Environment::getVarPath());
 file_put_contents(Environment::getVarPath() . '/screenshot-records.json', json_encode($uids, JSON_PRETTY_PRINT) . "\n");
