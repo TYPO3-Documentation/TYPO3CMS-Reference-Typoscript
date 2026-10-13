@@ -27,7 +27,7 @@ const {
   invalidValue, invalidValueLabel, invalidValueDisabled, singleTableView, backendLayoutExclude, description,
   headerContent, csvExport, exportButtons, noExportButtons, templatePage,
   staticIncludes, staticIncludesRecord, syntaxError, setsRoot, copies, copyOriginal, labels, labelLast, site,
-  track,
+  track, functionMenu,
 } =
   JSON.parse(readFileSync('../../var/screenshot-records.json', 'utf8'));
 
@@ -375,6 +375,13 @@ const screenshots = {
   'DataProcessing/FilesProcessor': dataProcessor('FilesProcessor'),
   'DataProcessing/GalleryProcessor': dataProcessor('GalleryProcessor'),
   'DataProcessing/DatabaseQueryProcessor': dataProcessor('DatabaseQueryProcessor'),
+
+  'Page/FunctionMenuPageModule': {
+    url: moduleUrl('web/layout', functionMenu),
+    window: true,
+    menu: '.btn-group:has(a[title="Language Comparison"]) > .dropdown-toggle',
+    until: '.dropdown-menu:popover-open',
+  },
 };
 
 // Hides the page tree and collapses the groups of the module menu, except
@@ -444,6 +451,12 @@ for (const name of names) {
   }
   if (screenshot.window && !screenshot.frontend) {
     await collapseNavigation();
+  }
+  // A dropdown of the module opens last: it closes as soon as the focus
+  // moves, which collapsing the navigation does
+  if (screenshot.menu) {
+    await frame.locator(screenshot.menu).click();
+    await frame.locator('.dropdown-menu:popover-open').waitFor();
   }
   // A hovered tab or button would look selected
   await page.mouse.move(0, 0);

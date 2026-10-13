@@ -448,6 +448,24 @@ $dataHandler = $process(['tx_myextension_track' => ['NEWtrack' => [
 ]]]);
 $uids['track'] = $dataHandler->substNEWwithIDs['NEWtrack'];
 
+// The function menu of the page module, which only offers its views on a
+// page with a translation: a site of its own with a second language, so
+// that the other sites keep a single language
+$dataHandler = $process(['pages' => [
+    'NEWfunctionMenu' => ['pid' => 0, 'title' => 'Translated page', 'is_siteroot' => 1, 'hidden' => 0],
+]]);
+$uids['functionMenu'] = $dataHandler->substNEWwithIDs['NEWfunctionMenu'];
+$configuration['rootPageId'] = $uids['functionMenu'];
+$configuration['base'] = 'http://localhost:8080/translated-page/';
+unset($configuration['dependencies']);
+GeneralUtility::makeInstance(SiteWriter::class)->write('translated-page', $configuration);
+$dataHandler = GeneralUtility::makeInstance(DataHandler::class);
+$dataHandler->start([], ['pages' => [$uids['functionMenu'] => ['localize' => 2]]]);
+$dataHandler->process_cmdmap();
+if ($dataHandler->errorLog !== []) {
+    throw new RuntimeException(implode("\n", $dataHandler->errorLog));
+}
+
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
 GeneralUtility::mkdir_deep(Environment::getVarPath());
 file_put_contents(Environment::getVarPath() . '/screenshot-records.json', json_encode($uids, JSON_PRETTY_PRINT) . "\n");
