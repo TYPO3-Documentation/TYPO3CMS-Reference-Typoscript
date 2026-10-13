@@ -28,7 +28,7 @@ const {
   headerContent, csvExport, exportButtons, noExportButtons, templatePage,
   staticIncludes, staticIncludesRecord, syntaxError, permissionsEverybody, permissionsGroup,
   permissionsGroupid, permissionsUserid, testUser, layoutPage, textmedia, rootTemplate, setsRoot, copies, copyOriginal, labels, labelLast, site,
-  track, functionMenu,
+  track, functionMenu, previewPreset,
 } =
   JSON.parse(readFileSync('../../var/screenshot-records.json', 'utf8'));
 
@@ -399,6 +399,12 @@ const screenshots = {
     url: moduleUrl('web/layout', functionMenu),
     window: true,
     menu: '.btn-group:has(a[title="Language Comparison"]) > .dropdown-toggle',
+    until: '.dropdown-menu:popover-open',
+  },
+  'View/WebViewTSConfigPreview': {
+    url: moduleUrl('page-preview', previewPreset),
+    window: true,
+    menu: '#viewpage-topbar-preset-button',
     until: '.dropdown-menu:popover-open',
   },
   'BackendLayouts/PageModule': {
