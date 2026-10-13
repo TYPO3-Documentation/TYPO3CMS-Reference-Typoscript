@@ -1,0 +1,6 @@
+page.10 {
+  value = kasper
+  stdWrap {
+    case = upper
+  }
+}
