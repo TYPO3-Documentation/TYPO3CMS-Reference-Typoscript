@@ -187,7 +187,7 @@ user group, new and copied pages will be hidden for that group. The user TSconfi
 be used is the same, but prefixed with :tsconfig:`page.`
 
 ..  literalinclude:: _pageoverridingpagetsconfigwithusertsconfig.typoscript
-    :caption: EXT:my_sitepackage/Configuration/TSconfig/editors.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/TsConfig/editors.tsconfig
 
 ..  attention::
 
