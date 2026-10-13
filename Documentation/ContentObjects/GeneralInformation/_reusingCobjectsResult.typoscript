@@ -1,0 +1,7 @@
+page.20 {
+  value = kasper
+  stdWrap {
+    case = lower
+    field = pages
+  }
+}
