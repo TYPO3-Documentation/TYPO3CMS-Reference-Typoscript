@@ -389,6 +389,7 @@ const screenshots = {
   'DataProcessing/FilesProcessor': dataProcessor('FilesProcessor'),
   'DataProcessing/GalleryProcessor': dataProcessor('GalleryProcessor'),
   'DataProcessing/DatabaseQueryProcessor': dataProcessor('DatabaseQueryProcessor'),
+  'DataProcessing/CustomDataProcessors': dataProcessor('CustomCategoryProcessor'),
 
   'Access/PermissionsEverybody': permissionsView(permissionsEverybody),
   'Access/PermissionsGroup': permissionsView(permissionsGroup),

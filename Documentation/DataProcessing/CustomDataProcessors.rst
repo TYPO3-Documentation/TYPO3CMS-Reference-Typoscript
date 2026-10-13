@@ -20,6 +20,8 @@ specific custom data processor.
 
 ..  rubric:: Example output
 
-..  figure:: /Images/ManualScreenshots/DataProcessing/CustomDataProcessors.png
+..  figure:: /Images/GeneratedScreenshots/DataProcessing/CustomDataProcessors.png
     :zoom: lightbox
-    :alt: Output of a CustomDataProcessors, including debug output
+    :alt: Debug output of the variable "categories", an array of two category
+        records, and the output of the template: a list of the categories
+        "TypoScript" and "Fluid"
