@@ -157,10 +157,11 @@ GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('be_u
     ['username' => 'admin']
 );
 
-// An image for the file list
+// An image for the file list: the image of the GIFBUILDER example, under
+// the name it had when it was taken by hand
 GeneralUtility::mkdir_deep(Environment::getPublicPath() . '/fileadmin');
 copy(
-    $documentation . 'Images/ManualScreenshots/FrontendOutput/Gifbuilder/typo3-gifbuilder-example.png',
+    $documentation . 'Images/GeneratedScreenshots/Gifbuilder/GifbuilderExample.png',
     Environment::getPublicPath() . '/fileadmin/typo3-gifbuilder-example.png'
 );
 
@@ -588,6 +589,25 @@ foreach (['NEWcategoryTypoScript', 'NEWcategoryFluid'] as $i => $category) {
     ]);
 }
 $setup .= "\n" . $snippet('CodeSnippets/DataProcessing/TypoScript/CustomCategoryProcessor.typoscript');
+file_put_contents(Environment::getConfigPath() . '/sites/data-processors/setup.typoscript', $setup);
+
+// The GIFBUILDER example: a content element that renders the image of the
+// example. Hidden in menus, so that the menu examples stay the same.
+$dataHandler = $process(['pages' => ['NEWgifbuilder' => [
+    'pid' => $uids['dataProcessors'],
+    'title' => 'GIFBUILDER',
+    'hidden' => 0,
+    'nav_hide' => 1,
+]]]);
+$uids['gifbuilder'] = $dataHandler->substNEWwithIDs['NEWgifbuilder'];
+$contentConnection->insert('tt_content', [
+    'pid' => $uids['gifbuilder'],
+    'colPos' => 0,
+    'CType' => 'myextension_gifbuilder',
+    'tstamp' => time(),
+    'crdate' => time(),
+]);
+$setup .= "\n" . $snippet('Gifbuilder/_calc.typoscript') . "tt_content.myextension_gifbuilder < lib.example\n";
 file_put_contents(Environment::getConfigPath() . '/sites/data-processors/setup.typoscript', $setup);
 
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
