@@ -1,4 +1,4 @@
-# Disables "Languages" from function menu
+# Disables "Language Comparison" in the function menu
 mod.web_layout.menu.functions {
   2 = 0
 }
