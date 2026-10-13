@@ -91,13 +91,16 @@ Example:
 
 The result is this configuration:
 
-..  figure:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge1.png
-    :zoom: lightbox
+..  literalinclude:: _reusingCobjectsResult.typoscript
+    :caption: Resulting configuration of page.20
 
 Notice that :typoscript:`.value` was *not* cleared, because these two arrays
 are simply merged:
 
-..  figure:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge2.png
-    :zoom: lightbox
+..  literalinclude:: _reusingCobjectsReferenced.typoscript
+    :caption: Configuration of page.10, which page.20 references
+
+..  literalinclude:: _reusingCobjectsOwn.typoscript
+    :caption: Configuration of page.20 itself
 
 So hence the line :typoscript:`page.20.value >` in the above example is useless.
