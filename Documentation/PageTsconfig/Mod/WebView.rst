@@ -53,8 +53,9 @@ previewFrameWidths
 Example: Define a new preview preset
 ------------------------------------
 
-With this configuration a new preset '1014' with size 1024x768 will be configured with a label
-loaded from an xlf file and the category 'desktop'.
+This configuration adds the preset `1024` with a size of 1024 x 768 pixels
+to the category `desktop`. Its label comes from the language file of the
+Preview module.
 
 ..  literalinclude:: _new.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
