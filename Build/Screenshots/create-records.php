@@ -535,6 +535,24 @@ if ($dataHandler->errorLog !== []) {
     throw new RuntimeException(implode("\n", $dataHandler->errorLog));
 }
 
+// The preview preset example: the module shows the frontend of the page, so
+// it goes below the data processors, the only site that renders content.
+// Hidden in menus, so that the menu examples stay the same.
+$dataHandler = $process(['pages' => ['NEWpreviewPreset' => [
+    'pid' => $uids['dataProcessors'],
+    'title' => 'Preview preset',
+    'hidden' => 0,
+    'nav_hide' => 1,
+    'TSconfig' => $snippet('PageTsconfig/Mod/_new.typoscript'),
+]]]);
+$uids['previewPreset'] = $dataHandler->substNEWwithIDs['NEWpreviewPreset'];
+$process(['tt_content' => ['NEWpreviewContent' => [
+    'pid' => $uids['previewPreset'],
+    'CType' => 'text',
+    'header' => 'Welcome',
+    'bodytext' => '<p>Some text to preview at different screen sizes.</p>',
+]]]);
+
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
 GeneralUtility::mkdir_deep(Environment::getVarPath());
 file_put_contents(Environment::getVarPath() . '/screenshot-records.json', json_encode($uids, JSON_PRETTY_PRINT) . "\n");
