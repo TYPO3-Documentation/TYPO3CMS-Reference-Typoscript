@@ -3,7 +3,7 @@
 //
 // Usage: node screenshots.mjs [name ...]
 // Without names, all screenshots are taken. A name is the path of the image
-// below Documentation/Images/GeneratedScreenshots, without ".png". With DUMP set,
+// below Documentation/Images/GeneratedScreenshots, without its extension. With DUMP set,
 // the HTML of each screen is also written to var/, to look up selectors.
 
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -397,6 +397,18 @@ const screenshots = {
     element: 'img',
     margin: 0,
   },
+  // Photos: the file that GIFBUILDER wrote, as a PNG it would be five
+  // times as large
+  'Gifbuilder/GifbuilderMask': {
+    url: `${baseUrl}/data-processors/gifbuilder-mask`,
+    frontend: true,
+    download: 'img',
+  },
+  'Gifbuilder/GifbuilderBoxes': {
+    url: `${baseUrl}/data-processors/gifbuilder-boxes`,
+    frontend: true,
+    download: 'img',
+  },
 
   'Access/PermissionsEverybody': permissionsView(permissionsEverybody),
   'Access/PermissionsGroup': permissionsView(permissionsGroup),
@@ -561,6 +573,15 @@ for (const name of names) {
   if (process.env.DUMP) {
     writeFileSync(`../../var/${name.replaceAll('/', '_')}.html`, await frame.content());
     writeFileSync(`../../var/${name.replaceAll('/', '_')}-window.html`, await page.content());
+  }
+  if (screenshot.download) {
+    // The image file itself, with the extension of its format
+    const src = await frame.locator(screenshot.download).getAttribute('src');
+    const response = await page.request.get(new URL(src, page.url()).href);
+    const extension = src.split('.').pop();
+    writeFileSync(`${target}/${name}.${extension}`, await response.body());
+    console.log(`${name}.${extension}`);
+    continue;
   }
   const path = `${target}/${name}.png`;
   if (screenshot.modal) {
