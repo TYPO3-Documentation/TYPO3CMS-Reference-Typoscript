@@ -596,7 +596,7 @@ TSconfig.
 Instead, configure the equivalent behavior using:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/page.tsconfig
 
     TCEMAIN.preview.disableButtonForDokType = 199, 254
 
