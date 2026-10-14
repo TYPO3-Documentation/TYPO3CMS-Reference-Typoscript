@@ -587,12 +587,15 @@ Properties
 
         ..  confval:: uploadFieldsInLinkBrowser
             :name: useroptions-folderTree-uploadFieldsInLinkBrowser
-            :type: integer
-            :default: 3
+            :type: boolean
+            :default: 1
             :User TSconfig path: options.folderTree.uploadFieldsInLinkBrowser
 
-            This value defines the number of upload fields in the element browser.
-            Default value is 3, if set to 0, no upload form will be shown.
+            Set this option to `0` to prevent uploads in the file browser,
+            which opens for example with :guilabel:`Add image` in a file field,
+            and on the :guilabel:`File` tab of the link browser. Any other
+            value allows uploads. Despite its name, the option no longer sets
+            a number of upload fields.
 
     ..  _useroptions-hidemodules:
 
