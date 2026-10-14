@@ -2,7 +2,7 @@ lib.test = IMAGE
 lib.test {
   file = GIFBUILDER
   file {
-    XY = 1024,768
+    XY = 640,480
     format = jpg
     quality = 88
 

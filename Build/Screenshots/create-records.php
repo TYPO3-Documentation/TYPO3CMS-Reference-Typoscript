@@ -539,6 +539,39 @@ $contentConnection->insert('tt_content', [
     'crdate' => time(),
 ]);
 $setup .= "\n" . $snippet('Gifbuilder/_calc.typoscript') . "tt_content.myextension_gifbuilder < lib.example\n";
+
+// The GIFBUILDER examples that mask an image onto the background image, each
+// on a page of its own. The snippets read the images from fileadmin.
+foreach (
+    [
+        'Backimage.jpg' => 'backimage.jpg',
+        'Logo.png' => 'overlay.png',
+        'Mask_i.png' => 'mask.png',
+    ] as $source => $target
+) {
+    copy($documentation . 'Images/ThirdParty/GifbuilderExamples/' . $source, Environment::getPublicPath() . '/fileadmin/' . $target);
+}
+$gifbuilderExamples = [
+    'gifbuilderMask' => ['GIFBUILDER mask', 'myextension_gifbuildermask', '_maskingSemiTransparent', 'lib.test'],
+    'gifbuilderBoxes' => ['GIFBUILDER boxes', 'myextension_gifbuilderboxes', '_creatingSemiTransparent', 'lib.header'],
+];
+foreach ($gifbuilderExamples as $key => [$title, $cType, $snippetName, $object]) {
+    $dataHandler = $process(['pages' => ['NEW' . $key => [
+        'pid' => $uids['dataProcessors'],
+        'title' => $title,
+        'hidden' => 0,
+        'nav_hide' => 1,
+    ]]]);
+    $uids[$key] = $dataHandler->substNEWwithIDs['NEW' . $key];
+    $contentConnection->insert('tt_content', [
+        'pid' => $uids[$key],
+        'colPos' => 0,
+        'CType' => $cType,
+        'tstamp' => time(),
+        'crdate' => time(),
+    ]);
+    $setup .= "\n" . $snippet('Gifbuilder/_codesnippets/' . $snippetName . '.typoscript') . "tt_content.$cType < $object\n";
+}
 file_put_contents(Environment::getConfigPath() . '/sites/data-processors/setup.typoscript', $setup);
 
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
