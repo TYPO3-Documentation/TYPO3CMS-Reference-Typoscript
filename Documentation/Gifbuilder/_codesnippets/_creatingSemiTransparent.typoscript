@@ -3,7 +3,8 @@ lib.header {
   file = GIFBUILDER
   file {
     XY = 640,480
-    format = png
+    format = jpg
+    quality = 88
 
     10 = IMAGE
     10.file = fileadmin/backimage.jpg
@@ -37,7 +38,7 @@ lib.header {
           fontColor = #000000
           fontSize = 20
           offset = 20,30
-          fontFile = fileadmin/ALTdragon.ttf
+          fontFile = EXT:core/Resources/Private/Font/nimbus.ttf
         }
       }
     }
@@ -65,7 +66,7 @@ lib.header {
           fontColor = #000000
           fontSize = 20
           offset = 20,30
-          fontFile = fileadmin/ALTdragon.ttf
+          fontFile = EXT:core/Resources/Private/Font/nimbus.ttf
         }
       }
     }
@@ -93,7 +94,7 @@ lib.header {
           fontColor = #000000
           fontSize = 20
           offset = 20,30
-          fontFile = fileadmin/ALTdragon.ttf
+          fontFile = EXT:core/Resources/Private/Font/nimbus.ttf
           # Bold
           iterations = 5
           # Antialiased

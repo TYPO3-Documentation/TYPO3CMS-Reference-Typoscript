@@ -88,8 +88,10 @@ And here the inversed:
 
 The resulting masked image will look like:
 
-..  figure:: /Images/ThirdParty/GifbuilderExamples/Result.jpg
-    :alt: Resulting masked image
+..  figure:: /Images/GeneratedScreenshots/Gifbuilder/GifbuilderMask.jpg
+    :alt: The background photo with the TYPO3 logo in the top right corner.
+        The orange logo and the dark lettering sit on a gray box that lets
+        the rock shine through.
 
     Resulting masked image
 
@@ -173,10 +175,20 @@ background image shine through into the box.
 Here is an example: It is done with an :ref:`IMAGE cObject <cobj-image>`. Then
 you could retrieve the background image from the media field, for example.
 
-The base image is the same as above. Below is the result:
+The base image is the same as above:
 
 ..  literalinclude:: _codesnippets/_creatingSemiTransparent.typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
+
+GIFBUILDER renders this image:
+
+..  figure:: /Images/GeneratedScreenshots/Gifbuilder/GifbuilderBoxes.jpg
+    :alt: The background photo with three boxes in the top left corner, each
+        with the text "TYPO3 rulez !". The photo shines through the letters.
+        The gray and the red box cover the photo, the green box is half
+        transparent.
+
+    Three boxes with transparent text
 
 ..  _gifbuilder-examples-creating-shadows-images:
 
