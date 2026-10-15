@@ -610,15 +610,16 @@ $contentConnection->insert('tt_content', [
 $setup .= "\n" . $snippet('Gifbuilder/_calc.typoscript') . "tt_content.myextension_gifbuilder < lib.example\n";
 
 // The GIFBUILDER examples that mask an image onto the background image, each
-// on a page of its own. The snippets read the images from fileadmin.
+// on a page of its own. The snippets read the images from fileadmin. Keyed
+// by the target, since one source is copied twice.
 foreach (
     [
-        'Backimage.jpg' => 'backimage.jpg',
-        'Logo.png' => 'overlay.png',
-        'Mask_i.png' => 'mask.png',
+        'backimage.jpg' => 'Backimage.jpg',
+        'overlay.png' => 'Logo.png',
+        'mask.png' => 'Mask_i.png',
         // The image that the shadow examples put a shadow under
-        'Backimage.jpg' => 'image.jpg',
-    ] as $source => $target
+        'image.jpg' => 'Backimage.jpg',
+    ] as $target => $source
 ) {
     copy($documentation . 'Images/ThirdParty/GifbuilderExamples/' . $source, Environment::getPublicPath() . '/fileadmin/' . $target);
 }
