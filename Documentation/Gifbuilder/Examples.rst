@@ -223,8 +223,9 @@ Result
 Here a background image with a gradient has been "underlied" under the
 image:
 
-..  figure:: /Images/ThirdParty/GifbuilderExamples/Typo3_shadow1.png
-    :alt: Variant 1
+..  figure:: /Images/GeneratedScreenshots/Gifbuilder/GifbuilderShadow1.jpg
+    :alt: The photo on a white background, with a gray shadow along its right
+        and bottom edges.
 
     Variant 1
 
@@ -243,9 +244,8 @@ on top of it.
 Constants
 ~~~~~~~~~
 
-..  code-block:: typoscript
-
-    lib.shadowIntensity = #999999
+..  literalinclude:: _codesnippets/_variant2Constants.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript
 
 ..  _gifbuilder-examples-creating-shadows-images-variant-2-setup:
 
@@ -262,8 +262,9 @@ Result
 
 Here the result of the blur method. It looks quite good.
 
-..  figure:: /Images/ThirdParty/GifbuilderExamples/Typo3_shadow2.png
-    :alt: Variant 2
+..  figure:: /Images/GeneratedScreenshots/Gifbuilder/GifbuilderShadow2.jpg
+    :alt: The photo on a white background, with a blurred gray shadow along
+        its right and bottom edges.
 
     Variant 2
 
