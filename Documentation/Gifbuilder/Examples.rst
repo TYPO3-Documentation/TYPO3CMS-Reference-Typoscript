@@ -234,9 +234,8 @@ on top of it.
 Constants
 ~~~~~~~~~
 
-..  code-block:: typoscript
-
-    lib.shadowIntensity = #999999
+..  literalinclude:: _codesnippets/_variant2Constants.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript
 
 ..  _gifbuilder-examples-creating-shadows-images-variant-1-setup:
 
