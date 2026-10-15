@@ -547,13 +547,29 @@ foreach (
         'Backimage.jpg' => 'backimage.jpg',
         'Logo.png' => 'overlay.png',
         'Mask_i.png' => 'mask.png',
+        // The image that the shadow examples put a shadow under
+        'Backimage.jpg' => 'image.jpg',
     ] as $source => $target
 ) {
     copy($documentation . 'Images/ThirdParty/GifbuilderExamples/' . $source, Environment::getPublicPath() . '/fileadmin/' . $target);
 }
+// The background image of the first shadow example: white, with a gray
+// shadow that fades out towards its right and bottom edges
+$image = imagecreatetruecolor(320, 240);
+imagefill($image, 0, 0, imagecolorallocate($image, 0xff, 0xff, 0xff));
+for ($i = 0; $i < 10; $i++) {
+    $gray = 0x99 + (int)((0xff - 0x99) * $i / 10);
+    imagerectangle($image, 10 + $i, 10 + $i, 319 - $i, 239 - $i, imagecolorallocate($image, $gray, $gray, $gray));
+}
+imagefilledrectangle($image, 20, 20, 309, 229, imagecolorallocate($image, 0x99, 0x99, 0x99));
+imagepng($image, Environment::getPublicPath() . '/fileadmin/shadow.png');
 $gifbuilderExamples = [
     'gifbuilderMask' => ['GIFBUILDER mask', 'myextension_gifbuildermask', '_maskingSemiTransparent', 'lib.test'],
     'gifbuilderBoxes' => ['GIFBUILDER boxes', 'myextension_gifbuilderboxes', '_creatingSemiTransparent', 'lib.header'],
+    // Both define lib.shadowImage, which each content element copies, and
+    // which is cleared before the next snippet
+    'gifbuilderShadow1' => ['GIFBUILDER shadow 1', 'myextension_gifbuildershadow1', '_variant1Setup', 'lib.shadowImage'],
+    'gifbuilderShadow2' => ['GIFBUILDER shadow 2', 'myextension_gifbuildershadow2', '_variant2Setup', 'lib.shadowImage'],
 ];
 foreach ($gifbuilderExamples as $key => [$title, $cType, $snippetName, $object]) {
     $dataHandler = $process(['pages' => ['NEW' . $key => [
@@ -570,9 +586,10 @@ foreach ($gifbuilderExamples as $key => [$title, $cType, $snippetName, $object])
         'tstamp' => time(),
         'crdate' => time(),
     ]);
-    $setup .= "\n" . $snippet('Gifbuilder/_codesnippets/' . $snippetName . '.typoscript') . "tt_content.$cType < $object\n";
+    $setup .= "\n$object >\n" . $snippet('Gifbuilder/_codesnippets/' . $snippetName . '.typoscript') . "tt_content.$cType < $object\n";
 }
 file_put_contents(Environment::getConfigPath() . '/sites/data-processors/setup.typoscript', $setup);
+file_put_contents(Environment::getConfigPath() . '/sites/data-processors/constants.typoscript', $snippet('Gifbuilder/_codesnippets/_variant2Constants.typoscript'));
 
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
 GeneralUtility::mkdir_deep(Environment::getVarPath());

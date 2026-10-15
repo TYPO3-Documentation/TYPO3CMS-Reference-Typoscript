@@ -395,6 +395,16 @@ const screenshots = {
     frontend: true,
     download: 'img',
   },
+  'Gifbuilder/GifbuilderShadow1': {
+    url: `${baseUrl}/data-processors/gifbuilder-shadow-1`,
+    frontend: true,
+    download: 'img',
+  },
+  'Gifbuilder/GifbuilderShadow2': {
+    url: `${baseUrl}/data-processors/gifbuilder-shadow-2`,
+    frontend: true,
+    download: 'img',
+  },
 
   'Page/FunctionMenuPageModule': {
     url: moduleUrl('web/layout', functionMenu),

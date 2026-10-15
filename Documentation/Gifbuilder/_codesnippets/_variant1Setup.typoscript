@@ -1,40 +1,34 @@
-tt_content.image.20.1.file >
-tt_content.image.20.1.file = GIFBUILDER
-tt_content.image.20.1.file {
-  XY = [10.w],[10.h]
+lib.shadowImage = IMAGE
+lib.shadowImage {
+  file = GIFBUILDER
+  file {
+    XY = [10.w],[10.h]
+    format = jpg
+    quality = 88
 
-  10 = IMAGE
-  10 {
-    # Background image
-    file {
-      import.override = fileadmin/shadow.png
-      maxW.field = imagewidth
+    10 = IMAGE
+    10 {
+      # Background image, as wide as the result
+      file = fileadmin/shadow.png
+      file.width = 320
     }
-  }
 
-  # Scale background image
-  15 = SCALE
-  15 {
-    width = [10.w]
-    # Background Image is 20 pixel higher than scaled down "real" image
-    # Thus it should have "normal" height.
-    height = [20.h]+20
-  }
-
-  # Put real image on top of it
-  20 = IMAGE
-  20 {
-    file {
-      import.current = 1
-      width {
-        stdWrap = 1
-        stdWrap.field = imagewidth
-        # The real image is made 20 pixels more narrow than set in the Content element
-        stdWrap.wrap = |-20
-        prioriCalc = intval
-      }
+    # Scale background image
+    15 = SCALE
+    15 {
+      width = [10.w]
+      # Background image is 20 pixels higher than the real image
+      height = [20.h]+20
     }
-    # Inserted at offset 10,10
-    offset = 10,10
+
+    # Put real image on top of it
+    20 = IMAGE
+    20 {
+      # The real image is 20 pixels narrower than the background image
+      file = fileadmin/image.jpg
+      file.width = 300
+      # Inserted at offset 10,10
+      offset = 10,10
+    }
   }
 }
