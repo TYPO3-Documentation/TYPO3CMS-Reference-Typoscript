@@ -637,6 +637,13 @@ Properties
             value allows uploads. Despite its name, the option no longer sets
             a number of upload fields.
 
+            ..  versionchanged:: 15.0
+                :changelog: feature-110873-1790859108
+
+                In the file browser, files can also be uploaded by dropping
+                them onto it or by pasting them. The value `0` prevents
+                these uploads as well.
+
     ..  _useroptions-hidemodules:
 
     ..  rubric:: hideModules
