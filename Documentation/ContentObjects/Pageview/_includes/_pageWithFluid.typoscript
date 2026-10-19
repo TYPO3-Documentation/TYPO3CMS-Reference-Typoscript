@@ -10,9 +10,8 @@ page {
       parentPageTitle.data = levelfield:-1:title
     }
     dataProcessing {
-      10 = page-content
-      20 = menu
-      20.as = mainMenu
+      10 = menu
+      10.as = mainMenu
     }
   }
 }
