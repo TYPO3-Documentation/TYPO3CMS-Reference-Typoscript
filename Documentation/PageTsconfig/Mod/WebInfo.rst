@@ -32,21 +32,28 @@ fieldDefinitions
     :name: mod-web-info-fieldDefinitions
     :type: array
 
-    The available fields in the "Pagetree overview" module in the
-    :guilabel:`Content > Status` module, by default ship with the entries
-    "Basic settings", "Record overview", and "Cache and age".
+    The "Pagetree overview" of the :guilabel:`Content > Status` module lets
+    you choose which fields it shows. The system extension
+    :composer:`typo3/cms-info` ships the entries "Basic settings",
+    "Record overview", "Cache and Age", and "Layouts". The system extension
+    :composer:`typo3/cms-seo` adds "SEO" and "Social Media".
 
-    ..  figure:: /Images/ManualScreenshots/Info/PageTsModWebInfoFieldDefinitions.png
-        :alt: Default entries of Pagetree Overview
+    ..  figure:: /Images/GeneratedScreenshots/Info/PageTsModWebInfoFieldDefinitions.png
+        :alt: Select box "Type" with the entries "SEO", "Social Media", "Basic
+            settings", "Record overview", "Cache and Age", and "Layouts"
 
-        Default entries of Pagetree Overview
+        Default entries of the "Pagetree overview", with the system extension
+        `seo` installed
 
-    By using page TsConfig it is possible to change the available fields and add additional entries to the select box.
+    Use page TSconfig to change the fields of an entry, or to add entries to
+    the select box.
 
-    Next to using a list of fields from the `pages` table you can add counters for records in a given table by prefixing a
-    table name with `table_` and adding it to the list of fields.
+    The list of fields can contain fields of the `pages` table. To show the
+    number of records of a table, add the table name with the prefix
+    `table_`, for example `table_tt_content`.
 
-    The string `###ALL_TABLES###` is replaced with a list of all table names an editor has access to.
+    The string `###ALL_TABLES###` adds such a counter for each table that the
+    editor can read.
 
 ..  _fielddefinitions-webinfo-example:
 

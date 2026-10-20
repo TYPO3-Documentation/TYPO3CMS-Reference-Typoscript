@@ -358,10 +358,10 @@ The page "Community" was created with the settings from the example
 above. Compared to the two other pages created with default
 permissions you can see the effect: "Everybody" has read access:
 
-..  figure:: /Images/ManualScreenshots/Access/AccessDefaultActions.png
-    :alt: Page with altered permissions for backend users, groups and everybody
+..  figure:: /Images/GeneratedScreenshots/Access/PermissionsEverybody.png
+    :alt: The permissions of three pages, where only "Community" grants everybody the permission to show the page
 
-    Page with altered permissions for backend users, groups and everybody
+    The page "Community" with read access for everybody
 
 ..  index:: Page permissions; Group
 
@@ -400,10 +400,10 @@ above. Compared to the two other pages created with default
 permissions you can see the effect: The Backend Group can now also
 delete the page by default:
 
-..  figure:: /Images/ManualScreenshots/Access/AccessDefaultActions.png
-    :alt: Page with altered permissions for backend users, groups and everybody
+..  figure:: /Images/GeneratedScreenshots/Access/PermissionsGroup.png
+    :alt: The permissions of three pages, where only "Community" grants the group the permission to delete the page
 
-    Page with altered permissions for backend users, groups and everybody
+    The page "Community" with all permissions for the group
 
 ..  index:: Page permissions; Group id
 ..  _pagetcemain-permissions-groupid:
@@ -437,10 +437,10 @@ In this instance, backend group with UID 3 is "test_group". With the configurati
 above a new page would be created with this group setting instead of the default,
 even if a user who is not member of that group creates the page:
 
-..  figure:: /Images/ManualScreenshots/Access/AccessDefaultPermissions.png
-    :alt: Page with altered permissions for backend users and groups
+..  figure:: /Images/GeneratedScreenshots/Access/PermissionsGroupid.png
+    :alt: The permissions of three pages, where only "Community" belongs to the group "test_group"
 
-    Page with altered permissions for backend groups
+    The page "Community" with the group "test_group"
 
 ..  index:: Page permissions; User
 ..  _pagetcemain-permissions-actions:
@@ -504,10 +504,10 @@ In this instance, backend user with UID 2 is "test". With the configuration
 above a new page would be created with this owner setting instead of the default,
 even if another user creates the page:
 
-..  figure:: /Images/ManualScreenshots/Access/AccessDefaultPermissions.png
-    :alt: Page with altered permissions for backend users
+..  figure:: /Images/GeneratedScreenshots/Access/PermissionsUserid.png
+    :alt: The permissions of three pages, where only "Community" is owned by the user "test"
 
-    Page with altered permissions for backend users
+    The page "Community" with the owner "test"
 
 ..  index:: Page preview
 ..  _pagetcemain-preview:
