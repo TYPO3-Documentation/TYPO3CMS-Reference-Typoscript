@@ -482,6 +482,7 @@ const screenshots = {
     url: editUrl('be_users', testUser),
     tab: 'Options',
     element: field('TSconfig'),
+    to: field('tsconfig_includes'),
   },
   'Configuration/UserTSconfigOverview': {
     // Short, the tree of the administrator is long
