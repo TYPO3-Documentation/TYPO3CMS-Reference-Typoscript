@@ -633,16 +633,16 @@ Properties
 
             Set this option to `0` to prevent uploads in the file browser,
             which opens for example with :guilabel:`Add image` in a file field,
-            and on the :guilabel:`File` tab of the link browser. Any other
-            value allows uploads. Despite its name, the option no longer sets
-            a number of upload fields.
+            and on the :guilabel:`File` tab of the link browser. This includes
+            files that are dropped onto the file browser or pasted into it.
+            Any other value allows uploads. Despite its name, the option no
+            longer sets a number of upload fields.
 
             ..  versionchanged:: 15.0
                 :changelog: feature-110873-1790859108
 
-                In the file browser, files can also be uploaded by dropping
-                them onto it or by pasting them. The value `0` prevents
-                these uploads as well.
+                Files can also be uploaded by dropping them onto the file
+                browser or by pasting them.
 
     ..  _useroptions-hidemodules:
 
