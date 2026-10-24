@@ -1,0 +1,14 @@
+{
+    "name": "myvendor/my-sitepackage",
+    "type": "typo3-cms-extension",
+    "description": "Example site package of the TypoScript Reference: what the examples with a site package caption read",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "typo3/cms-core": "dev-main as 14.3"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "my_sitepackage"
+        }
+    }
+}

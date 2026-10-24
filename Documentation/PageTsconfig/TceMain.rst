@@ -248,19 +248,14 @@ linkHandler
 
     Suggest CSS classes for all link types:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_linkHandlerCssClassItems.tsconfig
         :caption: EXT:my_sitepackage/Configuration/Sets/Main/page.tsconfig
 
-        TCEMAIN.linkHandler.properties.cssClass.items {
-          10 {
-            value = btn btn-primary
-            label = LLL:my_sitepackage.messages:linkClass.buttonPrimary
-          }
-          20 {
-            value = link-arrow
-            label = Arrow link
-          }
-        }
+    ..  figure:: /Images/GeneratedScreenshots/TceMain/LinkBrowserCssClassItems.png
+        :alt: The link browser with the field "CSS-Class" open. It suggests
+            "Primary button (btn btn-primary)" and "Arrow link (link-arrow)".
+
+        The link browser suggests the CSS classes of the example
 
     Suggest other CSS classes for file links only:
 

@@ -77,6 +77,7 @@ $examples = [
     'csvExport' => ['CSV download', 'CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript'],
     'exportButtons' => ['Export button', null],
     'noExportButtons' => ['No export button', 'CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.typoscript'],
+    'linkCssClasses' => ['Link CSS classes', 'PageTsconfig/_codesnippets/_linkHandlerCssClassItems.tsconfig'],
 ];
 $data = ['pages' => []];
 foreach ($examples as $key => [$title, $path]) {
@@ -105,9 +106,13 @@ $dataHandler = $process([
         'NEWcsv' => ['pid' => $uids['csvExport'], 'CType' => 'text', 'header' => 'Welcome'],
         'NEWexport' => ['pid' => $uids['exportButtons'], 'CType' => 'text', 'header' => 'Welcome'],
         'NEWnoExport' => ['pid' => $uids['noExportButtons'], 'CType' => 'text', 'header' => 'Welcome'],
+        // The header link is a field of type link, whose link browser
+        // suggests the CSS classes
+        'NEWlinkCss' => ['pid' => $uids['linkCssClasses'], 'CType' => 'header', 'header' => 'Our services'],
     ],
 ]);
 $uids['headerContent'] = $dataHandler->substNEWwithIDs['NEWheader'];
+$uids['linkCssContent'] = $dataHandler->substNEWwithIDs['NEWlinkCss'];
 
 // The copy examples: "Test" is copied once as TYPO3 does by default, then
 // once more with the TSconfig of the example. Each copy goes on top. New
