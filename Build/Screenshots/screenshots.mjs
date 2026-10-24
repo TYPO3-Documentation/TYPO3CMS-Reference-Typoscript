@@ -231,6 +231,27 @@ const screenshots = {
     margin: 0,
     element: '.context-menu >> visible=true',
   },
+  // The two view modes of the Media module, which
+  // options.defaultResourcesViewMode chooses between
+  'List/FileListViewModeTiles': {
+    url: `${baseUrl}/typo3/module/file/list?id=1:/&viewMode=tiles`,
+    window: true,
+    until: '.resource-tiles',
+  },
+  'List/FileListViewModeList': {
+    url: `${baseUrl}/typo3/module/file/list?id=1:/&viewMode=list`,
+    window: true,
+    // The folders and the first file are enough to show the view
+    until: 'tr[data-filelist-type="file"] >> nth=0',
+  },
+  // The menu with the view modes and the item "Show thumbnails", which
+  // options.file_list.enableDisplayThumbnails hides
+  'List/FileListViewMenu': {
+    url: `${baseUrl}/typo3/module/file/list?id=1:/&viewMode=list`,
+    window: true,
+    menu: '.btn-group:has(a[href*="viewMode=tiles"]) > .dropdown-toggle',
+    until: '.dropdown-menu:popover-open',
+  },
   'List/FileListPrimaryActions': {
     url: `${baseUrl}/typo3/module/file/list?id=1:/&viewMode=list`,
     prepare: async (frame) => {
