@@ -264,19 +264,26 @@ Properties
         :type: `list` or `tiles`
         :default: `tiles`
 
-        The option :typoscript:`options.defaultResourcesViewMode` has
-        been introduced, which allows to define the initial display mode. Valid
-        values are therefore `list` and `tiles`, e.g.:
-
-        The listing of resources in the TYPO3 Backend, e.g. in the
-        :guilabel:`Media` module or the `FileBrowser` can be changed
-        between `list` and `tiles`. TYPO3 serves by default `tiles`, if the user
-        has not already made a choice.
+        Sets the view in which the :guilabel:`Media` module and the file
+        browser show files and folders, until the user chooses a view in the
+        :guilabel:`View` menu. The choice of the user stays.
 
         ..  code-block:: typoscript
             :caption: EXT:my_sitepackage/Configuration/user.tsconfig
 
             options.defaultResourcesViewMode = list
+
+        ..  figure:: /Images/GeneratedScreenshots/List/FileListViewModeTiles.png
+            :alt: The Media module with the folders and files of fileadmin as
+                tiles, each with a preview and its name.
+
+            The view `tiles`
+
+        ..  figure:: /Images/GeneratedScreenshots/List/FileListViewModeList.png
+            :alt: The Media module with the folders and files of fileadmin as a
+                table, with the columns "Name", "Control", "Type", and "Size".
+
+            The view `list`
 
     ..  _useroptions-defaultuploadfolder:
 
@@ -421,20 +428,29 @@ Properties
             :type: list of keywords
             :default: selectable
 
-            Determines whether the checkbox :guilabel:`Display thumbnails` in the
-            :guilabel:`Media` module is shown or hidden. If it is hidden, you can predefine it
-            to be always activated or always deactivated.
+            Determines whether the :guilabel:`View` menu of the
+            :guilabel:`Media` module shows the item
+            :guilabel:`Show thumbnails`. Without the item, the thumbnails are
+            always shown or never shown.
 
             The following values are possible:
 
             :typoscript:`activated`
-                The option is activated and the checkbox is hidden.
+                The thumbnails are shown and the item is hidden.
 
             :typoscript:`deactivated`
-                The option is deactivated and the checkbox is hidden.
+                The thumbnails are not shown and the item is hidden.
 
             :typoscript:`selectable`
-                The checkbox is shown so that the option can be selected by the user.
+                The item is shown, so the user can show or hide the thumbnails.
+
+            ..  figure:: /Images/GeneratedScreenshots/List/FileListViewMenu.png
+                :alt: The open View menu of the Media module with the items
+                    "Tiles", "List", "Show thumbnails", "Show clipboard", and
+                    "Select columns".
+
+                The item :guilabel:`Show thumbnails` with the default value
+                `selectable`
 
         ..  _useroptions-file-list-filesperpage:
 
