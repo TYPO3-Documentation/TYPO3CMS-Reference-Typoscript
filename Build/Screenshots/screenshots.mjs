@@ -28,7 +28,7 @@ const {
   headerContent, csvExport, exportButtons, noExportButtons, templatePage,
   staticIncludes, staticIncludesRecord, syntaxError, permissionsEverybody, permissionsGroup,
   permissionsGroupid, permissionsUserid, testUser, layoutPage, textmedia, rootTemplate, setsRoot, copies, copyOriginal, labels, labelLast, site,
-  track, functionMenu, previewPreset,
+  track, functionMenu, previewPreset, linkCssContent,
 } =
   JSON.parse(readFileSync('../../var/screenshot-records.json', 'utf8'));
 
@@ -260,6 +260,29 @@ const screenshots = {
       await frame.page().waitForTimeout(1000);
       // The file name field has the focus, which would look selected
       await frame.page().evaluate(() => document.activeElement?.blur());
+    },
+    modal: true,
+  },
+  // The link browser of a field of type link, with the suggested CSS
+  // classes open
+  'TceMain/LinkBrowserCssClassItems': {
+    url: editUrl('tt_content', linkCssContent),
+    // The modal takes the height of the window, the form needs less
+    height: 450,
+    prepare: async (frame) => {
+      await frame.locator(`${field('header_link')} a[href*="/wizard/link/browse"]`).click();
+      await frame.page().locator('typo3-backend-modal dialog[open]').waitFor();
+      const browser = await (await frame.page().locator('typo3-backend-modal iframe').elementHandle()).contentFrame();
+      // The arrow of the field opens the list without highlighting a
+      // choice. It exists once the combobox element is rendered.
+      const indicator = await browser.waitForFunction(() => document.querySelector('#lclass')
+        ?.closest('typo3-backend-combobox')?.shadowRoot?.querySelector('.indicator'));
+      // The mouse is still where the link browser was opened, and a choice
+      // below it would be highlighted
+      await frame.page().mouse.move(0, 0);
+      await indicator.evaluate((element) => element.click());
+      await browser.locator('#lclass[aria-expanded="true"]').waitFor();
+      await frame.page().waitForTimeout(500);
     },
     modal: true,
   },
