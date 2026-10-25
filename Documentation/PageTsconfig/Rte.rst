@@ -284,6 +284,42 @@ This means that options limited to `ts_transform` will also work for `ts_css`.
 
 
 ..  index::
+    RTE; Attributes of p tags
+..  _rte-proc-allowattributes:
+
+allowAttributes
+~~~~~~~~~~~~~~~
+
+..  confval:: proc.allowAttributes
+    :name: rte-proc-allowAttributes
+    :type: string with comma separated values, or array
+    :default: `class, id, title, dir, lang, xml:lang, itemscope, itemtype, itemprop`
+
+    Applies for `css_transform` only.
+
+    Direction: From RTE to database, saving a record.
+
+    Attributes that a `<p>` tag keeps when the content is stored in the
+    database. TYPO3 removes all other attributes of `<p>` tags. The value
+    replaces the default, which the CKEditor preset sets in
+    :file:`EXT:rte_ckeditor/Configuration/RTE/Processing.yaml`.
+
+    The option applies to `<p>` tags only. The attributes of the other tags
+    are set per tag with
+    `allowedAttribs <https://docs.typo3.org/permalink/t3tsref:confval-htmlparser-tags-allowedattribs>`_
+    in `proc.HTMLparser_db`.
+
+    The classes of an allowed `class` attribute are filtered further by
+    `proc.allowedClasses <https://docs.typo3.org/permalink/t3tsref:confval-rte-proc-allowedclasses>`_.
+
+    ..  versionchanged:: 14.3.8
+        A comma-separated list takes effect as well. Before, only the array
+        notation `allowAttributes.` took effect.
+
+    ..  literalinclude:: _codesnippets/_rteProcAllowAttributes.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+
+..  index::
     RTE; Classes allowed
 ..  _rte-proc-allowedclasses:
 
