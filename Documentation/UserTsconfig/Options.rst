@@ -959,9 +959,21 @@ Properties
             :type: boolean
             :User TSconfig path: options.pageTree.showDomainNameWithTitle
 
-            If set, the domain name will be appended to the page title for
-            pages that have :guilabel:`Is root of web site?` checked in the page properties.
-            Useful if there are several domains in one page tree.
+            If set, the page tree shows the base of the site in square
+            brackets after the title of each page that is the root of a site.
+            This helps to tell the sites apart if one page tree holds several
+            sites.
+
+            ..  literalinclude:: _codesnippets/_showDomainNameWithTitle.tsconfig
+                :caption: EXT:my_sitepackage/Configuration/user.tsconfig
+
+            ..  figure:: /Images/GeneratedScreenshots/List/optionsPageTreeShowDomainNameWithTitle.png
+                :alt: The page tree with the pages "Company website
+                    [https://www.example.org/]", "Online shop
+                    [https://shop.example.org/]", and "Intranet
+                    [https://intranet.example.org/]".
+
+                The site roots with the base of their site
 
         ..  _useroptions-pagetree-searchbyfrontenduri:
 

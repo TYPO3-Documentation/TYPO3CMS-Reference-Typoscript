@@ -208,6 +208,27 @@ const screenshots = {
     from: node(copies),
     to: node(copyOriginal),
   },
+  // The site roots in the page tree, with the base of their site
+  // The site roots in the page tree, with the base of their site. The user
+  // sees only the example sites, which create-records.php hides from "admin".
+  'List/optionsPageTreeShowDomainNameWithTitle': {
+    // No page selected: the selected node would look highlighted
+    url: moduleUrl('web/layout', 0),
+    user: 'pagetree',
+    prepare: async (frame) => {
+      const page = frame.page();
+      // Wide enough for the titles with the base of their site
+      await page.locator('typo3-backend-content-navigation')
+        .evaluate((navigation) => navigation.setNavigationWidth(480));
+      await page.locator('.node[aria-level="2"]').first().waitFor();
+      await page.waitForTimeout(1000);
+      await page.evaluate(() => document.activeElement?.blur());
+    },
+    outside: true,
+    margin: 0,
+    // The site roots, below the selected node of the installation
+    element: '.node[aria-level="2"]',
+  },
   'List/optionsPageTreeLabel': {
     url: moduleUrl('web/layout', root),
     prepare: expand(root, labels),
@@ -553,11 +574,19 @@ const viewportHeight = 2000;
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1280, height: viewportHeight } });
-await page.goto(`${baseUrl}/typo3/`);
-await page.fill('#t3-username', username);
-await page.fill('#t3-password', password);
-await page.click('#t3-login-submit');
-await page.waitForURL(/\/typo3\/(main|module)/);
+// A screenshot can name another backend user, which has the same password
+let user;
+const login = async (name) => {
+  // Without the session cookie, the backend shows the login form again
+  await page.context().clearCookies();
+  await page.goto(`${baseUrl}/typo3/`);
+  await page.fill('#t3-username', name);
+  await page.fill('#t3-password', password);
+  await page.click('#t3-login-submit');
+  await page.waitForURL(/\/typo3\/(main|module)/);
+  user = name;
+};
+await login(username);
 
 const names = process.argv.length > 2 ? process.argv.slice(2) : Object.keys(screenshots);
 // The frontend comes last: its error pages log their exceptions, which the
@@ -567,6 +596,9 @@ for (const name of names) {
   const screenshot = screenshots[name];
   if (screenshot === undefined) {
     throw new Error(`Unknown screenshot "${name}"`);
+  }
+  if ((screenshot.user ?? username) !== user) {
+    await login(screenshot.user ?? username);
   }
   await page.setViewportSize({
     width: screenshot.width ?? (screenshot.window || screenshot.frontend ? 1000 : 1280),
