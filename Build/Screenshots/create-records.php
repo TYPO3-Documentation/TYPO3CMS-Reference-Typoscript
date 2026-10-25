@@ -663,6 +663,46 @@ foreach ($gifbuilderExamples as $key => [$title, $cType, $snippetName, $object])
 file_put_contents(Environment::getConfigPath() . '/sites/data-processors/setup.typoscript', $setup);
 file_put_contents(Environment::getConfigPath() . '/sites/data-processors/constants.typoscript', $snippet('Gifbuilder/_codesnippets/_variant2Constants.typoscript'));
 
+// Sites of their own for the page tree of a second administrator, whose user
+// TSconfig changes the page tree: they have the names and domains an example
+// would have, and are hidden from "admin", so that the page tree of the other
+// screenshots stays the same. The second administrator has the password of
+// "admin", which run.sh sets.
+$pageConnection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('pages');
+$otherRoots = array_map('intval', $pageConnection->select(['uid'], 'pages', ['pid' => 0, 'deleted' => 0])->fetchFirstColumn());
+$exampleSites = [
+    'company-website' => ['Company website', 'https://www.example.org/'],
+    'online-shop' => ['Online shop', 'https://shop.example.org/'],
+    'intranet' => ['Intranet', 'https://intranet.example.org/'],
+];
+$exampleRoots = [];
+$siteConfiguration = GeneralUtility::makeInstance(SiteFinder::class)->getSiteByRootPageId(1)->getConfiguration();
+// The DataHandler puts a new page first, so the last one is created first
+foreach (array_reverse($exampleSites) as $identifier => [$title, $base]) {
+    $dataHandler = $process(['pages' => ['NEWexample' => ['pid' => 0, 'title' => $title, 'is_siteroot' => 1, 'hidden' => 0]]]);
+    $exampleRoots[] = $dataHandler->substNEWwithIDs['NEWexample'];
+    $siteConfiguration['rootPageId'] = end($exampleRoots);
+    $siteConfiguration['base'] = $base;
+    GeneralUtility::makeInstance(SiteWriter::class)->write($identifier, $siteConfiguration);
+}
+$userConnection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('be_users');
+$adminTsConfig = (string)$userConnection->select(['TSconfig'], 'be_users', ['username' => 'admin'])->fetchOne();
+$userConnection->update(
+    'be_users',
+    ['TSconfig' => $adminTsConfig . "\noptions.hideRecords.pages = " . implode(',', $exampleRoots) . "\n"],
+    ['username' => 'admin']
+);
+$process(['be_users' => ['NEWpageTree' => [
+    'pid' => 0,
+    'username' => 'pagetree',
+    'password' => 'Screenshots-2026!',
+    'admin' => 1,
+    // New users are disabled by default
+    'disable' => 0,
+    'TSconfig' => $snippet('UserTsconfig/_codesnippets/_showDomainNameWithTitle.tsconfig')
+        . 'options.hideRecords.pages = ' . implode(',', $otherRoots) . "\n",
+]]]);
+
 // The uids differ between TYPO3 versions, so screenshots.mjs reads them here
 GeneralUtility::mkdir_deep(Environment::getVarPath());
 file_put_contents(Environment::getVarPath() . '/screenshot-records.json', json_encode($uids, JSON_PRETTY_PRINT) . "\n");
