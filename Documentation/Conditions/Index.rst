@@ -26,7 +26,7 @@ on current data.
 ..  seealso::
     Have a look at the
     :ref:`TypoScript syntax condition chapter <typoscript-syntax-conditions>`
-    for the basic syntax of conditions.
+    for the basic syntax of conditions and how to combine several criteria.
 
 The :ref:`Symfony expression language <t3coreapi:symfony-expression-language>`
 tends to throw warnings when sub-arrays are checked in a condition that do not
