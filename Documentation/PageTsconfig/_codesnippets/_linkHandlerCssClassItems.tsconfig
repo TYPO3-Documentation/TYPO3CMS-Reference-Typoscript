@@ -1,0 +1,10 @@
+TCEMAIN.linkHandler.properties.cssClass.items {
+  10 {
+    value = btn btn-primary
+    label = LLL:my_sitepackage.messages:linkClass.buttonPrimary
+  }
+  20 {
+    value = link-arrow
+    label = Arrow link
+  }
+}
