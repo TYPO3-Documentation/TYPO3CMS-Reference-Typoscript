@@ -1094,7 +1094,11 @@ Properties
         :type: boolean / "top"
         :default: 1
 
-        If set, a button :guilabel:`Save and create new` will appear in TCEFORMs.
+        If set, the edit form shows the button :guilabel:`New`. It saves the
+        record and opens a form for a new record of the same table, which is
+        inserted after the current one. With the value `top`, the new record
+        is inserted at the top of the page instead. TYPO3 sets the option to
+        `0` for pages, files, and file metadata.
 
         Note, it is possible to set this for single tables using
         :typoscript:`options.saveDocNew.[tableName]`.
@@ -1113,6 +1117,14 @@ Properties
             options.saveDocNew = 0
             options.saveDocNew.tt_content = top
 
+        ..  figure:: /Images/GeneratedScreenshots/List/EditFormButtons.png
+            :alt: The buttons of the edit form: "Close", "Save", "View", "New",
+                "Duplicate", and "Delete". The buttons "View", "New", and
+                "Duplicate" are marked.
+
+            The buttons :guilabel:`View`, :guilabel:`New`, and
+            :guilabel:`Duplicate` of the edit form
+
     ..  _useroptions-savedocview:
 
     ..  rubric:: saveDocView
@@ -1122,12 +1134,22 @@ Properties
         :type: boolean
         :default: 1
 
-        If set, a button :guilabel:`Save and view` will appear in TCEFORMs.
+        If set, the edit form shows the button :guilabel:`View`. It saves the
+        record and shows it in the frontend. If the form has unsaved changes,
+        TYPO3 asks first whether to save them.
 
         Note, it is possible to set this for single tables using
         :typoscript:`options.saveDocView.[tableName]`.
         Any value set for a single table will override the default value set for
         :typoscript:`saveDocView`.
+
+        ..  figure:: /Images/GeneratedScreenshots/List/EditFormButtons.png
+            :alt: The buttons of the edit form: "Close", "Save", "View", "New",
+                "Duplicate", and "Delete". The buttons "View", "New", and
+                "Duplicate" are marked.
+
+            The buttons :guilabel:`View`, :guilabel:`New`, and
+            :guilabel:`Duplicate` of the edit form
 
     ..  _useroptions-showduplicate:
 
@@ -1138,12 +1160,26 @@ Properties
         :type: boolean
         :default: 0
 
-        If set, a button :guilabel:`Duplicate` will appear in TCEFORMs.
+        If set, the edit form shows the button :guilabel:`Duplicate`. It saves
+        the record, copies it after itself, and opens the copy.
 
         Note, that it is possible to set this for single tables using
         :typoscript:`options.showDuplicate.[tableName]`.
         Any value set for a single table will override the default value set for
         :typoscript:`showDuplicate`.
+
+        Example:
+
+        ..  literalinclude:: _codesnippets/_showDuplicate.tsconfig
+            :caption: EXT:my_sitepackage/Configuration/user.tsconfig
+
+        ..  figure:: /Images/GeneratedScreenshots/List/EditFormButtons.png
+            :alt: The buttons of the edit form: "Close", "Save", "View", "New",
+                "Duplicate", and "Delete". The buttons "View", "New", and
+                "Duplicate" are marked.
+
+            The buttons :guilabel:`View`, :guilabel:`New`, and
+            :guilabel:`Duplicate` of the edit form
 
     ..  _useroptions-showhistory:
 
