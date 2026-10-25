@@ -153,7 +153,8 @@ $process(['pages' => [
 GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('be_users')->update(
     'be_users',
     ['TSconfig' => str_replace('label.296', 'label.' . $uids['labelPage'], $snippet('UserTsconfig/_codesnippets/_properties.typoscript'))
-        . "\n" . $snippet('UserTsconfig/_codesnippets/_properties3.tsconfig')],
+        . "\n" . $snippet('UserTsconfig/_codesnippets/_properties3.tsconfig')
+        . "\n" . $snippet('UserTsconfig/_codesnippets/_showDuplicate.tsconfig')],
     ['username' => 'admin']
 );
 

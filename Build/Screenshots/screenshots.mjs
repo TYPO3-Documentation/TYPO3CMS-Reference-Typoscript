@@ -521,6 +521,21 @@ const screenshots = {
     from: '.form-section-headline:text-is("Media Adjustments")',
     to: field('imageborder'),
   },
+  // The buttons of the edit form that options.saveDocView, saveDocNew and
+  // showDuplicate show, marked
+  'List/EditFormButtons': {
+    url: editUrl('tt_content', textmedia),
+    prepare: async (frame) => {
+      for (const button of ['.t3js-editform-view', '.t3js-editform-new', '.t3js-editform-duplicate']) {
+        await frame.locator(button).evaluate((element) => {
+          element.style.outline = '3px solid #ff8700';
+          element.style.outlineOffset = '2px';
+        });
+      }
+    },
+    from: '.t3js-editform-close',
+    to: '.t3js-editform-delete-record',
+  },
   'BackendUsers/TSconfigUserInput': {
     url: editUrl('be_users', testUser),
     tab: 'Options',
