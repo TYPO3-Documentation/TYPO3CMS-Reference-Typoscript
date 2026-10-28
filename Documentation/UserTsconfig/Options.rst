@@ -631,6 +631,12 @@ Properties
             :default: 1
             :User TSconfig path: options.folderTree.uploadFieldsInLinkBrowser
 
+            ..  versionchanged:: 15.0
+                :changelog: feature-110873-1790859108
+
+                Files can also be uploaded by dropping them onto the file
+                browser or by pasting them.
+
             Set this option to `0` to prevent uploads in the file browser,
             which opens for example with :guilabel:`Add image` in a file field,
             and on the :guilabel:`File` tab of the link browser. This includes
@@ -638,11 +644,10 @@ Properties
             Any other value allows uploads. Despite its name, the option no
             longer sets a number of upload fields.
 
-            ..  versionchanged:: 15.0
-                :changelog: feature-110873-1790859108
-
-                Files can also be uploaded by dropping them onto the file
-                browser or by pasting them.
+            ..  warning::
+                The option does not prevent uploads into a file field of a
+                record. Editors can still drop or paste files onto a field
+                such as :guilabel:`Images` of a content element.
 
     ..  _useroptions-hidemodules:
 
