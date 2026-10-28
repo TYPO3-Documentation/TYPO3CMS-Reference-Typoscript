@@ -14,7 +14,7 @@ class FormEngineUtility
     'password' => ['size', 'readOnly'],
     'datetime' => ['size', 'readOnly'],
     'color' => ['size', 'readOnly'],
-    'uuid' => ['size', 'enableCopyToClipboard'],
+    'uuid' => ['size', 'appearance', 'enableCopyToClipboard'],
     'text' => ['cols', 'rows', 'wrap', 'max', 'readOnly'],
     'json' => ['cols', 'rows', 'readOnly'],
     'check' => ['cols', 'readOnly'],
