@@ -1,0 +1,8 @@
+config.tx_extbase {
+  persistence {
+    storagePid = 42
+  }
+  mvc {
+    showPageNotFoundIfTargetNotFoundException = 1
+  }
+}
