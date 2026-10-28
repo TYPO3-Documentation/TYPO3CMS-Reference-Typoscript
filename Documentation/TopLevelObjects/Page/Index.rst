@@ -475,7 +475,7 @@ Properties
 
             The file property :typoscript:`external` has been removed. An
             absolute URL needs no replacement. To output a relative URL as it
-            is, prefix it with `URI:`, for example `URI:/styles/main.css`.
+            is, prefix it with `URI:`, for example `URI:/scripts/main.js`.
 
         Inserts one or more (Java)Scripts in :html:`<script>` tags.
         With :ref:`Properties of 'config' <setup-config-movejsfromheadertofooter>` set to TRUE all files
@@ -547,6 +547,13 @@ Properties
         :name: page-includeJSFooter
         :type: :ref:`resource <data-type-resource>`
 
+        ..  versionchanged:: 14.0
+            :changelog: breaking-107927-1763052738
+
+            The file property :typoscript:`external` has been removed. An
+            absolute URL needs no replacement. To output a relative URL as it
+            is, prefix it with `URI:`, for example `URI:/scripts/main.js`.
+
         Add JavaScript files to footer (after files set in :confval:`includeJSFooterlibs <page-includeJSFooterlibs>`)
 
         Same as :confval:`includeJS <page-includeJS>` above, except that this block gets
@@ -558,6 +565,13 @@ Properties
     ..  confval:: includeJSFooterlibs.[array]
         :name: page-includeJSFooterlibs
         :type: :ref:`resource <data-type-resource>`
+
+        ..  versionchanged:: 14.0
+            :changelog: breaking-107927-1763052738
+
+            The file property :typoscript:`external` has been removed. An
+            absolute URL needs no replacement. To output a relative URL as it
+            is, prefix it with `URI:`, for example `URI:/scripts/main.js`.
 
         Add JavaScript library files to footer.
 
@@ -579,6 +593,13 @@ Properties
     ..  confval:: includeJSLibs.[array]
         :name: page-includeJSLibs
         :type: :ref:`resource <data-type-resource>`
+
+        ..  versionchanged:: 14.0
+            :changelog: breaking-107927-1763052738
+
+            The file property :typoscript:`external` has been removed. An
+            absolute URL needs no replacement. To output a relative URL as it
+            is, prefix it with `URI:`, for example `URI:/scripts/main.js`.
 
         Adds JavaScript library files to head of page.
 
