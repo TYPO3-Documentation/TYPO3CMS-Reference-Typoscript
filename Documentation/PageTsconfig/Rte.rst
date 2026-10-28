@@ -300,24 +300,37 @@ allowAttributes
     Direction: From RTE to database, saving a record.
 
     Attributes that a `<p>` tag keeps when the content is stored in the
-    database. TYPO3 removes all other attributes of `<p>` tags. The value
-    replaces the default, which the CKEditor preset sets in
+    database. TYPO3 removes all other attributes of `<p>` tags. The CKEditor
+    preset sets the default as a list in
     :file:`EXT:rte_ckeditor/Configuration/RTE/Processing.yaml`.
 
-    The option applies to `<p>` tags only. The attributes of the other tags
-    are set per tag with
-    `allowedAttribs <https://docs.typo3.org/permalink/t3tsref:confval-htmlparser-tags-allowedattribs>`_
-    in `proc.HTMLparser_db`.
+    To replace the default, set the option as a string with comma-separated
+    values in the `processing` section of your own
+    `RTE preset <https://docs.typo3.org/permalink/typo3/cms-rte-ckeditor:config-concepts-configuration-overview>`_.
+    A list in your preset does not replace the default. TYPO3 adds it to the
+    list of the imported preset.
+
+    ..  literalinclude:: _codesnippets/_rteProcAllowAttributes.yaml
+        :caption: EXT:my_sitepackage/Configuration/RTE/MyPreset.yaml
+
+    Page TSconfig cannot replace the default of the CKEditor preset. A
+    comma-separated list in page TSconfig has no effect. An array replaces
+    only the entries at the same positions, and the other entries of the
+    default stay. To restrict the attributes of `<p>` tags in page TSconfig,
+    set `allowedAttribs <https://docs.typo3.org/permalink/t3tsref:confval-htmlparser-tags-allowedattribs>`_
+    for the tag `p` in `proc.HTMLparser_db`:
+
+    ..  literalinclude:: _codesnippets/_rteProcHtmlParserDbAllowedAttribs.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+
+    An attribute of a `<p>` tag is only kept if both options allow it.
 
     The classes of an allowed `class` attribute are filtered further by
     `proc.allowedClasses <https://docs.typo3.org/permalink/t3tsref:confval-rte-proc-allowedclasses>`_.
 
     ..  versionchanged:: 14.3.8
-        A comma-separated list takes effect as well. Before, only the array
-        notation `allowAttributes.` took effect.
-
-    ..  literalinclude:: _codesnippets/_rteProcAllowAttributes.tsconfig
-        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+        A string with comma-separated values takes effect as well. Before,
+        only a list took effect.
 
 ..  index::
     RTE; Classes allowed
