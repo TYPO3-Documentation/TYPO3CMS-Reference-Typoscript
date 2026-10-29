@@ -284,6 +284,46 @@ This means that options limited to `ts_transform` will also work for `ts_css` of
 
 
 ..  index::
+    RTE; Attributes of p tags
+..  _rte-proc-allowattributes:
+
+allowAttributes
+~~~~~~~~~~~~~~~
+
+..  confval:: proc.allowAttributes
+    :name: rte-proc-allowAttributes
+    :type: array
+    :default: `class, id, title, dir, lang, xml:lang, itemscope, itemtype, itemprop`
+
+    Applies for `css_transform` only.
+
+    Direction: From RTE to database, saving a record.
+
+    Attributes that a `<p>` tag keeps when the content is stored in the
+    database. TYPO3 removes all other attributes of `<p>` tags. The CKEditor
+    preset sets the default as a list in
+    :file:`EXT:rte_ckeditor/Configuration/RTE/Processing.yaml`.
+
+    TYPO3 reads the option only as an array. A string with comma-separated
+    values has no effect. An array in page TSconfig, or a list in your own
+    `RTE preset <https://docs.typo3.org/permalink/typo3/cms-rte-ckeditor:configuration-presets>`_,
+    does not replace the default of the CKEditor preset either. The array
+    replaces only the entries at the same positions, and TYPO3 adds the list
+    to the list of the imported preset.
+
+    To restrict the attributes of `<p>` tags, set
+    `allowedAttribs <https://docs.typo3.org/permalink/t3tsref:confval-htmlparser-tags-allowedattribs>`_
+    for the tag `p` in `proc.HTMLparser_db`:
+
+    ..  literalinclude:: _codesnippets/_rteProcHtmlParserDbAllowedAttribs.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+
+    An attribute of a `<p>` tag is only kept if both options allow it.
+
+    The classes of an allowed `class` attribute are filtered further by
+    `proc.allowedClasses <https://docs.typo3.org/permalink/t3tsref:confval-rte-proc-allowedclasses>`_.
+
+..  index::
     RTE; Classes allowed
 ..  _rte-proc-allowedclasses:
 
