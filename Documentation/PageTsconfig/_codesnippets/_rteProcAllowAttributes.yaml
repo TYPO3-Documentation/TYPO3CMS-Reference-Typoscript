@@ -1,0 +1,5 @@
+imports:
+  - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Default.yaml' }
+
+processing:
+  allowAttributes: 'class, id, lang'
