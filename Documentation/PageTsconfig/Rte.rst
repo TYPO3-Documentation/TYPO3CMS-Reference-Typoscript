@@ -315,7 +315,7 @@ allowAttributes
 
     Page TSconfig cannot replace the default of the CKEditor preset. A
     comma-separated list in page TSconfig has no effect. An array replaces
-    only the entries at the same positions, and the other entries of the
+    only the entries at the same positions, and the other entries in the
     default stay. To restrict the attributes of `<p>` tags in page TSconfig,
     set `allowedAttribs <https://docs.typo3.org/permalink/t3tsref:confval-htmlparser-tags-allowedattribs>`_
     for the tag `p` in `proc.HTMLparser_db`:
