@@ -261,6 +261,49 @@ buttons.link.[ *type* ].properties.target.default
     provided by extensions.
 
 ..  index::
+    RTE; Editor configuration
+..  _page-ts-rte-properties-editor:
+
+editor
+------
+
+..  confval:: editor
+    :name: rte-editor
+    :type: array
+
+    Changes or adds values of the `editor` section of the
+    `preset <https://docs.typo3.org/permalink/t3tsref:pagetsrteoverridepreset>`_
+    in use. TYPO3 hands `editor.config` to CKEditor as it is. The options
+    there belong to CKEditor: look them up in the
+    `CKEditor configuration reference <https://docs.typo3.org/permalink/typo3/cms-rte-ckeditor:config-ref-yaml>`_
+    and in the documentation of CKEditor.
+
+    Keep the configuration of the editor in a preset where you can. Use page
+    TSconfig to select another preset, and to change single values only.
+
+    TYPO3 merges page TSconfig into the preset key by key:
+
+    *   A value replaces the value with the same key in the preset.
+    *   A key that the preset does not have is added.
+    *   In a list of the preset, a key replaces the entry at the same position.
+        Use a higher key to add an entry.
+
+    Page TSconfig cannot remove a value of the preset. Every value arrives
+    in CKEditor as a string, so a boolean cannot be switched off: `0` arrives
+    as the string `"0"`, which is not `false`. For both, use a preset of your
+    own.
+
+    `RTE.config.[tableName].[fieldName]` replaces the values of
+    `RTE.default`, and `RTE.config.[tableName].[fieldName].types.[type]`
+    replaces both.
+
+    The default preset loads one stylesheet into the editor, as the first
+    entry of `editor.config.contentsCss`. The key `10` adds a second one:
+
+    ..  literalinclude:: _codesnippets/_rteEditorContentsCss.tsconfig
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+
+..  index::
     RTE; Server processing
     RTE; proc
 ..  _rte-config-proc:
