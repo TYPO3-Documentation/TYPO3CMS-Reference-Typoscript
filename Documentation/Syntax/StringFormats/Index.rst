@@ -145,12 +145,29 @@ resource
         The resource handling has been streamlined. It now supports different
         resource formats.
 
+    ..  versionchanged:: 14.0
+        :changelog: breaking-107927-1763052738
+
+        Before, the `include*` properties of :ref:`PAGE <page>` marked a URL
+        with the file property `external`. Use the `URI:` prefix instead.
+
     These types are supported:
 
     *   **package resource** – a file inside an extension
     *   **FAL resource** – a file from :abbr:`FAL (File Abstraction Layer)` storage
     *   **app resource** – a file in the TYPO3 project folder
     *   **URI resource** – a URL
+
+    An absolute URL, such as `https://example.org/styles/main.css` or
+    `//example.org/styles/main.css`, is a URI resource as it is. A relative
+    URL needs the prefix `URI:`, for example `URI:/styles/main.css`. Without
+    the prefix, TYPO3 looks for the file in the public folder.
+
+    The part after `URI:` must be a valid URI. If it is not, or if TYPO3
+    cannot resolve a resource, TYPO3 throws an exception. The `include*`
+    properties of :ref:`PAGE <page>`, such as
+    :confval:`includeCSS <page-includeCSS>`, catch the exception and leave
+    out the file.
 
     ..  rubric:: Examples
 
