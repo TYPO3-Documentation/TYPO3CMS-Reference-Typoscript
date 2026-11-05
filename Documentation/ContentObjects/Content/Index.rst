@@ -117,8 +117,8 @@ slide
     `1`
         Only the current level.
 
-    `2`
-        Up from one level back.
+    `2`, `3`, ...
+        Number of levels to be slided up, including the current level.
 
     Use `-1` in combination with :ref:`collect <cobj-content-slide-collect>`.
 
