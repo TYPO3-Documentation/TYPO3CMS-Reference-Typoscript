@@ -263,10 +263,18 @@ rotate
 
 ..  confval:: rotate
     :name: gifbuilder-effect-rotate
-    :type: integer (0-360)
+    :type: float
     :default: 0
+    :changed: 15.0 important-109660-1792081075
 
     Number of degrees for a clockwise rotation.
+
+    ..  versionchanged:: 15.0
+        :changelog: important-109660-1792081075
+
+    The angle can be any number, also a negative or a fractional one.
+    TYPO3 normalizes it to one turn: `rotate=-90` rotates the image by 270
+    degrees, and `rotate=450` rotates it by 90 degrees.
 
     Image dimensions will grow if needed, so that nothing is cut off from
     the original image.
@@ -287,7 +295,7 @@ sharpen
 
 ..  confval:: sharpen
     :name: gifbuilder-effect-sharpen
-    :type: integer (0-99)
+    :type: integer (1-99)
     :default: 0
 
     Sharpens the edges inside the image.
