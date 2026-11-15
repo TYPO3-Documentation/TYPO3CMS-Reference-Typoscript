@@ -78,7 +78,7 @@ charcoal
 
 ..  confval:: charcoal
     :name: gifbuilder-effect-charcoal
-    :type: integer (0-100)
+    :type: integer (1-5)
     :default: 0
 
     Makes the image look as if it has been drawn with charcoal and defines
@@ -120,12 +120,9 @@ edge
 
 ..  confval:: edge
     :name: gifbuilder-effect-edge
-    :type: integer (0-99)
-    :default: 0
 
-    Detect edges within an image. This is a gray-scale operator, so it is
-    applied to each of the three color channels separately. The value defines
-    the radius for the edge detection.
+    Detects edges within an image. Flat areas become black, and edges show up
+    as lines in their original color. The effect takes no value.
 
     **Example:**
 
@@ -133,7 +130,7 @@ edge
         :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
-        20.value = edge=8
+        20.value = edge
 
 
 ..  _gifbuilder-effect-emboss:
@@ -201,7 +198,7 @@ gamma
 
 ..  confval:: gamma
     :name: gifbuilder-effect-gamma
-    :type: double (0.5 - 3.0)
+    :type: double (0.1 - 10.0)
     :default: 1.0
 
     Sets the `gamma <https://en.wikipedia.org/wiki/Gamma_correction>`__ value.
@@ -308,12 +305,12 @@ shear
 
 ..  confval:: shear
     :name: gifbuilder-effect-shear
-    :type: integer (-90 - 90)
+    :type: integer (-85 - 85)
     :default: 0
 
     Number of degrees for a horizontal shearing. Horizontal shearing
     slides one edge of the image along the X axis, creating a
-    parallelogram. Provide an integer between -90 and 90 for the number
+    parallelogram. Provide an integer between -85 and 85 for the number
     of degrees.
 
     **Example:**
@@ -357,7 +354,7 @@ swirl
 
 ..  confval:: swirl
     :name: gifbuilder-effect-swirl
-    :type: integer (0-1000)
+    :type: integer (-720 - 720)
     :default: 0
 
     The image is swirled or spun from its center.
@@ -378,7 +375,7 @@ wave
 
 ..  confval:: wave
     :name: gifbuilder-effect-wave
-    :type: integer,integer (both 0-99)
+    :type: integer,integer (0-99, 1-99)
     :default: 0,0
 
     Provide values for the amplitude and the length of a wave, separated by
