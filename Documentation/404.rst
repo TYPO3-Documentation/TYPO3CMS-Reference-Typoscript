@@ -73,14 +73,11 @@ Page TSconfig v15 changes
     Use `enableSearchBox <https://docs.typo3.org/permalink/t3tsref:pagetsconfigweblist-enablesearchbox>`_
     instead:
 
-    ..  code-block:: typoscript
+    ..  code-block:: diff
         :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-        # Before
-        mod.web_list.disableSearchBox = 1
-
-        # After
-        mod.web_list.enableSearchBox = deactivated
+        -mod.web_list.disableSearchBox = 1
+        +mod.web_list.enableSearchBox = deactivated
 
 ..  _not-found-v14:
 
