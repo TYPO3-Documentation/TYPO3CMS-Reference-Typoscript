@@ -168,19 +168,6 @@ Hide "Create new record" links in tables sys_category and tt_content
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
 
-..  index:: disableSearchBox
-..  _pagetsconfigweblist-disablesearchbox:
-
-disableSearchBox
-======================
-
-..  confval:: disableSearchBox
-    :name: mod-web-list-disableSearchBox
-    :type: boolean
-
-    If set, the checkbox "Show search" in the :guilabel:`Content > Records` module is hidden.
-
-
 ..  index:: disableSingleTableView
 ..  _pagetsconfigweblist-disablesingletableview:
 
@@ -339,6 +326,49 @@ enableDisplayBigControlPanel
     The checkbox :guilabel:`Extended view` was removed with TYPO3 v11.3.
     Therefore the option :typoscript:`mod.web_list.enableDisplayBigControlPanel`
     has no effect anymore.
+
+..  index::
+    enableSearchBox
+    Content Records module; Search box
+..  _pagetsconfigweblist-enablesearchbox:
+
+enableSearchBox
+===============
+
+..  versionadded:: 15.0
+    :changelog: feature-105641-1791964585
+
+    The option replaces `disableSearchBox <https://docs.typo3.org/permalink/t3tsref:pagetsconfigweblist-disablesearchbox>`_.
+
+..  confval:: enableSearchBox
+    :name: mod-web-list-enableSearchBox
+    :type: list of keywords
+    :default: `selectable`
+    :added: 15.0 feature-105641-1791964585
+
+    Determines whether the search box in the :guilabel:`Content > Records`
+    module is shown, and whether users can show or hide it with
+    "Show search" in the :guilabel:`View` menu of the module.
+
+    The following values are possible:
+
+    activated
+        The search box is always shown. "Show search" is hidden.
+
+    deactivated
+        The search box is not shown. "Show search" is hidden.
+
+    selectable
+        Each user can show or hide the search box with "Show search".
+
+    When a user submits a search term, the search box is shown, also with
+    `deactivated`. This is the case, for example, when the user follows the
+    link "Show all" of the backend search.
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+
+        mod.web_list.enableSearchBox = activated
 
 ..  index::
     hideTables
