@@ -26,10 +26,10 @@ this:
 
 #.  Database field default value
 #.  Value from `$GLOBALS['TCA']`
-#.  Field-level ref:`user TSconfig <userTsTcaDefaults>`
-#.  Type-level ref:`user TSconfig <userTsTcaDefaults>`
-#.  Field-level :typoscript:`TCAdefaults` configuration
-#.  Type-level :typoscript:`TCAdefaults` configuration
+#.  Field-level `user TSconfig <https://docs.typo3.org/permalink/t3tsref:usertstcadefaults>`_
+#.  Type-level `user TSconfig <https://docs.typo3.org/permalink/t3tsref:usertstcadefaults>`_
+#.  Field-level `page TSconfig <https://docs.typo3.org/permalink/t3tsref:pagetstcadefaults>`_
+#.  Type-level `page TSconfig <https://docs.typo3.org/permalink/t3tsref:pagetstcadefaults>`_
 #.  Value from "defVals" GET variables
 #.  Value from previous record based on
     :ref:`useColumnsForDefaultValues <t3tca:ctrl-reference-usecolumnsfordefaultvalues>`
