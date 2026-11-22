@@ -428,11 +428,47 @@ Properties of 'config'
 
     ..  confval:: headerComment
         :name: config-headerComment
-        :type: :ref:`string <data-type-string>`
+        :type: string / `stdWrap <https://docs.typo3.org/permalink/t3tsref:stdwrap>`_
+        :changed: 15.0 feature-109862-1792231200
+
+        ..  versionchanged:: 15.0
+            :changelog: feature-109862-1792231200
 
         This content is added above the "TYPO3 Content Management Framework"
-        comment in the <head> page section. Use this to insert text
+        comment in the <head> of each page that is built. Use this to insert text
         like "Programmed by My-Agency".
+
+        The value is processed with
+        `stdWrap <https://docs.typo3.org/permalink/t3tsref:stdwrap>`_, so you can
+        use properties such as
+        `insertData <https://docs.typo3.org/permalink/t3tsref:confval-stdwrap-insertdata>`_,
+        `data <https://docs.typo3.org/permalink/t3tsref:confval-stdwrap-data>`_,
+        `wrap <https://docs.typo3.org/permalink/t3tsref:confval-stdwrap-wrap>`_,
+        and `if <https://docs.typo3.org/permalink/t3tsref:confval-stdwrap-if>`_
+        on this value. Fields like `{field:title}` come from the current page record.
+
+        The header comment is an HTML coment which ends at the first `-->`.
+        TYPO3 escapes the comment endings `-->` and `--!>` in the result, so
+        that your value cannot close the comment early. All other text stays as
+        your wrote it.
+
+        The comment is part of the cached page content. TYPO3 evaluates a
+        dynamic value once per page cache entry, not on every request.
+
+        ..  code-block:: typoscript
+            :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
+
+            config.headerComment = (c) 2011-{date:Y} Example Inc.
+            config.headerComment.insertData = 1
+
+        The current year is inserted into the comment:
+
+        ..  code-block:: html
+            :caption: Example output
+
+            <!--
+                (c) 2011-2026 Example Inc.
+            -->
 
     ..  rubric:: htmlTag.attributes.[attribute]
 
