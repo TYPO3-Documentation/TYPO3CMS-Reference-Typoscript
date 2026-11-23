@@ -247,11 +247,27 @@ includeRecordsWithoutDefaultTranslation
 ..  confval:: includeRecordsWithoutDefaultTranslation
     :name: select-includeRecordsWithoutDefaultTranslation
     :type: :ref:`boolean <data-type-boolean>` / :ref:`stdWrap <stdwrap>`
-    :default: 0
+    :default: depends on the language overlay type, see below
 
     If content language overlay is activated and the option :typoscript:`languageField` is not disabled,
     :typoscript:`includeRecordsWithoutDefaultTranslation` allows to additionally fetch records,
     which do **not** have a parent in the default language.
+
+    If the option is not set, these records are included for a site language
+    with `fallbackType: strict`, and left out for `fallbackType: fallback`.
+    Set the option to `0` or `1` to decide it yourself:
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/MySet/setup.typoscript
+
+        lib.translatedNews = CONTENT
+        lib.translatedNews {
+            table = tx_news_domain_model_news
+            select {
+                pidInList = 12
+                includeRecordsWithoutDefaultTranslation = 0
+            }
+        }
 
 
 ..  _select-selectfields:
