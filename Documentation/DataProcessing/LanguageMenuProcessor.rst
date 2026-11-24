@@ -108,6 +108,18 @@ configuration. As the current page is not translated into German, the
 German language has the :php:`item.available` set to `false`. It therefore
 does not get linked in the template.
 
+A language whose `fallbacks` in the site configuration contain the default
+language has `item.available` set to `true`, also if the page is not
+translated into it. TYPO3 shows such a page in the default language.
+Dansk and Deutsch have no fallbacks in this example.
+
+..  versionchanged:: 15.0
+    :changelog: important-103451-1793198547
+
+    A language that falls back to the default language is available. Before,
+    `item.available` was `false` if the page was not translated into that
+    language.
+
 ..  figure:: /Images/GeneratedScreenshots/DataProcessing/LanguageMenuProcessor.png
     :zoom: lightbox
     :alt: Dump of the variable languageNavigation with 3 languages, and a list
