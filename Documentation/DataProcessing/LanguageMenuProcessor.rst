@@ -75,7 +75,7 @@ Options:
     ..  confval:: as
         :name: LanguageMenuProcessor-as
         :type: :ref:`string <data-type-string>`
-        :default: defaults to the fieldName
+        :default: "languagemenu"
 
         The variable name to be used in the Fluid template.
 
