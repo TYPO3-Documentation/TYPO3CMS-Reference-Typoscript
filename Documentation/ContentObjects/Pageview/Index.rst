@@ -139,10 +139,18 @@ Additional variables can be defined with property
     ..  confval:: page
         :name: pageview-data-page
         :type: :php:`TYPO3\CMS\Frontend\Page\PageInformation`
+        :changed: 15.0 feature-108866-1793383685
         :Example: :ref:`Example: Display the title and abstract of the current page <cobj-pageview-data-page-example>`
 
         The current `PageInformation` as object. See also
         :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
+
+        :fluid:`{page.pageRecord}` holds the page row as array.
+        :fluid:`{page.record}` holds the page as record object, with
+        relations such as :sql:`media` resolved to file references. System
+        fields such as :sql:`crdate` are in
+        :fluid:`{page.record.systemProperties}`, for example
+        :fluid:`{page.record.systemProperties.createdAt}`.
 
     ..  rubric:: settings
 
@@ -186,6 +194,15 @@ Example: Display the title and abstract of the current page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  literalinclude:: _includes/_DisplayPageInfo.fluid.html
+    :language: html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
+
+..  _cobj-pageview-data-page-record-example:
+
+Example: Display the images of the current page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  literalinclude:: _includes/_DisplayPageRecord.fluid.html
     :language: html
     :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
 

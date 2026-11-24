@@ -1,0 +1,9 @@
+<f:layout name="Default" />
+<f:section name="Main">
+  <main role="main">
+    <h1>{page.record.title}</h1>
+    <f:for each="{page.record.media}" as="image">
+      <f:image image="{image}" />
+    </f:for>
+  </main>
+</f:section>
