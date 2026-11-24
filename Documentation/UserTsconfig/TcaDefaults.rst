@@ -32,14 +32,24 @@ is this:
 #.  Value from previous record based on
     :ref:`useColumnsForDefaultValues <t3tca:ctrl-reference-usecolumnsfordefaultvalues>`
 
-However, the order for default values used by the
-:php:`\TYPO3\CMS\Core\DataHandling\DataHandler` if a particular field is inaccessible
-to a user will be:
+..  _usertstcadefaults-datahandler:
 
-#.  Value from :php:`$GLOBALS['TCA']`
-#.  Value from User TSconfig (these settings)
+..  versionchanged:: 15.0
+    :changelog: important-107327-1770297680
 
-So these will be the values that are set if the user has no access to the field anyway.
+The :php:`\TYPO3\CMS\Core\DataHandling\DataHandler` uses the same order
+when it creates a record, also for a field that the user has no access to:
+
+#.  Value from `$GLOBALS['TCA']`, a value of the record type before the
+    value of the field
+#.  Field-level user TSconfig
+#.  Type-level user TSconfig
+#.  Field-level page TSconfig of the page the record is created on
+#.  Type-level page TSconfig of the page the record is created on
+
+The values that are given for the new record take precedence. The DataHandler
+sets the default values for all fields of the table, also for the fields that
+the record type does not show.
 
 Example:
 

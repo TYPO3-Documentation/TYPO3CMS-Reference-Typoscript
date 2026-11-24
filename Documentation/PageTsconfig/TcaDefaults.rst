@@ -34,6 +34,14 @@ this:
 #.  Value from previous record based on
     :ref:`useColumnsForDefaultValues <t3tca:ctrl-reference-usecolumnsfordefaultvalues>`
 
+..  versionchanged:: 15.0
+    :changelog: important-107327-1770297680
+
+The :php:`\TYPO3\CMS\Core\DataHandling\DataHandler` uses the same order for
+the values from TCA, user TSconfig and page TSconfig when it creates a record
+without the backend form, see
+`TCAdefaults in the DataHandler <https://docs.typo3.org/permalink/t3tsref:usertstcadefaults-datahandler>`_.
+
 ..  note::
     `TCAdefaults` are not applied to :ref:`FlexForm <t3coreapi:flexforms>` values.
     These can only be set via :xml:`<default>` elements within the
