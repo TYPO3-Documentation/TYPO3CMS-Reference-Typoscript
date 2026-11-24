@@ -55,6 +55,30 @@ The user TSconfig option
 The page tree toolbar shows the page types that the groups of the backend user
 allow. Remove the option from your configuration.
 
+..  _not-found-v15-page-tsconfig-v15:
+
+Page TSconfig v15 changes
+-------------------------
+
+..  _pagetsconfigweblist-disablesearchbox:
+
+`mod.web_list.disableSearchBox` removed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  confval:: disableSearchBox
+    :name: mod-web-list-disableSearchBox
+    :type: boolean
+    :removed: 15.0 breaking-105641-1791964585
+
+    Use `enableSearchBox <https://docs.typo3.org/permalink/t3tsref:pagetsconfigweblist-enablesearchbox>`_
+    instead:
+
+    ..  code-block:: diff
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+
+        -mod.web_list.disableSearchBox = 1
+        +mod.web_list.enableSearchBox = deactivated
+
 ..  _not-found-v14:
 
 TYPO3 v14
