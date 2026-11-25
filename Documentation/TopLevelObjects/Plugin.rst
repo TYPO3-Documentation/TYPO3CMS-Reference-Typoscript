@@ -140,10 +140,13 @@ plugins.
         :name: plugin-persistence-enableAutomaticCacheClearing
         :type: :ref:`boolean <data-type-boolean>`
         :default: `true`
+        :changed: 15.0 important-111305-1793474510
 
-        **Only for Extbase plugins**.
-        Enables the automatic cache clearing when changing data sets (see also
-        :ref:`Caching for Extbase plugins <t3coreapi:extbase_caching>`).
+        Enables the automatic cache clearing when Extbase persists changed
+        records, at the end of every :php:`persistAll()`. This also applies
+        outside of Extbase plugins, for example in console commands. Without a
+        request, the default applies (see also
+        `Automatic page cache clearing on Extbase record changes <https://docs.typo3.org/permalink/t3coreapi:extbase-caching-autoclearing>`_).
 
     ..  rubric:: persistence.storagePid
 
